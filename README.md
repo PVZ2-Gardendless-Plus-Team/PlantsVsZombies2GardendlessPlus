@@ -86,6 +86,7 @@ python3 tools/import_levels.py <raw> <native>    # PopCap format -> native
 python3 tools/import_entities.py data/pvzge data/native
 python3 tools/select_levels.py <native> data/native/levels TutorialStage Tutorial
 python3 tools/extract_dragonbones.py <dir>        # skeletons (art pipeline)
+godot --headless -s tools/bake_rigs.gd           # mapped rigs -> Godot scenes in art/
 ```
 
 `tools/import_levels.py` flattens PopCap's `objclass`/`objdata`/`RTID`

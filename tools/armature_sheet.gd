@@ -3,7 +3,11 @@ extends SceneTree
 ## node the game uses, so what the sheet shows is what the lawn shows.
 ##
 ##     godot --rendering-driver opengl3 -s tools/armature_sheet.gd -- \
-##         <bundle> <armature> <out.png> [animation ...] [--frames N]
+##         <bundle> <armature> <out.png> [animation ...] [--frames N] [--export]
+##
+## Draws the baked scene (`art/<bundle>/<armature>.tscn`) when there is one;
+## `--export` converts the DragonBones export instead, which is how the two are
+## compared frame by frame.
 ##
 ## Needs a display (xvfb-run works); the headless driver draws nothing. One row
 ## per animation, N evenly spaced frames across it, so a part that pops, a foot
@@ -24,8 +28,13 @@ func _initialize() -> void:
 func _run(args: PackedStringArray) -> void:
 	var frames := 8
 	var names: Array = []
+	var from_export := false
 	var i := 3
 	while i < args.size():
+		if args[i] == "--export":
+			from_export = true
+			i += 1
+			continue
 		if args[i] == "--frames" and i + 1 < args.size():
 			frames = int(args[i + 1])
 			i += 2
@@ -52,11 +61,18 @@ func _run(args: PackedStringArray) -> void:
 	backdrop.size = CELL
 	viewport.add_child(backdrop)
 
-	var rig := Armature.new()
-	if not rig.setup(source, StringName(args[1])):
-		push_error("no armature " + args[1])
-		quit(1)
-		return
+	var rig: Armature = null
+	var baked := RigBuilder.scene_path(StringName(bundle), StringName(args[1]))
+	if not from_export and ResourceLoader.exists(baked):
+		rig = (load(baked) as PackedScene).instantiate() as Armature
+		rig.bind()
+		print("drawing " + baked)
+	else:
+		rig = Armature.new()
+		if not rig.setup(source, StringName(args[1])):
+			push_error("no armature " + args[1])
+			quit(1)
+			return
 	var box := source.bounds(StringName(args[1]))
 	var fit := minf((CELL.y - 20) / maxf(box.size.y, 1.0), (CELL.x - 20) / maxf(box.size.x, 1.0))
 	rig.scale = Vector2(fit, fit)
@@ -68,6 +84,9 @@ func _run(args: PackedStringArray) -> void:
 
 	var sheet := Image.create(CELL.x * frames, CELL.y * names.size(), false, Image.FORMAT_RGBA8)
 	var player: AnimationPlayer = rig._player
+	# Posed only by seeking, so the sheet does not depend on frame timing and
+	# two runs - or a scene and its export - compare pixel for pixel.
+	player.callback_mode_process = AnimationMixer.ANIMATION_CALLBACK_MODE_PROCESS_MANUAL
 	for row in names.size():
 		var anim: Animation = player.get_animation(names[row])
 		if anim == null:

@@ -18,6 +18,9 @@ var _sections_finished: Array[String] = []
 
 func _ready() -> void:
 	Engine.time_scale = TIME_SCALE
+	# USE_SCENES=0 runs the suite on rigs converted from their DragonBones
+	# exports instead of the baked scenes, so both paths stay exercised.
+	Art.use_scenes = OS.get_environment("USE_SCENES") != "0"
 	await get_tree().process_frame
 	await _run()
 	Engine.time_scale = 1.0
@@ -71,6 +74,7 @@ func _run() -> void:
 	await _test_zomboss()
 	await _test_plant_stun()
 	await _test_art()
+	_test_rig_scenes()
 	await _test_scenery_art()
 	_test_zombie_sun_costs()
 	await _test_level_save_state()
@@ -2854,7 +2858,7 @@ func _test_art() -> void:
 		check("a walk says how fast it was drawn to travel",
 				float(walk.get_meta(&"ground_speed", 0.0)) > 10.0)
 		check("and keys which foot picture shows",
-				walk.find_track(NodePath("foot_there/0:visible"), Animation.TYPE_VALUE) >= 0)
+				walk.find_track(NodePath("foot_there:display"), Animation.TYPE_VALUE) >= 0)
 	var eat: Animation = library.get_animation(&"Eat")
 	if walk != null and eat != null:
 		# Every animation keys every moving part, so none inherits the pose
@@ -2956,6 +2960,106 @@ func _test_art() -> void:
 			first != null and first.has_armature(&"Cone")
 			and first.has_armature(&"BasicZombie"))
 	board.queue_free()
+	end_section()
+
+
+func _test_rig_scenes() -> void:
+	section("rig scenes")
+	# The zOrder rule works without art: pairs of (declared slot, places to
+	# move), everything else keeping its order around the moved slots. Checked
+	# against the runtime's own `_parseZOrderFrame` by hand.
+	var order := ArmatureBaker._draw_order_of(["a", "b", "c", "d"], [0, 2])
+	check_eq("a zOrder frame moves a slot up the stack", order, [1, 2, 0, 3])
+	order = ArmatureBaker._draw_order_of(["a", "b", "c", "d"], [1, 1, 3, -3])
+	check_eq("and several at once", order, [3, 0, 1, 2])
+	check_eq("and no frame is the declared order",
+			ArmatureBaker._draw_order_of(["a", "b"], []), [0, 1])
+
+	if not Art.is_available():
+		check("no art extracted, nothing to compare", true)
+		end_section()
+		return
+	# Each rig the game maps draws the same from its baked scene as from its
+	# DragonBones export: same slots, same pose at every sampled moment, to
+	# within the keys a bake leaves out.
+	var compared := 0
+	var mismatched: Array = []
+	for key in ["plant:peashooter", "plant:sunflower", "plant:wallnut",
+			"plant:potatomine", "zombie:tutorial", "zombie:tutorial_armor1"]:
+		var entry := Art.mapping(StringName(key.get_slice(":", 0)), StringName(key.get_slice(":", 1)))
+		if Art.scene_for(entry) == "":
+			continue
+		var baked := Art.make_from(entry)
+		Art.use_scenes = false
+		var built := Art.make_from(entry)
+		Art.use_scenes = true
+		if baked == null or built == null:
+			mismatched.append(key)
+			continue
+		compared += 1
+		if baked.slot_names() != built.slot_names():
+			mismatched.append("%s slots" % key)
+		for anim in built.animation_names():
+			for at in [0.0, 0.31, 0.77]:
+				baked._player.play(anim)
+				baked._player.seek(at, true)
+				built._player.play(anim)
+				built._player.seek(at, true)
+				for slot in built.slot_names():
+					var a: Node2D = baked._slots[slot]
+					var b: Node2D = built._slots[slot]
+					# Within the keys a bake drops (ArmatureBaker.TOLERANCE).
+					if a.position.distance_to(b.position) > 0.05 \
+							or absf(angle_difference(a.rotation, b.rotation)) > 0.002 \
+							or (a.scale - b.scale).length() > 0.002 \
+							or a.visible != b.visible \
+							or (a is RigSlot and (a as RigSlot).display != (b as RigSlot).display):
+						mismatched.append("%s %s@%.2f %s" % [key, anim, at, slot])
+		baked.free()
+		built.free()
+	if compared == 0:
+		check("no baked scenes yet, nothing to compare", true, "run tools/bake_rigs.gd")
+	else:
+		check("baked scenes pose exactly like their exports", mismatched.is_empty(),
+				str(mismatched.slice(0, 5)))
+		var socketed := Art.make(&"zombie", &"tutorial_armor1")
+		check("a scene carries its sockets",
+				socketed != null and socketed.socket(&"armor") != null)
+		if socketed != null:
+			socketed.free()
+
+	# Child rigs, meshes and slot names Godot cannot hold.
+	var flower := ResourceLoader.load(RigBuilder.scene_path(&"plants_SunflowerPLANT", &"Sunflower"))
+	if flower != null:
+		var rig := (flower as PackedScene).instantiate() as Armature
+		check("a scene binds", rig.bind())
+		check("a costume slot holds a child rig",
+				rig.get_node_or_null("COS3/0") is Armature)
+		rig.free()
+	var cooldown := Art.set_for(&"rigs_SeedPacker_Card")
+	if cooldown != null:
+		var wipe := Armature.new()
+		check("a mesh rig builds", wipe.setup(cooldown, &"cooldown"))
+		check("its quads are polygons", wipe.get_node_or_null("c_/0") is Polygon2D)
+		var sweep: Animation = wipe._player.get_animation(&"P")
+		check("and the cooldown deforms them frame by frame",
+				sweep != null and sweep.find_track(NodePath("c_/0:polygon"), Animation.TYPE_VALUE) >= 0)
+		wipe.free()
+	var sun := Art.set_for(&"rigs_SunAnimate")
+	if sun != null:
+		var glow := Armature.new()
+		glow.setup(sun, &"Sun")
+		var library := sun.animations(&"Sun")
+		var unresolved := 0
+		for anim in library.get_animation_list():
+			var animation := library.get_animation(anim)
+			for track in animation.get_track_count():
+				var path := animation.track_get_path(track)
+				if path != NodePath(".") and glow.get_node_or_null(NodePath(str(path).get_slice(":", 0))) == null:
+					unresolved += 1
+		check("every track finds its node, '/' in a slot name or not", unresolved == 0,
+				"%d unresolved" % unresolved)
+		glow.free()
 	end_section()
 
 

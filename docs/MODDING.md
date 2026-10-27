@@ -420,13 +420,34 @@ feet and almost none is centred on it - the peashooter's box runs from -50 to
 stays null and the entity keeps its placeholder drawing, so the game runs the
 same with or without any of it.
 
-**The animations are Godot's.** A rig is converted once, by `ArmatureBaker`,
-into `Animation` resources driven by an `AnimationPlayer` - so easing,
-blending, interpolation and timing are engine code, not ours. Nothing samples
-a timeline at runtime.
+**Rigs are Godot scenes.** Every DragonBones armature is converted once, by
+`tools/bake_rigs.gd`, into `art/<bundle>/<armature>.tscn`: a Node2D per slot,
+a picture per display, a `Socket_<bone>` marker per socket bone and an
+`AnimationPlayer` named `Animations`. Open one in the editor and it is an
+ordinary scene - scrub the animations, re-key them, add new ones, move or
+re-skin parts - and the game plays what you saved. Easing, blending,
+interpolation and timing are engine code; nothing samples a timeline at
+runtime. Tick `keep` on the root of a scene you have edited, so a later bake
+leaves it alone.
 
-Conversion is where DragonBones and Godot are reconciled, because three
-things do not map onto a Node2D bone tree:
+A mod does not need DragonBones at all. Point a mapping at your own scene and
+build it to the same shape - an `Armature` root, one `RigSlot` per part whose
+`display` picks which child shows, and an `AnimationPlayer` named `Animations`
+with your animations in its default library:
+
+```json
+{"plant:mypea": {"scene": "res://mods/my_pack/art/mypea.tscn", "scale": 0.512,
+  "animations": {"idle": "Idle", "attack": "Shoot"}}}
+```
+
+A method key calling `_fire_event` with `"Shoot"` is how an animation says
+the pea leaves the mouth, and `_fire_sound` plays a sound. A mapping with no
+scene and no baked one - a mod shipping only a DragonBones export - is
+converted when it is first drawn, so that still works.
+
+Conversion is where DragonBones and Godot are reconciled, following the Cocos
+DragonBones runtime PVZGE itself ships, because these do not map onto a Node2D
+bone tree:
 
 - A transform is built from **two** skew angles. Equal angles are a rotation;
   unequal ones are a mirror or a shear, which Godot expresses as `skew`.
@@ -434,13 +455,19 @@ things do not map onto a Node2D bone tree:
   basic zombie's head refuses both. Godot's nodes have no equivalent, so the
   chain is resolved at bake time and the sprites come out flat.
 - Frames carry their **own easing**, as a cubic bezier or an easing factor.
-  Sampling at the source frame rate bakes that in, so Godot's linear
-  interpolation between samples reproduces it.
+  Sampling at the source frame rate bakes that in, and the keys Godot's linear
+  interpolation would reproduce anyway are dropped.
+- A slot can show **another armature** - a sunflower's costumes, a seed
+  packet's parts. It becomes a nested `Armature` (an instance of that rig's
+  own scene) that plays its default animation, and follows its parent into
+  any animation of the same name.
+- A slot can show a **mesh** deformed frame by frame (FFD). It becomes a
+  `Polygon2D` with a `polygon` track. Skinned meshes are not supported.
+- An animation can **reorder slots** (a zOrder timeline). It becomes a method
+  track that restacks them.
 
-Everything heavy is shared. One `ArmatureSet` per bundle holds the parsed
-skeleton, the texture, one `AtlasTexture` per region and one baked
-`AnimationLibrary` per rig; a lane of zombies is many nodes over one copy of
-all of it. The basic zombie and both its armors read the same bundle, which is
+Everything heavy is shared. Instances of a scene share its animations and
+atlas regions, so a lane of zombies is many nodes over one copy of all of it. The basic zombie and both its armors read the same bundle, which is
 the point of PopCap's shared rigs.
 
 A component says what it **did** - `host.play_art_once(&"attack")` - and the
@@ -448,8 +475,10 @@ entity decides how that looks. No component learns whether its host has art or
 what a rig calls anything, which is what lets a mod reskin a plant without
 touching behaviour.
 
-`sockets` maps a name to a bone - `{"muzzle": "mouthhole"}` - and each becomes
-a marker animated with everything else, so the game can ask where a rig's
+`sockets` maps a name to a bone - `{"armor": "armorSOCKET"}` - and each is
+a marker animated with everything else. Every bone named `...SOCKET` gets one
+in a baked scene; a mapping asking for any other bone is converted from the
+export instead, so the game can ask where a rig's
 mouth is this instant. A peashooter's pea leaves from its muzzle rather than
 from the middle of the plant.
 
