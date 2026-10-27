@@ -15,11 +15,18 @@ const MAP_DIRS := ["res://data/native/art"]
 
 ## bundle -> ArmatureSet, built on first use.
 var _sets: Dictionary = {}
+## scene path -> PackedScene. Held here because Godot unloads a scene once its
+## last instance is gone, and parsing a rig again costs a visible hitch every
+## time the first zombie of a wave walks on.
+var _scenes: Dictionary = {}
 ## bundle -> texture filename, from the extractor's index.
 var _textures: Dictionary = {}
 ## "<kind>:<id>" -> mapping dictionary.
 var _map: Dictionary = {}
 var _available: bool = false
+## Whether baked rig scenes are preferred over converting the export. Tests
+## turn it off to compare the two paths.
+var use_scenes: bool = true
 
 
 func _ready() -> void:
@@ -117,23 +124,75 @@ func make(kind: StringName, id: StringName) -> Armature:
 
 ## Builds an armature from a mapping entry directly. Scenery and the HUD use
 ## this: a lawn is several rigs from one entry, not one rig per key.
+##
+## The rig comes from a scene when there is one - the entry's own `scene`, or
+## the bundle's baked `<armature>.tscn` - and is converted from the
+## DragonBones export otherwise, so a bundle nobody has baked still draws.
 func make_from(entry: Dictionary, armature_override: StringName = &"") -> Armature:
 	if entry.is_empty():
 		return null
 	if armature_override != &"":
 		entry = entry.duplicate()
 		entry["armature"] = armature_override
+	var sockets: Dictionary = entry.get("sockets", {})
+	var node := _from_scene(entry, sockets)
+	if node == null:
+		node = _from_export(entry, sockets)
+	if node == null:
+		return null
+	_fit(node, node.bounds, entry)
+	for slot in (entry.get("hide_slots", []) as Array):
+		node.hide_slot(StringName(slot))
+	return node
+
+
+## The rig's scene, instanced and bound, or null when there is none or it
+## lacks a socket the entry needs.
+func _from_scene(entry: Dictionary, sockets: Dictionary) -> Armature:
+	var path := scene_for(entry)
+	if path == "":
+		return null
+	var scene: PackedScene = _scenes.get(path)
+	if scene == null:
+		scene = ResourceLoader.load(path, "PackedScene") as PackedScene
+		if scene == null:
+			return null
+		_scenes[path] = scene
+	var node := scene.instantiate() as Armature
+	if node == null:
+		push_warning("art: %s is not an Armature scene" % path)
+		return null
+	if not node.bind(sockets):
+		push_warning("art: %s is missing a socket in %s" % [path, sockets])
+		node.free()
+		return null
+	return node
+
+
+## Which scene an entry draws from, or "" for none: its own `scene` (a mod's
+## hand-made rig), else the bundle's baked one when it exists.
+func scene_for(entry: Dictionary) -> String:
+	var own := String(entry.get("scene", ""))
+	if own != "":
+		return own if ResourceLoader.exists(own) else ""
+	if not use_scenes:
+		return ""
+	var bundle := StringName(entry.get("bundle", ""))
+	var armature_name := StringName(entry.get("armature", ""))
+	if bundle == &"" or armature_name == &"":
+		return ""
+	var baked := RigBuilder.scene_path(bundle, armature_name)
+	return baked if ResourceLoader.exists(baked) else ""
+
+
+func _from_export(entry: Dictionary, sockets: Dictionary) -> Armature:
 	var source := set_for(StringName(entry.get("bundle", "")))
 	if source == null:
 		return null
-	var armature_name := StringName(entry.get("armature", ""))
 	var node := Armature.new()
-	if not node.setup(source, armature_name, entry.get("sockets", {})):
+	if not node.setup(source, StringName(entry.get("armature", "")), sockets):
 		node.free()
 		return null
-	_fit(node, source.bounds(armature_name), entry)
-	for slot in (entry.get("hide_slots", []) as Array):
-		node.hide_slot(StringName(slot))
 	return node
 
 

@@ -26,6 +26,28 @@ checked out, or just the ones nobody has extracted yet:
 A clone that had the old gitignored `art/` folder has to move it aside first,
 because `git submodule update` will not check out over a non-empty directory.
 
+## Rig scenes
+
+Each armature is also baked into a Godot scene beside its export,
+`art/<bundle>/<armature>.tscn`, which is what the game loads and what you open
+in the editor to change an animation. After extracting or updating art, bake
+again:
+
+```sh
+godot --headless --import
+godot --headless -s tools/bake_rigs.gd [bundle ...] [--force]
+```
+
+A scene whose root has `keep` ticked was edited by hand and is skipped unless
+`--force` is given. A bundle with no scenes still draws: the game converts its
+export on first use, which costs a few hundred milliseconds per rig where a
+baked scene loads in about a hundred. `docs/MODDING.md` describes the scene's
+shape for anyone building one by hand.
+
+`tools/armature_sheet.gd` draws a rig's animations to a contact sheet from its
+scene, or from its export with `--export`, so the two can be compared frame by
+frame.
+
 ## Updating it
 
 Regenerate with `tools/extract_prefabs.py` and `tools/extract_rigs.py` from
@@ -39,7 +61,7 @@ python3 tools/extract_all_art.py <build>/assets/resources art --commit
 
 `--commit` starts an `extract-art` branch from the art repository's `master`
 and commits there; `--push` also pushes it. Open the project in Godot once so new images get their `.import`
-files, then commit inside `art/`, push to a branch of the art repository and
+files, bake the rig scenes (above), then commit inside `art/`, push to a branch of the art repository and
 merge it there.
 
 Then point the submodule at the art repository's `master`:

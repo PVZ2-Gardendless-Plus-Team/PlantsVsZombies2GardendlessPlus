@@ -27,6 +27,19 @@ extends RefCounted
 ##    Sampling at the source frame rate bakes that in, so Godot's linear
 ##    interpolation between samples reproduces it exactly.
 ##
+## Three display features ride on top, each following the Cocos DragonBones
+## runtime PVZGE ships (`cocos-js/_virtual_cc-*.js`):
+##
+## - A slot can show another armature instead of a picture - a sunflower's
+##   costume, a mower's wheels, a seed packet's cooldown. It becomes a nested
+##   Armature that plays its default action, and follows the parent into any
+##   animation it also has (`inheritAnimation`).
+## - A slot can show a mesh, deformed per frame (FFD). It becomes a Polygon2D
+##   whose `polygon` is keyed every frame. Weighted (skinned) meshes are not
+##   supported and are skipped with a warning.
+## - An animation can reorder slots (a zOrder timeline). It becomes a method
+##   track that restacks the slot nodes on the frames the order changes.
+##
 ## The rules below follow the DragonBones 5.x runtime, which is what PVZGE
 ## plays these rigs with; where the editor and the runtime disagree the
 ## runtime wins, because that is what the original game shows.
@@ -34,8 +47,10 @@ extends RefCounted
 ## Each: {name, parent, raw, length, inherit_rotation, inherit_scale}
 var bones: Array[Dictionary] = []
 var bone_index: Dictionary = {}
-## Each: {name, bone, displays: [{region, xform} or {}], display (rest index),
-##        color (rest Color), blend, socket}
+## Each: {name, bone, displays: [choice], display (rest index), color (rest
+##        Color), blend, socket}. A choice is {} when there is nothing to draw,
+##        {region, xform} for a picture, {armature, xform} for a nested rig, or
+##        {region, xform, mesh: {vertices, uvs, triangles}} for a mesh.
 var slots: Array[Dictionary] = []
 var slot_index: Dictionary = {}
 ## Each: {name, bone, root, target, chain, bend, weight}
@@ -53,11 +68,20 @@ var _ik_by_root: Dictionary = {}
 var _moving_slots: Array = []
 var _display_slots: Array = []
 var _color_slots: Array = []
+## [slot index, display choice] of every mesh some animation deforms.
+var _mesh_displays: Array = []
+## Every slot the export declares, drawable or not, in declaration order: a
+## zOrder frame counts slots by this index.
+var _declared: Array = []
+## Whether any animation reorders the slots.
+var _reorders: bool = false
 
 
 ## `sockets` maps a game-facing name to a bone - {"armor": "armorSOCKET"} -
 ## and each becomes a marker node animated like any slot, so the game can ask
 ## where a rig's mouth is at this instant without sampling anything itself.
+## Every bone PopCap named as a socket (`...SOCKET`) gets a marker whether
+## asked for or not, so a baked scene carries all of them.
 func _init(source: ArmatureSet, armature_name: StringName,
 		sockets: Dictionary = {}) -> void:
 	_set = source
@@ -176,6 +200,7 @@ func _read_slots() -> void:
 		if not (entry is Dictionary):
 			continue
 		var name := StringName(entry.get("name", ""))
+		_declared.append(name)
 		var options := (displays.get(name, {}) as Dictionary).get("display", []) as Array
 		# Every display the slot can switch to, not just the one it starts
 		# on: a blink is the eye slot moving to its second picture, and a
@@ -183,21 +208,17 @@ func _read_slots() -> void:
 		var choices: Array = []
 		var any := false
 		for display in options:
-			var choice := {}
-			if display is Dictionary:
-				# `name` names the display; `path` names the texture when
-				# they differ, which is how one slot carries both mouth and
-				# mouth_open.
-				var region := StringName(display.get("path", display.get("name", "")))
-				if _set.region(region) != null:
-					choice = {"region": region, "xform": matrix_of(display.get("transform", {}))}
-					any = true
+			var choice := _read_display(display, name)
+			if not choice.is_empty():
+				any = true
 			choices.append(choice)
 		if not any:
 			continue
 		slot_index[name] = slots.size()
 		slots.append({
-			"name": name,
+			# The node's name, which is what tracks address. Godot refuses
+			# '/', ':' and '.' in one, and PopCap names a slot "sun/sun_changing".
+			"name": StringName(String(name).validate_node_name()),
 			"bone": int(bone_index.get(StringName(entry.get("parent", "")), -1)),
 			"displays": choices,
 			"display": int(entry.get("displayIndex", 0)),
@@ -205,22 +226,82 @@ func _read_slots() -> void:
 			"blend": String(entry.get("blendMode", "normal")),
 		})
 
-	# Sockets ride along as slots with nothing to draw.
+	# Sockets ride along as slots with nothing to draw, one per bone, named
+	# by the bone so a scene baked once serves every caller.
+	var wanted := {}
+	for bone in bones:
+		if String(bone["name"]).to_lower().ends_with("socket"):
+			wanted[bone["name"]] = true
 	for alias in _sockets:
-		var bone := int(bone_index.get(StringName(_sockets[alias]), -1))
-		if bone < 0:
-			push_warning("armature: no bone '%s' for socket '%s'"
-					% [_sockets[alias], alias])
+		var bone_name := StringName(_sockets[alias])
+		if not bone_index.has(bone_name):
+			push_warning("armature: no bone '%s' for socket '%s'" % [bone_name, alias])
 			continue
+		wanted[bone_name] = true
+	for bone_name in wanted:
 		slots.append({
-			"name": StringName("socket_%s" % alias),
-			"bone": bone,
+			"name": socket_node_name(bone_name),
+			"bone": int(bone_index[bone_name]),
 			"displays": [],
 			"display": -1,
 			"color": Color.WHITE,
 			"blend": "normal",
-			"socket": StringName(alias),
+			"socket": bone_name,
 		})
+
+
+## The marker node a socket bone becomes.
+static func socket_node_name(bone: StringName) -> StringName:
+	return StringName(("Socket_%s" % bone).validate_node_name())
+
+
+## One display a slot can show, or {} when it has nothing drawable.
+func _read_display(display: Variant, slot: StringName) -> Dictionary:
+	if not (display is Dictionary):
+		return {}
+	var kind := String(display.get("type", "image"))
+	var xform := matrix_of(display.get("transform", {}))
+	# `name` names the display; `path` names what it shows when they differ,
+	# which is how one slot carries both mouth and mouth_open.
+	var path := StringName(display.get("path", display.get("name", "")))
+	match kind:
+		"armature":
+			if _set.has_armature(path) and path != StringName(_armature.get("name", "")):
+				return {"armature": path, "xform": xform, "name": StringName(display.get("name", ""))}
+			return {}
+		"mesh":
+			if display.has("weights") or display.has("bonePose"):
+				push_warning("armature: skinned mesh '%s' in slot '%s' is not supported"
+						% [path, slot])
+				return {}
+			var region := _set.region(path)
+			if region == null:
+				return {}
+			return {"region": path, "xform": xform, "name": StringName(display.get("name", "")),
+					"mesh": _read_mesh(display, region)}
+	if _set.region(path) == null:
+		return {}
+	return {"region": path, "xform": xform, "name": StringName(display.get("name", ""))}
+
+
+## A mesh as Polygon2D wants it: vertices in slot space, UVs in pixels of the
+## whole atlas page (a Polygon2D draws from its texture, not from a region),
+## and the triangles.
+func _read_mesh(display: Dictionary, region: AtlasTexture) -> Dictionary:
+	var raw_vertices := display.get("vertices", []) as Array
+	var raw_uvs := display.get("uvs", []) as Array
+	var vertices := PackedVector2Array()
+	var uvs := PackedVector2Array()
+	var box := region.region
+	for i in range(0, raw_vertices.size() - 1, 2):
+		vertices.append(Vector2(float(raw_vertices[i]), float(raw_vertices[i + 1])))
+		var u := float(raw_uvs[i]) if i < raw_uvs.size() else 0.0
+		var v := float(raw_uvs[i + 1]) if i + 1 < raw_uvs.size() else 0.0
+		uvs.append(box.position + Vector2(u, v) * box.size)
+	var triangles := PackedInt32Array()
+	for index in (display.get("triangles", []) as Array):
+		triangles.append(int(index))
+	return {"vertices": vertices, "uvs": uvs, "triangles": triangles}
 
 
 ## Which slots any animation moves, swaps or tints.
@@ -233,6 +314,7 @@ func _find_animated() -> void:
 	var driven := {}
 	var displayed := {}
 	var tinted := {}
+	var deformed: Array = []
 	for entry in (_armature.get("animation", []) as Array):
 		if not (entry is Dictionary):
 			continue
@@ -251,6 +333,14 @@ func _find_animated() -> void:
 				displayed[slot_index[name]] = true
 			if not (timeline.get("colorFrame", []) as Array).is_empty():
 				tinted[slot_index[name]] = true
+		for timeline in (entry.get("ffd", []) as Array):
+			if not (timeline is Dictionary):
+				continue
+			var which := _mesh_choice(timeline)
+			if not which.is_empty() and not deformed.has(which):
+				deformed.append(which)
+		if entry.get("zOrder") is Dictionary:
+			_reorders = true
 	# An IK chain moves whenever its target does, and the target is usually
 	# what the animation keys.
 	for ik in iks:
@@ -268,6 +358,23 @@ func _find_animated() -> void:
 	_display_slots.sort()
 	_color_slots = tinted.keys()
 	_color_slots.sort()
+	_mesh_displays = deformed
+
+
+## The [slot, choice] an FFD timeline deforms, or [] when it is not a mesh
+## this rig draws. A timeline names its slot and the display by name.
+func _mesh_choice(timeline: Dictionary) -> Array:
+	var slot := int(slot_index.get(StringName(timeline.get("slot", "")), -1))
+	if slot < 0:
+		return []
+	var display := StringName(timeline.get("name", ""))
+	var choices: Array = slots[slot]["displays"]
+	for choice in choices.size():
+		var shown: Dictionary = choices[choice]
+		if shown.has("mesh") and (display == &"" or shown.get("name") == display
+				or shown.get("region") == display):
+			return [slot, choice]
+	return []
 
 
 # --- DragonBones transform rules ----------------------------------------
@@ -540,13 +647,7 @@ func _bake_one(source: Dictionary) -> Animation:
 		var shown: Array = []
 		for frame in range(frames + 1):
 			shown.append(int(_sample(line, float(frame) / frame_rate, slot["display"])))
-		for choice in (slot["displays"] as Array).size():
-			if (slot["displays"][choice] as Dictionary).is_empty():
-				continue
-			var values: Array = []
-			for value in shown:
-				values.append(value == choice)
-			_add_discrete(animation, "%s/%d:visible" % [slot["name"], choice], values)
+		_add_discrete(animation, "%s:display" % slot["name"], shown)
 
 	for index in _color_slots:
 		var slot: Dictionary = slots[index]
@@ -556,6 +657,19 @@ func _bake_one(source: Dictionary) -> Animation:
 			values.append(_sample(line, float(frame) / frame_rate, slot["color"]))
 		_add_track(animation, "%s:modulate" % slot["name"], values)
 
+	var deforms := _read_ffd_timelines(source)
+	for which in _mesh_displays:
+		var slot: Dictionary = slots[which[0]]
+		var rest: PackedVector2Array = slot["displays"][which[1]]["mesh"]["vertices"]
+		var line: Array = deforms.get(which, [])
+		var values: Array = []
+		for frame in range(frames + 1):
+			values.append(_deformed(rest, _sample(line, float(frame) / frame_rate,
+					PackedFloat32Array())))
+		_add_track(animation, "%s/%d:polygon" % [slot["name"], which[1]], values)
+
+	if _reorders:
+		_add_draw_order(animation, source)
 	_add_events(animation, source)
 	_measure_ground(animation, source, frames)
 	return animation
@@ -617,31 +731,184 @@ func _add_events(animation: Animation, source: Dictionary) -> void:
 		at += float(frame.get("duration", 1))
 
 
-## Writes one property's samples as a track, keeping only the keys that
-## matter: a value that differs from its neighbour on either side. A held
-## value keeps the key before it changes, so a hold stays a hold.
+## A mesh's vertices with one frame's FFD offsets added. DragonBones keys
+## deformation as offsets from the rest mesh, x and y interleaved.
+static func _deformed(rest: PackedVector2Array, offsets: PackedFloat32Array) -> PackedVector2Array:
+	var out := rest.duplicate()
+	for i in out.size():
+		if i * 2 + 1 < offsets.size():
+			out[i] += Vector2(offsets[i * 2], offsets[i * 2 + 1])
+	return out
+
+
+## Bakes a zOrder timeline as calls that restack the slots, on each frame
+## the order changes. Every animation of a rig that reorders anywhere starts
+## with the order it wants - the declared one if it has no timeline - so an
+## order never leaks from one animation into the next. This is
+## `ZOrderTimelineState` and `Armature._sortZOrder` from the runtime.
+func _add_draw_order(animation: Animation, source: Dictionary) -> void:
+	var track := animation.add_track(Animation.TYPE_METHOD)
+	animation.track_set_path(track, NodePath("."))
+	var line: Variant = source.get("zOrder")
+	var frames: Array = (line as Dictionary).get("frame", []) if line is Dictionary else []
+	var at := 0.0
+	var last: Array = []
+	var keyed_start := false
+	for frame in frames:
+		if not (frame is Dictionary):
+			continue
+		var order := _draw_order(frame.get("zOrder", []))
+		if order != last or not keyed_start:
+			animation.track_insert_key(track, minf(at / frame_rate, animation.length),
+					{"method": &"_set_draw_order", "args": [order]})
+			last = order
+			keyed_start = true
+		at += float(frame.get("duration", 1))
+	if not keyed_start:
+		animation.track_insert_key(track, 0.0,
+				{"method": &"_set_draw_order", "args": [_draw_order([])]})
+
+
+## One zOrder frame as the names of the drawn slots, back to front.
+func _draw_order(pairs: Variant) -> Array:
+	var names: Array = []
+	for i in _draw_order_of(_declared, pairs):
+		var name: StringName = _declared[i]
+		if slot_index.has(name):
+			names.append(slots[slot_index[name]]["name"])
+	return names
+
+
+## The order of `declared` slots, as indices, after one zOrder frame. The
+## frame lists pairs of (declared slot index, how many places it moves);
+## slots not named keep their relative order around the moved ones. This is
+## `_parseZOrderFrame` from the runtime.
+static func _draw_order_of(declared: Array, pairs: Variant) -> Array:
+	var count := declared.size()
+	var order: Array = []
+	if not (pairs is Array) or (pairs as Array).is_empty():
+		for i in count:
+			order.append(i)
+		return order
+	var moves := pairs as Array
+	order.resize(count)
+	order.fill(-1)
+	var rest: Array = []
+	var cursor := 0
+	for i in range(0, moves.size() - 1, 2):
+		var slot := int(moves[i])
+		var shift := int(moves[i + 1])
+		while cursor != slot and cursor < count:
+			rest.append(cursor)
+			cursor += 1
+		if cursor + shift >= 0 and cursor + shift < count:
+			order[cursor + shift] = cursor
+		cursor += 1
+	while cursor < count:
+		rest.append(cursor)
+		cursor += 1
+	var from_rest := rest.size()
+	for i in range(count - 1, -1, -1):
+		if order[i] == -1:
+			from_rest -= 1
+			order[i] = rest[from_rest] if from_rest >= 0 else 0
+	return order
+
+
+## How far a dropped key may sit from the line its neighbours draw, per
+## property: a hundredth of a rig unit, a few hundredths of a degree. Below
+## anything a screen shows at the 0.512 the lawn draws rigs at, and it keeps
+## a baked rig small enough to commit - most of a walk is straight lines
+## between DragonBones' own keys.
+const TOLERANCE := {
+	"position": 0.01,
+	"rotation": 0.0005,
+	"scale": 0.0005,
+	"skew": 0.0005,
+	"modulate": 0.002,
+}
+
+
+## Writes one property's samples as a track, keeping only the keys linear
+## interpolation cannot reproduce: a run of samples that lies on the line
+## between its ends, to within TOLERANCE, keeps just the ends. A hold stays a
+## hold, since a flat run is a line too.
 ##
 ## A track whose value never changes still gets its single key. Dropping it
 ## entirely leaves the part wherever the previous animation left it.
 func _add_track(animation: Animation, path: String, values: Array) -> void:
 	var track := animation.add_track(Animation.TYPE_VALUE)
 	animation.track_set_path(track, NodePath(path))
+	var property := path.get_slice(":", 1)
+	var angle := property == "rotation"
 	# Rotation wraps at +-PI, and a mirrored part sits right on that seam;
 	# plain linear interpolation would spin it the long way round. Every
 	# rotation track uses the same mode, constant ones included, or Godot
 	# cannot blend one animation into the next consistently.
 	animation.track_set_interpolation_type(track,
-			Animation.INTERPOLATION_LINEAR_ANGLE if path.ends_with(":rotation")
+			Animation.INTERPOLATION_LINEAR_ANGLE if angle
 			else Animation.INTERPOLATION_LINEAR)
-	for i in values.size():
-		var keep := i == 0
-		if not keep and i < values.size() - 1:
-			keep = not _same(values[i], values[i - 1]) \
-					or not _same(values[i], values[i + 1])
-		elif not keep:
-			keep = not _same(values[i], values[i - 1])
-		if keep:
-			animation.track_insert_key(track, float(i) / frame_rate, values[i])
+	var tolerance := float(TOLERANCE.get(property, 0.0))
+	var kept: Array = [0]
+	var anchor := 0
+	var i := 1
+	while i < values.size():
+		# Stretch the line from the anchor as far as every sample under it
+		# stays on it; the last sample that did becomes the next anchor.
+		var end := i
+		while end + 1 < values.size() and _on_line(values, anchor, end + 1, tolerance, angle):
+			end += 1
+		if end == values.size() - 1 and _on_line(values, anchor, end, tolerance, angle) \
+				and _same_within(values[anchor], values[end], tolerance, angle):
+			# A flat tail needs no closing key: Godot holds the last one.
+			break
+		kept.append(end)
+		anchor = end
+		i = end + 1
+	for k in kept:
+		animation.track_insert_key(track, float(k) / frame_rate, values[k])
+
+
+## Whether every sample strictly between `from` and `to` lies within
+## `tolerance` of the straight line between them.
+func _on_line(values: Array, from: int, to: int, tolerance: float, angle: bool) -> bool:
+	for k in range(from + 1, to):
+		var t := float(k - from) / float(to - from)
+		if not _same_within(_mix(values[from], values[to], t, angle), values[k], tolerance, angle):
+			return false
+	return true
+
+
+static func _mix(a: Variant, b: Variant, t: float, angle: bool) -> Variant:
+	if a is Vector2:
+		return (a as Vector2).lerp(b, t)
+	if a is Color:
+		return (a as Color).lerp(b, t)
+	if a is PackedVector2Array:
+		var pa := a as PackedVector2Array
+		var pb := b as PackedVector2Array
+		var out := pa.duplicate()
+		for k in mini(pa.size(), pb.size()):
+			out[k] = pa[k].lerp(pb[k], t)
+		return out
+	if angle:
+		return lerp_angle(float(a), float(b), t)
+	return lerpf(float(a), float(b), t)
+
+
+func _same_within(a: Variant, b: Variant, tolerance: float, angle: bool) -> bool:
+	if tolerance <= 0.0:
+		return _same(a, b)
+	if a is Vector2:
+		return (a as Vector2).distance_to(b) <= tolerance
+	if a is Color:
+		var ca := a as Color
+		var cb := b as Color
+		return maxf(maxf(absf(ca.r - cb.r), absf(ca.g - cb.g)),
+				maxf(absf(ca.b - cb.b), absf(ca.a - cb.a))) <= tolerance
+	if angle:
+		return absf(angle_difference(float(a), float(b))) <= tolerance
+	return absf(float(a) - float(b)) <= tolerance
 
 
 ## A track that switches rather than blends: which picture a slot shows.
@@ -655,6 +922,15 @@ func _add_discrete(animation: Animation, path: String, values: Array) -> void:
 
 
 func _same(a: Variant, b: Variant) -> bool:
+	if a is PackedVector2Array:
+		var pa := a as PackedVector2Array
+		var pb := b as PackedVector2Array
+		if pa.size() != pb.size():
+			return false
+		for i in pa.size():
+			if not pa[i].is_equal_approx(pb[i]):
+				return false
+		return true
 	if a is Vector2:
 		return (a as Vector2).is_equal_approx(b)
 	if a is Color:
@@ -710,6 +986,32 @@ func _read_slot_timelines(source: Dictionary) -> Dictionary:
 			"color": _timeline(entry.get("colorFrame", []),
 					func(f: Dictionary) -> Variant: return color_of(f.get("value", {}))),
 		}
+	return out
+
+
+## FFD keys, per [slot, choice]: each frame's offsets laid out over the whole
+## vertex buffer. A frame lists only a run of it, starting `offset` floats in;
+## the rest of the buffer is zero.
+func _read_ffd_timelines(source: Dictionary) -> Dictionary:
+	var out := {}
+	for entry in (source.get("ffd", []) as Array):
+		if not (entry is Dictionary):
+			continue
+		var which := _mesh_choice(entry)
+		if which.is_empty():
+			continue
+		var size: int = (slots[which[0]]["displays"][which[1]]["mesh"]["vertices"]
+				as PackedVector2Array).size() * 2
+		out[which] = _timeline(entry.get("frame", []),
+				func(f: Dictionary) -> Variant:
+					var offsets := PackedFloat32Array()
+					offsets.resize(size)
+					var start := int(f.get("offset", 0))
+					var run := f.get("vertices", []) as Array
+					for i in run.size():
+						if start + i < size:
+							offsets[start + i] = float(run[i])
+					return offsets)
 	return out
 
 
@@ -821,6 +1123,12 @@ func _sample(track: Array, time: float, fallback: Variant) -> Variant:
 				return (from as Vector2).lerp(to, t)
 			if from is float:
 				return lerpf(from, float(to), t)
+			if from is PackedFloat32Array:
+				var mixed := (from as PackedFloat32Array).duplicate()
+				var target := to as PackedFloat32Array
+				for k in mini(mixed.size(), target.size()):
+					mixed[k] = lerpf(mixed[k], target[k], t)
+				return mixed
 			return from
 	return (track[track.size() - 1] as Dictionary)["value"]
 

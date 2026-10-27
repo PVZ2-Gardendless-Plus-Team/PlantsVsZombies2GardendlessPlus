@@ -2,18 +2,26 @@ class_name Armature
 extends Node2D
 ## A rig on screen: flat sprites driven by Godot's own AnimationPlayer.
 ##
-## All the DragonBones-specific work happens once, in ArmatureBaker, which
-## turns a rig into `Animation` resources. Nothing samples a timeline here,
-## eases a curve or blends two poses by hand - `AnimationPlayer.play()` does
-## all of it, and does it in engine code.
+## A rig is an ordinary scene. `tools/bake_rigs.gd` converts each DragonBones
+## armature PVZGE ships into `art/<bundle>/<armature>.tscn` once, and from
+## then on it is Godot's: open it in the editor, scrub, re-key or add
+## animations in the Animation panel, move or re-skin parts, and save. Nothing
+## samples a timeline here, eases a curve or blends two poses by hand -
+## `AnimationPlayer.play()` does all of it, in engine code.
+##
+## The tree is: one Node2D per slot (in draw order) holding one child per
+## picture it can show, a `Socket_<bone>` marker per bone the game reads
+## positions off, and an AnimationPlayer named `Animations`. A mod can ship a
+## scene built by hand to the same shape and point its art mapping at it with
+## `"scene"`; it never needs DragonBones at all. See docs/ART.md.
 ##
 ## The sprites are flat rather than a bone tree because DragonBones bones can
 ## refuse their parent's rotation or scale and Godot's nodes cannot. Resolving
 ## the chain at bake time removes the difference, and leaves a shallow scene:
 ## a lane of zombies is wide, not deep.
 ##
-## The baked animations and the atlas regions belong to a shared ArmatureSet,
-## so entities cost nodes, not memory.
+## Instances of one scene share its animations and atlas regions, so entities
+## cost nodes, not memory.
 
 signal animation_finished(name: StringName)
 ## Fired when a baked animation reaches an event the rig declares - the
@@ -27,6 +35,18 @@ signal sound(name: StringName)
 ## How long to ease from one animation into the next. Without it a zombie
 ## switching from Walk to Death cuts straight to the death pose.
 const BLEND_TIME := 0.12
+## The AnimationPlayer every rig carries.
+const PLAYER := &"Animations"
+
+## The rig's bounding box in its own units, which fitting it to a lawn cell
+## works from: the origin sits at the feet and the art is rarely centred on it.
+@export var bounds: Rect2 = Rect2()
+## What the rig plays by itself once it is in the tree, looping. Child rigs
+## use it - a mower's wheels spin without anyone asking. Empty plays nothing.
+@export var autoplay: StringName = &""
+## Set on a baked scene you have edited by hand, so `tools/bake_rigs.gd`
+## leaves it alone instead of converting the DragonBones export over it.
+@export var keep: bool = false
 
 var playing: StringName = &""
 var looping: bool = true
@@ -36,84 +56,81 @@ var facing: int = 1
 var fitted_x: float = 0.0
 
 var _player: AnimationPlayer = null
-var _slots: Dictionary = {}          ## slot name -> Sprite2D
+var _slots: Dictionary = {}          ## slot name -> Node2D
 var _sockets: Dictionary = {}        ## socket alias -> Node2D
+var _children: Array = []            ## nested Armatures, for inherited playback
+var _rest_order: Array = []          ## slot names in their authored draw order
+var _reordered: bool = false         ## whether a zOrder track has restacked it
 var _names: Array = []
 
 
+## Builds the rig from a DragonBones export at load time. The game prefers
+## the baked scene (see `Art.make_from`); this is the path for a rig that has
+## none, and what the baker itself runs.
 func setup(source: ArmatureSet, armature_name: StringName,
 		sockets: Dictionary = {}) -> bool:
-	if source == null or not source.has_armature(armature_name):
+	if not RigBuilder.populate(self, source, armature_name, sockets):
 		return false
-	var rig := source.rig(armature_name, sockets)
-	if rig == null:
-		return false
+	return bind(sockets)
 
-	# The setup pose, which is also what a slot keeps when no animation ever
-	# touches it - those get no track at all.
-	var rest := rig.rest_transforms()
-	for i in rig.slots.size():
-		var slot: Dictionary = rig.slots[i]
-		# A slot is a node at its bone, holding one sprite per picture it can
-		# show. Animations move the slot, switch which sprite is visible and
-		# tint the slot, so a blink or a mouth opening is a visibility key and
-		# never a texture swap mid-blend.
-		var node := Node2D.new()
-		node.name = String(slot["name"])
-		node.transform = rest[i]
-		node.modulate = slot["color"]
-		add_child(node)
-		_slots[slot["name"]] = node
-		# A socket has nothing to draw: it is a marker the game can read a
-		# position off, animated like everything else.
-		if slot.has("socket"):
-			_sockets[slot["socket"]] = node
+
+## Indexes a built or instanced rig: finds its slots, its player and the
+## sockets the caller wants by name. `sockets` maps a game-facing alias to a
+## bone ({"armor": "armorSOCKET"}). Returns false when the rig is missing the
+## player or one of those sockets, so the caller can fall back to building it.
+func bind(sockets: Dictionary = {}) -> bool:
+	_player = get_node_or_null(NodePath(PLAYER)) as AnimationPlayer
+	if _player == null:
+		return false
+	_slots.clear()
+	_sockets.clear()
+	_children.clear()
+	_rest_order.clear()
+	for child in get_children():
+		if child == _player or not (child is Node2D):
 			continue
-		var displays: Array = slot["displays"]
-		for choice in displays.size():
-			var display: Dictionary = displays[choice]
-			if display.is_empty():
-				continue
-			var region: StringName = display["region"]
-			var sprite := Sprite2D.new()
-			sprite.name = str(choice)
-			sprite.texture = source.region(region)
-			sprite.centered = true
-			sprite.offset = source.region_offset(region)
-			sprite.transform = display["xform"]
-			sprite.visible = choice == int(slot["display"])
-			if slot["blend"] == "add":
-				sprite.material = _additive()
-			node.add_child(sprite)
-
-	_player = AnimationPlayer.new()
-	_player.name = "Animations"
-	add_child(_player)
+		_slots[StringName(child.name)] = child
+		_rest_order.append(StringName(child.name))
+		if child.has_meta(&"socket"):
+			continue
+		for picture in child.get_children():
+			if picture is Armature:
+				var nested := picture as Armature
+				if nested.bind():
+					_children.append(nested)
+					nested.event.connect(event.emit)
+					nested.sound.connect(sound.emit)
+	for alias in sockets:
+		var marker: Node2D = _slots.get(ArmatureBaker.socket_node_name(StringName(sockets[alias])))
+		if marker == null:
+			return false
+		_sockets[StringName(alias)] = marker
 	# Immediate, not deferred: a rig's event says the pea leaves on THIS
 	# frame, and a frame of latency is the difference between a shot that
 	# comes out of the plant's mouth and one that trails it.
 	_player.callback_mode_method = AnimationMixer.ANIMATION_CALLBACK_MODE_METHOD_IMMEDIATE
-	_player.add_animation_library(&"", source.animations(armature_name, sockets))
-	_player.animation_finished.connect(_on_finished)
-	_names = _player.get_animation_list()
+	if not _player.animation_finished.is_connected(_on_finished):
+		_player.animation_finished.connect(_on_finished)
+	_names = Array(_player.get_animation_list())
 	return true
 
 
-## Glows and flashes are drawn additively. One material serves every one.
-static var _add_material: CanvasItemMaterial = null
-
-
-static func _additive() -> CanvasItemMaterial:
-	if _add_material == null:
-		_add_material = CanvasItemMaterial.new()
-		_add_material.blend_mode = CanvasItemMaterial.BLEND_MODE_ADD
-	return _add_material
+func _ready() -> void:
+	if Engine.is_editor_hint():
+		return
+	if _player == null:
+		bind()
+	if autoplay != &"" and playing == &"":
+		play(autoplay)
 
 
 ## Playback speed, so a buffed or slowed entity animates to match.
 func set_speed_scale(value: float) -> void:
 	if _player != null:
 		_player.speed_scale = maxf(value, 0.0)
+	# Child rigs keep the parent's clock (`_inheritTimeScale` in the runtime).
+	for child in _children:
+		(child as Armature).set_speed_scale(value)
 
 
 func speed_scale() -> float:
@@ -166,12 +183,47 @@ func play(name: StringName, loop: bool = true, restart: bool = false,
 		return true
 	playing = name
 	looping = loop
+	if _reordered and not _reorders(name):
+		_set_draw_order(_rest_order)
+		_reordered = false
 	_player.play(name, blend)
 	if restart:
 		# Replaying the animation that just ended has to start it over, not
 		# resume it at its last frame.
 		_player.seek(0.0, true)
+	# A child rig that has an animation of the same name plays it too
+	# (`inheritAnimation`); one that does not keeps whatever it was doing.
+	for child in _children:
+		var nested := child as Armature
+		if nested.has_animation(name):
+			nested.play(name, loop, restart, blend)
 	return true
+
+
+## Whether an animation sets its own draw order. One that does not gets the
+## authored order back, so a reorder never leaks into the next animation.
+func _reorders(name: StringName) -> bool:
+	var animation := _player.get_animation(name)
+	for track in animation.get_track_count():
+		if animation.track_get_type(track) == Animation.TYPE_METHOD \
+				and animation.track_get_key_count(track) > 0 \
+				and animation.method_track_get_name(track, 0) == &"_set_draw_order":
+			return true
+	return false
+
+
+## Called from a baked zOrder track: restacks the slots back to front. Slots
+## it does not name (sockets, detached limbs' stand-ins) keep their place
+## relative to the rest.
+func _set_draw_order(names: Array) -> void:
+	_reordered = true
+	var index := 0
+	for slot_name in names:
+		var node: Node = _slots.get(StringName(slot_name))
+		if node == null or node.get_parent() != self:
+			continue
+		move_child(node, index)
+		index += 1
 
 
 ## The first of `candidates` this armature actually has. Lets an entity ask
@@ -240,7 +292,7 @@ func set_facing(direction: int) -> void:
 ## zombie's `arm_here_ARM` is the broken stump, sitting on top of the intact
 ## arm - because the game decides when a limb comes off, not the rig.
 func hide_slot(name: StringName, hidden: bool = true) -> void:
-	var node: Node2D = _slots.get(name)
+	var node: Node2D = _slot(name)
 	if node != null:
 		node.visible = not hidden
 
@@ -253,7 +305,7 @@ func detach_slots(names: Array) -> Node2D:
 	freed.name = "Detached"
 	freed.transform = global_transform
 	for slot_name in names:
-		var node: Node2D = _slots.get(StringName(slot_name))
+		var node: Node2D = _slot(StringName(slot_name))
 		if node == null or not is_instance_valid(node):
 			continue
 		var where := node.transform
@@ -261,11 +313,11 @@ func detach_slots(names: Array) -> Node2D:
 		remove_child(node)
 		freed.add_child(node)
 		node.transform = where
-		_slots.erase(StringName(slot_name))
+		_slots.erase(StringName(node.name))
 		# An empty stand-in keeps the name, so the rig's animations still
 		# find a node to key and do not complain about the missing limb.
-		var stand_in := Node2D.new()
-		stand_in.name = String(slot_name)
+		var stand_in := RigSlot.new()
+		stand_in.name = node.name
 		stand_in.visible = false
 		for picture in node.get_children():
 			var blank := Node2D.new()
@@ -274,6 +326,12 @@ func detach_slots(names: Array) -> Node2D:
 		add_child(stand_in)
 		move_child(stand_in, index)
 	return freed
+
+
+## A slot by the name the rig gives it. Node names cannot hold '/', ':' or
+## '.', so a slot PopCap named with one is found under the cleaned name.
+func _slot(name: StringName) -> Node2D:
+	return _slots.get(StringName(String(name).validate_node_name()))
 
 
 func slot_names() -> Array:
