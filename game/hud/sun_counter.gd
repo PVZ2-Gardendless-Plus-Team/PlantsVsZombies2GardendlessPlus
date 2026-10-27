@@ -17,7 +17,8 @@ var _warn_tween: Tween
 
 
 func _init(font_size: int = 22) -> void:
-	add_theme_constant_override("separation", 6)
+	# PVZGE's SunSlot: the count centred in its box, clear of the big icon.
+	add_theme_constant_override("separation", 14)
 	_icon = RigIcon.new(&"sun_counter", Vector2(48, 48))
 	add_child(_icon)
 	_label = Label.new()
@@ -27,6 +28,7 @@ func _init(font_size: int = 22) -> void:
 	_label.add_theme_constant_override("outline_size", 6)
 	_label.custom_minimum_size = Vector2(64, 0)
 	_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	add_child(_label)
 
 

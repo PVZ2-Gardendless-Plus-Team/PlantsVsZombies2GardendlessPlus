@@ -18,7 +18,7 @@ const MAP_MARGIN := Vector2(110, 90)
 ## Node colour by state: locked, open, cleared, or part-played.
 const STATE_COLORS := {
 	&"locked": Color(0.32, 0.32, 0.32),
-	&"open": Color(0.95, 0.95, 0.88),
+	&"open": Color(0.42, 0.75, 0.98),   # PVZGE's blue level domes
 	&"cleared": Color(1.0, 0.82, 0.25),
 	&"saved": Color(0.55, 0.85, 1.0),
 }
@@ -33,6 +33,7 @@ var _selected: StringName = &""
 var _title: Label
 var _progress: Label
 var _coins: Label
+var _gems: Label
 var _prev: Button
 var _next: Button
 var _map: ColorRect
@@ -99,50 +100,25 @@ func _initial_index() -> int:
 # --- building -----------------------------------------------------------
 
 func _build() -> void:
-	add_child(MenuUI.backdrop(Color(0.1, 0.14, 0.1)))
-
-	var column := VBoxContainer.new()
-	column.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-	column.add_theme_constant_override("separation", 0)
-	add_child(column)
-
-	var bar := HBoxContainer.new()
-	bar.add_theme_constant_override("separation", 12)
-	var bar_margin := MarginContainer.new()
-	for side in ["left", "right", "top", "bottom"]:
-		bar_margin.add_theme_constant_override("margin_" + side, 12)
-	bar_margin.add_child(bar)
-	column.add_child(bar_margin)
-
-	bar.add_child(MenuUI.button("Back", back_requested.emit, Vector2(110, 44)))
-	_prev = MenuUI.button("<", _step.bind(-1), Vector2(48, 44))
-	bar.add_child(_prev)
-	_title = MenuUI.label("", MenuUI.HEADING_SIZE)
-	_title.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	_title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	bar.add_child(_title)
-	_next = MenuUI.button(">", _step.bind(1), Vector2(48, 44))
-	bar.add_child(_next)
-	_progress = MenuUI.label("")
-	_progress.custom_minimum_size.x = 150
-	_progress.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
-	bar.add_child(_progress)
-	_coins = MenuUI.label("")
-	_coins.custom_minimum_size.x = 120
-	_coins.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
-	_coins.add_theme_color_override("font_color", Color("f2c53d"))
-	bar.add_child(_coins)
+	# PVZGE's worldMapScene: the teal sky, its square buttons along the top
+	# left, the coin and gem counters top right, and purple arrows in the
+	# bottom corners to step between worlds.
+	add_child(MenuUI.space_backdrop())
 
 	_map = ColorRect.new()
-	_map.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	_map.color = Color.TRANSPARENT
+	_map.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	_map.offset_top = 128
+	_map.offset_bottom = -112
 	_map.clip_contents = true
-	_map.resized.connect(_layout_nodes)
-	column.add_child(_map)
+	_map.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	add_child(_map)
 	_path = Line2D.new()
 	_path.width = 10.0
-	_path.default_color = Color(0.9, 0.8, 0.55, 0.6)
+	_path.default_color = Color(0.75, 0.95, 1.0, 0.7)
 	_path.joint_mode = Line2D.LINE_JOINT_ROUND
 	_map.add_child(_path)
+	_map.resized.connect(_layout_nodes)
 	_lock_label = MenuUI.label("", MenuUI.HEADING_SIZE)
 	_lock_label.set_anchors_and_offsets_preset(Control.PRESET_CENTER)
 	_lock_label.grow_horizontal = Control.GROW_DIRECTION_BOTH
@@ -157,34 +133,119 @@ func _build() -> void:
 	_lock_label.visible = false
 	_map.add_child(_lock_label)
 
+	# exitButton, 67 px squares 78 px apart from the top-left corner.
+	var back := MenuUI.icon_button("ReturnUp", "ReturnDown", Vector2(67, 67),
+			back_requested.emit, "Back")
+	back.name = "Back"
+	back.position = Vector2(45, 43) - back.custom_minimum_size * 0.5
+	add_child(back)
+
+	_title = MenuUI.label("", 44)
+	_title.add_theme_color_override("font_color", Color("ffdd72"))
+	_title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	_title.set_anchors_and_offsets_preset(Control.PRESET_TOP_WIDE)
+	_title.offset_top = 70
+	_title.offset_bottom = 126
+	add_child(_title)
+	_progress = MenuUI.label("", 22)
+	_progress.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	_progress.set_anchors_and_offsets_preset(Control.PRESET_TOP_WIDE)
+	_progress.offset_top = 116
+	_progress.offset_bottom = 144
+	add_child(_progress)
+
+	# CoinCount, a counter whose value sits right of its coin.
+	_coins = _counter("CoinCounter", Vector2(827, 37), Vector2(157, 51), 19.0)
+	_gems = _counter("GemCounter", Vector2(971, 37), Vector2(137, 53), 19.0)
+
+	_prev = _arrow(true)
+	_next = _arrow(false)
+
 	# The card for the selected level, like PvZ2's level popup.
-	var card := PanelContainer.new()
-	var card_margin := MarginContainer.new()
-	for side in ["left", "right", "top", "bottom"]:
-		card_margin.add_theme_constant_override("margin_" + side, 14)
-	card.add_child(card_margin)
-	column.add_child(card)
+	var card := MenuUI.window(0.4, 18.0)
+	card.set_anchors_and_offsets_preset(Control.PRESET_BOTTOM_WIDE)
+	card.offset_left = 80
+	card.offset_right = -80
+	card.offset_top = -108
+	card.offset_bottom = -10
+	add_child(card)
 	var row := HBoxContainer.new()
 	row.add_theme_constant_override("separation", 16)
-	card_margin.add_child(row)
+	card.add_child(row)
 	var text := VBoxContainer.new()
 	text.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	text.alignment = BoxContainer.ALIGNMENT_CENTER
 	row.add_child(text)
-	_card_title = MenuUI.label("", 22)
+	_card_title = MenuUI.label("", 28)
+	_card_title.add_theme_color_override("font_color", MenuUI.LEVEL_NAME)
 	text.add_child(_card_title)
-	_card_status = MenuUI.label("", 16)
-	_card_status.modulate.a = 0.8
+	_card_status = MenuUI.label("", 18)
 	text.add_child(_card_status)
-	_restart = MenuUI.button("Restart", _on_restart, Vector2(140, 48))
+	_restart = MenuUI.button("Restart", _on_restart, Vector2(140, 54), &"green")
 	row.add_child(_restart)
-	_play = MenuUI.button("Play", _on_play, Vector2(160, 48))
+	_play = MenuUI.button("Play", _on_play, Vector2(170, 60))
 	_play.name = "Play"
 	row.add_child(_play)
 
 
+## A currency counter: PVZGE's backing art with the amount over it, or a
+## plain gold label without the art.
+func _counter(sprite: String, at: Vector2, size: Vector2, value_shift: float) -> Label:
+	var value := MenuUI.label("", 27)
+	value.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	value.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	var back := MenuUI.texture(sprite)
+	if back == null:
+		value.add_theme_color_override("font_color", Color("f2c53d"))
+		value.position = at - size * 0.5
+		value.size = size
+		add_child(value)
+		return value
+	var frame := TextureRect.new()
+	frame.texture = back
+	frame.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	frame.stretch_mode = TextureRect.STRETCH_SCALE
+	frame.position = at - size * 0.5
+	frame.size = size
+	frame.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	add_child(frame)
+	value.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	value.offset_left = value_shift * 2.0
+	frame.add_child(value)
+	return value
+
+
+## ButtonLeft and ButtonRight: small purple squares holding PVZGE's arrow,
+## in the bottom corners.
+func _arrow(left: bool) -> Button:
+	var b := MenuUI.button("" if MenuUI.has_sprite("DeltaArrow") else ("<" if left else ">"),
+			_step.bind(-1 if left else 1), Vector2(44, 44), &"purple_big", 0.3)
+	b.set_anchors_and_offsets_preset(
+			Control.PRESET_BOTTOM_LEFT if left else Control.PRESET_BOTTOM_RIGHT)
+	b.offset_left = 8.0 if left else -52.0
+	b.offset_right = b.offset_left + 44.0
+	b.offset_top = -52.0
+	b.offset_bottom = -8.0
+	var arrow := MenuUI.texture("DeltaArrow", 0.3)
+	if arrow != null:
+		# DeltaArrow points up; turn it to face its way.
+		var img := arrow.get_image()
+		img.rotate_90(COUNTERCLOCKWISE if left else CLOCKWISE)
+		var icon := TextureRect.new()
+		icon.texture = ImageTexture.create_from_image(img)
+		icon.set_anchors_and_offsets_preset(Control.PRESET_CENTER)
+		icon.grow_horizontal = Control.GROW_DIRECTION_BOTH
+		icon.grow_vertical = Control.GROW_DIRECTION_BOTH
+		icon.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		b.add_child(icon)
+	add_child(b)
+	return b
+
+
 func _show_world() -> void:
 	var coins := Saves.currency(&"coins")
-	_coins.text = "Coins: %d" % coins if coins > 0 else ""
+	_coins.text = _thousands(coins)
+	_gems.text = _thousands(Saves.currency(&"gems"))
 	for b in _nodes.values():
 		b.queue_free()
 	_nodes.clear()
@@ -201,7 +262,7 @@ func _show_world() -> void:
 
 	_title.text = world.display_name
 	_title.tooltip_text = world.description
-	_map.color = world.map_color
+	_path.default_color = world.map_color.lightened(0.6)
 	var cleared := 0
 	for level_id in world.levels:
 		if Saves.is_cleared(level_id):
@@ -233,6 +294,15 @@ func _show_world() -> void:
 
 	_layout_nodes()
 	_select(world.next_unplayed(Saves.is_cleared) if is_world_open(world) else &"")
+
+
+static func _thousands(n: int) -> String:
+	var digits := str(absi(n))
+	var out := ""
+	while digits.length() > 3:
+		out = "," + digits.right(3) + out
+		digits = digits.left(digits.length() - 3)
+	return ("-" if n < 0 else "") + digits + out
 
 
 func _node_state(level_id: StringName, open: bool) -> StringName:

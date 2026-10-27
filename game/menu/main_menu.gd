@@ -10,6 +10,8 @@ signal continue_requested(level_id: StringName)
 signal quit_requested
 
 const BACKGROUND := Color(0.16, 0.3, 0.14)
+## PVZGE's title painting (mainScreenBg); SPL10 is its other one.
+const SPLASH := "SPL9"
 
 var _settings: SettingsMenu
 
@@ -17,50 +19,88 @@ var _settings: SettingsMenu
 func _ready() -> void:
 	set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	add_child(MenuUI.backdrop(BACKGROUND))
+	# PVZGE's title screen: one big painting with the logo in it, Play at
+	# the bottom, small square buttons in the corners.
+	var splash := MenuUI.texture(SPLASH)
+	if splash != null:
+		var bg := TextureRect.new()
+		bg.texture = splash
+		bg.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		bg.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
+		bg.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+		bg.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		add_child(bg)
+	else:
+		var title := MenuUI.label(String(ProjectSettings.get_setting(
+				"application/config/name", "PVZ2")), MenuUI.TITLE_SIZE)
+		title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		title.set_anchors_and_offsets_preset(Control.PRESET_CENTER_TOP)
+		title.offset_top = 180
+		title.grow_horizontal = Control.GROW_DIRECTION_BOTH
+		add_child(title)
 
-	var center := CenterContainer.new()
-	center.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-	add_child(center)
+	# Bottom centre, as PVZGE's PlayButton (scale 0.7) under its player box.
 	var stack := VBoxContainer.new()
-	stack.add_theme_constant_override("separation", 14)
-	center.add_child(stack)
-
-	var title := MenuUI.label(String(ProjectSettings.get_setting(
-			"application/config/name", "PVZ2")), MenuUI.TITLE_SIZE)
-	title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	stack.add_child(title)
-	var spacer := Control.new()
-	spacer.custom_minimum_size.y = 24
-	stack.add_child(spacer)
-
-	var play := MenuUI.button("Play", play_requested.emit)
-	play.name = "Play"
-	stack.add_child(play)
+	stack.add_theme_constant_override("separation", 10)
+	stack.alignment = BoxContainer.ALIGNMENT_END
+	stack.set_anchors_and_offsets_preset(Control.PRESET_CENTER_BOTTOM)
+	stack.grow_horizontal = Control.GROW_DIRECTION_BOTH
+	stack.grow_vertical = Control.GROW_DIRECTION_BEGIN
+	stack.offset_bottom = -20
+	add_child(stack)
 
 	var resume := latest_save()
 	if resume != &"":
 		var b := MenuUI.button("Continue: %s" % level_name(resume),
-				continue_requested.emit.bind(resume))
+				continue_requested.emit.bind(resume), Vector2(372, 54), &"purple")
 		b.name = "Continue"
+		b.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
 		stack.add_child(b)
 
-	stack.add_child(MenuUI.button("Settings", _open_settings))
+	var play := MenuUI.button("Play", play_requested.emit, Vector2(180, 92),
+			&"purple_big", 0.7)
+	play.name = "Play"
+	play.add_theme_font_size_override("font_size", 46)
+	play.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
+	stack.add_child(play)
+
+	# PVZGE's 50x50 corner buttons: close bottom-left, settings bottom-right.
+	var corner := Vector2(56, 56)
+	var settings := MenuUI.icon_button("SettingUp", "SettingDown", corner,
+			_open_settings, "Settings")
+	settings.name = "Settings"
+	settings.set_anchors_preset(Control.PRESET_BOTTOM_RIGHT)
+	_corner(settings, Vector2(-11 - corner.x, -11 - corner.y), corner)
+	add_child(settings)
 	# The web build has nothing to quit to.
 	if OS.get_name() != "Web":
-		stack.add_child(MenuUI.button("Quit", quit_requested.emit))
+		var quit := MenuUI.icon_button("CloseSquareUp", "CloseSquareDown",
+				corner, quit_requested.emit, "Quit")
+		quit.name = "Quit"
+		quit.set_anchors_preset(Control.PRESET_BOTTOM_LEFT)
+		_corner(quit, Vector2(11, -11 - corner.y), corner)
+		add_child(quit)
 
 	var mods := Data.mod_order().size() - 1    # "base" is not a mod
 	var footer := MenuUI.label("Unofficial fan work - not affiliated with "
 			+ "PopCap Games or Electronic Arts.    %d mod(s) enabled" % mods, 14)
-	footer.modulate.a = 0.7
-	footer.set_anchors_and_offsets_preset(Control.PRESET_BOTTOM_WIDE)
-	footer.offset_top = -32
-	footer.offset_left = 16
+	footer.modulate.a = 0.8
+	footer.set_anchors_and_offsets_preset(Control.PRESET_TOP_WIDE)
+	footer.offset_top = 6
+	footer.offset_left = 12
 	add_child(footer)
 
 	(stack.get_node("Continue") if stack.has_node("Continue") else play) \
 			.grab_focus.call_deferred()
 	MenuUI.music(&"music.menu")
+
+
+## Pins a corner button: anchored by the caller, then offset from it.
+func _corner(c: Control, offset: Vector2, size: Vector2) -> void:
+	c.offset_left = offset.x
+	c.offset_top = offset.y
+	c.offset_right = offset.x + size.x
+	c.offset_bottom = offset.y + size.y
 
 
 ## The part-played level saved most recently, or &"" when there is none.
