@@ -2951,6 +2951,34 @@ func _test_art() -> void:
 		check("the arm came off", hurt.art.slot_names().size() < before,
 				"%d -> %d slots" % [before, hurt.art.slot_names().size()])
 
+	# PVZGE's ground shadows: one layer under every character, sized by the
+	# prefab's originalShadeScale and shrinking as the socket rises.
+	if pea != null and pea.shade != null:
+		var shade := pea.shade
+		check("a plant casts its shadow under every character",
+				not shade.z_as_relative and shade.z_index < board.lane_z(0, Board.LAYER_PLANT)
+				and shade.z_index > LawnScenery.THERE_Z)
+		check("on the ground at its feet",
+				is_equal_approx(shade.position.y, pea.art.position.y))
+		var sock: Node2D = pea.art.socket(&"shade")
+		shade.fit()
+		check("following the peashooter's neck, as PVZGE pins it",
+				sock != null and is_equal_approx(shade.position.x,
+				pea.art.position.x + sock.position.x * pea.art.scale.x))
+		# 0.25 x 0.42 x 2, shrunk by the neck's height of about 20 of 600.
+		var want := 0.25 * 2.0 * pea.art.scale.y * (1.0 + sock.position.y * 0.42 / 600.0)
+		check("at PVZGE's size",
+				absf(shade.scale.x - want) < 0.001, "%.4f vs %.4f" % [shade.scale.x, want])
+	var stood: Zombie = board.spawn_zombie(&"tutorial", 3)
+	if stood.shade != null:
+		# A zombie stands 10 PVZGE units above its feet, and its socket sits
+		# there, so the shadow is a little larger than a still plant's ratio.
+		check("a zombie's shadow lies 10 units below its origin",
+				absf(stood.shade.position.y - stood.art.position.y - 23.81 * stood.art.scale.y) < 0.01)
+		check("at 0.35 of the shade image, a bit larger for the drop",
+				absf(stood.shade.scale.x - 0.35 * 2.0 * stood.art.scale.y * 610.19 / 600.0) < 0.001)
+	stood.queue_free()
+
 	# The lawn reads front to back, and a zombie covers the plant it eats.
 	check("a front row draws over a back row",
 			board.lane_z(4, Board.LAYER_PLANT) > board.lane_z(0, Board.LAYER_ZOMBIE))
