@@ -114,7 +114,7 @@ func _on_art_event(name: StringName) -> void:
 
 func _launch() -> void:
 	_shape(host.board.spawn_projectile(projectile_id, host.row, host.launch_point(), host))
-	Audio.play(&"plant.shoot", host.position)
+	Audio.play_for(&"plant.shoot", host)
 
 
 ## Gives a shot whatever flight this plant's shots have.

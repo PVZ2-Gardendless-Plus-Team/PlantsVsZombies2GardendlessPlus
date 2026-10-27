@@ -74,6 +74,33 @@ func play(id: StringName, position: Variant = null) -> void:
 	backend.play(event, position)
 
 
+## Fires `id.variant` where the catalog has one, and `id` otherwise. This is how
+## one cue sounds different per thing: PVZGE gives each plant its own shoot
+## and plant food sounds, and each world its own mower, so `plant.shoot.snowpea`
+## overrides `plant.shoot` without every caller knowing which plants have one.
+func play_variant(id: StringName, variant: StringName, position: Variant = null) -> void:
+	if variant != &"":
+		var specific := StringName("%s.%s" % [id, variant])
+		if catalog.has_event(specific):
+			play(specific, position)
+			return
+	play(id, position)
+
+
+## `play_variant` keyed on an entity's definition id, at its position.
+func play_for(id: StringName, entity: Node2D) -> void:
+	var def = entity.get("def")
+	play_variant(id, def.id if def != null else &"", entity.position)
+
+
+## Fires `id.variant` only, if the catalog has it. For a sound PVZGE layers on
+## top of a shared one, such as a plant's own plant food cue.
+func play_extra(id: StringName, variant: StringName, position: Variant = null) -> void:
+	var specific := StringName("%s.%s" % [id, variant])
+	if variant != &"" and catalog.has_event(specific):
+		play(specific, position)
+
+
 func play_music(id: StringName) -> void:
 	if muted:
 		return

@@ -23,6 +23,8 @@ extends Node2D
 @export var direction: int = 1
 
 var row: int = 0
+## The projectile's id, which picks its hit sound.
+var kind: StringName = &""
 var source: Node = null
 var board: Node = null
 ## Artwork, when some is mapped for this projectile; null keeps the drawn dot.
@@ -147,6 +149,7 @@ func _check_hit(from_x: float, to_x: float) -> bool:
 		best.knock_back(knockback_distance)
 	_hit.append(best)
 	_splat()
+	Audio.play_variant(&"projectile.hit", kind, position)
 	if bounces:
 		_bounce()
 	if _hit.size() < pierce:

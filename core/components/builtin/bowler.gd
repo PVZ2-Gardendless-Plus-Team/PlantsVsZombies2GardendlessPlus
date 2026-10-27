@@ -44,7 +44,7 @@ func _roll(id: StringName) -> void:
 		ball.bounces = true
 		ball.pierce = int(cfg(&"pierce", 3))
 	host.play_art_once(&"attack")
-	Audio.play(&"plant.shoot", host.position)
+	Audio.play_for(&"plant.shoot", host)
 
 
 ## Plant food: one huge bulb that does not stop for anything.

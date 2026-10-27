@@ -1289,7 +1289,7 @@ func _test_audio() -> void:
 			continue
 		var text := f.get_as_text()
 		f.close()
-		for m in RegEx.create_from_string("Audio\\.play(?:_music)?\\(&\"([a-z0-9._]+)\"") \
+		for m in RegEx.create_from_string("Audio\\.play(?:_music|_variant|_for|_extra)?\\(&\"([a-z0-9._]+)\"") \
 				.search_all(text):
 			var id := StringName(m.get_string(1))
 			if not raised.has(id):
@@ -1305,9 +1305,20 @@ func _test_audio() -> void:
 	var cues := [LevelRunner.wave_sound(0, 5, false), LevelRunner.wave_sound(2, 5, false),
 			LevelRunner.wave_sound(2, 5, true), LevelRunner.wave_sound(4, 5, true)]
 	check_eq("wave cues follow PVZGE", cues,
-			[&"wave.first", &"wave.start", &"wave.huge", &"wave.final"])
+			[&"wave.first", &"", &"wave.huge", &"wave.final"])
 	for id in cues:
-		check("wave cue '%s' exists" % id, Audio.has_event(id))
+		if id != &"":
+			check("wave cue '%s' exists" % id, Audio.has_event(id))
+
+	# A variant overrides its cue only where the catalog has one.
+	check("a plant's own shoot sound exists", Audio.has_event(&"plant.shoot.cactus"))
+	check("mowers have per-world variants", Audio.has_event(&"mower.trigger.mower_egypt"))
+	check("the coin bag has its own landing", Audio.has_event(&"reward.land.coinbag"))
+	check("sunflower makes sun with a sound", Audio.has_event(&"plant.produce"))
+	check("peas splat when they hit", Audio.has_event(&"projectile.hit"))
+	Audio.play_variant(&"plant.shoot", &"not_a_plant")
+	Audio.play_extra(&"plant.food", &"not_a_plant")
+	check("an unknown variant falls back quietly", not Audio._missing_reported.has(&"plant.shoot.not_a_plant"))
 
 	_test_audio_streams()
 	_test_fmod_backend()

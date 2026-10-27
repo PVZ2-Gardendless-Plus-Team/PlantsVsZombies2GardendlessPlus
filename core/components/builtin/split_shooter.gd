@@ -54,7 +54,7 @@ func _fire(side: int, offset: float = 0.0) -> void:
 	host.board.spawn_projectile(StringName(cfg(&"projectile", &"pea")), host.row,
 			at, host, side)
 	host.play_art_once(&"attack")
-	Audio.play(&"plant.shoot", host.position)
+	Audio.play_for(&"plant.shoot", host)
 
 
 func on_plantfood() -> bool:

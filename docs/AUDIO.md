@@ -207,15 +207,21 @@ Raise your own events from a mod component with `Audio.play(&"example.burst")`.
 ## Events the game raises
 
 Plants: `plant.place` `plant.place.water` `plant.dig` `plant.dig.water`
-`plant.eaten` `plant.shoot` `plant.lob` `plant.explode` `plant.food`
+`plant.eaten` `plant.shoot` `plant.lob` `plant.produce` `plant.explode`
+`plant.food`, and one per plant behaviour (`plant.squash`, `plant.chomp`...)
 
-Collectables: `sun.drop` `sun.collect` `plantfood.drop` `plantfood.collect`
+Projectiles: `projectile.hit`
+
+Collectables: `sun.collect` `plantfood.drop` `plantfood.collect` `coin.drop`
+`coin.collect` `reward.drop` `reward.land` `reward.collect`. Sun makes no
+sound when it lands, as in PVZGE; the plant that made it plays `plant.produce`.
 
 Zombies: `zombie.spawn` `zombie.eat` (every 0.6s while chewing) `zombie.die`
 `zombie.armor.break` `zombie.smash` `zombie.imp.throw` `zombie.summon`
 `zombie.enrage` `zombie.limb` `zombie.head` `zombie.boss.*`
 
-Board: `mower.trigger` `wave.first` `wave.start` `wave.huge` `wave.final`
+Board: `mower.trigger` `wave.first` `wave.huge` `wave.final` (other waves
+arrive in silence)
 `lawn.turret` `lawn.cannon` `lawn.house.hit` `lawn.ability.refuse`
 
 UI and flow: `level.ready` `ui.seed.select` `ui.seed.cancel` `ui.seed.refuse`
@@ -227,6 +233,22 @@ Music, per world (`beach`, `cowboy`, `dark`, `dino`, `egypt`, `eighties`,
 `music.lose.<world>` `music.leave.<world>` `music.minigame.<world>`
 `music.ultimate.<world>` `music.zomboss.intro.<world>`, where PVZGE has the
 cue. Plus `music.zomboss` and `music.zengarden`.
+
+### Variants
+
+PVZGE gives each plant its own shoot, lob, produce and plant food sounds, each
+projectile its own hit, each world its own mower and each kind of prize its
+own pickup sounds. The game asks for those with `Audio.play_variant(cue,
+variant)` (or `Audio.play_for(cue, entity)`, keyed on its definition id),
+which plays `<cue>.<variant>` where the catalog has one and `<cue>` otherwise:
+`plant.shoot.cactus`, `projectile.hit.cabbage`, `mower.trigger.mower_egypt`,
+`reward.land.coinbag`. A plant's own plant food cue plays on top of the
+shared `plant.food` sting (`Audio.play_extra`), as PVZGE layers them.
+
+The clips come from PVZGE's prefabs themselves: each plant, projectile,
+mower and pickup names its AudioClips, and those were matched to the Music
+project's files by content hash. A plant whose sound is the same as the
+shared cue's gets no variant.
 
 A test asserts that every id the game raises exists in the catalog, so a
 mistyped event fails the suite rather than going quietly silent.

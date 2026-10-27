@@ -39,7 +39,7 @@ func _process(delta: float) -> void:
 		if t.position.x > host.position.x:
 			host.board.spawn_projectile(shot, host.row, host.launch_point(), host)
 			host.play_art_once(&"attack")
-			Audio.play(&"plant.shoot", host.position)
+			Audio.play_for(&"plant.shoot", host)
 			_cooldown = cfg_jittered(&"interval", &"interval_jitter", 1.75)
 			return
 

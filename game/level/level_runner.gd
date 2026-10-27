@@ -448,7 +448,9 @@ func _advance_wave() -> void:
 	var settings_flag: int = int((level.get("wave_pacing", {}) as Dictionary)
 			.get("flag_interval", 0))
 	var is_flag := settings_flag > 0 and (wave_index + 1) % settings_flag == 0
-	Audio.play(wave_sound(wave_index, waves.size(), is_flag))
+	var cue := wave_sound(wave_index, waves.size(), is_flag)
+	if cue != &"":
+		Audio.play(cue)
 
 	var pacing: Dictionary = level.get("wave_pacing", {})
 	_timer = float(pacing.get("gap", wave_gap))
@@ -456,6 +458,7 @@ func _advance_wave() -> void:
 
 ## The cue a wave starts with, as PVZGE plays them: the awooga as the first
 ## zombies come, the final-wave sting for the last, a huge wave for a flag.
+## Any other wave arrives in silence, so this returns no cue for it.
 static func wave_sound(index: int, count: int, is_flag: bool) -> StringName:
 	if index == count - 1 and count > 1:
 		return &"wave.final"
@@ -463,7 +466,7 @@ static func wave_sound(index: int, count: int, is_flag: bool) -> StringName:
 		return &"wave.huge"
 	if index == 0:
 		return &"wave.first"
-	return &"wave.start"
+	return &""
 
 
 func _run_action(action: Dictionary) -> void:

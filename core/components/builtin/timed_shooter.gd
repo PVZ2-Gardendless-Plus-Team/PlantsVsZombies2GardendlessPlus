@@ -35,4 +35,4 @@ func _process(delta: float) -> void:
 		return
 	var row: int = rows[randi() % rows.size()]
 	host.board.spawn_projectile(projectile_id, row, host.launch_point(), host)
-	Audio.play(&"plant.shoot", host.position)
+	Audio.play_for(&"plant.shoot", host)

@@ -1307,7 +1307,7 @@ func _on_zombie_reached_house(who: Zombie) -> void:
 	var m := mower_in_row(who.row)
 	if m != null and m.trigger():
 		mower_triggered.emit(who.row)
-		Audio.play(&"mower.trigger", m.position)
+		Audio.play_variant(&"mower.trigger", m.art_id(), m.position)
 		return
 	level_lost.emit()
 
@@ -1414,6 +1414,7 @@ func spawn_projectile(id: StringName, row: int, from: Vector2, source: Node,
 	pr.damage = float(Data.projectile_damage(id))
 	pr.from_zombie = source is Zombie
 	pr.direction = direction if direction != 0 else (-1 if pr.from_zombie else 1)
+	pr.kind = id
 	pr.position = from
 	pr.z_index = lane_z(row, LAYER_PROJECTILE)
 	_projectiles.add_child(pr)
@@ -1430,6 +1431,7 @@ func splash_at(row: int, x: float, projectile_id: StringName, source: Node,
 	var entries: Array = def.extra.get("SplashDamage", []) if def != null else []
 	if entries.is_empty():
 		entries = [{"Damage": Data.projectile_damage(projectile_id), "Range": {"w": 1, "h": 1}}]
+	Audio.play_variant(&"projectile.hit", projectile_id, Vector2(x, grid_to_world(row, 0).y))
 	var hit := 0
 	for entry in entries:
 		var area: Dictionary = entry.get("Range", {"w": 1, "h": 1})
@@ -1508,8 +1510,9 @@ func _add_sun_token(at: Vector2, rest_y: float) -> SunToken:
 	s.x_limits = Vector2(origin.x + cell_size.x * 0.25, origin.x + cell_size.x * (cols - 0.25))
 	s.position.x = clampf(s.position.x, s.x_limits.x, s.x_limits.y)
 	s.collected.connect(func(c): _on_sun_collected(c))
+	# Silent: PVZGE's sun makes no sound of its own until it is collected,
+	# and the plant that made it plays its produce cue.
 	_suns.add_child(s)
-	Audio.play(&"sun.drop", at)
 	return s
 
 
@@ -1561,6 +1564,7 @@ func drop_coin(at: Vector2, value: int = CoinToken.SILVER) -> CoinToken:
 	c.collect_target = to_global(coin_collect_target)
 	c.collected.connect(func(t): _on_coin_collected(t))
 	_suns.add_child(c)
+	Audio.play(&"coin.drop", at)
 	return c
 
 
@@ -1584,7 +1588,7 @@ func drop_reward(reward: LevelReward, at: Vector2) -> RewardDrop:
 	d.picked_up.connect(_on_reward_picked_up)
 	_suns.add_child(d)
 	d.leap_to(grid_to_world(floori(rows / 2.0), floori(cols / 2.0)))
-	Audio.play(&"reward.drop", at)
+	Audio.play_variant(&"reward.drop", d.sound_variant(), at)
 	return d
 
 
@@ -1626,7 +1630,9 @@ func feed_plant(row: int, col: int) -> bool:
 	if not p.apply_plant_food():
 		return false
 	spend_plant_food()
+	# PVZGE layers the shared plant food sting with the plant's own cue.
 	Audio.play(&"plant.food", p.position)
+	Audio.play_extra(&"plant.food", p.def.id if p.def != null else &"", p.position)
 	_propagate_power(row, col)
 	return true
 
