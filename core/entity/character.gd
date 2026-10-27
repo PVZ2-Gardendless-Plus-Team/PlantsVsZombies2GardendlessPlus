@@ -27,6 +27,8 @@ var last_damage_source: Node = null
 ## The visual, when extracted art covers this entity. Null leaves the
 ## placeholder drawing in place, so the game runs the same without any art.
 var art: Armature = null
+## The oval it casts on the lawn, when its mapping gives one.
+var shade: GroundShade = null
 ## How fast this entity's art runs relative to its rig. Each entity draws its
 ## own, a little either side of 1, as PVZGE does, so a row of sunflowers or a
 ## crowd of zombies does not bob in lockstep.
@@ -85,6 +87,9 @@ func _attach_art() -> void:
 	art = built
 	art_rate = randf_range(0.9, 1.1)
 	add_child(art)
+	shade = GroundShade.make(art, Art.mapping(art_kind(), def.id).get("shade", {}))
+	if shade != null:
+		add_child(shade)
 	queue_redraw()
 
 

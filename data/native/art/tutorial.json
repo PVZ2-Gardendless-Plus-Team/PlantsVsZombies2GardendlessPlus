@@ -1,11 +1,13 @@
 {
- "//": "Entity art for Front Lawn. Keyed <kind>:<id>; `bundle` is a directory under art/, `armature` one of the rigs inside it, and `animations` maps a game state to whatever that rig calls it. Plants, zombies and projectiles are drawn the way PVZGE draws them: every character at its CharacterScale (0.42) times the port's cell-to-square ratio, which is the 0.512 the lawn and mowers use, with the rig's origin - its feet - on the lane's floor, 8 PVZGE units below the square's centre (9.7 here). Sizes therefore come from the art itself, so a peashooter and a sunflower stand as tall as each other as they did in the original. `sockets` names bones the game reads positions off (`armor` is where a cone or bucket sits). `armor:<id>` rigs hang off that socket at the zombie rig's own scale. A mod reskins an entity by shipping a file like this in its own art/ directory.",
+ "//": "Entity art for Front Lawn. Keyed <kind>:<id>; `bundle` is a directory under art/, `armature` one of the rigs inside it, and `animations` maps a game state to whatever that rig calls it. Plants, zombies and projectiles are drawn the way PVZGE draws them: every character at its CharacterScale (0.42) times the port's cell-to-square ratio, which is the 0.512 the lawn and mowers use, with the rig's origin - its feet - on the lane's floor, 8 PVZGE units below the square's centre (9.7 here). Sizes therefore come from the art itself, so a peashooter and a sunflower stand as tall as each other as they did in the original. `sockets` names bones the game reads positions off (`armor` is where a cone or bucket sits). `armor:<id>` rigs hang off that socket at the zombie rig's own scale. `shade` is the oval PVZGE lays on the ground under each character (see core/art/ground_shade.gd): the prefab's originalShadeScale, its shadeSocket - a bone named in `sockets`, or a fixed point in rig units with y up - and for zombies the 23.8 rig units their origin stands above their feet. A mod reskins an entity by shipping a file like this in its own art/ directory.",
  "plant:peashooter": {
   "bundle": "plants_PeashooterPLANT",
   "armature": "Peashooter",
   "scale": 0.512,
   "offset_x": 0,
   "offset_y": 9.7,
+  "shade": {"scale": 0.25, "socket": "shade"},
+  "sockets": {"shade": "neck"},
   "//": "projectile_origin is the PeashooterPLANT prefab's PeaSpawnPoint, in rig units with y up.",
   "projectile_origin": [66.538, 79.306],
   "//idle": "idle_random is the prefab AnimationController's RandomAnim, played instead of the idle a random_rate/200 of the time (RandRate, 100 when the prefab leaves it out).",
@@ -23,6 +25,8 @@
   "scale": 0.512,
   "offset_x": 0,
   "offset_y": 9.7,
+  "shade": {"scale": 0.25, "socket": "shade"},
+  "sockets": {"shade": "mouth"},
   "//": "produce_point is the SunflowerPLANT prefab's SunProducePoint, in rig units with y up; sun_direction is where PVZGE throws the sun: sideways away from the stem's shade, up by the point's height.",
   "produce_point": [-5.9, 109.8],
   "sun_direction": [-11.8, 109.8],
@@ -40,6 +44,7 @@
   "scale": 0.512,
   "offset_x": 0,
   "offset_y": 9.7,
+  "shade": {"scale": 0.25},
   "idle_random": ["Rand11", "Rand12"],
   "animations": {
    "idle": "Idle1",
@@ -55,6 +60,7 @@
   "scale": 0.512,
   "offset_x": 0,
   "offset_y": 9.7,
+  "shade": {"scale": 0.2},
   "animations": {
    "idle": "Idle",
    "spawn": "Spawn_Baby",
@@ -70,6 +76,7 @@
   "scale": 0.512,
   "offset_x": 0,
   "offset_y": 9.7,
+  "shade": {"scale": 0.35, "point": [0, -24.26], "drop": 23.81},
   "hide_slots": [
    "arm_here_ARM"
   ],
@@ -117,6 +124,7 @@
   "scale": 0.512,
   "offset_x": 0,
   "offset_y": 9.7,
+  "shade": {"scale": 0.35, "point": [0, -24.26], "drop": 23.81},
   "hide_slots": [
    "arm_here_ARM"
   ],
@@ -164,6 +172,7 @@
   "scale": 0.512,
   "offset_x": 0,
   "offset_y": 9.7,
+  "shade": {"scale": 0.35, "point": [0, -24.26], "drop": 23.81},
   "hide_slots": [
    "arm_here_ARM"
   ],
