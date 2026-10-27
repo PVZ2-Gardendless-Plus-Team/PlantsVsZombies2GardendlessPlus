@@ -15,30 +15,29 @@ signal exit_requested(destination: StringName)
 ## Asked before opening, so the level can refuse (between levels, say).
 var can_open: Callable
 
-var _button: Button
+const BUTTON_SIZE := Vector2(78, 78)
+
+var _button: BaseButton
 var _overlay: Control
 var _panel: Control
 var _settings: SettingsMenu
+## setting key -> its slider, refreshed when the full settings close.
+var _volumes: Dictionary = {}
 
 
 func _ready() -> void:
 	layer = 10
 	process_mode = Node.PROCESS_MODE_ALWAYS
 
-	# The button sits in the top-right corner, clear of the seed bank.
-	_button = Button.new()
+	# PVZGE's pause button: top-right, beside fast forward, 139 px at 0.5.
+	_button = MenuUI.icon_button("Pause", "PauseActive", BUTTON_SIZE, open, "II")
 	_button.name = "PauseButton"
-	_button.text = "II"
 	_button.tooltip_text = "Pause (Esc)"
-	_button.focus_mode = Control.FOCUS_NONE
-	_button.custom_minimum_size = Vector2(48, 48)
-	_button.add_theme_font_size_override("font_size", 20)
 	_button.set_anchors_preset(Control.PRESET_TOP_RIGHT)
-	_button.offset_left = -64
-	_button.offset_right = -16
-	_button.offset_top = 16
-	_button.offset_bottom = 64
-	_button.pressed.connect(open)
+	_button.offset_left = -BUTTON_SIZE.x - 4
+	_button.offset_right = -4
+	_button.offset_top = 12
+	_button.offset_bottom = 12 + BUTTON_SIZE.y
 	add_child(_button)
 
 	_overlay = Control.new()
@@ -46,22 +45,89 @@ func _ready() -> void:
 	_overlay.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	_overlay.visible = false
 	add_child(_overlay)
-	_overlay.add_child(MenuUI.backdrop(Color(0, 0, 0, 0.55)))
+	# PVZGE's MouseBlocker: black at 94/255.
+	_overlay.add_child(MenuUI.backdrop(Color(0, 0, 0, 0.37)))
 
-	var parts := MenuUI.panel(320.0)
-	_panel = parts[0]
+	_panel = _build_window()
 	_overlay.add_child(_panel)
-	var stack: VBoxContainer = parts[1]
-	var title := MenuUI.label("Paused", MenuUI.HEADING_SIZE)
+
+
+## PVZGE's pause window: "Game Paused" over the grass-and-sunflower crest,
+## the two volume bars, then Exit Level, Restart and Resume.
+func _build_window() -> Control:
+	var center := CenterContainer.new()
+	center.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	center.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	var column := VBoxContainer.new()
+	column.add_theme_constant_override("separation", 0)
+	center.add_child(column)
+
+	var title := MenuUI.label("Game Paused", 50)
 	title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	stack.add_child(title)
-	var resume := MenuUI.button("Resume", close)
+	column.add_child(title)
+	# The crest hangs on the window's top edge, over its rim.
+	var crest := RigIcon.new(&"pause_top", Vector2(0, 46))
+	crest.z_index = 1
+	crest.ready.connect(func() -> void:
+		if not crest.has_art():
+			crest.custom_minimum_size.y = 0)
+	column.add_child(crest)
+
+	var window := MenuUI.window(0.6, 30.0)
+	window.custom_minimum_size = Vector2(742, 240)
+	column.add_child(window)
+	var stack := VBoxContainer.new()
+	stack.add_theme_constant_override("separation", 14)
+	stack.alignment = BoxContainer.ALIGNMENT_CENTER
+	window.add_child(stack)
+
+	var sliders := GridContainer.new()
+	sliders.columns = 2
+	sliders.add_theme_constant_override("h_separation", 14)
+	sliders.add_theme_constant_override("v_separation", 10)
+	sliders.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
+	stack.add_child(sliders)
+	_add_volume(sliders, "Music", &"music_volume")
+	_add_volume(sliders, "Sound FX", &"sfx_volume")
+
+	var buttons := HBoxContainer.new()
+	buttons.add_theme_constant_override("separation", 26)
+	buttons.alignment = BoxContainer.ALIGNMENT_CENTER
+	stack.add_child(buttons)
+	var size := Vector2(189, 71)
+	buttons.add_child(MenuUI.button("EXIT LEVEL", _on_exit.bind(&"map"), size))
+	buttons.add_child(MenuUI.button("RESTART", _on_restart, size))
+	var resume := MenuUI.button("RESUME", close, size, &"brown")
 	resume.name = "Resume"
-	stack.add_child(resume)
-	stack.add_child(MenuUI.button("Restart level", _on_restart))
-	stack.add_child(MenuUI.button("Settings", _open_settings))
-	stack.add_child(MenuUI.button("World map", _on_exit.bind(&"map")))
-	stack.add_child(MenuUI.button("Main menu", _on_exit.bind(&"menu")))
+	buttons.add_child(resume)
+
+	# Not in PVZGE's pause window: the full settings and the title screen.
+	var extras := HBoxContainer.new()
+	extras.add_theme_constant_override("separation", 12)
+	extras.alignment = BoxContainer.ALIGNMENT_CENTER
+	stack.add_child(extras)
+	var small := Vector2(150, 44)
+	extras.add_child(MenuUI.button("Settings", _open_settings, small, &"green"))
+	extras.add_child(MenuUI.button("Main Menu", _on_exit.bind(&"menu"), small, &"green"))
+	return center
+
+
+func _add_volume(grid: GridContainer, text: String, key: StringName) -> void:
+	var name_label := MenuUI.label(text, 30)
+	name_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
+	grid.add_child(name_label)
+	var slider := HSlider.new()
+	slider.min_value = 0.0
+	slider.max_value = 1.0
+	slider.step = 0.05
+	slider.custom_minimum_size = Vector2(284, 30)
+	slider.size_flags_vertical = Control.SIZE_SHRINK_CENTER
+	slider.focus_mode = Control.FOCUS_NONE
+	MenuUI.skin_slider(slider, 45.0)
+	slider.value = Settings.get_value(key)
+	slider.value_changed.connect(func(v: float) -> void: Settings.set_value(key, v))
+	grid.add_child(slider)
+	_volumes[key] = slider
 
 
 func is_open() -> bool:
@@ -111,6 +177,8 @@ func _open_settings() -> void:
 	_settings.closed.connect(func() -> void:
 		_settings = null
 		_panel.visible = true
+		for key in _volumes:
+			_volumes[key].set_value_no_signal(Settings.get_value(key))
 		_focus_first())
 	_overlay.add_child(_settings)
 

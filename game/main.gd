@@ -8,6 +8,8 @@ extends Node2D
 signal exit_requested(destination: StringName)
 
 const APP_SCENE := "res://game/app.tscn"
+## PVZGE lays a chosen hand out four packets to a row.
+const SEEDS_PER_ROW := 4
 
 ## Campaign to play. Clearing a level advances to the next one in its list.
 @export var campaign_id: StringName = &"tutorial"
@@ -33,7 +35,8 @@ const APP_SCENE := "res://game/app.tscn"
 
 @export_group("HUD")
 @export var hud_font_size: int = 18
-@export var seed_button_size := Vector2(96, 56)
+## PVZGE's card: 239x151 at scale 0.4.
+@export var seed_button_size := Vector2(108, 68)
 ## Speed applied while Fast Forward is toggled on.
 @export_range(1.0, 8.0) var fast_forward_scale: float = 2.5
 
@@ -60,7 +63,8 @@ var _plant_food_bar: PlantFoodBar
 var _banner: LevelBanner
 var _wave_label: Label
 var _level_label: Label
-var _seed_bar: HBoxContainer
+var _seed_bar: HFlowContainer
+var _fast_forward_button: BaseButton
 
 var _mode_label: Label
 var _objective_label: Label
@@ -104,7 +108,7 @@ func _ready() -> void:
 	var first := start_level
 	if first == &"":
 		if _campaign == null:
-			_status.text = "Campaign '%s' not found" % campaign_id
+			_set_status("Campaign '%s' not found" % campaign_id)
 			return
 		first = _campaign.first_level()
 	# Jumping straight to a level should still follow its campaign afterwards.
@@ -117,7 +121,7 @@ func _ready() -> void:
 func load_level(level_id: StringName) -> void:
 	var level := Data.level(level_id)
 	if level.is_empty():
-		_status.text = "Level '%s' not found" % level_id
+		_set_status("Level '%s' not found" % level_id)
 		push_warning("Main: unknown level '%s'" % level_id)
 		return
 
@@ -145,7 +149,7 @@ func load_level(level_id: StringName) -> void:
 	elif runner.needs_seed_choice():
 		_open_chooser()
 
-	_status.text = ""
+	_set_status("")
 	_wave_label.text = ""
 	_sun_counter.set_total(board.sun, true)
 	# A chooser level says "Ready, Set, Plant!" once the player has picked.
@@ -173,45 +177,114 @@ func _build_hud() -> void:
 	var layer := CanvasLayer.new()
 	add_child(layer)
 
-	var root := VBoxContainer.new()
-	root.position = Vector2(20, 16)
-	layer.add_child(root)
+	# PVZGE's inGameScene layout, scaled from its 1024x640 canvas (one of its
+	# pixels is MenuUI.PX of ours). Left-hand pieces keep their distance from
+	# the left edge and right-hand ones from the right, as its Widgets do.
+	var hud := Control.new()
+	hud.name = "HUD"
+	hud.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	hud.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	layer.add_child(hud)
 
-	# The tools along the top, PVZGE-style: sun, packets, plant food, shovel.
-	var top := HBoxContainer.new()
-	top.add_theme_constant_override("separation", 16)
-	root.add_child(top)
+	# SunSlot: the dark rounded count box with the sun icon over its left end.
+	var sun_box := MenuUI.stylebox("SunCountBG", 0.55)
+	if sun_box != null:
+		var bg := Panel.new()
+		bg.add_theme_stylebox_override("panel", sun_box)
+		bg.position = Vector2(191, 23)
+		bg.size = Vector2(104, 45)
+		bg.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		hud.add_child(bg)
+	_sun_counter = SunCounter.new(34)
+	_sun_counter.position = Vector2(157, 21)
+	hud.add_child(_sun_counter)
 
-	_sun_counter = SunCounter.new(hud_font_size + 6)
-	top.add_child(_sun_counter)
-	_seed_bar = HBoxContainer.new()
-	_seed_bar.add_theme_constant_override("separation", 8)
-	top.add_child(_seed_bar)
+	# Cards: the packets from x 396, four to a row as PVZGE wraps them.
+	_seed_bar = HFlowContainer.new()
+	_seed_bar.add_theme_constant_override("h_separation", 9)
+	_seed_bar.add_theme_constant_override("v_separation", 8)
+	_seed_bar.position = Vector2(396, 9)
+	_seed_bar.custom_minimum_size.x = SEEDS_PER_ROW * (seed_button_size.x + 9)
+	_seed_bar.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	hud.add_child(_seed_bar)
+
+	# PlantFoodSlot sits under the sun counter.
 	_plant_food_bar = PlantFoodBar.new(board.max_plant_food, hud_font_size)
 	_plant_food_bar.pressed.connect(_toggle_plant_food)
-	top.add_child(_plant_food_bar)
+	_plant_food_bar.position = Vector2(160, 109)
+	hud.add_child(_plant_food_bar)
+
+	# Shovel, fast forward and pause along the top right.
 	_shovel_button = ShovelButton.new()
 	_shovel_button.board = board
 	_shovel_button.pressed.connect(_toggle_shovel)
-	top.add_child(_shovel_button)
-	_coin_counter = CoinCounter.new(hud_font_size + 2)
-	top.add_child(_coin_counter)
+	_shovel_button.custom_minimum_size = Vector2(89, 89)
+	_pin_right(_shovel_button, Vector2(1023, 40), Vector2(89, 89))
+	hud.add_child(_shovel_button)
+	_fast_forward_button = MenuUI.icon_button("2x", "", Vector2(78, 78),
+			_toggle_fast_forward, ">>")
+	_fast_forward_button.name = "FastForward"
+	_fast_forward_button.tooltip_text = "Fast forward"
+	if _fast_forward_button is TextureButton:
+		_fast_forward_button.toggle_mode = true
+		(_fast_forward_button as TextureButton).texture_pressed = MenuUI.texture("2xActive")
+	_pin_right(_fast_forward_button, Vector2(1121, 12), Vector2(78, 78))
+	hud.add_child(_fast_forward_button)
 
-	var info := HBoxContainer.new()
-	info.add_theme_constant_override("separation", 24)
-	root.add_child(info)
-	_wave_label = _make_label("")
-	info.add_child(_wave_label)
+	# CurrencyShower: coins bottom-left, shown once there are some.
+	_coin_counter = CoinCounter.new(hud_font_size + 8)
+	_coin_counter.set_anchors_preset(Control.PRESET_BOTTOM_LEFT)
+	_coin_counter.offset_left = 24
+	_coin_counter.offset_top = -64
+	hud.add_child(_coin_counter)
+
+	# levelName: bottom centre-right in PVZGE's pale yellow; the wave count
+	# follows it.
+	var bottom := HBoxContainer.new()
+	bottom.add_theme_constant_override("separation", 24)
+	bottom.set_anchors_preset(Control.PRESET_BOTTOM_WIDE)
+	bottom.offset_top = -56
+	bottom.offset_bottom = -8
+	bottom.offset_left = 360
+	bottom.offset_right = -16
+	bottom.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	hud.add_child(bottom)
 	_level_label = _make_label("")
-	info.add_child(_level_label)
+	MenuUI.style_label(_level_label, 34, MenuUI.LEVEL_NAME, 4)
+	_level_label.custom_minimum_size.x = 505
+	_level_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
+	_level_label.clip_text = true
+	bottom.add_child(_level_label)
+	_wave_label = _make_label("")
+	MenuUI.style_label(_wave_label, 28, MenuUI.TEXT, 4)
+	bottom.add_child(_wave_label)
+
+	# What PVZGE keeps in its debug and task panels: the objectives, lawn
+	# abilities and the tool in hand, down the left under plant food.
+	var info := VBoxContainer.new()
+	info.position = Vector2(20, 186)
+	info.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	hud.add_child(info)
 	_mode_label = _make_label("")
 	info.add_child(_mode_label)
-	_status = _make_label("")
-	info.add_child(_status)
 	_objective_label = _make_label("")
-	root.add_child(_objective_label)
+	info.add_child(_objective_label)
 	_ability_label = _make_label("")
-	root.add_child(_ability_label)
+	info.add_child(_ability_label)
+
+	# GamingTips: a dark band near the bottom for the level's big messages.
+	_status = _make_label("")
+	MenuUI.style_label(_status, 36, MenuUI.TIP_YELLOW, 6)
+	_status.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	_status.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	_status.set_anchors_preset(Control.PRESET_BOTTOM_WIDE)
+	_status.offset_top = -157
+	_status.offset_bottom = -51
+	var band := StyleBoxFlat.new()
+	band.bg_color = Color(0, 0, 0, 0.55)
+	_status.add_theme_stylebox_override("normal", band)
+	_status.visible = false
+	hud.add_child(_status)
 
 	# Its own layer above the HUD, so the words cross the whole screen.
 	var banners := CanvasLayer.new()
@@ -227,6 +300,22 @@ func _build_hud() -> void:
 	_award = AwardScreen.new()
 	awards.add_child(_award)
 	_award.continued.connect(_finish_level.bind(0.0))
+
+
+## Shows a message in the tips band, or hides the band when it is empty.
+func _set_status(text: String) -> void:
+	_status.text = text
+	_status.visible = text != ""
+
+
+## Places a control by its PVZGE spot, kept the same distance from the
+## right edge. `at` is its top-left on a 1280-wide screen.
+func _pin_right(c: Control, at: Vector2, size: Vector2) -> void:
+	c.set_anchors_preset(Control.PRESET_TOP_RIGHT)
+	c.offset_left = at.x - 1280.0
+	c.offset_right = at.x + size.x - 1280.0
+	c.offset_top = at.y
+	c.offset_bottom = at.y + size.y
 
 
 func _make_label(text: String) -> Label:
@@ -524,6 +613,8 @@ func _toggle_fast_forward() -> void:
 	_fast_forward = not _fast_forward
 	Engine.time_scale = fast_forward_scale if _fast_forward else 1.0
 	Audio.play(&"ui.fastforward.on" if _fast_forward else &"ui.fastforward.off")
+	if _fast_forward_button != null:
+		_fast_forward_button.set_pressed_no_signal(_fast_forward)
 	_refresh_mode_label()
 
 
@@ -614,7 +705,7 @@ func _on_objective_failed(objective: Objective) -> void:
 		return
 	var text := objective.describe()
 	_on_lost()
-	_status.text = "Objective failed: %s" % (text if text != "" else objective.name)
+	_set_status("Objective failed: %s" % (text if text != "" else objective.name))
 
 
 func _on_wave_started(index: int, total: int) -> void:
@@ -659,7 +750,7 @@ func _on_won() -> void:
 	# Granted as it drops, so leaving before picking it up cannot lose it.
 	reward.grant()
 	_play_ending(&"victory", &"level.win")
-	_status.text = "Level complete!"
+	_set_status("Level complete!")
 	_drop_reward(reward)
 
 
@@ -689,7 +780,7 @@ func _on_reward_collected(drop: Collectable) -> void:
 func _finish_level(delay: float) -> void:
 	if _campaign == null or _campaign.is_last(_current_level) \
 			or _campaign.index_of(_current_level) < 0:
-		_status.text = (_campaign.completion_message if _campaign != null
+		_set_status(_campaign.completion_message if _campaign != null
 				else "Level complete!")
 		if return_to_map:
 			_leave_after(delay)
@@ -713,7 +804,7 @@ func _on_lost() -> void:
 	Saves.clear_save(_current_level)
 	Audio.stop_music()
 	_play_ending(&"lose", &"level.lose")
-	_status.text = "The zombies ate your brains!"
+	_set_status("The zombies ate your brains!")
 	_advance_after(retry_delay, _current_level)
 
 
