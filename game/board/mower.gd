@@ -33,6 +33,11 @@ const MAX_REV := 0.6
 
 
 ## Gives the mower its world's look. Without art it keeps drawing a box.
+## The world's mower this is, such as `mower_modern`; empty without art.
+func art_id() -> StringName:
+	return _art_id
+
+
 func attach_art(id: StringName) -> void:
 	if art != null:
 		art.queue_free()

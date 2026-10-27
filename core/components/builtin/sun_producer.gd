@@ -56,6 +56,7 @@ func _on_art_event(name: StringName) -> void:
 ## (`produce_point`, in rig units with y up, and `sun_direction`), so a plant
 ## without art or without the point just drops its sun as before.
 func _produce() -> void:
+	Audio.play_for(&"plant.produce", host)
 	var art: Armature = host.art
 	var entry := Art.mapping(host.art_kind(), host.def.id) if host.def != null else {}
 	var point: Array = entry.get("produce_point", [])

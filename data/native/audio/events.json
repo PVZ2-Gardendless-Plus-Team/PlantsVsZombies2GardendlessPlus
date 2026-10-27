@@ -30,10 +30,6 @@
    "fmod": "event:/SFX/Plants/PlantFood"
   },
   {
-   "id": "sun.drop",
-   "fmod": "event:/SFX/Collect/SunDrop"
-  },
-  {
    "id": "sun.collect",
    "fmod": "event:/SFX/Collect/Sun"
   },
@@ -124,10 +120,6 @@
   {
    "id": "mower.trigger",
    "fmod": "event:/SFX/Board/Mower"
-  },
-  {
-   "id": "wave.start",
-   "fmod": "event:/SFX/Board/Wave"
   },
   {
    "id": "wave.huge",
@@ -748,6 +740,806 @@
    "id": "music.zomboss.intro.sky",
    "fmod": "event:/Music/InGame/Zomboss/Intro/Sky",
    "music": true
+  },
+  {
+   "id": "plant.produce",
+   "fmod": "event:/SFX/Plants/Produce"
+  },
+  {
+   "id": "projectile.hit",
+   "fmod": "event:/SFX/Projectiles/Hit"
+  },
+  {
+   "id": "coin.drop",
+   "fmod": "event:/SFX/Collect/CoinDrop"
+  },
+  {
+   "id": "reward.drop.coinbag",
+   "fmod": "event:/SFX/Collect/Prizes/Coinbag/Drop"
+  },
+  {
+   "id": "reward.land.coinbag",
+   "fmod": "event:/SFX/Collect/Prizes/Coinbag/Land"
+  },
+  {
+   "id": "reward.collect.coinbag",
+   "fmod": "event:/SFX/Collect/Prizes/Coinbag/Collect"
+  },
+  {
+   "id": "reward.drop.unlock_plant",
+   "fmod": "event:/SFX/Collect/Prizes/UnlockPlant/Drop"
+  },
+  {
+   "id": "reward.land.unlock_plant",
+   "fmod": "event:/SFX/Collect/Prizes/UnlockPlant/Land"
+  },
+  {
+   "id": "reward.collect.unlock_plant",
+   "fmod": "event:/SFX/Collect/Prizes/UnlockPlant/Collect"
+  },
+  {
+   "id": "reward.drop.note",
+   "fmod": "event:/SFX/Collect/Prizes/Note/Drop"
+  },
+  {
+   "id": "reward.land.note",
+   "fmod": "event:/SFX/Collect/Prizes/Note/Land"
+  },
+  {
+   "id": "reward.collect.note",
+   "fmod": "event:/SFX/Collect/Prizes/Note/Collect"
+  },
+  {
+   "id": "mower.trigger.mower_kongfu",
+   "fmod": "event:/SFX/Board/Mowers/Kongfu"
+  },
+  {
+   "id": "mower.trigger.mower_iceage",
+   "fmod": "event:/SFX/Board/Mowers/Iceage"
+  },
+  {
+   "id": "mower.trigger.mower_dino",
+   "fmod": "event:/SFX/Board/Mowers/Dino"
+  },
+  {
+   "id": "mower.trigger.mower_eighties",
+   "fmod": "event:/SFX/Board/Mowers/Eighties"
+  },
+  {
+   "id": "mower.trigger.mower_beach",
+   "fmod": "event:/SFX/Board/Mowers/Beach"
+  },
+  {
+   "id": "mower.trigger.mower_cowboy",
+   "fmod": "event:/SFX/Board/Mowers/Cowboy"
+  },
+  {
+   "id": "mower.trigger.mower_lostcity",
+   "fmod": "event:/SFX/Board/Mowers/Lostcity"
+  },
+  {
+   "id": "mower.trigger.mower_dark",
+   "fmod": "event:/SFX/Board/Mowers/Dark"
+  },
+  {
+   "id": "mower.trigger.mower_future",
+   "fmod": "event:/SFX/Board/Mowers/Future"
+  },
+  {
+   "id": "mower.trigger.mower_pirate",
+   "fmod": "event:/SFX/Board/Mowers/Pirate"
+  },
+  {
+   "id": "mower.trigger.mower_egypt",
+   "fmod": "event:/SFX/Board/Mowers/Egypt"
+  },
+  {
+   "id": "plant.lob.akee",
+   "fmod": "event:/SFX/Plants/ByPlant/akee/Lob"
+  },
+  {
+   "id": "plant.food.akee",
+   "fmod": "event:/SFX/Plants/ByPlant/akee/PlantFood"
+  },
+  {
+   "id": "plant.food.anthurium",
+   "fmod": "event:/SFX/Plants/ByPlant/anthurium/PlantFood"
+  },
+  {
+   "id": "plant.shoot.appeasemint",
+   "fmod": "event:/SFX/Plants/ByPlant/appeasemint/Shoot"
+  },
+  {
+   "id": "plant.shoot.asparagus",
+   "fmod": "event:/SFX/Plants/ByPlant/asparagus/Shoot"
+  },
+  {
+   "id": "plant.food.asparagus",
+   "fmod": "event:/SFX/Plants/ByPlant/asparagus/PlantFood"
+  },
+  {
+   "id": "plant.food.bamboobusket",
+   "fmod": "event:/SFX/Plants/ByPlant/bamboobusket/PlantFood"
+  },
+  {
+   "id": "plant.shoot.bamboozle",
+   "fmod": "event:/SFX/Plants/ByPlant/bamboozle/Shoot"
+  },
+  {
+   "id": "plant.shoot.bloomerang",
+   "fmod": "event:/SFX/Plants/ByPlant/bloomerang/Shoot"
+  },
+  {
+   "id": "plant.food.bloomerang",
+   "fmod": "event:/SFX/Plants/ByPlant/bloomerang/PlantFood"
+  },
+  {
+   "id": "plant.shoot.buttercup",
+   "fmod": "event:/SFX/Plants/ByPlant/buttercup/Shoot"
+  },
+  {
+   "id": "plant.food.buttercup",
+   "fmod": "event:/SFX/Plants/ByPlant/buttercup/PlantFood"
+  },
+  {
+   "id": "plant.food.cabbagepult",
+   "fmod": "event:/SFX/Plants/ByPlant/cabbagepult/PlantFood"
+  },
+  {
+   "id": "plant.shoot.cactus",
+   "fmod": "event:/SFX/Plants/ByPlant/cactus/Shoot"
+  },
+  {
+   "id": "plant.food.celerystalker",
+   "fmod": "event:/SFX/Plants/ByPlant/celerystalker/PlantFood"
+  },
+  {
+   "id": "plant.food.chilibean",
+   "fmod": "event:/SFX/Plants/ByPlant/chilibean/PlantFood"
+  },
+  {
+   "id": "plant.shoot.citron",
+   "fmod": "event:/SFX/Plants/ByPlant/citron/Shoot"
+  },
+  {
+   "id": "plant.food.citron",
+   "fmod": "event:/SFX/Plants/ByPlant/citron/PlantFood"
+  },
+  {
+   "id": "plant.shoot.coconutcannon",
+   "fmod": "event:/SFX/Plants/ByPlant/coconutcannon/Shoot"
+  },
+  {
+   "id": "plant.food.coldsnapdragon",
+   "fmod": "event:/SFX/Plants/ByPlant/coldsnapdragon/PlantFood"
+  },
+  {
+   "id": "plant.shoot.dandelion",
+   "fmod": "event:/SFX/Plants/ByPlant/dandelion/Shoot"
+  },
+  {
+   "id": "plant.shoot.darkmatterdragonfruit",
+   "fmod": "event:/SFX/Plants/ByPlant/darkmatterdragonfruit/Shoot"
+  },
+  {
+   "id": "plant.food.dusklobber",
+   "fmod": "event:/SFX/Plants/ByPlant/dusklobber/PlantFood"
+  },
+  {
+   "id": "plant.shoot.electriccurrant",
+   "fmod": "event:/SFX/Plants/ByPlant/electriccurrant/Shoot"
+  },
+  {
+   "id": "plant.food.endurian",
+   "fmod": "event:/SFX/Plants/ByPlant/endurian/PlantFood"
+  },
+  {
+   "id": "plant.food.explodeonut",
+   "fmod": "event:/SFX/Plants/ByPlant/explodeonut/PlantFood"
+  },
+  {
+   "id": "plant.shoot.firepeashooter",
+   "fmod": "event:/SFX/Plants/ByPlant/firepeashooter/Shoot"
+  },
+  {
+   "id": "plant.shoot.fumeshroom",
+   "fmod": "event:/SFX/Plants/ByPlant/fumeshroom/Shoot"
+  },
+  {
+   "id": "plant.food.fumeshroom",
+   "fmod": "event:/SFX/Plants/ByPlant/fumeshroom/PlantFood"
+  },
+  {
+   "id": "plant.shoot.gloomshroom",
+   "fmod": "event:/SFX/Plants/ByPlant/gloomshroom/Shoot"
+  },
+  {
+   "id": "plant.food.gloomshroom",
+   "fmod": "event:/SFX/Plants/ByPlant/gloomshroom/PlantFood"
+  },
+  {
+   "id": "plant.shoot.gloomvine",
+   "fmod": "event:/SFX/Plants/ByPlant/gloomvine/Shoot"
+  },
+  {
+   "id": "plant.food.gloomvine",
+   "fmod": "event:/SFX/Plants/ByPlant/gloomvine/PlantFood"
+  },
+  {
+   "id": "plant.produce.goldbloom",
+   "fmod": "event:/SFX/Plants/ByPlant/goldbloom/Produce"
+  },
+  {
+   "id": "plant.shoot.guacodile",
+   "fmod": "event:/SFX/Plants/ByPlant/guacodile/Shoot"
+  },
+  {
+   "id": "plant.shoot.hollyknight",
+   "fmod": "event:/SFX/Plants/ByPlant/hollyknight/Shoot"
+  },
+  {
+   "id": "plant.food.hollyknight",
+   "fmod": "event:/SFX/Plants/ByPlant/hollyknight/PlantFood"
+  },
+  {
+   "id": "plant.shoot.homingthistle",
+   "fmod": "event:/SFX/Plants/ByPlant/homingthistle/Shoot"
+  },
+  {
+   "id": "plant.food.homingthistle",
+   "fmod": "event:/SFX/Plants/ByPlant/homingthistle/PlantFood"
+  },
+  {
+   "id": "plant.food.hypnoshroom",
+   "fmod": "event:/SFX/Plants/ByPlant/hypnoshroom/PlantFood"
+  },
+  {
+   "id": "plant.food.inferno",
+   "fmod": "event:/SFX/Plants/ByPlant/inferno/PlantFood"
+  },
+  {
+   "id": "plant.lob.kernelpult",
+   "fmod": "event:/SFX/Plants/ByPlant/kernelpult/Lob"
+  },
+  {
+   "id": "plant.food.kernelpult",
+   "fmod": "event:/SFX/Plants/ByPlant/kernelpult/PlantFood"
+  },
+  {
+   "id": "plant.shoot.laser_bean",
+   "fmod": "event:/SFX/Plants/ByPlant/laser_bean/Shoot"
+  },
+  {
+   "id": "plant.food.laser_bean",
+   "fmod": "event:/SFX/Plants/ByPlant/laser_bean/PlantFood"
+  },
+  {
+   "id": "plant.shoot.lavaguava",
+   "fmod": "event:/SFX/Plants/ByPlant/lavaguava/Shoot"
+  },
+  {
+   "id": "plant.food.lightningreed",
+   "fmod": "event:/SFX/Plants/ByPlant/lightningreed/PlantFood"
+  },
+  {
+   "id": "plant.shoot.lotorpedo",
+   "fmod": "event:/SFX/Plants/ByPlant/lotorpedo/Shoot"
+  },
+  {
+   "id": "plant.food.lychee",
+   "fmod": "event:/SFX/Plants/ByPlant/lychee/PlantFood"
+  },
+  {
+   "id": "plant.shoot.magnetshroom",
+   "fmod": "event:/SFX/Plants/ByPlant/magnetshroom/Shoot"
+  },
+  {
+   "id": "plant.food.magnetshroom",
+   "fmod": "event:/SFX/Plants/ByPlant/magnetshroom/PlantFood"
+  },
+  {
+   "id": "plant.shoot.magnifyinggrass",
+   "fmod": "event:/SFX/Plants/ByPlant/magnifyinggrass/Shoot"
+  },
+  {
+   "id": "plant.food.marigold_green",
+   "fmod": "event:/SFX/Plants/ByPlant/marigold_green/PlantFood"
+  },
+  {
+   "id": "plant.food.marigold_orange",
+   "fmod": "event:/SFX/Plants/ByPlant/marigold_orange/PlantFood"
+  },
+  {
+   "id": "plant.food.marigold_pink",
+   "fmod": "event:/SFX/Plants/ByPlant/marigold_pink/PlantFood"
+  },
+  {
+   "id": "plant.food.marigold_purple",
+   "fmod": "event:/SFX/Plants/ByPlant/marigold_purple/PlantFood"
+  },
+  {
+   "id": "plant.shoot.mirrornut",
+   "fmod": "event:/SFX/Plants/ByPlant/mirrornut/Shoot"
+  },
+  {
+   "id": "plant.shoot.missiletoe",
+   "fmod": "event:/SFX/Plants/ByPlant/missiletoe/Shoot"
+  },
+  {
+   "id": "plant.shoot.moonbean",
+   "fmod": "event:/SFX/Plants/ByPlant/moonbean/Shoot"
+  },
+  {
+   "id": "plant.produce.moonflower",
+   "fmod": "event:/SFX/Plants/ByPlant/moonflower/Produce"
+  },
+  {
+   "id": "plant.food.moonflower",
+   "fmod": "event:/SFX/Plants/ByPlant/moonflower/PlantFood"
+  },
+  {
+   "id": "plant.shoot.nightshade",
+   "fmod": "event:/SFX/Plants/ByPlant/nightshade/Shoot"
+  },
+  {
+   "id": "plant.food.nightshade",
+   "fmod": "event:/SFX/Plants/ByPlant/nightshade/PlantFood"
+  },
+  {
+   "id": "plant.shoot.peacommando",
+   "fmod": "event:/SFX/Plants/ByPlant/peacommando/Shoot"
+  },
+  {
+   "id": "plant.food.peashooter",
+   "fmod": "event:/SFX/Plants/ByPlant/peashooter/PlantFood"
+  },
+  {
+   "id": "plant.lob.pepperpult",
+   "fmod": "event:/SFX/Plants/ByPlant/pepperpult/Lob"
+  },
+  {
+   "id": "plant.food.pepperpult",
+   "fmod": "event:/SFX/Plants/ByPlant/pepperpult/PlantFood"
+  },
+  {
+   "id": "plant.food.potatomine",
+   "fmod": "event:/SFX/Plants/ByPlant/potatomine/PlantFood"
+  },
+  {
+   "id": "plant.food.primalsunflower",
+   "fmod": "event:/SFX/Plants/ByPlant/primalsunflower/PlantFood"
+  },
+  {
+   "id": "plant.shoot.puffshroom",
+   "fmod": "event:/SFX/Plants/ByPlant/puffshroom/Shoot"
+  },
+  {
+   "id": "plant.food.puffshroom",
+   "fmod": "event:/SFX/Plants/ByPlant/puffshroom/PlantFood"
+  },
+  {
+   "id": "plant.food.pumpkin",
+   "fmod": "event:/SFX/Plants/ByPlant/pumpkin/PlantFood"
+  },
+  {
+   "id": "plant.shoot.redstinger",
+   "fmod": "event:/SFX/Plants/ByPlant/redstinger/Shoot"
+  },
+  {
+   "id": "plant.lob.sapfling",
+   "fmod": "event:/SFX/Plants/ByPlant/sapfling/Lob"
+  },
+  {
+   "id": "plant.food.sapfling",
+   "fmod": "event:/SFX/Plants/ByPlant/sapfling/PlantFood"
+  },
+  {
+   "id": "plant.shoot.shadowpeashooter",
+   "fmod": "event:/SFX/Plants/ByPlant/shadowpeashooter/Shoot"
+  },
+  {
+   "id": "plant.food.shadowpeashooter",
+   "fmod": "event:/SFX/Plants/ByPlant/shadowpeashooter/PlantFood"
+  },
+  {
+   "id": "plant.produce.shinevine",
+   "fmod": "event:/SFX/Plants/ByPlant/shinevine/Produce"
+  },
+  {
+   "id": "plant.shoot.shootingstarfruit",
+   "fmod": "event:/SFX/Plants/ByPlant/shootingstarfruit/Shoot"
+  },
+  {
+   "id": "plant.food.shootingstarfruit",
+   "fmod": "event:/SFX/Plants/ByPlant/shootingstarfruit/PlantFood"
+  },
+  {
+   "id": "plant.shoot.slingpea",
+   "fmod": "event:/SFX/Plants/ByPlant/slingpea/Shoot"
+  },
+  {
+   "id": "plant.food.snapdragon",
+   "fmod": "event:/SFX/Plants/ByPlant/snapdragon/PlantFood"
+  },
+  {
+   "id": "plant.shoot.snappea",
+   "fmod": "event:/SFX/Plants/ByPlant/snappea/Shoot"
+  },
+  {
+   "id": "plant.lob.snowdrop",
+   "fmod": "event:/SFX/Plants/ByPlant/snowdrop/Lob"
+  },
+  {
+   "id": "plant.food.snowpea",
+   "fmod": "event:/SFX/Plants/ByPlant/snowpea/PlantFood"
+  },
+  {
+   "id": "plant.food.spikerock",
+   "fmod": "event:/SFX/Plants/ByPlant/spikerock/PlantFood"
+  },
+  {
+   "id": "plant.food.spikeweed",
+   "fmod": "event:/SFX/Plants/ByPlant/spikeweed/PlantFood"
+  },
+  {
+   "id": "plant.food.splitpea",
+   "fmod": "event:/SFX/Plants/ByPlant/splitpea/PlantFood"
+  },
+  {
+   "id": "plant.shoot.sporeshroom",
+   "fmod": "event:/SFX/Plants/ByPlant/sporeshroom/Shoot"
+  },
+  {
+   "id": "plant.food.springbean",
+   "fmod": "event:/SFX/Plants/ByPlant/springbean/PlantFood"
+  },
+  {
+   "id": "plant.food.squash",
+   "fmod": "event:/SFX/Plants/ByPlant/squash/PlantFood"
+  },
+  {
+   "id": "plant.food.stallia",
+   "fmod": "event:/SFX/Plants/ByPlant/stallia/PlantFood"
+  },
+  {
+   "id": "plant.food.stickybombrice",
+   "fmod": "event:/SFX/Plants/ByPlant/stickybombrice/PlantFood"
+  },
+  {
+   "id": "plant.food.sunbean",
+   "fmod": "event:/SFX/Plants/ByPlant/sunbean/PlantFood"
+  },
+  {
+   "id": "plant.food.sunflower",
+   "fmod": "event:/SFX/Plants/ByPlant/sunflower/PlantFood"
+  },
+  {
+   "id": "plant.produce.sunshroom",
+   "fmod": "event:/SFX/Plants/ByPlant/sunshroom/Produce"
+  },
+  {
+   "id": "plant.food.sunshroom",
+   "fmod": "event:/SFX/Plants/ByPlant/sunshroom/PlantFood"
+  },
+  {
+   "id": "plant.food.tallnut",
+   "fmod": "event:/SFX/Plants/ByPlant/tallnut/PlantFood"
+  },
+  {
+   "id": "plant.produce.toadstool",
+   "fmod": "event:/SFX/Plants/ByPlant/toadstool/Produce"
+  },
+  {
+   "id": "plant.food.torchwood",
+   "fmod": "event:/SFX/Plants/ByPlant/torchwood/PlantFood"
+  },
+  {
+   "id": "plant.lob.turkeypult",
+   "fmod": "event:/SFX/Plants/ByPlant/turkeypult/Lob"
+  },
+  {
+   "id": "plant.food.turkeypult",
+   "fmod": "event:/SFX/Plants/ByPlant/turkeypult/PlantFood"
+  },
+  {
+   "id": "plant.food.umbrellaleaf",
+   "fmod": "event:/SFX/Plants/ByPlant/umbrellaleaf/PlantFood"
+  },
+  {
+   "id": "plant.lob.wintermelon",
+   "fmod": "event:/SFX/Plants/ByPlant/wintermelon/Lob"
+  },
+  {
+   "id": "plant.food.wintermelon",
+   "fmod": "event:/SFX/Plants/ByPlant/wintermelon/PlantFood"
+  },
+  {
+   "id": "plant.shoot.witchhazel",
+   "fmod": "event:/SFX/Plants/ByPlant/witchhazel/Shoot"
+  },
+  {
+   "id": "plant.food.witchhazel",
+   "fmod": "event:/SFX/Plants/ByPlant/witchhazel/PlantFood"
+  },
+  {
+   "id": "projectile.hit.abbot_chi",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/abbot_chi/Hit"
+  },
+  {
+   "id": "projectile.hit.airraid_0",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/airraid_0/Hit"
+  },
+  {
+   "id": "projectile.hit.airraid_1",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/airraid_1/Hit"
+  },
+  {
+   "id": "projectile.hit.akee",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/akee/Hit"
+  },
+  {
+   "id": "projectile.hit.anthurium_bolt",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/anthurium_bolt/Hit"
+  },
+  {
+   "id": "projectile.hit.anthurium_bolt_big",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/anthurium_bolt_big/Hit"
+  },
+  {
+   "id": "projectile.hit.apple1",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/apple1/Hit"
+  },
+  {
+   "id": "projectile.hit.apple2",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/apple2/Hit"
+  },
+  {
+   "id": "projectile.hit.blastberry1",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/blastberry1/Hit"
+  },
+  {
+   "id": "projectile.hit.bowling0",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/bowling0/Hit"
+  },
+  {
+   "id": "projectile.hit.bowling_explode_o_nut",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/bowling_explode_o_nut/Hit"
+  },
+  {
+   "id": "projectile.hit.bowling_iceberg",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/bowling_iceberg/Hit"
+  },
+  {
+   "id": "projectile.hit.bowling_infinut",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/bowling_infinut/Hit"
+  },
+  {
+   "id": "projectile.hit.bowling_wallnut",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/bowling_wallnut/Hit"
+  },
+  {
+   "id": "projectile.hit.busketball",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/busketball/Hit"
+  },
+  {
+   "id": "projectile.hit.butter1",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/butter1/Hit"
+  },
+  {
+   "id": "projectile.hit.cabbage1",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/cabbage1/Hit"
+  },
+  {
+   "id": "projectile.hit.cabbage2",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/cabbage2/Hit"
+  },
+  {
+   "id": "projectile.hit.cantaloupe1",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/cantaloupe1/Hit"
+  },
+  {
+   "id": "projectile.hit.cantaloupe2",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/cantaloupe2/Hit"
+  },
+  {
+   "id": "projectile.hit.caulipower",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/caulipower/Hit"
+  },
+  {
+   "id": "projectile.hit.citron1",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/citron1/Hit"
+  },
+  {
+   "id": "projectile.hit.citron2",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/citron2/Hit"
+  },
+  {
+   "id": "projectile.hit.corn1",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/corn1/Hit"
+  },
+  {
+   "id": "projectile.hit.corn2",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/corn2/Hit"
+  },
+  {
+   "id": "projectile.hit.dandelion1",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/dandelion1/Hit"
+  },
+  {
+   "id": "projectile.hit.dandelion2",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/dandelion2/Hit"
+  },
+  {
+   "id": "projectile.hit.darkmatter",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/darkmatter/Hit"
+  },
+  {
+   "id": "projectile.hit.darkmatter_shadow",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/darkmatter_shadow/Hit"
+  },
+  {
+   "id": "projectile.hit.dragonfruit1",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/dragonfruit1/Hit"
+  },
+  {
+   "id": "projectile.hit.dragonfruit2",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/dragonfruit2/Hit"
+  },
+  {
+   "id": "projectile.hit.eighties_speaker_wave",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/eighties_speaker_wave/Hit"
+  },
+  {
+   "id": "projectile.hit.electricpea_mint",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/electricpea_mint/Hit"
+  },
+  {
+   "id": "projectile.hit.electricpea_small",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/electricpea_small/Hit"
+  },
+  {
+   "id": "projectile.hit.grapeshot",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/grapeshot/Hit"
+  },
+  {
+   "id": "projectile.hit.guacodile1",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/guacodile1/Hit"
+  },
+  {
+   "id": "projectile.hit.gumnut",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/gumnut/Hit"
+  },
+  {
+   "id": "projectile.hit.hollyleaf",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/hollyleaf/Hit"
+  },
+  {
+   "id": "projectile.hit.hunter_snowball",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/hunter_snowball/Hit"
+  },
+  {
+   "id": "projectile.hit.inferno_tornado",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/inferno_tornado/Hit"
+  },
+  {
+   "id": "projectile.hit.melon2",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/melon2/Hit"
+  },
+  {
+   "id": "projectile.hit.meteor",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/meteor/Hit"
+  },
+  {
+   "id": "projectile.hit.octopus",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/octopus/Hit"
+  },
+  {
+   "id": "projectile.hit.pea_goo1",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/pea_goo1/Hit"
+  },
+  {
+   "id": "projectile.hit.pea_goo2",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/pea_goo2/Hit"
+  },
+  {
+   "id": "projectile.hit.pea_mega",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/pea_mega/Hit"
+  },
+  {
+   "id": "projectile.hit.pea_primal1",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/pea_primal1/Hit"
+  },
+  {
+   "id": "projectile.hit.pea_primal2",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/pea_primal2/Hit"
+  },
+  {
+   "id": "projectile.hit.pea_shadow1",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/pea_shadow1/Hit"
+  },
+  {
+   "id": "projectile.hit.pea_shadow2",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/pea_shadow2/Hit"
+  },
+  {
+   "id": "projectile.hit.pea_shadow_pf_0",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/pea_shadow_pf_0/Hit"
+  },
+  {
+   "id": "projectile.hit.pea_shadow_pf_1",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/pea_shadow_pf_1/Hit"
+  },
+  {
+   "id": "projectile.hit.pea_shadow_pf_2",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/pea_shadow_pf_2/Hit"
+  },
+  {
+   "id": "projectile.hit.pea_snow1",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/pea_snow1/Hit"
+  },
+  {
+   "id": "projectile.hit.pea_snow2",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/pea_snow2/Hit"
+  },
+  {
+   "id": "projectile.hit.pepper1",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/pepper1/Hit"
+  },
+  {
+   "id": "projectile.hit.pepper2",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/pepper2/Hit"
+  },
+  {
+   "id": "projectile.hit.redstinger1",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/redstinger1/Hit"
+  },
+  {
+   "id": "projectile.hit.redstinger2",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/redstinger2/Hit"
+  },
+  {
+   "id": "projectile.hit.redstinger_weak",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/redstinger_weak/Hit"
+  },
+  {
+   "id": "projectile.hit.rotobaga1",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/rotobaga1/Hit"
+  },
+  {
+   "id": "projectile.hit.rotobaga2",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/rotobaga2/Hit"
+  },
+  {
+   "id": "projectile.hit.sapfling",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/sapfling/Hit"
+  },
+  {
+   "id": "projectile.hit.sea_pea1",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/sea_pea1/Hit"
+  },
+  {
+   "id": "projectile.hit.sea_pea2",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/sea_pea2/Hit"
+  },
+  {
+   "id": "projectile.hit.sky_battleplane_bullet",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/sky_battleplane_bullet/Hit"
+  },
+  {
+   "id": "projectile.hit.sky_bolt_negative",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/sky_bolt_negative/Hit"
+  },
+  {
+   "id": "projectile.hit.sky_bolt_positive",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/sky_bolt_positive/Hit"
+  },
+  {
+   "id": "projectile.hit.stickybomb1",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/stickybomb1/Hit"
+  },
+  {
+   "id": "projectile.hit.turkey_big",
+   "fmod": "event:/SFX/Projectiles/ByProjectile/turkey_big/Hit"
   }
  ]
 }

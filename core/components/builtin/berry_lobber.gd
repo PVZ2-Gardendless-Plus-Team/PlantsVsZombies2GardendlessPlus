@@ -44,7 +44,7 @@ func on_tapped() -> bool:
 		return false
 	var shots: Array = cfg(&"projectiles", ["strawburst0", "strawburst1", "strawburst2"])
 	host.play_art_once(&"attack")
-	Audio.play(&"plant.lob", host.position)
+	Audio.play_for(&"plant.lob", host)
 	host.board.splash_at(host.row, target.position.x, StringName(shots[stage]), host)
 	stage = -1
 	_grow = _grow_time(0)

@@ -48,7 +48,7 @@ func fire_at(row: int, col: int) -> bool:
 
 func _launch(row: int, x: float) -> void:
 	host.play_art_once(&"attack")
-	Audio.play(&"plant.lob", host.position)
+	Audio.play_for(&"plant.lob", host)
 	_flying.append([row, x, float(cfg(&"flight", 1.0))])
 
 

@@ -26,7 +26,7 @@ func _process(delta: float) -> void:
 		return
 	host.board.spawn_projectile(projectile_id, host.row, host.launch_point(), host)
 	host.play_art_once(&"attack")
-	Audio.play(&"plant.lob", host.position)
+	Audio.play_for(&"plant.lob", host)
 	_cooldown = cfg_jittered(&"interval", &"interval_jitter", interval)
 
 

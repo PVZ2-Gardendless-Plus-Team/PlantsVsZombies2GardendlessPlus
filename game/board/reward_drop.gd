@@ -82,7 +82,14 @@ func leap_to(to: Vector2) -> void:
 	_leap.tween_method(func(t: float) -> void:
 		position = from.lerp(to, t) + Vector2(0, -sin(t * PI) * leap_height),
 		0.0, 1.0, leap_time)
-	_leap.finished.connect(func() -> void: Audio.play(&"reward.land", position))
+	_leap.finished.connect(func() -> void:
+		Audio.play_variant(&"reward.land", sound_variant(), position))
+
+
+## Which prize's sounds this plays: PVZGE gives the coin bag, the seed packet
+## and the note their own, and every trophy shares the rest.
+func sound_variant() -> StringName:
+	return reward.type if reward != null else &""
 
 
 func is_leaping() -> bool:
@@ -102,7 +109,7 @@ func collect() -> void:
 	_collected = true
 	if _leap != null:
 		_leap.kill()
-	Audio.play(&"reward.collect", position)
+	Audio.play_variant(&"reward.collect", sound_variant(), position)
 	picked_up.emit(self)
 	var tween := create_tween()
 	if reward == null or not reward.is_award():

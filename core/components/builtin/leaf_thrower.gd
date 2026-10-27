@@ -45,7 +45,7 @@ func _throw(id: StringName, damage_scale: float = 1.0) -> void:
 	if shot != null:
 		shot.damage *= damage_scale
 	host.play_art_once(&"attack")
-	Audio.play(&"plant.shoot", host.position)
+	Audio.play_for(&"plant.shoot", host)
 
 
 ## Plant food: every leaf back, and a volley of big ones down the lane.
