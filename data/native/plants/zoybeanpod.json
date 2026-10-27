@@ -1,6 +1,7 @@
 {
  "id": "zoybeanpod",
  "family": "Magic",
+ "world": "market",
  "stats": {
   "sun_cost": 200,
   "toughness": 300,

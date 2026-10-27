@@ -8,6 +8,8 @@
   "offset_y": 9.7,
   "//": "projectile_origin is the PeashooterPLANT prefab's PeaSpawnPoint, in rig units with y up.",
   "projectile_origin": [66.538, 79.306],
+  "//idle": "idle_random is the prefab AnimationController's RandomAnim, played instead of the idle a random_rate/200 of the time (RandRate, 100 when the prefab leaves it out).",
+  "idle_random": ["Random"],
   "animations": {
    "idle": "Idle",
    "attack": "Shoot",
@@ -24,6 +26,7 @@
   "//": "produce_point is the SunflowerPLANT prefab's SunProducePoint, in rig units with y up; sun_direction is where PVZGE throws the sun: sideways away from the stem's shade, up by the point's height.",
   "produce_point": [-5.9, 109.8],
   "sun_direction": [-11.8, 109.8],
+  "idle_random": ["Rand1", "Rand2", "Rand1", "Idle"],
   "animations": {
    "idle": "Idle",
    "attack": "Produce",
@@ -37,6 +40,7 @@
   "scale": 0.512,
   "offset_x": 0,
   "offset_y": 9.7,
+  "idle_random": ["Rand11", "Rand12"],
   "animations": {
    "idle": "Idle1",
    "hurt1": "Idle2",

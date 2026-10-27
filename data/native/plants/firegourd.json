@@ -1,6 +1,7 @@
 {
  "id": "firegourd",
  "family": "Fire",
+ "world": "kongfu",
  "stats": {
   "sun_cost": 200,
   "toughness": 300,

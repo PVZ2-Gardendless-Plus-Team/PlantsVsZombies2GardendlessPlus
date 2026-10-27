@@ -1,6 +1,7 @@
 {
  "id": "shadowpeashooter",
  "family": "Shadow",
+ "world": "epic",
  "stats": {
   "sun_cost": 225,
   "toughness": 300,

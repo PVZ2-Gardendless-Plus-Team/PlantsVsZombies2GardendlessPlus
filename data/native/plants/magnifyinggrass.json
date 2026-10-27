@@ -1,6 +1,7 @@
 {
  "id": "magnifyinggrass",
  "family": "Sun",
+ "world": "future",
  "stats": {
   "sun_cost": 50,
   "toughness": 300,

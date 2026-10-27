@@ -59,7 +59,7 @@ func setup(source: ArmatureSet, armature_name: StringName,
 		# tint the slot, so a blink or a mouth opening is a visibility key and
 		# never a texture swap mid-blend.
 		var node := Node2D.new()
-		node.name = String(slot["name"])
+		node.name = ArmatureBaker.node_name(slot["name"])
 		node.transform = rest[i]
 		node.modulate = slot["color"]
 		add_child(node)
@@ -154,7 +154,11 @@ func has_animation(name: StringName) -> bool:
 ## Looping is the caller's call, not the rig's: PopCap marks every animation
 ## as looping, including the death ones, and it is the game that knows an
 ## entity only dies once. A one-shot simply is not restarted when it ends.
-func play(name: StringName, loop: bool = true, restart: bool = false) -> bool:
+##
+## `blend` is how long to fade in. Characters pass PVZGE's own fade for each
+## state; UI and scenery keep the default.
+func play(name: StringName, loop: bool = true, restart: bool = false,
+		blend: float = BLEND_TIME) -> bool:
 	if not has_animation(name):
 		return false
 	if playing == name and not restart and _player.is_playing():
@@ -162,7 +166,11 @@ func play(name: StringName, loop: bool = true, restart: bool = false) -> bool:
 		return true
 	playing = name
 	looping = loop
-	_player.play(name, BLEND_TIME)
+	_player.play(name, blend)
+	if restart:
+		# Replaying the animation that just ended has to start it over, not
+		# resume it at its last frame.
+		_player.seek(0.0, true)
 	return true
 
 
@@ -257,7 +265,7 @@ func detach_slots(names: Array) -> Node2D:
 		# An empty stand-in keeps the name, so the rig's animations still
 		# find a node to key and do not complain about the missing limb.
 		var stand_in := Node2D.new()
-		stand_in.name = String(slot_name)
+		stand_in.name = ArmatureBaker.node_name(slot_name)
 		stand_in.visible = false
 		for picture in node.get_children():
 			var blank := Node2D.new()

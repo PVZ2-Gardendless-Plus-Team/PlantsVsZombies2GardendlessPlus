@@ -1,6 +1,7 @@
 {
  "id": "slingpea",
  "family": "Lobber",
+ "world": "lod",
  "stats": {
   "sun_cost": 125,
   "toughness": 300,

@@ -1,6 +1,7 @@
 {
  "id": "tool_projectile_bowling_explodeonut",
  "family": "Nope",
+ "packet_portrait": "explodeonut",
  "stats": {
   "sun_cost": 200,
   "toughness": 1,

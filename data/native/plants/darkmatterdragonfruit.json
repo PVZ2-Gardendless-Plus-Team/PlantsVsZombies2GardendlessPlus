@@ -1,6 +1,7 @@
 {
  "id": "darkmatterdragonfruit",
  "family": "Shadow",
+ "world": "lod",
  "stats": {
   "sun_cost": 350,
   "toughness": 300,

@@ -1,6 +1,7 @@
 {
  "id": "dragonbabybruit",
  "family": "Shadow",
+ "packet_portrait": "dragonbruitBaby",
  "stats": {
   "sun_cost": 50,
   "toughness": 300,

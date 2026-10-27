@@ -1,6 +1,7 @@
 {
  "id": "blover",
  "family": "Slow",
+ "world": "future",
  "stats": {
   "sun_cost": 50,
   "toughness": 300,

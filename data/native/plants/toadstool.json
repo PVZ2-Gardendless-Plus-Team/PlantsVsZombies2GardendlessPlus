@@ -1,6 +1,7 @@
 {
  "id": "toadstool",
  "family": "Sun",
+ "world": "market",
  "stats": {
   "sun_cost": 200,
   "toughness": 300,

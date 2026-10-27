@@ -1,6 +1,7 @@
 {
  "id": "bonkchoy",
  "family": "Melee",
+ "world": "egypt",
  "stats": {
   "sun_cost": 150,
   "toughness": 300,

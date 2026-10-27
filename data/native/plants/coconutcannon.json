@@ -1,6 +1,7 @@
 {
  "id": "coconutcannon",
  "family": "Lobber",
+ "world": "pirate",
  "stats": {
   "sun_cost": 400,
   "toughness": 300,

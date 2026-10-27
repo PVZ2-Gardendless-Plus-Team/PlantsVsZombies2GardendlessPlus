@@ -1,6 +1,7 @@
 {
  "id": "lilypad",
  "family": "Nope",
+ "world": "water",
  "stats": {
   "sun_cost": 25,
   "toughness": 300,

@@ -1,6 +1,7 @@
 {
  "id": "twinsunflower",
  "family": "Sun",
+ "world": "egypt",
  "stats": {
   "sun_cost": 125,
   "toughness": 300,

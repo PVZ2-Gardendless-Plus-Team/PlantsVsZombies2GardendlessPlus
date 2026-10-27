@@ -1,6 +1,7 @@
 {
  "id": "bowlingbulb",
  "family": "Peashooter",
+ "world": "beach",
  "stats": {
   "sun_cost": 200,
   "toughness": 300,

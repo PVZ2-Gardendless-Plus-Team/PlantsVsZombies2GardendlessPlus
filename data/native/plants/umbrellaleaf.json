@@ -1,6 +1,8 @@
 {
  "id": "umbrellaleaf",
  "family": "Defence",
+ "world": "epic",
+ "packet_portrait": "umbrella",
  "stats": {
   "sun_cost": 100,
   "toughness": 300,

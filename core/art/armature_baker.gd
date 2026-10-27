@@ -44,7 +44,6 @@ var iks: Array[Dictionary] = []
 var frame_rate: float = 30.0
 
 var _armature: Dictionary = {}
-var _set: ArmatureSet = null
 var _sockets: Dictionary = {}
 ## bone index -> the IK constraints rooted on it, solved as soon as it is.
 var _ik_by_root: Dictionary = {}
@@ -60,7 +59,6 @@ var _color_slots: Array = []
 ## where a rig's mouth is at this instant without sampling anything itself.
 func _init(source: ArmatureSet, armature_name: StringName,
 		sockets: Dictionary = {}) -> void:
-	_set = source
 	_sockets = sockets
 	_armature = source.armature(armature_name)
 	frame_rate = float(_armature.get("frameRate", source.frame_rate))
@@ -68,7 +66,9 @@ func _init(source: ArmatureSet, armature_name: StringName,
 		frame_rate = source.frame_rate
 	_read_bones()
 	_read_iks()
-	_read_slots()
+	# The set is only asked which pictures exist, and not kept: it holds
+	# this baker in turn, and the pair would never be freed.
+	_read_slots(source)
 	_find_animated()
 
 
@@ -163,7 +163,7 @@ func _read_iks() -> void:
 		(_ik_by_root[root] as Array).append(iks.size() - 1)
 
 
-func _read_slots() -> void:
+func _read_slots(source: ArmatureSet) -> void:
 	var skins := _armature.get("skin", []) as Array
 	var displays := {}
 	if not skins.is_empty():
@@ -189,7 +189,7 @@ func _read_slots() -> void:
 				# they differ, which is how one slot carries both mouth and
 				# mouth_open.
 				var region := StringName(display.get("path", display.get("name", "")))
-				if _set.region(region) != null:
+				if source.region(region) != null:
 					choice = {"region": region, "xform": matrix_of(display.get("transform", {}))}
 					any = true
 			choices.append(choice)
@@ -277,22 +277,38 @@ func _find_animated() -> void:
 ## angles give a rotation and unequal ones a mirror or a shear. A missing
 ## angle is zero, as the runtime reads it.
 static func matrix_of(raw: Variant, offset: Dictionary = {}) -> Transform2D:
+	return _matrix(_parts(raw, offset))
+
+
+## A transform as the runtime holds it: a rotation (skY), a skew on top of it
+## (skX - skY), a scale and a position, with the animation's offset applied -
+## rotation and position add, scale multiplies.
+static func _parts(raw: Variant, offset: Dictionary = {}) -> Dictionary:
 	var t: Dictionary = raw if raw is Dictionary else {}
-	var sk_x := float(t.get("skX", 0.0))
-	var sk_y := float(t.get("skY", 0.0))
-	var pos := Vector2(float(t.get("x", 0.0)), float(t.get("y", 0.0)))
-	var size := Vector2(float(t.get("scX", 1.0)), float(t.get("scY", 1.0)))
+	var sk_x := deg_to_rad(float(t.get("skX", 0.0)))
+	var sk_y := deg_to_rad(float(t.get("skY", 0.0)))
+	var parts := {
+		"pos": Vector2(float(t.get("x", 0.0)), float(t.get("y", 0.0))),
+		"rot": sk_y,
+		"skew": sk_x - sk_y,
+		"scale": Vector2(float(t.get("scX", 1.0)), float(t.get("scY", 1.0))),
+	}
 	if not offset.is_empty():
-		pos += offset["pos"] as Vector2
-		sk_x += float(offset["rot"])
-		sk_y += float(offset["rot"])
-		size *= offset["scale"] as Vector2
-	var rx := deg_to_rad(sk_x)
-	var ry := deg_to_rad(sk_y)
+		parts["pos"] += offset["pos"] as Vector2
+		parts["rot"] += deg_to_rad(float(offset["rot"]))
+		parts["scale"] *= offset["scale"] as Vector2
+	return parts
+
+
+## `Transform.toMatrix` in the runtime.
+static func _matrix(parts: Dictionary) -> Transform2D:
+	var rot: float = parts["rot"]
+	var turn: float = rot + float(parts["skew"])
+	var size: Vector2 = parts["scale"]
 	return Transform2D(
-			Vector2(cos(ry) * size.x, sin(ry) * size.x),
-			Vector2(-sin(rx) * size.y, cos(rx) * size.y),
-			pos)
+			Vector2(cos(rot) * size.x, sin(rot) * size.x),
+			Vector2(-sin(turn) * size.y, cos(turn) * size.y),
+			parts["pos"])
 
 
 ## A slot's colour transform as a Godot modulate. DragonBones states each
@@ -308,19 +324,31 @@ static func color_of(raw: Variant) -> Color:
 ## A bone can opt out of its parent's rotation or scale, and several do: the
 ## basic zombie's head sets both false, so it keeps its own size and angle
 ## however the body leans. Position always inherits - that is what a skeleton
-## is for. Where both are inherited the parent's matrix is used directly,
-## which keeps a parent's skew that decomposing would throw away.
-static func inherit(parent: Transform2D, local: Transform2D,
+## is for. This is `Bone._updateGlobalTransformMatrix` from the runtime, rule
+## for rule, because the shortcuts all go wrong somewhere visible:
+##
+## - Refusing only rotation still takes the parent's whole matrix, skew and
+##   all; the bone's own angle is just measured against the parent's.
+## - Refusing only scale under a mirrored parent mirrors the bone's own angle
+##   and flips its skew. The peashooter's stem is mirrored, and its neck hangs
+##   off it this way - get this wrong and the neck points the other way.
+static func inherit(parent: Transform2D, parts: Dictionary,
 		rot: bool, size: bool) -> Transform2D:
-	var origin := parent * local.origin
-	if rot and size:
-		var full := parent * local
-		full.origin = origin
-		return full
-	var carrier := Transform2D(parent.get_rotation() if rot else 0.0, Vector2.ZERO)
+	var local := parts.duplicate()
+	var parent_angle := parent.x.angle()
 	if size:
-		carrier = carrier.scaled(parent.get_scale())
-	var out := carrier * local
+		if not rot:
+			local["rot"] = float(local["rot"]) - parent_angle
+		return parent * _matrix(local)
+	var origin := parent * (local["pos"] as Vector2)
+	if rot:
+		var own: float = local["rot"]
+		var turned := own + parent_angle
+		if parent.determinant() < 0.0:
+			turned -= own * 2.0
+			local["skew"] = float(local["skew"]) + PI
+		local["rot"] = turned
+	var out := _matrix(local)
 	out.origin = origin
 	return out
 
@@ -359,10 +387,11 @@ func world_at(offsets: Dictionary, ik_state: Dictionary = {}) -> Array[Transform
 
 func _compose(i: int, world: Array[Transform2D], offsets: Dictionary) -> Transform2D:
 	var bone: Dictionary = bones[i]
-	var local := matrix_of(bone["raw"], offsets.get(i, {}))
+	var parts := _parts(bone["raw"], offsets.get(i, {}))
 	var parent: int = bone["parent"]
-	return inherit(world[parent], local, bone["inherit_rotation"],
-			bone["inherit_scale"]) if parent >= 0 else local
+	if parent < 0:
+		return _matrix(parts)
+	return inherit(world[parent], parts, bone["inherit_rotation"], bone["inherit_scale"])
 
 
 ## Turns a bone's whole basis to face `angle`, keeping its scale and skew,
@@ -503,7 +532,7 @@ func _bake_one(source: Dictionary) -> Animation:
 			var values: Array = []
 			for row in sampled:
 				values.append(_component(row[slot_index_], property))
-			_add_track(animation, "%s:%s" % [name, property], values)
+			_add_track(animation, "%s:%s" % [node_name(name), property], values)
 
 	for index in _display_slots:
 		var slot: Dictionary = slots[index]
@@ -517,7 +546,7 @@ func _bake_one(source: Dictionary) -> Animation:
 			var values: Array = []
 			for value in shown:
 				values.append(value == choice)
-			_add_discrete(animation, "%s/%d:visible" % [slot["name"], choice], values)
+			_add_discrete(animation, "%s/%d:visible" % [node_name(slot["name"]), choice], values)
 
 	for index in _color_slots:
 		var slot: Dictionary = slots[index]
@@ -525,7 +554,7 @@ func _bake_one(source: Dictionary) -> Animation:
 		var values: Array = []
 		for frame in range(frames + 1):
 			values.append(_sample(line, float(frame) / frame_rate, slot["color"]))
-		_add_track(animation, "%s:modulate" % slot["name"], values)
+		_add_track(animation, "%s:modulate" % node_name(slot["name"]), values)
 
 	_add_events(animation, source)
 	_measure_ground(animation, source, frames)
@@ -613,6 +642,13 @@ func _add_track(animation: Animation, path: String, values: Array) -> void:
 			keep = not _same(values[i], values[i - 1])
 		if keep:
 			animation.track_insert_key(track, float(i) / frame_rate, values[i])
+
+
+## The node a slot becomes. Slot names are free text and some carry a path
+## separator (the sun's "sun/sun_changing"), which Godot strips from a node
+## name; a track keyed on the raw name would then point at nothing.
+static func node_name(slot_name: String) -> String:
+	return slot_name.validate_node_name()
 
 
 ## A track that switches rather than blends: which picture a slot shows.

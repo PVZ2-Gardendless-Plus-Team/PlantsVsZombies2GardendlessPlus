@@ -1,6 +1,8 @@
 {
  "id": "glaciershroom",
  "family": "Cold",
+ "world": "epic",
+ "packet_portrait": "glacierShroom",
  "stats": {
   "sun_cost": 300,
   "toughness": 700,

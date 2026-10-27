@@ -1,6 +1,7 @@
 {
  "id": "electricpeashooter",
  "family": "Electricity",
+ "world": "market",
  "stats": {
   "sun_cost": 200,
   "toughness": 300,

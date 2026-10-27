@@ -30,7 +30,15 @@ because `git submodule update` will not check out over a non-empty directory.
 
 Regenerate with `tools/extract_prefabs.py` and `tools/extract_rigs.py` from
 this repository's root, writing into `art/` - `art/README.md` has the full
-commands. Open the project in Godot once so new images get their `.import`
+commands. To take everything in the build at once - every prefab, then every
+rig no prefab covers - use `tools/extract_all_art.py`:
+
+```sh
+python3 tools/extract_all_art.py <build>/assets/resources art --commit
+```
+
+`--commit` starts an `extract-art` branch from the art repository's `master`
+and commits there; `--push` also pushes it. Open the project in Godot once so new images get their `.import`
 files, then commit inside `art/`, push to a branch of the art repository and
 merge it there.
 

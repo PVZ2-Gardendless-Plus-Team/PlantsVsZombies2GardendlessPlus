@@ -1,6 +1,8 @@
 {
  "id": "cantaloupe",
  "family": "Lobber",
+ "world": "kongfu",
+ "packet_portrait": "cantaloupepult",
  "stats": {
   "sun_cost": 500,
   "toughness": 300,

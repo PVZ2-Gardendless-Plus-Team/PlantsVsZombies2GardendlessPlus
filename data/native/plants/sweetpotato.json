@@ -1,6 +1,7 @@
 {
  "id": "sweetpotato",
  "family": "Defence",
+ "world": "epic",
  "stats": {
   "sun_cost": 150,
   "toughness": 4000,

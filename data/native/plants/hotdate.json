@@ -1,6 +1,7 @@
 {
  "id": "hotdate",
  "family": "Fire",
+ "world": "epic",
  "stats": {
   "sun_cost": 175,
   "toughness": 2000,

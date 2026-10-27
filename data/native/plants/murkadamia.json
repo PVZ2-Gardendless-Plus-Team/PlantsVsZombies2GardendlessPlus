@@ -1,6 +1,8 @@
 {
  "id": "murkadamia",
  "family": "Shadow",
+ "world": "epic",
+ "packet_portrait": "murkadamianut",
  "stats": {
   "sun_cost": 100,
   "toughness": 2500,

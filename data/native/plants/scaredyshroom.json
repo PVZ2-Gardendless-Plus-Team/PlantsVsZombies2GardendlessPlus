@@ -1,6 +1,8 @@
 {
  "id": "scaredyshroom",
  "family": "Poison",
+ "world": "dark",
+ "packet_portrait": "scaredyShroom",
  "stats": {
   "sun_cost": 25,
   "toughness": 300,

@@ -1,6 +1,7 @@
 {
  "id": "powerplant_alpha",
  "family": "Nope",
+ "world": "future",
  "stats": {
   "sun_cost": 250,
   "toughness": 3000,

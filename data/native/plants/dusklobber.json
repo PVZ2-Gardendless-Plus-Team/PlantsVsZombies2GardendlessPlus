@@ -1,6 +1,7 @@
 {
  "id": "dusklobber",
  "family": "Shadow",
+ "world": "modern",
  "stats": {
   "sun_cost": 150,
   "toughness": 300,

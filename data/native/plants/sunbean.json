@@ -1,6 +1,7 @@
 {
  "id": "sunbean",
  "family": "Sun",
+ "world": "dark",
  "stats": {
   "sun_cost": 50,
   "toughness": 50,

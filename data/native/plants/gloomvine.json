@@ -1,6 +1,7 @@
 {
  "id": "gloomvine",
  "family": "Shadow",
+ "world": "epic",
  "stats": {
   "sun_cost": 125,
   "toughness": 250,

@@ -2,10 +2,11 @@ class_name LawnScenery
 extends Node2D
 ## The lawn's own art: the ground under the grid and the layer drawn over it.
 ##
-## PVZGE splits every lawn into a back rig, drawn under everything, and an
-## upper rig - the hedge, the fence, the house's corner - that the game parents
-## to a layer above the characters. Both come from one `lawn:<stage>` entry in
-## the art mappings, and both are placed exactly where the original placed
+## PVZGE splits every lawn into a back rig, drawn under everything, and two
+## upper rigs. The "there" rig - the far fence, the mailbox, the street the
+## zombies walk in from - sits on the lawn under the characters; the "here"
+## rig - the near hedge, the house's corner - is parented to a layer above
+## them. All of it comes from one `lawn:<stage>` entry in the art mappings, and both are placed exactly where the original placed
 ## them relative to its grid, so a lane on the art is a lane on the board.
 ##
 ## When the stage has no art - nothing extracted, or a stage without an entry -
@@ -24,6 +25,9 @@ const LAWN_SCALE := 0.42
 
 ## Under the board's own drawing and every lane band.
 const BACK_Z := -100
+## Over the ground, under every lane band - a lily pad's carrier band
+## included - so a zombie walks in front of the fence and the mailbox.
+const THERE_Z := -50
 ## Above every lane band, below collectables.
 const FRONT_Z := 900
 
@@ -31,6 +35,7 @@ var stage: StringName = &""
 ## The sod animation picked for the open lanes, or empty for a lawn without.
 var sod_animation: StringName = &""
 var _back: Array[Armature] = []
+var _there: Array[Armature] = []
 var _front: Array[Armature] = []
 var _entry: Dictionary = {}
 
@@ -66,6 +71,10 @@ func show_stage(stage_id: StringName, board: Board, open_rows: int) -> bool:
 		var rig := _place(StringName(name), at, size, BACK_Z)
 		if rig != null:
 			_back.append(rig)
+	for name in (_entry.get("there", []) as Array):
+		var rig := _place(StringName(name), at, size, THERE_Z)
+		if rig != null:
+			_there.append(rig)
 	for name in (_entry.get("front", []) as Array):
 		var rig := _place(StringName(name), at, size, FRONT_Z)
 		if rig != null:
@@ -99,10 +108,11 @@ func set_open_rows(count: int) -> void:
 
 
 func clear() -> void:
-	for rig in _back + _front:
+	for rig in _back + _there + _front:
 		if is_instance_valid(rig):
 			rig.queue_free()
 	_back.clear()
+	_there.clear()
 	_front.clear()
 	_entry = {}
 	stage = &""

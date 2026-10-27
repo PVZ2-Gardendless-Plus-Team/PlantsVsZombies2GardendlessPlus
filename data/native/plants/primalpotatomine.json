@@ -1,6 +1,7 @@
 {
  "id": "primalpotatomine",
  "family": "Explosive",
+ "world": "dino",
  "stats": {
   "sun_cost": 50,
   "toughness": 300,

@@ -1,6 +1,7 @@
 {
  "id": "seashroom",
  "family": "Poison",
+ "world": "water",
  "stats": {
   "sun_cost": 0,
   "toughness": 150,

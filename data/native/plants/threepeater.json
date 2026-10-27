@@ -1,6 +1,7 @@
 {
  "id": "threepeater",
  "family": "Peashooter",
+ "world": "pirate",
  "stats": {
   "sun_cost": 300,
   "toughness": 300,

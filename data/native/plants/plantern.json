@@ -1,6 +1,7 @@
 {
  "id": "plantern",
  "family": "Sun",
+ "world": "epic",
  "stats": {
   "sun_cost": 75,
   "toughness": 300,

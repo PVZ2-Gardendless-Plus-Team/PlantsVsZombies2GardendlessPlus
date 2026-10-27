@@ -476,7 +476,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		get_viewport().set_input_as_handled()
 
 
-## Cycles the selection, skipping packets that have not recharged. Bound to
+## Cycles the selection, skipping packets that cannot be picked. Bound to
 ## Previous/Next Slot, which are reserved for controller shoulder buttons.
 func _step_slot(step: int) -> void:
 	if _seeds.is_empty():
@@ -484,7 +484,7 @@ func _step_slot(step: int) -> void:
 	var start: int = board.selected_seed.get("slot", -1)
 	for i in _seeds.size():
 		var next := posmod(start + step * (i + 1), _seeds.size())
-		if seed_bank.is_recharged(next):
+		if seed_bank.can_use(next, board.sun):
 			_select_seed(next)
 			return
 
@@ -542,9 +542,13 @@ func _refresh_mode_label() -> void:
 ## Selects a seed slot, or clears the selection when `slot` is out of range.
 ## Selecting the slot that is already active clears it, so a hotkey toggles.
 func _select_seed(slot: int) -> void:
-	# A packet that has not recharged cannot be selected at all.
-	if slot >= 0 and slot < _seeds.size() and not seed_bank.is_recharged(slot):
+	# As in PVZGE's tryChangingIndex, a packet that is recharging or that the
+	# bank cannot pay for is not picked up at all. Short of sun, the counter
+	# flashes too.
+	if slot >= 0 and slot < _seeds.size() and not seed_bank.can_use(slot, board.sun):
 		Audio.play(&"ui.seed.refuse")
+		if seed_bank.is_recharged(slot):
+			_sun_counter.warn()
 		return
 	if slot < 0 or slot >= _seeds.size():
 		board.selected_seed = {}
@@ -572,7 +576,7 @@ func _refresh_seed_buttons() -> void:
 		# The packet shades itself in proportion to the recharge left, so it
 		# visibly fills up.
 		b.show_state(1.0 if packet.is_recharged() else packet.fraction(),
-				board.sun >= packet.cost, board.selected_seed.get("slot", -1) == i)
+				seed_bank.can_afford(i, board.sun), board.selected_seed.get("slot", -1) == i)
 	_refresh_tools()
 
 

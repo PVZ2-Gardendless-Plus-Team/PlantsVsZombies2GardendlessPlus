@@ -1,6 +1,7 @@
 {
  "id": "phatbeet",
  "family": "Melee",
+ "world": "eighties",
  "stats": {
   "sun_cost": 150,
   "toughness": 300,

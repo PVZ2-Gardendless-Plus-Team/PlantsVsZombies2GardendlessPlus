@@ -26,6 +26,7 @@ func _ready() -> void:
 	_load_index()
 	for dir_path in MAP_DIRS:
 		load_mappings(dir_path)
+	apply_font()
 
 
 func is_available() -> bool:
@@ -87,6 +88,24 @@ func summary() -> String:
 		names.sort()
 		line += "  missing (see docs/ART.md): %s" % ", ".join(names)
 	return line
+
+
+## Makes the `font:ui` mapping's font - PVZGE's own text face - the one every
+## control and every `draw_string` gets when it asks the theme. Without the
+## art, Godot's default stays. Returns whether the font was found.
+func apply_font() -> bool:
+	var file := String(mapping(&"font", &"ui").get("file", ""))
+	var path := ART_ROOT.path_join(file)
+	if file == "" or not ResourceLoader.exists(path):
+		return false
+	var font := load(path) as Font
+	if font == null:
+		return false
+	# Controls read the default theme's font; `draw_string` callers that ask
+	# for the fallback directly read the other one.
+	ThemeDB.get_default_theme().default_font = font
+	ThemeDB.fallback_font = font
+	return true
 
 
 func mapping(kind: StringName, id: StringName) -> Dictionary:

@@ -1,13 +1,15 @@
 {
- "//": "Scenery and HUD art, keyed <kind>:<id> like tutorial.json. `lawn:<stage>` names the stage's lawn rigs: `back` draws under everything, `front` over the characters (PVZGE's LawnUpper and LawnThere layers), placed where the original placed its lawn relative to the grid. `open_rows` picks the tutorial lawn's sod animation by how many lanes are open. `mower:<id>`, `collectable:<id>`, `effect:<id>` and `hud:<id>` are single rigs with an explicit scale and offset, sized from the original's own scale times the port's cell-to-square ratio. A mod reskins any of them by shipping an entry with the same key.",
+ "//": "Scenery and HUD art, keyed <kind>:<id> like tutorial.json. `lawn:<stage>` names the stage's lawn rigs: `back` draws under everything, `there` over the ground but under the characters (PVZGE's FrontYard/upper, its lawnThereUpper: the far fence, mailbox and street), and `front` over the characters (PVZGE's LawnCommon/LawnUpper, its lawnUpper), placed where the original placed its lawn relative to the grid. `open_rows` picks the tutorial lawn's sod animation by how many lanes are open. `mower:<id>`, `collectable:<id>`, `effect:<id>` and `hud:<id>` are single rigs with an explicit scale and offset, sized from the original's own scale times the port's cell-to-square ratio. `font:ui` is the text font, a file under art/. A mod reskins any of them by shipping an entry with the same key.",
  "lawn:AbbotStage": {
   "bundle": "lawns_KongfuLAWN",
   "back": [
    "Lawn"
   ],
-  "front": [
-   "Here",
+  "there": [
    "There"
+  ],
+  "front": [
+   "Here"
   ],
   "mower": "mower_kongfu"
  },
@@ -16,9 +18,11 @@
   "back": [
    "Lawn"
   ],
-  "front": [
-   "UpperHere",
+  "there": [
    "UpperThere"
+  ],
+  "front": [
+   "UpperHere"
   ],
   "mower": "mower_dark"
  },
@@ -35,9 +39,11 @@
   "back": [
    "Lawn"
   ],
-  "front": [
-   "Upper",
+  "there": [
    "UpperThere"
+  ],
+  "front": [
+   "Upper"
   ],
   "mower": "mower_beach"
  },
@@ -46,9 +52,11 @@
   "back": [
    "Lawn"
   ],
-  "front": [
-   "UpperHere",
+  "there": [
    "UpperThere"
+  ],
+  "front": [
+   "UpperHere"
   ],
   "mower": "mower_modern"
  },
@@ -65,9 +73,11 @@
   "back": [
    "Lawn"
   ],
-  "front": [
-   "LawnUpper",
+  "there": [
    "LawnUpperThere"
+  ],
+  "front": [
+   "LawnUpper"
   ],
   "mower": "mower_dark"
  },
@@ -76,9 +86,11 @@
   "back": [
    "Lawn"
   ],
-  "front": [
-   "UpperHere",
+  "there": [
    "UpperThere"
+  ],
+  "front": [
+   "UpperHere"
   ],
   "mower": "mower_dark"
  },
@@ -87,9 +99,11 @@
   "back": [
    "Lawn"
   ],
-  "front": [
-   "Upper",
+  "there": [
    "There"
+  ],
+  "front": [
+   "Upper"
   ],
   "mower": "mower_dino"
  },
@@ -98,8 +112,10 @@
   "back": [
    "Lawn"
   ],
+  "there": [
+   "UpperThere"
+  ],
   "front": [
-   "UpperThere",
    "UpperHere"
   ],
   "mower": "mower_dino"
@@ -109,9 +125,11 @@
   "back": [
    "Lawn_Night"
   ],
-  "front": [
-   "Upper_Night",
+  "there": [
    "UpperThere_Night"
+  ],
+  "front": [
+   "Upper_Night"
   ],
   "mower": "mower_egypt"
  },
@@ -120,9 +138,11 @@
   "back": [
    "Lawn"
   ],
-  "front": [
-   "Upper",
+  "there": [
    "UpperThere"
+  ],
+  "front": [
+   "Upper"
   ],
   "mower": "mower_egypt"
  },
@@ -131,8 +151,10 @@
   "back": [
    "Lawn"
   ],
+  "there": [
+   "UpperThere"
+  ],
   "front": [
-   "UpperThere",
    "UpperHere"
   ],
   "mower": "mower_eighties"
@@ -142,8 +164,10 @@
   "back": [
    "Lawn"
   ],
+  "there": [
+   "UpperThere"
+  ],
   "front": [
-   "UpperThere",
    "UpperHere"
   ],
   "mower": "mower_eighties"
@@ -153,9 +177,11 @@
   "back": [
    "Lawn"
   ],
-  "front": [
-   "UpperHere",
+  "there": [
    "UpperThere"
+  ],
+  "front": [
+   "UpperHere"
   ],
   "mower": "mower_cowboy"
  },
@@ -164,9 +190,11 @@
   "back": [
    "Lawn"
   ],
-  "front": [
-   "UpperHere",
+  "there": [
    "UpperThere"
+  ],
+  "front": [
+   "UpperHere"
   ],
   "mower": "mower_cowboy"
  },
@@ -175,9 +203,11 @@
   "back": [
    "Lawn"
   ],
-  "front": [
-   "UpperHere",
+  "there": [
    "UpperThere"
+  ],
+  "front": [
+   "UpperHere"
   ],
   "mower": "mower_modern"
  },
@@ -186,9 +216,11 @@
   "back": [
    "Lawn"
   ],
-  "front": [
-   "UpperHere",
+  "there": [
    "UpperThere"
+  ],
+  "front": [
+   "UpperHere"
   ],
   "mower": "mower_modern"
  },
@@ -197,9 +229,11 @@
   "back": [
    "Lawn"
   ],
-  "front": [
-   "Upper",
+  "there": [
    "UpperThere"
+  ],
+  "front": [
+   "Upper"
   ],
   "open_rows": {
    "0": "row0",
@@ -214,9 +248,11 @@
   "back": [
    "LawnNight"
   ],
-  "front": [
-   "UpperNight",
+  "there": [
    "UpperThereNight"
+  ],
+  "front": [
+   "UpperNight"
   ],
   "mower": "mower_future"
  },
@@ -225,9 +261,11 @@
   "back": [
    "Lawn"
   ],
-  "front": [
-   "Upper",
+  "there": [
    "UpperThere"
+  ],
+  "front": [
+   "Upper"
   ],
   "mower": "mower_future"
  },
@@ -236,9 +274,11 @@
   "back": [
    "Lawn"
   ],
-  "front": [
-   "UpperHere",
+  "there": [
    "UpperThere"
+  ],
+  "front": [
+   "UpperHere"
   ],
   "mower": "mower_future"
  },
@@ -247,8 +287,10 @@
   "back": [
    "Lawn"
   ],
+  "there": [
+   "There"
+  ],
   "front": [
-   "There",
    "Here"
   ],
   "mower": "mower_dark"
@@ -258,8 +300,10 @@
   "back": [
    "Lawn"
   ],
+  "there": [
+   "There"
+  ],
   "front": [
-   "There",
    "Here"
   ],
   "mower": "mower_modern"
@@ -269,9 +313,11 @@
   "back": [
    "Lawn"
   ],
-  "front": [
-   "Here",
+  "there": [
    "There"
+  ],
+  "front": [
+   "Here"
   ],
   "mower": "mower_iceage"
  },
@@ -280,9 +326,11 @@
   "back": [
    "Lawn"
   ],
-  "front": [
-   "UpperHere",
+  "there": [
    "UpperThere"
+  ],
+  "front": [
+   "UpperHere"
   ],
   "mower": "mower_iceage"
  },
@@ -291,9 +339,11 @@
   "back": [
    "Lawn"
   ],
-  "front": [
-   "Here",
+  "there": [
    "There"
+  ],
+  "front": [
+   "Here"
   ],
   "mower": "mower_iceage"
  },
@@ -302,9 +352,11 @@
   "back": [
    "LawnBoss"
   ],
-  "front": [
-   "Here",
+  "there": [
    "ThereBoss"
+  ],
+  "front": [
+   "Here"
   ],
   "mower": "mower_kongfu"
  },
@@ -313,9 +365,11 @@
   "back": [
    "Lawn"
   ],
-  "front": [
-   "Here",
+  "there": [
    "There"
+  ],
+  "front": [
+   "Here"
   ],
   "mower": "mower_kongfu"
  },
@@ -344,9 +398,11 @@
   "back": [
    "Lawn"
   ],
-  "front": [
-   "UpperHere",
+  "there": [
    "UpperThere"
+  ],
+  "front": [
+   "UpperHere"
   ],
   "mower": "mower_lostcity"
  },
@@ -364,9 +420,11 @@
   "back": [
    "Lawn"
   ],
-  "front": [
-   "UpperHere",
+  "there": [
    "UpperThere"
+  ],
+  "front": [
+   "UpperHere"
   ],
   "mower": "mower_lostcity"
  },
@@ -375,9 +433,11 @@
   "back": [
    "Lawn"
   ],
-  "front": [
-   "Here",
+  "there": [
    "There"
+  ],
+  "front": [
+   "Here"
   ],
   "mower": "mower_modern"
  },
@@ -386,9 +446,11 @@
   "back": [
    "Lawn"
   ],
-  "front": [
-   "Upper",
+  "there": [
    "UpperThere"
+  ],
+  "front": [
+   "Upper"
   ],
   "mower": "mower_modern"
  },
@@ -397,9 +459,11 @@
   "back": [
    "Lawn"
   ],
-  "front": [
-   "Here",
+  "there": [
    "There"
+  ],
+  "front": [
+   "Here"
   ],
   "mower": "mower_kongfu"
  },
@@ -408,9 +472,11 @@
   "back": [
    "Lawn"
   ],
-  "front": [
-   "Here",
+  "there": [
    "There"
+  ],
+  "front": [
+   "Here"
   ],
   "mower": "mower_lostcity"
  },
@@ -427,9 +493,11 @@
   "back": [
    "Lawn"
   ],
-  "front": [
-   "Upper",
+  "there": [
    "UpperThere"
+  ],
+  "front": [
+   "Upper"
   ],
   "mower": "mower_pirate"
  },
@@ -440,9 +508,11 @@
    "land_moving",
    "Lawn"
   ],
-  "front": [
-   "fanHere",
+  "there": [
    "fanThere"
+  ],
+  "front": [
+   "fanHere"
   ]
  },
  "lawn:SkyShiplessStage": {
@@ -452,9 +522,11 @@
    "land_moving",
    "Lawn"
   ],
-  "front": [
-   "fanHere",
+  "there": [
    "fanThere"
+  ],
+  "front": [
+   "fanHere"
   ]
  },
  "lawn:SkyStage": {
@@ -464,9 +536,11 @@
    "land_moving",
    "Lawn"
   ],
-  "front": [
-   "fanHere",
+  "there": [
    "fanThere"
+  ],
+  "front": [
+   "fanHere"
   ],
   "mower": "mower_future"
  },
@@ -475,9 +549,11 @@
   "back": [
    "Lawn"
   ],
-  "front": [
-   "Here",
+  "there": [
    "There"
+  ],
+  "front": [
+   "Here"
   ],
   "mower": "mower_modern"
  },
@@ -486,9 +562,11 @@
   "back": [
    "Lawn"
   ],
-  "front": [
-   "Here",
+  "there": [
    "There"
+  ],
+  "front": [
+   "Here"
   ],
   "mower": "mower_modern"
  },
@@ -497,9 +575,11 @@
   "back": [
    "Lawn"
   ],
-  "front": [
-   "Here",
+  "there": [
    "There"
+  ],
+  "front": [
+   "Here"
   ],
   "mower": "mower_modern"
  },
@@ -508,9 +588,11 @@
   "back": [
    "Lawn"
   ],
-  "front": [
-   "Upper",
+  "there": [
    "UpperThere"
+  ],
+  "front": [
+   "Upper"
   ],
   "open_rows": {
    "0": "row0",
@@ -525,9 +607,11 @@
   "back": [
    "Lawn"
   ],
-  "front": [
-   "UpperHere",
+  "there": [
    "UpperThere"
+  ],
+  "front": [
+   "UpperHere"
   ],
   "mower": "mower_modern"
  },
@@ -536,9 +620,11 @@
   "back": [
    "Lawn"
   ],
-  "front": [
-   "Upper",
+  "there": [
    "UpperThere"
+  ],
+  "front": [
+   "Upper"
   ],
   "mower": "mower_cowboy"
  },
@@ -689,7 +775,7 @@
  "collectable:sun": {
   "bundle": "rigs_SunAnimate",
   "armature": "Sun",
-  "scale": 0.3,
+  "scale": 0.512,
   "offset_x": 0,
   "offset_y": 0,
   "animations": {
@@ -778,7 +864,9 @@
  },
  "hud:seed_packet": {
   "bundle": "rigs_SeedPacker_Card",
-  "background": "bk_modernday",
   "portraits": {}
+ },
+ "font:ui": {
+  "file": "fonts/FBUSV8C5EI.ttf"
  }
 }

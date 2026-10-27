@@ -285,6 +285,7 @@ once.
 {
  "id": "splitpea_mk2",
  "family": "Peashooter",
+ "world": "egypt",
  "stats": { "sun_cost": 175, "toughness": 300, "cooldown": 7 },
  "components": [
   { "type": "burst_shooter", "projectile": "pea", "interval": 2.0, "burst": 3 }
@@ -297,6 +298,14 @@ once.
 that recharge the packet starts with (1 is ready immediately, 0 means waiting
 a full cycle before first use). A level listing the
 `SeedPacketHalfTimeModule` feature halves every recharge.
+
+`world` picks the packet's backing, as PVZGE's `OBTAINWORLD` does: a world's
+name (`frontyard`, `egypt`, `pirate`, `cowboy`, `future`, `dark`, `beach`,
+`ice`, `lostcity`, `eighties`, `dino`, `modern`, `kongfu`, `sky`), `water` for
+the beach backing, or `market`, `mint`, `epic` and `lod` for the gold-tabbed
+premium ones. Leaving it out gives the plain backing. `packet_portrait` names
+the picture on the packet when it is not the plant's id, and `family` adds the
+family badge in the corner.
 
 `components` is the interesting part: each entry names a behaviour and
 configures it. Built-in types are `shooter`, `lobber`, `sun_producer`, `melee`,
@@ -488,20 +497,22 @@ see `data/native/art/scenery.json`:
 ```json
 {
  "lawn:TutorialStage": {
-  "bundle": "lawns_TutorialLAWN", "back": ["Lawn"], "front": ["Upper", "UpperThere"],
+  "bundle": "lawns_TutorialLAWN", "back": ["Lawn"], "there": ["UpperThere"], "front": ["Upper"],
   "open_rows": {"1": "row1", "3": "row3", "5": "row5"}, "mower": "mower_modern"
  },
  "mower:mower_modern": {
   "bundle": "projectiles_ModernMowerPRJ", "armature": "Mower", "scale": 0.512,
   "animations": {"idle": "Idle", "trigger": "Trans", "attack": "Attack"}
  },
- "collectable:sun": { "bundle": "rigs_SunAnimate", "armature": "Sun", "scale": 0.3,
+ "collectable:sun": { "bundle": "rigs_SunAnimate", "armature": "Sun", "scale": 0.512,
   "animations": {"idle": "Normal"} }
 }
 ```
 
 A `lawn:<stage>` entry is keyed by the level's `stage`. Its `back` rigs draw
-under everything and its `front` rigs over the characters, both placed where
+under everything, its `there` rigs (the far fence, mailbox and street) over
+the ground but under the characters, and its `front` rigs over the
+characters, all placed where
 PVZGE placed its lawn relative to the first cell, so the art's lanes line up
 with the board's. `open_rows` picks the sod animation by how many lanes are
 open, for the tutorial lawn's dirt rows. `mower:<id>` plays `trigger` in place
@@ -509,6 +520,8 @@ until the rig says `switchingFalse`, then `attack` while it drives.
 `collectable:sun` and `collectable:plantfood` dress the pickups,
 `effect:plant_dirt` is the puff when a plant goes in or comes out, and the
 `hud:` entries are the sun counter, shovel, plant food slots and seed packet.
+`font:ui` names the font every label and price is drawn in, a path under
+`art/`; a mod ships its own entry to change it.
 `hud:` states can chain with `"after": {"collecting": "filled"}`, the way a
 DragonBones frame action does.
 

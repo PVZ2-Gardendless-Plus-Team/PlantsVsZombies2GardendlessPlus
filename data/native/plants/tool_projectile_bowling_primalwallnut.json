@@ -1,6 +1,7 @@
 {
  "id": "tool_projectile_bowling_primalwallnut",
  "family": "Nope",
+ "packet_portrait": "primalwallnut",
  "stats": {
   "sun_cost": 250,
   "toughness": 1,

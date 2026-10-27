@@ -1,6 +1,8 @@
 {
  "id": "bloominghearts",
  "family": "Poison",
+ "world": "epic",
+ "packet_portrait": "bloomingheart",
  "stats": {
   "sun_cost": 150,
   "toughness": 300,

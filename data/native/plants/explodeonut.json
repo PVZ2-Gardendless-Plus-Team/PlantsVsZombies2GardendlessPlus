@@ -1,6 +1,7 @@
 {
  "id": "explodeonut",
  "family": "Explosive",
+ "world": "market",
  "stats": {
   "sun_cost": 50,
   "toughness": 3000,

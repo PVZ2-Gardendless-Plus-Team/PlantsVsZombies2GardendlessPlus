@@ -176,9 +176,7 @@ func _drop_armor(rig: Armature) -> void:
 	rig.get_parent().remove_child(rig)
 	rig.transform = Transform2D.IDENTITY
 	piece.add_child(rig)
-	var dropped := DetachedLimb.drop(piece, -direction(), position.y + 24.0)
-	board.add_child(dropped)
-	dropped.z_index = board.lane_z(row, board.LAYER_ZOMBIE)
+	_drop_piece(piece)
 
 
 func has_armor_art() -> bool:
@@ -351,10 +349,18 @@ func _drop_limbs(on_death: bool) -> void:
 		if piece.get_child_count() == 0 or board == null:
 			piece.free()
 			continue
-		var dropped := DetachedLimb.drop(piece, -direction(), position.y + 24.0)
-		board.add_child(dropped)
-		dropped.z_index = board.lane_z(row, board.LAYER_ZOMBIE)
+		_drop_piece(piece)
 		Audio.play(StringName(limb.get("sound", "zombie.limb")), position)
+
+
+## Hands something that came off to the board to fall onto this lane's floor,
+## which is where the rig's feet are.
+func _drop_piece(piece: Node2D) -> void:
+	var floor_y := position.y + (art.position.y if art != null else 0.0)
+	var rig_scale := art.scale.y if art != null else 1.0
+	var dropped := DetachedLimb.drop(piece, board, -direction(), floor_y,
+			board.original_unit(), rig_scale)
+	dropped.z_index = board.lane_z(row, board.LAYER_ZOMBIE)
 
 
 func _tick_status(delta: float) -> void:

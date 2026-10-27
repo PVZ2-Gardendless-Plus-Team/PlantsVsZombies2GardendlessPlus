@@ -1,6 +1,7 @@
 {
  "id": "asparagus",
  "family": "Lobber",
+ "world": "market",
  "stats": {
   "sun_cost": 225,
   "toughness": 300,

@@ -45,11 +45,13 @@ func _run() -> void:
 	_test_tutorial_levels_playable()
 	await _test_seed_cooldowns()
 	await _test_armor_visual_state()
+	await _test_dropped_head()
 	await _test_armed_mine_is_not_food()
 	await _test_sun_expires()
 	await _test_mowers()
 	await _test_plant_food()
 	await _test_input_actions()
+	await _test_unaffordable_seed()
 	_test_shovel()
 	await _test_conveyor_belt()
 	_test_audio()
@@ -930,6 +932,33 @@ func _test_armor_visual_state() -> void:
 	board.queue_free()
 
 
+func _test_dropped_head() -> void:
+	print("\n[dropped head]")
+	var board := _make_board()
+	var zombie := board.spawn_zombie(&"tutorial", 2)
+	if zombie.art == null:
+		board.queue_free()
+		return
+	var feet := zombie.position.y + zombie.art.position.y
+	zombie.take_damage(zombie.max_health * 10.0)
+	# The arm comes off on the way down too; the head goes last.
+	var pieces := board.find_children("*", "DetachedLimb", false, false)
+	check_eq("a dying zombie drops its arm and head", pieces.size(), 2)
+	if not pieces.is_empty():
+		var head: DetachedLimb = pieces.back()
+		# PVZGE drops it from where the head was, turning about its own middle,
+		# so it starts well up off the floor - not at the zombie's feet.
+		check("the head starts where the head was", head.height > 40.0,
+				"%.1f" % head.height)
+		check_eq("onto the lane's floor", head.floor_y, feet)
+		await _wait_game_seconds(0.6)
+		if is_instance_valid(head):
+			check("and comes to rest on the floor, not in the air",
+					absf(head.position.y - (feet - head._rest_height)) < 0.5,
+					"%.1f vs %.1f" % [head.position.y, feet])
+	board.queue_free()
+
+
 func _test_armed_mine_is_not_food() -> void:
 	print("\n[potato mine]")
 	var board := _make_board()
@@ -1078,6 +1107,46 @@ func _test_input_actions() -> void:
 			&"Slot 5 (Convayor)")
 	check_eq("slot 1 is shared", main._slot_action(0), &"Slot 1")
 	main.queue_free()
+
+
+## PVZGE will not put a packet in hand that the bank cannot pay for, by
+## click or by hotkey; it flashes the sun counter instead.
+func _test_unaffordable_seed() -> void:
+	section("unaffordable seed")
+	var main = load("res://game/main.tscn").instantiate()
+	add_child(main)
+	await get_tree().process_frame
+	var slot := -1
+	for i in main.seed_bank.size():
+		if main.seed_bank.is_recharged(i) and main.seed_bank.cost_of(i) > 0:
+			slot = i
+			break
+	check("a ready packet with a price", slot >= 0)
+	if slot < 0:
+		main.queue_free()
+		end_section()
+		return
+	var cost: int = main.seed_bank.cost_of(slot)
+	main.board.selected_seed = {}
+	main.board.sun = cost - 1
+	main._on_sun_changed(main.board.sun)
+	check("the packet shows as unusable", not main._seed_buttons[slot].usable)
+	main._seed_buttons[slot].pressed.emit()
+	check("clicking it picks nothing up", main.board.selected_seed.is_empty())
+	check("and the sun counter warns", main._sun_counter.is_warning())
+	main._select_seed(slot)
+	check("nor does its hotkey", main.board.selected_seed.is_empty())
+	main._step_slot(1)
+	check("nor does cycling", main.board.selected_seed.get("slot", -1) != slot)
+
+	main.board.selected_seed = {}
+	main.board.sun = cost
+	main._on_sun_changed(main.board.sun)
+	check("with enough sun it is usable", main._seed_buttons[slot].usable)
+	main._select_seed(slot)
+	check_eq("and picks up", int(main.board.selected_seed.get("slot", -1)), slot)
+	main.queue_free()
+	end_section()
 
 
 func _test_shovel() -> void:
@@ -2746,14 +2815,16 @@ func _test_art() -> void:
 		check("which comes off with the armor", not cone.has_armor_art())
 	check("a zombie off the lawn hurries on", cone._entering_scale() > 1.0)
 
-	# Acting changes what a plant is doing, and it goes back to idling after.
+	# Acting changes what a plant is doing, and it goes back to idling (or a
+	# fidget) after.
 	# The component says what happened; it never names an animation.
 	if pea != null and pea.art != null and pea.art.has_animation(&"Shoot"):
 		var idle_name: StringName = Art.animation_for(&"plant", &"peashooter", &"idle")
 		board.spawn_zombie(&"tutorial", 2)
 		await _wait_game_seconds(2.0)
 		check("firing changed the animation or returned to idle",
-				pea.art.playing == &"Shoot" or pea.art.playing == idle_name,
+				pea.art.playing == &"Shoot" or pea.art.playing == idle_name
+				or (Art.mapping(&"plant", &"peashooter").get("idle_random", []) as Array).has(String(pea.art.playing)),
 				String(pea.art.playing))
 
 	# Animations are Godot resources now, not a hand-rolled sampler.
@@ -2769,6 +2840,23 @@ func _test_art() -> void:
 				absf(walk.length - 3.0) < 0.1, "%f" % walk.length)
 	check("baking happens once per rig",
 			rig.animations(&"BasicZombie") == library)
+
+	# Every track lands on a node, even for a slot whose name carries a "/"
+	# that Godot strips from node names (the sun's "sun/sun_changing").
+	var sun := Art.make(&"collectable", &"sun")
+	check("the sun has a rig", sun != null)
+	if sun != null:
+		var player: AnimationPlayer = sun.get_node(^"Animations")
+		var unresolved: Array = []
+		for anim_name in player.get_animation_list():
+			var anim := player.get_animation(anim_name)
+			for track in anim.get_track_count():
+				var path := anim.track_get_path(track)
+				if sun.get_node_or_null(NodePath(path.get_concatenated_names())) == null:
+					unresolved.append(str(path))
+		check("every sun track finds its node", unresolved.is_empty(),
+				str(unresolved.slice(0, 3)))
+		sun.free()
 
 	# The rig's limbs are posed by IK, and its slots animate as well as move.
 	var baker := rig.rig(&"BasicZombie")
@@ -2787,6 +2875,24 @@ func _test_art() -> void:
 				and eat.find_track(NodePath("hand_here_HAND:position"), Animation.TYPE_VALUE) >= 0)
 		check("and fades the eating hands in and out",
 				eat.find_track(NodePath("hand_side_HAND:modulate"), Animation.TYPE_VALUE) >= 0)
+	# Inheritance follows the runtime rule for rule. Under a mirrored parent a
+	# bone that takes its rotation but not its scale mirrors its own angle and
+	# flips its skew - the peashooter's neck hangs off its mirrored stem so.
+	var mirror := Transform2D(Vector2(0.0, -1.0), Vector2(-1.0, 0.0), Vector2(5, 7))
+	var hung := ArmatureBaker.inherit(mirror,
+			{"pos": Vector2(10, 0), "rot": deg_to_rad(30.0), "skew": 0.0, "scale": Vector2.ONE},
+			true, false)
+	check("a bone under a mirrored parent mirrors its own angle",
+			is_equal_approx(hung.x.angle(), wrapf(mirror.x.angle() - deg_to_rad(30.0), -PI, PI))
+			and hung.determinant() < 0.0,
+			"%.1f deg, det %.2f" % [rad_to_deg(hung.x.angle()), hung.determinant()])
+	check_eq("and still hangs where its parent puts it", hung.origin, mirror * Vector2(10, 0))
+	# Refusing only rotation keeps the parent's skew and stretch.
+	var sheared := Transform2D(Vector2(2.0, 0.0), Vector2(0.5, 1.0), Vector2.ZERO).rotated(0.4)
+	var level := ArmatureBaker.inherit(sheared,
+			{"pos": Vector2.ZERO, "rot": 0.0, "skew": 0.0, "scale": Vector2.ONE}, false, true)
+	check("a bone refusing rotation keeps its parent's shear",
+			level.is_equal_approx(sheared * Transform2D(-sheared.x.angle(), Vector2.ZERO)))
 	var turns := baker._rotation_timeline([
 		{"duration": 5, "rotate": 170.0}, {"duration": 0, "rotate": -170.0}])
 	check_eq("a key past the seam turns the short way",
@@ -2795,6 +2901,22 @@ func _test_art() -> void:
 		{"duration": 5, "rotate": 0.0, "clockwise": 1}, {"duration": 0, "rotate": -10.0}])
 	check_eq("unless the rig says to go round the long way",
 			float(spun[1]["value"]), 350.0)
+
+	# Idling as PVZGE does: a fidget instead of the idle about half the time
+	# (RandRate 100), rolled each time the idle comes round.
+	if pea != null and pea.art != null:
+		var fidgets := 0
+		for i in 400:
+			pea.play_art(&"idle")
+			if pea.art.playing == &"Random":
+				fidgets += 1
+		check("the peashooter fidgets about half the time it idles",
+				fidgets > 140 and fidgets < 260, "%d of 400" % fidgets)
+		check("an idle plays once and rolls again", not pea.art.looping)
+		pea.art.play(&"Idle", false, true, 0.0)
+		pea.art._on_finished(&"Idle")
+		check("and comes round again on its own",
+				[&"Idle", &"Random"].has(pea.art.playing), String(pea.art.playing))
 
 	# A rig says when it acts, and where from.
 	if pea != null and pea.art != null:
@@ -2874,6 +2996,12 @@ func _test_scenery_art() -> void:
 	check("which says which lanes are sodded", board.scenery.shows_open_rows())
 	check_eq("one sodded lane picks the one-row lawn",
 			board.scenery.sod_animation, &"row1")
+	var far: Node2D = board.scenery.get_node_or_null(^"UpperThere")
+	check("the far fence and mailbox draw under the zombies",
+			far != null and far.z_index < board.lane_z(0, Board.LAYER_PLANT) - 1)
+	var near: Node2D = board.scenery.get_node_or_null(^"Upper")
+	check("the near hedge draws over them",
+			near != null and near.z_index > board.lane_z(board.rows - 1, Board.LAYER_PROJECTILE))
 	var mower := board.mower_in_row(0)
 	check("the mowers get their world's art", mower != null and mower.art != null)
 

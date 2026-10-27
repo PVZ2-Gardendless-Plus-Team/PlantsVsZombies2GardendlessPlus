@@ -1,6 +1,7 @@
 {
  "id": "springbean",
  "family": "Slow",
+ "world": "pirate",
  "stats": {
   "sun_cost": 50,
   "toughness": 300,

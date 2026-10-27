@@ -1,6 +1,7 @@
 {
  "id": "marigold",
  "family": "Slow",
+ "world": "frontyard",
  "stats": {
   "sun_cost": 50,
   "toughness": 300,

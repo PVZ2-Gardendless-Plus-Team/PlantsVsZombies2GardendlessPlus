@@ -152,6 +152,10 @@ func _build() -> void:
 	lock_box.set_corner_radius_all(8)
 	lock_box.set_content_margin_all(14)
 	_lock_label.add_theme_stylebox_override("normal", lock_box)
+	# Always in the tree and only hidden: a label taken out of it is never
+	# freed with the map, and leaks.
+	_lock_label.visible = false
+	_map.add_child(_lock_label)
 
 	# The card for the selected level, like PvZ2's level popup.
 	var card := PanelContainer.new()
@@ -184,8 +188,7 @@ func _show_world() -> void:
 	for b in _nodes.values():
 		b.queue_free()
 	_nodes.clear()
-	if _lock_label.get_parent() != null:
-		_lock_label.get_parent().remove_child(_lock_label)
+	_lock_label.visible = false
 
 	var world := current_world()
 	_prev.disabled = _index <= 0
@@ -225,7 +228,8 @@ func _show_world() -> void:
 		var gate := Data.campaign(world.unlock_after)
 		_lock_label.text = "Finish %s to open this world" % (
 				gate.display_name if gate != null else world.unlock_after)
-		_map.add_child(_lock_label)
+		_lock_label.visible = true
+		_lock_label.move_to_front()
 
 	_layout_nodes()
 	_select(world.next_unplayed(Saves.is_cleared) if is_world_open(world) else &"")

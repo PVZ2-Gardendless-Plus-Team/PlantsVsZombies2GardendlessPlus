@@ -288,6 +288,11 @@ func _resolve(id: StringName, raw: Variant, pool: Dictionary,
 		if def is PlantDef:
 			def.family = family
 		def.add_tag(StringName("family:" + str(family).to_lower()))
+	if def is PlantDef:
+		if source.has("world"):
+			def.world = StringName(str(source["world"]))
+		if source.has("packet_portrait"):
+			def.packet_portrait = StringName(str(source["packet_portrait"]))
 	if source.has("sort") and def is ZombieDef:
 		def.sort = StringName(str(source["sort"]))
 	if source.has("category") and def is ObjectDef:

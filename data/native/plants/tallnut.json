@@ -1,6 +1,7 @@
 {
  "id": "tallnut",
  "family": "Defence",
+ "world": "cowboy",
  "stats": {
   "sun_cost": 125,
   "toughness": 8000,

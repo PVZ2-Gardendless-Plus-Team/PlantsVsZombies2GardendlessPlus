@@ -1,6 +1,7 @@
 {
  "id": "spikerock",
  "family": "Sharp",
+ "world": "pirate",
  "stats": {
   "sun_cost": 250,
   "toughness": 900,

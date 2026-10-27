@@ -1,6 +1,7 @@
 {
  "id": "banana",
  "family": "Lobber",
+ "world": "beach",
  "stats": {
   "sun_cost": 500,
   "toughness": 300,

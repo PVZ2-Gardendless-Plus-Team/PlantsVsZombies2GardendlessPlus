@@ -1,6 +1,7 @@
 {
  "id": "hollybarrierleaf",
  "family": "Defence",
+ "packet_portrait": "hollyleaf",
  "stats": {
   "sun_cost": 25,
   "toughness": 1500,

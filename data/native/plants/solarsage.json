@@ -1,6 +1,7 @@
 {
  "id": "solarsage",
  "family": "Sun",
+ "world": "kongfu",
  "stats": {
   "sun_cost": 75,
   "toughness": 300,

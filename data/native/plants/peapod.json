@@ -1,6 +1,7 @@
 {
  "id": "peapod",
  "family": "Peashooter",
+ "world": "cowboy",
  "stats": {
   "sun_cost": 125,
   "toughness": 300,

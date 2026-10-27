@@ -1,6 +1,7 @@
 {
  "id": "kernelpult",
  "family": "Lobber",
+ "world": "pirate",
  "stats": {
   "sun_cost": 100,
   "toughness": 300,

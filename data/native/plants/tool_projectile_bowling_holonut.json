@@ -1,6 +1,7 @@
 {
  "id": "tool_projectile_bowling_holonut",
  "family": "Nope",
+ "packet_portrait": "holonut",
  "stats": {
   "sun_cost": 200,
   "toughness": 1,

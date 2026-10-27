@@ -1,6 +1,7 @@
 {
  "id": "squash",
  "family": "Melee",
+ "world": "epic",
  "stats": {
   "sun_cost": 50,
   "toughness": 300,

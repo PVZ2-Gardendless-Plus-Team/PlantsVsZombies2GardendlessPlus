@@ -1,6 +1,7 @@
 {
  "id": "tool_projectile_bowlingbulb_iceburg",
  "family": "Nope",
+ "packet_portrait": "projectile_bowlingbulb_iceburg",
  "stats": {
   "sun_cost": 50,
   "toughness": 1,

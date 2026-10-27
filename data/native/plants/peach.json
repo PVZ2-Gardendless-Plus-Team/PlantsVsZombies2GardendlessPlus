@@ -1,6 +1,8 @@
 {
  "id": "peach",
  "family": "Defence",
+ "world": "kongfu",
+ "packet_portrait": "heavenlypeach",
  "stats": {
   "sun_cost": 125,
   "toughness": 300,

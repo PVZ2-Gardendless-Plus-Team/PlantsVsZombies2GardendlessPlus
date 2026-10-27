@@ -1,6 +1,7 @@
 {
  "id": "electricblueberry",
  "family": "Electricity",
+ "world": "market",
  "stats": {
   "sun_cost": 150,
   "toughness": 300,

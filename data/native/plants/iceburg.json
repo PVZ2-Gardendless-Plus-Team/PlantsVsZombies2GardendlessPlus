@@ -1,6 +1,7 @@
 {
  "id": "iceburg",
  "family": "Cold",
+ "world": "egypt",
  "stats": {
   "sun_cost": 0,
   "toughness": 300,

@@ -696,7 +696,7 @@ PLANT_STATS = {
 }
 
 
-def split_plant(name, entry, prop_lookup):
+def split_plant(name, entry, prop_lookup, feature=None):
     d = entry.get("objdata") or {}
     out = collections.OrderedDict()
     out["id"] = name
@@ -712,6 +712,16 @@ def split_plant(name, entry, prop_lookup):
     family = merged.get("Family")
     if family:
         out["family"] = family
+
+    # PlantFeatures, not the prop sheets, says which world a plant is from -
+    # that picks its seed packet's backing - and which portrait the packet
+    # shows when it is not named after the plant.
+    feature = feature or {}
+    if feature.get("OBTAINWORLD"):
+        out["world"] = feature["OBTAINWORLD"]
+    portrait = feature.get("_CARDSPRITENAME")
+    if portrait and portrait != name:
+        out["packet_portrait"] = portrait
 
     stats = {}
     for src, dst in PLANT_STATS.items():
@@ -788,6 +798,9 @@ def split_plant(name, entry, prop_lookup):
 def write_plants(data_dir, out_root):
     types = json.load(open(os.path.join(data_dir, "PlantTypes.json"), encoding="utf-8"))
     props = json.load(open(os.path.join(data_dir, "PlantProps.json"), encoding="utf-8"))
+    features_path = os.path.join(data_dir, "PlantFeatures.json")
+    features = (json.load(open(features_path, encoding="utf-8"))
+                if os.path.exists(features_path) else {})
 
     def prop_lookup(ref):
         entry = props.get(strip_rtid(ref))
@@ -798,7 +811,7 @@ def write_plants(data_dir, out_root):
     for name, entry in sorted(types.items()):
         if name in PLANTS_THAT_ARE_OBJECTS:
             continue  # emitted by write_objects instead
-        native = split_plant(name, entry, prop_lookup)
+        native = split_plant(name, entry, prop_lookup, features.get(name))
         open(os.path.join(out_dir, f"{name}.json"), "w", encoding="utf-8").write(
             json.dumps(native, ensure_ascii=False, indent=1))
         manifest[name] = {"file": f"plants/{name}.json", "family": native.get("family")}

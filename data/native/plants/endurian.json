@@ -1,6 +1,7 @@
 {
  "id": "endurian",
  "family": "Defence",
+ "world": "lostcity",
  "stats": {
   "sun_cost": 100,
   "toughness": 3000,

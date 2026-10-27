@@ -1,6 +1,7 @@
 {
  "id": "jalapeno",
  "family": "Fire",
+ "world": "market",
  "stats": {
   "sun_cost": 125,
   "toughness": 300,

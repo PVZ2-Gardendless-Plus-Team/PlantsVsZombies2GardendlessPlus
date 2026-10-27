@@ -6,11 +6,14 @@ extends HBoxContainer
 
 ## Share of the remaining gap closed per second.
 const CATCH_UP := 10.0
+## How long the not-enough-sun flash lasts, in seconds.
+const WARN_TIME := 0.5
 
 var target: int = 0
 var shown: float = 0.0
 var _icon: RigIcon
 var _label: Label
+var _warn_tween: Tween
 
 
 func _init(font_size: int = 22) -> void:
@@ -39,6 +42,24 @@ func set_total(total: int, instant: bool = false) -> void:
 	if instant or float(total) < shown:
 		shown = float(total)
 	_refresh()
+
+
+## PVZGE's `sunCountWarn`: picking a packet the bank cannot pay for flashes
+## the number red and swells it, then lets both settle back.
+func warn() -> void:
+	if _warn_tween != null:
+		_warn_tween.kill()
+	_label.pivot_offset = _label.size * 0.5
+	_label.scale = Vector2(1.2, 1.2)
+	_label.add_theme_color_override("font_color", Color(1.0, 0.25, 0.25))
+	_warn_tween = create_tween().set_parallel()
+	_warn_tween.tween_property(_label, "scale", Vector2.ONE, WARN_TIME)
+	_warn_tween.tween_method(func(c: Color): _label.add_theme_color_override("font_color", c),
+			Color(1.0, 0.25, 0.25), Color.WHITE, WARN_TIME)
+
+
+func is_warning() -> bool:
+	return _warn_tween != null and _warn_tween.is_running()
 
 
 func _process(delta: float) -> void:

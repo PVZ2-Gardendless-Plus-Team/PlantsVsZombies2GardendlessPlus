@@ -1,6 +1,8 @@
 {
  "id": "pumpkin",
  "family": "Defence",
+ "world": "epic",
+ "packet_portrait": "pumpkinhead",
  "stats": {
   "sun_cost": 150,
   "toughness": 4000,

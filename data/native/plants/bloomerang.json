@@ -1,6 +1,7 @@
 {
  "id": "bloomerang",
  "family": "Sharp",
+ "world": "egypt",
  "stats": {
   "sun_cost": 175,
   "toughness": 300,

@@ -1,6 +1,8 @@
 {
  "id": "laser_bean",
  "family": "Sharp",
+ "world": "future",
+ "packet_portrait": "laserbean",
  "stats": {
   "sun_cost": 200,
   "toughness": 300,

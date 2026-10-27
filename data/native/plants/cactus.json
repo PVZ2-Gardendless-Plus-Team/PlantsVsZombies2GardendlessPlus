@@ -1,6 +1,7 @@
 {
  "id": "cactus",
  "family": "Sharp",
+ "world": "market",
  "stats": {
   "sun_cost": 175,
   "toughness": 300,

@@ -1,6 +1,7 @@
 {
  "id": "iceweed",
  "family": "Cold",
+ "world": "market",
  "stats": {
   "sun_cost": 150,
   "toughness": 300,

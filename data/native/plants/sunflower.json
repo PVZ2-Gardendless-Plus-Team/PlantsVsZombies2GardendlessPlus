@@ -1,6 +1,7 @@
 {
  "id": "sunflower",
  "family": "Sun",
+ "world": "frontyard",
  "stats": {
   "sun_cost": 50,
   "toughness": 300,

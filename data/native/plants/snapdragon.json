@@ -1,6 +1,7 @@
 {
  "id": "snapdragon",
  "family": "Fire",
+ "world": "pirate",
  "stats": {
   "sun_cost": 150,
   "toughness": 300,

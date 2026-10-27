@@ -1,6 +1,7 @@
 {
  "id": "moonbean",
  "family": "Sun",
+ "world": "sky",
  "stats": {
   "sun_cost": 25,
   "toughness": 150,

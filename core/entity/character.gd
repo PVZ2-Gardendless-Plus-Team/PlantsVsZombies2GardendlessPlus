@@ -110,14 +110,43 @@ func art_kind() -> StringName:
 	return &""
 
 
+## How long PVZGE fades into a state, in seconds. An attack (a shot, a bite)
+## and a death ease in over a tenth of a second; everything else - walking,
+## idling, going back to idle after an action - cuts straight to its pose,
+## which is seamless because PopCap's rigs start and end those at rest.
+const FADE_IN := {&"attack": 0.1, &"die": 0.1}
+
+
 ## Plays the animation this entity's mapping gives for a state, if it has one.
 func play_art(state: StringName, loop: bool = true) -> bool:
 	if art == null or def == null:
 		return false
 	if state == &"idle":
 		state = idle_state
+		if state == &"idle":
+			return _play_idle()
 	var name := Art.animation_for(art_kind(), def.id, state)
-	return art.play(name, loop) if name != &"" else false
+	return art.play(name, loop, false, float(FADE_IN.get(state, 0.0))) if name != &"" else false
+
+
+## Idles the way PVZGE's AnimationController does. A rig whose mapping lists
+## `idle_random` animations plays its idle once at a time, and each time it
+## comes round there is a `random_rate`/200 chance (the prefab's RandRate, 100
+## unless it says otherwise) of a fidget instead - the peashooter glancing
+## about, the sunflower's sway. Anything else just loops its idle.
+func _play_idle() -> bool:
+	var entry := Art.mapping(art_kind(), def.id)
+	var name := Art.animation_for(art_kind(), def.id, &"idle")
+	var fidgets: Array = entry.get("idle_random", [])
+	if fidgets.is_empty():
+		return art.play(name, true, false, 0.0) if name != &"" else false
+	if randf() < float(entry.get("random_rate", 100.0)) / 200.0:
+		name = StringName(fidgets.pick_random())
+	if name == &"" or not art.play(name, false, true, 0.0):
+		return false
+	if not art.animation_finished.is_connected(_on_art_finished):
+		art.animation_finished.connect(_on_art_finished)
+	return true
 
 
 ## Plays a one-shot and goes back to idling when it ends.

@@ -1,6 +1,7 @@
 {
  "id": "perfumeshroom",
  "family": "Nope",
+ "world": "dino",
  "stats": {
   "sun_cost": 150,
   "toughness": 300,

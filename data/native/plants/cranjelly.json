@@ -1,6 +1,7 @@
 {
  "id": "cranjelly",
  "family": "Slow",
+ "world": "market",
  "stats": {
   "sun_cost": 75,
   "toughness": 300,

@@ -1,6 +1,7 @@
 {
  "id": "nightshade",
  "family": "Shadow",
+ "world": "modern",
  "stats": {
   "sun_cost": 75,
   "toughness": 300,

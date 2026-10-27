@@ -1,6 +1,8 @@
 {
  "id": "blastberry",
  "family": "Lobber",
+ "world": "epic",
+ "packet_portrait": "blastberrivine",
  "stats": {
   "sun_cost": 175,
   "toughness": 300,

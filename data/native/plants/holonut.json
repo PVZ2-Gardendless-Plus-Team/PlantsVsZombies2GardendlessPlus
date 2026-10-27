@@ -1,6 +1,7 @@
 {
  "id": "holonut",
  "family": "Defence",
+ "world": "future",
  "stats": {
   "sun_cost": 75,
   "toughness": 2000,

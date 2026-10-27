@@ -1,6 +1,7 @@
 {
  "id": "hypnoshroom",
  "family": "Magic",
+ "world": "market",
  "stats": {
   "sun_cost": 125,
   "toughness": 50,
