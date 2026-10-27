@@ -874,6 +874,26 @@
   "offset_y": 0,
   "animations": {}
  },
+ "hud:worldmap_bg": {
+  "bundle": "rigs_WorldmapAnimate_WorldmapBG",
+  "armature": "WorldmapBG",
+  "scale": 1.046,
+  "offset_x": 0,
+  "offset_y": 0,
+  "animations": {
+   "idle": "IdleDay"
+  }
+ },
+ "hud:worldmap_swirl": {
+  "bundle": "rigs_WorldmapAnimate_WorldmapBG",
+  "armature": "rotate",
+  "scale": 0.995,
+  "offset_x": 0,
+  "offset_y": 0,
+  "animations": {
+   "idle": "IdleDay"
+  }
+ },
  "font:ui": {
   "file": "fonts/FBUSV8C5EI.ttf"
  },

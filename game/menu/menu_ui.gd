@@ -154,6 +154,8 @@ static func style_label(l: Label, size: int, color := TEXT,
 		l.add_theme_constant_override("shadow_offset_x", 0)
 		l.add_theme_constant_override("shadow_offset_y", 2)
 		l.add_theme_constant_override("shadow_outline_size", outline)
+	else:
+		l.add_theme_color_override("font_shadow_color", Color.TRANSPARENT)
 
 
 ## A window title in PVZGE's gold.
@@ -263,6 +265,24 @@ static func backdrop(color: Color) -> ColorRect:
 	r.color = color
 	r.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	r.mouse_filter = Control.MOUSE_FILTER_STOP
+	return r
+
+
+## PVZGE's world map sky, the teal swirl behind the world map and the award
+## screen, as a backdrop. Its WorldmapBG rig nests the turning swirl as a
+## child armature, drawn in teal twice over; the rig itself
+## adds the dust and darkens the top and bottom. Without the art it is a
+## flat teal.
+static func space_backdrop() -> ColorRect:
+	var r := backdrop(Color(0.01, 0.09, 0.11))
+	var swirl := RigIcon.new(&"worldmap_swirl", Vector2.ZERO)
+	swirl.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	# Twice the teal: the second copy is added onto the first.
+	swirl.modulate = Color(0, 2, 1.84)
+	r.add_child(swirl)
+	var sky := RigIcon.new(&"worldmap_bg", Vector2.ZERO)
+	sky.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	r.add_child(sky)
 	return r
 
 
