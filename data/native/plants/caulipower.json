@@ -1,6 +1,7 @@
 {
  "id": "caulipower",
  "family": "Magic",
+ "world": "market",
  "stats": {
   "sun_cost": 250,
   "toughness": 300,

@@ -1,6 +1,7 @@
 {
  "id": "witchhazel",
  "family": "Magic",
+ "world": "lod",
  "stats": {
   "sun_cost": 200,
   "toughness": 300,

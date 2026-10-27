@@ -1,6 +1,7 @@
 {
  "id": "doomshroom",
  "family": "Explosive",
+ "world": "epic",
  "stats": {
   "sun_cost": 225,
   "toughness": 300,

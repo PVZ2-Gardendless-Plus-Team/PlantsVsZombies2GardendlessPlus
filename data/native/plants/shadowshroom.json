@@ -1,6 +1,7 @@
 {
  "id": "shadowshroom",
  "family": "Shadow",
+ "world": "modern",
  "stats": {
   "sun_cost": 50,
   "toughness": 50,

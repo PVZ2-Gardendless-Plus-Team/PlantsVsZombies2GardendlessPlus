@@ -1,6 +1,7 @@
 {
  "id": "garlic",
  "family": "Poison",
+ "world": "eighties",
  "stats": {
   "sun_cost": 50,
   "toughness": 900,

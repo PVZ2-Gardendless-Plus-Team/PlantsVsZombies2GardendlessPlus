@@ -1,6 +1,7 @@
 {
  "id": "redstinger",
  "family": "Peashooter",
+ "world": "lostcity",
  "stats": {
   "sun_cost": 150,
   "toughness": 300,

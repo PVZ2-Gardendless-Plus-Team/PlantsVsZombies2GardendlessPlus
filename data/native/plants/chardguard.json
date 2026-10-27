@@ -1,6 +1,7 @@
 {
  "id": "chardguard",
  "family": "Defence",
+ "world": "ice",
  "stats": {
   "sun_cost": 75,
   "toughness": 1500,

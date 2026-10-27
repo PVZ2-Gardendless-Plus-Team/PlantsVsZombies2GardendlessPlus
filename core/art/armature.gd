@@ -331,7 +331,7 @@ func detach_slots(names: Array) -> Node2D:
 ## A slot by the name the rig gives it. Node names cannot hold '/', ':' or
 ## '.', so a slot PopCap named with one is found under the cleaned name.
 func _slot(name: StringName) -> Node2D:
-	return _slots.get(StringName(String(name).validate_node_name()))
+	return _slots.get(StringName(ArmatureBaker.node_name(name)))
 
 
 func slot_names() -> Array:

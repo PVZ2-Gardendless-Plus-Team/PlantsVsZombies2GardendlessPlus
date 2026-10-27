@@ -1,6 +1,7 @@
 {
  "id": "primalwallnut",
  "family": "Defence",
+ "world": "dino",
  "stats": {
   "sun_cost": 75,
   "toughness": 4000,

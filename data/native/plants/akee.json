@@ -1,6 +1,7 @@
 {
  "id": "akee",
  "family": "Lobber",
+ "world": "lostcity",
  "stats": {
   "sun_cost": 175,
   "toughness": 300,

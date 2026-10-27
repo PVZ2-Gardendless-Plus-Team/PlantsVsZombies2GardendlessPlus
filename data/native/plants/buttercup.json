@@ -1,6 +1,7 @@
 {
  "id": "buttercup",
  "family": "Slow",
+ "world": "epic",
  "stats": {
   "sun_cost": 25,
   "toughness": 900,

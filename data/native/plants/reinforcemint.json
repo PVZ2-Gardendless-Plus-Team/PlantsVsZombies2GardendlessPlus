@@ -1,6 +1,8 @@
 {
  "id": "reinforcemint",
  "family": "Defence",
+ "world": "mint",
+ "packet_portrait": "mint_defence",
  "stats": {
   "sun_cost": 0,
   "toughness": 300,

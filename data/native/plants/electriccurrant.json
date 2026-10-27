@@ -1,6 +1,7 @@
 {
  "id": "electriccurrant",
  "family": "Electricity",
+ "world": "epic",
  "stats": {
   "sun_cost": 150,
   "toughness": 300,

@@ -1,6 +1,7 @@
 {
  "id": "celerystalker",
  "family": "Melee",
+ "world": "eighties",
  "stats": {
   "sun_cost": 50,
   "toughness": 1200,

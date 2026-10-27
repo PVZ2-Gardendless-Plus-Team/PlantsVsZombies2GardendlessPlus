@@ -35,8 +35,13 @@ again:
 
 ```sh
 godot --headless --import
-godot --headless -s tools/bake_rigs.gd [bundle ...] [--force]
+godot --headless -s tools/bake_rigs.gd [bundle ...] [--all] [--force]
 ```
+
+With no names it bakes the bundles the game's art mappings use; `--all`
+bakes the whole build, which comes to most of a gigabyte and is not
+committed. Bundles that share one export (every world's cone uses the basic
+zombie's) are baked once and the rest get a one-line scene inheriting it.
 
 A scene whose root has `keep` ticked was edited by hand and is skipped unless
 `--force` is given. A bundle with no scenes still draws: the game converts its

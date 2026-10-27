@@ -1,6 +1,7 @@
 {
  "id": "guacodile",
  "family": "Melee",
+ "world": "beach",
  "stats": {
   "sun_cost": 125,
   "toughness": 50,

@@ -1,6 +1,7 @@
 {
  "id": "turkeypult",
  "family": "Magic",
+ "world": "lod",
  "stats": {
   "sun_cost": 150,
   "toughness": 300,

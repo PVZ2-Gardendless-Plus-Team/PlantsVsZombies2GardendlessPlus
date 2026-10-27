@@ -1,6 +1,7 @@
 {
  "id": "applemortar",
  "family": "Lobber",
+ "world": "market",
  "stats": {
   "sun_cost": 250,
   "toughness": 300,

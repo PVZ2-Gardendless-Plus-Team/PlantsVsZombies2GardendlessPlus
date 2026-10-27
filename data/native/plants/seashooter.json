@@ -1,6 +1,7 @@
 {
  "id": "seashooter",
  "family": "Peashooter",
+ "world": "epic",
  "stats": {
   "sun_cost": 275,
   "toughness": 300,

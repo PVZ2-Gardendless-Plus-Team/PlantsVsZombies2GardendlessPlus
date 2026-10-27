@@ -1,6 +1,7 @@
 {
  "id": "peacommando",
  "family": "Peashooter",
+ "world": "sky",
  "stats": {
   "sun_cost": 450,
   "toughness": 300,

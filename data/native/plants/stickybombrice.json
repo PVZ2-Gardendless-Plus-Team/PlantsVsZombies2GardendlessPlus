@@ -1,6 +1,7 @@
 {
  "id": "stickybombrice",
  "family": "Lobber",
+ "world": "epic",
  "stats": {
   "sun_cost": 225,
   "toughness": 300,

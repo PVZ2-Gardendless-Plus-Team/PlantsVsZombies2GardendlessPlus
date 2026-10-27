@@ -1,6 +1,8 @@
 {
  "id": "atombomb_seedling",
  "family": "Explosive",
+ "world": "epic",
+ "packet_portrait": "atombomb",
  "stats": {
   "sun_cost": 225,
   "toughness": 300,

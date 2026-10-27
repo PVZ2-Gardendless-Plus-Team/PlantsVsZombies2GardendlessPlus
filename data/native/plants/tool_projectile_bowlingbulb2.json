@@ -1,6 +1,7 @@
 {
  "id": "tool_projectile_bowlingbulb2",
  "family": "Nope",
+ "packet_portrait": "projectile_bowlingbulb2",
  "stats": {
   "sun_cost": 0,
   "toughness": 1,

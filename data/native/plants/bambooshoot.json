@@ -1,6 +1,7 @@
 {
  "id": "bambooshoot",
  "family": "Sharp",
+ "world": "kongfu",
  "stats": {
   "sun_cost": 175,
   "toughness": 300,

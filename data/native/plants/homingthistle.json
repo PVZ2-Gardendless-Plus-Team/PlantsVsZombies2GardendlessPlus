@@ -1,6 +1,7 @@
 {
  "id": "homingthistle",
  "family": "Sharp",
+ "world": "market",
  "stats": {
   "sun_cost": 250,
   "toughness": 300,

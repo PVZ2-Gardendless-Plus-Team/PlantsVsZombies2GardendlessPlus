@@ -1,6 +1,8 @@
 {
  "id": "hollyknight",
  "family": "Defence",
+ "world": "epic",
+ "packet_portrait": "hollybarrier",
  "stats": {
   "sun_cost": 150,
   "toughness": 2500,

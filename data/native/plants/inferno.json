@@ -1,6 +1,7 @@
 {
  "id": "inferno",
  "family": "Fire",
+ "world": "epic",
  "stats": {
   "sun_cost": 200,
   "toughness": 300,

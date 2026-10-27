@@ -1,6 +1,7 @@
 {
  "id": "gumnut",
  "family": "Defence",
+ "world": "epic",
  "stats": {
   "sun_cost": 125,
   "toughness": 450,

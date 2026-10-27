@@ -1,6 +1,7 @@
 {
  "id": "jackolantern",
  "family": "Fire",
+ "world": "market",
  "stats": {
   "sun_cost": 225,
   "toughness": 300,

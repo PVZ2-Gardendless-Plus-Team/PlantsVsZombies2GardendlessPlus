@@ -1,6 +1,7 @@
 {
  "id": "stunion",
  "family": "Slow",
+ "world": "ice",
  "stats": {
   "sun_cost": 25,
   "toughness": 300,

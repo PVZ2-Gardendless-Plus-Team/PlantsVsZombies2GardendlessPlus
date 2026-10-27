@@ -1,6 +1,7 @@
 {
  "id": "gravebuster",
  "family": "Slow",
+ "world": "egypt",
  "stats": {
   "sun_cost": 0,
   "toughness": 300,

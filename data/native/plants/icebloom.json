@@ -1,6 +1,7 @@
 {
  "id": "icebloom",
  "family": "Cold",
+ "world": "epic",
  "stats": {
   "sun_cost": 200,
   "toughness": 300,

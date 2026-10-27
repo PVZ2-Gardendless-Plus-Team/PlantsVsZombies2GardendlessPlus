@@ -1,6 +1,7 @@
 {
  "id": "peashooter",
  "family": "Peashooter",
+ "world": "frontyard",
  "stats": {
   "sun_cost": 100,
   "toughness": 300,

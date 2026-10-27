@@ -14,6 +14,13 @@ extends EntityDef
 @export_group("Classification")
 ## PopCap's Family: Peashooter, Sun, Defence, Lobber, Melee, Explosive, ...
 @export var family: StringName = &""
+## The world PVZGE files the plant under (`frontyard`, `egypt`, `market`, ...).
+## It picks the seed packet's backing; empty gets the plain one.
+@export var world: StringName = &""
+
+@export_group("Seed packet")
+## The picture on the packet, when it is not named after the plant.
+@export var packet_portrait: StringName = &""
 
 
 func stat(name: StringName, fallback: Variant = 0.0) -> Variant:
@@ -50,3 +57,5 @@ func _copy_stats_to(target: EntityDef) -> void:
 		target.cooldown_from = cooldown_from
 		target.beghouled_cost = beghouled_cost
 		target.family = family
+		target.world = world
+		target.packet_portrait = packet_portrait

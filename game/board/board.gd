@@ -1474,7 +1474,7 @@ func drop_sun(at: Vector2) -> void:
 	var s := _add_sun_token(at, ground)
 	# PVZGE's produceSun: a random sideways drift of up to 3 and an upward
 	# speed of 10, from a little above the ground.
-	var unit := _original_unit()
+	var unit := original_unit()
 	s.toss(ground, 50.0, Vector2(randf_range(-3.0, 3.0) * DROP_SPEED * unit.x,
 			10.0 * DROP_SPEED * unit.y), DROP_GRAVITY * unit.y)
 
@@ -1483,14 +1483,14 @@ func drop_sun(at: Vector2) -> void:
 ## along `direction` and lands on the ground at `ground_y`, the plant's feet.
 func pop_sun(from: Vector2, ground_y: float, direction: Vector2) -> void:
 	var s := _add_sun_token(from, ground_y)
-	var unit := _original_unit()
+	var unit := original_unit()
 	var v := direction.normalized() * randf_range(7.0, 13.0) * DROP_SPEED
 	s.toss(ground_y, ground_y - from.y, Vector2(v.x * unit.x, v.y * unit.y),
 			DROP_GRAVITY * unit.y)
 
 
 ## One of PVZGE's world units, in board pixels, on each axis.
-func _original_unit() -> Vector2:
+func original_unit() -> Vector2:
 	return cell_size / LawnScenery.SQUARE_SIZE
 
 

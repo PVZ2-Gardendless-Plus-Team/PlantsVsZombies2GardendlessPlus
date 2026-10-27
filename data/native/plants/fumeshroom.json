@@ -1,6 +1,7 @@
 {
  "id": "fumeshroom",
  "family": "Poison",
+ "world": "dark",
  "stats": {
   "sun_cost": 125,
   "toughness": 300,

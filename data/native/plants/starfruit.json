@@ -1,6 +1,7 @@
 {
  "id": "starfruit",
  "family": "Peashooter",
+ "world": "market",
  "stats": {
   "sun_cost": 150,
   "toughness": 300,

@@ -1,6 +1,7 @@
 {
  "id": "shrinkingviolet",
  "family": "Magic",
+ "world": "market",
  "stats": {
   "sun_cost": 50,
   "toughness": 300,

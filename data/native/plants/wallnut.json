@@ -1,6 +1,7 @@
 {
  "id": "wallnut",
  "family": "Defence",
+ "world": "frontyard",
  "stats": {
   "sun_cost": 50,
   "toughness": 4000,

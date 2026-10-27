@@ -1,6 +1,7 @@
 {
  "id": "pineapple",
  "family": "Defence",
+ "world": "sky",
  "stats": {
   "sun_cost": 125,
   "toughness": 6000,

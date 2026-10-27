@@ -1,6 +1,8 @@
 {
  "id": "gatling",
  "family": "Peashooter",
+ "world": "epic",
+ "packet_portrait": "gatlingpea",
  "stats": {
   "sun_cost": 450,
   "toughness": 300,

@@ -1,6 +1,7 @@
 {
  "id": "turnip",
  "family": "Defence",
+ "world": "kongfu",
  "stats": {
   "sun_cost": 50,
   "toughness": 2000,

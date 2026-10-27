@@ -1,6 +1,7 @@
 {
  "id": "melonpult",
  "family": "Lobber",
+ "world": "cowboy",
  "stats": {
   "sun_cost": 325,
   "toughness": 300,

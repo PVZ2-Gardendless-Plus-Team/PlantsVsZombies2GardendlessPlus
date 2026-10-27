@@ -1,6 +1,8 @@
 {
  "id": "powerplant",
  "family": "Nope",
+ "world": "future",
+ "packet_portrait": "powerplant_epsilon",
  "stats": {
   "sun_cost": 250,
   "toughness": 3000,

@@ -1,6 +1,8 @@
 {
  "id": "empea",
  "family": "Electricity",
+ "world": "future",
+ "packet_portrait": "empeach",
  "stats": {
   "sun_cost": 25,
   "toughness": 2000,

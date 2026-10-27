@@ -1,6 +1,7 @@
 {
  "id": "pepperpult",
  "family": "Fire",
+ "world": "ice",
  "stats": {
   "sun_cost": 200,
   "toughness": 300,

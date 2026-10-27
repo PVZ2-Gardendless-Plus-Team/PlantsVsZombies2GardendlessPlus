@@ -1,6 +1,7 @@
 {
  "id": "anthurium",
  "family": "Electricity",
+ "world": "sky",
  "stats": {
   "sun_cost": 150,
   "toughness": 300,

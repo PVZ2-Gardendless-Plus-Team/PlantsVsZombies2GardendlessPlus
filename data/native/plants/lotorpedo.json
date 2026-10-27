@@ -1,6 +1,7 @@
 {
  "id": "lotorpedo",
  "family": "Lobber",
+ "world": "epic",
  "stats": {
   "sun_cost": 325,
   "toughness": 300,

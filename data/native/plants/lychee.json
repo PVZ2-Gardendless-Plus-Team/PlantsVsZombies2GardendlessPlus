@@ -1,6 +1,7 @@
 {
  "id": "lychee",
  "family": "Defence",
+ "world": "kongfu",
  "stats": {
   "sun_cost": 150,
   "toughness": 3000,

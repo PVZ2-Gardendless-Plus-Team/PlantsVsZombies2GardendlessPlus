@@ -1,6 +1,7 @@
 {
  "id": "meteorflower",
  "family": "Fire",
+ "world": "epic",
  "stats": {
   "sun_cost": 250,
   "toughness": 300,

@@ -1,6 +1,7 @@
 {
  "id": "phatbeet_rhythm",
  "family": "Melee",
+ "packet_portrait": "phatbeet",
  "stats": {
   "sun_cost": 150,
   "toughness": 300,

@@ -1,6 +1,7 @@
 {
  "id": "torchwood",
  "family": "Peashooter",
+ "world": "epic",
  "stats": {
   "sun_cost": 175,
   "toughness": 2000,

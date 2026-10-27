@@ -1,6 +1,8 @@
 {
  "id": "pvine",
  "family": "Peashooter",
+ "world": "epic",
+ "packet_portrait": "peavine",
  "stats": {
   "sun_cost": 125,
   "toughness": 300,

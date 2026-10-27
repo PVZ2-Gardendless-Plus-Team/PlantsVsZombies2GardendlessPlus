@@ -1,6 +1,7 @@
 {
  "id": "hollybarrierleafplantfood",
  "family": "Defence",
+ "packet_portrait": "hollyleaf_pf",
  "stats": {
   "sun_cost": 75,
   "toughness": 2500,

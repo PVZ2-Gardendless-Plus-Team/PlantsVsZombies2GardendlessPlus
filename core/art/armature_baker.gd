@@ -59,7 +59,6 @@ var iks: Array[Dictionary] = []
 var frame_rate: float = 30.0
 
 var _armature: Dictionary = {}
-var _set: ArmatureSet = null
 var _sockets: Dictionary = {}
 ## bone index -> the IK constraints rooted on it, solved as soon as it is.
 var _ik_by_root: Dictionary = {}
@@ -84,7 +83,6 @@ var _reorders: bool = false
 ## asked for or not, so a baked scene carries all of them.
 func _init(source: ArmatureSet, armature_name: StringName,
 		sockets: Dictionary = {}) -> void:
-	_set = source
 	_sockets = sockets
 	_armature = source.armature(armature_name)
 	frame_rate = float(_armature.get("frameRate", source.frame_rate))
@@ -92,7 +90,9 @@ func _init(source: ArmatureSet, armature_name: StringName,
 		frame_rate = source.frame_rate
 	_read_bones()
 	_read_iks()
-	_read_slots()
+	# The set is only asked which pictures exist, and not kept: it holds
+	# this baker in turn, and the pair would never be freed.
+	_read_slots(source)
 	_find_animated()
 
 
@@ -187,7 +187,7 @@ func _read_iks() -> void:
 		(_ik_by_root[root] as Array).append(iks.size() - 1)
 
 
-func _read_slots() -> void:
+func _read_slots(source: ArmatureSet) -> void:
 	var skins := _armature.get("skin", []) as Array
 	var displays := {}
 	if not skins.is_empty():
@@ -208,7 +208,7 @@ func _read_slots() -> void:
 		var choices: Array = []
 		var any := false
 		for display in options:
-			var choice := _read_display(display, name)
+			var choice := _read_display(source, display, name)
 			if not choice.is_empty():
 				any = true
 			choices.append(choice)
@@ -218,7 +218,7 @@ func _read_slots() -> void:
 		slots.append({
 			# The node's name, which is what tracks address. Godot refuses
 			# '/', ':' and '.' in one, and PopCap names a slot "sun/sun_changing".
-			"name": StringName(String(name).validate_node_name()),
+			"name": StringName(node_name(name)),
 			"bone": int(bone_index.get(StringName(entry.get("parent", "")), -1)),
 			"displays": choices,
 			"display": int(entry.get("displayIndex", 0)),
@@ -252,11 +252,11 @@ func _read_slots() -> void:
 
 ## The marker node a socket bone becomes.
 static func socket_node_name(bone: StringName) -> StringName:
-	return StringName(("Socket_%s" % bone).validate_node_name())
+	return StringName(node_name("Socket_%s" % bone))
 
 
 ## One display a slot can show, or {} when it has nothing drawable.
-func _read_display(display: Variant, slot: StringName) -> Dictionary:
+func _read_display(source: ArmatureSet, display: Variant, slot: StringName) -> Dictionary:
 	if not (display is Dictionary):
 		return {}
 	var kind := String(display.get("type", "image"))
@@ -266,7 +266,7 @@ func _read_display(display: Variant, slot: StringName) -> Dictionary:
 	var path := StringName(display.get("path", display.get("name", "")))
 	match kind:
 		"armature":
-			if _set.has_armature(path) and path != StringName(_armature.get("name", "")):
+			if source.has_armature(path) and path != StringName(_armature.get("name", "")):
 				return {"armature": path, "xform": xform, "name": StringName(display.get("name", ""))}
 			return {}
 		"mesh":
@@ -274,12 +274,12 @@ func _read_display(display: Variant, slot: StringName) -> Dictionary:
 				push_warning("armature: skinned mesh '%s' in slot '%s' is not supported"
 						% [path, slot])
 				return {}
-			var region := _set.region(path)
+			var region := source.region(path)
 			if region == null:
 				return {}
 			return {"region": path, "xform": xform, "name": StringName(display.get("name", "")),
 					"mesh": _read_mesh(display, region)}
-	if _set.region(path) == null:
+	if source.region(path) == null:
 		return {}
 	return {"region": path, "xform": xform, "name": StringName(display.get("name", ""))}
 
@@ -639,7 +639,7 @@ func _bake_one(source: Dictionary) -> Animation:
 			var values: Array = []
 			for row in sampled:
 				values.append(_component(row[slot_index_], property))
-			_add_track(animation, "%s:%s" % [name, property], values)
+			_add_track(animation, "%s:%s" % [node_name(name), property], values)
 
 	for index in _display_slots:
 		var slot: Dictionary = slots[index]
@@ -655,7 +655,7 @@ func _bake_one(source: Dictionary) -> Animation:
 		var values: Array = []
 		for frame in range(frames + 1):
 			values.append(_sample(line, float(frame) / frame_rate, slot["color"]))
-		_add_track(animation, "%s:modulate" % slot["name"], values)
+		_add_track(animation, "%s:modulate" % node_name(slot["name"]), values)
 
 	var deforms := _read_ffd_timelines(source)
 	for which in _mesh_displays:
@@ -820,6 +820,10 @@ static func _draw_order_of(declared: Array, pairs: Variant) -> Array:
 ## anything a screen shows at the 0.512 the lawn draws rigs at, and it keeps
 ## a baked rig small enough to commit - most of a walk is straight lines
 ## between DragonBones' own keys.
+## Whether to drop keys within TOLERANCE. `tools/bake_rigs.gd` turns it on;
+## it triples conversion time, which a rig converted at load time would pay
+## as a hitch.
+static var compact: bool = false
 const TOLERANCE := {
 	"position": 0.01,
 	"rotation": 0.0005,
@@ -829,8 +833,8 @@ const TOLERANCE := {
 }
 
 
-## Writes one property's samples as a track, keeping only the keys linear
-## interpolation cannot reproduce: a run of samples that lies on the line
+## Writes one property's samples as a track. When `compact`, it keeps only
+## the keys linear interpolation cannot reproduce: a run of samples that lies on the line
 ## between its ends, to within TOLERANCE, keeps just the ends. A hold stays a
 ## hold, since a flat run is a line too.
 ##
@@ -848,6 +852,18 @@ func _add_track(animation: Animation, path: String, values: Array) -> void:
 	animation.track_set_interpolation_type(track,
 			Animation.INTERPOLATION_LINEAR_ANGLE if angle
 			else Animation.INTERPOLATION_LINEAR)
+	if not compact:
+		# Converting at load time keeps every key that differs from a
+		# neighbour: dropping more is worth its cost only for a saved scene.
+		for k in values.size():
+			var keep := k == 0
+			if not keep and k < values.size() - 1:
+				keep = not _same(values[k], values[k - 1]) or not _same(values[k], values[k + 1])
+			elif not keep:
+				keep = not _same(values[k], values[k - 1])
+			if keep:
+				animation.track_insert_key(track, float(k) / frame_rate, values[k])
+		return
 	var tolerance := float(TOLERANCE.get(property, 0.0))
 	var kept: Array = [0]
 	var anchor := 0
@@ -909,6 +925,13 @@ func _same_within(a: Variant, b: Variant, tolerance: float, angle: bool) -> bool
 	if angle:
 		return absf(angle_difference(float(a), float(b))) <= tolerance
 	return absf(float(a) - float(b)) <= tolerance
+
+
+## The node a slot becomes. Slot names are free text and some carry a path
+## separator (the sun's "sun/sun_changing"), which Godot strips from a node
+## name; a track keyed on the raw name would then point at nothing.
+static func node_name(slot_name: String) -> String:
+	return slot_name.validate_node_name()
 
 
 ## A track that switches rather than blends: which picture a slot shows.

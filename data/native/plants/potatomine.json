@@ -1,6 +1,7 @@
 {
  "id": "potatomine",
  "family": "Explosive",
+ "world": "frontyard",
  "stats": {
   "sun_cost": 25,
   "toughness": 300,

@@ -1,6 +1,7 @@
 {
  "id": "sunshroom",
  "family": "Sun",
+ "world": "dark",
  "stats": {
   "sun_cost": 25,
   "toughness": 300,

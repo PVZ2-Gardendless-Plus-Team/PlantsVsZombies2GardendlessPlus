@@ -1,6 +1,7 @@
 {
  "id": "chomper",
  "family": "Melee",
+ "world": "market",
  "stats": {
   "sun_cost": 150,
   "toughness": 300,

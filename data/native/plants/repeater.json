@@ -1,6 +1,7 @@
 {
  "id": "repeater",
  "family": "Peashooter",
+ "world": "egypt",
  "stats": {
   "sun_cost": 200,
   "toughness": 300,

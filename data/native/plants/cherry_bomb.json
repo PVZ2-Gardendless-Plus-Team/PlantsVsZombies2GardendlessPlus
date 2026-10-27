@@ -1,6 +1,8 @@
 {
  "id": "cherry_bomb",
  "family": "Explosive",
+ "world": "pirate",
+ "packet_portrait": "cherribomb",
  "stats": {
   "sun_cost": 150,
   "toughness": 300,

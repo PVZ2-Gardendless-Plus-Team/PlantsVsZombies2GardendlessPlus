@@ -1,6 +1,7 @@
 {
  "id": "snowpea",
  "family": "Cold",
+ "world": "kongfu",
  "stats": {
   "sun_cost": 150,
   "toughness": 300,

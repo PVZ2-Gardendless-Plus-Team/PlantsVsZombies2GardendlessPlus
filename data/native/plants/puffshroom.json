@@ -1,6 +1,7 @@
 {
  "id": "puffshroom",
  "family": "Poison",
+ "world": "dark",
  "stats": {
   "sun_cost": 0,
   "toughness": 150,

@@ -1,5 +1,5 @@
 {
- "//": "Scenery and HUD art, keyed <kind>:<id> like tutorial.json. `lawn:<stage>` names the stage's lawn rigs: `back` draws under everything, `there` over the ground but under the characters (PVZGE's FrontYard/upper, its lawnThereUpper: the far fence, mailbox and street), and `front` over the characters (PVZGE's LawnCommon/LawnUpper, its lawnUpper), placed where the original placed its lawn relative to the grid. `open_rows` picks the tutorial lawn's sod animation by how many lanes are open. `mower:<id>`, `collectable:<id>`, `effect:<id>` and `hud:<id>` are single rigs with an explicit scale and offset, sized from the original's own scale times the port's cell-to-square ratio. A mod reskins any of them by shipping an entry with the same key.",
+ "//": "Scenery and HUD art, keyed <kind>:<id> like tutorial.json. `lawn:<stage>` names the stage's lawn rigs: `back` draws under everything, `there` over the ground but under the characters (PVZGE's FrontYard/upper, its lawnThereUpper: the far fence, mailbox and street), and `front` over the characters (PVZGE's LawnCommon/LawnUpper, its lawnUpper), placed where the original placed its lawn relative to the grid. `open_rows` picks the tutorial lawn's sod animation by how many lanes are open. `mower:<id>`, `collectable:<id>`, `effect:<id>` and `hud:<id>` are single rigs with an explicit scale and offset, sized from the original's own scale times the port's cell-to-square ratio. `font:ui` is the text font, a file under art/. A mod reskins any of them by shipping an entry with the same key.",
  "lawn:AbbotStage": {
   "bundle": "lawns_KongfuLAWN",
   "back": [
@@ -864,7 +864,9 @@
  },
  "hud:seed_packet": {
   "bundle": "rigs_SeedPacker_Card",
-  "background": "bk_modernday",
   "portraits": {}
+ },
+ "font:ui": {
+  "file": "fonts/FBUSV8C5EI.ttf"
  }
 }

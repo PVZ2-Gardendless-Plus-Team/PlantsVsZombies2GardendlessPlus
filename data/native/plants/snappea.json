@@ -1,6 +1,7 @@
 {
  "id": "snappea",
  "family": "Melee",
+ "world": "lod",
  "stats": {
   "sun_cost": 200,
   "toughness": 300,

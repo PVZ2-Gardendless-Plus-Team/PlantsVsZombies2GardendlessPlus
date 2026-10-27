@@ -1,6 +1,8 @@
 {
  "id": "spearmint",
  "family": "Sharp",
+ "world": "mint",
+ "packet_portrait": "mint_sharp",
  "stats": {
   "sun_cost": 0,
   "toughness": 300,

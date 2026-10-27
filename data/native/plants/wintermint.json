@@ -1,6 +1,8 @@
 {
  "id": "wintermint",
  "family": "Cold",
+ "world": "mint",
+ "packet_portrait": "mint_cold",
  "stats": {
   "sun_cost": 0,
   "toughness": 300,

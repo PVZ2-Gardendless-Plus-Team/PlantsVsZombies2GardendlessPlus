@@ -48,6 +48,7 @@ func _run() -> void:
 	_test_tutorial_levels_playable()
 	await _test_seed_cooldowns()
 	await _test_armor_visual_state()
+	await _test_dropped_head()
 	await _test_armed_mine_is_not_food()
 	await _test_sun_expires()
 	await _test_mowers()
@@ -932,6 +933,33 @@ func _test_armor_visual_state() -> void:
 		armored.take_damage(600.0)
 		check("armor breaks", not armor.is_intact())
 		check("armored tag cleared on break", not armored.has_tag(&"armored"))
+	board.queue_free()
+
+
+func _test_dropped_head() -> void:
+	print("\n[dropped head]")
+	var board := _make_board()
+	var zombie := board.spawn_zombie(&"tutorial", 2)
+	if zombie.art == null:
+		board.queue_free()
+		return
+	var feet := zombie.position.y + zombie.art.position.y
+	zombie.take_damage(zombie.max_health * 10.0)
+	# The arm comes off on the way down too; the head goes last.
+	var pieces := board.find_children("*", "DetachedLimb", false, false)
+	check_eq("a dying zombie drops its arm and head", pieces.size(), 2)
+	if not pieces.is_empty():
+		var head: DetachedLimb = pieces.back()
+		# PVZGE drops it from where the head was, turning about its own middle,
+		# so it starts well up off the floor - not at the zombie's feet.
+		check("the head starts where the head was", head.height > 40.0,
+				"%.1f" % head.height)
+		check_eq("onto the lane's floor", head.floor_y, feet)
+		await _wait_game_seconds(0.6)
+		if is_instance_valid(head):
+			check("and comes to rest on the floor, not in the air",
+					absf(head.position.y - (feet - head._rest_height)) < 0.5,
+					"%.1f vs %.1f" % [head.position.y, feet])
 	board.queue_free()
 
 
@@ -2806,6 +2834,23 @@ func _test_art() -> void:
 	check("baking happens once per rig",
 			rig.animations(&"BasicZombie") == library)
 
+	# Every track lands on a node, even for a slot whose name carries a "/"
+	# that Godot strips from node names (the sun's "sun/sun_changing").
+	var sun := Art.make(&"collectable", &"sun")
+	check("the sun has a rig", sun != null)
+	if sun != null:
+		var player: AnimationPlayer = sun.get_node(^"Animations")
+		var unresolved: Array = []
+		for anim_name in player.get_animation_list():
+			var anim := player.get_animation(anim_name)
+			for track in anim.get_track_count():
+				var path := anim.track_get_path(track)
+				if sun.get_node_or_null(NodePath(path.get_concatenated_names())) == null:
+					unresolved.append(str(path))
+		check("every sun track finds its node", unresolved.is_empty(),
+				str(unresolved.slice(0, 3)))
+		sun.free()
+
 	# The rig's limbs are posed by IK, and its slots animate as well as move.
 	var baker := rig.rig(&"BasicZombie")
 	check_eq("the zombie's legs and arms are IK chains", baker.iks.size(), 4)
@@ -2935,7 +2980,8 @@ func _test_rig_scenes() -> void:
 		end_section()
 		return
 	# Each rig the game maps draws the same from its baked scene as from its
-	# DragonBones export: same slots, same pose at every sampled moment.
+	# DragonBones export: same slots, same pose at every sampled moment, to
+	# within the keys a bake leaves out.
 	var compared := 0
 	var mismatched: Array = []
 	for key in ["plant:peashooter", "plant:sunflower", "plant:wallnut",
@@ -2962,7 +3008,10 @@ func _test_rig_scenes() -> void:
 				for slot in built.slot_names():
 					var a: Node2D = baked._slots[slot]
 					var b: Node2D = built._slots[slot]
-					if not a.transform.is_equal_approx(b.transform) \
+					# Within the keys a bake drops (ArmatureBaker.TOLERANCE).
+					if a.position.distance_to(b.position) > 0.05 \
+							or absf(angle_difference(a.rotation, b.rotation)) > 0.002 \
+							or (a.scale - b.scale).length() > 0.002 \
 							or a.visible != b.visible \
 							or (a is RigSlot and (a as RigSlot).display != (b as RigSlot).display):
 						mismatched.append("%s %s@%.2f %s" % [key, anim, at, slot])
