@@ -310,9 +310,29 @@ func detach_slots(names: Array) -> Node2D:
 			continue
 		var where := node.transform
 		var index := node.get_index()
+		# Save the display value so the rig's current or upcoming animation
+		# does not wipe it when it keys the slot name (the stand-in takes the
+		# track, but being explicit keeps the detached node safe too).
+		var saved_display := 0
+		if "display" in node:
+			saved_display = node.display
 		remove_child(node)
 		freed.add_child(node)
 		node.transform = where
+		# Restore the display so the slot shows picture 0 on the detached limb.
+		if "display" in node:
+			node.display = saved_display
+		# Debug: log detached slot state for troubleshooting.
+		if OS.is_debug_build():
+			var children := node.get_children()
+			var sprite_count := 0
+			var tex_info := ""
+			for c in children:
+				if c is Sprite2D and c.texture != null:
+					sprite_count += 1
+					tex_info += " %s(%s)" % [c.name, c.texture.resource_path]
+			print("[detach_slots] %s: display=%d, children=%d%s" % [
+				node.name, node.display if "display" in node else -1, children.size(), tex_info])
 		_slots.erase(StringName(node.name))
 		# An empty stand-in keeps the name, so the rig's animations still
 		# find a node to key and do not complain about the missing limb.
