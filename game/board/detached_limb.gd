@@ -62,6 +62,14 @@ static func drop(piece: Node2D, into: Node2D, toward: int, floor_y: float,
 	limb.height = floor_y - middle.y
 	limb.unit = unit
 	limb._rest_height = REST_HALF_HEIGHT * absf(rig_scale)
+	# Debug: verify the piece has visible sprites to draw.
+	if OS.is_debug_build():
+		var vis := 0
+		for s in piece.find_children("*", "Sprite2D", true, false):
+			var sp := s as Sprite2D
+			if sp.texture != null and sp.visible:
+				vis += 1
+		print("[DetachedLimb.drop] %s: visible_sprites=%d" % [piece.name, vis])
 	# PVZGE's default direction, (5 - 10r, 15), at 0.55 and +-10%.
 	var across := 5.0 - 10.0 * randf()
 	if toward != 0:
