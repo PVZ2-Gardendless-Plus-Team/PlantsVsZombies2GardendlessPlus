@@ -170,6 +170,12 @@ func remember_seed_choice(seeds: Array) -> void:
 func is_plant_unlocked(plant_id: StringName) -> bool:
 	if Settings.get_value(&"unlock_all_plants"):
 		return true
+	return owns_plant(plant_id)
+
+
+## `is_plant_unlocked` without the testing setting: whether the player truly
+## has the plant, so the store knows what it may still sell.
+func owns_plant(plant_id: StringName) -> bool:
 	if (_progress.get("plants", {}) as Dictionary).has(String(plant_id)):
 		return true
 	if base_unlocked_plants().has(plant_id):
