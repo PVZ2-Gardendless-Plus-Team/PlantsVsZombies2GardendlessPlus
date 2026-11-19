@@ -34,6 +34,15 @@ var portals: Dictionary = {}      ## StringName -> Dictionary (raw)
 ## Seed chooser defaults: slot counts and the order plants are listed in. Each
 ## source's `seed_chooser.json` overrides the keys it sets.
 var seed_chooser: Dictionary = {}
+## The store's tabs and wares, by id (`store.json`). A source's entry with an
+## id already loaded replaces it, so a pack can reprice or restock the store.
+var store_pages: Dictionary = {}  ## StringName -> Dictionary (raw)
+var store_items: Dictionary = {}  ## StringName -> Dictionary (raw), in load order
+## Feature -> the level whose clear opens it (`features.json`).
+var feature_gates: Dictionary = {}
+## Drop tables (`loot.json`): what a zombie, a won level's mowers and a
+## coin-producing plant hand out. A source replaces the top-level keys it sets.
+var loot: Dictionary = {}
 
 var _mod_order: Array[StringName] = [&"base"]
 var _errors: Array[String] = []
@@ -48,6 +57,10 @@ func load_all() -> void:
 			archetypes, levels, campaigns, lawns, speakers, dinos, portals]:
 		pool.clear()
 	seed_chooser.clear()
+	store_pages.clear()
+	store_items.clear()
+	feature_gates.clear()
+	loot.clear()
 	_errors.clear()
 	_mod_order = [&"base"]
 
@@ -89,6 +102,9 @@ func _load_source(root: String, mod: StringName) -> void:
 	_load_dir(root.path_join("portals"), portals, mod)
 	_load_campaigns(root.path_join("campaigns"), mod)
 	_load_seed_chooser(root.path_join("seed_chooser.json"))
+	_load_store(root.path_join("store.json"), mod)
+	_load_feature_gates(root.path_join("features.json"))
+	_load_loot(root.path_join("loot.json"))
 
 
 func _load_seed_chooser(path: String) -> void:
@@ -97,6 +113,50 @@ func _load_seed_chooser(path: String) -> void:
 	var parsed = _read_json(path)
 	if parsed is Dictionary:
 		seed_chooser.merge(parsed, true)
+	else:
+		_errors.append("%s: not a JSON object" % path)
+
+
+## `store.json`: `pages` and `items`, each a list of objects with an `id`.
+func _load_store(path: String, mod: StringName) -> void:
+	if not FileAccess.file_exists(path):
+		return
+	var parsed = _read_json(path)
+	if not (parsed is Dictionary):
+		_errors.append("%s: not a JSON object" % path)
+		return
+	for page in (parsed.get("pages", []) as Array):
+		if page is Dictionary and page.has("id"):
+			store_pages[StringName(page["id"])] = page
+	for item in (parsed.get("items", []) as Array):
+		if not (item is Dictionary and item.has("id")):
+			_errors.append("%s: a store item has no id" % path)
+			continue
+		var entry: Dictionary = item.duplicate()
+		entry["__mod"] = mod
+		store_items[StringName(item["id"])] = entry
+	for id in (parsed.get("remove", []) as Array):
+		store_items.erase(StringName(id))
+
+
+func _load_feature_gates(path: String) -> void:
+	if not FileAccess.file_exists(path):
+		return
+	var parsed = _read_json(path)
+	if parsed is Dictionary:
+		for key in parsed:
+			if not String(key).begins_with("//"):
+				feature_gates[String(key)] = parsed[key]
+	else:
+		_errors.append("%s: not a JSON object" % path)
+
+
+func _load_loot(path: String) -> void:
+	if not FileAccess.file_exists(path):
+		return
+	var parsed = _read_json(path)
+	if parsed is Dictionary:
+		loot.merge(parsed, true)
 	else:
 		_errors.append("%s: not a JSON object" % path)
 
@@ -389,6 +449,11 @@ func portal(id: StringName) -> Dictionary:
 
 func seed_chooser_config() -> Dictionary:
 	return seed_chooser
+
+
+## Feature id -> the level whose clear opens it.
+func feature_levels() -> Dictionary:
+	return feature_gates
 
 
 func campaign(id: StringName) -> CampaignDef:
