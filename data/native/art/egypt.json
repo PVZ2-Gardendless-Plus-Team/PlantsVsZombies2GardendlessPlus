@@ -1,0 +1,16 @@
+{
+ "//": "Entity art for Ancient Egypt, in the same form as tutorial.json.",
+ "plant:gravebuster": {
+  "bundle": "plants_GraveBusterPLANT",
+  "armature": "GraveBuster",
+  "scale": 0.512,
+  "//": "The GraveBusterPLANT prefab sets its Body 3.652 rig units right of the root, and turns its shade off (useShade false).",
+  "offset_x": 1.87,
+  "offset_y": 9.7,
+  "animations": {
+   "idle": "Idle",
+   "spawn": "Spawn",
+   "busting": "Busting"
+  }
+ }
+}

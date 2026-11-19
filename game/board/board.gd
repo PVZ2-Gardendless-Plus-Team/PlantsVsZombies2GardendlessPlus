@@ -942,12 +942,13 @@ func remove_object(row: int, col: int) -> void:
 	_objects.erase(Vector2i(col, row))
 
 
-## Living gravestones in one row, nearest the house first.
+## Living gravestones in one row, nearest the house first. One a grave buster
+## has sunk out of sight is left out, as PVZGE skips a hidden tombstone.
 func graves_in_row(row: int) -> Array:
 	var out: Array = []
 	for c in cols:
 		var o := object_at(row, c)
-		if o is Grave:
+		if o is Grave and not o.sunk:
 			out.append(o)
 	return out
 
