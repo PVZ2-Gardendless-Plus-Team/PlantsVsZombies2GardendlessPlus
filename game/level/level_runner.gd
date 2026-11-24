@@ -320,6 +320,7 @@ func _build_minigames() -> void:
 		m.queue_free()
 	minigames.clear()
 	board.click_handlers.clear()
+	board.house_handlers.clear()
 	for spec in (level.get("minigames", []) as Array):
 		if not (spec is Dictionary):
 			continue
@@ -331,6 +332,7 @@ func _build_minigames() -> void:
 		game.progress_changed.connect(func(_m): minigames_changed.emit(minigames))
 		board.placement_checks.append(game.placement_refusal)
 		board.click_handlers.append(game.handle_click)
+		board.house_handlers.append(game.handle_zombie_at_house)
 		game.setup()
 	minigames_changed.emit(minigames)
 

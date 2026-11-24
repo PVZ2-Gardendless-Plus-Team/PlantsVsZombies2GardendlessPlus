@@ -138,6 +138,9 @@ var placement_checks: Array[Callable] = []
 ## to consume the click: breaking a vase, swapping two matching plants. Asked
 ## before anything else a click could do with an empty hand.
 var click_handlers: Array[Callable] = []
+## Asked first when a zombie reaches the house, as (zombie) -> bool; true
+## means the zombie was dealt with. An I, Zombie level's brains live here.
+var house_handlers: Array[Callable] = []
 
 ## Lanes the player may plant in, 0-based. Empty means every lane is open.
 ## Tutorial 1 uses this to confine the player to a single lane.
@@ -678,12 +681,12 @@ func placement_refusal(kind: StringName, id: StringName, row: int, col: int) -> 
 		return "out of bounds"
 	if not is_row_plantable(row):
 		return "lane is closed"
-	if kind == &"zombie":
-		return ""
 	for check in placement_checks:
 		var why: String = check.call(kind, id, row, col)
 		if why != "":
 			return why
+	if kind == &"zombie":
+		return ""
 
 	var plant_def := Data.plant(id)
 	var item := object_at(row, col)
@@ -1444,6 +1447,9 @@ func quietest_row(candidates: Array) -> int:
 func _on_zombie_reached_house(who: Zombie) -> void:
 	zombie_reached_house.emit(who)
 
+	for handler in house_handlers:
+		if handler.call(who):
+			return
 	# The world gets first refusal: a lawn with its own threshold rule - house
 	# health instead of mowers, say - consumes the zombie here.
 	for c in lawn_components:

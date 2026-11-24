@@ -1,0 +1,39 @@
+{
+ "id": "izombie_3",
+ "name": "Can You Dig It?",
+ "number": 3,
+ "stage": "ModernStage",
+ "custom": true,
+ "minigames": [
+  {
+   "type": "izombie",
+   "starting_sun": 200,
+   "place_column": 5,
+   "plant_columns": 4,
+   "zombies": [
+    "tutorial",
+    "tutorial_armor1",
+    "tutorial_armor2",
+    "tutorial_armor4",
+    "tutorial_imp",
+    {
+     "type": "tutorial_gargantuar",
+     "cost": 300
+    }
+   ],
+   "plant_pool": [
+    "sunflower",
+    "sunflower",
+    "peashooter",
+    "repeater",
+    "threepeater",
+    "wallnut",
+    "squash",
+    "chomper",
+    "spikeweed",
+    "snowpea"
+   ]
+  }
+ ],
+ "waves": []
+}

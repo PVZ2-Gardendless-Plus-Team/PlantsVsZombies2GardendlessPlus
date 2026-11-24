@@ -966,6 +966,7 @@ the level and configured from data like an objective:
 | `fight_alone` | `position`, `plant_upgrade_list` | one plant only; the damage it deals grows it into the next on the list |
 | `sun_bomb` | `zombie_damage`, `zombie_bomb_explosion_radius`, `plant_damage`, `plant_bomb_explosion_radius` | the sky drops sun bombs instead of sun |
 | `rhythm` | `target_column`, `zombies`, `music_name`, `time_offset` | zombies glide in to the beat; tap the phat beets to smash them |
+| `izombie` | `starting_sun`, `place_column`, `zombies`, `plants` or `plant_pool` + `plant_columns`, `sun_plants` | the project's own I, Zombie: buy zombies, set them down right of the red line, and eat every row's brain |
 
 The keys are PVZGE's module fields in snake_case, which is what
 `tools/import_levels.py` writes. Projectile seed packets
@@ -976,7 +977,7 @@ A pack adds or replaces a mode as `minigames/<type>.gd`, extending
 `Minigame`. The hooks it can override say how the level changes:
 `holds_waves()`, `drops_sky_sun()`, `drop_from_sky()`, `allows_shovel()`, `allows_plant_food()`,
 `skips_seed_chooser()`, `uses_belt()`, `seeds()`, `use_seed(id)`,
-`placement_refusal()`, `handle_click(row, col)`, `is_met()`, `is_failed()`,
+`placement_refusal()`, `handle_click(row, col)`, `handle_zombie_at_house(zombie)`, `is_met()`, `is_failed()`,
 `describe()`, `start_word()`, `intro_text()`, and `save_state()` /
 `load_state()`. The level is won once every objective and every mode is met.
 

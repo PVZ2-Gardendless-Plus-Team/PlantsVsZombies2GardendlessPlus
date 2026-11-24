@@ -123,6 +123,12 @@ func handle_click(_row: int, _col: int) -> bool:
 	return false
 
 
+## A zombie reached the house. Return true if the mode dealt with it, so the
+## level is not lost: I, Zombie's brains are eaten here.
+func handle_zombie_at_house(_zombie: Node) -> bool:
+	return false
+
+
 # --- outcome --------------------------------------------------------------
 
 ## The mode's own win condition, checked together with the level's

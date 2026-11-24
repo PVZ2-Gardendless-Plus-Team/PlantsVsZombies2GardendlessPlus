@@ -14,9 +14,9 @@ func setup() -> void:
 	board.plant_died.connect(func(_p): notify_progress())
 
 
-func _refuse(_kind: StringName, _id: StringName, _row: int, _col: int) -> String:
+func _refuse(kind: StringName, _id: StringName, _row: int, _col: int) -> String:
 	return "no more than %d plants at once" % maximum \
-			if board.plant_count() >= maximum else ""
+			if kind != &"zombie" and board.plant_count() >= maximum else ""
 
 
 func describe() -> String:

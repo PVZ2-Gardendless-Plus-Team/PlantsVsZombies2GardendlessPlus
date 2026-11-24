@@ -4541,7 +4541,7 @@ func _report() -> void:
 func _test_minigames() -> void:
 	section("minigames")
 	for t in [&"bowling", &"last_stand", &"vasebreaker", &"beghouled", &"endless",
-			&"cannon", &"camel", &"cowboy", &"fight_alone", &"sun_bomb", &"rhythm"]:
+			&"cannon", &"camel", &"cowboy", &"fight_alone", &"sun_bomb", &"rhythm", &"izombie"]:
 		check("minigame '%s' exists" % t, Components.has_minigame(t))
 
 	# Every shipped minigame level is played by modes that exist, and names
@@ -4568,8 +4568,15 @@ func _test_minigames() -> void:
 					if Data.plant(StringName(p.get("type", ""))) == null:
 						missing.append("%s: plant %s" % [entry["id"], p.get("type")])
 				for z in (g.get("zombies", []) as Array):
-					if Data.zombie(StringName(z.get("type", ""))) == null:
-						missing.append("%s: zombie %s" % [entry["id"], z.get("type")])
+					var zid := StringName(z.get("type", "")) if z is Dictionary else StringName(z)
+					if Data.zombie(zid) == null:
+						missing.append("%s: zombie %s" % [entry["id"], zid])
+				for p in (g.get("plants", []) as Array):
+					if p is Dictionary and Data.plant(StringName(p.get("type", ""))) == null:
+						missing.append("%s: plant %s" % [entry["id"], p.get("type")])
+				for id in (g.get("plant_pool", []) as Array):
+					if Data.plant(StringName(id)) == null:
+						missing.append("%s: plant %s" % [entry["id"], id])
 	check("every minigame level is consistent", missing.is_empty(), ", ".join(missing.slice(0, 5)))
 
 	# Bowling: nothing past the foul line, and a ball's packet rolls the ball
@@ -4849,6 +4856,48 @@ func _test_more_minigames() -> void:
 	check("tapping the beet smashes it", board.tap_plant(1, 2) and dancer != null and dancer.is_dead)
 	await _wait_game_seconds(0.1)
 	check("the song is won once all are gone", song.is_met())
+	_finish_feature_level(pair)
+
+	# I, Zombie: plants on the left, brains at the house; the player places
+	# zombies right of the line, and wins once every brain is eaten.
+	pair = _start_feature_level({"minigames": [{"type": "izombie", "starting_sun": 150,
+			"place_column": 5, "zombies": ["tutorial", {"type": "tutorial_armor1", "cost": 125}],
+			"plants": [{"type": "sunflower", "row": 0, "col": 0},
+				{"type": "peashooter", "row": 1, "col": 0}]}]})
+	board = pair[0]
+	runner = pair[1]
+	var iz = runner.minigame(&"izombie")
+	runner.begin()
+	check_eq("the starting sun is banked", board.sun, 150)
+	check("the level's plants stand", board.plant_at(1, 0) != null)
+	check("the packets are zombies", runner.seedbank_seeds().all(func(e): return e["kind"] == &"zombie"))
+	check_eq("priced as the level says", int(runner.seedbank_seeds()[1]["cost"]), 125)
+	check("plants cannot be placed", board.placement_refusal(&"plant", &"peashooter", 2, 6) != "")
+	check("zombies not left of the line", board.placement_refusal(&"zombie", &"tutorial", 2, 4) != "")
+	check("but right of it", board.placement_refusal(&"zombie", &"tutorial", 2, 5) == "")
+	check_eq("a brain in every row", iz.brains.size(), board.rows)
+	var walker := board.spawn_zombie(&"tutorial", 2)
+	board._on_zombie_reached_house(walker)
+	check("a zombie at the house eats its row's brain", not iz.brains.has(2))
+	check("and the level goes on", runner.running)
+	board.plant_at(0, 0).die()
+	await _wait_game_seconds(0.1)
+	var dropped := board._suns.get_children().filter(func(n): return n is SunToken)
+	check_eq("an eaten sunflower leaves sun", dropped.size(), 3)
+	check("not won with brains left", not iz.is_met())
+	for row in board.rows:
+		if iz.brains.has(row):
+			board._on_zombie_reached_house(board.spawn_zombie(&"tutorial", row))
+	check("every brain eaten wins", iz.is_met())
+	_finish_feature_level(pair)
+
+	# Out of sun and zombies with brains left loses.
+	pair = _start_feature_level({"minigames": [{"type": "izombie", "starting_sun": 0,
+			"zombies": ["tutorial"], "plants": []}]})
+	board = pair[0]
+	runner = pair[1]
+	runner.begin()
+	check("no sun and no zombies loses", runner.minigame(&"izombie").is_failed())
 	_finish_feature_level(pair)
 	end_section()
 

@@ -536,6 +536,25 @@
    ]
   },
   {
+   "id": "izombie",
+   "name": "I, Zombie",
+   "description": "Eat all the brains",
+   "levels": [
+    {
+     "id": "izombie_1",
+     "name": "I, Zombie"
+    },
+    {
+     "id": "izombie_2",
+     "name": "I, Zombie Too"
+    },
+    {
+     "id": "izombie_3",
+     "name": "Can You Dig It?"
+    }
+   ]
+  },
+  {
    "id": "endless",
    "name": "Endless Zones",
    "description": "Survive as many levels as you can",
