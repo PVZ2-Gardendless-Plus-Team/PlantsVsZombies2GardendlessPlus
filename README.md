@@ -69,6 +69,7 @@ Definitions load from `.tres` (typed, inspector-editable) or `.json`
 ## Running
 
 ```sh
+python tools/install_fmod.py        # FMOD audio (optional, see docs/AUDIO.md)
 godot --headless --import           # first time
 godot                               # play
 godot --headless tests/gameplay_test.tscn   # test suite
