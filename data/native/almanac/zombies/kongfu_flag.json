@@ -1,0 +1,38 @@
+{
+ "id": "kongfu_flag",
+ "name": {
+  "en": "Flag Kongfu Zombie",
+  "zh": "武斗旗帜僵尸"
+ },
+ "world": "kongfu",
+ "description": {
+  "en": "Marks the arrival of a huge noisy \"wave\" of zombies.",
+  "zh": "预示着一大波吵吵闹闹的僵尸的到来。"
+ },
+ "chat": {
+  "en": "Flag Zombie is born a leader, so he doesn't need to know Kongfu, just knowing how to wave the flag is enough.",
+  "zh": "旗帜僵尸是天生的领导者，因此他不需要会功夫，只需要会舞旗即可。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.25,
+   "text": {
+    "en": "Average",
+    "zh": "一般"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ],
+ "display_offset": [
+  15,
+  0
+ ]
+}

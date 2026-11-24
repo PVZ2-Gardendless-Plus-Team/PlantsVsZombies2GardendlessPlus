@@ -1,0 +1,34 @@
+{
+ "id": "zoybeanpod",
+ "name": {
+  "en": "Zoybean Pod",
+  "zh": "豆腐尸荚"
+ },
+ "brief": {
+  "en": "Grows helpful zomboids",
+  "zh": "生成为我们战斗的豆腐僵尸"
+ },
+ "description": {
+  "en": "Zoybean Pods grow from sprouts to full pods, then split open to release helpful plant \"zomboids\" which attack zombies.",
+  "zh": "豆腐尸荚生长成为硕大的豆荚，并释放一只“豆腐僵尸”为你战斗。"
+ },
+ "chat": {
+  "en": "\"Developing plant zomboids in eerie mimicry of zombie life is well within the boundaries of human experience,\" Zoybean Pod insists with a calm, unvarying steadiness.",
+  "zh": "“以诡异的方式模仿僵尸生命来培育豆腐僵尸，这其实完全在人们经验的范畴之内。”豆腐尸荚坚持道，语气带着一种平静而恒定的沉稳。"
+ },
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "grow_time",
+   "value": 18
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

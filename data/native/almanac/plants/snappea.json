@@ -1,0 +1,44 @@
+{
+ "id": "snappea",
+ "name": {
+  "en": "Snap Pea",
+  "zh": "大嘴豌豆"
+ },
+ "brief": {
+  "en": "Eats zombies and spits out their heads",
+  "zh": "吃掉僵尸并吐出他们的头颅"
+ },
+ "description": {
+  "en": "Snap Peas dive underground, burrow towards zombies, then pop up underneath to swallow them in one gulp. Snap Peas then return to their starting spot, chew on the entire matter for a while, and finally spit the zombies' heads out at attackers.",
+  "zh": "大嘴豌豆会钻入地下，朝僵尸掘进，然后从下方猛然冒出，一口将僵尸吞下。随后会返回并咀嚼，最后将僵尸的头颅吐向敌人。"
+ },
+ "chat": {
+  "en": "\"I'm a picky eater, I'll admit it,\" admits Snap Pea casually. \"I'll eat a zombie, no problem, but there's just something about heads. I feel like they're looking at me.\"",
+  "zh": "“我承认，我吃东西挺挑剔的，”大嘴豌豆随口承认道。“吃个僵尸没问题，但就是觉得脑袋这东西吧……总感觉它们在看着我。”"
+ },
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 400
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "Straight",
+    "zh": "直线"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "id": "zombossmech_lostcity",
+ "name": {
+  "en": "Zombot Aerostatic Gondola",
+  "zh": "热气球浮舰"
+ },
+ "world": "lostcity",
+ "description": {
+  "en": "The floating fortress from the skies above.",
+  "zh": "漂浮在空中的战斗堡垒。"
+ },
+ "chat": {
+  "en": "After repeated failures with variously robotic engines of destruction, Dr. Zomboss decided to go with a kinder, more eco-friendly lighter-than-air-option to sow disaster and discord.",
+  "zh": "在使用各种毁灭型仿生机器屡屡失败后，僵尸博士决定使用一种更友好、更环保的、比空气更轻的选择，用来传播灾难和不和谐。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "drops zombies and bags o' sand",
+    "zh": "向地上丢僵尸和沙袋"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 1,
+   "text": {
+    "en": "Undying",
+    "zh": "不朽"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.6,
+   "text": {
+    "en": "Hungry",
+    "zh": "饥渴"
+   }
+  }
+ ],
+ "display_offset": [
+  -60,
+  -100
+ ],
+ "variants": [
+  "zombossmech_lostcity2"
+ ]
+}

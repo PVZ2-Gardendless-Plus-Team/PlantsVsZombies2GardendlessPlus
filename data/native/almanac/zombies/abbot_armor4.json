@@ -1,0 +1,34 @@
+{
+ "id": "abbot_armor4",
+ "name": {
+  "en": "Abbot Censer-headed Zombie",
+  "zh": "住持香炉僵尸"
+ },
+ "world": "kongfu",
+ "description": {
+  "en": "Monk Censer-headed Zombie wears a hard-tiled censer, providing sturdy protection.",
+  "zh": "武僧香炉僵尸的头戴坚硬的瓦制香炉，得到了厚实的防护。"
+ },
+ "chat": {
+  "en": "In order to wear this censer, he secretly used qigong to make it expand with heat and contract with cold.",
+  "zh": "为了戴上这个香炉，他偷偷地用气功让香炉“热胀冷缩”。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.8,
+   "text": {
+    "en": "Machined",
+    "zh": "重甲"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ]
+}

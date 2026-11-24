@@ -1,0 +1,51 @@
+{
+ "id": "peach",
+ "name": {
+  "en": "Heavenly Peach",
+  "zh": "仙桃"
+ },
+ "brief": {
+  "en": "Heals plants in a 3x3 area",
+  "zh": "治疗 3x3 范围内的植物"
+ },
+ "description": {
+  "en": "Heavenly Peaches heal all surrounding plants, regaining their health.",
+  "zh": "仙桃医治周围的植物，恢复他们的生命值。"
+ },
+ "chat": {
+  "en": "Her resume says that she was once a peach of Wangmu Niangniang for consumption, and became a medic after being demoted to mortal.",
+  "zh": "仙桃的简历上写着自己本是王母娘娘的御用幡桃, 被贬下凡后做了战地医生。"
+ },
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "3x3",
+    "zh": "3x3 范围"
+   }
+  },
+  {
+   "type": "special",
+   "text": {
+    "en": "150",
+    "zh": "150"
+   },
+   "name": {
+    "en": "HEALTH PER HEAL",
+    "zh": "单次治疗血量"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

@@ -1,0 +1,37 @@
+{
+ "id": "sunbean",
+ "name": {
+  "en": "Sun Bean",
+  "zh": "阳光豆"
+ },
+ "brief": {
+  "en": "Zombies that eat it drop suns when damaged",
+  "zh": "吃了他的僵尸，会在受伤时掉落阳光"
+ },
+ "description": {
+  "en": "Sun Beans infect zombies with sun. As a zombie takes damage it generates sun.",
+  "zh": "阳光豆给僵尸施予阳光。当这只僵尸受伤时产生阳光。"
+ },
+ "chat": {
+  "en": "As the eldest of the four bean brothers, Sun Bean often finds his siblings exasperating. Chili Bean is a little crude, Laser Bean is too far out, and Spring Bean is just plain lazy. Still, he loves them just the same. That's how it is with family.",
+  "zh": "作为豆子兄弟里的老大哥，阳光豆总觉得他的弟弟妹妹们不靠谱。巴豆总是很粗俗，激光豆太前卫，弹簧豆就是个懒虫。尽管如此，他依然深爱着他的家人们。"
+ },
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "sun_production",
+   "text": {
+    "en": "Variable",
+    "zh": "不定"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

@@ -1,0 +1,46 @@
+{
+ "id": "sky_electric",
+ "name": {
+  "en": "Lightning Gun Zombie",
+  "zh": "闪电枪僵尸"
+ },
+ "world": "sky",
+ "description": {
+  "en": "Shoots lightning bolts towards plants with a lightning gun.",
+  "zh": "使用闪电枪发射电荷攻击植物。"
+ },
+ "chat": {
+  "en": "The two large batteries on his back could have provided enough voltage to destroy everything, but he carelessly connected them in parallel.",
+  "zh": "他后背上的两颗大电池本来可以提供摧毁一切的电压，但是他粗心地将它们并联了。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "shoots positive or negative bolts",
+    "zh": "发射正电荷或负电荷"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.6,
+   "text": {
+    "en": "Dense",
+    "zh": "结实"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ]
+}

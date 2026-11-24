@@ -1,0 +1,73 @@
+{
+ "id": "stallia",
+ "name": {
+  "en": "Stallia",
+  "zh": "大丽菊"
+ },
+ "brief": {
+  "en": "Slows zombies in nearby lanes",
+  "zh": "减慢范围内的所有僵尸"
+ },
+ "description": {
+  "en": "Stallias slow down zombies with a puff of perfume.",
+  "zh": "大丽菊利用一股毒气减慢僵尸的前进。"
+ },
+ "chat": {
+  "en": "\"Life moves too quickly in our modern world,\" says Stallia. \"Folks need to slow down and smell some spores.\"",
+  "zh": "“现在大家都总是忙忙碌碌的，”大丽菊说，“人们应该时不时停下脚步闻闻花香。”"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Usage",
+    "zh": "用途"
+   },
+   "text": {
+    "en": "single use, activates when zombie is close",
+    "zh": "一次性使用，僵尸靠近时触发"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "slows zombies",
+    "zh": "对附近的僵尸施加减速效果"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "Touch",
+    "zh": "接触"
+   }
+  },
+  {
+   "type": "area",
+   "text": {
+    "en": "3x3",
+    "zh": "3x3 范围"
+   }
+  },
+  {
+   "type": "special",
+   "text": {
+    "en": "Stall",
+    "zh": "减速"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

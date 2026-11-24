@@ -1,0 +1,52 @@
+{
+ "id": "bulbkekengi",
+ "name": {
+  "en": "Glowkengi",
+  "zh": "灯笼草"
+ },
+ "brief": {
+  "en": "Removes fogs in a medium range",
+  "zh": "驱散中等范围内的迷雾"
+ },
+ "description": {
+  "en": "Glowkengus remove fogs in a medium range.",
+  "zh": "灯笼草驱散中等范围内的迷雾。"
+ },
+ "chat": {
+  "en": "Glowkengi soon became inseparable friends with Torchwood and Snapdragon, dubbing themselves the \"Musketeers of Flame\". However, the Hawaiian-themed lounge seems hesitant to serve the trio—the owner doesn't want to see any more scorched tables.",
+  "zh": "灯笼草很快就与火炬树桩和火龙草成了形影不离的好朋友，他们自称为“火焰三剑客”。不过夏威夷风情酒廊似乎不太敢招待他们三个，老板可不愿意再看见烧焦的酒桌。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "removes fogs",
+    "zh": "驱散迷雾"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "plant_food",
+   "text": {
+    "en": "Range Expanding",
+    "zh": "范围扩大"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

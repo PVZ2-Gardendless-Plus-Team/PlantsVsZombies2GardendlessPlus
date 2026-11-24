@@ -1,0 +1,34 @@
+{
+ "id": "eighties",
+ "name": {
+  "en": "Neon Zombie",
+  "zh": "霓虹僵尸"
+ },
+ "world": "eighties",
+ "description": {
+  "en": "Regular music-loving neon mixtape zombie.",
+  "zh": "普普通通爱好音乐的僵尸。"
+ },
+ "chat": {
+  "en": "He's cutting down on his head-banging so as not to bang his head clean off.",
+  "zh": "他减少了晃头的次数，以免把头晃下来。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.25,
+   "text": {
+    "en": "Average",
+    "zh": "一般"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ]
+}

@@ -1,0 +1,52 @@
+{
+ "id": "twinsunflower",
+ "name": {
+  "en": "Twin Sunflower",
+  "zh": "双胞向日葵"
+ },
+ "brief": {
+  "en": "Gives twice as much as a sunflower",
+  "zh": "生产比向日葵更多的阳光"
+ },
+ "description": {
+  "en": "Twin Sunflowers give twice as much sun as a normal sunflower.",
+  "zh": "双胞向日葵提供向日葵两倍的阳光。"
+ },
+ "chat": {
+  "en": "Twin Sunflower's super-chic line of ultra-expensive sunglasses has been a huge hit wherever she goes. Due to this she has been unable to travel without being swarmed by the Poppyrazzi.",
+  "zh": "双胞向日葵那副超级时尚又无比昂贵的墨镜让她不论在哪都像个大明星。因此她不论去到哪里都会被“枸籽队”簇拥。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Sun Production",
+    "zh": "阳光生产"
+   },
+   "text": {
+    "en": "double",
+    "zh": "双倍"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "sun_production",
+   "text": {
+    "en": "Double",
+    "zh": "双倍"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

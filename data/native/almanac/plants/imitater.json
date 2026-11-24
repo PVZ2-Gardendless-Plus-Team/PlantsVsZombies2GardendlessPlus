@@ -1,0 +1,39 @@
+{
+ "id": "imitater",
+ "name": {
+  "en": "Imitater",
+  "zh": "模仿者"
+ },
+ "brief": {
+  "en": "Lets you have two of the same plant",
+  "zh": "允许你同时选取两张相同的卡片"
+ },
+ "description": {
+  "en": "Imitaters let you use two of the same plant during a level!",
+  "zh": "模仿者允许你同一个关卡携带两张相同的植物卡片！"
+ },
+ "chat": {
+  "en": "Having studied French Theater at Julienne, the Imitater went to the streets with his art, and has perfected his technique he calls \"Potato stuck in a box\".",
+  "zh": "模仿者在法国进修过表演艺术，在街头表演中完善了他的最新节目“关在盒子里的茄子”。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "can imitate any other non-mint plants",
+    "zh": "可以模仿其他非薄荷类植物"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  }
+ ]
+}

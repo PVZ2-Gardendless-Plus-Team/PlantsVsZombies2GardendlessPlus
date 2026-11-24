@@ -1,0 +1,60 @@
+{
+ "id": "cowboy_gargantuar",
+ "name": {
+  "en": "Wild West Gargantuar",
+  "zh": "西部巨尸"
+ },
+ "world": "cowboy",
+ "description": {
+  "en": "Humongous zombie with brand awareness.",
+  "zh": "手持烙铁武器的巨型僵尸。"
+ },
+ "chat": {
+  "en": "Likes candy.",
+  "zh": "喜欢糖果。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Damage",
+    "zh": "攻击"
+   },
+   "text": {
+    "en": "crushes plants with brand",
+    "zh": "用烙铁摧毁植物"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "launches Bull Rider when damaged",
+    "zh": "受重伤时丢出牛骑手"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.9,
+   "text": {
+    "en": "Great",
+    "zh": "巨大"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.6,
+   "text": {
+    "en": "Hungry",
+    "zh": "饥渴"
+   }
+  }
+ ],
+ "display_offset": [
+  20,
+  -60
+ ]
+}

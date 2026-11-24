@@ -1,0 +1,70 @@
+{
+ "id": "kongfu_bomb",
+ "name": {
+  "en": "Bomb Zombie",
+  "zh": "自爆僵尸"
+ },
+ "world": "kongfu",
+ "description": {
+  "en": "Ignites the bomb on contact and explodes, dealing deadly damage to all plants in an area.",
+  "zh": "碰到植物后，能引爆手里的炸弹，对大范围植物造成致命伤害。"
+ },
+ "chat": {
+  "en": "Bomb Zombie has little facilities in kongfu, making him embarrassed staying with other kongfu learners. He's humble until he found his talent in pyrotechnic.",
+  "zh": "自爆僵尸没有武功天分, 所以他一直很自卑地待在少林寺, 直到他发现了自己的火药天分后, 地位骤升。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "explodes and damages heavily to nearby plants on contact",
+    "zh": "碰到植物自爆并对范围内植物造成巨量伤害"
+   }
+  },
+  {
+   "name": {
+    "en": "Weakness",
+    "zh": "弱点"
+   },
+   "text": {
+    "en": "loses his bomb when his arm is broken",
+    "zh": "断手后丢掉炸弹"
+   }
+  },
+  {
+   "name": {
+    "en": "Weakness",
+    "zh": "弱点"
+   },
+   "text": {
+    "en": "bomb expires when chilled",
+    "zh": "炸弹受冷后熄灭"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.8,
+   "text": {
+    "en": "Protected",
+    "zh": "加强"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.85,
+   "text": {
+    "en": "Speedy",
+    "zh": "快速"
+   }
+  }
+ ],
+ "display_offset": [
+  15,
+  0
+ ]
+}

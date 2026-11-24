@@ -1,0 +1,83 @@
+{
+ "id": "missiletoe",
+ "name": {
+  "en": "Missile Toe",
+  "zh": "槲寄冰仙子"
+ },
+ "brief": {
+  "en": "Launches chilling blasts",
+  "zh": "发射寒冰导弹"
+ },
+ "description": {
+  "en": "Missile Toes launch cold blasts that damage, chill and slow zombies.",
+  "zh": "槲寄冰仙子发射寒冰子弹，对僵尸造成伤害并减速。"
+ },
+ "chat": {
+  "en": "While she is called Missile Toe, Missile Toe has no toes and, properly speaking, lacks missiles. How'd she get her name? Nepotism! Pure favoritism.",
+  "zh": "槲寄冰仙子也被叫做指尖火箭炮，尽管她没有手指头，准确来讲，她也没有火箭炮。那么她为什么会被这么称呼？裙带关系！比起另一个火箭炮，大家更喜欢她罢了。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Usage",
+    "zh": "用途"
+   },
+   "text": {
+    "en": "tap to arm, tap on target tile to fire",
+    "zh": "点击瞄准，再点击目标格子发射"
+   }
+  },
+  {
+   "name": {
+    "en": "Range",
+    "zh": "范围"
+   },
+   "text": {
+    "en": "anywhere on lawn",
+    "zh": "场地内任意一格"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "on impact, explodes in small area",
+    "zh": "子弹爆炸时，对小范围造成巨大伤害"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 1200
+  },
+  {
+   "type": "special",
+   "text": {
+    "en": "Freeze",
+    "zh": "冻结"
+   }
+  },
+  {
+   "type": "area",
+   "text": {
+    "en": "1x3",
+    "zh": "1x3范围"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

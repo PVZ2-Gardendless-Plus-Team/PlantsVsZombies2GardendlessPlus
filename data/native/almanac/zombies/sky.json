@@ -1,0 +1,37 @@
+{
+ "id": "sky",
+ "name": {
+  "en": "Pilot Zombie",
+  "zh": "飞行员僵尸"
+ },
+ "world": "sky",
+ "description": {
+  "en": "Regular jetpacked zombie.",
+  "zh": "普普通通背着喷射器的僵尸。"
+ },
+ "chat": {
+  "en": "Don’t underestimate the Pilot Zombies. Keeping the balance in the air instead of being upside down isn’t that easy. Flying gives them a feeling of freedom - but that's true only when he still had a brain.",
+  "zh": "千万不要小看普通飞行员僵尸，在空中保持平衡而不是四脚朝天并不是一件容易的事情。飞翔带给他们自由的感觉，当然，那是在他们还有脑子的时候。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.25,
+   "text": {
+    "en": "Average",
+    "zh": "一般"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.6,
+   "text": {
+    "en": "Hungry",
+    "zh": "饥渴"
+   }
+  }
+ ],
+ "variants": [
+  "sky_unarmed"
+ ]
+}

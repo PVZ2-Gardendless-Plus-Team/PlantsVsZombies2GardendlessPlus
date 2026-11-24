@@ -1,0 +1,38 @@
+{
+ "id": "dino_flag",
+ "name": {
+  "en": "Jurassic Flag Zombie",
+  "zh": "侏罗纪旗帜僵尸"
+ },
+ "world": "dino",
+ "description": {
+  "en": "Marks the arrival of a huge epochal \"wave\" of highly anachronistic zombies.",
+  "zh": "预示着一大波老土过时的僵尸的到来。"
+ },
+ "chat": {
+  "en": "He's not only got a flag, but he's also got a can-do attitude and a fierce hunger for success. Success and brains.",
+  "zh": "他不仅拥有着一面旗帜，而且有一种敢作敢为的态度和对成功的强烈渴望，成功和头脑。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.25,
+   "text": {
+    "en": "Average",
+    "zh": "一般"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.6,
+   "text": {
+    "en": "Hungry",
+    "zh": "饥渴"
+   }
+  }
+ ],
+ "display_offset": [
+  15,
+  0
+ ]
+}

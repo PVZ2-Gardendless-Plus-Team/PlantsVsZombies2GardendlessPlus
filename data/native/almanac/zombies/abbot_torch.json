@@ -1,0 +1,70 @@
+{
+ "id": "abbot_torch",
+ "name": {
+  "en": "Torch Abbot",
+  "zh": "住持火把僵尸"
+ },
+ "world": "kongfu",
+ "description": {
+  "en": "Carries a torch that can instantly destroy your plants.",
+  "zh": "手持能秒杀你的植物的火把。"
+ },
+ "chat": {
+  "en": "Not even should the cook of the Kongfu Temple be underestimated.",
+  "zh": "即使他是少林寺的伙夫，其实力也不容小觑。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Damage",
+    "zh": "攻击"
+   },
+   "text": {
+    "en": "torch destroys a plant on contact",
+    "zh": "火把迅速烧毁接触到的植物"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特殊"
+   },
+   "text": {
+    "en": "breathes fire towards plants that are close enough, dealing deadly damages",
+    "zh": "向接近的植物吐出火焰，造成大量伤害"
+   }
+  },
+  {
+   "name": {
+    "en": "Weakness",
+    "zh": "弱点"
+   },
+   "text": {
+    "en": "cold attacks extinguish torch",
+    "zh": "冰冻攻击能使火把熄灭"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.6,
+   "text": {
+    "en": "Dense",
+    "zh": "结实"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.6,
+   "text": {
+    "en": "Hungry",
+    "zh": "饥渴"
+   }
+  }
+ ],
+ "display_offset": [
+  20,
+  0
+ ]
+}

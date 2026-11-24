@@ -1,0 +1,34 @@
+{
+ "id": "dino_imp",
+ "name": {
+  "en": "Jurassic Imp",
+  "zh": "侏罗纪小鬼"
+ },
+ "world": "dino",
+ "description": {
+  "en": "A weaker, smaller, much more vicious version of the typical Jurassic zombie.",
+  "zh": "他相对一般的侏罗纪僵尸体型更弱、更小、更凶残。"
+ },
+ "chat": {
+  "en": "This nasty little nipper can make a serious dent in your defenses if left to his own devious devices.",
+  "zh": "如果任由这个讨厌的小东西胡作非为，他会严重破坏你的防御系统。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.2,
+   "text": {
+    "en": "Fragile",
+    "zh": "脆弱"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.85,
+   "text": {
+    "en": "Speedy",
+    "zh": "快速"
+   }
+  }
+ ]
+}

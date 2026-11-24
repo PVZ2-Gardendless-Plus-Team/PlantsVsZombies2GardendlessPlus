@@ -1,0 +1,44 @@
+{
+ "id": "electricpeashooter",
+ "name": {
+  "en": "Electric Peashooter",
+  "zh": "电能豌豆"
+ },
+ "brief": {
+  "en": "Fires electric peas",
+  "zh": "发射电能豌豆子弹"
+ },
+ "description": {
+  "en": "Electric Peashooters fire pea-like orbs that pass through zombies and crackle with electrical power, doing damage all the while.",
+  "zh": "电能豌豆向僵尸发射穿透性球状闪电，并且伴随着电弧产生，对附近的目标造成伤害。"
+ },
+ "chat": {
+  "en": "Electric Peashooter expects resistance, but he doesn't want to ohm anybody.",
+  "zh": "电能豌豆希望遇到一个电阻相当的对手，但是他又不想跟他们一起算欧姆定律。"
+ },
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 20
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "Multi-Lane",
+    "zh": "多行"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

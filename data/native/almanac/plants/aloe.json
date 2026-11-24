@@ -1,0 +1,33 @@
+{
+ "id": "aloe",
+ "name": {
+  "en": "Aloe",
+  "zh": "芦荟"
+ },
+ "brief": {
+  "en": "Heals rightward plants",
+  "zh": "治疗右边的植物"
+ },
+ "description": {
+  "en": "Aloes heal injured plants to their immediate right, keeping them healthy as possible.",
+  "zh": "芦荟对其右边的植物进行治疗，使之尽可能保持完好。"
+ },
+ "chat": {
+  "en": "Aloe likes to soothe. He likes to alleviate, he likes to restore, he likes to mend. But don't ask him to revive. He's touchy about revival.",
+  "zh": "芦荟喜欢安抚。他喜欢缓解痛苦，乐于修复创伤，擅长弥合伤痕。但别让他去复活生命——他对“复活”这个词格外敏感。"
+ },
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

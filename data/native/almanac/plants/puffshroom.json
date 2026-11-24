@@ -1,0 +1,63 @@
+{
+ "id": "puffshroom",
+ "name": {
+  "en": "Puff-shroom",
+  "zh": "小喷菇"
+ },
+ "brief": {
+  "en": "Short-range shooter, lasts for a limited time",
+  "zh": "射程短，并且一段时间后消失"
+ },
+ "description": {
+  "en": "Puff-shrooms are short-range shooters that last for a limited time.",
+  "zh": "小喷菇射程短，一段时间后消失。"
+ },
+ "chat": {
+  "en": "Puff-shroom is hip to all the latest social networks. He loves to surf Sporebook, FungusedIn and ShroomstaGram. But he sometimes misses the simple camaraderie of a good ol' fashioned Lawn Area Network party.",
+  "zh": "小喷菇熟知各种最新的社交网络平台。他喜欢刷\"Sporebook\"\"FungusedIn\"以及\"ShroomstaGram\"。但他有时候怀念在草坪上和大家一起上网时那种简简单单的陪伴。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "lives for a limited time",
+    "zh": "只能存活有限的时间"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 20
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "3 Tiles",
+    "zh": "3 格"
+   }
+  },
+  {
+   "type": "special",
+   "text": {
+    "en": "Lifespan",
+    "zh": "生命周期"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

@@ -1,0 +1,56 @@
+{
+ "id": "pinkstarfruit",
+ "name": {
+  "en": "Angel Starfruit",
+  "zh": "天使星星果"
+ },
+ "brief": {
+  "en": "Adjusts the angle and shoots stars in 5 directions",
+  "zh": "调整角度并向五个方向发射星星"
+ },
+ "description": {
+  "en": "Angel Starfruits adjust the angles and then shoot stars in 5 directions.",
+  "zh": "天使星星果会调整角度，随后向五个方向发射星星子弹。"
+ },
+ "chat": {
+  "en": "Princess Angel Starfruit is far more energetic than Starfruit from a small town. Starfruit can't even be bothered to rotate himself a little.",
+  "zh": "天使星星果公主比来自乡下的星星果有活力多了，星星果甚至连转个身都不愿意。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "changes shooting directions according to zombies' coordinates",
+    "zh": "根据僵尸的位置改变发射的方向"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 30
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "10 Way",
+    "zh": "10 个方向"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

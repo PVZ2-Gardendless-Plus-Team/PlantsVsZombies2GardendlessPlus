@@ -1,0 +1,44 @@
+{
+ "id": "fumeshroom",
+ "name": {
+  "en": "Fume-shroom",
+  "zh": "大喷菇"
+ },
+ "brief": {
+  "en": "Shoots fumes that can damage all zombies in an area",
+  "zh": "向范围内的所有僵尸发射气泡攻击"
+ },
+ "description": {
+  "en": "Fume-shrooms shoot fumes that damage all zombies in an area.",
+  "zh": "大喷菇向范围内所有僵尸发射气泡攻击。"
+ },
+ "chat": {
+  "en": "\"I think of myself as a pretty confident shroom and an all-around fungi,\"says Fume-shroom.\"But sometimes, when I'm eating Plant Food, I hear them chuckling. I hear them calling me 'Balloon-shroom'. I don't think they know how much that hurts.\"",
+  "zh": "“我觉得自己是一只很自信而且全能型的大蘑菇，”大喷菇说，“但是有时候我释放叶绿素效果时听到别人偷笑，说我是‘气球菇’……我猜他们根本不知道这话多么伤人。”"
+ },
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 40
+  },
+  {
+   "type": "area",
+   "text": {
+    "en": "1x4",
+    "zh": "1x4"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

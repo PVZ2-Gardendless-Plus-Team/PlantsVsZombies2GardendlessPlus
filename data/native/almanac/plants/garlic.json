@@ -1,0 +1,47 @@
+{
+ "id": "garlic",
+ "name": {
+  "en": "Garlic",
+  "zh": "大蒜"
+ },
+ "brief": {
+  "en": "Diverts zombies into other lanes",
+  "zh": "把僵尸分散到其他行"
+ },
+ "description": {
+  "en": "Garlics divert zombies into other lanes.",
+  "zh": "大蒜把僵尸分散到其他行。"
+ },
+ "chat": {
+  "en": "Good against zombies, as well as proof against any vampires who might accidentally wander by.",
+  "zh": "对付僵尸的好法宝，同时也饶不了周围闲逛的吸血鬼。"
+ },
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "area",
+   "text": {
+    "en": "Single",
+    "zh": "单体"
+   }
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "Touch",
+    "zh": "接触"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

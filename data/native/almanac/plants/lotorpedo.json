@@ -1,0 +1,66 @@
+{
+ "id": "lotorpedo",
+ "name": {
+  "en": "Lotorpedo",
+  "zh": "鱼雷莲蓬"
+ },
+ "brief": {
+  "en": "Fires torpedos in water, projectiles otherwise",
+  "zh": "在水中发射鱼雷，否则发射子弹"
+ },
+ "description": {
+  "en": "Lotorpedoes supply stronger damages in water.",
+  "zh": "鱼雷莲蓬在水中比在陆地上拥有更强的战斗力。"
+ },
+ "chat": {
+  "en": "Lotorpedo is a member of the Plant-Arma Club. To show off his interest, he specially shaped himself like a revolver. But as he was about to hang out, he noticed the news about the Monk Zombies were intruding on the telly. After a glance at those monks' \"haircut\", he suddenly felt like staying home…",
+  "zh": "鱼雷莲蓬是植物枪械爱好者俱乐部的成员，为了展现他的兴趣，他特意去做了一个左轮手枪的造型。出门前他无意中注意到电视里在播放武僧僵尸入侵的消息，看到那些武僧的头顶，他瞬间不想出门了……"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "projectiles shot on land deal splash damages above water",
+    "zh": "陆地上发射的子弹会在水面上造成溅射伤害"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "fires torpedos that knock back zombies in water",
+    "zh": "在水中发射能击退僵尸的鱼雷"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 120
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "Lobbed",
+    "zh": "抛物线"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

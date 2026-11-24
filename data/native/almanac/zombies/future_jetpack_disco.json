@@ -1,0 +1,60 @@
+{
+ "id": "future_jetpack_disco",
+ "name": {
+  "en": "Disco Jetpack Zombie",
+  "zh": "喷气迪斯科僵尸"
+ },
+ "world": "future",
+ "description": {
+  "en": "Boosts to float over all but the tallest plant barriers, in style.",
+  "zh": "优雅地按下油门能飞跃植物，除非植物能高到挡住他。"
+ },
+ "chat": {
+  "en": "A zombie who 'lives' for drama, he's an original cast member of the stage musical \"Disco is BACK! For Revenge!\" His signature dance move is \"The Weed Whacker.\"",
+  "zh": "他是舞台音乐剧 “迪斯科回来了，为了复仇！”的原班人马！为了复仇！他的招牌舞步是 “锄草”。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "floats over low plants, boosts over most other plants",
+    "zh": "飞跃低矮的植物，喷气越过大部分其他植物"
+   }
+  },
+  {
+   "name": {
+    "en": "Weakness",
+    "zh": "弱点"
+   },
+   "text": {
+    "en": "tall blocking plants",
+    "zh": "高个子植物"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.4,
+   "text": {
+    "en": "Solid",
+    "zh": "略强"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.85,
+   "text": {
+    "en": "Speedy",
+    "zh": "快速"
+   }
+  }
+ ],
+ "display_offset": [
+  0,
+  -50
+ ]
+}

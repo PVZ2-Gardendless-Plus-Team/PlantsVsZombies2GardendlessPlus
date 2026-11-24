@@ -1,0 +1,40 @@
+{
+ "id": "lostcity",
+ "name": {
+  "en": "Adventurer Zombie",
+  "zh": "探宝僵尸"
+ },
+ "world": "lostcity",
+ "description": {
+  "en": "Regular expertly-coiffed moustache zombie.",
+  "zh": "普普通通但是会定期修理胡须的僵尸。"
+ },
+ "chat": {
+  "en": "Adventurer Zombie just went looking for jolly good show and somehow ended up in the Lost City. \"Hmm. Yes. Quite.\" is all that he would say on the matter.",
+  "zh": "冒险家僵尸只是去寻找欢乐的好戏，结果却莫名其妙地来到了失落之城。“嗯，没错。”他对这件事只想这么评价。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.25,
+   "text": {
+    "en": "Average",
+    "zh": "一般"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ],
+ "variants": [
+  "summer_basic",
+  "summer_armor1",
+  "summer_armor2",
+  "summer_flag"
+ ]
+}

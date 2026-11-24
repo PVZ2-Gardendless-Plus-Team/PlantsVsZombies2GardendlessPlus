@@ -1,0 +1,59 @@
+{
+ "id": "empea",
+ "name": {
+  "en": "E.M. Peach",
+  "zh": "脉冲黄桃"
+ },
+ "brief": {
+  "en": "Disables all machines in an area",
+  "zh": "使范围内所有的机械僵尸陷入故障"
+ },
+ "description": {
+  "en": "E.M.Peaches explode and disable all machines in an area.",
+  "zh": "脉冲黄桃爆炸后使范围内的所有机器陷入故障。"
+ },
+ "chat": {
+  "en": "E.M.Peach has grown tired of people lazily calling him E.M.Pea. \"There's a C and H there for a reason people! And I've got the stone to prove it!\"",
+  "zh": "脉冲黄桃逐渐厌烦别人将他简称为“脉冲”。“我的名字里有‘黄桃’两字是有原因的好吗？而且这根本显而易见！”"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Usage",
+    "zh": "用途"
+   },
+   "text": {
+    "en": "single use, instant",
+    "zh": "一次性使用，立刻生效"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "disables machines",
+    "zh": "使机械陷入故障"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "R2.5",
+    "zh": "半径 2.5 的圆"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

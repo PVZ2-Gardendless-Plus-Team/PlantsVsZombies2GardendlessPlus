@@ -1,0 +1,52 @@
+{
+ "id": "toadstool",
+ "name": {
+  "en": "Toadstool",
+  "zh": "金蟾菇"
+ },
+ "brief": {
+  "en": "Gulps down zombies whole, then produce sun",
+  "zh": "将僵尸整只吞下，并产出阳光"
+ },
+ "description": {
+  "en": "Toadstools gulp down zombies whole, then produce sun.",
+  "zh": "金蟾菇将僵尸整只吞下，并产出阳光。"
+ },
+ "chat": {
+  "en": "Toadstool just can't stand being idle. \"I keep everything that I want to do on lists, and keep the lists where I can see them so that I'm always motivated!\" she said. Whenever there's work to be done, she's always the first to hop to it.",
+  "zh": "金蟾菇不喜欢傻站着。“我把所有我想做的事都记在小本子上，并总把小本子放在我能看到的地方，这样我就能时刻保持动力！”她说。每当有工作需要完成，她总能第一个跳出来。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Weakness",
+    "zh": "弱点"
+   },
+   "text": {
+    "en": "vulnerable while chewing",
+    "zh": "咀嚼时毫无攻击力"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "sun_production",
+   "text": {
+    "en": "Variable",
+    "zh": "多种"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

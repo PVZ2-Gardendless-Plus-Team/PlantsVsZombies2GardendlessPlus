@@ -1,0 +1,63 @@
+{
+ "id": "zombossmech_beach",
+ "name": {
+  "en": "Zombot Sharktronic Sub",
+  "zh": "巨鲨号深潜艇"
+ },
+ "world": "water",
+ "description": {
+  "en": "The ravenous engine of carnage from the murky depths.",
+  "zh": "来自高压深处的绞肉机。"
+ },
+ "chat": {
+  "en": "The Zombot Sharktronic Sub is a true labor of love. Dr. Zomboss obsessed over every detail of the aquatic mechanism of doom as he worked on it day in and day out from the wee hours of the morning until well after dark. He carefully handcrafted the shark's nearly impenetrable skin. He shaved each razor-sharp tooth to a point by hand. And he painstakingly installed the lethal plant-consuming fan inside the machines' horrific maw all by himself. Zomboss shed more than one tear of joy when his masterpiece was complete. Say what you will about the evil genius, but he is quite passionate about his projects.",
+  "zh": "巨鲨号深潜艇是充满爱的劳动成果。僵尸博士日复一日地工作，从凌晨一直工作到天黑，痴迷于这个水下杀手的每一个细节。他小心翼翼地手工制作鲨鱼几乎坚不可摧的皮肤，亲手将每一颗锋利的牙齿剃成尖角，还独自一人费尽心机地在机器可怕的大嘴里安装了致命的涡轮发动机。当他的杰作完成时，僵尸博士禁不住潸然泪下。不得不承认这是一位邪恶的天才，但他对自己的作品充满热情。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "mouth turbine can pull plants to it",
+    "zh": "嘴里的涡轮机将植物吸走"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "summoned zombie sharks can consume plants",
+    "zh": "召唤来的僵尸鲨鱼能把植物吞下"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 1,
+   "text": {
+    "en": "Undying",
+    "zh": "不朽"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.6,
+   "text": {
+    "en": "Hungry",
+    "zh": "饥渴"
+   }
+  }
+ ],
+ "display_offset": [
+  -60,
+  -50
+ ],
+ "variants": [
+  "zombossmech_beach2"
+ ]
+}

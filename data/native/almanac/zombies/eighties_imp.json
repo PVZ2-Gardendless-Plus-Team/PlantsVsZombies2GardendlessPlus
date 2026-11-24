@@ -1,0 +1,34 @@
+{
+ "id": "eighties_imp",
+ "name": {
+  "en": "Impunk",
+  "zh": "朋克小鬼"
+ },
+ "world": "eighties",
+ "description": {
+  "en": "Tossed past most of your defenses, then rocks out to your detriment.",
+  "zh": "被丢出越过你的大部分防线，然后再摇滚前行。"
+ },
+ "chat": {
+  "en": "Impunk's lyrics have been described as \"banal\", \"incoherent,\" and \"totally expressive of the Zompunk movement at its finest.\"",
+  "zh": "朋克小鬼的音乐风格被形容为 “平庸”、“语无伦次”，“完全表现了‘僵尸朋克’动作的精髓”。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.25,
+   "text": {
+    "en": "Average",
+    "zh": "一般"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.6,
+   "text": {
+    "en": "Hungry",
+    "zh": "饥渴"
+   }
+  }
+ ]
+}

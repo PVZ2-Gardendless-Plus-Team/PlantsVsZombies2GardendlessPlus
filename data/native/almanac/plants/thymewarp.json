@@ -1,0 +1,62 @@
+{
+ "id": "thymewarp",
+ "name": {
+  "en": "Thyme Warp",
+  "zh": "逆时草"
+ },
+ "brief": {
+  "en": "Sends zombies back where they started",
+  "zh": "将僵尸回退到他们出现的位置"
+ },
+ "description": {
+  "en": "Thyme Warps rewind time, sending zombies back where they started.",
+  "zh": "逆时草能让时间回溯，使僵尸回退到初始状态。"
+ },
+ "chat": {
+  "en": "\"Possibilities other to open be to need we.\" Warp Thyme says, \"Limited too far was time to approach unidirectional the that felt always I've.\"",
+  "zh": "“性能可的它其受接要需们我”逆时草说，“限局常非性向单的间时得觉直一我。”"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Usage",
+    "zh": "用法"
+   },
+   "text": {
+    "en": "single use, instant",
+    "zh": "一次性使用，立刻生效"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特殊"
+   },
+   "text": {
+    "en": "rewound zombies have restored health",
+    "zh": "被回溯的僵尸血量会回满"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "area",
+   "text": {
+    "en": "Full Board",
+    "zh": "全屏"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

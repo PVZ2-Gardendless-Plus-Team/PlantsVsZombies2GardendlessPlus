@@ -94,6 +94,7 @@ func _run() -> void:
 	_test_settings()
 	_test_world_unlocks()
 	await _test_menu_flow()
+	await _test_almanac()
 	_test_modding()
 
 
@@ -774,6 +775,118 @@ func _test_world_unlocks() -> void:
 
 
 ## Drives the real shell: title -> map -> level -> pause -> map.
+func _test_almanac() -> void:
+	section("almanac")
+	_clear_all_saves()
+
+	# Pages: PVZGE's text, keyed by plant and zombie id.
+	check(">=200 plant pages", Data.almanac_plants.size() >= 200)
+	check(">=230 zombie pages", Data.almanac_zombies.size() >= 230)
+	check_eq("plant names are PVZGE's", AlmanacData.plant_name(&"wallnut"), "Wall-nut")
+	check_eq("zombie names are PVZGE's", AlmanacData.zombie_name(&"tutorial_armor1"),
+			"Conehead Zombie")
+	check_eq("a plain string works as text", AlmanacData.localized("hi"), "hi")
+	check_eq("a dict falls back to English",
+			AlmanacData.localized({"zh": "x", "en": "y"}), "y")
+	check_eq("an unknown plant still has a name", AlmanacData.plant_name(&"no_such"),
+			"No Such")
+	var order := AlmanacData.plant_order()
+	check_eq("plants follow the seed chooser's order", order.slice(0, 2),
+			[&"sunflower", &"peashooter"] as Array[StringName])
+	check_eq("zombies follow PVZGE's almanac order",
+			AlmanacData.zombie_order()[0], &"tutorial")
+
+	var stats := AlmanacData.plant_stats(&"peashooter")
+	var by_type := {}
+	for row in stats:
+		by_type[row["type"]] = row["value"]
+	check_eq("sun cost comes from the plant", by_type.get("sun_cost"), "100")
+	check_eq("recharge too", by_type.get("recharge"), "5")
+	check_eq("damage comes from the page", by_type.get("damage"), "20")
+	check_eq("range reads its text", by_type.get("range"), "Straight")
+	check("zombie rows carry a bar level",
+			AlmanacData.zombie_stats(&"tutorial")[0].get("level", -1.0) == 0.25)
+
+	# Discovery: holiday reskins count as the zombie whose page lists them.
+	check_eq("a variant maps to its page", AlmanacData.entry_for_zombie(&"birthday"),
+			&"tutorial")
+	check_eq("a page maps to itself", AlmanacData.entry_for_zombie(&"tutorial_armor1"),
+			&"tutorial_armor1")
+	check_eq("unmet zombies are hidden", Saves.zombie_progress(&"tutorial"),
+			AlmanacData.HIDDEN)
+	var board := _make_board()
+	board.spawn_zombie(&"birthday", 2)
+	check_eq("meeting one marks its page met", Saves.zombie_progress(&"tutorial"),
+			AlmanacData.MET)
+	check("the lawn remembers it", board.met_zombies.has(&"tutorial"))
+	check("progress never goes down",
+			not Saves.discover_zombie(&"tutorial", AlmanacData.HIDDEN))
+	board.queue_free()
+
+	var main = load("res://game/main.tscn").instantiate()
+	main.level_transition_delay = 0.05
+	add_child(main)
+	await get_tree().process_frame
+	main.load_level(&"tutorial_1")
+	await get_tree().process_frame
+	main.board.spawn_zombie(&"tutorial_armor1", 1)
+	main._on_won()
+	check_eq("winning makes the met zombies known",
+			Saves.zombie_progress(&"tutorial_armor1"), AlmanacData.KNOWN)
+	main.queue_free()
+	await get_tree().process_frame
+
+	# The screen.
+	var screen := AlmanacScreen.new()
+	add_child(screen)
+	await get_tree().process_frame
+	check_eq("it opens on plants", screen.page, &"plants")
+	check_eq("on the first plant", screen.current_plant, &"sunflower")
+	screen.show_plant(&"peashooter")
+	check_eq("a card shows its plant", screen._plant_view["name"].text, "Peashooter")
+	check("with its description",
+			screen._plant_view["text"].text.contains("first line of defence"))
+	check("and its stat rows", screen._plant_view["stats"].get_child_count() > 0)
+	check("tabs switch", screen.switch_to(&"zombies") and screen._pages[&"zombies"].visible)
+	check("a hidden zombie cannot be opened", not screen.show_zombie(&"tutorial_gargantuar"))
+	check("its card is disabled", screen._zombie_cards[&"tutorial_gargantuar"].disabled)
+	check("a known zombie opens", screen.show_zombie(&"tutorial_armor1"))
+	check_eq("with its name", screen._zombie_view["name"].text, "Conehead Zombie")
+	Saves.discover_zombie(&"tutorial_flag", AlmanacData.MET)
+	screen.show_zombie(&"tutorial_flag")
+	check_eq("a met zombie stays a mystery", screen._zombie_view["name"].text, "???")
+	var left := [false]
+	screen.back_requested.connect(func(): left[0] = true)
+	var esc := InputEventAction.new()
+	esc.action = &"ui_cancel"
+	esc.pressed = true
+	screen._unhandled_input(esc)
+	check("escape leaves", left[0])
+	screen.queue_free()
+
+	# Reached from the world map, and back to it.
+	var app: App = load("res://game/app.tscn").instantiate()
+	add_child(app)
+	await get_tree().process_frame
+	app.show_world_map(&"tutorial")
+	await get_tree().process_frame
+	var button := app.screen.find_child("Almanac", true, false) as Button
+	check("the map has an almanac button", button != null)
+	if button != null:
+		button.pressed.emit()
+		await get_tree().process_frame
+		await get_tree().process_frame
+		check("it opens the almanac", app.screen is AlmanacScreen)
+		app.screen.back_requested.emit()
+		await get_tree().process_frame
+		await get_tree().process_frame
+		check("back returns to the map", app.screen is WorldMap)
+	app.queue_free()
+	await get_tree().process_frame
+	_clear_all_saves()
+	end_section()
+
+
 func _test_menu_flow() -> void:
 	section("menu flow")
 	_clear_all_saves()

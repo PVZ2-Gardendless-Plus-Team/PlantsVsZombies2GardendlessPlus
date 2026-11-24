@@ -1,0 +1,34 @@
+{
+ "id": "mummy_armor4",
+ "name": {
+  "en": "Pyramid-Head Mummy",
+  "zh": "金字塔头木乃伊"
+ },
+ "world": "egypt",
+ "description": {
+  "en": "His pyramid-shaped headgear provides triangular noggin protection.",
+  "zh": "他那金字塔形的头盔，让他得到了三角，或者说三维立体的保护。"
+ },
+ "chat": {
+  "en": "Pyramid-Head Mummy isn't aware that his pyramid is pyramid-shaped. He's a little slow in that respect.",
+  "zh": "金字塔头木乃伊并不清楚他的金字塔是金字塔形状的。他在这方面还欠缺一些理解能力。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.8,
+   "text": {
+    "en": "Machined",
+    "zh": "重甲"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ]
+}

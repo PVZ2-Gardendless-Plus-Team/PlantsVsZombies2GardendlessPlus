@@ -1,0 +1,34 @@
+{
+ "id": "future_armor4",
+ "name": {
+  "en": "Holo Head Zombie",
+  "zh": "全息头僵尸"
+ },
+ "world": "future",
+ "description": {
+  "en": "Holo Head Zombie's head mounted force field provides hyper-protection.",
+  "zh": "全息头僵尸的头部周围的力场提供了超强保护。"
+ },
+ "chat": {
+  "en": "The force field gets a unique color from frequency harmonics and a liberal dose of purple paint.",
+  "zh": "力场的独特颜色来自谐波频率和大量的紫色颜料。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.8,
+   "text": {
+    "en": "Machined",
+    "zh": "重甲"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ]
+}

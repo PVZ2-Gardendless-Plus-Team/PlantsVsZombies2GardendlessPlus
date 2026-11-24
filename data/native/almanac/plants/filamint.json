@@ -1,0 +1,41 @@
+{
+ "id": "filamint",
+ "name": {
+  "en": "Fila-mint",
+  "zh": "电能薄荷"
+ },
+ "brief": {
+  "en": "Boosts electricity plants",
+  "zh": "强化带电植物"
+ },
+ "description": {
+  "en": "Fila-mints do electric damage and provide a temporary boost to all Fila-mint Family plants on the lawn.",
+  "zh": "电能薄荷在种植时电击全场的敌人，并为所有电能家族植物带来增益效果。"
+ },
+ "chat": {
+  "en": "Fila-mint hovers enigmatically and electrically over the lawn, surveying his surroundings. He nods, once. It is good.",
+  "zh": "电能薄荷神奇地、带电地悬浮在草坪上空，审视着四周。他点了下头，一下，情况不错。"
+ },
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "duration",
+   "value": 12
+  },
+  {
+   "type": "special",
+   "text": {
+    "en": "Electric Attack",
+    "zh": "电能攻击"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

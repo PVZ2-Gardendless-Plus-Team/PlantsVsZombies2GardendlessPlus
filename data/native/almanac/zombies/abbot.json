@@ -1,0 +1,37 @@
+{
+ "id": "abbot",
+ "name": {
+  "en": "Abbot Zombie",
+  "zh": "住持僵尸"
+ },
+ "world": "kongfu",
+ "description": {
+  "en": "Regular zombie who has pursued advanced studies in Kongfu.",
+  "zh": "普通但已在功夫领域完成深造的僵尸。"
+ },
+ "chat": {
+  "en": "Don't lump him together with that sloppy, perpetually drunk zombie.",
+  "zh": "不要将他和那个不注重打理还整天醉醺醺的家伙混为一谈。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.4,
+   "text": {
+    "en": "Solid",
+    "zh": "略强"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ],
+ "variants": [
+  "abbot_armor3"
+ ]
+}

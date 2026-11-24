@@ -1,0 +1,38 @@
+{
+ "id": "cowboy_flag_veteran",
+ "name": {
+  "en": "Cowboy Rally Zombie",
+  "zh": "大动员牛仔"
+ },
+ "world": "cowboy",
+ "description": {
+  "en": "Cowboy Rally Zombie marks the arrival of a sizable stampede of zombies.",
+  "zh": "大动员牛仔代表着浩浩荡荡的僵尸的来临。"
+ },
+ "chat": {
+  "en": "Arrows point to the brain on Cowboy Rally's Flag, as if to say, \"Hey, everyone, I would like to emphasize this image.\" It's canny design.",
+  "zh": "大动员牛仔旗帜上的箭头指着脑子，就好像是在告诉大家，“喂，大伙，你们看得见吗，这个图片？看得见吗，喂？”真是精明的设计。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.5,
+   "text": {
+    "en": "Protected",
+    "zh": "加强"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.85,
+   "text": {
+    "en": "Speedy",
+    "zh": "快速"
+   }
+  }
+ ],
+ "display_offset": [
+  30,
+  0
+ ]
+}

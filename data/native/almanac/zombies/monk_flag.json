@@ -1,0 +1,38 @@
+{
+ "id": "monk_flag",
+ "name": {
+  "en": "Flag Monk Zombie",
+  "zh": "武僧旗帜僵尸"
+ },
+ "world": "kongfu",
+ "description": {
+  "en": "Marks the arrival of a huge noisy \"wave\" of zombies.",
+  "zh": "预示着一大波吵吵闹闹的僵尸的到来。"
+ },
+ "chat": {
+  "en": "He used to be responsible for the flag-raising ceremony in the temple.",
+  "zh": "他以前就负责堂里的升旗仪式。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.25,
+   "text": {
+    "en": "Average",
+    "zh": "一般"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ],
+ "display_offset": [
+  15,
+  0
+ ]
+}

@@ -1,0 +1,60 @@
+{
+ "id": "zomboni",
+ "name": {
+  "en": "Zomboni",
+  "zh": "造冰车僵尸"
+ },
+ "world": "modern",
+ "description": {
+  "en": "A technological marvel from the great white north, Zomboni ices over your lawn into a barren wasteland.",
+  "zh": "作为来自加拿大冰雪地带的科技之光，造冰车僵尸让你的前院被冰雪覆盖，变成一方废土。"
+ },
+ "chat": {
+  "en": "Introducing the Zomboni - the coolest undead on wheels! Caution: Not your typical ice resurfacer. We repeat, NOT a Zamboni® brand ice resurfacing machine!\nThis frozen fiend from the north will turn your lawn into a slippery slope of doom faster than you can say \"brain freeze!\"",
+  "zh": "这就是造冰车僵尸——最冷酷的驾驶者！注意：不是你想的那种普普通通的四轮制冰机。重复一遍，不是 Zamboni® 商标的制冰机！\n这个来自北方的冰术恶魔能在你喊出“脑结冰了！”之前把你的前院变成冰封地狱！"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Damage",
+    "zh": "攻击"
+   },
+   "text": {
+    "en": "crushes plants",
+    "zh": "碾压植物"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "creates an ice trail behind it",
+    "zh": "在身后形成冰道"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.7,
+   "text": {
+    "en": "Hardened",
+    "zh": "强化"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.4,
+   "text": {
+    "en": "Stiff",
+    "zh": "迟钝"
+   }
+  }
+ ],
+ "display_offset": [
+  40,
+  -30
+ ]
+}

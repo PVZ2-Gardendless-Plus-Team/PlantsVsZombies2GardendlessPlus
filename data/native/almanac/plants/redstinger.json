@@ -1,0 +1,47 @@
+{
+ "id": "redstinger",
+ "name": {
+  "en": "Red Stinger",
+  "zh": "红针花"
+ },
+ "brief": {
+  "en": "Fires shots at full force when close to home and becomes more defensive further from it",
+  "zh": "离草坪左侧越远，攻击力越低，同时防御力越高"
+ },
+ "description": {
+  "en": "Red Stingers fire shots at full force when close to home, and become more defensive further from it.",
+  "zh": "红针花靠近草坪左侧时集中火力发射子弹，远离则会提升防御力，降低火力。"
+ },
+ "chat": {
+  "en": "Flexibility is of key importance to Red Stinger. \"I do stretching exercises every morning,\" he says. \"It's important to stay physically and mentally nimble.\"",
+  "zh": "柔韧性对于红针花来说是非常重要的。“我每天早上都作拉伸练习，”他说。“这对精神与肉体时刻保持灵敏反应十分重要。”"
+ },
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "text": {
+    "en": "30/20",
+    "zh": "30/20"
+   }
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "Straight",
+    "zh": "直线"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

@@ -1,0 +1,73 @@
+{
+ "id": "sky_gargantuar",
+ "name": {
+  "en": "Airborne Gargantuar",
+  "zh": "飞行巨尸"
+ },
+ "world": "sky",
+ "description": {
+  "en": "Destroying everything with its bare hands with nothing to be affraid of.",
+  "zh": "徒手摧毁一切，并且无所畏惧的巨尸。"
+ },
+ "chat": {
+  "en": "Just like a pair of worn-out headphones, the Flying Gargantuar's aircraft has uneven power output on the left and right. In fact, right now, he's slowly spinning in place.",
+  "zh": "就像用久了的耳机一样，飞行巨尸的飞行器左右功率不相同，其实现在他正以极慢的速度自转呢。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Damage",
+    "zh": "攻击"
+   },
+   "text": {
+    "en": "crushes plants with fists",
+    "zh": "用重拳摧毁植物"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特殊"
+   },
+   "text": {
+    "en": "damages your ship with a drill",
+    "zh": "用电钻破坏你的飞船"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "launches Imp Paratroopers when damaged",
+    "zh": "受重伤时丢出伞兵小鬼"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.9,
+   "text": {
+    "en": "Great",
+    "zh": "巨大"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.6,
+   "text": {
+    "en": "Hungry",
+    "zh": "饥渴"
+   }
+  }
+ ],
+ "display_offset": [
+  20,
+  -60
+ ],
+ "variants": [
+  "sky_gargantuar_armor2_thrower"
+ ]
+}

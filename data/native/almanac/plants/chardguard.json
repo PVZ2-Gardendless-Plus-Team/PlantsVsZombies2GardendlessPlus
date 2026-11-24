@@ -1,0 +1,40 @@
+{
+ "id": "chardguard",
+ "name": {
+  "en": "Chard Guard",
+  "zh": "甜菜护卫"
+ },
+ "brief": {
+  "en": "Blocks and hurls zombies backwards",
+  "zh": "阻挡并击退僵尸"
+ },
+ "description": {
+  "en": "Chard Guards are defensive blockers that can hurl zombies backwards.",
+  "zh": "甜菜护卫利用坚韧的身躯和菜叶将僵尸击退。"
+ },
+ "chat": {
+  "en": "You might remember Chard Guard from his days in the WWF (that's World Wrestling Foliage). When he was in the ring - boy-oh-boy - he was something to behold! His moves! His style! His attitude! The crowd loved him. He was quite the star for a while there. Sure, those days are behind him. But if you watch carefully, when Chard Guard is fighting zombies, you'll see him use the wrestling move he made famous. The ol' Knock 'Em Dead maneuver - it gets 'em every time.",
+  "zh": "你也许还记得WWF里（世界蔬叶摔角大赛）甜菜护卫的闪光时刻。当时他获得“男仔中的男仔”金腰带，那真的是嗨翻全场，万众瞩目！他的动作！他的战风！他的气势！大家爱死他了。那个时候他确实是人气明星。当然，那也已经是之前的事情了。但是如今如果你仔细观察，当甜菜护卫和僵尸战斗的时候，你会看到他使用的正是看家招式————摔跤动作。称之为“一击入魂”的秘技……真是百用百中。"
+ },
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "special",
+   "text": {
+    "en": "Leaf Pushes",
+    "zh": "叶子抽打击退"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

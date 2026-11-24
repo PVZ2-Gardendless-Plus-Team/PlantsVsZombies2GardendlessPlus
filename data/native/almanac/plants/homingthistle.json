@@ -1,0 +1,44 @@
+{
+ "id": "homingthistle",
+ "name": {
+  "en": "Homing Thistle",
+  "zh": "导向蓟"
+ },
+ "brief": {
+  "en": "Attacks farthest left target in any lane",
+  "zh": "向场地最左侧目标发动攻击"
+ },
+ "description": {
+  "en": "Homing Thistles fire seeking shots at targets that are the closest to home.",
+  "zh": "导向蓟会向离家最近的目标发射追踪子弹。"
+ },
+ "chat": {
+  "en": "Don't even think about trying to pull one over on Homing Thistle. He's got a bead on you. He sees right through your facade. It's like he has a laser beam... aimed at your soul.",
+  "zh": "别想着能欺骗导向蓟。他能一眼把你看穿，穿过你表露的假象，像是一道镭射光，精准地瞄着你的灵魂！"
+ },
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 40
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "Full Board",
+    "zh": "全屏"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

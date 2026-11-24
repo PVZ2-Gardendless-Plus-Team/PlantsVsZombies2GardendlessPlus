@@ -1,0 +1,66 @@
+{
+ "id": "shadowpeashooter",
+ "name": {
+  "en": "Shadow Peashooter",
+  "zh": "暗影豌豆"
+ },
+ "brief": {
+  "en": "Fires piercing slowing bolts",
+  "zh": "向僵尸发射穿透且使之减速的光束"
+ },
+ "description": {
+  "en": "Shadow Peashooters are shadow plants that fire piercing shadowy peas at zombies.",
+  "zh": "暗影豌豆属于暗影植物，得到暗影强化时能穿透整行僵尸。"
+ },
+ "chat": {
+  "en": "\"Phoot, \" Shadow Peashooter says, emitting a shadowy, ah, hmmm, I guess you could call it a pea, at a distant zombie. \"Uph!\" gasps the zombie in the evident surprise. There's a lot going on under the surface between these two.",
+  "zh": "“噗。”暗影豌豆说着，朝远处的僵尸射出了一枚暗影般的……呃……嗯……大概可以称之为豌豆的东西吧。“呃啊！”那僵尸显然吃了一惊，倒吸一口气。此时，暗流在这两者之间涌动。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "fires piercing, slowing bolts when powered",
+    "zh": "暗影状态下，发射穿透的、减速效果的电光"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "hides and swallows zombies that approach",
+    "zh": "能隐蔽自身并吞噬靠近的僵尸"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 20
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "Straight/Piercing",
+    "zh": "直线/穿透"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

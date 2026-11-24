@@ -1,0 +1,66 @@
+{
+ "id": "coconutcannon",
+ "name": {
+  "en": "Coconut Cannon",
+  "zh": "椰子加农炮"
+ },
+ "brief": {
+  "en": "Tap on the cannon to fire an explosive coconut",
+  "zh": "点击发射一颗爆炸性椰子炮弹"
+ },
+ "description": {
+  "en": "Coconut Cannons fire down a single lane, causing a medium explosion on impact.",
+  "zh": "椰子加农炮沿着本行发射，炸裂时造成范围性伤害。"
+ },
+ "chat": {
+  "en": "Sure, he's a hairy old man, but Coconut Cannon can still fire on all cylinders. The reason he's so hairy: he's in-between waxings.",
+  "zh": "当然他已经是个长发老人，但是椰子加农炮仍然能用各种枪管发射。他之所以这么多毛发，是因为他还在接受蜜蜡除毛服务。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Usage",
+    "zh": "用途"
+   },
+   "text": {
+    "en": "tap to fire",
+    "zh": "点击发射"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "on impact, explodes in medium area",
+    "zh": "击中目标时，在中等范围内爆炸"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 900
+  },
+  {
+   "type": "area",
+   "text": {
+    "en": "3x3",
+    "zh": "3x3 范围"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

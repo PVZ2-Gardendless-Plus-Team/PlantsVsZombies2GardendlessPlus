@@ -1,0 +1,80 @@
+{
+ "id": "abbot_3section_staff",
+ "name": {
+  "en": "Three-section Staff Abbot",
+  "zh": "三节棍住持僵尸"
+ },
+ "world": "kongfu",
+ "description": {
+  "en": "Leaps above your defences and returns most of the projectiles in an area.",
+  "zh": "越过你的防线，并且将周围的子弹尽数反弹。"
+ },
+ "chat": {
+  "en": "You thought that the Abbots are only capable with Qigong? Stop underestimating them!",
+  "zh": "以为住持们只会玩弄气功吗？太轻敌了！"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "leaps above the plants that survive from his staff-attack",
+    "zh": "承受住其棍击的植物会被他越过"
+   }
+  },
+  {
+   "name": {
+    "en": "Weakness",
+    "zh": "弱点"
+   },
+   "text": {
+    "en": "can be blocked by Tall-nuts",
+    "zh": "会被高坚果阻挡"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "returns projectiles in an area across 3 lanes",
+    "zh": "反弹三行范围内自身附近的所有子弹"
+   }
+  },
+  {
+   "name": {
+    "en": "Weakness",
+    "zh": "弱点"
+   },
+   "text": {
+    "en": "cannot reach the projectiles from Cantaloupe-pults",
+    "zh": "无法够到哈密瓜投手的子弹"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.7,
+   "text": {
+    "en": "Hardened",
+    "zh": "强化"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.6,
+   "text": {
+    "en": "Hungry",
+    "zh": "饥渴"
+   }
+  }
+ ],
+ "display_offset": [
+  30,
+  0
+ ]
+}

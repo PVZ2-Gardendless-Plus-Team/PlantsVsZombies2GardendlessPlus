@@ -1,0 +1,56 @@
+{
+ "id": "modern_allstar",
+ "name": {
+  "en": "All-Star Zombie",
+  "zh": "全明星僵尸"
+ },
+ "world": "modern",
+ "description": {
+  "en": "A heavy-duty zombie who charges your defensive line.",
+  "zh": "健壮有力，并且会直接冲向你的防御线。"
+ },
+ "chat": {
+  "en": "All-Star Zombie is a third-round draft pick and shows a lot of promise, but come on, his salary demands are beyond ridiculous. Ten million brains per year? For FIFTY YEARS?",
+  "zh": "全明星僵尸通过了第三轮选秀，并且展现出了非凡的潜力。但是天啊，他提出的薪资简直是太夸张了。每年一千万脑子？而且持续整整 50 年？"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Damage",
+    "zh": "攻击"
+   },
+   "text": {
+    "en": "charges like a flighty zombie upon entering the lawn and destroys the first plant he meets",
+    "zh": "蓄力飞速冲进草坪，并摧毁遇到的第一株植物"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "slows down and becomes a stiff zombie after tackling a plant",
+    "zh": "解决掉一株植物后减速，变得迟缓"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.7,
+   "text": {
+    "en": "Hardened",
+    "zh": "强化"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 1,
+   "text": {
+    "en": "Flighty",
+    "zh": "飞速"
+   }
+  }
+ ]
+}

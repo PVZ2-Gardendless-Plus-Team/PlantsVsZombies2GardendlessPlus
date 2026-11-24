@@ -1,0 +1,56 @@
+{
+ "id": "snapdragon",
+ "name": {
+  "en": "Snapdragon",
+  "zh": "火龙草"
+ },
+ "brief": {
+  "en": "Breaths fire in an area in front of it",
+  "zh": "向身前区域吐息"
+ },
+ "description": {
+  "en": "Snapdragons breathe fire that causes damage in 6 adjacent tiles.",
+  "zh": "火龙草向毗邻的 6 格吐出有伤害的火焰。"
+ },
+ "chat": {
+  "en": "Although the most powerful dragon in the plant kingdom, he still dreams of wings and seeing the world beneath him.",
+  "zh": "就算他是植物王国里最强大的一条龙，他仍然希望有一对翅膀，俯瞰整个世界。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Area",
+    "zh": "范围"
+   },
+   "text": {
+    "en": "damages all zombies in the 6 tiles in front of it",
+    "zh": "对身前 6 个格子内的所有僵尸造成伤害"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 30
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "Close",
+    "zh": "接近"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

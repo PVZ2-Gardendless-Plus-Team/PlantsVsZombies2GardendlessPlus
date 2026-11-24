@@ -1,0 +1,34 @@
+{
+ "id": "future",
+ "name": {
+  "en": "Future Zombie",
+  "zh": "未来僵尸"
+ },
+ "world": "future",
+ "description": {
+  "en": "Regular futuristic jumpsuit zombie.",
+  "zh": "普通的穿着未来连体服的僵尸。"
+ },
+ "chat": {
+  "en": "Future Zombies look good in red shirts. Future fact #23: Nothing bad happens to red shirts.",
+  "zh": "未来僵尸穿着红色制服看上去不错。在未来的事实 No.23：穿着红色制服，则不会有坏事降临。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.25,
+   "text": {
+    "en": "Average",
+    "zh": "一般"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ]
+}
