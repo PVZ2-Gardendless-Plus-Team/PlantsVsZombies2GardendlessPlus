@@ -1254,11 +1254,12 @@ func _test_audio() -> void:
 	print("\n[audio]")
 	check("a backend is selected", Audio.backend != null)
 	check("backend has a name", Audio.backend.backend_name() != "")
-	# FMOD is not installed here, so its backend must decline rather than be
-	# picked and then fail at every call.
+	# Without the FMOD addon its backend must decline rather than be picked
+	# and then fail at every call; with it, it must win.
 	var fmod: AudioBackend = load("res://core/audio/backends/fmod_backend.gd").new()
-	check("fmod backend declines when absent", not fmod.is_available())
-	check_eq("so a fallback was chosen", Audio.backend.backend_name() != "fmod", true)
+	var installed := Engine.has_singleton("FmodServer")
+	check_eq("fmod backend is available exactly when installed", fmod.is_available(), installed)
+	check_eq("and is chosen exactly then", Audio.backend.backend_name() == "fmod", installed)
 
 	check("catalog loaded", Audio.catalog.size() > 20, "%d" % Audio.catalog.size())
 	check("no catalog errors", Audio.catalog.errors.is_empty(),
@@ -1395,8 +1396,39 @@ func _test_fmod_backend() -> void:
 	check_eq("a bus is reached by path", server.buses.get("bus:/Music").volume, 0.5)
 	fmod.shutdown()
 
+	# Events the built banks lack go to the fallback, and parameters are only
+	# set where the banks have them (the extension errors otherwise).
+	server = FakeFmodServer.new()
+	server.known = ["event:/SFX/Plants/Shoot", "event:/Music/InGame/Egypt"]
+	server.event_params = {"event:/Music/InGame/Egypt": ["state"]}
+	server.global_names = []
+	fmod = load("res://core/audio/backends/fmod_backend.gd").new()
+	var spare := FakeBackend.new()
+	fmod.fallback = spare
+	fmod.attach(server)
+	var newer := AudioEvent.from_dict({"id": "t.new", "fmod": "event:/SFX/Plants/New"})
+	var tutorial := AudioEvent.from_dict({"id": "t.tut", "fmod": "event:/Music/InGame/Tutorial",
+			"music": true})
+	fmod.play(shoot)
+	fmod.play(newer)
+	check_eq("a banked effect goes to FMOD", server.one_shots, ["event:/SFX/Plants/Shoot"])
+	check_eq("an unbanked one goes to the fallback", spare.played, [&"t.new"])
+	fmod.play_music(tutorial)
+	check_eq("unbanked music goes to the fallback", spare.music, &"t.tut")
+	fmod.play_music(lawn)
+	check_eq("banked music stops the fallback's", spare.music, &"")
+	fmod.set_parameter(&"state", 2.0)
+	fmod.set_parameter(&"volume", 2.0)
+	check_eq("only the event's own parameters are set", server.instances[0].parameters, {"state": 2.0})
+	check_eq("and no unknown global", server.globals, {})
+	fmod.shutdown()
+
 
 class FakeFmodServer extends RefCounted:
+	## null: every path and name exists, as for a server that cannot list them.
+	var known: Variant = null
+	var event_params: Dictionary = {}
+	var global_names: Variant = null
 	var one_shots: Array = []
 	var instances: Array = []
 	var globals: Dictionary = {}
@@ -1427,6 +1459,56 @@ class FakeFmodServer extends RefCounted:
 
 	func update() -> void:
 		pass
+
+	func check_event_path(path: String) -> bool:
+		return known == null or path in known
+
+	func get_event(path: String) -> Object:
+		if known == null:
+			return null
+		return FakeFmodDescription.new(event_params.get(path, []))
+
+	func get_global_parameter_desc_list() -> Array:
+		var names: Array = ["state"] if global_names == null else global_names
+		return names.map(func(n): return FakeFmodParam.new(n))
+
+
+class FakeFmodDescription extends RefCounted:
+	var names: Array
+
+	func _init(n: Array) -> void:
+		names = n
+
+	func get_parameters() -> Array:
+		return names.map(func(n): return FakeFmodParam.new(n))
+
+
+class FakeFmodParam extends RefCounted:
+	var _name: String
+
+	func _init(n: String) -> void:
+		_name = n
+
+	func get_name() -> String:
+		return _name
+
+
+## Records what the FMOD backend hands its fallback.
+class FakeBackend extends AudioBackend:
+	var played: Array = []
+	var music: StringName = &""
+
+	func can_play(_event: AudioEvent) -> bool:
+		return true
+
+	func play(event: AudioEvent, _position: Variant = null) -> void:
+		played.append(event.id)
+
+	func play_music(event: AudioEvent) -> void:
+		music = event.id
+
+	func stop_music() -> void:
+		music = &""
 
 
 class FakeFmodEvent extends RefCounted:
