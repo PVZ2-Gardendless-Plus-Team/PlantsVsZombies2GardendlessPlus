@@ -54,11 +54,10 @@ func is_weekly_plant() -> bool:
 ## The name shown on its card, in the player's language where it has one.
 func display_name() -> String:
 	if not names.is_empty():
-		var lang := TranslationServer.get_locale().get_slice("_", 0)
-		return str(names.get(lang, names.get("en", names.values()[0])))
+		return Upgrades.localized(names, String(id))
 	match type:
 		&"plant":
 			return String(param).capitalize()
 		&"upgrade":
-			return String(param).trim_prefix("upgrade_").capitalize()
+			return Upgrades.display_name(param)
 	return "%d %s" % [count, String(param).capitalize()]

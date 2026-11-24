@@ -4,7 +4,7 @@ extends RefCounted
 ## StoreCommodity, over the wares in `store.json`.
 ##
 ## Plants are sold until owned, and only once their `unlock_level` is won.
-## Upgrades are sold until owned (the `upgrades` collection in Saves). Packs of
+## Upgrades are sold until owned (`Upgrades.owns`). Packs of
 ## coins, gems or sprouts never sell out.
 ##
 ## Ticket plants take turns as plant of the week, PVZGE's TicketCount: each
@@ -36,11 +36,7 @@ static func pages() -> Array[Dictionary]:
 
 
 static func page_title(page: Dictionary) -> String:
-	var t: Variant = page.get("title", page.get("id", ""))
-	if t is Dictionary:
-		var lang := TranslationServer.get_locale().get_slice("_", 0)
-		return str(t.get(lang, t.get("en", "")))
-	return str(t)
+	return Upgrades.localized(page.get("title"), str(page.get("id", "")))
 
 
 static func item(id: StringName) -> StoreItem:
@@ -72,7 +68,7 @@ static func is_offered(it: StoreItem) -> bool:
 				return false
 			return it.unlock_level == &"" or Saves.is_cleared(it.unlock_level)
 		&"upgrade":
-			return not Saves.has_item(&"upgrades", it.param)
+			return Upgrades.exists(it.param) and not Upgrades.owns(it.param)
 		&"currency":
 			return it.count > 0
 	return false
@@ -107,7 +103,7 @@ static func buy(it: StoreItem) -> bool:
 		&"plant":
 			Saves.unlock_plant(it.param)
 		&"upgrade":
-			Saves.grant_item(&"upgrades", it.param)
+			Upgrades.grant(it.param)
 		&"currency":
 			Saves.add_currency(it.param, it.count)
 	return true
