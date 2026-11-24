@@ -91,6 +91,8 @@ func _run() -> void:
 	await _test_natural_win_condition()
 	await _test_campaign_progression()
 	await _test_rewards()
+	await _test_loot()
+	await _test_store()
 	_test_settings()
 	_test_world_unlocks()
 	await _test_menu_flow()
@@ -3346,6 +3348,186 @@ func _test_level_save_state() -> void:
 
 
 ## Wipes every save slot so the run starts from nothing.
+func _test_loot() -> void:
+	section("loot")
+	_clear_all_saves()
+	var rng := RandomNumberGenerator.new()
+	rng.seed = 7
+
+	# The tables, rolled many times, land near PVZGE's odds.
+	Saves.mark_cleared(&"tutorial_4")
+	check("tutorial 4 opens coins", Saves.has_feature(&"coins"))
+	check("the store waits for egypt6", not Saves.has_feature(&"store"))
+	var counts := {}
+	var ctx := Loot.Context.new()
+	for i in 20000:
+		for id in Loot.roll(Loot.table(&"zombie"), rng, ctx):
+			counts[id] = int(counts.get(id, 0)) + 1
+	var silver := int(counts.get(&"coin_silver", 0))
+	check("silver coins drop about 1.5%% of the time (%d)" % silver, silver > 200 and silver < 400)
+	check("gems are rare (%d)" % int(counts.get(&"gem", 0)), int(counts.get(&"gem", 0)) < 120)
+	check("no tickets outside Lawn of Doom", not counts.has(&"ticket"))
+	check("no sprouts before the Zen Garden", not counts.has(&"sprout"))
+	var lod := Loot.Context.new()
+	lod.lod = true
+	var tickets := 0
+	for i in 500:
+		tickets += Loot.roll(Loot.table(&"zombie"), rng, lod).count(&"ticket")
+	check_eq("a Lawn of Doom level gives at most 10 tickets", tickets, 10)
+	check_eq("a gold coin is worth 50", int(Loot.info(&"coin_gold").get("value")), 50)
+	Saves.reset_progress()
+	check("without the coins feature zombies drop nothing",
+			Loot.roll(Loot.table(&"zombie"), rng).is_empty())
+	Saves.mark_cleared(&"tutorial_4")
+
+	# On the lawn: a sure drop pays into the wallet when collected.
+	var board := _make_board()
+	board.setup_mowers()
+	var real_zombie_table: Variant = Data.loot["zombie"]
+	Data.loot["zombie"] = {"one_of": [{"drop": "gem", "chance": 1.0}]}
+	var z := board.spawn_zombie(&"tutorial", 2)
+	z.take_damage(99999.0)
+	await _wait_game_seconds(0.5)
+	var gems: Array = board._suns.get_children().filter(
+			func(c): return c is CoinToken and c.currency == &"gems")
+	check_eq("a dying zombie drops its loot", gems.size(), 1)
+	if not gems.is_empty():
+		gems[0].collect()
+	await _wait_game_seconds(1.0)
+	check_eq("which banks as a gem", Saves.currency(&"gems"), 1)
+	board.loot_enabled = false
+	z = board.spawn_zombie(&"tutorial", 1)
+	z.take_damage(99999.0)
+	await _wait_game_seconds(0.5)
+	check_eq("a level without coin drops drops none",
+			board._suns.get_children().filter(func(c): return c is CoinToken).size(), 0)
+	Data.loot["zombie"] = real_zombie_table
+	board.loot_enabled = true
+	check("a Lawn of Doom level is spotted",
+			(func() -> bool:
+				board.configure_loot({"level_of_the_day_config": {}})
+				return board.loot_context.lod).call())
+
+	# Winning turns the unused mowers into gold coins.
+	var mowers := board._remaining_mower_rows().size()
+	var cashed := board.cash_in_mowers()
+	check_eq("one gold coin per mower", cashed.size(), mowers)
+	check("and the mowers go", board._remaining_mower_rows().is_empty())
+	var before := Saves.currency(&"coins")
+	for c in cashed:
+		c.collect()
+	await _wait_game_seconds(1.0)
+	check_eq("worth 50 each", Saves.currency(&"coins") - before, 50 * mowers)
+	board.queue_free()
+
+	# Marigold drops coins instead of sun.
+	var mari := Data.plant(&"marigold")
+	check("marigold rolls the marigold table", mari != null and mari.components.any(
+			func(c): return c.config.get("loot_table", "") == "marigold"))
+	_clear_all_saves()
+	end_section()
+
+
+func _test_store() -> void:
+	section("store")
+	_clear_all_saves()
+	check_eq("five pages", Store.pages().size(), 5)
+	check("64 wares", Store.all_items().size() >= 64)
+
+	# What is on the shelf.
+	var jalapeno := Store.item(&"plant_jalapeno")
+	check("a plant with no level gate is on sale", Store.is_offered(jalapeno))
+	var iceweed := Store.item(&"plant_iceweed")
+	check("a gated one waits for its level", not Store.is_offered(iceweed))
+	Saves.mark_cleared(&"egypt9")
+	check("and opens when it is won", Store.is_offered(iceweed))
+	check("upgrades are on sale", Store.on_sale(&"upgrades").size() == 5)
+
+	# Buying.
+	check("cannot buy without the gems", not Store.buy(jalapeno))
+	Saves.add_currency(&"gems", 45)
+	check("can afford it now", Store.can_buy(jalapeno))
+	check("buying it", Store.buy(jalapeno))
+	check_eq("costs 40 gems", Saves.currency(&"gems"), 5)
+	check("hands the plant over", Saves.owns_plant(&"jalapeno"))
+	check("and it leaves the shelf", not Store.is_offered(jalapeno))
+	check("cannot be bought twice", not Store.buy(jalapeno))
+	var pack := Store.item(&"gems_20")
+	Saves.add_currency(&"coins", 20000)
+	check("a gem pack for coins", Store.buy(pack))
+	check_eq("adds its gems", Saves.currency(&"gems"), 25)
+	check_eq("spends its coins", Saves.currency(&"coins"), 4000)
+	check("and stays on the shelf", Store.is_offered(pack))
+	var upgrade := Store.item(&"upgrade_8_slots")
+	Saves.add_currency(&"gems", 30)
+	check("an upgrade", Store.buy(upgrade) and Saves.has_item(&"upgrades", &"upgrade_8_slots"))
+	check("sells out", not Store.is_offered(upgrade))
+	Saves.add_currency(&"sprouts", 0)
+	check("a sprout", Store.buy(Store.item(&"sprouts_1")) and Saves.currency(&"sprouts") == 1)
+
+	# Plant of the week. 2026-11-21 was a Saturday.
+	var saturday := int(Time.get_unix_time_from_datetime_string("2026-11-21T00:00:00"))
+	Store.now_override = saturday + 3600
+	check_eq("weeks start on Saturday", Store.week_start_day(), saturday / 86400)
+	check_eq("the week ends a week later", Store.seconds_left_in_week(), 7 * 86400 - 3600)
+	var weekly := Store.weekly_plant()
+	check("a ticket plant is plant of the week", Store.weekly_candidates().has(weekly))
+	var weekly_item := Store.item(StringName("plant_%s" % weekly))
+	check_eq("at a quarter price", Store.price(weekly_item), 250)
+	Saves.add_currency(&"tickets", 300)
+	Store.now_override = saturday + 6 * 86400
+	check_eq("the same plant all week", Store.weekly_plant(), weekly)
+	check_eq("tickets keep within the week", Saves.currency(&"tickets"), 300)
+	Store.now_override = saturday + 7 * 86400 + 10
+	var next := Store.weekly_plant()
+	check("a new week picks another plant", next != weekly)
+	check_eq("and empties the tickets", Saves.currency(&"tickets"), 0)
+	var shown: Array = []
+	for i in 7:
+		Store.now_override = saturday + (8 + i) * 7 * 86400
+		shown.append(Store.weekly_plant())
+	check("every ticket plant gets a turn before repeats",
+			Store.weekly_candidates().all(func(p): return shown.has(p) or p == weekly or p == next))
+
+	# The screen.
+	Store.now_override = saturday + 3600
+	var app: App = load("res://game/app.tscn").instantiate()
+	add_child(app)
+	await get_tree().process_frame
+	app.show_world_map()
+	await get_tree().process_frame
+	check("the map has no store before egypt6",
+			app.screen.find_child("Store", true, false) == null)
+	Saves.mark_cleared(&"egypt6")
+	app.show_world_map()
+	await get_tree().process_frame
+	var button: BaseButton = app.screen.find_child("Store", true, false)
+	check("then it does", button != null)
+	if button != null:
+		button.pressed.emit()
+	await get_tree().process_frame
+	await get_tree().process_frame
+	var screen := app.screen as StoreScreen
+	check("the button opens the store", screen != null)
+	if screen != null:
+		check_eq("on the plants page", screen.page, &"plants")
+		Saves.add_currency(&"gems", 40)
+		check("a plant can be bought from its card", screen.buy(&"plant_chillypepper"))
+		check("its card then says sold out",
+				(screen._cards[&"plant_chillypepper"]["button"] as Button).disabled)
+		screen.show_page(&"coins")
+		await get_tree().process_frame
+		check_eq("the coins page lists every pack", screen._cards.size(), 8)
+		screen.back_requested.emit()
+		await get_tree().process_frame
+		await get_tree().process_frame
+		check("Back returns to the map", app.screen is WorldMap)
+	app.queue_free()
+	Store.now_override = 0
+	_clear_all_saves()
+	end_section()
+
+
 func _clear_all_saves() -> void:
 	var cleared := Saves.saved_levels()
 	for level_id in cleared:
