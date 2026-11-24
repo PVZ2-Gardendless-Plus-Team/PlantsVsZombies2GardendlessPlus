@@ -63,4 +63,4 @@ func _process(delta: float) -> void:
 
 func _refresh() -> void:
 	var n := roundi(shown)
-	_label.text = str(n) if _icon.has_art() else "Coins: %d" % n
+	_label.text = str(n) if _icon.has_art() else tr("Coins: %d") % n

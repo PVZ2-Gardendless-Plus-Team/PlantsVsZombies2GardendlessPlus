@@ -162,8 +162,8 @@ func load_level(level_id: StringName) -> void:
 
 func _level_title(level: Dictionary) -> String:
 	# The world's own name, which a pack can rename without touching levels.
-	var world := runner.world_name()
-	var title := str(level.get("comment", level.get("name", _current_level)))
+	var world := tr(runner.world_name())
+	var title := tr(str(level.get("comment", level.get("name", _current_level))))
 	if world != "":
 		title = "%s - %s" % [world, title]
 	if _campaign != null:
@@ -621,9 +621,9 @@ func _toggle_fast_forward() -> void:
 func _refresh_mode_label() -> void:
 	var bits := []
 	if board.plant_food_active:
-		bits.append("Plant Food")
+		bits.append(tr("Plant Food"))
 	if board.shovel_active:
-		bits.append("Shovel")
+		bits.append(tr("Shovel"))
 	if _fast_forward:
 		bits.append("x%.1f" % fast_forward_scale)
 	_mode_label.text = "  ".join(bits)
@@ -705,11 +705,11 @@ func _on_objective_failed(objective: Objective) -> void:
 		return
 	var text := objective.describe()
 	_on_lost()
-	_set_status("Objective failed: %s" % (text if text != "" else objective.name))
+	_set_status(tr("Objective failed: %s") % (text if text != "" else objective.name))
 
 
 func _on_wave_started(index: int, total: int) -> void:
-	_wave_label.text = "Wave %d / %d" % [index, total]
+	_wave_label.text = tr("Wave %d / %d") % [index, total]
 	# PVZGE warns on every flag wave and once more on the last one.
 	if index == total and total > 1:
 		_banner.final_wave()
@@ -782,8 +782,8 @@ func _on_reward_collected(drop: Collectable) -> void:
 func _finish_level(delay: float) -> void:
 	if _campaign == null or _campaign.is_last(_current_level) \
 			or _campaign.index_of(_current_level) < 0:
-		_set_status(_campaign.completion_message if _campaign != null
-				else "Level complete!")
+		_set_status(tr(_campaign.completion_message) if _campaign != null
+				else tr("Level complete!"))
 		if return_to_map:
 			_leave_after(delay)
 		return

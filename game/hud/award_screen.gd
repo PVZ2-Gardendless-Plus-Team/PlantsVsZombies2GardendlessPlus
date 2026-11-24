@@ -122,11 +122,11 @@ func open(prize: LevelReward) -> void:
 		_packet.setup(&"plant", prize.param, cost, "")
 		_packet.disabled = true
 		_packet.visible = _display_art == null
-		_detail.text = "Costs %d sun. You can pick it before levels where you choose your seeds." % cost
+		_detail.text = tr("Costs %d sun. You can pick it before levels where you choose your seeds.") % cost
 	else:
 		_packet.hide()
 		if prize.type == &"gems":
-			_detail.text = "Gems: %d" % Saves.currency(&"gems")
+			_detail.text = tr("Gems: %d") % Saves.currency(&"gems")
 	show()
 	_button.grab_focus()
 

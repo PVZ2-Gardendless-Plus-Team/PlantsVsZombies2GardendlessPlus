@@ -44,4 +44,4 @@ func is_met() -> bool:
 
 
 func describe() -> String:
-	return "Zombies destroyed: %d / %d" % [_killed, count]
+	return tr("Zombies destroyed: %d / %d") % [_killed, count]

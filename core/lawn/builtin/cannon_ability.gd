@@ -68,5 +68,5 @@ func cooldown_fraction() -> float:
 
 func describe() -> String:
 	if can_activate():
-		return "Cannon ready"
-	return "Cannon %d%%" % int(round((_charge / cooldown) * 100.0))
+		return tr("Cannon ready")
+	return tr("Cannon %d%%") % int(round((_charge / cooldown) * 100.0))

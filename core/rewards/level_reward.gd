@@ -104,16 +104,16 @@ func grant() -> void:
 func title() -> String:
 	match type:
 		&"unlock_plant":
-			return "You got a new plant!"
+			return tr("You got a new PLANT!")
 		&"upgrade":
-			return "You got an upgrade!"
+			return tr("You got a new UPGRADE!")
 		&"worldtrophy":
-			return "You found a world key!" if param == &"worldkey" else "You found a trophy!"
+			return tr("You've earned a World Key!") if param == &"worldkey" else tr("You got a new TROPHY!")
 		&"note":
-			return "You found a note!"
+			return tr("You found a note!")
 		&"gems":
-			return "You got %d gems!" % amount
-	return "You got %d coins!" % amount
+			return tr("You got %d gems!") % amount
+	return tr("You got %d coins!") % amount
 
 
 ## The prize's own name, for the award screen and the drop's label.
@@ -121,7 +121,7 @@ func item_name() -> String:
 	if type == &"unlock_plant":
 		return String(param).capitalize()
 	if type == &"note":
-		return "Note: " + String(param).trim_prefix("note_").capitalize()
+		return tr("Note: %s") % String(param).trim_prefix("note_").capitalize()
 	if param != &"":
 		return String(param).capitalize()
 	return title()

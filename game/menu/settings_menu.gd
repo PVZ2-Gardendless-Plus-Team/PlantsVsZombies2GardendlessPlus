@@ -16,6 +16,7 @@ const OFF := Color("ff0000")
 var allow_reset_progress: bool = true
 
 var _controls: Dictionary = {}   ## setting key -> Range or BaseButton
+var _language: Button
 var _confirm: ConfirmationDialog
 
 
@@ -72,6 +73,7 @@ func _ready() -> void:
 	_add_toggle(rows, "VSync", &"vsync")
 	_add_toggle(rows, "Pause When Unfocused", &"pause_on_focus_loss")
 	_add_toggle(rows, "Unlock Every Plant", &"unlock_all_plants")
+	_add_language(rows)
 
 	var row := HBoxContainer.new()
 	row.add_theme_constant_override("separation", 14)
@@ -177,8 +179,46 @@ func _add_toggle(parent: Control, text: String, key: StringName) -> void:
 	_controls[key] = box
 
 
+## PVZGE's language row: the language's own name on a button that steps to
+## the next one, starting with "Automatic" (follow the operating system).
+func _add_language(parent: Control) -> void:
+	var row := _row(parent, "Language")
+	_language = MenuUI.button("", _next_language, Vector2(190, 44), &"green", 0.4)
+	# The name is already in its own language; it must not be translated.
+	_language.auto_translate_mode = Node.AUTO_TRANSLATE_MODE_DISABLED
+	_language.add_theme_font_size_override("font_size", 22)
+	_language.size_flags_vertical = Control.SIZE_SHRINK_CENTER
+	_language.name = "Language"
+	row.add_child(_language)
+	_show_language()
+
+
+func _language_choices() -> PackedStringArray:
+	var out := PackedStringArray([I18n.AUTO])
+	out.append_array(I18n.languages())
+	return out
+
+
+func _next_language() -> void:
+	var choices := _language_choices()
+	var i := choices.find(str(Settings.get_value(&"language")))
+	Settings.set_value(&"language", choices[(i + 1) % choices.size()])
+	_show_language()
+
+
+func _show_language() -> void:
+	_language.text = I18n.language_name(str(Settings.get_value(&"language")))
+
+
+func _notification(what: int) -> void:
+	# "Automatic (English)" is built with tr(), so it follows a switch by hand.
+	if what == NOTIFICATION_TRANSLATION_CHANGED and _language != null:
+		_show_language()
+
+
 func _on_defaults() -> void:
 	Settings.reset_to_defaults()
+	_show_language()
 	for key in _controls:
 		var c = _controls[key]
 		if c is Range:
