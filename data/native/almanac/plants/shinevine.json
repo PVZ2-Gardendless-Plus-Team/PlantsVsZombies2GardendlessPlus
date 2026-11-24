@@ -1,0 +1,62 @@
+{
+ "id": "shinevine",
+ "name": {
+  "en": "Shine Vine",
+  "zh": "闪耀藤蔓"
+ },
+ "brief": {
+  "en": "Increases sun production",
+  "zh": "促进阳光的生产"
+ },
+ "description": {
+  "en": "Shine Vines are vine plants that amplify the sun production of sun producer plants, except Moonflower, create some sun on their own, and use a sun-stun burst as a last second defense when attacked.",
+  "zh": "闪耀藤蔓能促进其依附的阳光植物的生产，使它们在生产时产出更多的阳光，月光花除外。在受到威胁的时候用阳光闪晕身边的僵尸作为防御。"
+ },
+ "chat": {
+  "en": "\"Peek-a-boo!\" giggles Shine Vine, staring directly at you, the player. \"Consider that fourth wall SHATTERED!\"",
+  "zh": "“躲猫猫！” 闪耀藤蔓咯咯笑着，直勾勾地盯着屏幕前的你。“就当这第四面墙已经碎了吧！”"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Usage",
+    "zh": "用法"
+   },
+   "text": {
+    "en": "best used on sun producer plants",
+    "zh": "最好种植在生产植物上"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "doesn't amplify Moonflower sun production",
+    "zh": "不会促进月光花的生产"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "sun_production",
+   "text": {
+    "en": "Normal",
+    "zh": "正常"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

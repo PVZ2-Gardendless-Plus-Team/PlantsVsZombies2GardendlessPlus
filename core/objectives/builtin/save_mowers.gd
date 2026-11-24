@@ -16,4 +16,4 @@ func load_state(state: Dictionary) -> void:
 
 
 func describe() -> String:
-	return "Don't lose any lawn mowers"
+	return tr("Don't lose any lawn mowers")

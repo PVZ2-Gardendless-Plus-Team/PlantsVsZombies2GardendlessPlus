@@ -1,0 +1,52 @@
+{
+ "id": "sky_dronemaker",
+ "name": {
+  "en": "Drone Engineer",
+  "zh": "无人机工程师"
+ },
+ "world": "sky",
+ "description": {
+  "en": "Crafts and throws armors with drones to other zombies.",
+  "zh": "制作并向其他僵尸投出带有无人机的盔甲。"
+ },
+ "chat": {
+  "en": "Obviously, instead of having drones slowly come over from their air base, it's better to charge straight into the fray, making and sending the drones right on the spot!",
+  "zh": "很显然，与其让无人机从基地慢悠悠地飞过来，不如冲锋陷阵，现场组装分发无人机！"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "drones will equip basic zombies with helmets and use them as strongholds for its further actions",
+    "zh": "无人机将给一般的僵尸戴上头盔，并以其为据点行动"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "drones frequently leave their strongholds, fly towards plants on the lawn, and damage them",
+    "zh": "无人机会时常离开据点，飞向场上的植物并啃食"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.8,
+   "text": {
+    "en": "Machined",
+    "zh": "重甲"
+   }
+  }
+ ],
+ "display_offset": [
+  0,
+  -20
+ ]
+}

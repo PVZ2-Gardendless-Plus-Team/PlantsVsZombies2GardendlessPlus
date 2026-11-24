@@ -1,0 +1,63 @@
+{
+ "id": "anthurium",
+ "name": {
+  "en": "Ampereum",
+  "zh": "电离红掌"
+ },
+ "brief": {
+  "en": "Fire lightning bolts and absorb electric charges",
+  "zh": "发射球状电并吸收电荷"
+ },
+ "description": {
+  "en": "Ampereums fire lightning bolts at zombies and absorb electric charges from surrounding plants.",
+  "zh": "电离红掌向僵尸发射球状闪电，并且能吸收周围植物身上的电荷。"
+ },
+ "chat": {
+  "en": "Just staying together is an ordeal for the Ampereum brothers. They must resist a powerful attraction to prevent their dangerous electrical energy from canceling out the instant they touch.",
+  "zh": "电离红掌兄弟光是待在一起都是一种历练，他们得抵抗强大的吸引力，防止身上危险的电能在碰到的一瞬间抵消殆尽。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "lightning bolts fired after absorbing charges deal much more damages",
+    "zh": "吸收电荷后发射的球状电伤害更高"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 20
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "Straight",
+    "zh": "直线"
+   }
+  },
+  {
+   "type": "special",
+   "text": {
+    "en": "Absorbs Charges",
+    "zh": "吸收电荷"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

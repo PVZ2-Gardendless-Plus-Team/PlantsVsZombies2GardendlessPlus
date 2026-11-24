@@ -1,0 +1,56 @@
+{
+ "id": "peacommando",
+ "name": {
+  "en": "Pea Commando",
+  "zh": "豌豆突击队"
+ },
+ "brief": {
+  "en": "Deploys flying pea soldiers to launch a heavy attack on the zombies",
+  "zh": "派遣飞行小兵，向僵尸发动突袭"
+ },
+ "description": {
+  "en": "Pea Commandoes deploy three flying pea soldiers to launch a heavy attack on the three leftmost zombies.",
+  "zh": "豌豆突击队派遣三只突击豌豆飞行小兵，向最靠左侧的三名僵尸发动突袭。"
+ },
+ "chat": {
+  "en": "were among those who failed the \"Air Raid\" elite selection. Rather than raiding zombie bases under the cover of night like the elites, they're better suited to guard duties at their own base!",
+  "zh": "豌豆突击队是“壮植凌云”精英选拔中落选的一批，比起那些趁夜突击僵尸基地的精英们，他们更适合在自己的基地做好守卫工作！"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "hovers above ground or water",
+    "zh": "能飘浮于水面上"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 150
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "Full Board",
+    "zh": "全屏"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

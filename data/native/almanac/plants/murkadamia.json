@@ -1,0 +1,52 @@
+{
+ "id": "murkadamia",
+ "name": {
+  "en": "Murkadamia Nut",
+  "zh": "暗影夏威夷果"
+ },
+ "brief": {
+  "en": "Powered murk damages zombies",
+  "zh": "供能时的胶体会对僵尸造成伤害"
+ },
+ "description": {
+  "en": "Murkadamia Nuts are defensive shadow plants who, when powered, grow jelly murk to damage attacking zombies.",
+  "zh": "暗影夏威夷果是一种防御型暗影植物，被暗影强化时能生成胶体，对啃食他的僵尸造成伤害。"
+ },
+ "chat": {
+  "en": "\"Some say that encasing yourself in gelatin is no way to conduct an offense, \" says Murkadamia Nut with an infectious twinkle. \"I say they just haven't planted ME yet!\"",
+  "zh": "“有人说把自己裹在明胶里根本不是进攻之道，”暗影夏威夷果眼中闪着极具感染力的光芒说道，“要我说，那是因为他们还没试试我！”"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "damaged murk regrows over time",
+    "zh": "受损的胶体随时间修复"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "plant_food",
+   "text": {
+    "en": "Armor",
+    "zh": "盔甲"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

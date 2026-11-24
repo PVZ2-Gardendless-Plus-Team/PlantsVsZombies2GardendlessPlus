@@ -1,0 +1,41 @@
+{
+ "id": "peppermint",
+ "name": {
+  "en": "Pepper-mint",
+  "zh": "热辣薄荷"
+ },
+ "brief": {
+  "en": "Boosts fire plants",
+  "zh": "强化火焰植物"
+ },
+ "description": {
+  "en": "Pepper-mints set off lane-wide bursts of flame when planted and provide a temporary boost to all Pepper-mint plants on the lawn.",
+  "zh": "热辣薄荷在种植时在全场燃起火焰，并为所有热辣家族植物带来增益效果。"
+ },
+ "chat": {
+  "en": "Pepper-mint likes heat. He's down with flames, he digs on fire, he's a total madman for oxidization and ignition. If he sees you rubbing two sticks together, he'll come over and ask about it. He can't help himself.",
+  "zh": "热辣薄荷喜欢热，他对火焰来者不拒，对烈火情有独钟，是个不折不扣的氧化与点燃狂人。要是看见你在搓两根木棍，他准会凑过来问个究竟——他实在忍不住。"
+ },
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "duration",
+   "value": 16
+  },
+  {
+   "type": "special",
+   "text": {
+    "en": "Burning Zombies",
+    "zh": "燃烧僵尸"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

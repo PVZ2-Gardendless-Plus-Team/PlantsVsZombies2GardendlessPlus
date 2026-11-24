@@ -1,0 +1,80 @@
+{
+ "id": "chilibean",
+ "name": {
+  "en": "Chili Bean",
+  "zh": "巴豆"
+ },
+ "brief": {
+  "en": "Zombies that eat it are defeated and release gas",
+  "zh": "僵尸吃下后死亡并释放眩晕气体"
+ },
+ "description": {
+  "en": "Chili Beans deliver a crippling bout of gastrointestinal distress.",
+  "zh": "巴豆会对吞食他的敌人施加致命的毒素攻击，并使其释放眩晕气体。"
+ },
+ "chat": {
+  "en": "He's not blushing, he's trying to hold it in.",
+  "zh": "他不是脸红了，而是一直在憋着什么。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Usage",
+    "zh": "用途"
+   },
+   "text": {
+    "en": "on being eaten",
+    "zh": "被啃食"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "eating zombie is destroyed and releases stunning gas",
+    "zh": "吃掉他的僵尸直接死亡，并且释放眩晕气体"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 20
+  },
+  {
+   "type": "special",
+   "text": {
+    "en": "Stun",
+    "zh": "眩晕"
+   }
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "Touch",
+    "zh": "接触"
+   }
+  },
+  {
+   "type": "plant_food",
+   "text": {
+    "en": "Duplication",
+    "zh": "分身"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

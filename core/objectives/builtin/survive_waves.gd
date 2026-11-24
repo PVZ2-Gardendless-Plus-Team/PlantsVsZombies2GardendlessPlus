@@ -19,6 +19,6 @@ func is_met() -> bool:
 
 func describe() -> String:
 	if not _spawned_all:
-		return "Survive the waves"
+		return tr("Survive the waves")
 	var left: int = board.zombie_count()
-	return "Clear the lawn" if left == 0 else "Zombies left: %d" % left
+	return tr("Clear the lawn") if left == 0 else tr("Zombies left: %d") % left

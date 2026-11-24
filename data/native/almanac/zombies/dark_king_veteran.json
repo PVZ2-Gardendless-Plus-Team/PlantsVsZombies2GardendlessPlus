@@ -1,0 +1,26 @@
+{
+ "id": "dark_king_veteran",
+ "name": {
+  "en": "Arthur King Zombie",
+  "zh": "亚瑟王僵尸"
+ },
+ "world": "dark",
+ "description": {
+  "en": "Grants knight helms to nearby zombies, any kind but himself!",
+  "zh": "为附近的僵尸授予骑士头盔，除了自己的所有僵尸！"
+ },
+ "chat": {
+  "en": "It must be easier to grant someone else with our spare helmet instead of battling on our own, right?",
+  "zh": "比起自己去战斗，把自己多余的盔甲授予他人肯定更轻松吧。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.7,
+   "text": {
+    "en": "Hardened",
+    "zh": "强化"
+   }
+  }
+ ]
+}

@@ -1,0 +1,34 @@
+{
+ "id": "future_imp",
+ "name": {
+  "en": "Bug Bot Imp",
+  "zh": "机械虫小鬼"
+ },
+ "world": "future",
+ "description": {
+  "en": "Lands on the lawn past your defenses, then hops forward.",
+  "zh": "通常被丢到草坪中央，越过你的防线，然后再一跳一跳往前走。"
+ },
+ "chat": {
+  "en": "He always wanted to \"see the world\", \"be his own boss\", and \"meet and consume interesting brains\". He still doesn't understand how he got stuck in this cramped Bug Bot job 24/7.",
+  "zh": "他一直想 “看看这个世界”、“做自己的主人”、“见识和汲取有趣的大脑”。他至今仍不明白，自己怎么会被困在这份全天候幽闭的机械虫工作中。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.4,
+   "text": {
+    "en": "Solid",
+    "zh": "略强"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.6,
+   "text": {
+    "en": "Hungry",
+    "zh": "饥渴"
+   }
+  }
+ ]
+}

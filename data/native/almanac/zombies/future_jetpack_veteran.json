@@ -1,0 +1,60 @@
+{
+ "id": "future_jetpack_veteran",
+ "name": {
+  "en": "Blastronaut Zombie",
+  "zh": "喷气宇航员僵尸"
+ },
+ "world": "future",
+ "description": {
+  "en": "Blastronaut Zombie boosts to float over all but the tallest plant barriers.",
+  "zh": "喷气宇航员僵尸按下油门能飞跃植物，除非植物能高到挡住他。"
+ },
+ "chat": {
+  "en": "Blastronaut's rocket-pack is strictly ornamental; his hovering ability comes from a deep meditative state and from being full of helium.",
+  "zh": "喷气宇航员僵尸的火箭背包只是装饰品，他的飘浮能力来自于深度冥想和充满氦气的状态。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "floats over low plants, boosts over most other plants",
+    "zh": "飞跃低矮的植物，喷气越过大部分其他植物"
+   }
+  },
+  {
+   "name": {
+    "en": "Weakness",
+    "zh": "弱点"
+   },
+   "text": {
+    "en": "tall blocking plants",
+    "zh": "高个子植物"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.4,
+   "text": {
+    "en": "Solid",
+    "zh": "略强"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 1,
+   "text": {
+    "en": "Flighty",
+    "zh": "飞速"
+   }
+  }
+ ],
+ "display_offset": [
+  0,
+  -50
+ ]
+}

@@ -1,0 +1,38 @@
+{
+ "id": "lostcity_flag_veteran",
+ "name": {
+  "en": "Rally Adventurer",
+  "zh": "大动员探宝家"
+ },
+ "world": "lostcity",
+ "description": {
+  "en": "Rally Adventurer marks the arrival of large group of adventurers.",
+  "zh": "大动员探宝家的出现代表了一大群探宝者的到来。"
+ },
+ "chat": {
+  "en": "He can't help himself from rushing towards the treasure along all zombie civilization - BRAINZ.",
+  "zh": "他已经迫不及待夺取整个僵尸文明最崇尚的瑰宝——大脑。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.5,
+   "text": {
+    "en": "Protected",
+    "zh": "加强"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.85,
+   "text": {
+    "en": "Speedy",
+    "zh": "快速"
+   }
+  }
+ ],
+ "display_offset": [
+  30,
+  0
+ ]
+}

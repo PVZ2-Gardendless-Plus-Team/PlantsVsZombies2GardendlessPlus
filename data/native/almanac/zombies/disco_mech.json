@@ -1,0 +1,50 @@
+{
+ "id": "disco_mech",
+ "name": {
+  "en": "Disco-tron 3000",
+  "zh": "迪斯科 3000"
+ },
+ "world": "future",
+ "description": {
+  "en": "Drops in disco zombies when dropping the beat.",
+  "zh": "演奏时在周围召唤迪斯科僵尸。"
+ },
+ "chat": {
+  "en": "After some initial problems with the sideburn suspension system, the Disco-tron 3000 went on to become the shufflin' dance-bot of doom it is today.",
+  "zh": "在解决了鬓角悬挂系统的一些初期问题后，迪斯科 3000 最终成为了现在的 “革新性踮脚舞蹈机”。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "summons Disco Jetpack Zombies",
+    "zh": "召唤喷气迪斯科僵尸"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.8,
+   "text": {
+    "en": "Machined",
+    "zh": "重甲"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ],
+ "display_offset": [
+  0,
+  -20
+ ]
+}

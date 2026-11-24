@@ -1,0 +1,70 @@
+{
+ "id": "west_bull_veteran",
+ "name": {
+  "en": "Rodeo Legend",
+  "zh": "骑牛竞技传奇"
+ },
+ "world": "cowboy",
+ "description": {
+  "en": "Rodeo Legend smashes a plant and launches his zombie rider past most of your defenses.",
+  "zh": "骑牛竞技传奇击溃一株植物，并将身上的牛骑手投出越过你的大部分防线。"
+ },
+ "chat": {
+  "en": "\"Legend\" perhaps overstates Rodeo Legend's status in the rodeo world. Don't tell him that, though, unless you're desperate to hear an hour-long tirade about calf-roping.",
+  "zh": "“传奇”这个词，在骑牛竞赛界用来形容骑牛竞技传奇或许过于夸张。别让他听到了，不然你会绝望地听他那长达一小时关于犊牛的演讲。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Damage",
+    "zh": "攻击"
+   },
+   "text": {
+    "en": "smashes the first plant he meets while rushing",
+    "zh": "冲刺时撞死遇到的第一株植物"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "launches a low flying imp rider over plants",
+    "zh": "低空丢出一只小鬼，越过植物"
+   }
+  },
+  {
+   "name": {
+    "en": "Weakness",
+    "zh": "弱点"
+   },
+   "text": {
+    "en": "Tall-nut blocks flying imp",
+    "zh": "高坚果能挡住飞出的小鬼"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.7,
+   "text": {
+    "en": "Hardened",
+    "zh": "强化"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.4,
+   "text": {
+    "en": "Stiff",
+    "zh": "迟钝"
+   }
+  }
+ ],
+ "display_offset": [
+  30,
+  0
+ ]
+}

@@ -21,6 +21,9 @@ func _ready() -> void:
 	# USE_SCENES=0 runs the suite on rigs converted from their DragonBones
 	# exports instead of the baked scenes, so both paths stay exercised.
 	Art.use_scenes = OS.get_environment("USE_SCENES") != "0"
+	# The checks compare English text; a player's language setting must not
+	# change what they read.
+	I18n.set_language(I18n.SOURCE_LOCALE)
 	await get_tree().process_frame
 	await _run()
 	Engine.time_scale = 1.0
@@ -91,9 +94,12 @@ func _run() -> void:
 	await _test_natural_win_condition()
 	await _test_campaign_progression()
 	await _test_rewards()
+	await _test_upgrades()
 	_test_settings()
+	await _test_translations()
 	_test_world_unlocks()
 	await _test_menu_flow()
+	await _test_almanac()
 	_test_modding()
 
 
@@ -730,6 +736,59 @@ func _test_settings() -> void:
 	end_section()
 
 
+func _test_translations() -> void:
+	section("translations")
+	check("translation files parse", I18n.errors().is_empty(), str(I18n.errors()))
+	var langs := I18n.languages()
+	check_eq("English comes first", langs[0], "en")
+	check("Simplified Chinese is offered", langs.has("zh_CN"), str(langs))
+	check_eq("a language is named in itself", I18n.language_name("zh_CN"), "简体中文")
+	check_eq("an unknown language falls back to English", I18n.resolve("xx_YY"), "en")
+	check_eq("Chinese variants find Simplified Chinese", I18n.resolve("zh_SG"), "zh_CN")
+
+	I18n.set_language("zh_CN")
+	check_eq("the locale follows the setting", I18n.locale(), "zh_CN")
+	check_eq("PVZGE's language key", I18n.language(), "zh")
+	check_eq("PVZGE's strings translate by their English text", tr("Game Paused"), "游戏暂停")
+	check_eq("the first of PVZGE's repeated strings wins", tr("RESTART"), "重新开始")
+	check_eq("the port's own strings translate", tr("Sun: %d") % 50, "阳光：50")
+	check_eq("a lyric is read by its path", I18n.lyric("SettingLyrics/Language"), "语言")
+	check_eq("a missing lyric is empty", I18n.lyric("SettingLyrics/Nope"), "")
+	check_eq("pick reads the current language", I18n.pick({"en": "a", "zh": "b"}), "b")
+	check_eq("pick falls back to English", I18n.pick({"en": "a"}), "a")
+	check_eq("pick passes plain text through", I18n.pick("plain"), "plain")
+
+	# A plain English label translates itself, and switches back live.
+	var label := MenuUI.label("Settings")
+	add_child(label)
+	await get_tree().process_frame
+	check_eq("a label shows its translation", _shown_text(label), "设置")
+	I18n.set_language("en")
+	await get_tree().process_frame
+	check_eq("and English again after a switch", _shown_text(label), "Settings")
+	label.queue_free()
+
+	# Every translation keeps the English placeholders, in order, or `%`
+	# fails at runtime.
+	var bad: Array[String] = []
+	var rx := RegEx.create_from_string("%[-+ 0#*]*\\d*(?:\\.\\d+)?[sdifoxXc%]")
+	var spec = JSON.parse_string(FileAccess.get_file_as_string(
+			"res://data/native/i18n/zh_CN.json"))
+	for en in spec["strings"]:
+		var a := rx.search_all(en).map(func(m: RegExMatch) -> String: return m.get_string())
+		var b := rx.search_all(spec["strings"][en]).map(
+				func(m: RegExMatch) -> String: return m.get_string())
+		if a != b:
+			bad.append(en)
+	check("translations keep their placeholders", bad.is_empty(), str(bad))
+	end_section()
+
+
+## What a Control actually draws: its text after auto-translation.
+func _shown_text(c: Control) -> String:
+	return c.atr(c.text)
+
+
 func _test_world_unlocks() -> void:
 	section("world unlocks")
 	var c := CampaignDef.from_dict({"id": "w", "levels": ["a", "b", "c"],
@@ -774,6 +833,118 @@ func _test_world_unlocks() -> void:
 
 
 ## Drives the real shell: title -> map -> level -> pause -> map.
+func _test_almanac() -> void:
+	section("almanac")
+	_clear_all_saves()
+
+	# Pages: PVZGE's text, keyed by plant and zombie id.
+	check(">=200 plant pages", Data.almanac_plants.size() >= 200)
+	check(">=230 zombie pages", Data.almanac_zombies.size() >= 230)
+	check_eq("plant names are PVZGE's", AlmanacData.plant_name(&"wallnut"), "Wall-nut")
+	check_eq("zombie names are PVZGE's", AlmanacData.zombie_name(&"tutorial_armor1"),
+			"Conehead Zombie")
+	check_eq("a plain string works as text", AlmanacData.localized("hi"), "hi")
+	check_eq("a dict falls back to English",
+			AlmanacData.localized({"zh": "x", "en": "y"}), "y")
+	check_eq("an unknown plant still has a name", AlmanacData.plant_name(&"no_such"),
+			"No Such")
+	var order := AlmanacData.plant_order()
+	check_eq("plants follow the seed chooser's order", order.slice(0, 2),
+			[&"sunflower", &"peashooter"] as Array[StringName])
+	check_eq("zombies follow PVZGE's almanac order",
+			AlmanacData.zombie_order()[0], &"tutorial")
+
+	var stats := AlmanacData.plant_stats(&"peashooter")
+	var by_type := {}
+	for row in stats:
+		by_type[row["type"]] = row["value"]
+	check_eq("sun cost comes from the plant", by_type.get("sun_cost"), "100")
+	check_eq("recharge too", by_type.get("recharge"), "5")
+	check_eq("damage comes from the page", by_type.get("damage"), "20")
+	check_eq("range reads its text", by_type.get("range"), "Straight")
+	check("zombie rows carry a bar level",
+			AlmanacData.zombie_stats(&"tutorial")[0].get("level", -1.0) == 0.25)
+
+	# Discovery: holiday reskins count as the zombie whose page lists them.
+	check_eq("a variant maps to its page", AlmanacData.entry_for_zombie(&"birthday"),
+			&"tutorial")
+	check_eq("a page maps to itself", AlmanacData.entry_for_zombie(&"tutorial_armor1"),
+			&"tutorial_armor1")
+	check_eq("unmet zombies are hidden", Saves.zombie_progress(&"tutorial"),
+			AlmanacData.HIDDEN)
+	var board := _make_board()
+	board.spawn_zombie(&"birthday", 2)
+	check_eq("meeting one marks its page met", Saves.zombie_progress(&"tutorial"),
+			AlmanacData.MET)
+	check("the lawn remembers it", board.met_zombies.has(&"tutorial"))
+	check("progress never goes down",
+			not Saves.discover_zombie(&"tutorial", AlmanacData.HIDDEN))
+	board.queue_free()
+
+	var main = load("res://game/main.tscn").instantiate()
+	main.level_transition_delay = 0.05
+	add_child(main)
+	await get_tree().process_frame
+	main.load_level(&"tutorial_1")
+	await get_tree().process_frame
+	main.board.spawn_zombie(&"tutorial_armor1", 1)
+	main._on_won()
+	check_eq("winning makes the met zombies known",
+			Saves.zombie_progress(&"tutorial_armor1"), AlmanacData.KNOWN)
+	main.queue_free()
+	await get_tree().process_frame
+
+	# The screen.
+	var screen := AlmanacScreen.new()
+	add_child(screen)
+	await get_tree().process_frame
+	check_eq("it opens on plants", screen.page, &"plants")
+	check_eq("on the first plant", screen.current_plant, &"sunflower")
+	screen.show_plant(&"peashooter")
+	check_eq("a card shows its plant", screen._plant_view["name"].text, "Peashooter")
+	check("with its description",
+			screen._plant_view["text"].text.contains("first line of defence"))
+	check("and its stat rows", screen._plant_view["stats"].get_child_count() > 0)
+	check("tabs switch", screen.switch_to(&"zombies") and screen._pages[&"zombies"].visible)
+	check("a hidden zombie cannot be opened", not screen.show_zombie(&"tutorial_gargantuar"))
+	check("its card is disabled", screen._zombie_cards[&"tutorial_gargantuar"].disabled)
+	check("a known zombie opens", screen.show_zombie(&"tutorial_armor1"))
+	check_eq("with its name", screen._zombie_view["name"].text, "Conehead Zombie")
+	Saves.discover_zombie(&"tutorial_flag", AlmanacData.MET)
+	screen.show_zombie(&"tutorial_flag")
+	check_eq("a met zombie stays a mystery", screen._zombie_view["name"].text, "???")
+	var left := [false]
+	screen.back_requested.connect(func(): left[0] = true)
+	var esc := InputEventAction.new()
+	esc.action = &"ui_cancel"
+	esc.pressed = true
+	screen._unhandled_input(esc)
+	check("escape leaves", left[0])
+	screen.queue_free()
+
+	# Reached from the world map, and back to it.
+	var app: App = load("res://game/app.tscn").instantiate()
+	add_child(app)
+	await get_tree().process_frame
+	app.show_world_map(&"tutorial")
+	await get_tree().process_frame
+	var button := app.screen.find_child("Almanac", true, false) as BaseButton
+	check("the map has an almanac button", button != null)
+	if button != null:
+		button.pressed.emit()
+		await get_tree().process_frame
+		await get_tree().process_frame
+		check("it opens the almanac", app.screen is AlmanacScreen)
+		app.screen.back_requested.emit()
+		await get_tree().process_frame
+		await get_tree().process_frame
+		check("back returns to the map", app.screen is WorldMap)
+	app.queue_free()
+	await get_tree().process_frame
+	_clear_all_saves()
+	end_section()
+
+
 func _test_menu_flow() -> void:
 	section("menu flow")
 	_clear_all_saves()
@@ -1254,11 +1425,12 @@ func _test_audio() -> void:
 	print("\n[audio]")
 	check("a backend is selected", Audio.backend != null)
 	check("backend has a name", Audio.backend.backend_name() != "")
-	# FMOD is not installed here, so its backend must decline rather than be
-	# picked and then fail at every call.
+	# Without the FMOD addon its backend must decline rather than be picked
+	# and then fail at every call; with it, it must win.
 	var fmod: AudioBackend = load("res://core/audio/backends/fmod_backend.gd").new()
-	check("fmod backend declines when absent", not fmod.is_available())
-	check_eq("so a fallback was chosen", Audio.backend.backend_name() != "fmod", true)
+	var installed := Engine.has_singleton("FmodServer")
+	check_eq("fmod backend is available exactly when installed", fmod.is_available(), installed)
+	check_eq("and is chosen exactly then", Audio.backend.backend_name() == "fmod", installed)
 
 	check("catalog loaded", Audio.catalog.size() > 20, "%d" % Audio.catalog.size())
 	check("no catalog errors", Audio.catalog.errors.is_empty(),
@@ -1395,8 +1567,39 @@ func _test_fmod_backend() -> void:
 	check_eq("a bus is reached by path", server.buses.get("bus:/Music").volume, 0.5)
 	fmod.shutdown()
 
+	# Events the built banks lack go to the fallback, and parameters are only
+	# set where the banks have them (the extension errors otherwise).
+	server = FakeFmodServer.new()
+	server.known = ["event:/SFX/Plants/Shoot", "event:/Music/InGame/Egypt"]
+	server.event_params = {"event:/Music/InGame/Egypt": ["state"]}
+	server.global_names = []
+	fmod = load("res://core/audio/backends/fmod_backend.gd").new()
+	var spare := FakeBackend.new()
+	fmod.fallback = spare
+	fmod.attach(server)
+	var newer := AudioEvent.from_dict({"id": "t.new", "fmod": "event:/SFX/Plants/New"})
+	var tutorial := AudioEvent.from_dict({"id": "t.tut", "fmod": "event:/Music/InGame/Tutorial",
+			"music": true})
+	fmod.play(shoot)
+	fmod.play(newer)
+	check_eq("a banked effect goes to FMOD", server.one_shots, ["event:/SFX/Plants/Shoot"])
+	check_eq("an unbanked one goes to the fallback", spare.played, [&"t.new"])
+	fmod.play_music(tutorial)
+	check_eq("unbanked music goes to the fallback", spare.music, &"t.tut")
+	fmod.play_music(lawn)
+	check_eq("banked music stops the fallback's", spare.music, &"")
+	fmod.set_parameter(&"state", 2.0)
+	fmod.set_parameter(&"volume", 2.0)
+	check_eq("only the event's own parameters are set", server.instances[0].parameters, {"state": 2.0})
+	check_eq("and no unknown global", server.globals, {})
+	fmod.shutdown()
+
 
 class FakeFmodServer extends RefCounted:
+	## null: every path and name exists, as for a server that cannot list them.
+	var known: Variant = null
+	var event_params: Dictionary = {}
+	var global_names: Variant = null
 	var one_shots: Array = []
 	var instances: Array = []
 	var globals: Dictionary = {}
@@ -1427,6 +1630,56 @@ class FakeFmodServer extends RefCounted:
 
 	func update() -> void:
 		pass
+
+	func check_event_path(path: String) -> bool:
+		return known == null or path in known
+
+	func get_event(path: String) -> Object:
+		if known == null:
+			return null
+		return FakeFmodDescription.new(event_params.get(path, []))
+
+	func get_global_parameter_desc_list() -> Array:
+		var names: Array = ["state"] if global_names == null else global_names
+		return names.map(func(n): return FakeFmodParam.new(n))
+
+
+class FakeFmodDescription extends RefCounted:
+	var names: Array
+
+	func _init(n: Array) -> void:
+		names = n
+
+	func get_parameters() -> Array:
+		return names.map(func(n): return FakeFmodParam.new(n))
+
+
+class FakeFmodParam extends RefCounted:
+	var _name: String
+
+	func _init(n: String) -> void:
+		_name = n
+
+	func get_name() -> String:
+		return _name
+
+
+## Records what the FMOD backend hands its fallback.
+class FakeBackend extends AudioBackend:
+	var played: Array = []
+	var music: StringName = &""
+
+	func can_play(_event: AudioEvent) -> bool:
+		return true
+
+	func play(event: AudioEvent, _position: Variant = null) -> void:
+		played.append(event.id)
+
+	func play_music(event: AudioEvent) -> void:
+		music = event.id
+
+	func stop_music() -> void:
+		music = &""
 
 
 class FakeFmodEvent extends RefCounted:
@@ -2104,10 +2357,29 @@ func _test_lawn_support_plants() -> void:
 	check("a grave refuses ordinary plants",
 			not board.can_place_entity(&"plant", &"peashooter", 3, 6))
 	check("but takes a grave buster", board.can_place_entity(&"plant", &"gravebuster", 3, 6))
+	var stone := board.object_at(3, 6)
 	var buster := board.place_plant(&"gravebuster", 3, 6)
-	await _wait_game_seconds(5.0)
+	check("plant food does nothing for it", not buster.apply_plant_food())
+	# PVZGE: it digs in for 0.7s, then the stone sinks while it chews for
+	# BustTime and breaks at 115 of the chewing's 130 frames.
+	await _wait_game_seconds(1.5)
+	check("the stone sinks out of sight while it chews",
+			is_instance_valid(stone) and stone.sunk and not stone.visible)
+	check("and nothing can aim at it then", not board.plant_targets_in_row(3).has(stone))
+	await _wait_game_seconds(5.5)
 	check("the grave is gone", board.object_at(3, 6) == null)
 	check("and so is the buster", not is_instance_valid(buster) or buster.is_dead)
+
+	# Eaten before it finishes, it lets the stone back up.
+	board.place_object(&"gravestone", 1, 6)
+	var stone2 := board.object_at(1, 6)
+	var eaten := board.place_plant(&"gravebuster", 1, 6)
+	await _wait_game_seconds(1.5)
+	check("a second stone sinks too", stone2.sunk)
+	eaten.take_damage(10000.0)
+	check("killing the buster mid-chew brings the stone back",
+			is_instance_valid(stone2) and not stone2.sunk and stone2.visible)
+	check("still standing", board.object_at(1, 6) == stone2)
 	board.queue_free()
 
 	# Hot potato melts a frozen plant free.
@@ -4052,7 +4324,7 @@ func _test_rewards() -> void:
 		drop.collect()
 	await _wait_game_seconds(drop.present_time + 0.3)
 	check("a new plant gets the award screen", main._award.visible)
-	check_eq("saying so", main._award._title.text, "You got a new plant!")
+	check_eq("saying so", main._award._title.text, "You got a new PLANT!")
 	main._award._on_continue()
 	check("continuing dismisses it", not main._award.visible)
 
@@ -4085,6 +4357,148 @@ func _collect_reward(main) -> void:
 	await _wait_game_seconds(drop.present_time + 0.3)
 	if main._award.visible:
 		main._award._on_continue()
+
+
+func _test_upgrades() -> void:
+	section("upgrades")
+	Saves.reset_progress()
+	check_eq("PVZGE's fourteen upgrades load", Upgrades.ids().size(), 14)
+	check_eq("listed in PVZGE's order", Upgrades.ids()[0], &"upgrade_starting_sun_lvl1")
+	check_eq("with their names", Upgrades.display_name(&"upgrade_7_slots"), "Bonus Seed Slot")
+	check("and what they do", Upgrades.description(&"upgrade_pf_refresh").contains("Plant Food"))
+	check("none owned to begin with", Upgrades.owned().is_empty())
+
+	var board := _make_board()
+	var runner := LevelRunner.new()
+	add_child(runner)
+	var level := {"id": "upgrade_test", "waves": []}
+	runner.start(level, board)
+	check_eq("no bonus: the usual starting sun", board.sun, 50)
+	check_eq("three plant food slots", board.max_plant_food, 3)
+	check_eq("no hand-launched mowers", board.manual_mowers_left, 0)
+	check_eq("no shovel refund", Upgrades.shovel_refund_rate(), 0.0)
+
+	# A level reward hands one over and names it on the award screen.
+	var prize := LevelReward.new()
+	prize.type = &"upgrade"
+	prize.param = &"upgrade_starting_sun_lvl1"
+	prize.grant()
+	check("a reward grants the upgrade", Upgrades.owns(&"upgrade_starting_sun_lvl1"))
+	check_eq("the award names it", prize.item_name(), "Sun Bonus")
+	Upgrades.grant(&"upgrade_starting_sun_lvl2")
+	for id in [&"upgrade_pf_slots_lvl1", &"upgrade_pf_slots_lvl2", &"upgrade_7_slots",
+			&"upgrade_8_slots", &"upgrade_sunshovel_lvl1", &"upgrade_sunshovel_lvl2",
+			&"upgrade_manual_mowers_1"]:
+		Upgrades.grant(id)
+
+	board.reset()
+	runner.start(level, board)
+	check_eq("Sun Bonus and Sun Boost add 25 each", board.sun, 100)
+	check_eq("the plant food bar grows to five", board.max_plant_food, 5)
+	board.reset()
+	runner.start({"id": "upgrade_test", "waves": [], "starting_sun": 150}, board)
+	check_eq("on top of a level's own starting sun", board.sun, 200)
+
+	# Switched off in the almanac, an upgrade stops counting.
+	Upgrades.set_enabled(&"upgrade_starting_sun_lvl2", false)
+	check("it reads as disabled", not Upgrades.is_enabled(&"upgrade_starting_sun_lvl2"))
+	board.reset()
+	runner.start(level, board)
+	check_eq("a disabled upgrade does not apply", board.sun, 75)
+	Upgrades.set_enabled(&"upgrade_starting_sun_lvl2", true)
+	check("and switches back on", Upgrades.is_enabled(&"upgrade_starting_sun_lvl2"))
+
+	# Seed slots: the base count grows, a level's own count stands.
+	Settings.set_value(&"unlock_all_plants", true)
+	var plain := {"seedbank": {"mode": "chooser", "selection": "chooser"}}
+	check_eq("two slot upgrades give eight slots",
+			SeedChooserRules.from_level(plain, board).slots, 8)
+	var fixed := {"seedbank": {"mode": "chooser", "selection": "chooser", "slots": 4}}
+	check_eq("a level's own slot count is kept",
+			SeedChooserRules.from_level(fixed, board).slots, 4)
+	Settings.set_value(&"unlock_all_plants", false)
+
+	# Shovel Bonus: half of a wall-nut's 50 sun comes back.
+	board.reset()
+	runner.start(level, board)
+	board.place_plant(&"wallnut", 2, 3)
+	var before := board.sun
+	check("the wall-nut is dug up", board.dig_up(2, 3))
+	await _wait_game_seconds(2.0)
+	check_eq("half its cost comes back as sun", board.sun - before, 25)
+
+	# Wall-nut First Aid: only with the upgrade, only on a hurt defender.
+	var nut := board.place_plant(&"wallnut", 1, 1)
+	nut.take_damage(nut.max_health * 0.5)
+	check("without First Aid the cell is taken",
+			not board.can_place_entity(&"plant", &"wallnut", 1, 1))
+	Upgrades.grant(&"upgrade_wallnut_firstaid")
+	check("with it a hurt wall-nut can be replanted",
+			board.can_place_entity(&"plant", &"wallnut", 1, 1))
+	check("not by another plant", not board.can_place_entity(&"plant", &"peashooter", 1, 1))
+	check("replanting patches the same plant up",
+			board.place_entity(&"plant", &"wallnut", 1, 1) == nut)
+	check_eq("back to full", nut.health, nut.max_health)
+	check("a whole wall-nut is not replantable",
+			not board.can_place_entity(&"plant", &"wallnut", 1, 1))
+	var pea := board.place_plant(&"peashooter", 3, 1)
+	pea.take_damage(pea.max_health * 0.5)
+	check("an attacker is not a defender",
+			not board.can_place_entity(&"plant", &"peashooter", 3, 1))
+
+	# Instant Recharge: plant food finishes a packet's recharge.
+	var bank := SeedBank.new()
+	add_child(bank)
+	bank.setup([{"kind": &"plant", "id": &"wallnut"}])
+	bank.spend(0)
+	check("the packet is recharging", not bank.is_recharged(0))
+	check("Instant Recharge is not owned yet", not Upgrades.has_instant_recharge())
+	Upgrades.grant(&"upgrade_pf_refresh")
+	check("now it is", Upgrades.has_instant_recharge())
+	bank.finish_recharge(0)
+	check("plant food readies the packet", bank.is_recharged(0))
+	bank.queue_free()
+
+	# Mower Launch: holding a parked mower down for a second sends it off.
+	board.reset()
+	runner.start({"id": "upgrade_test", "waves": [], "mowers": true}, board)
+	check_eq("one mower may be launched by hand", board.manual_mowers_left, 1)
+	var mower := board.mower_in_row(2)
+	check("the lane has a mower", mower != null)
+	if mower != null:
+		var lost := [false]
+		board.mower_triggered.connect(func(_r): lost[0] = true)
+		check("pressing it starts the launch", board.press_mower(mower.position))
+		check("a short hold does nothing", not mower.advance_hold(0.4))
+		check("a full second launches it", mower.advance_hold(0.7))
+		check("it is spent", not mower.is_available())
+		check("the board counts it as a mower used", lost[0])
+		check_eq("no hand launches left", board.manual_mowers_left, 0)
+		var other := board.mower_in_row(3)
+		check("the next mower cannot be pressed",
+				other != null and not board.press_mower(other.position))
+	check_eq("hand launches survive a save",
+			int(board.snapshot().get("manual_mowers_left", -1)), 0)
+
+	# The almanac's Upgrades page: a card each, a switch on the owned ones.
+	var page := UpgradesPage.new()
+	add_child(page)
+	check_eq("a card per upgrade", page.card_count(), 14)
+	check("a locked upgrade has no switch", page.toggle_for(&"upgrade_sky_shield") == null)
+	var toggle := page.toggle_for(&"upgrade_7_slots")
+	check("an owned one does", toggle != null)
+	if toggle != null:
+		check_eq("it starts enabled", toggle.text, "Enabled")
+		toggle.pressed.emit()
+		check("the switch disables it", not Upgrades.is_enabled(&"upgrade_7_slots"))
+		check_eq("and says so", page.toggle_for(&"upgrade_7_slots").text, "Disabled")
+	page.queue_free()
+
+	runner.stop()
+	runner.queue_free()
+	board.queue_free()
+	Saves.reset_progress()
+	end_section()
 
 
 func _make_board() -> Board:

@@ -1,0 +1,52 @@
+{
+ "id": "beach_fisherman",
+ "name": {
+  "en": "Fisherman Zombie",
+  "zh": "渔夫僵尸"
+ },
+ "world": "beach",
+ "description": {
+  "en": "Casts line to pull far plants to him.",
+  "zh": "甩出鱼钩，把远处的植物拉到他身边。"
+ },
+ "chat": {
+  "en": "Everyone is tired of Fisherman Zombie's fishing stories. He's always bragging about the size of his catch. Time and time again, he claims to have caught \"the big one\". But the fact of the matter is, no one has seen him actually catch a fish. Not once. It's more than a little suspicious.",
+  "zh": "每个人都听腻了渔夫僵尸的钓鱼故事。他总是吹嘘自己钓到的鱼有多大，一次又一次地声称自己钓到了“大鱼”，但事实上，没人见过他真正钓到鱼。一次也没有，这就有点可疑了。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "pulls plants to the right",
+    "zh": "把植物向右拉走"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "plants next to him are tossed off the lawn",
+    "zh": "相邻的植物直接被甩出草坪"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.7,
+   "text": {
+    "en": "Hardened",
+    "zh": "强化"
+   }
+  }
+ ],
+ "display_offset": [
+  20,
+  0
+ ]
+}

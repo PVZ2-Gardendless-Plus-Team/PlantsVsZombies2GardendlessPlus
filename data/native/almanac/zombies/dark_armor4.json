@@ -1,0 +1,34 @@
+{
+ "id": "dark_armor4",
+ "name": {
+  "en": "Turret-headed Zombie",
+  "zh": "城堡头僵尸"
+ },
+ "world": "dark",
+ "description": {
+  "en": "Turret-Head Zombie's solid headgear forms the foundation to its sturdy defense and provides it with unparalleled toughness.",
+  "zh": "城堡头僵尸坚固的头饰为其坚固的防御奠定了基础，并为其提供了无与伦比的韧性。"
+ },
+ "chat": {
+  "en": "Dr. Zomboss is well known in the global architect circles. He is the 20 time winner of the Annual Architectural Digest for most impressive medieval design. There seems to be countless variations to his free standing turrets in an open field.",
+  "zh": "僵尸博士在全球建筑界享有盛誉。他曾 20 次荣获《建筑文摘》年度最令人印象深刻的中世纪设计奖。光是空地上自由矗立的塔楼都能有无数种姿态。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.8,
+   "text": {
+    "en": "Machined",
+    "zh": "重甲"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ]
+}

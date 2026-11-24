@@ -1,0 +1,46 @@
+{
+ "id": "goldbloom",
+ "name": {
+  "en": "Gold Bloom",
+  "zh": "黄金蓓蕾"
+ },
+ "brief": {
+  "en": "Produces a burst of sun all at once",
+  "zh": "一次性爆射出大量阳光"
+ },
+ "description": {
+  "en": "Gold Blooms produce a burst of sun all at once.",
+  "zh": "黄金蓓蕾一次性爆射出大量阳光。"
+ },
+ "chat": {
+  "en": "\"Your botanists were so preoccupied with whether they could,\" says Gold Bloom, about nothing and to nobody in particular, \"they didn't stop to think if they should.\"",
+  "zh": "“你们的植物学家一心只想着能不能做到,”黄金蓓蕾说,他表示自己不针对任何人和事,“他们没有停下来思考是否有这么做的必要。”"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Usage",
+    "zh": "用法"
+   },
+   "text": {
+    "en": "single use, instant",
+    "zh": "一次性使用，立刻生效"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "sun_production",
+   "value": 375
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

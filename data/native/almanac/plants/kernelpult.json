@@ -1,0 +1,73 @@
+{
+ "id": "kernelpult",
+ "name": {
+  "en": "Kernel-pult",
+  "zh": "玉米投手"
+ },
+ "brief": {
+  "en": "Flings corn kernels and butter at zombies",
+  "zh": "向僵尸投掷黄油和玉米粒"
+ },
+ "description": {
+  "en": "Kernel-pults fling corn kernels and butter at zombies.",
+  "zh": "玉米投手向僵尸投掷玉米粒和黄油。"
+ },
+ "chat": {
+  "en": "While working as an usher at the local movieplex, he saw \"Fried Green Tomatoes\" and found his higher calling. He packed up his husks, his kernels, his butter, and enlisted.",
+  "zh": "在电影院当招待员时，他看了《油炸绿西红柿》并找到了更长远的目标。于是他把他的玉米壳、玉米粒、黄油打包起来后参与了战斗。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Damage Details",
+    "zh": "具体伤害"
+   },
+   "text": {
+    "en": "20(kernel), 60(butter)",
+    "zh": "20（玉米粒），60（黄油）"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "butter immobilizes zombies",
+    "zh": "黄油使僵尸定身"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 20
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "Lobbed",
+    "zh": "抛物线"
+   }
+  },
+  {
+   "type": "special",
+   "text": {
+    "en": "Stun",
+    "zh": "控制"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

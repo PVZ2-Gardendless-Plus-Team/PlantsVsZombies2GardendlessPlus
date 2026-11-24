@@ -9,6 +9,15 @@ signal destroyed_by(who: Node)
 @export var grave_color: Color = Color("8d8d96")
 @export var health_bar_color: Color = Color("cfcfd8")
 
+## Sunk out of sight - PVZGE's Tombstone.hidden, renamed because Godot's
+## CanvasItem already has a `hidden` signal. A grave buster chewing on a stone
+## sinks it: it is still in its cell, but nothing can aim at or hit it until
+## it comes back up.
+var sunk: bool = false:
+	set(value):
+		sunk = value
+		visible = not value
+
 
 func _on_initialized() -> void:
 	queue_redraw()

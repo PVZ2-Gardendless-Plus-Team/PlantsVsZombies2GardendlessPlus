@@ -1,0 +1,72 @@
+{
+ "id": "plantern",
+ "name": {
+  "en": "Plantern",
+  "zh": "路灯花"
+ },
+ "brief": {
+  "en": "Removes fogs and reveals invisible zombies",
+  "zh": "驱散迷雾，并显示隐形的僵尸"
+ },
+ "description": {
+  "en": "Planterns remove fogs in a small range and reveal invisible zombies.",
+  "zh": "路灯花会驱散小范围内的迷雾，并使隐形的僵尸显现。"
+ },
+ "chat": {
+  "en": "Plantern does his job according to his past experience, \"Why not do the same thing as what zombies did in the past?\"",
+  "zh": "路灯花根据以往的工作经验恪尽职守，“僵尸以前也喜欢隐藏他们自己，难道我们不能也这么干嘛。”"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "removes fogs",
+    "zh": "驱散迷雾"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "reveals invisible zombies",
+    "zh": "使隐身僵尸显现"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "when Plant Fooded, gives each zombie 25 sun and hides nearby plants",
+    "zh": "施加叶绿素后，为场上所有僵尸施予 25 阳光，并使周围的植物隐身"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "plant_food",
+   "text": {
+    "en": "Hidding Plants",
+    "zh": "使植物隐形"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

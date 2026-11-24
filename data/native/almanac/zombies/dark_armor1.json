@@ -1,0 +1,34 @@
+{
+ "id": "dark_armor1",
+ "name": {
+  "en": "Conehead Peasant",
+  "zh": "路障农夫"
+ },
+ "world": "dark",
+ "description": {
+  "en": "His stony turret makes him twice tougher than normal peasants.",
+  "zh": "他的石质路障塔使他变得比原先抗打两倍。"
+ },
+ "chat": {
+  "en": "Conehead Peasant is just happy to have a cone over his head. Times are tough, man. He knows a lot of zombies don't even have that.",
+  "zh": "路障农夫只是很高兴头上有一个锥子。日子真艰苦啊，他知道很多僵尸连这个都没有。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.5,
+   "text": {
+    "en": "Protected",
+    "zh": "加强"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ]
+}

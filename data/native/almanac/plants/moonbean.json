@@ -1,0 +1,38 @@
+{
+ "id": "moonbean",
+ "name": {
+  "en": "Moon Bean",
+  "zh": "月亮豆"
+ },
+ "brief": {
+  "en": "Turn into a sunbomb when eaten",
+  "zh": "被吃掉后会变成太阳炸弹"
+ },
+ "description": {
+  "en": "Moon Beans turn into a sunbomb when eaten.",
+  "zh": "月亮豆被吃掉后会变成太阳炸弹。"
+ },
+ "chat": {
+  "en": "She and Sunflower are besties. It's just too bad their schedules make it hard for them to get together.",
+  "zh": "她和向日葵是最好的闺蜜，只是可惜她们的生物钟导致她们很难聚在一起。"
+ },
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "damage",
+   "value": 900
+  },
+  {
+   "type": "sun_production",
+   "value": 50
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

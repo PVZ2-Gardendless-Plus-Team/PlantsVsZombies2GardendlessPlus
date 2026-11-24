@@ -1,0 +1,34 @@
+{
+ "id": "lostcity_imp",
+ "name": {
+  "en": "Lost City Imp Zombie",
+  "zh": "失落之城小鬼"
+ },
+ "world": "lostcity",
+ "description": {
+  "en": "Gets tossed past most defenses, then explores on foot.",
+  "zh": "被丢过你的大部分防线，再向前探索。"
+ },
+ "chat": {
+  "en": "Nepotism got Lost City Imp where he is. He's Bug Zombie's second cousin thrice removed, but he parlayed that connection into a sweet gig getting carried around in a little box.",
+  "zh": "靠裙带关系，失落之城小鬼才有今天的地位。他是蜻蜓僵尸三代单传的二表哥，但他却靠着这层关系获得了一份好工作，被装在一个小轿子里到处跑。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.25,
+   "text": {
+    "en": "Average",
+    "zh": "一般"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.6,
+   "text": {
+    "en": "Hungry",
+    "zh": "饥渴"
+   }
+  }
+ ]
+}

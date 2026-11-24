@@ -1,0 +1,52 @@
+{
+ "id": "lychee",
+ "name": {
+  "en": "Lychee",
+  "zh": "荔枝"
+ },
+ "brief": {
+  "en": "Hurts zombies in an area when attacked",
+  "zh": "受伤时对范围内僵尸造成伤害"
+ },
+ "description": {
+  "en": "Lychees damage zombies in an area around it when attacked.",
+  "zh": "荔枝在受到伤害时对范围内的僵尸造成伤害。"
+ },
+ "chat": {
+  "en": "Lychee knows gratitude, but bears any of his enemies a grudge. He always keep those in mind, \"Tit for tat is fair play. Receive drips of water when in need, and return the kindness with a spring.\"",
+  "zh": "荔枝懂得感恩，当然也会记仇，心中总是默念：“人不犯我，我不犯人；滴水之恩，涌泉相报！”"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "damages all zombies in a 3x3 area when attacked",
+    "zh": "受到伤害时对 3x3 范围内所有僵尸造成伤害"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "area",
+   "text": {
+    "en": "3x3",
+    "zh": "3x3 范围"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

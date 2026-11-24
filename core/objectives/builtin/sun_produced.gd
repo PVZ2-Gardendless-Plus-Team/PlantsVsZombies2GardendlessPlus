@@ -35,4 +35,4 @@ func is_met() -> bool:
 
 
 func describe() -> String:
-	return "Sun produced: %d / %d" % [_collected, amount]
+	return tr("Sun produced: %d / %d") % [_collected, amount]

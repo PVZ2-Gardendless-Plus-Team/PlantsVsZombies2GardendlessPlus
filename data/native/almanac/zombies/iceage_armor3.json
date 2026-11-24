@@ -1,0 +1,34 @@
+{
+ "id": "iceage_armor3",
+ "name": {
+  "en": "Blockhead Zombie",
+  "zh": "冰砖头僵尸"
+ },
+ "world": "ice",
+ "description": {
+  "en": "The ice block on his head provides amazing protection from damage.",
+  "zh": "他头上的冰块能提供惊人的保护，使他免受伤害。"
+ },
+ "chat": {
+  "en": "One day, a Cave Zombie fell head-first into a glacial stream. It had been a bad day already, so he lay there in the frigid water for a long time contemplating the insignificance of his life. When he finally stood up, he discovered that his head was encased in ice. At last, his life had meaning! He was unique! He was Blockhead Zombie! At least, that's his story and he's sticking to it.",
+  "zh": "一天，洞窟僵尸一头栽进了冰川的溪流中。这一天已经够倒霉的了，所以他躺在冰冷的河水里沉思了很久，思考着自己生命是否毫无意义。当他终于站起来时，他发现自己的头被冰包裹着。他的生命终于有了意义！他是独一无二的！他是冰砖头僵尸！至少，这是独一无二故事，他一辈子不会忘的。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.8,
+   "text": {
+    "en": "Machined",
+    "zh": "重甲"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ]
+}

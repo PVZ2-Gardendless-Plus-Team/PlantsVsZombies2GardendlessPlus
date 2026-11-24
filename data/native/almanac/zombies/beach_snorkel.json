@@ -1,0 +1,46 @@
+{
+ "id": "beach_snorkel",
+ "name": {
+  "en": "Snorkel Zombie",
+  "zh": "浮潜僵尸"
+ },
+ "world": "beach",
+ "description": {
+  "en": "Snorkel zombies can swim underwater.",
+  "zh": "浮潜僵尸可以在水底游动前进。"
+ },
+ "chat": {
+  "en": "Snorkel Zombie has a hard time getting the Bikini Zombies. He's tried offering them flowers, jewelry, and even chocolate-covered brains. But nothing seems to work. They just can't seem to see past the snorkel on his face.",
+  "zh": "浮潜僵尸饱受感情之苦，为了得到比基尼僵尸的芳心，他试过给他们鲜花、珠宝，甚至是裹着巧克力的大脑，但似乎都不奏效，她们似乎就是看不透他脸上的潜水镜。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特殊"
+   },
+   "text": {
+    "en": "submerges to avoid attacks",
+    "zh": "潜入水中躲避攻击"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.5,
+   "text": {
+    "en": "Protected",
+    "zh": "加强"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ]
+}

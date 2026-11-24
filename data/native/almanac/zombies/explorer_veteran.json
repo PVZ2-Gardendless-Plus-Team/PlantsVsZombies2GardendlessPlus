@@ -1,0 +1,60 @@
+{
+ "id": "explorer_veteran",
+ "name": {
+  "en": "Torchlight Zombie",
+  "zh": "火光僵尸"
+ },
+ "world": "egypt",
+ "description": {
+  "en": "Carries a torch that instantly destroys plants and scorches the earth.",
+  "zh": "手持能秒杀你的植物的火把，让你的阵型烧出一个窟窿。"
+ },
+ "chat": {
+  "en": "Torchlight Zombie has no fear of the dark. That's not because he's always got a torch, however, but rather because as a zombie he has no capacity for fear in the first place.",
+  "zh": "火光僵尸不惧黑暗，并不是因为他总是拿着个火把，而是因为僵尸从一开始就不具有害怕的能力。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Damage",
+    "zh": "攻击"
+   },
+   "text": {
+    "en": "torch destroys a plant on contact",
+    "zh": "火把迅速烧毁接触到的植物"
+   }
+  },
+  {
+   "name": {
+    "en": "Weakness",
+    "zh": "弱点"
+   },
+   "text": {
+    "en": "cold attacks extinguish torch",
+    "zh": "冰冻攻击能使火把熄灭"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.5,
+   "text": {
+    "en": "Protected",
+    "zh": "加强"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 1,
+   "text": {
+    "en": "Flighty",
+    "zh": "飞速"
+   }
+  }
+ ],
+ "display_offset": [
+  20,
+  0
+ ]
+}

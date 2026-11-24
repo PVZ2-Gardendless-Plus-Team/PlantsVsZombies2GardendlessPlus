@@ -1,0 +1,56 @@
+{
+ "id": "dragonbabybruit",
+ "name": {
+  "en": "Baby Dragon Bruit",
+  "zh": "小暴君火龙果"
+ },
+ "brief": {
+  "en": "Launches an explosive seed pod projectile at zombies",
+  "zh": "向僵尸投掷爆裂子弹"
+ },
+ "description": {
+  "en": "Baby Dragon Bruits launch explosive seed pod projectiles at zombies.",
+  "zh": "小暴君火龙果向僵尸投掷爆裂子弹。"
+ },
+ "chat": {
+  "en": "As one of the heads from a Dragon Bruit, as mentioned, you can never find out his personality.",
+  "zh": "他是暴君火龙果留下的一颗头，如前文，你永远不会知道他是什么性格。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "powered Baby Dragon Bruits apply poison to the projectiles",
+    "zh": "暗影形态的暴君火龙果会使子弹带毒"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 100
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "Lobbed",
+    "zh": "抛物线"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

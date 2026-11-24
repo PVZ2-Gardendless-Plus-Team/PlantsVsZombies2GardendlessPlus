@@ -23,6 +23,7 @@ Data="*res://core/data/data_registry.gd"
 Saves="*res://core/save/save_manager.gd"
 Audio="*res://core/audio/audio_manager.gd"
 Art="*res://core/art/art_library.gd"
+I18n="*res://core/i18n/i18n.gd"
 Settings="*res://core/settings/settings_manager.gd"
 
 [display]

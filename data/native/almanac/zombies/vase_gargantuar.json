@@ -1,0 +1,60 @@
+{
+ "id": "vase_gargantuar",
+ "name": {
+  "en": "Vase Gargantuar",
+  "zh": "瓶中巨尸"
+ },
+ "world": "frontyard",
+ "description": {
+  "en": "Phenomenally sized zombie stuffed into a tiny unliving space.",
+  "zh": "非常大的僵尸被塞进了非常小的密闭空间。"
+ },
+ "chat": {
+  "en": "The ceramic confines of the Vase Gargantuar's home has done nothing to his endless hunger, his immense power, or his vast destructive potential. However, his footspeed could be better.",
+  "zh": "瓷制的囚笼并没有让瓶中巨尸丧失那无尽的饥饿、巨大的力量，以及毁灭一切的潜力。不过，他的步伐还得加把劲。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Damage",
+    "zh": "攻击"
+   },
+   "text": {
+    "en": "crushes plants with pole",
+    "zh": "用电线杆摧毁植物"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "throws imp when damaged",
+    "zh": "受重伤时丢出小鬼"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.9,
+   "text": {
+    "en": "Great",
+    "zh": "巨大"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.4,
+   "text": {
+    "en": "Stiff",
+    "zh": "迟钝"
+   }
+  }
+ ],
+ "display_offset": [
+  20,
+  -60
+ ]
+}

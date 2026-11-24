@@ -1,0 +1,34 @@
+{
+ "id": "lostcity_armor1",
+ "name": {
+  "en": "Conehead Adventurer",
+  "zh": "路障探宝家"
+ },
+ "world": "lostcity",
+ "description": {
+  "en": "His expedition cone makes him twice tougher than normal adventurers.",
+  "zh": "他的远征型路障使他变得比原先抗打两倍。"
+ },
+ "chat": {
+  "en": "No one ever presumes that he's Dr. Unlivingstone. Just once, though he wish that someone would.",
+  "zh": "从来没有人看出他就是活死石博士。哪怕一次，他都希望有人能看出来。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.5,
+   "text": {
+    "en": "Protected",
+    "zh": "加强"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ]
+}

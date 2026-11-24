@@ -1,0 +1,55 @@
+{
+ "id": "gumnut",
+ "name": {
+  "en": "Gumnut",
+  "zh": "香果胶"
+ },
+ "brief": {
+  "en": "Creates gum barriers",
+  "zh": "制造口香糖障碍"
+ },
+ "description": {
+  "en": "Gumnuts pop sticky gum onto zombies, pinning them in place and causing them to block other zombies behind them.",
+  "zh": "香果胶向僵尸喷溅口香糖，把他们定在原地，并拦住其身后的僵尸。"
+ },
+ "chat": {
+  "en": "\"I only chew ham-flavored gum,\" exudes Gumnut. \"Ham and salt.\"",
+  "zh": "“我只嚼火腿口味的口香糖，” 香果胶自信地说着，“必须是火腿加盐味的。”"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "stronger zombies form stronger barriers",
+    "zh": "口香糖的强度与僵尸的强度有关"
+   }
+  },
+  {
+   "name": {
+    "en": "Usage",
+    "zh": "用途"
+   },
+   "text": {
+    "en": "best used against Gargantuars & Football Mechs",
+    "zh": "最好用于巨尸和机甲橄榄"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

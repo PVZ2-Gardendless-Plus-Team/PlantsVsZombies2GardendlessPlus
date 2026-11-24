@@ -1,0 +1,45 @@
+{
+ "id": "tutorial_armor1",
+ "name": {
+  "en": "Conehead Zombie",
+  "zh": "路障僵尸"
+ },
+ "world": "frontyard",
+ "description": {
+  "en": "His traffic cone headpiece makes him twice tougher than normal zombies.",
+  "zh": "他的交通路障使他变得比原先抗打两倍。"
+ },
+ "chat": {
+  "en": "After a wild night, Conehead Zombie woke up holding a mysterious receipt for a cone and industrial strength adhesive.",
+  "zh": "经历了狂热的一晚，路障僵尸迷迷糊糊醒了过来，手里拿着一张奇怪的路障和工业强力胶的收据。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.5,
+   "text": {
+    "en": "Protected",
+    "zh": "加强"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ],
+ "variants": [
+  "sportzball_armor1",
+  "stpatrick_armor1",
+  "easter_armor1",
+  "valentines_armor1",
+  "lunar_armor1",
+  "halloween_armor1",
+  "foodfight_armor1",
+  "feastivus_armor1",
+  "zoybean_armor1"
+ ]
+}

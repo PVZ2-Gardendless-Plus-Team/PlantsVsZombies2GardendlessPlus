@@ -1,0 +1,60 @@
+{
+ "id": "supernova_gargantuar",
+ "name": {
+  "en": "Supernova Gargantuar",
+  "zh": "超新星巨尸"
+ },
+ "world": "market",
+ "description": {
+  "en": "Gargantuar that destroys plants that look the same in one strike.",
+  "zh": "能一发摧毁所有相同植物的巨尸。"
+ },
+ "chat": {
+  "en": "This one's got a real temper on him. When he decides to take out a Plant...it's brutal. Just brutal.",
+  "zh": "这家伙是真的非常暴脾气，只要他想解决掉一株植物……那场面，简直残暴，残暴至极。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Damage",
+    "zh": "攻击"
+   },
+   "text": {
+    "en": "crushes plants with supernova cane",
+    "zh": "用超新星权杖摧毁植物"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "destroys all the plants that are the same as those which have just been smashed",
+    "zh": "砸击植物时，同时摧毁所有相同的植物"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.9,
+   "text": {
+    "en": "Great",
+    "zh": "巨大"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.6,
+   "text": {
+    "en": "Hungry",
+    "zh": "饥渴"
+   }
+  }
+ ],
+ "display_offset": [
+  20,
+  -60
+ ]
+}

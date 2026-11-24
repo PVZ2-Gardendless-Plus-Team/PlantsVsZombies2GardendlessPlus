@@ -1,0 +1,50 @@
+{
+ "id": "eighties_boombox",
+ "name": {
+  "en": "Boombox Zombie",
+  "zh": "音箱僵尸"
+ },
+ "world": "eighties",
+ "description": {
+  "en": "Holds aloft a boom box that tranquilizes all plants with its heartfelt tunes.",
+  "zh": "高举着音箱，用美妙的曲调安抚所有植物。"
+ },
+ "chat": {
+  "en": "Boombox Zombie doesn't want to buy, sell or process anything; he just really wants to consume your brains.",
+  "zh": "音箱僵尸不想买卖或编写任何音乐，他只想消化你的大脑。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Weakness",
+    "zh": "弱点"
+   },
+   "text": {
+    "en": "boombox has no effect on ground plants and Phat Beets",
+    "zh": "音箱对地下植物和魔音甜菜无效"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.4,
+   "text": {
+    "en": "Solid",
+    "zh": "略强"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ],
+ "display_offset": [
+  15,
+  0
+ ]
+}

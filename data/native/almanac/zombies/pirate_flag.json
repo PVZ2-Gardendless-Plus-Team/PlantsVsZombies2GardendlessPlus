@@ -1,0 +1,38 @@
+{
+ "id": "pirate_flag",
+ "name": {
+  "en": "Jolly Roger Zombie",
+  "zh": "海盗旗僵尸"
+ },
+ "world": "pirate",
+ "description": {
+  "en": "Marks the arrival of a huge salty \"wave\" of zombies.",
+  "zh": "预示着一大波浑身腥味的僵尸的到来。"
+ },
+ "chat": {
+  "en": "A zombie that needs no introduction.",
+  "zh": "这只僵尸不需要任何介绍。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.25,
+   "text": {
+    "en": "Average",
+    "zh": "一般"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ],
+ "display_offset": [
+  15,
+  0
+ ]
+}

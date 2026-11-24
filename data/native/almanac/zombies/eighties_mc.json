@@ -1,0 +1,46 @@
+{
+ "id": "eighties_mc",
+ "name": {
+  "en": "MC Zom-B",
+  "zh": "麦克说唱家"
+ },
+ "world": "eighties",
+ "description": {
+  "en": "Spins microphone to damage nearby plants when he's dropping his sick, sick rhymes.",
+  "zh": "尽情说唱时，顺便甩动麦克风攻击周围的植物。"
+ },
+ "chat": {
+  "en": "MC Zom-B doesn't want you to know it, but his fancy bling is really just gold-plated zinc he got from his grandma.",
+  "zh": "麦克说唱家并不想让你知道，他那华丽的金饰其实只是他从奶奶那里得到的镀金锌。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Damage",
+    "zh": "攻击"
+   },
+   "text": {
+    "en": "destroys plants in a 3x3 area",
+    "zh": "摧毁周围 3x3 范围的植物"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.4,
+   "text": {
+    "en": "Solid",
+    "zh": "略强"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.6,
+   "text": {
+    "en": "Hungry",
+    "zh": "饥渴"
+   }
+  }
+ ]
+}

@@ -1,0 +1,38 @@
+{
+ "id": "lostcity_flag",
+ "name": {
+  "en": "Flag Adventurer",
+  "zh": "旗帜探宝家"
+ },
+ "world": "lostcity",
+ "description": {
+  "en": "Marks the arrival of an intrepid \"wave\" of zombies.",
+  "zh": "预示着一大波敢死的僵尸的到来。"
+ },
+ "chat": {
+  "en": "Flag Adventurer Zombie is always shouting \"Tally ho!\" as he leads the charge. At least, he's shouting it in his head.",
+  "zh": "旗帜探宝僵尸在带头冲锋时总是大喊 “塔里吼！”。至少，他是在心里喊的。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.25,
+   "text": {
+    "en": "Average",
+    "zh": "一般"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ],
+ "display_offset": [
+  15,
+  0
+ ]
+}

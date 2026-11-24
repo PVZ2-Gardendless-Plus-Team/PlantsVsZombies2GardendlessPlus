@@ -1,0 +1,54 @@
+{
+ "id": "poncho",
+ "name": {
+  "en": "Poncho Zombie",
+  "zh": "斗篷僵尸"
+ },
+ "world": "cowboy",
+ "description": {
+  "en": "Sometimes has a hidden armored plate.",
+  "zh": "有时候斗篷里藏着一个坚硬的锅炉。"
+ },
+ "chat": {
+  "en": "The grate is his most prized possession. The poncho is there just to protect it from getting rusty. Also, he's looking for his mechanical horse.",
+  "zh": "这个锅炉是他最珍视的财产。斗篷只是为了保护它以免生锈。另外，他正在寻找他的机械马。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "randomly wears a protective metal grate",
+    "zh": "可能携带着有保护效果的金属锅炉"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.7,
+   "text": {
+    "en": "Hardened",
+    "zh": "强化"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ],
+ "variants": [
+  "easter_poncho",
+  "poncho_no_plate",
+  "poncho_plate",
+  "feastivus_poncho",
+  "feastivus_poncho_plate",
+  "feastivus_poncho_no_plate"
+ ]
+}

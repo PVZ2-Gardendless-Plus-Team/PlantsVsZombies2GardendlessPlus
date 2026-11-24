@@ -1,0 +1,16 @@
+{
+ "id": "upgrade_pf_slots_lvl2",
+ "order": 3,
+ "type": "pf_slot",
+ "amount": 1,
+ "world": "modern",
+ "sprite": "PlantfoodSlot",
+ "name": {
+  "en": "Plantfood Slot Boost",
+  "zh": "叶绿素容量增加"
+ },
+ "description": {
+  "en": "Hold onto one more Plant Food during a level!",
+  "zh": "可额外持有一枚叶绿素！"
+ }
+}

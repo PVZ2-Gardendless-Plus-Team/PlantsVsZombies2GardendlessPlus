@@ -41,8 +41,18 @@ func show_world_map(campaign_id: StringName = &"") -> void:
 	map.start_campaign = campaign_id
 	map.level_chosen.connect(play_level)
 	map.back_requested.connect(show_main_menu)
+	map.almanac_requested.connect(func() -> void:
+		var world := map.current_world()
+		show_almanac(world.id if world != null else campaign_id))
 	map.zen_garden_requested.connect(show_zen_garden)
 	_swap(map)
+
+
+## PVZGE's almanac is reached from the world map and returns to it.
+func show_almanac(campaign_id: StringName = &"") -> void:
+	var almanac := AlmanacScreen.new()
+	almanac.back_requested.connect(show_world_map.bind(campaign_id))
+	_swap(almanac)
 
 
 func show_zen_garden() -> void:

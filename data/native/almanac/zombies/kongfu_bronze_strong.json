@@ -1,0 +1,63 @@
+{
+ "id": "kongfu_bronze_strong",
+ "name": {
+  "en": "Bronze of Toughness",
+  "zh": "大汉铜人"
+ },
+ "world": "kongfu",
+ "description": {
+  "en": "Gets enraged when damaged, making you pay for defying him.",
+  "zh": "重伤后会暴走，让你知道藐视他的代价。"
+ },
+ "chat": {
+  "en": "Bronze of Toughness is filled with endless power.",
+  "zh": "大汉铜人浑身充满无尽的力量。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Damage",
+    "zh": "攻击"
+   },
+   "text": {
+    "en": "crushes plants with wolfsbane",
+    "zh": "用狼牙棒摧毁植物"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "enrages and speeds up when damaged",
+    "zh": "受重伤时暴怒并加速前进"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.9,
+   "text": {
+    "en": "Greatly Great",
+    "zh": "非常巨大"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.6,
+   "text": {
+    "en": "Hungry",
+    "zh": "饥渴"
+   }
+  }
+ ],
+ "display_offset": [
+  20,
+  -60
+ ],
+ "variants": [
+  "kongfu_bronze_statue"
+ ]
+}

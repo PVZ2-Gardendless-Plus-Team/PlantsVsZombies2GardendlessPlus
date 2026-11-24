@@ -1,0 +1,41 @@
+{
+ "id": "enforcemint",
+ "name": {
+  "en": "Enforce-mint",
+  "zh": "健壮薄荷"
+ },
+ "brief": {
+  "en": "Boosts melee plants",
+  "zh": "强化近战的植物"
+ },
+ "description": {
+  "en": "Enforce-mints shrink a number of zombies when planted and provide a temporary boost to all Enforce-mint Family plants on the lawn.",
+  "zh": "健壮薄荷在种植时缩小场上的好几个僵尸，并为所有健壮家族植物带来增益效果。"
+ },
+ "chat": {
+  "en": "Enforce-mint shrinks zombies, which may seem a bit off-brand for a guy who's all about melee damage. Enforce-mint shrugs. \"I don't set policy。\" he says.",
+  "zh": "健壮薄荷能缩小僵尸，这对一个专精近战伤害的家伙来说似乎有点“人设不符”。健壮薄荷耸了耸肩。对此他表示：“规则不是我定的。”"
+ },
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "duration",
+   "value": 18
+  },
+  {
+   "type": "special",
+   "text": {
+    "en": "Shrinking Zombies",
+    "zh": "缩小僵尸"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

@@ -1,0 +1,40 @@
+{
+ "id": "pyrevine",
+ "name": {
+  "en": "Pyre Vine",
+  "zh": "柴火藤蔓"
+ },
+ "brief": {
+  "en": "Warms and flames",
+  "zh": "温暖四周并喷火"
+ },
+ "description": {
+  "en": "Pyre Vines can be planted on top of other plants to provide protection from cold plus an additional close range flame attack.",
+  "zh": "柴火藤蔓可以被种植在其他植物上，使本格的植物免受寒冻，对短距离内的敌人造成灼烧伤害。"
+ },
+ "chat": {
+  "en": "Pyre Vine considers his holdings, his fortune, his vast hoard of wealth. He feels it should please him, and yet nevertheless he is anxious and fearful.",
+  "zh": "柴火藤蔓审视着他的地产、财富和庞大的宝库。他觉得这些理应让自己满足，然而他依然感到焦虑和恐惧。"
+ },
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "2 Tiles",
+    "zh": "2 格"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

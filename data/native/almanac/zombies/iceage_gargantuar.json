@@ -1,0 +1,60 @@
+{
+ "id": "iceage_gargantuar",
+ "name": {
+  "en": "Sloth Gargantuar",
+  "zh": "树懒皮巨尸"
+ },
+ "world": "ice",
+ "description": {
+  "en": "Massive sloth skinned zombie with a case of the imps. Carries and throws three imps instead of just one.",
+  "zh": "披着树懒皮的巨尸。可携带和投掷三个小鬼，而不是一个。"
+ },
+ "chat": {
+  "en": "Somewhere along the line, Sloth Gargantuar contracted a bad case of Yeti Imps. He used soap, medicinal powders, and a salve made from sloth slobber in an attempt to get rid of them ... to no avail. But the truth is, he's grown used to their presence. The darn things are itchy. They're always squabbling. They nag him endlessly. But at this point, he'd probably miss them if they ever cleared up.",
+  "zh": "不知从什么时候起，树懒皮巨尸被烦人的雪人小鬼缠上了。他用肥皂、药粉和树懒口水制成的药膏试图赶走它们......却无济于事。但事实上，他已经习惯了它们的存在。这些该死的东西让他很痒。他们总是争吵不休，没完没了地唠叨。但在这一点上，如果他们消失了，他可能会想念他们。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Damage",
+    "zh": "攻击"
+   },
+   "text": {
+    "en": "crushes plants with icicle",
+    "zh": "用冰棍摧毁植物"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "fire off Yeti Imps when damaged",
+    "zh": "受重伤时丢出雪人小鬼"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.9,
+   "text": {
+    "en": "Great",
+    "zh": "巨大"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.6,
+   "text": {
+    "en": "Hungry",
+    "zh": "饥渴"
+   }
+  }
+ ],
+ "display_offset": [
+  20,
+  -60
+ ]
+}

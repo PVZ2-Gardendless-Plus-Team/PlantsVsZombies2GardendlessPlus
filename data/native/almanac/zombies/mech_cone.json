@@ -1,0 +1,38 @@
+{
+ "id": "mech_cone",
+ "name": {
+  "en": "Robo-Cone Zombie",
+  "zh": "机甲路障僵尸"
+ },
+ "world": "future",
+ "description": {
+  "en": "The armor-plated cone offers phenomenal protection for its pilot.",
+  "zh": "由铁甲加固的大型路障为驾驶员提供了巨大的保护。"
+ },
+ "chat": {
+  "en": "Zombie engineers considered the orange cone the height of zombie protective technology. It wasn't until they perfected the design for the Robo-Cone that someone remembered the bucket.",
+  "zh": "僵尸工程师曾将橙色的路障视为僵尸防护技术的巅峰。直到他们完成了“机械路障”的设计后，才有人想起了铁桶的存在。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.8,
+   "text": {
+    "en": "Machined",
+    "zh": "重甲"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.4,
+   "text": {
+    "en": "Stiff",
+    "zh": "迟钝"
+   }
+  }
+ ],
+ "display_offset": [
+  0,
+  -20
+ ]
+}

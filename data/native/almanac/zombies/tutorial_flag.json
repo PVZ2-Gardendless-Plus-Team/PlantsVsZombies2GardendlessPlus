@@ -1,0 +1,49 @@
+{
+ "id": "tutorial_flag",
+ "name": {
+  "en": "Flag Zombie",
+  "zh": "旗帜僵尸"
+ },
+ "world": "frontyard",
+ "description": {
+  "en": "His flag marks the arrival of a huge pile or \"wave\" of zombies.",
+  "zh": "他的旗帜预示着一大批或者一大波僵尸的到来。"
+ },
+ "chat": {
+  "en": "A spelling impaired zombie named \"Brian\", Flag Zombie keeps thinking the rest of the zombies are talking to him. At least he feels important.",
+  "zh": "他的名字叫“瑙兹”，然而他的读写太差劲了，这使得旗帜僵尸一直以为其他僵尸在叫他的名字，这至少让他觉得自己很受待见。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.25,
+   "text": {
+    "en": "Average",
+    "zh": "一般"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ],
+ "display_offset": [
+  15,
+  0
+ ],
+ "variants": [
+  "birthday_flag",
+  "sportzball_flag",
+  "stpatrick_flag",
+  "easter_flag",
+  "valentines_flag",
+  "lunar_flag",
+  "halloween_flag",
+  "foodfight_flag",
+  "feastivus_flag"
+ ]
+}

@@ -51,5 +51,5 @@ func is_met() -> bool:
 
 func describe() -> String:
 	if _done:
-		return "Destroyed %d zombies in %ss" % [count, str(seconds)]
-	return "Destroy %d zombies within %ss: %d" % [count, str(seconds), _kills.size()]
+		return tr("Destroyed %d zombies in %ss") % [count, str(seconds)]
+	return tr("Destroy %d zombies within %ss: %d") % [count, str(seconds), _kills.size()]

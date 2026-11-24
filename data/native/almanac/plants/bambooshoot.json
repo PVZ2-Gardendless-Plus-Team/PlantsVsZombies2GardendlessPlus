@@ -1,0 +1,44 @@
+{
+ "id": "bambooshoot",
+ "name": {
+  "en": "Bamboo Shoot",
+  "zh": "竹笋"
+ },
+ "brief": {
+  "en": "Digs back and forth and damages zombies that step on them",
+  "zh": "在地面上来回移动，对经过的僵尸造成伤害"
+ },
+ "description": {
+  "en": "Bambooshoots dig back and forth on the ground, damaging zombies that step on them.",
+  "zh": "竹笋在地面上来回移动，对经过的僵尸造成伤害。"
+ },
+ "chat": {
+  "en": "Bambooshoot learned Earth Traversal from Tu Xingsun. After years of grinding (literally), he got his \"Underground Degree\" in Tunnel Engineering.",
+  "zh": "竹笋从土行孙那里习得地行术功夫, 又经过不懈努力, 终于获得“钻头工程学院”学土学位。"
+ },
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 30
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "Multi-hit",
+    "zh": "多重打击"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

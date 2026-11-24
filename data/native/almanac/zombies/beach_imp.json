@@ -1,0 +1,34 @@
+{
+ "id": "beach_imp",
+ "name": {
+  "en": "Imp Mermaid Zombie",
+  "zh": "美人鱼小鬼"
+ },
+ "world": "beach",
+ "description": {
+  "en": "Washes in past your defenses, then flounders forward.",
+  "zh": "冲过你的防线，然后蹒跚前行。"
+ },
+ "chat": {
+  "en": "Imp Mermaid Zombie couldn't decide whether to wear the top made out of coconut shells or the top made out of seashells. She went with the slinky coconut-shell number because, really, the seashells are soooo last wave.",
+  "zh": "美人鱼小鬼无法决定是穿椰子壳做的上衣还是贝壳做的上衣。她选择了那件纤细的椰壳上衣，因为，贝壳真的太常见了。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.25,
+   "text": {
+    "en": "Average",
+    "zh": "一般"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.6,
+   "text": {
+    "en": "Hungry",
+    "zh": "饥渴"
+   }
+  }
+ ]
+}

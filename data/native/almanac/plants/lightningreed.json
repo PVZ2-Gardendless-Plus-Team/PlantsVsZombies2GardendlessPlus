@@ -1,0 +1,51 @@
+{
+ "id": "lightningreed",
+ "name": {
+  "en": "Lightning Reed",
+  "zh": "闪电芦苇"
+ },
+ "brief": {
+  "en": "Zaps several chickens or zombies per strike",
+  "zh": "电击连续的几只僵尸或鸡"
+ },
+ "description": {
+  "en": "Lightning Reeds shoot lightning at the nearest zombie up to one lane away. The bolt will then arc and hit other zombies.",
+  "zh": "闪电芦苇对相邻行最近的目标发射闪电，击中时电弧会伤害周围的僵尸。"
+ },
+ "chat": {
+  "en": "This may come as a shock, but Lightning Reed has a serious passion for ham radio. His call sign is El3ctric H1ccup. You can tune in every Tuesday to hear him read the classics to elderly plants. This week: Seeds and Sensibility.",
+  "zh": "令人大惊的是，闪电芦苇热衷于业余广播。他呼号“闪嗝”。你能在每周二在他的频道听到他读名著给老植物们听。本周内容：播种和感性。"
+ },
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 10
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "Multi-hit",
+    "zh": "多个目标"
+   }
+  },
+  {
+   "type": "special",
+   "text": {
+    "en": "Zombies Zapped",
+    "zh": "电击僵尸"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

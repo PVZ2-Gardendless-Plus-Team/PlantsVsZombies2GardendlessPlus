@@ -1,0 +1,34 @@
+{
+ "id": "lostcity_jane",
+ "name": {
+  "en": "Parasol Zombie",
+  "zh": "阳伞僵尸"
+ },
+ "world": "lostcity",
+ "description": {
+  "en": "Her parasol provides protection from lobbed projectiles.",
+  "zh": "她的洋伞使她免受投掷子弹的伤害。"
+ },
+ "chat": {
+  "en": "Wealthy beyond reason, the Parasol Zombie lived a life of luxury - when what she craved was a life of adventure. She funded the expedition to the Lost City and set out to see its wonders for herself, never forgetting to bring her trusty parasol. \"In case it rains,\" she explained - but it only came out sounding like \"Brains\".",
+  "zh": "阳伞僵尸富可敌国，过着奢华的生活，而她渴望的是冒险生活。她资助了前往失落之城的探险队，并亲自踏上了一览奇观的旅程，还不忘带上她那把值得信赖的阳伞。她解释说，“以防落水”，但听起来却像“以防落脑”。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.5,
+   "text": {
+    "en": "Protected",
+    "zh": "加强"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.6,
+   "text": {
+    "en": "Hungry",
+    "zh": "饥渴"
+   }
+  }
+ ]
+}

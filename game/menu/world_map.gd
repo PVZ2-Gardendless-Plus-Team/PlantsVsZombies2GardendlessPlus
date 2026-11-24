@@ -9,6 +9,7 @@ extends Control
 
 signal level_chosen(level_id: StringName)
 signal back_requested
+signal almanac_requested
 ## The Zen Garden button, once the garden is open.
 signal zen_garden_requested
 
@@ -141,13 +142,20 @@ func _build() -> void:
 	back.name = "Back"
 	back.position = Vector2(45, 43) - back.custom_minimum_size * 0.5
 	add_child(back)
+	# almanacButton, the next square along, once a level has opened it.
+	if AlmanacData.is_unlocked():
+		var almanac := MenuUI.icon_button("AlmanacUp", "AlmanacDown",
+				Vector2(67, 67), almanac_requested.emit, "Almanac")
+		almanac.name = "Almanac"
+		almanac.position = Vector2(123, 43) - almanac.custom_minimum_size * 0.5
+		add_child(almanac)
 
-	# zengardenButton: the next square along, once PVZGE would show it.
+	# zengardenButton: the next square along, after the almanac when it shows.
 	if ZenGarden.is_open():
 		var zen := MenuUI.icon_button("ZenUp", "ZenDown", Vector2(67, 67),
 				zen_garden_requested.emit, "Zen Garden")
 		zen.name = "ZenGarden"
-		zen.position = Vector2(45 + 78, 43) - zen.custom_minimum_size * 0.5
+		zen.position = Vector2(45 + 78 * (2 if has_node("Almanac") else 1), 43) - zen.custom_minimum_size * 0.5
 		add_child(zen)
 
 	_title = MenuUI.label("", 44)
@@ -270,14 +278,14 @@ func _show_world() -> void:
 		_select(&"")
 		return
 
-	_title.text = world.display_name
+	_title.text = tr(world.display_name)
 	_title.tooltip_text = world.description
 	_path.default_color = world.map_color.lightened(0.6)
 	var cleared := 0
 	for level_id in world.levels:
 		if Saves.is_cleared(level_id):
 			cleared += 1
-	_progress.text = "%d / %d cleared" % [cleared, world.levels.size()]
+	_progress.text = tr("%d / %d cleared") % [cleared, world.levels.size()]
 
 	for i in world.levels.size():
 		var level_id := world.levels[i]
@@ -297,8 +305,8 @@ func _show_world() -> void:
 
 	if not is_world_open(world):
 		var gate := Data.campaign(world.unlock_after)
-		_lock_label.text = "Finish %s to open this world" % (
-				gate.display_name if gate != null else world.unlock_after)
+		_lock_label.text = tr("Finish %s to open this world") % (
+				tr(gate.display_name) if gate != null else world.unlock_after)
 		_lock_label.visible = true
 		_lock_label.move_to_front()
 
@@ -399,7 +407,7 @@ func _select(level_id: StringName) -> void:
 		b.scale = Vector2.ONE * (1.15 if id == level_id else 1.0)
 		b.pivot_offset = NODE_SIZE * 0.5
 	if level_id == &"":
-		_card_title.text = current_world().display_name if current_world() else ""
+		_card_title.text = tr(current_world().display_name) if current_world() else ""
 		_card_status.text = current_world().description if current_world() else ""
 		_play.disabled = true
 		_restart.visible = false
@@ -412,18 +420,18 @@ func _select(level_id: StringName) -> void:
 	var saved := Saves.has_save(level_id)
 	var status: Array[String] = []
 	if saved:
-		status.append("In progress")
+		status.append(tr("In progress"))
 	elif Saves.is_cleared(level_id):
-		status.append("Cleared")
+		status.append(tr("Cleared"))
 	else:
-		status.append("Not yet cleared")
+		status.append(tr("Not yet cleared"))
 	var waves := (level.get("waves", []) as Array).size()
 	if waves > 0:
-		status.append("%d waves" % waves)
+		status.append(tr("%d waves") % waves)
 	# Like PvZ2's level popup, the prize still to be won.
 	var prize := LevelReward.for_level(level, not Saves.is_cleared(level_id))
 	if prize.is_award():
-		status.append("Reward: %s" % prize.item_name())
+		status.append(tr("Reward: %s") % prize.item_name())
 	_card_status.text = "  -  ".join(status)
 	_play.disabled = level.is_empty()
 	_play.text = "Resume" if saved else "Play"

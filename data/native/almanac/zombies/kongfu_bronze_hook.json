@@ -1,0 +1,63 @@
+{
+ "id": "kongfu_bronze_hook",
+ "name": {
+  "en": "Bronze of Hook",
+  "zh": "侠客铜人"
+ },
+ "world": "kongfu",
+ "description": {
+  "en": "Occasionally leaps to the lanes with least plants guarding.",
+  "zh": "偶尔跳跃到植物最少的行上。"
+ },
+ "chat": {
+  "en": "The hardest part of his practicing is untying the chains quickly. He always broke them up.",
+  "zh": "他训练中最困难的一环是快速解开铁锁，他总是把铁链绷断。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Damage",
+    "zh": "攻击"
+   },
+   "text": {
+    "en": "crushes plants with his iron hook",
+    "zh": "用铁钩砸毁植物"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "leaps to the lanes with least plants",
+    "zh": "跳跃到植物最少的行上"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.9,
+   "text": {
+    "en": "Greatly Great",
+    "zh": "非常巨大"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.4,
+   "text": {
+    "en": "Stiff",
+    "zh": "迟钝"
+   }
+  }
+ ],
+ "display_offset": [
+  20,
+  -60
+ ],
+ "variants": [
+  "kongfu_bronze_statue"
+ ]
+}

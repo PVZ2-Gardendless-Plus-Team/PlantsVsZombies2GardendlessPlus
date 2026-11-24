@@ -1,0 +1,70 @@
+{
+ "id": "spikeweed",
+ "name": {
+  "en": "Spikeweed",
+  "zh": "地刺"
+ },
+ "brief": {
+  "en": "Breaks 1 rolling object, hurts zombies that step on it",
+  "zh": "对走过的僵尸造成伤害，并破坏 1 个滚动的物体"
+ },
+ "description": {
+  "en": "Spikeweeds destroy one rolling zombie and hurt any zombies that step on them.",
+  "zh": "地刺摧毁一滚动前行的目标，并且对经过的僵尸造成伤害。"
+ },
+ "chat": {
+  "en": "Although Spikeweed grew up on the seedy side of town, his acupuncture business has been blooming.",
+  "zh": "尽管地刺在村里的播种地长大，他的针灸事业也在蓬勃发展。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "can't be eaten by zombies",
+    "zh": "不会被僵尸啃食"
+   }
+  },
+  {
+   "name": {
+    "en": "Weakness",
+    "zh": "弱点"
+   },
+   "text": {
+    "en": "crushed by rolling zombies",
+    "zh": "会被滚动前行的僵尸摧毁"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 10
+  },
+  {
+   "type": "area",
+   "text": {
+    "en": "Tile",
+    "zh": "本格"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ],
+ "display_offset": [
+  0,
+  10
+ ]
+}

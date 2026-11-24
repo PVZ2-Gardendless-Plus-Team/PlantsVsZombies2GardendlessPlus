@@ -1,0 +1,60 @@
+{
+ "id": "dino_gargantuar",
+ "name": {
+  "en": "Jurassic Gargantuar",
+  "zh": "侏罗纪巨尸"
+ },
+ "world": "dino",
+ "description": {
+  "en": "Prehistoric provider of Mesozoic malarkey.",
+  "zh": "创造了史前中生代的传说。"
+ },
+ "chat": {
+  "en": "Jurassic Gargantuar wonders how there can be zombies millions of years before the advent of humanity. He doesn't let it get in the way of his plant-bashing, though.",
+  "zh": "侏罗纪巨尸很好奇在人类出现之前的几百万年，怎么会有僵尸。不过，他并没有因此而影响对植物的砸击的力度。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Damage",
+    "zh": "攻击"
+   },
+   "text": {
+    "en": "crushes plants with bone",
+    "zh": "用骨头摧毁植物"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "launches Jurassic Imp when damaged",
+    "zh": "受重伤时丢出侏罗纪小鬼"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.9,
+   "text": {
+    "en": "Greatly Great",
+    "zh": "非常巨大"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.4,
+   "text": {
+    "en": "Stiff",
+    "zh": "迟钝"
+   }
+  }
+ ],
+ "display_offset": [
+  20,
+  -60
+ ]
+}
