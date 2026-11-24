@@ -73,6 +73,7 @@ var _timer: float = 0.0
 var _wave_spawned_health: float = 0.0
 var _finished_spawning: bool = false
 var _sun_timer: float = 0.0
+var _groan_cooldown: float = 0.0
 ## Last value pushed to the music `stage` parameter, so it is only set on change.
 var _music_stage: int = -1
 
@@ -403,6 +404,7 @@ func _process(delta: float) -> void:
 		board.drop_sun_from_sky()
 		_sun_timer = _sun_cycle()
 	features.tick(delta)
+	_groan(delta)
 
 	# Objectives own the outcome: all met wins, any broken loses.
 	for o in objectives:
@@ -426,6 +428,34 @@ func _process(delta: float) -> void:
 	_timer -= delta
 	if _timer <= 0.0 or _board_mostly_cleared():
 		_advance_wave()
+
+
+## PVZGE's groans: every few seconds one random zombie on the lawn groans in
+## its world's voice, sooner the more of them there are (2.5s + 5s / count +
+## up to 3s more). Frozen zombies stay quiet. Zombies do not groan on arrival.
+func _groan(delta: float) -> void:
+	if _groan_cooldown > 0.0:
+		_groan_cooldown -= delta
+		return
+	var pool: Array = []
+	for r in board.rows:
+		for z in board.hostile_zombies_in_row(r):
+			if not z.has_tag(&"frozen"):
+				pool.append(z)
+	if pool.is_empty():
+		return
+	var z: Zombie = pool.pick_random()
+	Audio.play_variant(&"zombie.groan", groan_voice(z), z.position)
+	_groan_cooldown = 2.5 + 5.0 / pool.size() + randf() * 3.0
+
+
+## Whose groans a zombie uses: an imp has its own, everyone else sounds like
+## the world the level is in (the catalog falls back to Modern's).
+func groan_voice(z: Zombie) -> StringName:
+	var id := String(z.def.id) if z.def != null else ""
+	if id == "imp" or id.begins_with("imp_") or id.ends_with("_imp") or id.contains("_imp_"):
+		return &"imp"
+	return StringName(music_track().to_lower())
 
 
 ## True when enough of the current wave's health has been destroyed that the

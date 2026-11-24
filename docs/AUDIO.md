@@ -217,7 +217,7 @@ Collectables: `sun.collect` `plantfood.drop` `plantfood.collect` `coin.drop`
 `coin.collect` `reward.drop` `reward.land` `reward.collect`. Sun makes no
 sound when it lands, as in PVZGE; the plant that made it plays `plant.produce`.
 
-Zombies: `zombie.spawn` `zombie.eat` (every 0.6s while chewing) `zombie.die`
+Zombies: `zombie.groan` `zombie.eat` (every 0.6s while chewing) `zombie.die`
 `zombie.armor.break` `zombie.smash` `zombie.imp.throw` `zombie.summon`
 `zombie.enrage` `zombie.limb` `zombie.head` `zombie.boss.*`
 
@@ -227,13 +227,24 @@ arrive in silence)
 
 UI and flow: `level.ready` `ui.seed.select` `ui.seed.cancel` `ui.seed.refuse`
 `ui.shovel` `ui.fastforward.on` `ui.fastforward.off` `level.win` `level.lose`
+`ui.chooseseeds.open` `ui.chooseseeds.close` `ui.chooseseeds.remove`
+`ui.button.click` `ui.pause` `ui.unpause` `ui.store.switch` `ui.store.denied`
+
+Zen Garden: `zen.boost` `zen.plant.grow` `zen.sprout.birth`
+
+Zombies groan the way PVZGE's do: not when they arrive, but every few
+seconds one random zombie on the lawn groans (2.5s + 5s / zombie count + up
+to 3s), in the voice of the level's world - `zombie.groan.<world>`, from
+PVZGE's ZombiesRP lists, falling back to Modern's. Imps have their own
+(`zombie.groan.imp`). `zombie.spawn` stays in the catalog for packs.
 
 Music, per world (`beach`, `cowboy`, `dark`, `dino`, `egypt`, `eighties`,
 `future`, `iceage`, `kongfu`, `lostcity`, `modern`, `pirate`, `sky`,
 `tutorial`): `music.lawn.<world>` `music.victory.<world>`
 `music.lose.<world>` `music.leave.<world>` `music.minigame.<world>`
 `music.ultimate.<world>` `music.zomboss.intro.<world>`, where PVZGE has the
-cue. Plus `music.zomboss` and `music.zengarden`.
+cue. Plus `music.zomboss`, `music.zengarden`, `music.menu` (PVZGE's
+splash music) and `music.worldmap`.
 
 ### Variants
 

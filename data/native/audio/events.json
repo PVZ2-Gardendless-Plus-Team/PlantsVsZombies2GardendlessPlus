@@ -251,10 +251,6 @@
    "fmod": "event:/SFX/Plants/MagnetShroom"
   },
   {
-   "id": "plant.gum",
-   "fmod": "event:/SFX/Plants/Gumnut"
-  },
-  {
    "id": "plant.butter",
    "fmod": "event:/SFX/Plants/Buttercup"
   },
@@ -1540,6 +1536,96 @@
   {
    "id": "projectile.hit.turkey_big",
    "fmod": "event:/SFX/Projectiles/ByProjectile/turkey_big/Hit"
+  },
+  {
+   "id": "ui.button.click",
+   "fmod": "event:/SFX/UI/Button"
+  },
+  {
+   "id": "ui.pause",
+   "fmod": "event:/SFX/UI/Pause"
+  },
+  {
+   "id": "ui.unpause",
+   "fmod": "event:/SFX/UI/Resume"
+  },
+  {
+   "id": "ui.store.switch",
+   "fmod": "event:/SFX/UI/Store/Switch"
+  },
+  {
+   "id": "ui.store.denied",
+   "fmod": "event:/SFX/UI/Store/Denied"
+  },
+  {
+   "id": "zen.boost",
+   "fmod": "event:/SFX/Zen/Boost"
+  },
+  {
+   "id": "zen.plant.grow",
+   "fmod": "event:/SFX/Zen/PlantGrow"
+  },
+  {
+   "id": "zen.sprout.birth",
+   "fmod": "event:/SFX/Zen/SproutBirth"
+  },
+  {
+   "id": "music.menu",
+   "fmod": "event:/Music/Menu",
+   "music": true
+  },
+  {
+   "id": "music.worldmap",
+   "fmod": "event:/Music/WorldMap",
+   "music": true
+  },
+  {
+   "id": "zombie.groan",
+   "fmod": "event:/SFX/Zombies/Groan/Modern"
+  },
+  {
+   "id": "zombie.groan.egypt",
+   "fmod": "event:/SFX/Zombies/Groan/Egypt"
+  },
+  {
+   "id": "zombie.groan.pirate",
+   "fmod": "event:/SFX/Zombies/Groan/Pirate"
+  },
+  {
+   "id": "zombie.groan.cowboy",
+   "fmod": "event:/SFX/Zombies/Groan/Cowboy"
+  },
+  {
+   "id": "zombie.groan.future",
+   "fmod": "event:/SFX/Zombies/Groan/Future"
+  },
+  {
+   "id": "zombie.groan.dark",
+   "fmod": "event:/SFX/Zombies/Groan/Dark"
+  },
+  {
+   "id": "zombie.groan.beach",
+   "fmod": "event:/SFX/Zombies/Groan/Beach"
+  },
+  {
+   "id": "zombie.groan.iceage",
+   "fmod": "event:/SFX/Zombies/Groan/Iceage"
+  },
+  {
+   "id": "zombie.groan.lostcity",
+   "fmod": "event:/SFX/Zombies/Groan/Lostcity"
+  },
+  {
+   "id": "zombie.groan.kongfu",
+   "fmod": "event:/SFX/Zombies/Groan/Kongfu"
+  },
+  {
+   "id": "zombie.groan.dino",
+   "fmod": "event:/SFX/Zombies/Groan/Dino"
+  },
+  {
+   "id": "zombie.groan.imp",
+   "fmod": "event:/SFX/Zombies/Groan/Imp"
   }
  ]
 }

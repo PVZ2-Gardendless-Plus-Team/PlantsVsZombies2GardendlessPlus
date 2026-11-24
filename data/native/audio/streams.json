@@ -34,7 +34,7 @@
   },
   "level.lose": {
    "streams": [
-    "res://Music/Assets/SFX/Level/Lose.mp3"
+    "res://Music/Assets/PVZGE/Music/InGame/Tutorial/LOSE_Tutorial.mp3"
    ]
   },
   "level.ready": {
@@ -44,7 +44,7 @@
   },
   "level.win": {
    "streams": [
-    "res://Music/Assets/SFX/Level/Win.mp3"
+    "res://Music/Assets/PVZGE/Music/InGame/Modern/VIC_Modern.mp3"
    ]
   },
   "mower.trigger": {
@@ -331,6 +331,12 @@
     "res://Music/Assets/PVZGE/Music/InGame/Tutorial/LOSE_Tutorial.mp3"
    ]
   },
+  "music.menu": {
+   "loop": true,
+   "streams": [
+    "res://Music/Assets/PVZGE/Music/Splash/SplashMusic.mp3"
+   ]
+  },
   "music.minigame.beach": {
    "loop": true,
    "streams": [
@@ -540,12 +546,33 @@
     "res://Music/Assets/PVZGE/Music/InGame/Sky/VIC_Sky.mp3"
    ]
   },
+  "music.worldmap": {
+   "loop": true,
+   "streams": [
+    "res://Music/Assets/PVZGE/Music/Worldmap/WorldMapMusic.mp3"
+   ]
+  },
   "music.zengarden": {
+   "loop": true,
    "streams": [
     "res://Music/Assets/PVZGE/Music/ZenGarden/zen00.mp3",
     "res://Music/Assets/PVZGE/Music/ZenGarden/zen01.mp3",
     "res://Music/Assets/PVZGE/Music/ZenGarden/zen02.mp3",
-    "res://Music/Assets/PVZGE/Music/ZenGarden/zen03.mp3"
+    "res://Music/Assets/PVZGE/Music/ZenGarden/zen03.mp3",
+    "res://Music/Assets/PVZGE/Music/ZenGarden/zen04.mp3",
+    "res://Music/Assets/PVZGE/Music/ZenGarden/zen05.mp3",
+    "res://Music/Assets/PVZGE/Music/ZenGarden/zen06.mp3",
+    "res://Music/Assets/PVZGE/Music/ZenGarden/zen07.mp3",
+    "res://Music/Assets/PVZGE/Music/ZenGarden/zen08.mp3",
+    "res://Music/Assets/PVZGE/Music/ZenGarden/zen09.mp3",
+    "res://Music/Assets/PVZGE/Music/ZenGarden/zen10.mp3",
+    "res://Music/Assets/PVZGE/Music/ZenGarden/zen11.mp3",
+    "res://Music/Assets/PVZGE/Music/ZenGarden/zen12.mp3",
+    "res://Music/Assets/PVZGE/Music/ZenGarden/zen13.mp3",
+    "res://Music/Assets/PVZGE/Music/ZenGarden/zen14.mp3",
+    "res://Music/Assets/PVZGE/Music/ZenGarden/zen15.mp3",
+    "res://Music/Assets/PVZGE/Music/ZenGarden/zen16.mp3",
+    "res://Music/Assets/PVZGE/Music/ZenGarden/zen17.mp3"
    ]
   },
   "music.zomboss": {
@@ -607,6 +634,11 @@
   "music.zomboss.intro.sky": {
    "streams": [
     "res://Music/Assets/PVZGE/Music/InGame/Sky/ZBI_Sky.mp3"
+   ]
+  },
+  "plant.butter": {
+   "streams": [
+    "res://Music/Assets/PVZGE/SFX/Other/_misc/B/butter.mp3"
    ]
   },
   "plant.chomp": {
@@ -974,6 +1006,11 @@
     "res://Music/Assets/PVZGE/SFX/Plants/PlantFood/food_0.mp3"
    ]
   },
+  "plant.gas": {
+   "streams": [
+    "res://Music/Assets/PVZGE/SFX/Other/_misc/F/fart.mp3"
+   ]
+  },
   "plant.hypno": {
    "streams": [
     "res://Music/Assets/PVZGE/SFX/Other/_misc/H/hypnoTurn.mp3"
@@ -1102,6 +1139,12 @@
   "plant.produce.toadstool": {
    "streams": [
     "res://Music/Assets/PVZGE/SFX/Other/produce/produce__3.mp3"
+   ]
+  },
+  "plant.revive": {
+   "streams": [
+    "res://Music/Assets/PVZGE/SFX/Plants/Place/plant1.mp3",
+    "res://Music/Assets/PVZGE/SFX/Plants/Place/plant2.mp3"
    ]
   },
   "plant.shoot": {
@@ -1850,7 +1893,7 @@
   },
   "reward.drop": {
    "streams": [
-    "res://Music/Assets/PVZGE/SFX/Collect/upgradeCollect.mp3"
+    "res://Music/Assets/PVZGE/SFX/Other/_misc/G/gemSpawn.mp3"
    ]
   },
   "reward.drop.coinbag": {
@@ -1896,6 +1939,11 @@
     "res://Music/Assets/PVZGE/SFX/Collect/collect4.mp3"
    ]
   },
+  "ui.button.click": {
+   "streams": [
+    "res://Music/Assets/PVZGE/SFX/UI/ButtonClickPress.mp3"
+   ]
+  },
   "ui.chooseseeds.close": {
    "streams": [
     "res://Music/Assets/PVZGE/SFX/UI/seedChooserOff.mp3"
@@ -1913,12 +1961,17 @@
   },
   "ui.fastforward.off": {
    "streams": [
-    "res://Music/Assets/SFX/UI/FastForwardOff.mp3"
+    "res://Music/Assets/PVZGE/SFX/UI/FastForward/2x_off.mp3"
    ]
   },
   "ui.fastforward.on": {
    "streams": [
-    "res://Music/Assets/SFX/UI/FastForwardOn.mp3"
+    "res://Music/Assets/PVZGE/SFX/UI/FastForward/2x.mp3"
+   ]
+  },
+  "ui.pause": {
+   "streams": [
+    "res://Music/Assets/PVZGE/SFX/Other/_misc/G/gamePause.mp3"
    ]
   },
   "ui.seed.cancel": {
@@ -1941,6 +1994,21 @@
     "res://Music/Assets/PVZGE/SFX/UI/shovelActivate.mp3"
    ]
   },
+  "ui.store.denied": {
+   "streams": [
+    "res://Music/Assets/PVZGE/SFX/UI/buzzer.mp3"
+   ]
+  },
+  "ui.store.switch": {
+   "streams": [
+    "res://Music/Assets/PVZGE/SFX/UI/ButtonAlmanacPress.mp3"
+   ]
+  },
+  "ui.unpause": {
+   "streams": [
+    "res://Music/Assets/PVZGE/SFX/UI/ButtonResumePress.mp3"
+   ]
+  },
   "wave.final": {
    "streams": [
     "res://Music/Assets/PVZGE/SFX/Board/Wave/finalwave.mp3"
@@ -1956,29 +2024,45 @@
     "res://Music/Assets/SFX/Board/HugeWave.mp3"
    ]
   },
+  "zen.boost": {
+   "streams": [
+    "res://Music/Assets/PVZGE/SFX/Other/_misc/B/boost.mp3"
+   ]
+  },
+  "zen.plant.grow": {
+   "streams": [
+    "res://Music/Assets/PVZGE/SFX/Other/plant/plant_growth.mp3"
+   ]
+  },
+  "zen.sprout.birth": {
+   "streams": [
+    "res://Music/Assets/PVZGE/SFX/Other/_misc/S/sprout_birth.mp3"
+   ]
+  },
   "zombie.armor.break": {
    "streams": [
-    "res://Music/Assets/SFX/Zombies/ArmorBreak.mp3"
+    "res://Music/Assets/PVZGE/SFX/Zombies/Armor/bd_break0.mp3"
    ]
   },
   "zombie.boss.roar": {
    "streams": [
-    "res://Music/Assets/SFX/Zombies/Boss/Roar.mp3"
+    "res://Music/Assets/PVZGE/SFX/Flow/intro_roar.mp3"
    ]
   },
   "zombie.boss.rush": {
    "streams": [
-    "res://Music/Assets/SFX/Zombies/Boss/Rush.mp3"
+    "res://Music/Assets/PVZGE/SFX/Other/_misc/P/pre_crash.mp3"
    ]
   },
   "zombie.boss.shoot": {
    "streams": [
-    "res://Music/Assets/SFX/Zombies/Boss/Shoot.mp3"
+    "res://Music/Assets/PVZGE/SFX/Other/prj/prj_launch.mp3"
    ]
   },
   "zombie.boss.stage": {
    "streams": [
-    "res://Music/Assets/SFX/Zombies/Boss/Stage.mp3"
+    "res://Music/Assets/PVZGE/SFX/Other/_misc/Z/zombossHPRising1.mp3",
+    "res://Music/Assets/PVZGE/SFX/Other/_misc/Z/zombossHPRising2.mp3"
    ]
   },
   "zombie.die": {
@@ -1997,32 +2081,233 @@
   },
   "zombie.enrage": {
    "streams": [
-    "res://Music/Assets/SFX/Zombies/Enrage.mp3"
+    "res://Music/Assets/PVZGE/SFX/Other/_misc/G/getAngry.mp3"
+   ]
+  },
+  "zombie.groan": {
+   "streams": [
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Modern/groan_modern0.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Modern/groan_modern1.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Modern/groan_modern2.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Modern/groan_modern3.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Modern/groan_modern4.mp3"
+   ]
+  },
+  "zombie.groan.beach": {
+   "streams": [
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Beach/groan_beach0.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Beach/groan_beach1.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Beach/groan_beach2.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Beach/groan_beach3.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Beach/groan_beach4.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Beach/groan_beach5.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Beach/groan_beach6.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Beach/groan_beach7.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Beach/groan_beach8.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Beach/groan_beach9.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Beach/groan_beach10.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Beach/groan_beach11.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Beach/groan_beach12.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Beach/groan_beach13.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Beach/groan_beach14.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Beach/groan_beach15.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Beach/groan_beach16.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Beach/groan_beach17.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Beach/groan_beach18.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Beach/groan_beach19.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Beach/groan_beach20.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Beach/groan_beach21.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Beach/groan_beach22.mp3"
+   ]
+  },
+  "zombie.groan.cowboy": {
+   "streams": [
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Cowboy/groan_cowboy0.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Cowboy/groan_cowboy1.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Cowboy/groan_cowboy2.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Cowboy/groan_cowboy3.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Cowboy/groan_cowboy4.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Cowboy/groan_cowboy5.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Cowboy/groan_cowboy6.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Cowboy/groan_cowboy7.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Cowboy/groan_cowboy8.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Cowboy/groan_cowboy9.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Cowboy/groan_cowboy10.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Cowboy/groan_cowboy11.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Cowboy/groan_cowboy12.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Cowboy/groan_cowboy13.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Cowboy/groan_cowboy14.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Cowboy/groan_cowboy15.mp3"
+   ]
+  },
+  "zombie.groan.dark": {
+   "streams": [
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Dark/groan_dark0.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Dark/groan_dark1.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Dark/groan_dark2.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Dark/groan_dark3.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Dark/groan_dark4.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Dark/groan_dark5.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Dark/groan_dark6.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Dark/groan_dark7.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Dark/groan_dark8.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Dark/groan_dark9.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Dark/groan_dark10.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Dark/groan_dark11.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Dark/groan_dark12.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Dark/groan_dark13.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Dark/groan_dark14.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Dark/groan_dark15.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Dark/groan_dark16.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Dark/groan_dark17.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Dark/groan_dark18.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Dark/groan_dark19.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Dark/groan_dark20.mp3"
+   ]
+  },
+  "zombie.groan.dino": {
+   "streams": [
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Dino/groan_dino0.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Dino/groan_dino1.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Dino/groan_dino2.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Dino/groan_dino3.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Dino/groan_dino4.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Dino/groan_dino5.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Dino/groan_dino6.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Dino/groan_dino7.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Dino/groan_dino8.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Dino/groan_dino9.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Dino/groan_dino10.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Dino/groan_dino11.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Dino/groan_dino12.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Dino/groan_dino13.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Dino/groan_dino14.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Dino/groan_dino15.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Dino/groan_dino16.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Dino/groan_dino17.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Dino/groan_dino18.mp3"
+   ]
+  },
+  "zombie.groan.egypt": {
+   "streams": [
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Egypt/groan_egypt0.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Egypt/groan_egypt1.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Egypt/groan_egypt2.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Egypt/groan_egypt3.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Egypt/groan_egypt4.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Egypt/groan_egypt5.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Egypt/groan_egypt6.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Egypt/groan_egypt7.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Egypt/groan_egypt8.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Egypt/groan_egypt9.mp3"
+   ]
+  },
+  "zombie.groan.future": {
+   "streams": [
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Future/groan_future0.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Future/groan_future1.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Future/groan_future2.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Future/groan_future3.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Future/groan_future4.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Future/groan_future5.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Future/groan_future6.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Future/groan_future7.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Future/groan_future8.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Future/groan_future9.mp3"
+   ]
+  },
+  "zombie.groan.iceage": {
+   "streams": [
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/groan_ice0.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/groan_ice1.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/groan_ice2.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/groan_ice3.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/groan_ice4.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/groan_ice5.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/groan_ice6.mp3"
+   ]
+  },
+  "zombie.groan.imp": {
+   "streams": [
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/groan_imp0.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/groan_imp1.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/groan_imp2.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/groan_imp3.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/groan_imp4.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/groan_imp5.mp3"
+   ]
+  },
+  "zombie.groan.kongfu": {
+   "streams": [
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Kongfu/groan_kongfu0.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Kongfu/groan_kongfu1.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Kongfu/groan_kongfu2.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Kongfu/groan_kongfu3.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Kongfu/groan_kongfu4.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Kongfu/groan_kongfu5.mp3"
+   ]
+  },
+  "zombie.groan.lostcity": {
+   "streams": [
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/groan_lost0.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/groan_lost1.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/groan_lost2.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/groan_lost3.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/groan_lost4.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/groan_lost5.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/groan_lost6.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/groan_lost7.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/groan_lost8.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/groan_lost9.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/groan_lost10.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/groan_lost11.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/groan_lost12.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/groan_lost13.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/groan_lost14.mp3"
+   ]
+  },
+  "zombie.groan.pirate": {
+   "streams": [
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Pirate/groan_pirate0.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Pirate/groan_pirate1.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Pirate/groan_pirate2.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Pirate/groan_pirate3.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Pirate/groan_pirate4.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Pirate/groan_pirate5.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Pirate/groan_pirate6.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Pirate/groan_pirate7.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Pirate/groan_pirate8.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Pirate/groan_pirate9.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Pirate/groan_pirate10.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Pirate/groan_pirate11.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Pirate/groan_pirate12.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Pirate/groan_pirate13.mp3",
+    "res://Music/Assets/PVZGE/SFX/Zombies/Groan/Pirate/groan_pirate14.mp3"
    ]
   },
   "zombie.head": {
    "streams": [
-    "res://Music/Assets/SFX/Zombies/HeadPop.mp3"
+    "res://Music/Assets/PVZGE/SFX/Other/_misc/H/headPop.mp3"
    ]
   },
   "zombie.hit": {
    "streams": [
-    "res://Music/Assets/SFX/Zombies/Hit.mp3"
+    "res://Music/Assets/PVZGE/SFX/Zombies/Hit/hit0.mp3"
    ]
   },
   "zombie.imp.throw": {
    "streams": [
-    "res://Music/Assets/SFX/Zombies/ImpThrow.mp3"
+    "res://Music/Assets/PVZGE/SFX/Other/impThrow/impThrow0.mp3"
    ]
   },
   "zombie.limb": {
    "streams": [
-    "res://Music/Assets/SFX/Zombies/Limb.mp3"
+    "res://Music/Assets/PVZGE/SFX/Other/_misc/L/limbs_pop.mp3"
    ]
   },
   "zombie.smash": {
    "streams": [
-    "res://Music/Assets/SFX/Zombies/Smash.mp3"
+    "res://Music/Assets/PVZGE/SFX/Other/g/g_smash0.mp3"
    ]
   },
   "zombie.spawn": {
@@ -2043,7 +2328,7 @@
   },
   "zombie.summon": {
    "streams": [
-    "res://Music/Assets/SFX/Zombies/Summon.mp3"
+    "res://Music/Assets/PVZGE/SFX/Other/summon/summon.mp3"
    ]
   }
  }
