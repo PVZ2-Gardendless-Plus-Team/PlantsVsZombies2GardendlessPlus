@@ -22,6 +22,8 @@ func _ready() -> void:
 	match first:
 		&"map":
 			show_world_map(start_campaign)
+		&"minigames":
+			show_minigames()
 		_:
 			show_main_menu()
 
@@ -29,6 +31,7 @@ func _ready() -> void:
 func show_main_menu() -> void:
 	var menu := MainMenu.new()
 	menu.play_requested.connect(show_world_map.bind(&""))
+	menu.minigames_requested.connect(show_minigames.bind(&""))
 	menu.continue_requested.connect(play_level)
 	menu.quit_requested.connect(get_tree().quit)
 	_swap(menu)
@@ -42,23 +45,42 @@ func show_world_map(campaign_id: StringName = &"") -> void:
 	_swap(map)
 
 
-func play_level(level_id: StringName) -> void:
+## The minigames screen, opened on `mode` (or the first mode).
+func show_minigames(mode: StringName = &"") -> void:
+	var menu := MinigameMenu.new()
+	menu.start_mode = mode
+	menu.level_chosen.connect(_play_minigame.bind(menu))
+	menu.back_requested.connect(show_main_menu)
+	_swap(menu)
+
+
+## A minigame level, which leads back to the minigames screen on the same
+## mode rather than to the map.
+func _play_minigame(level_id: StringName, menu: MinigameMenu) -> void:
+	var mode := StringName(menu.current_mode().get("id", ""))
+	play_level(level_id, func(): show_minigames(mode))
+
+
+## Plays a level. `back` is where leaving it for the map goes; by default
+## the level's world on the map.
+func play_level(level_id: StringName, back: Callable = Callable()) -> void:
 	var campaign := Data.campaign_for_level(level_id)
 	var level := LEVEL_SCENE.instantiate()
 	level.campaign_id = campaign.id if campaign != null else &""
 	level.start_level = level_id
 	# Clearing a level goes back to the map to pick the next, as in PvZ2.
 	level.return_to_map = true
-	level.exit_requested.connect(_on_level_exit.bind(
-			campaign.id if campaign != null else &""))
+	if not back.is_valid():
+		back = show_world_map.bind(campaign.id if campaign != null else &"")
+	level.exit_requested.connect(_on_level_exit.bind(back))
 	_swap(level)
 
 
-func _on_level_exit(destination: StringName, campaign_id: StringName) -> void:
+func _on_level_exit(destination: StringName, back: Callable) -> void:
 	if destination == &"menu":
 		show_main_menu()
 	else:
-		show_world_map(campaign_id)
+		back.call()
 
 
 ## Deferred, because the old screen is usually the one asking to be replaced,
