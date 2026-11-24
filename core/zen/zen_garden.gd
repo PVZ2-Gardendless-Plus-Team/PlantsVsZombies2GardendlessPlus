@@ -74,7 +74,7 @@ func load_state() -> void:
 
 
 func save() -> void:
-	Saves.store_section(SAVE_SECTION, _state)
+	Saves.set_section(SAVE_SECTION, _state)
 	changed.emit()
 
 
