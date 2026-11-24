@@ -1,0 +1,56 @@
+{
+ "id": "wasabiwhip",
+ "name": {
+  "en": "Wasabi Whip",
+  "zh": "炙热山葵"
+ },
+ "brief": {
+  "en": "Whips both ahead and behind",
+  "zh": "抽打身前和身后的敌人"
+ },
+ "description": {
+  "en": "Wasabi Whips lash out with their flaming whips, delivering whippings to zombies both in front and behind.",
+  "zh": "炙热山葵挥舞火焰长鞭，抽打前后的僵尸。"
+ },
+ "chat": {
+  "en": "\"The trick to proper whipping is all in the wrist,\" says Wasabi Whip. \"Well, not the wrist, exactly, since I don't have any. You have to, like... BE the wrist.\"",
+  "zh": "“正确甩鞭的诀窍全在手腕上，”炙热山葵说道。“呃，严格来说也不是手腕，因为我压根没有。你得……嗯……化身成为手腕本身。”"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "resist cold and warms nearby plants",
+    "zh": "无视寒冷并温暖身边的植物"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 40
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "Close",
+    "zh": "接近"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

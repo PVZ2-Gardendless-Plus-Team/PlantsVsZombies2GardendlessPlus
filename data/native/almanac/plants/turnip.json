@@ -1,0 +1,52 @@
+{
+ "id": "turnip",
+ "name": {
+  "en": "Resistant Radish",
+  "zh": "白萝卜"
+ },
+ "brief": {
+  "en": "Stands firm and resists the magic from Qigong Zombies and Black Holes' suction",
+  "zh": "稳固地立在地上，抵抗气功僵尸的法术和时空黑洞的吞噬"
+ },
+ "description": {
+  "en": "Resistant Radish stands firm and resists the magic from Qigong Zombies and Black Holes' suction.",
+  "zh": "白萝卜稳固地立在地上，抵抗气功僵尸的法术和时空黑洞的吞噬。"
+ },
+ "chat": {
+  "en": "Resistant Radish has studied qigong for many years, but he only learned one thing: stasis.",
+  "zh": "白萝卜学了很多年气功, 但他一直都只会一招: 纹丝不动。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "protects plants from magical suctions",
+    "zh": "防止身后植物被法术抽吸"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "Behind",
+    "zh": "身后植物"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

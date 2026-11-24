@@ -1,0 +1,37 @@
+{
+ "id": "modern_superfanimp",
+ "name": {
+  "en": "Super-Fan Imp",
+  "zh": "狂热粉丝小鬼"
+ },
+ "world": "modern",
+ "description": {
+  "en": "An all-too-enthusiastic imp who explodes with rah-rah-rah fervor.",
+  "zh": "一个过于狂热的小鬼粉丝，能让内心的狂热彻底爆发出来。"
+ },
+ "chat": {
+  "en": "Super-Fan Imp has season tickets, subscribes to the team newsletter, and is super pumped about exploding on contact with fans of the opposing team.",
+  "zh": "狂热粉丝小鬼买到了季票，订阅了球队资讯，与对方球迷一接触就会爆发，完全无法自控。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.4,
+   "text": {
+    "en": "Solid",
+    "zh": "略强"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.85,
+   "text": {
+    "en": "Speedy",
+    "zh": "快速"
+   }
+  }
+ ],
+ "variants": [
+  "lunar_superfanimp"
+ ]
+}

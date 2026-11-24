@@ -1,0 +1,46 @@
+{
+ "id": "monk_nunchaku",
+ "name": {
+  "en": "Nunchaku Monk Zombie",
+  "zh": "双截棍武僧"
+ },
+ "world": "kongfu",
+ "description": {
+  "en": "Nunchaku Monk Zombie swings his nunchaku to return projectiles.",
+  "zh": "双截棍武僧挥动双截棍反弹子弹。"
+ },
+ "chat": {
+  "en": "According to experiments, a zombie's neck becomes stronger once he knocked his own head off. That'd be meaningful if he could make it to re-install his head.",
+  "zh": "实验表明，僵尸一旦亲自把自己的脑袋砸下来，他的脖子会变得更加健硕。要是他能把自己的头安回去，那可就不得了了。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "swings his nunchaku and returns projectiles that are shot straightly ahead",
+    "zh": "挥舞双截棍并反弹直射过来的子弹"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.5,
+   "text": {
+    "en": "Protected",
+    "zh": "加强"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ]
+}

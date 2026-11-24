@@ -1,0 +1,34 @@
+{
+ "id": "bobsled_team",
+ "name": {
+  "en": "Zombie Bobsled Team",
+  "zh": "雪橇小队"
+ },
+ "world": "modern",
+ "description": {
+  "en": "Zombie Bobsled Teams will take any ice trail as an excuse to slide down the lawn.",
+  "zh": "雪橇小队会从任何延伸到草坪外的冰道滑出。"
+ },
+ "chat": {
+  "en": "Meet the lean, mean bobsledding machine - the Zombie Bobsled Team! These undead athletes stick together like glue, or should we say frosty ice? They're the epitome of teamwork, never leaving a ghoul behind.",
+  "zh": "见识一下精英中的精英——雪橇小队！这些不死的运动员们如同胶水般形影不离，或许更像是霜冻一样无懈可击？他们是团队合作的榜样，从不丢下任何一个成员。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.5,
+   "text": {
+    "en": "Protected",
+    "zh": "加强"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.4,
+   "text": {
+    "en": "Stiff",
+    "zh": "迟钝"
+   }
+  }
+ ]
+}

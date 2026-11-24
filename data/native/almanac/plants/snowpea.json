@@ -1,0 +1,56 @@
+{
+ "id": "snowpea",
+ "name": {
+  "en": "Snow Pea",
+  "zh": "寒冰射手"
+ },
+ "brief": {
+  "en": "Shoots frozen peas that damage and slow zombies",
+  "zh": "向僵尸发射寒冰子弹"
+ },
+ "description": {
+  "en": "Snow Peas fire frozen peas making it hard for zombies to advance.",
+  "zh": "寒冰射手发射寒冰子弹，能使僵尸前进变得缓慢。"
+ },
+ "chat": {
+  "en": "As a professional table tennis player, in the off-season he also enjoys skiing, playing the bongos, and spelunking.",
+  "zh": "作为专业的乒乓球运动员，休赛期间他还会去滑翔，打手鼓，甚至是探洞穴。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "chills and damages zombie on impact",
+    "zh": "子弹会对僵尸造成伤害并冰冻"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 20
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "Straight",
+    "zh": "直线"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

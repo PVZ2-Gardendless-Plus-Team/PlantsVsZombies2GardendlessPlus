@@ -1,0 +1,46 @@
+{
+ "id": "pirate_captain",
+ "name": {
+  "en": "Pirate Captain Zombie",
+  "zh": "海盗船长僵尸"
+ },
+ "world": "pirate",
+ "description": {
+  "en": "His parrot can fly away with your plant and then return to him.",
+  "zh": "他的鹦鹉会把你的植物偷走，然后回到他头顶。"
+ },
+ "chat": {
+  "en": "Pirate Captain Zombie isn't actually a captain. His dry cleaning got mixed with someone else's, but he thought he looked cool with an eyepatch. Plus, the parrot already knew his name, so he just went with it.",
+  "zh": "海盗船长僵尸并不是真正的船长。他干洗的衣服和别人的混到一起了，但他还是认为自己有个眼罩很酷。另外，这只鹦鹉知道他的名字，所以他总是会跟着这只鹦鹉。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "parrot pet steals plants",
+    "zh": "宠物鹦鹉能偷走植物"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.6,
+   "text": {
+    "en": "Dense",
+    "zh": "结实"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.4,
+   "text": {
+    "en": "Stiff",
+    "zh": "迟钝"
+   }
+  }
+ ]
+}

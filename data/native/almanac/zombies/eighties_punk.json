@@ -1,0 +1,46 @@
+{
+ "id": "eighties_punk",
+ "name": {
+  "en": "Punk Zombie",
+  "zh": "朋克僵尸"
+ },
+ "world": "eighties",
+ "description": {
+  "en": "Moshes plants back a space when his jam is playing.",
+  "zh": "舞蹈时，将植物向左侧空间踢走。"
+ },
+ "chat": {
+  "en": "Punk Zombie's piercings represent his individuality and his belief in personal freedom, or maybe just that he fell face-first into a sewing machine.",
+  "zh": "朋克僵尸身上的穿孔代表了他的个性和对个人自由的信仰，或许也只是因为他一头栽进了缝纫机里。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Weakness",
+    "zh": "弱点"
+   },
+   "text": {
+    "en": "Magnet Shrooms pull off his head",
+    "zh": "磁力菇能吸走他的头"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.4,
+   "text": {
+    "en": "Solid",
+    "zh": "略强"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.6,
+   "text": {
+    "en": "Hungry",
+    "zh": "饥渴"
+   }
+  }
+ ]
+}

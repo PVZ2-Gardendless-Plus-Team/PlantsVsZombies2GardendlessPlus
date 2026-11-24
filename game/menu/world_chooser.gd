@@ -200,19 +200,24 @@ func _update() -> void:
 	if world == null:
 		_name.text = "No worlds"
 		return
-	_name.text = world.display_name
+	_name.text = tr(world.display_name)
 	# Under the globe rather than on it, clear of the corner arrows.
 	var name_y := size.y - 150.0
 	_name.position = Vector2(0, name_y)
 	_name.size = Vector2(size.x, 56)
-	var hint := world.description
+	var hint := tr(world.description)
 	if not WorldMap.is_world_open(world):
 		var gate := Data.campaign(world.unlock_after)
-		hint = "Finish %s to open this world" % (
-				gate.display_name if gate != null else world.unlock_after)
+		hint = tr("Finish %s to open this world") % (
+				tr(gate.display_name) if gate != null else world.unlock_after)
 	_hint.text = hint
 	_hint.position = Vector2(size.x * 0.2, name_y + 54)
 	_hint.size = Vector2(size.x * 0.6, 60)
+
+
+func _notification(what: int) -> void:
+	if what == NOTIFICATION_TRANSLATION_CHANGED:
+		_update()
 
 
 func _unhandled_input(event: InputEvent) -> void:

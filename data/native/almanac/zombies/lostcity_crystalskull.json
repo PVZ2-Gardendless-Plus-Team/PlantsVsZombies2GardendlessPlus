@@ -1,0 +1,60 @@
+{
+ "id": "lostcity_crystalskull",
+ "name": {
+  "en": "Turquoise Skull Zombie",
+  "zh": "青骷髅头僵尸"
+ },
+ "world": "lostcity",
+ "description": {
+  "en": "Uses skull to steal sun, then unleashes energy in a destructive beam.",
+  "zh": "用骷髅头偷走阳光蓄能，再发射一道致命的激光。"
+ },
+ "chat": {
+  "en": "Unlike the more famous crystal skulls, turquoise skulls are totally non-mysterious and common as dirt.",
+  "zh": "与更有名的水晶头骨不同，青骷髅头完全不神秘，而且像泥土一样常见。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "tries to steal sun",
+    "zh": "会尝试偷走阳光"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "stolen sun cannot be retrieved",
+    "zh": "偷走的阳光不会再返还"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.5,
+   "text": {
+    "en": "Protected",
+    "zh": "加强"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ],
+ "display_offset": [
+  15,
+  0
+ ]
+}

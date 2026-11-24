@@ -1,0 +1,63 @@
+{
+ "id": "strawburst",
+ "name": {
+  "en": "Strawburst",
+  "zh": "爆浆草莓"
+ },
+ "brief": {
+  "en": "Grows a berry for small, medium or huge damage",
+  "zh": "随着成长，提供伤害不同的爆浆莓果"
+ },
+ "description": {
+  "en": "Strawburst grows a berry for small, medium or huge damage!",
+  "zh": "爆浆草莓随着成长，提供伤害不同的爆浆莓果！"
+ },
+ "chat": {
+  "en": "\"Big is good,\" says Strawburst. \"Though small's pretty choice as well. And you should never discount medium. I just like sizes, really.\"",
+  "zh": "“越大的东西越好，”爆浆草莓说道。“尽管小一点也很精致，中等大小的也不赖，我只是喜欢琳琅满目、大大小小的东西，说实话。”"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Usage",
+    "zh": "用法"
+   },
+   "text": {
+    "en": "tap to fire",
+    "zh": "点击发射"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 900
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "Lobbed",
+    "zh": "抛物线"
+   }
+  },
+  {
+   "type": "area",
+   "text": {
+    "en": "3x3",
+    "zh": "3x3 范围"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

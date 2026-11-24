@@ -1,0 +1,38 @@
+{
+ "id": "beach_flag_veteran",
+ "name": {
+  "en": "Beach Rally Zombie",
+  "zh": "沙滩大动员僵尸"
+ },
+ "world": "beach",
+ "description": {
+  "en": "Beach Rally Zombie and his flag marks the arrival of a floody \"wave\" of zombies.",
+  "zh": "沙滩大动员僵尸和他的旗帜代表着一大群僵尸如潮涌般袭来。"
+ },
+ "chat": {
+  "en": "He could have accelerated if he used his flag as a paddle.",
+  "zh": "要是他把他的旗帜当作桨来用的话还能走得更快。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.5,
+   "text": {
+    "en": "Protected",
+    "zh": "加强"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.85,
+   "text": {
+    "en": "Speedy",
+    "zh": "快速"
+   }
+  }
+ ],
+ "display_offset": [
+  30,
+  0
+ ]
+}

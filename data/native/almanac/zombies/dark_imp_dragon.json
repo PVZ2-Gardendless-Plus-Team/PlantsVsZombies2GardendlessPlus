@@ -1,0 +1,46 @@
+{
+ "id": "dark_imp_dragon",
+ "name": {
+  "en": "Imp Dragon Zombie",
+  "zh": "火龙小鬼"
+ },
+ "world": "dark",
+ "description": {
+  "en": "Spit past most your defenses, then claws forward.",
+  "zh": "从火焰中钻出，穿过你的大部分防线，然后伸出利爪向前抓去。"
+ },
+ "chat": {
+  "en": "Imp Zombie knows he's too old to wear a dragon costume like a kid on Halloween. But he doesn't care. Let the others judge. His spirit animal is a dragon, and he feels closer to his true self when he's dressed like this.",
+  "zh": "小鬼僵尸知道自己长大了，不能像小屁孩一样在万圣节穿上龙的服装。但他不在乎。让别人去评判吧。他的精神动物是龙，穿成这样，他感觉更接近真实的自己。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "immune to fire damage",
+    "zh": "无法受到火焰伤害"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.25,
+   "text": {
+    "en": "Average",
+    "zh": "一般"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.6,
+   "text": {
+    "en": "Hungry",
+    "zh": "饥渴"
+   }
+  }
+ ]
+}

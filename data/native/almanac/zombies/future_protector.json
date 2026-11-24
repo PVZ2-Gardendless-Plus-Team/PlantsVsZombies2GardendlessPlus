@@ -1,0 +1,55 @@
+{
+ "id": "future_protector",
+ "name": {
+  "en": "Force Shield Zombie",
+  "zh": "力场盾僵尸"
+ },
+ "world": "future",
+ "description": {
+  "en": "Protect himself and nearby zombies with a force field.",
+  "zh": "使用力场盾保护自身和周围的僵尸。"
+ },
+ "chat": {
+  "en": "Force Shield Zombie developed his system using funds from a BiteStarter campaign. The push goal for pushing plants was not met.",
+  "zh": "力场盾僵尸利用“开啃者”活动的资金开发了自己的系统。利用力场推走植物的目标没有实现。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "creates a shield to protect from incoming attacks",
+    "zh": "生成力场盾保护身边的战友免受伤害。"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.8,
+   "text": {
+    "en": "Protected",
+    "zh": "加强"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ],
+ "display_offset": [
+  0,
+  -20
+ ],
+ "variants": [
+  "future_protector_shield",
+  "future_infinut_shield",
+  "modern_moonflower_shield"
+ ]
+}

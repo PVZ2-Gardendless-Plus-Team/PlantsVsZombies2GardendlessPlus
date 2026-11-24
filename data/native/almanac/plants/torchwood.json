@@ -1,0 +1,87 @@
+{
+ "id": "torchwood",
+ "name": {
+  "en": "Torchwood",
+  "zh": "火炬树桩"
+ },
+ "brief": {
+  "en": "Turns peas into fireballs and does lanewide damage on defeat",
+  "zh": "点燃经过的豌豆，死亡时对整行造成伤害"
+ },
+ "description": {
+  "en": "Torchwoods turn peas that pass through them into fireballs that deal twice as much damage. They also deal close damage as well as lanewide flame damage on defeat.",
+  "zh": "火炬树桩将经过的豌豆点燃，造成双倍伤害。他们也会对靠近的僵尸造成伤害，死亡时会在燃烧一整行的僵尸。"
+ },
+ "chat": {
+  "en": "Torchwood and Snapdragon have become fast friends. They like to hang out at either the Tiki Lounge or the Renaissance Faire.",
+  "zh": "火炬树桩和火龙草形影不离。他们不是去提基酒馆，就是去学习复兴文化。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "damages zombies at close range",
+    "zh": "对靠近的僵尸造成伤害"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "does lane wide flame damage when destroyed",
+    "zh": "死亡时对整行僵尸造成燃烧伤害"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "immune to frost",
+    "zh": "不会被冻结"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "warms nearby plants",
+    "zh": "冰释周围的植物"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 450,
+   "name": {
+    "en": "BURNING DAMAGE",
+    "zh": "燃烧伤害"
+   }
+  },
+  {
+   "type": "damage",
+   "value": 10
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

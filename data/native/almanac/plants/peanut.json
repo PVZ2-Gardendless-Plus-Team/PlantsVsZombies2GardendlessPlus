@@ -1,0 +1,44 @@
+{
+ "id": "peanut",
+ "name": {
+  "en": "Pea-nut",
+  "zh": "花生"
+ },
+ "brief": {
+  "en": "Shoots peanuts and blocks zombies",
+  "zh": "阻挡僵尸并发射花生"
+ },
+ "description": {
+  "en": "Pea-nuts can shoot peanuts and block zombies.",
+  "zh": "花生抵挡僵尸，并发射花生子弹。"
+ },
+ "chat": {
+  "en": "Pea-nut knows that some folks have an aversion to him. He tries to be sensitive to their concerns and give them the space they need. Still, he can't help but miss the good old days - back when he was the most popular nut around.",
+  "zh": "花生知道有些人对他挺“过敏”。他试着了解他们的顾虑，并且给予对方足够的空间。即便如此，他仍然会情不自禁地怀念以前的时光——回到那个人人爱花生的时代。"
+ },
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 20
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "4 Tiles",
+    "zh": "4 格"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

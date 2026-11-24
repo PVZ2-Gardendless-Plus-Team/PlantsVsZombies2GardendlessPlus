@@ -1,0 +1,56 @@
+{
+ "id": "threepeater",
+ "name": {
+  "en": "Threepeater",
+  "zh": "三线射手"
+ },
+ "brief": {
+  "en": "Shoots three peas in three lanes",
+  "zh": "向三行发射豌豆"
+ },
+ "description": {
+  "en": "Threepeaters shoot peas in three lanes.",
+  "zh": "三线射手向三行发射豌豆。"
+ },
+ "chat": {
+  "en": "Threepeater loves playing multiplayer in video games, but split-screen never works out because the left head always cheats.",
+  "zh": "三线射手喜欢在电子游戏中玩多人模式，但是就算分成三个屏幕也没有用，左边那个家伙总喜欢作弊偷看。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Range Details",
+    "zh": "具体范围"
+   },
+   "text": {
+    "en": "three lanes",
+    "zh": "上下和本行"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 20
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "Multi-Lane",
+    "zh": "多行"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

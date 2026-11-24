@@ -1,0 +1,15 @@
+{
+ "id": "upgrade_wallnut_firstaid",
+ "order": 4,
+ "type": "firstaid",
+ "world": "cowboy",
+ "sprite": "Wallnut",
+ "name": {
+  "en": "Wall-nut First Aid",
+  "zh": "坚果包扎术"
+ },
+ "description": {
+  "en": "Fully repair damaged defensive plants by planting on top of them.",
+  "zh": "使一株受损的防御植物完全恢复。"
+ }
+}

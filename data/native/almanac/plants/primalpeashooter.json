@@ -1,0 +1,56 @@
+{
+ "id": "primalpeashooter",
+ "name": {
+  "en": "Primal Peashooter",
+  "zh": "原始豌豆射手"
+ },
+ "brief": {
+  "en": "Shoots heavy stunning peas",
+  "zh": "发射重型豌豆"
+ },
+ "description": {
+  "en": "Primal Peashooters shoot heavy peas with a brief stun at zombies.",
+  "zh": "原始豌豆射手发射沉重的大豌豆，对僵尸造成短暂的眩晕。"
+ },
+ "chat": {
+  "en": "Primal Peashooter may be primitive, but that doesn't stop him from enrolling and excelling in several software development correspondence courses.",
+  "zh": "尽管原始豌豆可能很原始，但是他仍然能涉猎并精通好几门软件开发的相关课程。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "primal peas occasionally knock zombies back",
+    "zh": "沉重的豌豆有时能击退僵尸一段距离"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 60
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "Straight",
+    "zh": "直线"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

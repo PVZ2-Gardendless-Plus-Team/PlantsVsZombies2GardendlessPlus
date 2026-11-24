@@ -1,0 +1,70 @@
+{
+ "id": "future_gargantuar",
+ "name": {
+  "en": "Gargantuar Prime",
+  "zh": "巨尸统领者"
+ },
+ "world": "future",
+ "description": {
+  "en": "Has it all: heavy armor, laser eyes, smashing arms, and Bug Bot deployment system.",
+  "zh": "功能齐全：沉重的铠甲、激光眼、会砸击的机械臂，以及机械虫开发系统。"
+ },
+ "chat": {
+  "en": "The imp pilots of the Gargantuar Prime series are handpicked by Dr. Zomboss himself. They are the imp elite. The small, the mean, and the fearless! But mostly the ones who drive a stick shift.",
+  "zh": "巨尸统领者的小鬼驾驶员都是由僵尸博士亲自挑选的。他们是小鬼中的精英。渺小、卑鄙、无畏！但最主要是要会开手动挡的。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Damage",
+    "zh": "攻击"
+   },
+   "text": {
+    "en": "crushes plants with arms",
+    "zh": "用手臂摧毁植物"
+   }
+  },
+  {
+   "name": {
+    "en": "Damage",
+    "zh": "攻击"
+   },
+   "text": {
+    "en": "randomly burns tiles with laser eyes",
+    "zh": "时常用激光眼扫射地面"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "launches Bug Bot when damaged",
+    "zh": "受重伤时射出机械虫"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.9,
+   "text": {
+    "en": "Great",
+    "zh": "巨大"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.6,
+   "text": {
+    "en": "Hungry",
+    "zh": "饥渴"
+   }
+  }
+ ],
+ "display_offset": [
+  20,
+  -60
+ ]
+}

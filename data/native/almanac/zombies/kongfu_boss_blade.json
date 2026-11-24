@@ -1,0 +1,50 @@
+{
+ "id": "kongfu_boss_blade",
+ "name": {
+  "en": "Blade-Wielding Hero",
+  "zh": "持刀大侠"
+ },
+ "world": "kongfu",
+ "description": {
+  "en": "The second of the Big Three to arrive at your lawn, leading an army of kongfu zombies.",
+  "zh": "第二位到访你的前院的武林巨头，引领着大量的武僧和武斗僵尸。"
+ },
+ "chat": {
+  "en": "As the second-in-command of the Big Three, Blade-Wielding Hero has a slight grasp of qigong. He often infuses his weapons with qigong to strengthen his control over them, acting like \"man and weapon in one\".",
+  "zh": "作为武林三巨头的二把手，持刀大侠稍微会一点气功。经常把气功注入到他的武器中加强自己对武器的掌控，到达“人兵合一”的领域。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "blocks off all damages on while his blade is flying across your defence",
+    "zh": "在把大刀丢向你的防线期间，会将所有伤害吸收"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 1,
+   "text": {
+    "en": "Undying",
+    "zh": "不朽"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.6,
+   "text": {
+    "en": "Hungry",
+    "zh": "饥渴"
+   }
+  }
+ ],
+ "display_offset": [
+  20,
+  -60
+ ]
+}

@@ -1,0 +1,26 @@
+{
+ "id": "dark_king",
+ "name": {
+  "en": "Zombie King",
+  "zh": "国王僵尸"
+ },
+ "world": "dark",
+ "description": {
+  "en": "Grants knight helms to nearby peasant zombies.",
+  "zh": "为附近的农夫僵尸授予骑士头盔。"
+ },
+ "chat": {
+  "en": "As Shakespeare once wrote, \"Uneasy lies the head that wears a crown.\" And Zombie King couldn't agree more. It is incredibly difficult to get a good night's sleep with a crown on your head. That thing is all kinds of uncomfortable.",
+  "zh": "莎士比亚曾写道：“头戴王冠的人不安宁。”国王僵尸对此深表赞同。头戴王冠是很难睡个好觉的。那东西在各方面让人不舒服。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.7,
+   "text": {
+    "en": "Hardened",
+    "zh": "强化"
+   }
+  }
+ ]
+}

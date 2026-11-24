@@ -1,0 +1,50 @@
+{
+ "id": "newspaper_veteran",
+ "name": {
+  "en": "Sunday Edition Zombie",
+  "zh": "周刊僵尸"
+ },
+ "world": "modern",
+ "description": {
+  "en": "The heavy magazine protects zombie, who is then enraged when it is destroyed.",
+  "zh": "受到厚重杂志保护的僵尸，当报纸被毁坏时将会发飙。"
+ },
+ "chat": {
+  "en": "Sunday Edition Zombie REALLY loves the comics section, which is why his rage is so all-consuming when it is torn to tatters before he's finished reading it.",
+  "zh": "周刊僵尸非常喜欢杂志里的漫画，这就是他还没看完漫画就被撕成碎片时怒不可遏的原因。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特殊"
+   },
+   "text": {
+    "en": "becomes a flighty zombie once the magazine is destroyed",
+    "zh": "一旦杂志被毁，将会发了疯似的向前冲去"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.8,
+   "text": {
+    "en": "Machined",
+    "zh": "重甲"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.6,
+   "text": {
+    "en": "Hungry",
+    "zh": "饥渴"
+   }
+  }
+ ],
+ "display_offset": [
+  50,
+  0
+ ]
+}

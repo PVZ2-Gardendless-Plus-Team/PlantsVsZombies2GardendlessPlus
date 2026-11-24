@@ -1,0 +1,34 @@
+{
+ "id": "beach_armor4",
+ "name": {
+  "en": "Crab-head Pompadour",
+  "zh": "螃蟹飞机头"
+ },
+ "world": "beach",
+ "description": {
+  "en": "Crab-head Pompadour's crab exoskeleton provides tremendous protection.",
+  "zh": "螃蟹飞机头的螃蟹外骨骼提供了巨大的保护。"
+ },
+ "chat": {
+  "en": "Another proof that Deep Sea Gargantuar is not a sea creature.",
+  "zh": "深海巨尸不是海洋生物的另一大证据。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.8,
+   "text": {
+    "en": "Machined",
+    "zh": "重甲"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ]
+}

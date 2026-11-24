@@ -1,0 +1,70 @@
+{
+ "id": "electriccurrant",
+ "name": {
+  "en": "Electric Currant",
+  "zh": "电流醋栗"
+ },
+ "brief": {
+  "en": "Creates electric fences",
+  "zh": "链接电弧对僵尸造成伤害"
+ },
+ "description": {
+  "en": "Electric Currants create electrical fences between ones planted on the same row or column.",
+  "zh": "相同行或列的电流醋栗之间会产生电流线。"
+ },
+ "chat": {
+  "en": "\"Electricity is all very well and fine as a phenomenon,\" says Electric Currant, \"but electromagnetism as a whole is where it's really at.\"",
+  "zh": "“闪电永远是最棒的自然现象，”电流醋栗说道，“但是电磁学这个整体才是它的灵魂所在。”"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Usage",
+    "zh": "用途"
+   },
+   "text": {
+    "en": "area effect (electric fence)",
+    "zh": "范围效果（电流连线）"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "knocks zombies back into other lanes when defeated",
+    "zh": "被打败时把僵尸击退至其他行"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 48,
+   "name": {
+    "en": "DAMAGE PER SEC",
+    "zh": "每秒伤害"
+   }
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "Lane & Column",
+    "zh": "行或列"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

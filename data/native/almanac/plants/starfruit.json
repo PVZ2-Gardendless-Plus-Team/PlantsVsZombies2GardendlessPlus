@@ -1,0 +1,44 @@
+{
+ "id": "starfruit",
+ "name": {
+  "en": "Starfruit",
+  "zh": "星星果"
+ },
+ "brief": {
+  "en": "Shoots stars in 5 directions",
+  "zh": "向五个方向发射星星"
+ },
+ "description": {
+  "en": "Starfruits shoot stars in 5 directions.",
+  "zh": "星星果会向五个方向发射星星子弹。"
+ },
+ "chat": {
+  "en": "Just a small town fruit that travelled to the big city and found his way to the future. His favorite modes of transportation: conveyor belts, hoverboards, and rockets. WEEEEE!",
+  "zh": "只是一只乡下来的小小的水果，四处游荡，到了大城市，甚至找到了通向未来的路。他最喜欢的交通方式是：传送带、悬浮滑板，还有火箭。哇呼呼呼呼！"
+ },
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 20
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "5 Way",
+    "zh": "5 个方向"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

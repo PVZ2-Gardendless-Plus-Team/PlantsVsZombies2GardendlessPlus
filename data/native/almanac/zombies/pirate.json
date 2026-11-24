@@ -1,0 +1,34 @@
+{
+ "id": "pirate",
+ "name": {
+  "en": "Pirate Zombie",
+  "zh": "海盗僵尸"
+ },
+ "world": "pirate",
+ "description": {
+  "en": "Regular plank walking zombie.",
+  "zh": "普普通通像日常一样在甲板上游荡的僵尸。"
+ },
+ "chat": {
+  "en": "Keeping up with the latest pirate trends is always tricky, but remember, he was planking before it was cool.",
+  "zh": "跟上海盗的最新潮流总是很麻烦，但是记住，他们天天玩的趴板挑战那时甚至还没开始流行呢。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.25,
+   "text": {
+    "en": "Average",
+    "zh": "一般"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ]
+}

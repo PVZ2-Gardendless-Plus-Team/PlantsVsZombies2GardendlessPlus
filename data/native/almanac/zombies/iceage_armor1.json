@@ -1,0 +1,34 @@
+{
+ "id": "iceage_armor1",
+ "name": {
+  "en": "Cave Conehead Zombie",
+  "zh": "洞窟路障僵尸"
+ },
+ "world": "ice",
+ "description": {
+  "en": "His mammoth horn cone makes him twice as tough as normal cave-dwellers.",
+  "zh": "他的猛犸象牙路障使他变得比原先抗打两倍。"
+ },
+ "chat": {
+  "en": "Cave Conehead Zombie was the first zombie to invent the cone. He lashed the horn of a mammoth to a slab of petrified wood ... and boom! A cone! The invention of the cone changed everything for the zombies. EVERYTHING.",
+  "zh": "洞窟路障僵尸是第一个发明锥体的僵尸。他把猛犸象的角绑在一块石化木板上……啪！一个圆锥出现了！圆锥的发明改变了僵尸的一切。一切啊！"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.5,
+   "text": {
+    "en": "Protected",
+    "zh": "加强"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ]
+}

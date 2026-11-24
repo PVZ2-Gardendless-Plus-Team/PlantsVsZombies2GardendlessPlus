@@ -1,0 +1,34 @@
+{
+ "id": "dino_armor1",
+ "name": {
+  "en": "Jurassic Conehead",
+  "zh": "侏罗纪路障僵尸"
+ },
+ "world": "dino",
+ "description": {
+  "en": "Cones, or old leftover horns bundled together with string so that they look sort of like a cone, provide some middling protection.",
+  "zh": "他那由被恐龙砸断的角捆起来做成的路障提供了不错的保护。"
+ },
+ "chat": {
+  "en": "Jurassic Conehead Zombie is trying to get the jump on the whole \"traffic cone\" idea. He figures it'll be a HUGE market in about 150 million years.",
+  "zh": "侏罗纪路障僵尸试图抢占整个“路障”这一概念的先例。他认为，大约 1.5 亿年后，这将形成一个巨大的贸易。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.5,
+   "text": {
+    "en": "Protected",
+    "zh": "加强"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ]
+}

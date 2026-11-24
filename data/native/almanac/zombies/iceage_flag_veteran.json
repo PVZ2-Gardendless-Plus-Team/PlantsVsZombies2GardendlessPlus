@@ -1,0 +1,38 @@
+{
+ "id": "iceage_flag_veteran",
+ "name": {
+  "en": "Cave Rally Zombie",
+  "zh": "洞窟大动员僵尸"
+ },
+ "world": "ice",
+ "description": {
+  "en": "Cave Rally Zombie and his flag marks the arrival of a large icy storm of zombies.",
+  "zh": "洞窟大动员僵尸和他的旗帜代表着超大群僵尸乘着冰风雪暴而来。"
+ },
+ "chat": {
+  "en": "If Cave Rally Zombie hadn't been fast enough, his flag would have been taken away by Tomb Raiser Zombie.",
+  "zh": "要不是洞窟大动员僵尸的速度够快，不然旗子早就被死神僵尸叼走了。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.5,
+   "text": {
+    "en": "Protected",
+    "zh": "加强"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.85,
+   "text": {
+    "en": "Speedy",
+    "zh": "快速"
+   }
+  }
+ ],
+ "display_offset": [
+  30,
+  0
+ ]
+}

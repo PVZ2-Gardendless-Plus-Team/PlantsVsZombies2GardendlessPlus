@@ -1,0 +1,34 @@
+{
+ "id": "cowboy_armor4",
+ "name": {
+  "en": "Cart-head Cowboy",
+  "zh": "矿车头牛仔"
+ },
+ "world": "cowboy",
+ "description": {
+  "en": "Cart-head Cowboy's cart-shaped chapeau provides extra-wheeled head protection.",
+  "zh": "矿车头牛仔的矿车帽子提供了四轮保护。"
+ },
+ "chat": {
+  "en": "Cart-head Cowboy could probably move a lot faster if he did a handstand and rolled, but he's not thinking that far ahead.",
+  "zh": "要是矿车头牛仔倒立前进的话可能可以走得快得多了，但他根本想不出这么先进的办法。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.8,
+   "text": {
+    "en": "Machined",
+    "zh": "重甲"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ]
+}

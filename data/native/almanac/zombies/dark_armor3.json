@@ -1,0 +1,34 @@
+{
+ "id": "dark_armor3",
+ "name": {
+  "en": "Knight Zombie",
+  "zh": "骑士僵尸"
+ },
+ "world": "dark",
+ "description": {
+  "en": "His king appointed helm provides amazing protection from damage.",
+  "zh": "他的国王提供的头盔能提供惊人的保护，使他免受大量伤害。"
+ },
+ "chat": {
+  "en": "Knight Zombie was just as surprised as anyone when Zombie King promoted him. He'd never say this out loud, but he's not sure he deserves the position. He's not sure he has what it takes to wear the armor. But like they say, \"Fake it 'til you make it.\"",
+  "zh": "国王僵尸提拔他时，骑士僵尸和其他人一样感到惊讶。他从未大声说出来，但他不确定自己是否配得上这个职位。他不明白穿上盔甲会意味着什么。但就像人们常说的，“在遭遇到前不当回事就好了。”"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.8,
+   "text": {
+    "en": "Machined",
+    "zh": "重甲"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ]
+}

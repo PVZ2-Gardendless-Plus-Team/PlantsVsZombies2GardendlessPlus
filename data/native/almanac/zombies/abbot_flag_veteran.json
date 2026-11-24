@@ -1,0 +1,38 @@
+{
+ "id": "abbot_flag_veteran",
+ "name": {
+  "en": "Abbot Rally Zombie",
+  "zh": "住持大动员僵尸"
+ },
+ "world": "kongfu",
+ "description": {
+  "en": "Abbot Rally Zombie and his flag marks the arrival of a large crew of skilled zombies.",
+  "zh": "住持大动员僵尸和他的旗帜代表着超大群身怀绝技僵尸的来临。"
+ },
+ "chat": {
+  "en": "The most terrible Rally Zombie you would ever witness!",
+  "zh": "这将是你遇到的最难解决的大动员僵尸！"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.5,
+   "text": {
+    "en": "Protected",
+    "zh": "加强"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.85,
+   "text": {
+    "en": "Speedy",
+    "zh": "快速"
+   }
+  }
+ ],
+ "display_offset": [
+  30,
+  0
+ ]
+}

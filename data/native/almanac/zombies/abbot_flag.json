@@ -1,0 +1,38 @@
+{
+ "id": "abbot_flag",
+ "name": {
+  "en": "Flag Abbot Zombie",
+  "zh": "住持旗帜僵尸"
+ },
+ "world": "kongfu",
+ "description": {
+  "en": "Marks the arrival of a huge noisy \"wave\" of zombies.",
+  "zh": "预示着一大波吵吵闹闹的僵尸的到来。"
+ },
+ "chat": {
+  "en": "The brain on his flag proclaimed him a shrewd leader ... at least in his own estimation.",
+  "zh": "旗帜上的大脑图案代表他是一名机智的领导者……至少他自己是这么认为的。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.25,
+   "text": {
+    "en": "Average",
+    "zh": "一般"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ],
+ "display_offset": [
+  15,
+  0
+ ]
+}

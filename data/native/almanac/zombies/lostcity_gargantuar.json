@@ -1,0 +1,60 @@
+{
+ "id": "lostcity_gargantuar",
+ "name": {
+  "en": "Porter Gargantuar",
+  "zh": "搬运工巨尸"
+ },
+ "world": "lostcity",
+ "description": {
+  "en": "Terrifying behemoth of exploratory fury.",
+  "zh": "可怕但乐忠探索的巨尸。"
+ },
+ "chat": {
+  "en": "Porter Gargantuar dreams of the discovery that will make him powerful and influential. Maybe then the Imps will be the one carrying him around. It's always nice to have dreams.",
+  "zh": "搬运工巨尸梦想着能发现使他变得强大和有影响力的东西，也许到那时，小鬼们就会带着他到处跑了。有梦想总是好的。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Damage",
+    "zh": "攻击"
+   },
+   "text": {
+    "en": "crushes plants with torch",
+    "zh": "用火把摧毁植物"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "throws Lost City Imp when damaged",
+    "zh": "受重伤时丢出失落之城小鬼"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.9,
+   "text": {
+    "en": "Great",
+    "zh": "巨大"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.6,
+   "text": {
+    "en": "Hungry",
+    "zh": "饥渴"
+   }
+  }
+ ],
+ "display_offset": [
+  20,
+  -60
+ ]
+}

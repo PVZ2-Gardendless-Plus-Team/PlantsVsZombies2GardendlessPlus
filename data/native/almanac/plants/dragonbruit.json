@@ -1,0 +1,49 @@
+{
+ "id": "dragonbruit",
+ "name": {
+  "en": "Dragon Bruit",
+  "zh": "暴君火龙果"
+ },
+ "brief": {
+  "en": "Launches 3 explosive seed pod projectiles at zombies across 3 adjacent lanes",
+  "zh": "向三行的僵尸投掷爆裂子弹"
+ },
+ "description": {
+  "en": "Dragon Bruits launch 3 explosive seed pod projectiles at zombies across 3 adjacent lanes. When destroyed, Dragon Bruits will split into 3 smaller plants.",
+  "zh": "暴君火龙果会向三相邻行的敌人发射三颗爆炸性子弹。被击败后，会分裂成三株小暴君火龙果。"
+ },
+ "chat": {
+  "en": "While each head of Dragon Bruit doesn't have their own name, they do each have their own unique personality. The Center head is the calm, rational one. While Lefty is a bit reserved and shy. Righty is... Well... always right.",
+  "zh": "尽管暴君火龙果的三颗头并没有各自的名字，他们却有着独特的性格。中间的那个冷静理性，左边的内敛害羞，右边的那个总是护“佑”着大家。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "powered Dragon Bruits apply poison to the projectiles",
+    "zh": "暗影形态的暴君火龙果会使子弹带毒"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 100
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

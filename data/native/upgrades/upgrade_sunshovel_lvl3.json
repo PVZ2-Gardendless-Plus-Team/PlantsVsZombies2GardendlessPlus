@@ -1,0 +1,16 @@
+{
+ "id": "upgrade_sunshovel_lvl3",
+ "order": 8,
+ "type": "sunshovel",
+ "amount": 0.25,
+ "world": "modern",
+ "sprite": "SunShovel",
+ "name": {
+  "en": "Shovel Perk",
+  "zh": "阳光铲补贴"
+ },
+ "description": {
+  "en": "Get an additional 25% of sun cost back when shoveling up plants!",
+  "zh": "铲除植物时掉落的阳光增加了其花费的 25% ！"
+ }
+}

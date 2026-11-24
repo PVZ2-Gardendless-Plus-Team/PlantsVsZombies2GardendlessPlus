@@ -1,0 +1,46 @@
+{
+ "id": "iceage_troglobite_veteran",
+ "name": {
+  "en": "Troglobite Warchief",
+  "zh": "穴居首领僵尸"
+ },
+ "world": "ice",
+ "description": {
+  "en": "Zombie that is strong enough to push blocks of ice that are more dangerous onto the lawn.",
+  "zh": "健壮到能推入更危险的冰块的僵尸。"
+ },
+ "chat": {
+  "en": "The reason why Hunter Leader Zombie was caught up with by Troglobite Warchief is that he proposed a challenge about who holds longer in the icy water.",
+  "zh": "猎人领袖僵尸之所以会被穴居首领僵尸超越，犯下的最大的错误就是跟他比谁更受得了冻。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Damage",
+    "zh": "伤害"
+   },
+   "text": {
+    "en": "crushes plants with frozen blocks",
+    "zh": "推动的冰块能碾压植物"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.6,
+   "text": {
+    "en": "Dense",
+    "zh": "结实"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ]
+}

@@ -1,0 +1,46 @@
+{
+ "id": "tomb_raiser",
+ "name": {
+  "en": "Tomb Raiser Zombie",
+  "zh": "死神僵尸"
+ },
+ "world": "egypt",
+ "description": {
+  "en": "Throws out bones to create tombstones.",
+  "zh": "丢出能产生墓碑的骨头。"
+ },
+ "chat": {
+  "en": "He dreams about playing fetch, running for brains. He loves burying himself in the yard, and is not yet indoor trained. He's still looking for his tail.",
+  "zh": "他梦想着能玩丢脑子捡脑子的游戏，他也喜欢把自己埋在后院里，甚至还没经历过室内训练，他还在找他的尾巴。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "creates tombstones on the lawn",
+    "zh": "在草坪上制造墓碑"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.6,
+   "text": {
+    "en": "Dense",
+    "zh": "结实"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ]
+}

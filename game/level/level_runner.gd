@@ -100,6 +100,12 @@ func start(level_def: Dictionary, target_board: Board) -> void:
 		open_rows.append(int(r) - 1)
 	board.plantable_rows = open_rows
 
+	# The player's upgrades: a bigger plant food bar, hand-launched mowers,
+	# and Sun Bonus on top of the level's own starting sun, as PVZGE's
+	# setSunCount(StartingSun + StartingSunBoost).
+	board.apply_upgrades()
+	board.set_starting_sun(starting_sun())
+
 	# Any *Mowers feature gives the lane a mower; which one is cosmetic.
 	board.mowers_enabled = has_mowers()
 	board.setup_mowers()
@@ -362,6 +368,13 @@ func objective_lines() -> Array[String]:
 func is_conveyor() -> bool:
 	return String((level.get("seedbank", {}) as Dictionary)
 			.get("mode", "chooser")) == "conveyor"
+
+
+## Sun in the bank when the level starts: the level's own `starting_sun`
+## (PVZGE's StartingSun, 50 when unset) plus the Sun Bonus upgrades.
+func starting_sun() -> int:
+	var base := int(level.get("starting_sun", board.starting_sun if board != null else 50))
+	return base + Upgrades.starting_sun_bonus()
 
 
 ## Sun rate for this level, from its own `sun` block.
@@ -656,5 +669,5 @@ func _spawn_one(entry: Dictionary, per_lane: Dictionary) -> Zombie:
 
 func wave_label() -> String:
 	if _finished_spawning:
-		return "Final wave"
-	return "Wave %d / %d" % [maxi(wave_index + 1, 0), waves.size()]
+		return tr("Final wave")
+	return tr("Wave %d / %d") % [maxi(wave_index + 1, 0), waves.size()]

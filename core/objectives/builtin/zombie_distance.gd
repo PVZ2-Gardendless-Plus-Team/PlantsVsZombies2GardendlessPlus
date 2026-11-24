@@ -37,4 +37,4 @@ func load_state(state: Dictionary) -> void:
 
 
 func describe() -> String:
-	return "Don't let zombies past column %s" % str(snappedf(distance, 0.1))
+	return tr("Don't let zombies past column %s") % str(snappedf(distance, 0.1))

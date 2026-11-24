@@ -89,10 +89,12 @@ func _read(level: Dictionary, board: Board) -> void:
 			_read_decks(deck_data.get("recommended", []), false)
 		_read_decks(deck_data.get("challenging", []), true)
 
+	# A level's own slot count stands as it is; otherwise the base count
+	# grows with the seed slot upgrades, as PVZGE's BaseSeedSlotcount does.
+	var cap := int(config.get("max_slots", 8))
 	var wanted := int(sb.get("slots", 0))
 	if wanted <= 0:
-		wanted = int(config.get("base_slots", 6))
-	var cap := int(config.get("max_slots", 8))
+		wanted = Upgrades.seed_slots(int(config.get("base_slots", 6)), cap)
 	var choosable := 0
 	for id in candidates:
 		if refusal(id) == "":
@@ -142,17 +144,17 @@ static func level_has_water(level: Dictionary, board: Board) -> bool:
 func refusal(id: StringName) -> String:
 	var def := Data.plant(id)
 	if def == null:
-		return "unknown plant"
+		return tr("unknown plant")
 	if locked.has(id):
 		return ""
 	if not _unlock_all and not Saves.is_plant_unlocked(id):
-		return "not unlocked yet"
+		return tr("not unlocked yet")
 	if _excluded.has(id):
-		return "not allowed in this level"
+		return tr("not allowed in this level")
 	if _ban_sun_producers and def.has_tag(&"sun_producer"):
-		return "sun producers are not allowed"
+		return tr("sun producers are not allowed")
 	if not _has_water and def.has_tag(&"water_only"):
-		return "needs water"
+		return tr("needs water")
 	return ""
 
 

@@ -1,0 +1,40 @@
+{
+ "id": "chicken",
+ "name": {
+  "en": "Zombie Chicken",
+  "zh": "僵尸鸡"
+ },
+ "world": "cowboy",
+ "description": {
+  "en": "Once released onto the lawn chickens run at full speed to peck at your brains.",
+  "zh": "一旦挣脱束缚，他们将会全力冲向你的大脑。"
+ },
+ "chat": {
+  "en": "Ba-qwack!",
+  "zh": "咯咯咯！"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.2,
+   "text": {
+    "en": "Fragile",
+    "zh": "脆弱"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 1,
+   "text": {
+    "en": "Flighty",
+    "zh": "飞速"
+   }
+  }
+ ],
+ "variants": [
+  "chicken_pumpkin",
+  "foodfight_turkey",
+  "turkeypult_turkey",
+  "turkeypult_big_turkey"
+ ]
+}

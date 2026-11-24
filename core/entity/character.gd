@@ -37,6 +37,11 @@ var art_rate: float = 1.0
 ## in a phase with its own resting look - a potato mine still underground -
 ## so every return to idle lands on the right animation.
 var idle_state: StringName = &"idle"
+## How fast the current animation is meant to run, on top of everything else.
+## PVZGE plays some actions at a speed worked out from their data - a grave
+## buster stretches its chewing to its BustTime - and a component sets this
+## for as long as that animation plays.
+var art_tempo: float = 1.0
 
 var _components: Array[EntityComponent] = []
 var _runtime_tags: Dictionary = {}   ## tags added or removed after spawn
@@ -175,7 +180,7 @@ func _on_art_finished(_name: StringName) -> void:
 ## entity's behaviour slows or speeds its animation with it, so a stunned
 ## plant visibly crawls and a buffed one visibly hurries.
 func art_speed() -> float:
-	return art_rate * attack_rate * suppression
+	return art_rate * attack_rate * suppression * art_tempo
 
 
 ## Hook for subclasses; runs after components exist.

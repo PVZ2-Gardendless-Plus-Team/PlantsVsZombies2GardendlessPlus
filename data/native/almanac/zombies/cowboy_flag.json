@@ -1,0 +1,38 @@
+{
+ "id": "cowboy_flag",
+ "name": {
+  "en": "Flag Cowboy Zombie",
+  "zh": "旗帜牛仔"
+ },
+ "world": "cowboy",
+ "description": {
+  "en": "Marks the arrival of a huge dusty \"wave\" of zombies.",
+  "zh": "预示着一大波满身尘土的僵尸的到来。"
+ },
+ "chat": {
+  "en": "The Lone Brainer leads the way.",
+  "zh": "带路的独脑侠。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.25,
+   "text": {
+    "en": "Average",
+    "zh": "一般"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ],
+ "display_offset": [
+  15,
+  0
+ ]
+}
