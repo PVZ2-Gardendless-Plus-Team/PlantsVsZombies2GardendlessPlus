@@ -22,6 +22,8 @@ func _ready() -> void:
 	match first:
 		&"map":
 			show_world_map(start_campaign)
+		&"store":
+			show_store()
 		_:
 			show_main_menu()
 
@@ -39,7 +41,16 @@ func show_world_map(campaign_id: StringName = &"") -> void:
 	map.start_campaign = campaign_id
 	map.level_chosen.connect(play_level)
 	map.back_requested.connect(show_main_menu)
+	map.store_requested.connect(func() -> void: show_store(map.current_world()))
 	_swap(map)
+
+
+## The store, returning to the world map page it was opened from.
+func show_store(from_world: CampaignDef = null) -> void:
+	var store := StoreScreen.new()
+	store.back_requested.connect(show_world_map.bind(
+			from_world.id if from_world != null else &""))
+	_swap(store)
 
 
 func play_level(level_id: StringName) -> void:
