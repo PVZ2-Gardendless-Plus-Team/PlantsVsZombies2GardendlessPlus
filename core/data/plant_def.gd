@@ -18,6 +18,17 @@ extends EntityDef
 ## It picks the seed packet's backing; empty gets the plain one.
 @export var world: StringName = &""
 
+@export_group("Zen Garden")
+## Where it grows in the Zen Garden (PVZGE's ZENGARDEN.PlantPlace): &"dirt"
+## fits any slot, &"fly" any slot too, &"solid" only bare ground, &"float"
+## only water, &"none" never comes out of a sprout.
+@export var zen_place: StringName = &"dirt"
+## Fixed odds of a sprout growing into it (PVZGE's FixedWeight). -1 leaves the
+## odds to how many the player already has.
+@export var zen_weight: int = -1
+## How far its art is lifted in the garden, in rig units (Tangle Kelp's 40).
+@export var zen_height: float = 0.0
+
 @export_group("Seed packet")
 ## The picture on the packet, when it is not named after the plant.
 @export var packet_portrait: StringName = &""
@@ -58,4 +69,7 @@ func _copy_stats_to(target: EntityDef) -> void:
 		target.beghouled_cost = beghouled_cost
 		target.family = family
 		target.world = world
+		target.zen_place = zen_place
+		target.zen_weight = zen_weight
+		target.zen_height = zen_height
 		target.packet_portrait = packet_portrait

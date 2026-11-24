@@ -16,6 +16,9 @@
    "min_health": 50
   }
  ],
+ "zen_garden": {
+  "place": "solid"
+ },
  "mint_boost": {
   "resistance": 1,
   "speed": 1,

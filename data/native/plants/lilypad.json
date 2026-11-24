@@ -19,6 +19,10 @@
   "provides:aquatic",
   "water_only"
  ],
+ "zen_garden": {
+  "place": "float",
+  "weight": 1
+ },
  "extra": {
   "CannotBeSheepenedByWizard": true
  }

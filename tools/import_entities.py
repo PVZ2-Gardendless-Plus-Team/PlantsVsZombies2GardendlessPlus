@@ -786,6 +786,19 @@ def split_plant(name, entry, prop_lookup, feature=None):
     if tags:
         out["tags"] = tags
 
+    # The Zen Garden: where the plant can grow, and odds that override the
+    # usual ones. Only written when it differs from a plain dirt plant.
+    zen = feature.get("ZENGARDEN") or {}
+    zen_out = {}
+    if zen.get("PlantPlace", "dirt") != "dirt":
+        zen_out["place"] = zen.get("PlantPlace")
+    if zen.get("FixedWeight") is not None:
+        zen_out["weight"] = zen["FixedWeight"]
+    if zen.get("Height"):
+        zen_out["height"] = zen["Height"]
+    if zen_out:
+        out["zen_garden"] = zen_out
+
     if merged.get("MintBoostedProps"):
         mb = merged["MintBoostedProps"]
         out["mint_boost"] = {"resistance": mb.get("ResistanceMult"),

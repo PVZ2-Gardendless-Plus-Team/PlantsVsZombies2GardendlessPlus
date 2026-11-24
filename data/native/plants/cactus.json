@@ -18,6 +18,9 @@
    "projectile_plantfood": "cactus_pf"
   }
  ],
+ "zen_garden": {
+  "place": "solid"
+ },
  "mint_boost": {
   "resistance": 1,
   "speed": 2,
