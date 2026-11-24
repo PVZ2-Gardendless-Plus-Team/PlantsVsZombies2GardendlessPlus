@@ -52,7 +52,7 @@ func _init(slots: int = 3, font_size: int = 18) -> void:
 func _ready() -> void:
 	var art := _icon.has_art()
 	_button.flat = art
-	_button.text = "" if art else "Food"
+	_button.text = "" if art else tr("Food")
 	for slot in _slots:
 		slot.visible = slot.has_art()
 	_label.visible = not art
@@ -79,7 +79,7 @@ func set_count(total: int) -> void:
 				_slots[i].play(&"filled")
 		else:
 			_slots[i].play(&"empty")
-	_label.text = "Food: %d" % total
+	_label.text = tr("Food: %d") % total
 	_button.disabled = total <= 0 and not _active
 
 

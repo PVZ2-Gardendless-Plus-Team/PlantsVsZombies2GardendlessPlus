@@ -4052,7 +4052,7 @@ func _test_rewards() -> void:
 		drop.collect()
 	await _wait_game_seconds(drop.present_time + 0.3)
 	check("a new plant gets the award screen", main._award.visible)
-	check_eq("saying so", main._award._title.text, "You got a new plant!")
+	check_eq("saying so", main._award._title.text, "You got a new PLANT!")
 	main._award._on_continue()
 	check("continuing dismisses it", not main._award.visible)
 

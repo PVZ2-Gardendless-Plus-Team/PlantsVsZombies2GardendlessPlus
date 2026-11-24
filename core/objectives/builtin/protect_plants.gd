@@ -70,4 +70,4 @@ func is_met() -> bool:
 
 
 func describe() -> String:
-	return "Protect plants: %d / %d" % [alive(), must_protect]
+	return tr("Protect plants: %d / %d") % [alive(), must_protect]

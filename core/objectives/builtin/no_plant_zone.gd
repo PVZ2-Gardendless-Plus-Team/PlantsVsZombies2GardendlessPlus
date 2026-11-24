@@ -19,4 +19,4 @@ func setup() -> void:
 
 
 func describe() -> String:
-	return "Mold: some ground can't be planted"
+	return tr("Mold: some ground can't be planted")
