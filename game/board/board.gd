@@ -1423,7 +1423,8 @@ func spawn_zombie(id: StringName, row: int, x_offset: float = 0.0,
 	z.tree_exiting.connect(_on_zombie_gone.bind(z))
 	z.reached_house.connect(_on_zombie_reached_house)
 	_meet(id)
-	Audio.play(&"zombie.spawn", z.position)
+	# No groan here: PVZGE zombies groan now and then while on the lawn, which
+	# the level runner does (`zombie.groan`), not as they arrive.
 	return z
 
 

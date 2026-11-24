@@ -13,6 +13,8 @@ Two inputs describe what to build:
 
 Effects become action sheets. Several clips go into one multi instrument with
 its playlist shuffled, so FMOD picks the variation and the game never knows.
+The content file's `music` section (event path -> clip) makes looping
+timeline events for music outside the worlds, such as the menu.
 
 A world's lawn music becomes one timeline event driven by the `state`
 parameter - the same shape as the hand-built Egypt event:
@@ -419,6 +421,8 @@ def plan(proj, content, music_map):
                     bool(spec.get("replace"))))
     for path in content.get("assign", []):
         out.append((path, "assign", None, False))
+    for path, clip in sorted(content.get("music", {}).items()):
+        out.append((path, "music_loop", [proj.clip(clip)], False))
 
     for world, cues in sorted(music_map["worlds"].items()):
         cues = dict(cues)
@@ -622,8 +626,10 @@ def stream_map(proj):
         clips = [c for c in clips if c]
         if not clips:
             continue
-        loop = bool(regions) or any(_prop(s, "isLooping") == "true" for s in sounds)
-        if loop and len(sounds) > 1:
+        loop = (bool(regions) or any(_prop(s, "isLooping") == "true" for s in sounds)
+                or any(o.get("class") == "MultiSound" and _prop(o, "looping") == "true"
+                       for o in root))
+        if regions and len(sounds) > 1:
             # Prefer the first wave's loop, then the final one - the fallback
             # has no phases, so it plays the lawn's own music, never the
             # seed chooser's.

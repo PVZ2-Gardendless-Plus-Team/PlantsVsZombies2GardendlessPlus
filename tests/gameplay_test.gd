@@ -1564,6 +1564,11 @@ func _test_audio() -> void:
 	check("the coin bag has its own landing", Audio.has_event(&"reward.land.coinbag"))
 	check("sunflower makes sun with a sound", Audio.has_event(&"plant.produce"))
 	check("peas splat when they hit", Audio.has_event(&"projectile.hit"))
+	check("zombies groan in their world's voice", Audio.has_event(&"zombie.groan.egypt"))
+	check("imps groan as imps", Audio.has_event(&"zombie.groan.imp"))
+	for cue in [&"ui.button.click", &"ui.pause", &"ui.unpause", &"zen.boost",
+			&"zen.plant.grow", &"zen.sprout.birth", &"music.menu", &"music.worldmap"]:
+		check("'%s' has a sound" % cue, Audio.has_event(cue))
 	Audio.play_variant(&"plant.shoot", &"not_a_plant")
 	Audio.play_extra(&"plant.food", &"not_a_plant")
 	check("an unknown variant falls back quietly", not Audio._missing_reported.has(&"plant.shoot.not_a_plant"))
