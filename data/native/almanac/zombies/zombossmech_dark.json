@@ -1,0 +1,53 @@
+{
+ "id": "zombossmech_dark",
+ "name": {
+  "en": "Zombot Dark Dragon",
+  "zh": "巨龙驾驭者"
+ },
+ "world": "dark",
+ "description": {
+  "en": "The desolator of all, from dark times.",
+  "zh": "黑暗时代毁灭一切的暴君。"
+ },
+ "chat": {
+  "en": "With a rumble of destruction, Dr. Zomboss forged his Dark Dragon in the heart of a volcano. Then he tempered the beast in the chilled waters of Doom Lake. Finally he fed its furnace with coal from the Mines of Morbidity. And the paint job - that was done by Carl.",
+  "zh": "伴随着毁灭的轰鸣声，僵尸博士在火山中心铸造了他的黑暗巨龙。然后，他在末日湖冰冷的湖水中锤炼这头巨兽。最后，他用“疾病矿井”里的煤炭喂饱了它的熔炉。而喷漆工作则是由卡尔完成的。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "lobbed fireballs can hatch Imp Dragon Zombies",
+    "zh": "发射的火球可以孵出火龙小鬼"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 1,
+   "text": {
+    "en": "Undying",
+    "zh": "不朽"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.6,
+   "text": {
+    "en": "Hungry",
+    "zh": "饥渴"
+   }
+  }
+ ],
+ "display_offset": [
+  -60,
+  -100
+ ],
+ "variants": [
+  "zombossmech_dark2"
+ ]
+}

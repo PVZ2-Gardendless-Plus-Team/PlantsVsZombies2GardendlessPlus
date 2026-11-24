@@ -1,0 +1,40 @@
+{
+ "id": "electricblueberry",
+ "name": {
+  "en": "Electric Blueberry",
+  "zh": "闪电蓝莓"
+ },
+ "brief": {
+  "en": "Randomly electrocute zombies",
+  "zh": "电击烧毁随机的僵尸"
+ },
+ "description": {
+  "en": "Electric Blueberries randomly electrocute zombies every so often.",
+  "zh": "闪电蓝莓每隔一段时间发射一团雷云，烧毁随机的僵尸。"
+ },
+ "chat": {
+  "en": "Electric Blueberry prides herself for being eclectic as well as electric. \"I like to keep'em guessing,\" she says. \"A zombie should always be like, 'Whoa, didn't see that coming,' when they're disintegrated.\"",
+  "zh": "闪电蓝莓因她的不拘一格和易怒如雷的性格而自豪。“我想让他们一直好奇着，”她说。“僵尸在被解体时总会感到吃惊：‘喔！别人都说她很弱的啊！’”"
+ },
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "Full Board",
+    "zh": "全屏"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

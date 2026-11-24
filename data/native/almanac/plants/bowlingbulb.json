@@ -1,0 +1,56 @@
+{
+ "id": "bowlingbulb",
+ "name": {
+  "en": "Bowling Bulb",
+  "zh": "保龄泡泡"
+ },
+ "brief": {
+  "en": "Rolls bouncing shots that can hit multiple zombies",
+  "zh": "滚出弹性的保龄球，对多只僵尸造成伤害"
+ },
+ "description": {
+  "en": "Bowling Bulbs rolls shots that can bounce into multiple zombies. The Larger bulbs deal more damage.",
+  "zh": "保龄泡泡滚出可以在僵尸之间来回碰撞的保龄球。保龄球越大，造成的伤害越大。"
+ },
+ "chat": {
+  "en": "Guess which team has won the League Championship for five years running now? Team Bowling Bulb, that's who. They are on a ROLL. You and your pals think you got what it takes to stop 'em? Yeah sure. Keep dreamin, bub.",
+  "zh": "猜猜哪个队直到现在蝉联五次冠军？没错，就是保龄泡泡队。他们现在如日中天。你和你的队友以为可以有什么办法打败他们吗？呵呵，继续做梦去吧，伙计。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Damage Details",
+    "zh": "具体伤害"
+   },
+   "text": {
+    "en": "larger bulbs do more damage",
+    "zh": "越大的保龄球，造成的伤害越大"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 40
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "Multi-hit",
+    "zh": "多个目标"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

@@ -1,0 +1,34 @@
+{
+ "id": "iceage_weasel",
+ "name": {
+  "en": "Ice Weasel",
+  "zh": "冰鼬"
+ },
+ "world": "ice",
+ "description": {
+  "en": "Once released, weasels run full speed even over ice floes to nibble your brains.",
+  "zh": "一旦挣脱束缚，冰鼬将会跳过所有浮冰全力冲向你的大脑。"
+ },
+ "chat": {
+  "en": "Skweek-ka-REE!",
+  "zh": "吱——嘎——呼呼呼！"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.2,
+   "text": {
+    "en": "Fragile",
+    "zh": "脆弱"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 1,
+   "text": {
+    "en": "Flighty",
+    "zh": "飞速"
+   }
+  }
+ ]
+}

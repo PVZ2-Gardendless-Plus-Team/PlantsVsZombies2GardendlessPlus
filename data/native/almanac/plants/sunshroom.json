@@ -1,0 +1,40 @@
+{
+ "id": "sunshroom",
+ "name": {
+  "en": "Sun-shroom",
+  "zh": "阳光菇"
+ },
+ "brief": {
+  "en": "Gives more sun over time",
+  "zh": "随着生长产出更多的阳光"
+ },
+ "description": {
+  "en": "Sun-shrooms give small suns at first, then normal suns, and finally large suns.",
+  "zh": "阳光菇一开始提供小阳光，然后提供普通阳光，最后提供大阳光。"
+ },
+ "chat": {
+  "en": "Oh sure, Sun-shroom is known for his ever-present grin and sunny disposition. But truth be told, even he has his dark days. It ain't easy keeping things light when you live in the shadow.",
+  "zh": "哦当然，阳光菇的性格可常常是出了名的积极阳光。但是实话说，即使是他也有不顺心的日子。生活在黑暗之中还能一直保持阳光可不是件容易的事。"
+ },
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "sun_production",
+   "text": {
+    "en": "Variable",
+    "zh": "多种"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

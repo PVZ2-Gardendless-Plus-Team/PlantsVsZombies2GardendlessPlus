@@ -1,0 +1,34 @@
+{
+ "id": "monk_armor4",
+ "name": {
+  "en": "Monk Censer-headed Zombie",
+  "zh": "武僧香炉僵尸"
+ },
+ "world": "kongfu",
+ "description": {
+  "en": "Monk Censer-headed Zombie wears a hard-tiled censer, providing sturdy protection.",
+  "zh": "武僧香炉僵尸的头戴坚硬的瓦制香炉，得到了厚实的防护。"
+ },
+ "chat": {
+  "en": "In order to wear this censer, he specially learned the skill to hold his breath permanently. Though, it's not necessary for him to breathe.",
+  "zh": "为了戴上这个香炉，他特意学会了永久憋气的功法。实际上他本来就不需要呼吸。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.8,
+   "text": {
+    "en": "Machined",
+    "zh": "重甲"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ]
+}

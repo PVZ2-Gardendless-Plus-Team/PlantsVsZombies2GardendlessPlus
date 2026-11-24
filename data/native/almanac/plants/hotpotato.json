@@ -1,0 +1,63 @@
+{
+ "id": "hotpotato",
+ "name": {
+  "en": "Hot Potato",
+  "zh": "烤马铃薯"
+ },
+ "brief": {
+  "en": "Plant it on an ice block to melt the block",
+  "zh": "种植在冰块上并融化这块冰块"
+ },
+ "description": {
+  "en": "Hot Potatoes melt the ice blocks they're planted on.",
+  "zh": "烤马铃薯会将本格的冰块融化。"
+ },
+ "chat": {
+  "en": "How does Hot Potato stay so positive and even-peeled all the time? Yoga, that's how. She never misses a class. Also, regular meditation. It's the only way she can handle the hard work of fighting zombies, day in and day out, without melting down.",
+  "zh": "烤马铃薯即使在去皮时也能活得如此积极，为什么？瑜伽，这就是答案。她从来没有错过哪怕一堂瑜伽课。此外，还有定期冥想。这是她能够面对僵尸战斗，日复一日辛勤工作而没有倒下去的唯一方法。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Usage",
+    "zh": "用法"
+   },
+   "text": {
+    "en": "single use",
+    "zh": "一次性使用"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "melts an ice block",
+    "zh": "融化一块冰块"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "Single",
+    "zh": "单个"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ],
+ "display_offset": [
+  0,
+  20
+ ]
+}

@@ -1,0 +1,59 @@
+{
+ "id": "turkeypult",
+ "name": {
+  "en": "Turkey-pult",
+  "zh": "火鸡投手"
+ },
+ "brief": {
+  "en": "Lobs tofu turkeys",
+  "zh": "扔出豆腐火鸡"
+ },
+ "description": {
+  "en": "Turkey-pults lob tofu turkeys to the enemies.",
+  "zh": "火鸡投手朝敌人扔出豆腐火鸡。"
+ },
+ "chat": {
+  "en": "Turkey-pult's turkeys are so delicious, you'd never know they were actually made of tofu! Almost never. You might know. Okay, fine, cards on the table: there is absolutely no way you could ever mistake these turkeys for the real thing.",
+  "zh": "火鸡投手的火鸡非常美味，你甚至不会尝出它们是豆腐做的！永远都尝不出。也许能看出。嗯，好吧，摊牌了，你永远不会把这些火鸡和真货弄混的。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "tofu turkeys damage zombies and then charge down the lane to damage even more zombies",
+    "zh": "豆腐火鸡会啃咬僵尸并向前冲，之后甚至能伤害到更多的僵尸"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "text": {
+    "en": "65 Per Second",
+    "zh": "65 每秒"
+   }
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "Lobbed",
+    "zh": "抛物线"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

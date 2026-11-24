@@ -1,0 +1,50 @@
+{
+ "id": "sky_battleplane",
+ "name": {
+  "en": "Battleplane Zombie",
+  "zh": "战斗机僵尸"
+ },
+ "world": "sky",
+ "description": {
+  "en": "Attack your plants and ship with the machine gun on his plane.",
+  "zh": "使用战斗机上的机枪攻击植物和飞船。"
+ },
+ "chat": {
+  "en": "To become an excellent fighter, he studied a total of 97 flight courses, passed 81 exams, and underwent 101 simulated flight drills during his time at flight school... He always talks endlessly to others about his superb flying skills, but the zombies who have ridden in his plane seem unwilling to bring up this topic again.",
+  "zh": "为了成为一名优秀的战斗机僵尸，在飞行学校学习期间，他总共学习了97门飞行课程、通过了81场考试、经历了101场模拟飞行演练……他总是滔滔不绝地和别人提起自己高超的飞行技术，不过坐过他的飞机的僵尸似乎都不愿意再次提及这个话题。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Weakness",
+    "zh": "弱点"
+   },
+   "text": {
+    "en": "lobbed projectiles or poison directly damage the imp driver",
+    "zh": "投掷的子弹或毒能直接伤害到小鬼驾驶员"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.7,
+   "text": {
+    "en": "Hardened",
+    "zh": "强化"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ],
+ "display_offset": [
+  0,
+  -20
+ ]
+}

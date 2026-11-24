@@ -1,0 +1,56 @@
+{
+ "id": "lostcity_lostpilot_veteran",
+ "name": {
+  "en": "Rescue Pilot Zombie",
+  "zh": "救援飞行员僵尸"
+ },
+ "world": "lostcity",
+ "description": {
+  "en": "Drops in and brings adventurers in to your defences.",
+  "zh": "掉入你的防御中心，并带来探宝僵尸。"
+ },
+ "chat": {
+  "en": "Even without knowing how to fly a plane, ensuring passengers' safety truly takes skill.",
+  "zh": "即使不会开飞机也能保证乘客的安全，也算是真本事了。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "drops in and hangs for a moment between your lawn",
+    "zh": "坠入并在草坪中央悬挂一段时间"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "brings adventurers with armors",
+    "zh": "携带探宝僵尸入场"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.8,
+   "text": {
+    "en": "Protected",
+    "zh": "加强"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ]
+}

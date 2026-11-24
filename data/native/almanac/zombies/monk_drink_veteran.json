@@ -1,0 +1,66 @@
+{
+ "id": "monk_drink_veteran",
+ "name": {
+  "en": "Pitch-pot Monk Zombie",
+  "zh": "投壶武僧"
+ },
+ "world": "kongfu",
+ "description": {
+  "en": "Becomes enraged after drinking",
+  "zh": "喝酒后，能进入狂暴状态。"
+ },
+ "chat": {
+  "en": "As known for all, \"pitch-pot\" is a game where literati throw arrows into a pot. However, the Pitch-pot Monk Zombie is definitely no literatus.",
+  "zh": "众所周知，“投壶”是文人把箭投进壶里的游戏。然而，投壶武僧僵尸明显不是文人。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "damages plants in nearby lanes",
+    "zh": "可以打击相邻行的植物"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "becomes resistant, powerful and speedy after drinking",
+    "zh": "喝酒后，抵抗力上升，伤害更高，走得更快"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "drinks when damaged",
+    "zh": "受重伤后饮酒"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.8,
+   "text": {
+    "en": "Protected",
+    "zh": "加强"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 1,
+   "text": {
+    "en": "Flighty",
+    "zh": "飞速"
+   }
+  }
+ ]
+}

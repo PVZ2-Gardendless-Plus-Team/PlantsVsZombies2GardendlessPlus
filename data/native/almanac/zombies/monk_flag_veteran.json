@@ -1,0 +1,38 @@
+{
+ "id": "monk_flag_veteran",
+ "name": {
+  "en": "Monk Rally Zombie",
+  "zh": "武僧大动员僵尸"
+ },
+ "world": "kongfu",
+ "description": {
+  "en": "Monk Rally Zombie and his flag marks the arrival of a large crew of skilled zombies.",
+  "zh": "武僧大动员僵尸和他的旗帜代表着超大群身怀绝技僵尸的来临。"
+ },
+ "chat": {
+  "en": "You really think he uses the flag as a weapon like Kongfu Rally Zombie did? Come on. Don't ask for more when someone can play it like a flute.",
+  "zh": "你真以为他能像武斗大动员僵尸那样把旗子当武器使？哦天啊，他都能用这支旗子吹笛子了，你还想怎么样呢。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.5,
+   "text": {
+    "en": "Protected",
+    "zh": "加强"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.85,
+   "text": {
+    "en": "Speedy",
+    "zh": "快速"
+   }
+  }
+ ],
+ "display_offset": [
+  30,
+  0
+ ]
+}

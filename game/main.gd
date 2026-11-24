@@ -746,6 +746,8 @@ func _on_won() -> void:
 	if first_win:
 		for feature in (runner.level.get("unlocks_features", []) as Array):
 			Saves.unlock_feature(StringName(feature))
+	for page in board.met_zombies:
+		Saves.discover_zombie(page, AlmanacData.KNOWN)
 	var reward := LevelReward.for_level(runner.level, first_win)
 	# Granted as it drops, so leaving before picking it up cannot lose it.
 	reward.grant()

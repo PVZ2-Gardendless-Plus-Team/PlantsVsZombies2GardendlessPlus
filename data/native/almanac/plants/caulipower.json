@@ -1,0 +1,52 @@
+{
+ "id": "caulipower",
+ "name": {
+  "en": "Caulipower",
+  "zh": "超能花菜"
+ },
+ "brief": {
+  "en": "Hypnotizes electrocute zombies",
+  "zh": "魅惑随机的僵尸"
+ },
+ "description": {
+  "en": "Caulipowers use their mental powers to hypnotize random zombies and turn them against their former friends.",
+  "zh": "超能花菜利用他们的心灵控制能力来魅惑随机的僵尸，使之以他们的同类为敌。"
+ },
+ "chat": {
+  "en": "Caulipower's eyes spin with distress. He's just thought of a really great ending for his novel, but he's afraid his cousin won't understand it.",
+  "zh": "超能花菜压力很大，双眼晕眩地转了起来。他只是想为自己的小说写个大结局，但是他很担心自己的表弟读不懂。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "hovers above ground or water",
+    "zh": "能飘浮于水面上"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "Full Board",
+    "zh": "全屏"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

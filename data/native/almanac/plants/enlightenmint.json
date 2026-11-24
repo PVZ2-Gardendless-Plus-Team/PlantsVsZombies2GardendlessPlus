@@ -1,0 +1,41 @@
+{
+ "id": "enlightenmint",
+ "name": {
+  "en": "Enlighten-mint",
+  "zh": "启明薄荷"
+ },
+ "brief": {
+  "en": "Boosts sun plants",
+  "zh": "强化阳光植物"
+ },
+ "description": {
+  "en": "Enlighten-mints give a burst of sun when planted, and provide an additional temporary boost to Enlighten-mint Family plants.",
+  "zh": "启明薄荷在种植时产生一沓阳光，并为启明家族植物带来额外的能量。"
+ },
+ "chat": {
+  "en": "Enlighten-mint wants to stress that while \"enlightenment\" is properly understood as \"full comprehension of a situation,\" she herself frequently likes to ask follow-up questions just to be sure.",
+  "zh": "启明薄荷想强调，虽然“启明”的正确理解是“对处境的完全领悟”，但她本人经常喜欢多问几个后续问题，只为图个安心。"
+ },
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "duration",
+   "value": 10
+  },
+  {
+   "type": "special",
+   "text": {
+    "en": "Sun Production",
+    "zh": "阳光生产"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

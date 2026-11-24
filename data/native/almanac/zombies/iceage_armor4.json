@@ -1,0 +1,34 @@
+{
+ "id": "iceage_armor4",
+ "name": {
+  "en": "Mammoth-headed Zombie",
+  "zh": "猛犸头僵尸"
+ },
+ "world": "ice",
+ "description": {
+  "en": "Mammoth-headed Zombie's mammoth skull provides tremendous protection.",
+  "zh": "猛犸头僵尸的猛犸头骨提供了巨大的保护。"
+ },
+ "chat": {
+  "en": "It wasn't a real mammoth skull. Having seen the technology from Dr. Zomboss, it'd be known that it is the result of long-time work.",
+  "zh": "那不是真正的猛犸头骨，既然见识过僵尸博士的科技肯定能知道那是努力的结晶。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.8,
+   "text": {
+    "en": "Machined",
+    "zh": "重甲"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ]
+}

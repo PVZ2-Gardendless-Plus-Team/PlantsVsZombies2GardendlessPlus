@@ -1,0 +1,48 @@
+{
+ "id": "abbot_chi",
+ "name": {
+  "en": "Qigong Abbot",
+  "zh": "气功住持"
+ },
+ "world": "kongfu",
+ "description": {
+  "en": "Fires Qigong blasts towards your plants.",
+  "zh": "向植物发动气功波。"
+ },
+ "chat": {
+  "en": "As the true successor of The leader of the Big Three and inheritor of the Qigong Cult, he travels between different Kongfu Temples to teach Qigong, though he is often mistaken for a leaf-sweeping monk.",
+  "zh": "作为武林三巨头一把手的真传弟子，即气功教的传人，他在各个少林寺之间往返传授气功教，尽管经常被当成扫地僧去清扫落叶。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "Qigong blast pushes your plants on contact",
+    "zh": "气功波会推开接触到的植物"
+   }
+  },
+  {
+   "name": {
+    "en": "Weakness",
+    "zh": "弱点"
+   },
+   "text": {
+    "en": "Resistant Radishes block off Qigong blasts",
+    "zh": "白萝卜会抵挡气功波"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.7,
+   "text": {
+    "en": "Hardened",
+    "zh": "强化"
+   }
+  }
+ ]
+}

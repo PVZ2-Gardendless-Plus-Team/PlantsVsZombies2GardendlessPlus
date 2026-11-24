@@ -1,0 +1,59 @@
+{
+ "id": "camel_onehump",
+ "name": {
+  "en": "Camel Zombies",
+  "zh": "骆驼牌僵尸"
+ },
+ "world": "egypt",
+ "description": {
+  "en": "Arrives in step with other Camel Zombies.",
+  "zh": "随着其他的骆驼牌僵尸组队入场。"
+ },
+ "chat": {
+  "en": "Each Camel Zombie is an excellent ballroom dancer, practicing every day by holding up mysterious signs with strange symbols. They call it \"The Camel Dance\".",
+  "zh": "每名骆驼牌僵尸都是舞厅中出色的舞者，每天举着带有神秘图案的牌子排练。他们称之为“骆驼舞”。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "arrives in a group of three zombies or more",
+    "zh": "每组三名或以上同时到来"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.5,
+   "text": {
+    "en": "Protected",
+    "zh": "加强"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.3,
+   "text": {
+    "en": "Creeper",
+    "zh": "静步"
+   }
+  }
+ ],
+ "display_offset": [
+  -30,
+  0
+ ],
+ "variants": [
+  "camel_segment",
+  "camel_segment_touch",
+  "camel_onehump_touch",
+  "lunar_camel_segment",
+  "lunar_camel_onehump",
+  "feastivus_camel_segment",
+  "feastivus_camel_onehump"
+ ]
+}

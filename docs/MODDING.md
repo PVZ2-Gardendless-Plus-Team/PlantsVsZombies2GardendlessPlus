@@ -338,6 +338,39 @@ Reuse the id. A file at `mods/my_pack/zombies/tutorial.json` replaces the base
 `tutorial` zombie outright, as long as your pack sits above the base game in
 the load order (it always does).
 
+## Almanac pages
+
+Each plant and zombie gets its almanac page from one file:
+`almanac/plants/<id>.json` or `almanac/zombies/<id>.json` in your pack. The
+same id as a base page replaces it. Text fields take a plain string or a
+`{"en": ..., "zh": ...}` dictionary; the player's language is picked, then
+English.
+
+```json
+{
+ "id": "burst_pea",
+ "name": "Burst Pea",
+ "brief": "Fires three peas at once",
+ "description": "Burst Peas fire a quick volley of three peas.",
+ "chat": "Burst Pea never finishes a sentence. Or a sente-",
+ "special": [{"name": "Usage", "text": "fires in bursts"}],
+ "stats": [{"type": "sun_cost"}, {"type": "recharge"},
+           {"type": "damage", "value": 20}, {"type": "range", "text": "Straight"}]
+}
+```
+
+Plant stat rows `sun_cost`, `recharge`, `toughness` and `family` read the
+plant's own numbers; the others show `text` or `value`. Other types are
+`damage`, `range`, `area`, `duration`, `plant_food`, `sun_production`,
+`arming_time`, `grow_time` and `special` (give it a `name`). Zombie rows are
+`toughness` and `speed` with a `text` and a 0-1 `level` for the bar; zombie
+pages also take `world` (the backing tile) and `variants`, the ids that count
+as this zombie when met. A pack's plants are listed after the base plants; list
+zombies in order with `zombie_order` in your pack's `almanac.json`.
+
+A zombie's page stays hidden until it is met on a lawn, shows "???" until a
+level it was in is won, and is described in full after that.
+
 ## Adding a behaviour
 
 Drop a `.gd` file in `components/`. **The filename is the component type**, so

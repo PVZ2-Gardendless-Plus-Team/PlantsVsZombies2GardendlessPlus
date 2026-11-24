@@ -1,0 +1,71 @@
+{
+ "id": "tutorial_gargantuar",
+ "name": {
+  "en": "Gargantuar",
+  "zh": "巨尸"
+ },
+ "world": "frontyard",
+ "description": {
+  "en": "Gargantuar really is kind of a big deal.",
+  "zh": "巨尸确实不好对付。"
+ },
+ "chat": {
+  "en": "Gargantuar is the embodiment of power, made real. He is a juggernaut of hunger, from which there is no escape. He is fear unleashed. Well, he's fear slightly leashed.",
+  "zh": "巨尸是力量的化身，是实实在在的。他的饥饿力量势不可挡，因此别想躲过他。他会让草坪弥漫恐惧。额，好歹是稍微提升了点恐惧感吧。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Damage",
+    "zh": "攻击"
+   },
+   "text": {
+    "en": "crushes plants with pole",
+    "zh": "用电线杆摧毁植物"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "throws imp when damaged",
+    "zh": "受重伤时丢出小鬼"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.9,
+   "text": {
+    "en": "Great",
+    "zh": "巨大"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.6,
+   "text": {
+    "en": "Hungry",
+    "zh": "饥渴"
+   }
+  }
+ ],
+ "display_offset": [
+  20,
+  -60
+ ],
+ "variants": [
+  "sportzball_gargantuar",
+  "easter_gargantuar",
+  "valentines_gargantuar",
+  "summer_gargantuar",
+  "halloween_gargantuar",
+  "birthday_gargantuar",
+  "feastivus_gargantuar",
+  "holiday_gargantuar",
+  "zoybean_gargantuar"
+ ]
+}

@@ -1,0 +1,41 @@
+{
+ "id": "bombardmint",
+ "name": {
+  "en": "Bombard-mint",
+  "zh": "爆裂薄荷"
+ },
+ "brief": {
+  "en": "Boosts explosive plants",
+  "zh": "强化爆炸植物"
+ },
+ "description": {
+  "en": "Bombard-mints set off a number of explosions on the board and provide a temporary boost to all Bombard-mint Family plants on the lawn.",
+  "zh": "爆裂薄荷在种植时在场上引起几发爆炸，并为所有爆裂家族植物带来增益效果。"
+ },
+ "chat": {
+  "en": "\"Explosions are fun,\" says Bombard-mint with an impish twinkle in her eye. \"In the context of eliminating zombies, a cascade of detonations not only clears much of the board, but leaves a lovely fragrance in its wake. It smells like... victory.\"",
+  "zh": "“爆炸可好玩了，” 爆裂薄荷眼中闪着淘气的光芒说。“在消灭僵尸的时候，一连串的爆破不仅能清掉大半个场子，事后还会留下美妙的香气。那闻起来就像是……胜利的味道。”"
+ },
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "duration",
+   "value": 16
+  },
+  {
+   "type": "special",
+   "text": {
+    "en": "Explosive Attack",
+    "zh": "爆炸攻击"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

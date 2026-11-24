@@ -1,0 +1,41 @@
+{
+ "id": "modern_balloon",
+ "name": {
+  "en": "Balloon Zombie",
+  "zh": "气球僵尸"
+ },
+ "world": "modern",
+ "description": {
+  "en": "Balloon carries zombies over barriers and ground defenses.",
+  "zh": "气球使他能够跨越障碍物和地上的植物。"
+ },
+ "chat": {
+  "en": "Balloon zombie has no idea where the balloon came from, but he's going with it and he's open to seeing where it takes him.",
+  "zh": "气球僵尸完全不知道自己的气球是从哪来的，但他很喜欢带着这气球，因为他也很喜欢气球带着他。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.6,
+   "text": {
+    "en": "Dense",
+    "zh": "结实"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.8,
+   "text": {
+    "en": "Speedy",
+    "zh": "快速"
+   }
+  }
+ ],
+ "display_offset": [
+  20,
+  -50
+ ],
+ "variants": [
+  "sportzball_balloon"
+ ]
+}

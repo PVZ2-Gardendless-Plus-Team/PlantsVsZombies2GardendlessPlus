@@ -1,0 +1,34 @@
+{
+ "id": "pirate_armor1",
+ "name": {
+  "en": "Conehead Pirate",
+  "zh": "路障海盗"
+ },
+ "world": "pirate",
+ "description": {
+  "en": "His Jolly Roger cone makes him twice tougher than normal pirates.",
+  "zh": "他那海盗旗装饰的路障使他变得比原先抗打两倍。"
+ },
+ "chat": {
+  "en": "Conehead Pirate is a simple zombie. When asked what his favorite dish is, he'd think for a moment, straighten his ascot, and say, \"Rrurrarrbrains\". Perhaps he could borrow a cup, neighbor?",
+  "zh": "路障海盗是个很朴素的僵尸，当被问起最喜欢的食物是什么时，他会思考一阵子，拉一下他的领带，然后说道，“脑脑脑脑脑子”。也许你可以借给他一颗，对吧邻居？"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.5,
+   "text": {
+    "en": "Protected",
+    "zh": "加强"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ]
+}

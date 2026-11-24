@@ -1,0 +1,66 @@
+{
+ "id": "hotdate",
+ "name": {
+  "en": "Hot Date",
+  "zh": "热辣海枣"
+ },
+ "brief": {
+  "en": "Attracts and burns zombies",
+  "zh": "吸引僵尸并焚烧"
+ },
+ "description": {
+  "en": "Hot Dates attract zombies from lanes above and below them, and then unleash a lane of flame when they're eaten.",
+  "zh": "热辣海枣吸引相邻行的僵尸，被啃食殆尽时焚烧一整行。"
+ },
+ "chat": {
+  "en": "Hot Date's a charmer. He's polite, well-read, has lots of interesting opinions, and practices active listening. Zombies line up around the block to be incinerated by him.",
+  "zh": "热辣海枣很有魅力。他彬彬有礼，博览群书，有很多有趣的观点，并且善于倾听。僵尸们都要排着队等着被他烧死。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "unleash a lane of flame when eaten",
+    "zh": "被啃食完后燃烧整行"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "warms nearby plants",
+    "zh": "冰释周围的植物"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 1000
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "Multi-Lane",
+    "zh": "多行"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

@@ -1,0 +1,44 @@
+{
+ "id": "witchhazel",
+ "name": {
+  "en": "Witch Hazel",
+  "zh": "女巫金缕梅"
+ },
+ "brief": {
+  "en": "Transforms zombies into Puff-shrooms",
+  "zh": "把僵尸变成小喷菇"
+ },
+ "description": {
+  "en": "Witch Hazels use magical sorcery to transform zombies into Puff-shrooms.",
+  "zh": "女巫金缕梅用魔法能量把僵尸变成小喷菇。"
+ },
+ "chat": {
+  "en": "Witch Hazel paused, unsure how to proceed. Then all at once, she knew: Use magic, like, ALL THE TIME!",
+  "zh": "女巫金缕梅停在原地，不知道怎么继续。然而一瞬间，她悟出了：要用魔法，就像一直以来那样！"
+ },
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 1200
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "3 Lanes",
+    "zh": "3 行"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

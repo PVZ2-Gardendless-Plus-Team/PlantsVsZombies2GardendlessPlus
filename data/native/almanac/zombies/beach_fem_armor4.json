@@ -1,0 +1,34 @@
+{
+ "id": "beach_fem_armor4",
+ "name": {
+  "en": "Crab-head Bikini",
+  "zh": "螃蟹比基尼"
+ },
+ "world": "beach",
+ "description": {
+  "en": "Crab-head Bikini's crab exoskeleton provides tremendous protection.",
+  "zh": "螃蟹比基尼的螃蟹外骨骼提供了巨大的保护。"
+ },
+ "chat": {
+  "en": "Sometimes it's comfortable to feel the sense of security in others' safety-room like hermit crabs. In a word, long live bionics!",
+  "zh": "有时候体会寄居蟹那种寄人篱下的安全感也是很舒适的。总之，仿生学万岁！"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.8,
+   "text": {
+    "en": "Machined",
+    "zh": "重甲"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ]
+}

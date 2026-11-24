@@ -1,0 +1,73 @@
+{
+ "id": "kongfu_bronze_chi",
+ "name": {
+  "en": "Bronze of Qigong",
+  "zh": "气功铜人"
+ },
+ "world": "kongfu",
+ "description": {
+  "en": "Occasionally summons other kongfu zombies, or pulls all the plants ahead with qigong.",
+  "zh": "偶尔召唤其他功夫僵尸，或用气功拉动身前的植物。"
+ },
+ "chat": {
+  "en": "Bronze of Qigong acts like he's one of the eight Vajrapanis, due to his endeavor spending his whole life meditating.",
+  "zh": "气功铜人的表现已经达到八大金刚的级别，归功于他耗尽一生的冥想。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Damage",
+    "zh": "攻击"
+   },
+   "text": {
+    "en": "crushes plants with his Buddhist staff",
+    "zh": "用禅杖砸毁植物"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "uses qigong to pull all the plants ahead",
+    "zh": "能发动气功，吸收身前的所有植物"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "summons kongfu zombies",
+    "zh": "召唤功夫僵尸"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.9,
+   "text": {
+    "en": "Greatly Great",
+    "zh": "非常巨大"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.4,
+   "text": {
+    "en": "Stiff",
+    "zh": "迟钝"
+   }
+  }
+ ],
+ "display_offset": [
+  20,
+  -60
+ ],
+ "variants": [
+  "kongfu_bronze_statue"
+ ]
+}

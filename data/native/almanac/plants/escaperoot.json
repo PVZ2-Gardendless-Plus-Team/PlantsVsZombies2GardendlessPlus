@@ -1,0 +1,60 @@
+{
+ "id": "escaperoot",
+ "name": {
+  "en": "Escape Root",
+  "zh": "逃脱树根"
+ },
+ "brief": {
+  "en": "Explodes and can be swapped with other plants",
+  "zh": "能与其他植物换位，遇到僵尸时爆炸"
+ },
+ "description": {
+  "en": "Escape Roots explode on contact, and can be swapped with other plants that are in danger.",
+  "zh": "逃脱树根在接触敌人时爆炸，他可以和其他处境危险的植物交换位置。"
+ },
+ "chat": {
+  "en": "The other plants put on a big surprise party for Escape Root last week, but he did his thing and suddenly it was a surprise party...FOR THEM!",
+  "zh": "上个星期其他植物为逃脱树根举办了一个盛大的惊喜派对，逃脱树根开始玩起了他最擅长的事情，派对的惊喜一下就转移给了大家。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Usage",
+    "zh": "用途"
+   },
+   "text": {
+    "en": "tap Escape Root and another plant to swap them",
+    "zh": "点击逃脱树根后，再点击另一株植物来交换位置"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 1800
+  },
+  {
+   "type": "arming_time",
+   "value": 10
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "Touch",
+    "zh": "接触"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

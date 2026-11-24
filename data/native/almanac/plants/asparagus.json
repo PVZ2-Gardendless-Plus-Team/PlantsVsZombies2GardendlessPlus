@@ -1,0 +1,56 @@
+{
+ "id": "asparagus",
+ "name": {
+  "en": "Asparajet",
+  "zh": "芦笋战机"
+ },
+ "brief": {
+  "en": "Shoots at zombies in three lanes",
+  "zh": "向三行的僵尸发射子弹"
+ },
+ "description": {
+  "en": "Asparajets shoot at zombies in three lanes.",
+  "zh": "芦笋战机可以攻击前方及相邻两行的僵尸。"
+ },
+ "chat": {
+  "en": "Asparagus enjoys the reputation of being the \"King of Vegetables\", yet Asparajet takes no pride in this. Having loved studying all kinds of firearms since childhood, he can only realize its value on the battlefield. \"I just want everyone to remember the passionate me on the battlefield!\" Asparagus said earnestly.",
+  "zh": "芦笋享有“蔬菜之王”的美称，然而芦笋战机却并不以此为傲。从小热爱研究各类热兵器的他只有在战场上才能实现自己的价值。“我只希望大家能够记住战场上热血的我！”芦笋战机认真地说道。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "must reload for a moment when finishing 7 shots",
+    "zh": "发射 7 次后必须重新装填一会。"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 80
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "Multi-Lane",
+    "zh": "多行"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

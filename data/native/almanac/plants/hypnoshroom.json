@@ -1,0 +1,62 @@
+{
+ "id": "hypnoshroom",
+ "name": {
+  "en": "Hypno-shroom",
+  "zh": "魅惑菇"
+ },
+ "brief": {
+  "en": "Makes a zombie fight for you",
+  "zh": "让一名僵尸为你战斗"
+ },
+ "description": {
+  "en": "When zombies eat Hypno-shrooms, they will turn around and fight for you.",
+  "zh": "当僵尸吃掉了魅惑菇，他们将会转身为你战斗。"
+ },
+ "chat": {
+  "en": "Hypno-shroom has no trouble persuading zombies to fight on behalf of the plants. But he has yet to convince one to cluck like a chicken. \"One day,\" he says. \"One day.\"",
+  "zh": "魅惑菇很擅长洗脑僵尸作为一个植物去战斗。但是他还没做到说服谁去学鸡叫。“总有一天会的，”他解释道，“总有一天。”"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Usage",
+    "zh": "用途"
+   },
+   "text": {
+    "en": "on being eaten",
+    "zh": "被啃食"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "can't be eaten by chickens or weasels",
+    "zh": "让一名僵尸为你战斗"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "area",
+   "text": {
+    "en": "Single",
+    "zh": "单体"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

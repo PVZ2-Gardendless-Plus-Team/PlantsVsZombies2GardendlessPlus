@@ -1,0 +1,34 @@
+{
+ "id": "mummy_armor1",
+ "name": {
+  "en": "Conehead Mummy",
+  "zh": "路障木乃伊"
+ },
+ "world": "egypt",
+ "description": {
+  "en": "His cobra cone headdress makes him twice tougher than normal mummies.",
+  "zh": "他的眼镜蛇路障头饰使他变得比原先抗打两倍。"
+ },
+ "chat": {
+  "en": "Conehead Mummy Zombie prefers the circular cone shape over the typical pyramid shape. It's a fashion thing, and Conehead Mummy Zombie always stays ahead of fashion.",
+  "zh": "相对于金字塔这样经典的四棱锥，路障木乃伊更喜欢圆锥。这可是潮流中的潮流，而路障木乃伊总是会保持着前卫。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.5,
+   "text": {
+    "en": "Protected",
+    "zh": "加强"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ]
+}

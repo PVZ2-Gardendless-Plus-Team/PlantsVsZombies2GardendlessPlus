@@ -1,0 +1,34 @@
+{
+ "id": "beach_fem_armor1",
+ "name": {
+  "en": "Bikini Conehead",
+  "zh": "路障比基尼"
+ },
+ "world": "beach",
+ "description": {
+  "en": "Her starfish cone gives her twice the toughness of a normal bikini zombie.",
+  "zh": "她黏上海星的路障使她变得比原先抗打两倍。"
+ },
+ "chat": {
+  "en": "See that starfish on Bikini Conehead's cone? She put it there herself. She gets a lot of compliments on it too. And sure enough, now it seems like everyone is accessorizing with starfish. She's a trendsetter, that one.",
+  "zh": "看到路障比基尼的海星了吗？是她自己放上去的，也因此得到了很多赞美。果然，现在好像每个人都在用海星做装饰，她真是能引领潮流啊。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.5,
+   "text": {
+    "en": "Protected",
+    "zh": "加强"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ]
+}

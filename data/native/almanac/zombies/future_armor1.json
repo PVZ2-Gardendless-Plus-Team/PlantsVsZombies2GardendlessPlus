@@ -1,0 +1,34 @@
+{
+ "id": "future_armor1",
+ "name": {
+  "en": "Future Conehead Zombie",
+  "zh": "未来路障僵尸"
+ },
+ "world": "future",
+ "description": {
+  "en": "His poly-polymer cone gives him twice the toughness of a regular future zombie.",
+  "zh": "他的高聚物路障使他变得比原先抗打两倍。"
+ },
+ "chat": {
+  "en": "He tried to calculate the volume of his mathematically perfect cone, but he always ends up dreaming about brain π.",
+  "zh": "他尝试过计算自己那几何形态十分完美的路障的体积，但一想到圆周率他就想到脑子派上去了。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.5,
+   "text": {
+    "en": "Protected",
+    "zh": "加强"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ]
+}

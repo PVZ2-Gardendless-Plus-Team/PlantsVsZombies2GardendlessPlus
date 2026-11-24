@@ -1,0 +1,56 @@
+{
+ "id": "eighties_punk_veteran",
+ "name": {
+  "en": "Skunk Punk",
+  "zh": "臭鼬朋克"
+ },
+ "world": "eighties",
+ "description": {
+  "en": "Moshes plants back a space when his jam is playing. Releases skunks to protect himself.",
+  "zh": "舞蹈时，将植物向左侧空间踢走。释放臭鼬保护自身。"
+ },
+ "chat": {
+  "en": "Skunk Punk shared his hairspray and hair dye with his pets, masking their original stench.",
+  "zh": "臭鼬朋克将自己的发胶和染发剂分享给这些动物朋友们，掩盖了它们原有的气味。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "skunks rush forwards when his jam is playing",
+    "zh": "舞蹈时，臭鼬将失控向前冲"
+   }
+  },
+  {
+   "name": {
+    "en": "Weakness",
+    "zh": "弱点"
+   },
+   "text": {
+    "en": "Magnet Shrooms pull off his head",
+    "zh": "磁力菇能吸走他的头"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.5,
+   "text": {
+    "en": "Protected",
+    "zh": "加强"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.6,
+   "text": {
+    "en": "Hungry",
+    "zh": "饥渴"
+   }
+  }
+ ]
+}

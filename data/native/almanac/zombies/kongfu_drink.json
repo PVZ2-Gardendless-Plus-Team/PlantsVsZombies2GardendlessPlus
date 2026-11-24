@@ -1,0 +1,56 @@
+{
+ "id": "kongfu_drink",
+ "name": {
+  "en": "Drinking Zombie",
+  "zh": "醉酒僵尸"
+ },
+ "world": "kongfu",
+ "description": {
+  "en": "Becomes enraged after drinking",
+  "zh": "喝酒后，能进入狂暴状态。"
+ },
+ "chat": {
+  "en": "As a bad news, Drinking Zombie learned drunken boxing, while the good news is, that he only learned how to make a fist.",
+  "zh": "坏消息是，醉酒僵尸学过醉拳！好消息是，他只学会了握拳。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "becomes resistant, powerful and speedy after drinking",
+    "zh": "喝酒后，抵抗力上升，伤害更高，走得更快"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "drinks when damaged",
+    "zh": "受重伤后饮酒"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.8,
+   "text": {
+    "en": "Protected",
+    "zh": "加强"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 1,
+   "text": {
+    "en": "Flighty",
+    "zh": "飞速"
+   }
+  }
+ ]
+}

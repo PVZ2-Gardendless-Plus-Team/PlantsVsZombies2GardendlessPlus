@@ -1,0 +1,34 @@
+{
+ "id": "beach_fem_armor2",
+ "name": {
+  "en": "Bikini Buckethead",
+  "zh": "铁桶比基尼"
+ },
+ "world": "beach",
+ "description": {
+  "en": "Her scallop shelled bucket gives her great resistance to damage.",
+  "zh": "她挂上扇贝的铁桶使她极其抗揍。"
+ },
+ "chat": {
+  "en": "Bikini Buckethead had big ambitions. She wanted to do more than lurch around on a beach all day. Her life's dream: to perform internationally with a synchronized swimming team. Sadly, the nose plug was her undoing. If she only had a nose ...",
+  "zh": "铁桶比基尼的野心很大，她想做的不仅仅是整天在沙滩上晃来晃去。她一生的梦想是：在国际花样游泳队中表演。不幸的是，鼻塞成了她的致命伤。如果她只有一个鼻子没有塞……"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.7,
+   "text": {
+    "en": "Hardened",
+    "zh": "强化"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ]
+}

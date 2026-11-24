@@ -1,0 +1,63 @@
+{
+ "id": "zombossmech_cowboy",
+ "name": {
+  "en": "Zombot War Wagon",
+  "zh": "重型战马车"
+ },
+ "world": "cowboy",
+ "description": {
+  "en": "The stagecoach of destruction from the western wilds.",
+  "zh": "狂野西部中最具有毁灭性力量的马车。"
+ },
+ "chat": {
+  "en": "Ranchers and farmhands, abandon your fields. Rumbling down the dusty trail, this wagon was engineered to strike fear into the heart of any horticulturist who should encounter it. Dr. Zomboss normally doesn't take any bull, but this time he made an exception.",
+  "zh": "牧场主与农民们，别管你们的田地了！这辆战车正沿尘烟滚滚的小道轰鸣而来——专为击溃任何种植者的心理防线而设计。僵尸博士向来不屑于斗牛的战术，但这次，他破例搬来了一只。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "missile attacks can target mine carts",
+    "zh": "导弹能瞄准矿车"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "fires four missiles at most instead of one",
+    "zh": "每次发射最多四颗导弹，而不是一颗"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 1,
+   "text": {
+    "en": "Undying",
+    "zh": "不朽"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.6,
+   "text": {
+    "en": "Hungry",
+    "zh": "饥渴"
+   }
+  }
+ ],
+ "display_offset": [
+  -60,
+  -100
+ ],
+ "variants": [
+  "zombossmech_cowboy2"
+ ]
+}

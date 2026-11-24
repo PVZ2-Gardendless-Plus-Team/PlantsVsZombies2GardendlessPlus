@@ -1,0 +1,53 @@
+{
+ "id": "zombossmech_egypt",
+ "name": {
+  "en": "Zombot Sphinx-inator",
+  "zh": "狮身人面降临者"
+ },
+ "world": "egypt",
+ "description": {
+  "en": "Massive zombie from a royal line of mummies.",
+  "zh": "王室木乃伊中最巨大的那一位。"
+ },
+ "chat": {
+  "en": "To add that extra bit of wickedness to the Sphinx-inator Dr. Zomboss chiseled his creation from the stonework of cursed tombs. You should not take this instance of reuse and recycle to mean he's going green. The only thing green about him is his tongue.",
+  "zh": "为了给狮身人面降临者增加一分邪恶感，僵尸博士用被诅咒的墓碑雕刻出了这份作品。千万别以为他这么做是为了绿色环保。但别误会，他确实能为沙漠带来绿色，你问怎么做到的？当他把话锋指向你的时候你的脸就会被吓成那个颜色！"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "missile attack can create tombstones",
+    "zh": "导弹爆炸时可以生成墓碑"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 1,
+   "text": {
+    "en": "Undying",
+    "zh": "不朽"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.6,
+   "text": {
+    "en": "Hungry",
+    "zh": "饥渴"
+   }
+  }
+ ],
+ "display_offset": [
+  -60,
+  -100
+ ],
+ "variants": [
+  "zombossmech_egypt2"
+ ]
+}

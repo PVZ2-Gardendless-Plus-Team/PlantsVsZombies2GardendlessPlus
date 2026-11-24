@@ -1,0 +1,34 @@
+{
+ "id": "eighties_breakdancer",
+ "name": {
+  "en": "Breakdancer Zombie",
+  "zh": "霹雳舞僵尸"
+ },
+ "world": "eighties",
+ "description": {
+  "en": "Kicks zombies forward when transported by the power of rap.",
+  "zh": "说唱声带来的带感节奏，使他精力充沛地把僵尸往前推进。"
+ },
+ "chat": {
+  "en": "Delivers only the freshest moves at bargain basement prices.",
+  "zh": "只以低的代价展现最新鲜的动作。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.4,
+   "text": {
+    "en": "Solid",
+    "zh": "略强"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.6,
+   "text": {
+    "en": "Hungry",
+    "zh": "饥渴"
+   }
+  }
+ ]
+}

@@ -1,0 +1,62 @@
+{
+ "id": "solarsage",
+ "name": {
+  "en": "Solar Sage",
+  "zh": "阳光鼠尾草"
+ },
+ "brief": {
+  "en": "Illuminates zombies for sun",
+  "zh": "感化僵尸，使之生产阳光"
+ },
+ "description": {
+  "en": "Solar Sages illuminate zombies, causing them to make better choices and depart, leaving behind a trail of sun.",
+  "zh": "阳光鼠尾草感化僵尸，使他们心甘情愿地离开，并沿路产出阳光。"
+ },
+ "chat": {
+  "en": "\"Ommm,\" Solar Sage hums softly to herself. But she's not kidding anybody. We all know her mind is filled with race cars and bulldozers.",
+  "zh": "“嗡——嗡——”阳光鼠尾草低声吟诵着。但谁都骗不了，大家都知道她满脑子跑车和推土机。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Usage",
+    "zh": "用途"
+   },
+   "text": {
+    "en": "single use, activates on contact",
+    "zh": "一次性使用，接触到僵尸时触发"
+   }
+  },
+  {
+   "name": {
+    "en": "Weakness",
+    "zh": "弱点"
+   },
+   "text": {
+    "en": "vulnerable to critters and mechs",
+    "zh": "在动物和机器面前十分脆弱"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "area",
+   "text": {
+    "en": "Tile",
+    "zh": "本格"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

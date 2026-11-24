@@ -1,0 +1,34 @@
+{
+ "id": "pirate_armor4",
+ "name": {
+  "en": "Barrelhead Pirate",
+  "zh": "木桶头海盗"
+ },
+ "world": "pirate",
+ "description": {
+  "en": "Barrelhead Zombie's keg-like hat provides augmented protection.",
+  "zh": "木桶头海盗的酒桶头盔提供了强大的保护。"
+ },
+ "chat": {
+  "en": "Dredged from the deepest of seas, Barrelhead Pirate's barrel is a high-quality cask that fits just a bit too snugly.",
+  "zh": "木桶头海盗的木桶是从最深的海底打捞而来的，是工艺精湛的橡木桶，只不过有点太紧了。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.8,
+   "text": {
+    "en": "Machined",
+    "zh": "重甲"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ]
+}

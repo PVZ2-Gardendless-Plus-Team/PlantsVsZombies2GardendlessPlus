@@ -9,6 +9,7 @@ extends Control
 
 signal level_chosen(level_id: StringName)
 signal back_requested
+signal almanac_requested
 
 const NODE_SIZE := Vector2(76, 76)
 ## Levels per row before the path doubles back.
@@ -139,6 +140,13 @@ func _build() -> void:
 	back.name = "Back"
 	back.position = Vector2(45, 43) - back.custom_minimum_size * 0.5
 	add_child(back)
+	# almanacButton, the next square along, once a level has opened it.
+	if AlmanacData.is_unlocked():
+		var almanac := MenuUI.icon_button("AlmanacUp", "AlmanacDown",
+				Vector2(67, 67), almanac_requested.emit, "Almanac")
+		almanac.name = "Almanac"
+		almanac.position = Vector2(123, 43) - almanac.custom_minimum_size * 0.5
+		add_child(almanac)
 
 	_title = MenuUI.label("", 44)
 	_title.add_theme_color_override("font_color", Color("ffdd72"))
