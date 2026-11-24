@@ -21,6 +21,9 @@ func _ready() -> void:
 	# USE_SCENES=0 runs the suite on rigs converted from their DragonBones
 	# exports instead of the baked scenes, so both paths stay exercised.
 	Art.use_scenes = OS.get_environment("USE_SCENES") != "0"
+	# The checks compare English text; a player's language setting must not
+	# change what they read.
+	I18n.set_language(I18n.SOURCE_LOCALE)
 	await get_tree().process_frame
 	await _run()
 	Engine.time_scale = 1.0
@@ -92,6 +95,7 @@ func _run() -> void:
 	await _test_campaign_progression()
 	await _test_rewards()
 	_test_settings()
+	await _test_translations()
 	_test_world_unlocks()
 	await _test_menu_flow()
 	_test_modding()
@@ -728,6 +732,59 @@ func _test_settings() -> void:
 	for key in before:
 		Settings.set_value(key, before[key])
 	end_section()
+
+
+func _test_translations() -> void:
+	section("translations")
+	check("translation files parse", I18n.errors().is_empty(), str(I18n.errors()))
+	var langs := I18n.languages()
+	check_eq("English comes first", langs[0], "en")
+	check("Simplified Chinese is offered", langs.has("zh_CN"), str(langs))
+	check_eq("a language is named in itself", I18n.language_name("zh_CN"), "简体中文")
+	check_eq("an unknown language falls back to English", I18n.resolve("xx_YY"), "en")
+	check_eq("Chinese variants find Simplified Chinese", I18n.resolve("zh_SG"), "zh_CN")
+
+	I18n.set_language("zh_CN")
+	check_eq("the locale follows the setting", I18n.locale(), "zh_CN")
+	check_eq("PVZGE's language key", I18n.language(), "zh")
+	check_eq("PVZGE's strings translate by their English text", tr("Game Paused"), "游戏暂停")
+	check_eq("the first of PVZGE's repeated strings wins", tr("RESTART"), "重新开始")
+	check_eq("the port's own strings translate", tr("Sun: %d") % 50, "阳光：50")
+	check_eq("a lyric is read by its path", I18n.lyric("SettingLyrics/Language"), "语言")
+	check_eq("a missing lyric is empty", I18n.lyric("SettingLyrics/Nope"), "")
+	check_eq("pick reads the current language", I18n.pick({"en": "a", "zh": "b"}), "b")
+	check_eq("pick falls back to English", I18n.pick({"en": "a"}), "a")
+	check_eq("pick passes plain text through", I18n.pick("plain"), "plain")
+
+	# A plain English label translates itself, and switches back live.
+	var label := MenuUI.label("Settings")
+	add_child(label)
+	await get_tree().process_frame
+	check_eq("a label shows its translation", _shown_text(label), "设置")
+	I18n.set_language("en")
+	await get_tree().process_frame
+	check_eq("and English again after a switch", _shown_text(label), "Settings")
+	label.queue_free()
+
+	# Every translation keeps the English placeholders, in order, or `%`
+	# fails at runtime.
+	var bad: Array[String] = []
+	var rx := RegEx.create_from_string("%[-+ 0#*]*\\d*(?:\\.\\d+)?[sdifoxXc%]")
+	var spec = JSON.parse_string(FileAccess.get_file_as_string(
+			"res://data/native/i18n/zh_CN.json"))
+	for en in spec["strings"]:
+		var a := rx.search_all(en).map(func(m: RegExMatch) -> String: return m.get_string())
+		var b := rx.search_all(spec["strings"][en]).map(
+				func(m: RegExMatch) -> String: return m.get_string())
+		if a != b:
+			bad.append(en)
+	check("translations keep their placeholders", bad.is_empty(), str(bad))
+	end_section()
+
+
+## What a Control actually draws: its text after auto-translation.
+func _shown_text(c: Control) -> String:
+	return c.atr(c.text)
 
 
 func _test_world_unlocks() -> void:

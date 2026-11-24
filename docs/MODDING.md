@@ -29,6 +29,7 @@ mods/my_pack/
   levels/*.json
   campaigns/*.json    ordered runs of levels
   audio/events.json   add or replace sounds
+  i18n/<locale>.json  add a language, or fix strings in one (docs/TRANSLATING.md)
   components/*.gd     new behaviours, or overrides of built-in ones
   init.gd             optional startup hook
 ```
