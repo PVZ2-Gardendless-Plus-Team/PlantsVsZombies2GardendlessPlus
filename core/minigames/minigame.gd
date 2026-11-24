@@ -82,6 +82,19 @@ func uses_belt() -> bool:
 	return false
 
 
+## Seeds the mode puts in the bank instead of the level's own, as {kind, id}
+## entries. Empty keeps the level's.
+func seeds() -> Array:
+	return []
+
+
+## The player picked packet `id`. A mode that spends a packet at once - a
+## Beghouled upgrade - does so here and returns true; the bank then charges
+## and recharges it as if it had been planted.
+func use_seed(_id: StringName) -> bool:
+	return false
+
+
 ## The word "Ready... Set..." ends on: PLANT!, ROLL!, MATCH!...
 func start_word() -> String:
 	return ""

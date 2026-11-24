@@ -160,6 +160,10 @@ func needs_seed_choice() -> bool:
 ## `"kind": "zombie"` hands the player zombies instead, which is how an
 ## I-Zombie style level works; individual entries may override it too.
 func seedbank_seeds() -> Array:
+	for m in minigames:
+		var own := m.seeds()
+		if not own.is_empty():
+			return own
 	var sb: Dictionary = level.get("seedbank", {})
 	var default_kind := StringName(sb.get("kind", &"plant"))
 	var source: Array = sb.get("plants", []) if String(sb.get("mode", "chooser")) == "conveyor" \
@@ -347,6 +351,14 @@ func minigames_allow(rule: StringName) -> bool:
 		if not bool(m.call(rule)):
 			return false
 	return true
+
+
+## Offers a picked packet to the modes; true if one spent it.
+func minigame_use_seed(id: StringName) -> bool:
+	for m in minigames:
+		if m.use_seed(id):
+			return true
+	return false
 
 
 ## The word "Ready... Set..." ends on for this level.

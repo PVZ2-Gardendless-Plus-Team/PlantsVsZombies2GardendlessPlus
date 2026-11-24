@@ -884,6 +884,40 @@ func move_plant(from_row: int, from_col: int, to_row: int, to_col: int) -> bool:
 	return true
 
 
+## Trades the plants on top of two cells, as a Beghouled swap does. Either
+## cell may be empty. Returns false if neither holds a plant.
+func swap_plants(row_a: int, col_a: int, row_b: int, col_b: int) -> bool:
+	var a := Vector2i(col_a, row_a)
+	var b := Vector2i(col_b, row_b)
+	var pa: Plant = _plants.get(a)
+	var pb: Plant = _plants.get(b)
+	if pa == null and pb == null:
+		return false
+	_plants.erase(a)
+	_plants.erase(b)
+	for pair in [[pa, b], [pb, a]]:
+		var p: Plant = pair[0]
+		var cell: Vector2i = pair[1]
+		if p == null or not is_instance_valid(p):
+			continue
+		_plants[cell] = p
+		p.row = cell.y
+		p.col = cell.x
+		p.position = grid_to_world(cell.y, cell.x)
+		p.z_index = lane_z(cell.y, LAYER_PLANT)
+	return true
+
+
+## Takes a plant off the lawn at once, with no death and no dirt: a matched
+## Beghouled plant, a ball's seed packet.
+func vanish_plant(row: int, col: int) -> void:
+	var p := plant_at(row, col)
+	if p == null:
+		return
+	remove_plant(row, col, p)
+	p.queue_free()
+
+
 ## Digs up the plant in a cell, freeing the square. Returns false if empty.
 func dig_up(row: int, col: int) -> bool:
 	# The plant on top comes up first; the carrier under it on a second dig.

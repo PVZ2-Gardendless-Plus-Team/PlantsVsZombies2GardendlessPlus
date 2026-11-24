@@ -31,7 +31,8 @@ func setup(seeds: Array, half_recharge: bool = false) -> void:
 			continue
 		packets.append(SeedPacket.create(
 				kind, id,
-				int(def.stat(&"sun_cost", 100)),
+				# A mode may price a packet itself (a Beghouled upgrade).
+				int(seed.get("cost", def.stat(&"sun_cost", 100))),
 				float(def.stat(&"cooldown", 5.0)) * recharge_scale,
 				float(def.stat(&"cooldown_from", 1.0))))
 	changed.emit()

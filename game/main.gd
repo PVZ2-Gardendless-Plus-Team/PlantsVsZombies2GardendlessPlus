@@ -645,6 +645,14 @@ func _select_seed(slot: int) -> void:
 		if seed_bank.is_recharged(slot):
 			_sun_counter.warn()
 		return
+	if slot >= 0 and slot < _seeds.size() \
+			and runner.minigame_use_seed(StringName(_seeds[slot]["id"])):
+		# A packet the mode spends on the spot, such as a Beghouled upgrade.
+		board.spend_sun(seed_bank.cost_of(slot))
+		seed_bank.spend(slot)
+		board.selected_seed = {}
+		_refresh_seed_buttons()
+		return
 	if slot < 0 or slot >= _seeds.size():
 		board.selected_seed = {}
 	elif board.selected_seed == _seeds[slot]:
