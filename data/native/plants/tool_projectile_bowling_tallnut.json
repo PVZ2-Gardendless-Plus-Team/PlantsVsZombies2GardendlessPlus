@@ -16,6 +16,10 @@
    "speed_x": 3.5
   }
  ],
+ "zen_garden": {
+  "place": "none",
+  "weight": 0
+ },
  "extra": {
   "ImmuneToIceblock": true,
   "StartingHeight": 0

@@ -24,6 +24,10 @@ func _ready() -> void:
 			show_world_map(start_campaign)
 		&"minigames":
 			show_minigames()
+		&"store":
+			show_store()
+		&"zen":
+			show_zen_garden()
 		_:
 			show_main_menu()
 
@@ -41,10 +45,12 @@ func show_world_map(campaign_id: StringName = &"") -> void:
 	var map := WorldMap.new()
 	map.start_campaign = campaign_id
 	map.level_chosen.connect(play_level)
-	map.back_requested.connect(show_main_menu)
+	map.back_requested.connect(_leave_world_map.bind(map))
+	map.store_requested.connect(func() -> void: show_store(map.current_world()))
 	map.almanac_requested.connect(func() -> void:
 		var world := map.current_world()
 		show_almanac(world.id if world != null else campaign_id))
+	map.zen_garden_requested.connect(show_zen_garden)
 	_swap(map)
 
 
@@ -62,6 +68,30 @@ func show_minigames(mode: StringName = &"") -> void:
 func _play_minigame(level_id: StringName, menu: MinigameMenu) -> void:
 	var mode := StringName(menu.current_mode().get("id", ""))
 	play_level(level_id, func(): show_minigames(mode))
+  
+## PVZGE's Back on a world map goes to the world chooser; with only one
+## world there is nothing to choose, so it goes to the title.
+func _leave_world_map(map: WorldMap) -> void:
+	var world := map.current_world()
+	if Data.world_campaigns().size() > 1:
+		show_world_chooser(world.id if world != null else &"")
+	else:
+		show_main_menu()
+
+
+func show_world_chooser(campaign_id: StringName = &"") -> void:
+	var chooser := WorldChooser.new()
+	chooser.start_campaign = campaign_id
+	chooser.world_chosen.connect(show_world_map)
+	chooser.back_requested.connect(show_main_menu)
+	_swap(chooser)
+  
+## The store, returning to the world map page it was opened from.
+func show_store(from_world: CampaignDef = null) -> void:
+	var store := StoreScreen.new()
+	store.back_requested.connect(show_world_map.bind(
+			from_world.id if from_world != null else &""))
+	_swap(store)
 
 
 ## PVZGE's almanac is reached from the world map and returns to it.
@@ -71,8 +101,12 @@ func show_almanac(campaign_id: StringName = &"") -> void:
 	_swap(almanac)
 
 
-## Plays a level. `back` is where leaving it for the map goes; by default
-## the level's world on the map.
+func show_zen_garden() -> void:
+	var garden := ZenGardenScreen.new()
+	garden.back_requested.connect(show_world_map.bind(&""))
+	_swap(garden)
+
+
 func play_level(level_id: StringName, back: Callable = Callable()) -> void:
 	var campaign := Data.campaign_for_level(level_id)
 	var level := LEVEL_SCENE.instantiate()

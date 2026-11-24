@@ -733,8 +733,20 @@ These optional fields place the world on the map:
 | `order` | position among worlds, lowest first (default 0) |
 | `unlock_after` | campaign id that must be finished first; empty means open from the start. Naming a campaign whose mod is off leaves the world open |
 | `description` | line shown under the world's name |
-| `map_color` | page tint, as `"#rrggbb"`, until the map has art |
+| `world_map` | the floating-island map to draw the world on: a PVZGE world's codename (`egypt`, `pirate`, `cowboy`, `future`, `dark`, `beach`, `iceage`, `lostcity`, `eighties`, `dino`, `modern`, `kongfu`, `sky`, `epic`) or a `res://` path to a layout of your own. Empty draws a plain path of round nodes |
+| `map_color` | page tint, as `"#rrggbb"`, for a world without a `world_map` |
 | `hidden` | keep it off the map (reachable only by id) |
+
+With a `world_map`, levels land on that map's islands. A campaign that uses
+PVZGE's level ids (`egypt1`, `egypt2`, ...) gets PVZGE's own islands for them;
+any other campaign has its levels laid on the level islands in path order, so
+a five-level world uses the first five islands and the map stops after the
+fifth. The layouts live in `data/native/worldmaps/` and come out of PVZGE with
+`tools/dump_worldmaps.js` and `tools/extract_worldmaps.py`; a layout of your
+own uses the same format (layers of rigs, each drifting by its `factor` as the
+map scrolls, and `islands` with their `position`, `kind`, `levels` and
+`next`). The world chooser shows the world's PVZGE globe, or PVZGE's
+"Unknown" globe for a world with no PVZGE map.
 
 ```json
 {
@@ -1078,6 +1090,36 @@ Progress lives in `Saves`: `unlock_plant`, `is_plant_unlocked`,
 `add_currency` / `currency` (`coins`, `gems`, `worldkeys`, or a pack's own),
 and `grant_item` / `has_item` for named collections.
 
+## Coins, loot and the store
+
+`loot.json` says what drops on the lawn. `drops` names each pickup with its
+currency and value (silver coin 10, gold 50, gem 1, ticket 10, sprout 1) and
+its art is `collectable:<id>` in `art/scenery.json`. The `zombie` table rolls
+for every zombie that dies on its own side: PVZGE's 0.3% gem, 0.7% gold and
+1.5% silver, a 0.3% sprout once the Zen Garden is open, and in Lawn of Doom
+levels a 12% ticket, at most 10 a level. `mower` is what each unused mower
+turns into when a level is won (a gold coin), and `marigold` is the roll for
+a `sun_producer` with `"loot_table": "marigold"`. A pack's `loot.json`
+replaces the top-level keys it sets. A level can turn drops off with
+`"drop_coins": false`, repeat every drop with `"loot_multiplier"`, or mark
+itself Lawn of Doom with `"lod": true`.
+
+`features.json` ties a feature to the level whose clear opens it, as PVZGE
+does: coins with `tutorial_4`, the Zen Garden with `egypt5`, the store with
+`egypt6`. `Saves.has_feature` checks this as well as `unlocks_features`.
+
+`store.json` is the store, converted from PVZGE by `tools/import_store.py`.
+`pages` are its tabs; each item has an `id`, a `page`, a `type` (`plant`,
+`upgrade` or `currency`), a `param` (the plant, the upgrade, or the currency a
+pack holds, with `count`), and a `currency` and `price`. A plant can wait for
+`unlock_level`; one with `weekly_discount` takes turns as plant of the week,
+sold at that fraction of its price, and a new week (Saturday midnight) empties
+the ticket wallet. A pack's `store.json` replaces items by id, adds new ones,
+and drops any listed in `remove`. Code goes through `Store`: `on_sale`,
+`price`, `can_buy`, `buy`, `weekly_plant`. Wallets use `Saves.can_afford`,
+`spend_currency` and `set_currency`, and a system's own saved state can use
+`Saves.section` / `set_section`.
+
 ## Upgrades
 
 PVZGE has no per-plant levels; its "upgrades" are fourteen permanent perks,
@@ -1117,6 +1159,11 @@ Code asks `Upgrades` (`core/upgrades/upgrades.gd`): `owns`, `grant`,
 `is_enabled`, `set_enabled`, and the per-level totals such as
 `starting_sun_bonus()`. Owned upgrades are the `upgrades` collection in
 Saves; switched-off ones are `upgrades_disabled`.
+
+Upgrades are optional. The **Upgrades** switch in Settings
+(`upgrades_enabled`) turns every one of them off at once; levels then play
+exactly as if none were owned, and what the player owns is kept for when it
+is switched back on.
 
 ## I-Zombie costs
 

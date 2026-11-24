@@ -758,6 +758,9 @@ def split_plant(name, entry, prop_lookup, feature=None):
                 cfg[dst] = strip_rtid(merged[src])
                 used.add(src)
         used.update(triggers)
+        # PVZGE's MariGoldPlant is a coinProducer: it drops coins, not sun.
+        if ctype == "sun_producer" and name == "marigold":
+            cfg["loot_table"] = "marigold"
         components.append(cfg)
         break
 
@@ -793,6 +796,19 @@ def split_plant(name, entry, prop_lookup, feature=None):
         tags.append("imitate_disallowed")
     if tags:
         out["tags"] = tags
+
+    # The Zen Garden: where the plant can grow, and odds that override the
+    # usual ones. Only written when it differs from a plain dirt plant.
+    zen = feature.get("ZENGARDEN") or {}
+    zen_out = {}
+    if zen.get("PlantPlace", "dirt") != "dirt":
+        zen_out["place"] = zen.get("PlantPlace")
+    if zen.get("FixedWeight") is not None:
+        zen_out["weight"] = zen["FixedWeight"]
+    if zen.get("Height"):
+        zen_out["height"] = zen["Height"]
+    if zen_out:
+        out["zen_garden"] = zen_out
 
     if merged.get("MintBoostedProps"):
         mb = merged["MintBoostedProps"]

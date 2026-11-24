@@ -1,0 +1,8 @@
+{
+ "//": "Which level's clear opens each game feature, as PVZGE's getFeatureProps derives them. A level's own `unlocks_features` opens them too. coins: zombies drop coins and gems; store: the store button; zengarden: sprouts drop; lod: tickets drop in Lawn of Doom levels.",
+ "coins": "tutorial_4",
+ "powerup": "egypt5",
+ "zengarden": "egypt5",
+ "store": "egypt6",
+ "lod": "egypt7"
+}

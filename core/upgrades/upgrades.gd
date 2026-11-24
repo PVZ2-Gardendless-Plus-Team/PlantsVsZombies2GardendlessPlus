@@ -17,7 +17,8 @@ extends RefCounted
 ##   name, description   per language, {"en": ..., "zh": ...}
 ##
 ## Owning one is the `upgrades` collection in Saves; switching one off puts it
-## in `upgrades_disabled`. Everything a level asks - how much extra sun, how
+## in `upgrades_disabled`. The whole system is optional: Settings'
+## `upgrades_enabled` switches every upgrade off at once. Everything a level asks - how much extra sun, how
 ## many seed slots - goes through the type totals here, so two copies of a
 ## type stack the way PVZGE's getUpgradeProps adds them up.
 
@@ -138,7 +139,14 @@ static func set_enabled(id: StringName, on: bool) -> void:
 
 ## Owned and switched on: the upgrades a level applies.
 static func is_active(id: StringName) -> bool:
-	return owns(id) and is_enabled(id)
+	return system_enabled() and owns(id) and is_enabled(id)
+
+
+## The master switch: Settings' `upgrades_enabled`. Off, no upgrade applies
+## and every level plays as if none were owned - ownership and the
+## per-upgrade switches are kept for when it comes back on.
+static func system_enabled() -> bool:
+	return bool(Settings.get_value(&"upgrades_enabled"))
 
 
 static func owned() -> Array[StringName]:

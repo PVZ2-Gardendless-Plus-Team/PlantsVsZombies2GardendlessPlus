@@ -12,6 +12,7 @@
  "components": [
   {
    "type": "sun_producer",
+   "loot_table": "marigold",
    "interval": 23.5,
    "interval_jitter": 1.5,
    "first_delay": 5,

@@ -17,6 +17,9 @@
    "interval": 1
   }
  ],
+ "zen_garden": {
+  "place": "solid"
+ },
  "mint_boost": {
   "resistance": 1,
   "speed": 2,

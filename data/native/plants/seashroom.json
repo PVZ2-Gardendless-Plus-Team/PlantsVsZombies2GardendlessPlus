@@ -19,6 +19,9 @@
    "plantfood_count": 30
   }
  ],
+ "zen_garden": {
+  "place": "float"
+ },
  "mint_boost": {
   "resistance": 1,
   "speed": 2,

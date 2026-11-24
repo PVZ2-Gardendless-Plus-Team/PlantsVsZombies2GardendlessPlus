@@ -52,6 +52,9 @@ var _seeds: Array[Dictionary] = []
 var _status: Label
 var _sun_counter: SunCounter
 var _coin_counter: CoinCounter
+## Gems, sprouts and tickets, stacked above the coins; each shows once the
+## player has some.
+var _loot_counters: Dictionary = {}
 ## Shown after a prize other than coins is picked up.
 var _award: AwardScreen
 ## The won level's prize, waiting on the lawn to be collected.
@@ -136,8 +139,10 @@ func load_level(level_id: StringName) -> void:
 	board.shovel_active = false
 	board.plant_food_active = false
 	board.reset()
+	board.configure_loot(level)
 	_close_chooser()
 	runner.start(level, board)
+	_aim_loot.call_deferred()
 
 	# A part-played level resumes where it was left rather than restarting.
 	var save := Saves.load_save(level_id) if resume_saves else {}
@@ -241,6 +246,17 @@ func _build_hud() -> void:
 	_coin_counter.offset_left = 24
 	_coin_counter.offset_top = -64
 	hud.add_child(_coin_counter)
+	_loot_counters[&"coins"] = _coin_counter
+	var above := -64
+	for kind in [&"gems", &"sprouts", &"tickets"]:
+		above -= 48
+		var counter := CoinCounter.new(hud_font_size + 8, kind)
+		counter.name = "%sCounter" % String(kind).capitalize()
+		counter.set_anchors_preset(Control.PRESET_BOTTOM_LEFT)
+		counter.offset_left = 24
+		counter.offset_top = above
+		hud.add_child(counter)
+		_loot_counters[kind] = counter
 
 	# levelName: bottom centre-right in PVZGE's pale yellow; the wave count
 	# follows it.
@@ -821,17 +837,37 @@ func _on_won() -> void:
 ## Drops the prize where the last zombie fell; the level ends once the player
 ## has picked it up.
 func _drop_reward(reward: LevelReward) -> void:
-	var canvas := board.get_viewport().get_canvas_transform().affine_inverse()
 	if reward.type == LevelReward.COIN_BAG:
 		_coin_counter.show()
-	board.coin_collect_target = board.to_local(canvas * _coin_counter.collect_point())
+	_aim_loot()
 	var at: Vector2 = _last_zombie_at if _last_zombie_at != null \
 			else board.grid_to_world(floori(board.rows / 2.0), board.cols - 2)
 	_reward_drop = board.drop_reward(reward, at)
 	_reward_drop.collected.connect(_on_reward_collected)
 
 
+## Points each pickup at its counter on the HUD.
+func _aim_loot() -> void:
+	if not is_inside_tree():
+		return
+	var canvas := board.get_viewport().get_canvas_transform().affine_inverse()
+	board.coin_collect_target = board.to_local(canvas * _coin_counter.collect_point())
+	for kind in _loot_counters:
+		board.loot_targets[kind] = board.to_local(
+				canvas * (_loot_counters[kind] as CoinCounter).collect_point())
+
+
 func _on_reward_collected(drop: Collectable) -> void:
+	# PVZGE's victoryExit: each unused mower turns into a gold coin that flies
+	# to the counter on its own.
+	var cashed := board.cash_in_mowers()
+	if not cashed.is_empty():
+		_coin_counter.show()
+	for i in cashed.size():
+		var coin: CoinToken = cashed[i]
+		get_tree().create_timer(0.4 + i * 0.15).timeout.connect(func() -> void:
+			if is_instance_valid(coin):
+				coin.collect())
 	var reward: LevelReward = (drop as RewardDrop).reward
 	if reward != null and reward.is_award():
 		_award.open(reward)
