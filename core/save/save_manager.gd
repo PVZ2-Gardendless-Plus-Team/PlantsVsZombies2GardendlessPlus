@@ -170,6 +170,12 @@ func remember_seed_choice(seeds: Array) -> void:
 func is_plant_unlocked(plant_id: StringName) -> bool:
 	if Settings.get_value(&"unlock_all_plants"):
 		return true
+	return owns_plant(plant_id)
+
+
+## `is_plant_unlocked` without the testing setting: whether the player truly
+## has the plant, so the store knows what it may still sell.
+func owns_plant(plant_id: StringName) -> bool:
 	if (_progress.get("plants", {}) as Dictionary).has(String(plant_id)):
 		return true
 	if base_unlocked_plants().has(plant_id):
@@ -265,6 +271,42 @@ func add_currency(kind: StringName, amount: int) -> int:
 	return total
 
 
+## Whether the player holds at least `amount` of `kind`.
+func can_afford(kind: StringName, amount: int) -> bool:
+	return currency(kind) >= amount
+
+
+## Takes `amount` of `kind` if the player has it all; spends nothing and
+## returns false otherwise, so a purchase never leaves a wallet short.
+func spend_currency(kind: StringName, amount: int) -> bool:
+	if amount < 0 or not can_afford(kind, amount):
+		return false
+	if amount > 0:
+		add_currency(kind, -amount)
+	return true
+
+
+## Sets `kind` to exactly `total`, for a currency that resets - PVZGE's
+## tickets are cleared when a new week starts.
+func set_currency(kind: StringName, total: int) -> void:
+	add_currency(kind, maxi(total, 0) - currency(kind))
+
+
+# --- sections -------------------------------------------------------------
+
+## A system's own corner of the progress file (the store's weekly plant, say),
+## for state that is not a currency, a collection or a plant. The copy is the
+## caller's; hand it back with `set_section` to keep changes.
+func section(name: StringName) -> Dictionary:
+	var value: Variant = _progress.get("section_" + String(name), {})
+	return (value as Dictionary).duplicate(true) if value is Dictionary else {}
+
+
+func set_section(name: StringName, data: Dictionary) -> void:
+	_progress["section_" + String(name)] = data.duplicate(true)
+	_save_progress()
+
+
 # --- collections ----------------------------------------------------------
 
 ## Records `item_id` in a named collection - &"trophies", &"upgrades",
@@ -307,8 +349,47 @@ func unlock_feature(feature: StringName) -> void:
 	grant_item(&"features", feature)
 
 
+## Whether `feature` is open: a level handed it out, or the level that
+## `features.json` ties it to is cleared - PVZGE opens the store once egypt6
+## is won, whatever that level's own data says.
 func has_feature(feature: StringName) -> bool:
-	return has_item(&"features", feature)
+	if has_item(&"features", feature):
+		return true
+	var gate := StringName(str(Data.feature_levels().get(String(feature), "")))
+	return gate != &"" and is_cleared(gate)
+
+
+# --- plant boosts ---------------------------------------------------------
+
+## Boosts the player has banked for `plant_id` - PVZGE's PlantProgress.boost,
+## earned by shoveling a fully grown plant out of the Zen Garden.
+func plant_boosts(plant_id: StringName) -> int:
+	return int((_progress.get("boosts", {}) as Dictionary).get(String(plant_id), 0))
+
+
+func add_plant_boost(plant_id: StringName, amount: int = 1) -> int:
+	var boosts: Dictionary = _progress.get("boosts", {})
+	var total := maxi(int(boosts.get(String(plant_id), 0)) + amount, 0)
+	boosts[String(plant_id)] = total
+	_progress["boosts"] = boosts
+	_save_progress()
+	progress_changed.emit()
+	return total
+
+
+# --- sections ---------------------------------------------------------------
+
+## A screen's own saved state, kept whole under `name` in the progress file -
+## the Zen Garden's plants and slots. A copy: change it and hand it back to
+## `store_section`.
+func section(name: StringName) -> Dictionary:
+	var data: Variant = _progress.get(String(name), {})
+	return (data as Dictionary).duplicate(true) if data is Dictionary else {}
+
+
+func store_section(name: StringName, data: Dictionary) -> void:
+	_progress[String(name)] = data.duplicate(true)
+	_save_progress()
 
 
 func reset_progress() -> void:

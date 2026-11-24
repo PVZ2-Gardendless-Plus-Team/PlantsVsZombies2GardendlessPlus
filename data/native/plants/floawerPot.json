@@ -19,6 +19,10 @@
   "airborne",
   "provides:airborne"
  ],
+ "zen_garden": {
+  "place": "fly",
+  "weight": 1
+ },
  "extra": {
   "CannotBeSheepenedByWizard": true,
   "MoveToPosTime": 2.5

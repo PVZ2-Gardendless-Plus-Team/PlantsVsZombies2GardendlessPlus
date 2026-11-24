@@ -17,6 +17,8 @@ signal plant_died(plant: Plant)
 signal sun_collected(amount: int)
 ## Coins reached the coin counter and were banked in Saves.
 signal coins_collected(amount: int)
+## A pickup reached its counter and paid `amount` of `currency` into Saves.
+signal loot_collected(currency: StringName, amount: int)
 signal zombie_reached_house(zombie: Zombie)
 ## A lawn ability became available or was spent.
 signal lawn_ability_changed(component: LawnComponent)
@@ -78,6 +80,15 @@ const DEFAULT_COLS := 9
 @export var plant_food_collect_target := Vector2(200.0, 30.0)
 ## Where collected coins fly to, in board-local coordinates.
 @export var coin_collect_target := Vector2(340.0, 30.0)
+## Where gems, tickets and sprouts fly to, by currency, in board-local
+## coordinates; a currency without one flies to the coin counter.
+var loot_targets: Dictionary = {}
+## Whether zombies and mowers drop coins at all. A level turns it off with
+## `"drop_coins": false`, as PVZGE's sandbox and minigames do.
+var loot_enabled: bool = true
+## This level's drops so far, for tables with a per-level cap.
+var loot_context := Loot.Context.new()
+var loot_rng := RandomNumberGenerator.new()
 ## Plant food the player can hold at once.
 @export var max_plant_food: int = 3
 
@@ -216,6 +227,8 @@ func reset() -> void:
 	selected_seed = {}
 	sun = starting_sun
 	plant_food = 0
+	loot_enabled = true
+	loot_context = Loot.Context.new()
 	sun_changed.emit(sun)
 	plant_food_changed.emit(plant_food)
 	queue_redraw()
@@ -243,6 +256,8 @@ func set_starting_sun(amount: int) -> void:
 ## previous level installed, so switching worlds switches mechanics.
 func setup_lawn(lawn: Dictionary, runner: Node) -> void:
 	_show_scenery(lawn, runner)
+	if runner != null and runner.get("level") is Dictionary:
+		configure_loot(runner.get("level"))
 	for c in lawn_components:
 		c.queue_free()
 	lawn_components.clear()
@@ -321,6 +336,34 @@ func mower_in_row(row: int) -> Mower:
 func has_mower(row: int) -> bool:
 	var m := mower_in_row(row)
 	return m != null and m.is_available()
+
+
+## Sets this level's drops from its data: `drop_coins` (default true),
+## Lawn of Doom levels drop tickets, and `loot_multiplier` (PVZGE's
+## ThreeTimesPrizes) repeats every drop.
+func configure_loot(level: Dictionary) -> void:
+	loot_enabled = bool(level.get("drop_coins", true))
+	loot_context.lod = bool(level.get("lod", level.has("level_of_the_day_config")))
+	loot_context.multiplier = maxi(int(level.get("loot_multiplier", 1)), 1)
+
+
+## Turns every unused mower into what `loot.json`'s mower table drops - a gold
+## coin each in PVZGE's victoryExit - and returns the pickups.
+func cash_in_mowers() -> Array[CoinToken]:
+	var out: Array[CoinToken] = []
+	if not loot_enabled:
+		return out
+	var t := Loot.table(&"mower")
+	for row in _remaining_mower_rows():
+		var m := mower_in_row(row)
+		var drops := Loot.roll(t, loot_rng, loot_context)
+		if drops.is_empty():
+			break
+		for id in drops:
+			out.append(drop_loot(id, m.position))
+		_mowers.erase(row)
+		m.queue_free()
+	return out
 
 
 func _on_mower_finished(row: int) -> void:
@@ -408,6 +451,7 @@ func snapshot() -> Dictionary:
 		"terrain": ground, "cell_provides": provided,
 		"rails": rails, "tide_from": tide_from,
 		"lawn_components": lawn,
+		"loot_given": loot_context.given.duplicate(),
 	}
 
 
@@ -452,6 +496,11 @@ func apply_snapshot(state: Dictionary) -> void:
 	# which of them it owns needs rebuilding.
 	_tide_cells.clear()
 	tide_from = int(state.get("tide_from", -1))
+	var given: Variant = state.get("loot_given", {})
+	if given is Dictionary:
+		loot_context.given.clear()
+		for id in given:
+			loot_context.given[StringName(id)] = int(given[id])
 	if tide_from >= 0:
 		for c in range(tide_from, cols):
 			for r in rows:
@@ -1424,12 +1473,23 @@ func _on_zombie_reached_house(who: Zombie) -> void:
 func _on_carrier_died(who: Character) -> void:
 	if who is Zombie:
 		zombie_died.emit(who)
+		_drop_zombie_loot(who)
 		if who.has_tag(&"carrying_plantfood"):
 			drop_plant_food(who.position)
 		# A plantern's gift: every zombie it lit carries sun to drop.
 		if who.has_tag(&"carrying_sun"):
 			for i in ceili(int(who.get_meta(&"carried_sun", 0)) / float(SunToken.VALUE)):
 				drop_sun(who.position + Vector2(i * 16.0, 0))
+
+
+## PVZGE's Zombie.dropCoin and dropSprout: a small chance of a coin, gem,
+## sprout or ticket where it fell. A zombie fighting for the player, or one
+## tagged `no_loot`, drops nothing.
+func _drop_zombie_loot(who: Zombie) -> void:
+	if not loot_enabled or who.is_charmed() or who.has_tag(&"no_loot"):
+		return
+	for id in Loot.roll(Loot.table(&"zombie"), loot_rng, loot_context):
+		drop_loot(id, who.position)
 
 
 func _on_zombie_gone(who: Node) -> void:
@@ -1667,21 +1727,45 @@ func _on_plant_food_collected(token: Collectable) -> void:
 func drop_coin(at: Vector2, value: int = CoinToken.SILVER) -> CoinToken:
 	var c := CoinToken.new()
 	c.value = value
+	c.drop_id = &"coin_gold" if value >= CoinToken.GOLD else &"coin_silver"
 	c.z_index = LAYER_COLLECTABLE
 	c.position = at + Vector2(0, -30)
 	c.fall_to_y = at.y + 10.0
-	c.collect_target = to_global(coin_collect_target)
-	c.collected.connect(func(t): _on_coin_collected(t))
-	_suns.add_child(c)
-	Audio.play(&"coin.drop", at)
+	_add_loot_token(c)
 	return c
 
 
+## Drops `loot.json`'s pickup `id` at `at`, popping up and out as PVZGE's
+## dropOneCoin throws it.
+func drop_loot(id: StringName, at: Vector2) -> CoinToken:
+	var c := CoinToken.new()
+	c.set_drop(id)
+	c.z_index = LAYER_COLLECTABLE
+	c.position = at
+	c.x_limits = Vector2(origin.x + cell_size.x * 0.25, origin.x + cell_size.x * (cols - 0.25))
+	c.position.x = clampf(c.position.x, c.x_limits.x, c.x_limits.y)
+	var ground := at.y + 20.0
+	var unit := original_unit()
+	c.toss(ground, 50.0, Vector2(randf_range(-3.0, 3.0) * DROP_SPEED * unit.x,
+			10.0 * DROP_SPEED * unit.y), DROP_GRAVITY * unit.y)
+	_add_loot_token(c)
+	return c
+
+
+func _add_loot_token(c: CoinToken) -> void:
+	c.collect_target = to_global(loot_targets.get(c.currency, coin_collect_target))
+	c.collected.connect(func(t): _on_coin_collected(t))
+	_suns.add_child(c)
+	Audio.play_variant(&"coin.drop", c.drop_id, c.position)
+
+
 func _on_coin_collected(token: Collectable) -> void:
-	var value: int = (token as CoinToken).value
-	Saves.add_currency(&"coins", value)
-	coins_collected.emit(value)
-	Audio.play(&"coin.collect", token.position)
+	var coin := token as CoinToken
+	Saves.add_currency(coin.currency, coin.value)
+	if coin.currency == &"coins":
+		coins_collected.emit(coin.value)
+	loot_collected.emit(coin.currency, coin.value)
+	Audio.play_variant(&"coin.collect", coin.drop_id, token.position)
 
 
 ## Drops a won level's prize at `at` - where its last zombie fell - and sends

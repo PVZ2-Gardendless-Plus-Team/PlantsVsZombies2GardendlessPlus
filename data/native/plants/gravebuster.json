@@ -18,6 +18,9 @@
  "tags": [
   "on_grave:gravebuster_plantable"
  ],
+ "zen_garden": {
+  "place": "solid"
+ },
  "mint_boost": {
   "resistance": 1,
   "speed": 3,

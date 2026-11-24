@@ -1,5 +1,5 @@
 {
- "//": "Scenery and HUD art, keyed <kind>:<id> like tutorial.json. `lawn:<stage>` names the stage's lawn rigs: `back` draws under everything, `there` over the ground but under the characters (PVZGE's FrontYard/upper, its lawnThereUpper: the far fence, mailbox and street), and `front` over the characters (PVZGE's LawnCommon/LawnUpper, its lawnUpper), placed where the original placed its lawn relative to the grid. `open_rows` picks the tutorial lawn's sod animation by how many lanes are open. `mower:<id>`, `collectable:<id>`, `effect:<id>` and `hud:<id>` are single rigs with an explicit scale and offset, sized from the original's own scale times the port's cell-to-square ratio. `font:ui` is the text font and `font:warning` the red lawn warnings' (\"PLANT!\"), each a file under art/. A mod reskins any of them by shipping an entry with the same key.",
+ "//": "Scenery and HUD art, keyed <kind>:<id> like tutorial.json. `lawn:<stage>` names the stage's lawn rigs: `back` draws under everything, `there` over the ground but under the characters (PVZGE's FrontYard/upper, its lawnThereUpper: the far fence, mailbox and street), and `front` over the characters (PVZGE's LawnCommon/LawnUpper, its lawnUpper), placed where the original placed its lawn relative to the grid. `open_rows` picks the tutorial lawn's sod animation by how many lanes are open. `mower:<id>`, `collectable:<id>`, `effect:<id>` and `hud:<id>` are single rigs with an explicit scale and offset, sized from the original's own scale times the port's cell-to-square ratio. `font:ui` is the text font and `font:warning` the red lawn warnings' (\"PLANT!\"), each a file under art/. A mod reskins any of them by shipping an entry with the same key. `store:<coins|gems|sprouts|upgrade>` is what a store card shows for a pack or an upgrade; the upgrade rig's states are keyed by a word in the upgrade id.",
  "lawn:AbbotStage": {
   "bundle": "lawns_KongfuLAWN",
   "back": [
@@ -790,6 +790,104 @@
   "offset_y": 0,
   "animations": {
    "idle": "Idle"
+  }
+ },
+ "collectable:coin_silver": {
+  "bundle": "rigs_Collections",
+  "armature": "CoinSilver",
+  "scale": 0.25,
+  "offset_x": 0,
+  "offset_y": 0,
+  "animations": {
+   "idle": "Idle"
+  }
+ },
+ "collectable:coin_gold": {
+  "bundle": "rigs_Collections",
+  "armature": "CoinGolden",
+  "scale": 0.25,
+  "offset_x": 0,
+  "offset_y": 0,
+  "animations": {
+   "idle": "Idle"
+  }
+ },
+ "collectable:gem": {
+  "bundle": "rigs_Collections",
+  "armature": "Gem",
+  "scale": 0.2,
+  "offset_x": 0,
+  "offset_y": 0,
+  "animations": {
+   "idle": "Idle"
+  }
+ },
+ "collectable:ticket": {
+  "bundle": "rigs_Collections",
+  "armature": "Ticket",
+  "scale": 0.12,
+  "offset_x": 0,
+  "offset_y": 0,
+  "animations": {
+   "idle": "Idle"
+  }
+ },
+ "collectable:sprout": {
+  "bundle": "rigs_Sprout",
+  "armature": "Sprout",
+  "scale": 0.6,
+  "offset_x": 0,
+  "offset_y": 0,
+  "animations": {
+   "idle": "Idle"
+  }
+ },
+ "store:coins": {
+  "bundle": "rigs_Collections",
+  "armature": "CoinStack",
+  "scale": 0.35,
+  "offset_x": 0,
+  "offset_y": 0,
+  "animations": {
+   "idle": "Idle"
+  }
+ },
+ "store:gems": {
+  "bundle": "rigs_Collections",
+  "armature": "Gem",
+  "scale": 0.45,
+  "offset_x": 0,
+  "offset_y": 0,
+  "animations": {
+   "idle": "Idle"
+  }
+ },
+ "store:sprouts": {
+  "bundle": "rigs_Sprout",
+  "armature": "Sprout",
+  "scale": 1.4,
+  "offset_x": 0,
+  "offset_y": 0,
+  "animations": {
+   "idle": "Idle"
+  }
+ },
+ "store:upgrade": {
+  "bundle": "rigs_PrizeItems",
+  "armature": "Upgrades",
+  "scale": 0.6,
+  "offset_x": 0,
+  "offset_y": 0,
+  "animations": {
+   "idle": "StartingSun",
+   "starting_sun": "StartingSun",
+   "sunshovel": "SunShovel",
+   "pf_slots": "PlantfoodSlot",
+   "slots": "SeedSlot",
+   "manual_mowers": "Mower",
+   "pf_refresh": "Cooldown",
+   "wallnut": "Wallnut",
+   "shield": "Shield"
   }
  },
  "effect:plant_dirt": {

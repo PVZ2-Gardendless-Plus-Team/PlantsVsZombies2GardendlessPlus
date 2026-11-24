@@ -14,5 +14,8 @@
    "type": "time_warp",
    "warp_time": 5
   }
- ]
+ ],
+ "zen_garden": {
+  "weight": 1
+ }
 }

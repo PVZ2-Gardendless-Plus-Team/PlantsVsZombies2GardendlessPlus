@@ -5,6 +5,8 @@ extends EntityComponent
 ## SunToken.VALUE.
 ##
 ## Config: interval, interval_jitter, first_delay, first_delay_jitter.
+## `loot_table` names a `loot.json` table to roll instead of making sun:
+## Marigold's "marigold" drops coins, as PVZGE's coinProducer does.
 
 const PRODUCE_EVENTS := [&"Produce", &"produce", &"produce0"]
 
@@ -57,6 +59,8 @@ func _on_art_event(name: StringName) -> void:
 ## without art or without the point just drops its sun as before.
 func _produce() -> void:
 	Audio.play_for(&"plant.produce", host)
+	if _drop_loot():
+		return
 	var art: Armature = host.art
 	var entry := Art.mapping(host.art_kind(), host.def.id) if host.def != null else {}
 	var point: Array = entry.get("produce_point", [])
@@ -72,9 +76,24 @@ func _produce() -> void:
 			Vector2(float(dir[0]) * art.facing, float(dir[1])))
 
 
+## Rolls the `loot_table`, if there is one, where the plant stands.
+func _drop_loot() -> bool:
+	var table_name := str(cfg(&"loot_table", ""))
+	if table_name == "":
+		return false
+	var board = host.board
+	for id in Loot.roll(Loot.table(StringName(table_name)), board.loot_rng):
+		board.drop_loot(id, host.position)
+	return true
+
+
 ## Plant food: a handful of sun at once.
 func on_plantfood() -> bool:
 	var count := int(cfg(&"plantfood_suns", 5))
+	if str(cfg(&"loot_table", "")) != "":
+		for i in count:
+			_drop_loot()
+		return true
 	for i in count:
 		# Spread them so they do not land exactly on top of each other.
 		host.board.drop_sun(host.position + Vector2((i - count * 0.5) * 22.0, 0))

@@ -17,6 +17,10 @@
    "plantfood_radius": 3
   }
  ],
+ "zen_garden": {
+  "place": "fly",
+  "weight": 1
+ },
  "mint_boost": {
   "resistance": 1,
   "speed": 1,

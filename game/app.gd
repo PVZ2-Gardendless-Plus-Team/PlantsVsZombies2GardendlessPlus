@@ -22,6 +22,10 @@ func _ready() -> void:
 	match first:
 		&"map":
 			show_world_map(start_campaign)
+		&"store":
+			show_store()
+		&"zen":
+			show_zen_garden()
 		_:
 			show_main_menu()
 
@@ -39,9 +43,11 @@ func show_world_map(campaign_id: StringName = &"") -> void:
 	map.start_campaign = campaign_id
 	map.level_chosen.connect(play_level)
 	map.back_requested.connect(_leave_world_map.bind(map))
+	map.store_requested.connect(func() -> void: show_store(map.current_world()))
 	map.almanac_requested.connect(func() -> void:
 		var world := map.current_world()
 		show_almanac(world.id if world != null else campaign_id))
+	map.zen_garden_requested.connect(show_zen_garden)
 	_swap(map)
 
 
@@ -61,6 +67,13 @@ func show_world_chooser(campaign_id: StringName = &"") -> void:
 	chooser.world_chosen.connect(show_world_map)
 	chooser.back_requested.connect(show_main_menu)
 	_swap(chooser)
+  
+## The store, returning to the world map page it was opened from.
+func show_store(from_world: CampaignDef = null) -> void:
+	var store := StoreScreen.new()
+	store.back_requested.connect(show_world_map.bind(
+			from_world.id if from_world != null else &""))
+	_swap(store)
 
 
 ## PVZGE's almanac is reached from the world map and returns to it.
@@ -68,6 +81,12 @@ func show_almanac(campaign_id: StringName = &"") -> void:
 	var almanac := AlmanacScreen.new()
 	almanac.back_requested.connect(show_world_map.bind(campaign_id))
 	_swap(almanac)
+
+
+func show_zen_garden() -> void:
+	var garden := ZenGardenScreen.new()
+	garden.back_requested.connect(show_world_map.bind(&""))
+	_swap(garden)
 
 
 func play_level(level_id: StringName) -> void:
