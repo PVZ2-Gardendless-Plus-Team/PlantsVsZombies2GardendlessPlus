@@ -23,6 +23,10 @@
   "aquatic",
   "water_only"
  ],
+ "zen_garden": {
+  "place": "float",
+  "height": 40
+ },
  "mint_boost": {
   "resistance": 1,
   "speed": 2,

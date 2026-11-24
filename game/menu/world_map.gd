@@ -9,6 +9,8 @@ extends Control
 
 signal level_chosen(level_id: StringName)
 signal back_requested
+## The Zen Garden button, once the garden is open.
+signal zen_garden_requested
 
 const NODE_SIZE := Vector2(76, 76)
 ## Levels per row before the path doubles back.
@@ -139,6 +141,14 @@ func _build() -> void:
 	back.name = "Back"
 	back.position = Vector2(45, 43) - back.custom_minimum_size * 0.5
 	add_child(back)
+
+	# zengardenButton: the next square along, once PVZGE would show it.
+	if ZenGarden.is_open():
+		var zen := MenuUI.icon_button("ZenUp", "ZenDown", Vector2(67, 67),
+				zen_garden_requested.emit, "Zen Garden")
+		zen.name = "ZenGarden"
+		zen.position = Vector2(45 + 78, 43) - zen.custom_minimum_size * 0.5
+		add_child(zen)
 
 	_title = MenuUI.label("", 44)
 	_title.add_theme_color_override("font_color", Color("ffdd72"))

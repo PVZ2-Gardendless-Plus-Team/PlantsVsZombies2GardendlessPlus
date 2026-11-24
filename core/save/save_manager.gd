@@ -278,6 +278,39 @@ func has_feature(feature: StringName) -> bool:
 	return has_item(&"features", feature)
 
 
+# --- plant boosts ---------------------------------------------------------
+
+## Boosts the player has banked for `plant_id` - PVZGE's PlantProgress.boost,
+## earned by shoveling a fully grown plant out of the Zen Garden.
+func plant_boosts(plant_id: StringName) -> int:
+	return int((_progress.get("boosts", {}) as Dictionary).get(String(plant_id), 0))
+
+
+func add_plant_boost(plant_id: StringName, amount: int = 1) -> int:
+	var boosts: Dictionary = _progress.get("boosts", {})
+	var total := maxi(int(boosts.get(String(plant_id), 0)) + amount, 0)
+	boosts[String(plant_id)] = total
+	_progress["boosts"] = boosts
+	_save_progress()
+	progress_changed.emit()
+	return total
+
+
+# --- sections ---------------------------------------------------------------
+
+## A screen's own saved state, kept whole under `name` in the progress file -
+## the Zen Garden's plants and slots. A copy: change it and hand it back to
+## `store_section`.
+func section(name: StringName) -> Dictionary:
+	var data: Variant = _progress.get(String(name), {})
+	return (data as Dictionary).duplicate(true) if data is Dictionary else {}
+
+
+func store_section(name: StringName, data: Dictionary) -> void:
+	_progress[String(name)] = data.duplicate(true)
+	_save_progress()
+
+
 func reset_progress() -> void:
 	_progress = {}
 	for level_id in saved_levels():

@@ -17,6 +17,9 @@
    "plantfood_children": 2
   }
  ],
+ "zen_garden": {
+  "place": "solid"
+ },
  "mint_boost": {
   "resistance": 1,
   "speed": 3,

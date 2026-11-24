@@ -22,6 +22,9 @@
  "tags": [
   "sun_producer"
  ],
+ "zen_garden": {
+  "place": "fly"
+ },
  "mint_boost": {
   "resistance": 1,
   "speed": 1,

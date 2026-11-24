@@ -15,6 +15,10 @@
    "tile": "powertile_beta"
   }
  ],
+ "zen_garden": {
+  "place": "solid",
+  "weight": 1
+ },
  "extra": {
   "CannotBeSheepenedByWizard": true,
   "ImmuneToIceblock": true,

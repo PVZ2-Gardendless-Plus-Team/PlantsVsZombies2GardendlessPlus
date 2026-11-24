@@ -293,6 +293,11 @@ func _resolve(id: StringName, raw: Variant, pool: Dictionary,
 			def.world = StringName(str(source["world"]))
 		if source.has("packet_portrait"):
 			def.packet_portrait = StringName(str(source["packet_portrait"]))
+		var zen: Variant = source.get("zen_garden")
+		if zen is Dictionary:
+			def.zen_place = StringName(str(zen.get("place", def.zen_place)))
+			def.zen_weight = int(zen.get("weight", def.zen_weight))
+			def.zen_height = float(zen.get("height", def.zen_height))
 	if source.has("sort") and def is ZombieDef:
 		def.sort = StringName(str(source["sort"]))
 	if source.has("category") and def is ObjectDef:

@@ -15,6 +15,10 @@
    "projectile": "bowling_pf"
   }
  ],
+ "zen_garden": {
+  "place": "none",
+  "weight": 0
+ },
  "extra": {
   "ImmuneToIceblock": true,
   "StartingHeight": 30

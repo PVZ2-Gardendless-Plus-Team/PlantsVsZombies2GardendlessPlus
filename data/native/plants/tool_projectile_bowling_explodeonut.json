@@ -15,6 +15,10 @@
    "projectile": "bowling_explode_o_nut"
   }
  ],
+ "zen_garden": {
+  "place": "none",
+  "weight": 0
+ },
  "extra": {
   "ImmuneToIceblock": true,
   "SpeedX": 4,
