@@ -1,0 +1,144 @@
+{
+ "id": "epic_beghouled2",
+ "name": "Beghouled - Epic Quest 002",
+ "name_key": "[EPIC_QUEST_BEGHOULED_BLITZ_001_LEVEL_NAME]",
+ "description": "[PLAYERS_EPIC_QUEST_BEGHOULED_BLITZ_001]",
+ "number": 2,
+ "stage": "DarkStage",
+ "intro_narrative": "EPIC_QUEST_BEGHOULED_BLITZ_001_2_INTRO",
+ "minigames": [
+  {
+   "type": "beghouled",
+   "match_counts_to_stage_advance": [
+    {
+     "match_count": 25,
+     "stage_number": 1
+    },
+    {
+     "match_count": 50,
+     "stage_number": 2
+    },
+    {
+     "match_count": 80,
+     "stage_number": 3
+    }
+   ],
+   "stages": [
+    {
+     "spawn_delay": 2,
+     "types": [
+      {
+       "zombie_type": "beghouled_dark"
+      },
+      {
+       "zombie_type": "beghouled_dark_armor1"
+      },
+      {
+       "zombie_type": "dark_imp_dragon"
+      }
+     ]
+    },
+    {
+     "spawn_delay": 1.9,
+     "types": [
+      {
+       "zombie_type": "dark_imp_dragon"
+      },
+      {
+       "zombie_type": "dark"
+      },
+      {
+       "zombie_type": "dark_armor1"
+      }
+     ]
+    },
+    {
+     "spawn_delay": 1.8,
+     "types": [
+      {
+       "zombie_type": "dark_imp_dragon"
+      },
+      {
+       "zombie_type": "dark_armor1"
+      },
+      {
+       "zombie_type": "dark_armor2"
+      }
+     ]
+    },
+    {
+     "spawn_delay": 2,
+     "types": [
+      {
+       "zombie_type": "dark_armor1"
+      },
+      {
+       "zombie_type": "dark_armor2"
+      },
+      {
+       "zombie_type": "dark_juggler"
+      },
+      {
+       "zombie_type": "dark_juggler"
+      }
+     ]
+    }
+   ],
+   "selection_method": "beghouled",
+   "preset_plant_list": [
+    {
+     "plant_type": "repeater",
+     "level": -1
+    },
+    {
+     "plant_type": "endurian",
+     "level": -1
+    },
+    {
+     "plant_type": "torchwood",
+     "level": -1
+    },
+    {
+     "plant_type": "fumeshroom",
+     "level": -1
+    }
+   ],
+   "beghouled_upgrade_list": [
+    "peanut"
+   ],
+   "matches_to_win": 100,
+   "initial_plants": [
+    "peashooter",
+    "wallnut",
+    "puffshroom",
+    "sunbean"
+   ],
+   "upgrade_map": [
+    {
+     "base_plant": "peashooter",
+     "upgraded_plant": "repeater"
+    },
+    {
+     "base_plant": "wallnut",
+     "upgraded_plant": "endurian"
+    },
+    {
+     "base_plant": "endurian",
+     "upgraded_plant": "peanut"
+    },
+    {
+     "base_plant": "sunbean",
+     "upgraded_plant": "torchwood"
+    },
+    {
+     "base_plant": "puffshroom",
+     "upgraded_plant": "fumeshroom"
+    }
+   ]
+  }
+ ],
+ "scripts": [
+  "BeghouledArcade",
+  "BeghouledIntro"
+ ]
+}

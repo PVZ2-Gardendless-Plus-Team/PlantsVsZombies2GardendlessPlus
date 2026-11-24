@@ -1,0 +1,427 @@
+{
+ "id": "future11",
+ "name": "Future Challenge LastStand A",
+ "name_key": "[FUTURE_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_FUTURE]",
+ "number": 11,
+ "stage": "FutureNightStage",
+ "intro_narrative": "FUTURE_CHALLENGE_LASTSTAND_A",
+ "reward": {
+  "type": "pinata",
+  "param": "spine_future"
+ },
+ "objectives": [
+  {
+   "type": "survive_waves",
+   "description": "[STARCHALLENGE_LASTSTAND_MINIGAME]"
+  }
+ ],
+ "power_tiles": [
+  {
+   "group": "alpha",
+   "row": 0,
+   "col": 1,
+   "delay": 1.5
+  },
+  {
+   "group": "alpha",
+   "row": 1,
+   "col": 0,
+   "delay": 1.5
+  },
+  {
+   "group": "beta",
+   "row": 2,
+   "col": 0,
+   "delay": 0.25
+  },
+  {
+   "group": "beta",
+   "row": 2,
+   "col": 2,
+   "delay": 0.25
+  },
+  {
+   "group": "delta",
+   "row": 3,
+   "col": 2,
+   "delay": 1.5
+  },
+  {
+   "group": "delta",
+   "row": 4,
+   "col": 1,
+   "delay": 1.5
+  }
+ ],
+ "seedbank": {
+  "mode": "chooser",
+  "selection": "chooser",
+  "blacklist": [
+   "sunflower",
+   "twinsunflower",
+   "iceburg",
+   "sunshroom",
+   "puffshroom",
+   "seashroom",
+   "sunbean",
+   "gravebuster",
+   "toadstool",
+   "goldleaf",
+   "stallia",
+   "primalsunflower",
+   "goldbloom"
+  ]
+ },
+ "minigames": [
+  {
+   "type": "last_stand",
+   "starting_plantfood": 3,
+   "starting_sun": 2750
+  }
+ ],
+ "waves": [
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "future_armor1"
+      },
+      {
+       "type": "future_armor1"
+      },
+      {
+       "type": "future"
+      },
+      {
+       "type": "future"
+      }
+     ]
+    },
+    {
+     "kind": "SpiderRainZombieSpawnerProps",
+     "data": {
+      "ColumnEnd": 7,
+      "ColumnStart": 6,
+      "GroupSize": 1,
+      "SpiderCount": 4,
+      "SpiderZombieName": "future_imp",
+      "TimeBeforeFullSpawn": 2,
+      "TimeBetweenGroups": 0.5,
+      "WaveStartMessage": "[WARNING_SPIDERRAIN]",
+      "ZombieFallTime": "1.5"
+     }
+    },
+    {
+     "kind": "SpiderRainZombieSpawnerProps",
+     "data": {
+      "ColumnEnd": "8",
+      "ColumnStart": 7,
+      "GroupSize": 1,
+      "SpiderCount": 3,
+      "SpiderZombieName": "future_imp",
+      "TimeBeforeFullSpawn": 2,
+      "TimeBetweenGroups": 0.5,
+      "WaveStartMessage": "[WARNING_SPIDERRAIN]",
+      "ZombieFallTime": "1.5"
+     }
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "future_jetpack"
+    },
+    {
+     "type": "future_jetpack"
+    },
+    {
+     "type": "future_jetpack"
+    },
+    {
+     "type": "mech_cone"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "future",
+     "row": 4
+    },
+    {
+     "type": "future",
+     "row": 5
+    },
+    {
+     "type": "future_armor2",
+     "row": 4
+    },
+    {
+     "type": "future_armor2",
+     "row": 5
+    },
+    {
+     "type": "mech_cone",
+     "row": 4
+    },
+    {
+     "type": "future_armor2",
+     "row": 5
+    },
+    {
+     "type": "future_armor1",
+     "row": 3
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "future_armor2"
+    },
+    {
+     "type": "future_armor1"
+    },
+    {
+     "type": "future_protector",
+     "row": 3
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "future_armor1",
+       "row": 1
+      },
+      {
+       "type": "future_armor1",
+       "row": 5
+      },
+      {
+       "type": "future_armor1"
+      }
+     ]
+    },
+    {
+     "kind": "SpiderRainZombieSpawnerProps",
+     "data": {
+      "ColumnEnd": 7,
+      "ColumnStart": 4,
+      "GroupSize": 1,
+      "SpiderCount": 8,
+      "SpiderZombieName": "future_imp",
+      "TimeBeforeFullSpawn": 4,
+      "TimeBetweenGroups": 0.5,
+      "WaveStartMessage": "[WARNING_SPIDERRAIN]",
+      "ZombieFallTime": "1.5"
+     }
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "future_jetpack",
+     "row": 3
+    },
+    {
+     "type": "future_jetpack",
+     "row": 2
+    },
+    {
+     "type": "future_jetpack",
+     "row": 4
+    },
+    {
+     "type": "future_jetpack",
+     "row": 1
+    },
+    {
+     "type": "future_jetpack",
+     "row": 5
+    },
+    {
+     "type": "future_jetpack"
+    },
+    {
+     "type": "future_jetpack"
+    },
+    {
+     "type": "future_jetpack"
+    },
+    {
+     "type": "future_jetpack"
+    },
+    {
+     "type": "future_jetpack"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "future_armor2",
+     "row": 3
+    },
+    {
+     "type": "future_armor1",
+     "row": 5
+    },
+    {
+     "type": "future_armor1",
+     "row": 1
+    },
+    {
+     "type": "mech_cone",
+     "row": 3
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "future_armor1",
+     "row": 3
+    },
+    {
+     "type": "future_armor2",
+     "row": 2
+    },
+    {
+     "type": "future_armor2",
+     "row": 1
+    },
+    {
+     "type": "future",
+     "row": 2
+    },
+    {
+     "type": "future",
+     "row": 1
+    },
+    {
+     "type": "mech_cone",
+     "row": 2
+    },
+    {
+     "type": "future_armor2",
+     "row": 1
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "future",
+       "row": 2
+      },
+      {
+       "type": "future_protector",
+       "row": 2
+      },
+      {
+       "type": "future",
+       "row": 4
+      },
+      {
+       "type": "future_protector",
+       "row": 4
+      }
+     ]
+    },
+    {
+     "kind": "SpiderRainZombieSpawnerProps",
+     "data": {
+      "ColumnEnd": 6,
+      "ColumnStart": 4,
+      "GroupSize": 1,
+      "SpiderCount": 10,
+      "SpiderZombieName": "future_imp",
+      "TimeBeforeFullSpawn": 5,
+      "TimeBetweenGroups": 0.5,
+      "WaveStartMessage": "[WARNING_SPIDERRAIN]",
+      "ZombieFallTime": "1.5"
+     }
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "mech_cone",
+     "row": 3
+    },
+    {
+     "type": "future_jetpack",
+     "row": 4
+    },
+    {
+     "type": "future_jetpack",
+     "row": 2
+    },
+    {
+     "type": "future_jetpack",
+     "row": 5
+    },
+    {
+     "type": "future_jetpack",
+     "row": 1
+    },
+    {
+     "type": "future_armor1",
+     "row": 5
+    },
+    {
+     "type": "future_armor1",
+     "row": 1
+    },
+    {
+     "type": "mech_cone",
+     "row": 3
+    },
+    {
+     "type": "future_armor1"
+    },
+    {
+     "type": "future_armor1"
+    },
+    {
+     "type": "future_armor1"
+    },
+    {
+     "type": "future_armor1"
+    },
+    {
+     "type": "future_armor1"
+    }
+   ]
+  }
+ ],
+ "wave_pacing": {
+  "flag_interval": 10,
+  "points": 800,
+  "point_increment": 50
+ },
+ "mowers": true
+}

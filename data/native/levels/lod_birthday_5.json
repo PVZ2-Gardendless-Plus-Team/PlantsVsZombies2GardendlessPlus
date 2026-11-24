@@ -1,0 +1,253 @@
+{
+ "id": "lod_birthday_5",
+ "name": "Modern 8",
+ "name_key": "[LOD_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_LOD]",
+ "author": "蔓逐I蝶舞",
+ "stage": "BirthdayStage",
+ "level_of_the_day": true,
+ "minigames": [
+  {
+   "type": "beghouled",
+   "match_counts_to_stage_advance": [
+    {
+     "match_count": 20,
+     "stage_number": 1
+    },
+    {
+     "match_count": 60,
+     "stage_number": 2
+    },
+    {
+     "match_count": 80,
+     "stage_number": 3
+    }
+   ],
+   "stages": [
+    {
+     "spawn_delay": 3,
+     "types": [
+      {
+       "zombie_type": "lawn"
+      },
+      {
+       "zombie_type": "lawn_armor1"
+      }
+     ]
+    },
+    {
+     "spawn_delay": 3,
+     "types": [
+      {
+       "zombie_type": "lawn"
+      },
+      {
+       "zombie_type": "lawn_armor1"
+      },
+      {
+       "zombie_type": "lawn_armor2"
+      },
+      {
+       "zombie_type": "explorer"
+      },
+      {
+       "zombie_type": "mech_cone"
+      },
+      {
+       "zombie_type": "modern_newspaper"
+      },
+      {
+       "zombie_type": "sportzball_balloon"
+      }
+     ]
+    },
+    {
+     "spawn_delay": 3,
+     "types": [
+      {
+       "zombie_type": "lawn_armor1"
+      },
+      {
+       "zombie_type": "lawn_armor2"
+      },
+      {
+       "zombie_type": "lawn_armor4"
+      },
+      {
+       "zombie_type": "sportzball_balloon"
+      },
+      {
+       "zombie_type": "explorer"
+      },
+      {
+       "zombie_type": "explore_veteran"
+      },
+      {
+       "zombie_type": "summer_bug_armor2"
+      },
+      {
+       "zombie_type": "sky_arbiterx"
+      },
+      {
+       "zombie_type": "lawn_gargantuar"
+      },
+      {
+       "zombie_type": "mech_cone"
+      },
+      {
+       "zombie_type": "modern_newspaper"
+      },
+      {
+       "zombie_type": "newspaper_veteran"
+      },
+      {
+       "zombie_type": "iceage_troglobite_veteran"
+      }
+     ]
+    },
+    {
+     "spawn_delay": 3,
+     "types": [
+      {
+       "zombie_type": "lawn_armor4"
+      },
+      {
+       "zombie_type": "lawn_armor2"
+      },
+      {
+       "zombie_type": "sportzball_balloon"
+      },
+      {
+       "zombie_type": "modern_allstar"
+      },
+      {
+       "zombie_type": "explorer_veteran"
+      },
+      {
+       "zombie_type": "summer_bug_armor2"
+      },
+      {
+       "zombie_type": "sky_arbiterx"
+      },
+      {
+       "zombie_type": "lawn_gargantuar"
+      },
+      {
+       "zombie_type": "modern_newspaper"
+      },
+      {
+       "zombie_type": "newspaper_veteran"
+      },
+      {
+       "zombie_type": "pirate_gargantuar"
+      },
+      {
+       "zombie_type": "lawn_gargantuar"
+      },
+      {
+       "zombie_type": "dino_gargantuar"
+      },
+      {
+       "zombie_type": "mech_cone"
+      },
+      {
+       "zombie_type": "kongfu_bronze_strong"
+      },
+      {
+       "zombie_type": "iceage_troglobite_veteran"
+      }
+     ]
+    }
+   ],
+   "selection_method": "beghouled",
+   "preset_plant_list": [
+    {
+     "plant_type": "anthurium",
+     "level": -1
+    },
+    {
+     "plant_type": "lightningreed",
+     "level": -1
+    },
+    {
+     "plant_type": "lychee",
+     "level": -1
+    },
+    {
+     "plant_type": "endurian",
+     "level": -1
+    },
+    {
+     "plant_type": "fumeshroom",
+     "level": -1
+    },
+    {
+     "plant_type": "wintermelon",
+     "level": -1
+    },
+    {
+     "plant_type": "coldsnapdragon",
+     "level": -1
+    }
+   ],
+   "beghouled_upgrade_list": [
+    "threepeater",
+    "wintermelon"
+   ],
+   "matches_to_win": 150,
+   "initial_plants": [
+    "peashooter",
+    "starfruit",
+    "melonpult",
+    "twinsunflower",
+    "puffshroom"
+   ],
+   "upgrade_map": [
+    {
+     "base_plant": "peashooter",
+     "upgraded_plant": "repeater"
+    },
+    {
+     "base_plant": "peashooter",
+     "upgraded_plant": "snappea"
+    },
+    {
+     "base_plant": "puffshroom",
+     "upgraded_plant": "fumeshroom"
+    },
+    {
+     "base_plant": "fumeshroom",
+     "upgraded_plant": "gloomshroom"
+    },
+    {
+     "base_plant": "starfruit",
+     "upgraded_plant": "pinkstarfruit"
+    },
+    {
+     "base_plant": "pinkstarfruit",
+     "upgraded_plant": "shootingstarfruit"
+    },
+    {
+     "base_plant": "melonpult",
+     "upgraded_plant": "wintermelon"
+    },
+    {
+     "base_plant": "repeater",
+     "upgraded_plant": "gatling"
+    },
+    {
+     "base_plant": "repeater",
+     "upgraded_plant": "megagatling"
+    }
+   ]
+  }
+ ],
+ "sun": {
+  "interval": 10.0
+ },
+ "scripts": [
+  "BeghouledArcade",
+  "BeghouledIntro",
+  "LevelOfTheDayIntro"
+ ]
+}

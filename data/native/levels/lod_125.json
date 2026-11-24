@@ -1,0 +1,67 @@
+{
+ "id": "lod_125",
+ "name": "LOD 224 - Vasebreaker - Wasabi Whip",
+ "name_key": "[LOD_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_LOD]",
+ "stage": "DinoStage",
+ "vasebreaker": true,
+ "level_of_the_day": true,
+ "promo_plant": "wasabiwhip",
+ "level_of_the_day_config": {
+  "flags": 0,
+  "waves_per_flag": 0,
+  "points": 0,
+  "point_increment": 0,
+  "plantfood": 0
+ },
+ "minigames": [
+  {
+   "type": "vasebreaker",
+   "min_column_index": 3,
+   "max_column_index": 8,
+   "num_colored_plant_vases": 4,
+   "num_colored_zombie_vases": 0,
+   "vases": [
+    {
+     "zombie_type_name": "dino_imp",
+     "count": 3
+    },
+    {
+     "zombie_type_name": "dino",
+     "count": 3
+    },
+    {
+     "zombie_type_name": "dino_armor1",
+     "count": 5
+    },
+    {
+     "zombie_type_name": "dino_armor2",
+     "count": 2
+    },
+    {
+     "zombie_type_name": "dino_bully",
+     "count": 2
+    },
+    {
+     "plant_type_name": "wasabiwhip",
+     "count": 6
+    },
+    {
+     "plant_type_name": "primalwallnut",
+     "count": 5
+    },
+    {
+     "plant_type_name": "primalpeashooter",
+     "count": 2
+    },
+    {
+     "collectable_type_name": "plantfood",
+     "count": 2
+    }
+   ]
+  }
+ ],
+ "scripts": [
+  "VaseBreakerArcade"
+ ]
+}

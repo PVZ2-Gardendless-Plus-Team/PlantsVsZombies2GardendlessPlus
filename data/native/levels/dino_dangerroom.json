@@ -1,0 +1,72 @@
+{
+ "id": "dino_dangerroom",
+ "name": "Dino Danger Room",
+ "name_key": "[DANGER_ROOM_DINO_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_DANGER_ROOM]",
+ "number": 666,
+ "stage": "DinoStage",
+ "minigames": [
+  {
+   "type": "endless",
+   "world_specific_properties": "DinoDangerRoomProps",
+   "level_designers": [
+    {
+     "starting_points": 100,
+     "base_point_increment_per_wave": 30,
+     "base_point_increment_per_level": 5,
+     "min_dynamic_zombie_type": 4,
+     "must_contain_zombie": [
+      "dino"
+     ],
+     "zombie_pool": [
+      "dino_armor1",
+      "dino_armor2",
+      "dino_armor3",
+      "dino_imp",
+      "dino_gargantuar",
+      "dino_bully"
+     ],
+     "type": "jittered_wave_generator"
+    },
+    {
+     "type": "shared",
+     "name": "DinosaurDesigner"
+    }
+   ],
+   "initial_plants": [
+    "primalsunflower",
+    "primalpeashooter",
+    "primalwallnut",
+    "perfumeshroom"
+   ],
+   "exclude_plants": [
+    "gravebuster",
+    "lilypad",
+    "tanglekelp",
+    "empea",
+    "floawerPot",
+    "hotpotato"
+   ],
+   "minigame": false
+  }
+ ],
+ "seedbank": {
+  "mode": "chooser",
+  "selection": "chooser",
+  "blacklist": [],
+  "always_chooser": true
+ },
+ "sun": {
+  "interval": 10.0
+ },
+ "mowers": true,
+ "extra": [
+  {
+   "objclass": "DangerRoomLevelIntroProperties",
+   "aliases": [
+    "DangerRoomIntro"
+   ],
+   "objdata": {}
+  }
+ ]
+}

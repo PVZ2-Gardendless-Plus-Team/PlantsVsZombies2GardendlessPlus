@@ -1,0 +1,387 @@
+{
+ "id": "pirate34",
+ "name": "Pirate 34",
+ "name_key": "[PIRATE_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_PIRATE_SHIP]",
+ "number": 34,
+ "stage": "PirateStage",
+ "objectives": [
+  {
+   "type": "survive_waves",
+   "description": "[STARCHALLENGE_LASTSTAND_MINIGAME]"
+  },
+  {
+   "type": "no_plant_loss",
+   "allowed": 1
+  }
+ ],
+ "seedbank": {
+  "mode": "chooser",
+  "selection": "chooser",
+  "exclude": [
+   "iceburg",
+   "puffshroom",
+   "seashroom",
+   "melonpult",
+   "toadstool",
+   "goldleaf",
+   "stallia"
+  ],
+  "suggest": [
+   [
+    "bonkchoy",
+    "springbean"
+   ],
+   [
+    "wallnut"
+   ],
+   [
+    "spikeweed",
+    "potatomine"
+   ],
+   [
+    "kernelpult",
+    "cabbagepult"
+   ],
+   [
+    "primalpeashooter",
+    "repeater"
+   ],
+   [
+    "snapdragon",
+    "bloomerang"
+   ],
+   [
+    "sporeshroom",
+    "xshot"
+   ],
+   [
+    "electricblueberry",
+    "lightningreed"
+   ]
+  ],
+  "exclude_sun_producers": "true",
+  "decks": {
+   "recommended": [
+    {
+     "name": "Retreat as an Attack",
+     "plants": [
+      "chardguard",
+      "peach",
+      "lightningreed"
+     ]
+    },
+    {
+     "name": "Not an Inch",
+     "plants": [
+      "poisonpeashooter",
+      "applemortar"
+     ]
+    },
+    {
+     "name": "Meteor Shower",
+     "plants": [
+      "shootingstarfruit",
+      "pvine",
+      "sapfling"
+     ]
+    }
+   ]
+  }
+ },
+ "minigames": [
+  {
+   "type": "last_stand",
+   "starting_plantfood": 2,
+   "starting_sun": 1600
+  }
+ ],
+ "waves": [
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "pirate",
+     "row": 2
+    },
+    {
+     "type": "pelican",
+     "row": 5
+    },
+    {
+     "type": "pirate"
+    },
+    {
+     "type": "pirate_armor1"
+    },
+    {
+     "type": "swashbuckler",
+     "row": "prev"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "pirate_armor1"
+    },
+    {
+     "type": "pirate_armor4",
+     "row": "prev"
+    },
+    {
+     "type": "pirate_armor2"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "barrelroller"
+    },
+    {
+     "type": "pirate"
+    },
+    {
+     "type": "barrelroller"
+    },
+    {
+     "type": "swashbuckler"
+    },
+    {
+     "type": "pirate"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "pelican",
+     "row": 1
+    },
+    {
+     "type": "swashbuckler",
+     "row": 3
+    },
+    {
+     "type": "pelican",
+     "row": 5
+    },
+    {
+     "type": "pirate_captain",
+     "row": "prev"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "pirate_armor2",
+     "row": 1
+    },
+    {
+     "type": "pirate_captain",
+     "row": 3
+    },
+    {
+     "type": "pelican"
+    },
+    {
+     "type": "barrelroller",
+     "row": 2
+    }
+   ],
+   "plantfood": 1,
+   "dynamic_plantfood": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "pirate_gargantuar",
+     "row": 2
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "pelican"
+    },
+    {
+     "type": "pelican",
+     "row": 2
+    },
+    {
+     "type": "pelican",
+     "row": 3
+    },
+    {
+     "type": "pelican",
+     "row": 4
+    },
+    {
+     "type": "pirate_captain"
+    },
+    {
+     "type": "pirate_armor4",
+     "row": "prev"
+    }
+   ],
+   "plantfood": 1,
+   "dynamic_plantfood": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "pirate"
+    },
+    {
+     "type": "barrelroller",
+     "row": 1
+    },
+    {
+     "type": "swashbuckler"
+    },
+    {
+     "type": "barrelroller",
+     "row": 2
+    },
+    {
+     "type": "swashbuckler"
+    },
+    {
+     "type": "barrelroller",
+     "row": 3
+    },
+    {
+     "type": "barrelroller",
+     "row": 4
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "pirate_armor4",
+     "row": 1
+    },
+    {
+     "type": "pirate_armor2",
+     "row": 2
+    },
+    {
+     "type": "pirate_armor4",
+     "row": 3
+    },
+    {
+     "type": "pirate_armor2",
+     "row": 4
+    },
+    {
+     "type": "pelican",
+     "row": 3
+    },
+    {
+     "type": "pelican",
+     "row": 5
+    },
+    {
+     "type": "pelican",
+     "row": 1
+    }
+   ],
+   "dynamic_plantfood": [
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "pirate_gargantuar",
+       "row": 4
+      },
+      {
+       "type": "pirate_gargantuar",
+       "row": 1
+      },
+      {
+       "type": "pirate_captain"
+      },
+      {
+       "type": "pirate_armor2"
+      },
+      {
+       "type": "swashbuckler"
+      },
+      {
+       "type": "pirate_armor1"
+      }
+     ]
+    },
+    {
+     "kind": "raiding_party",
+     "type": "swashbuckler",
+     "count": 5,
+     "group_size": 1,
+     "group_interval": 1
+    }
+   ]
+  }
+ ],
+ "wave_pacing": {
+  "flag_interval": 10,
+  "points": 600,
+  "point_increment": 300,
+  "suppress_flag": true
+ },
+ "extra": [
+  {
+   "objclass": "PiratePlankProperties",
+   "aliases": [
+    "PiratePlanks"
+   ],
+   "objdata": {
+    "PlankRows": [
+     0,
+     1,
+     2,
+     3
+    ]
+   }
+  }
+ ]
+}

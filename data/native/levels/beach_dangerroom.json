@@ -1,0 +1,81 @@
+{
+ "id": "beach_dangerroom",
+ "name": "Beach Danger Room",
+ "name_key": "[DANGER_ROOM_BEACH_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_DANGER_ROOM]",
+ "number": 666,
+ "stage": "BeachStage",
+ "minigames": [
+  {
+   "type": "endless",
+   "world_specific_properties": "BeachDangerRoomProps",
+   "level_designers": [
+    {
+     "starting_points": 100,
+     "base_point_increment_per_wave": 30,
+     "base_point_increment_per_level": 5,
+     "min_dynamic_zombie_type": 4,
+     "must_contain_zombie": [
+      "beach",
+      "beach_fem"
+     ],
+     "zombie_pool": [
+      "beach_armor1",
+      "beach_armor2",
+      "beach_fem_armor1",
+      "beach_fem_armor2",
+      "beach_snorkel",
+      "beach_surfer",
+      "beach_octopus",
+      "beach_fisherman",
+      "beach_gargantuar"
+     ],
+     "type": "jittered_wave_generator"
+    },
+    {
+     "type": "shared",
+     "name": "BeachTideChanger"
+    },
+    {
+     "type": "shared",
+     "name": "BeachLilypadPlacer"
+    }
+   ],
+   "initial_plants": [
+    "sunflower",
+    "peashooter",
+    "wallnut",
+    "lilypad"
+   ],
+   "exclude_plants": [
+    "empea",
+    "hotpotato",
+    "perfumeshroom"
+   ],
+   "minigame": false
+  }
+ ],
+ "seedbank": {
+  "mode": "chooser",
+  "selection": "chooser",
+  "blacklist": [],
+  "always_chooser": true
+ },
+ "initial": {},
+ "tide": {
+  "water_from": 6
+ },
+ "mowers": true,
+ "sun": {
+  "interval": 10.0
+ },
+ "extra": [
+  {
+   "objclass": "DangerRoomLevelIntroProperties",
+   "aliases": [
+    "DangerRoomIntro"
+   ],
+   "objdata": {}
+  }
+ ]
+}

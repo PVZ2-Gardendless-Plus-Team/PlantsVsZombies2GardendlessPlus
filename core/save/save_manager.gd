@@ -278,6 +278,23 @@ func has_feature(feature: StringName) -> bool:
 	return has_item(&"features", feature)
 
 
+## The best score kept under `key` (an endless zone's longest streak), or 0.
+func best(key: StringName) -> int:
+	return int((_progress.get("best", {}) as Dictionary).get(String(key), 0))
+
+
+## Keeps `value` under `key` if it beats the score already there. Returns
+## true for a new best.
+func record_best(key: StringName, value: int) -> bool:
+	var table: Dictionary = _progress.get("best", {})
+	if value <= int(table.get(String(key), 0)):
+		return false
+	table[String(key)] = value
+	_progress["best"] = table
+	_save_progress()
+	return true
+
+
 func reset_progress() -> void:
 	_progress = {}
 	for level_id in saved_levels():

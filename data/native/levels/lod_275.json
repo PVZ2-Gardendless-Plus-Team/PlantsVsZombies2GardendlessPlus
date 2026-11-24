@@ -1,0 +1,65 @@
+{
+ "id": "lod_275",
+ "name": "[LOD_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_LOD]",
+ "author": "蔓逐I蝶舞",
+ "stage": "TutorialStage",
+ "vasebreaker": true,
+ "level_of_the_day": true,
+ "minigames": [
+  {
+   "type": "vasebreaker",
+   "min_column_index": 3,
+   "max_column_index": 8,
+   "num_colored_plant_vases": 5,
+   "num_colored_zombie_vases": 1,
+   "vases": [
+    {
+     "plant_type_name": "tallnut",
+     "count": 1
+    },
+    {
+     "plant_type_name": "magnetshroom",
+     "count": 1
+    },
+    {
+     "plant_type_name": "spikerock",
+     "count": 7
+    },
+    {
+     "plant_type_name": "tallnut",
+     "count": 4
+    },
+    {
+     "plant_type_name": "chilibean",
+     "count": 2
+    },
+    {
+     "plant_type_name": "magnetshroom",
+     "count": 1
+    },
+    {
+     "plant_type_name": "pinkstarfruit",
+     "count": 5
+    },
+    {
+     "zombie_type_name": "modern_newspaper",
+     "count": 2
+    },
+    {
+     "zombie_type_name": "modern_balloon",
+     "count": 2
+    },
+    {
+     "zombie_type_name": "tutorial_armor2",
+     "count": 4
+    }
+   ]
+  }
+ ],
+ "waves": [],
+ "scripts": [
+  "VaseBreakerArcade",
+  "VaseBreakerIntro"
+ ]
+}

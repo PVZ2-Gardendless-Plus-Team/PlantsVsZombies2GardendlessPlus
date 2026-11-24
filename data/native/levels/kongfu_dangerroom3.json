@@ -1,0 +1,169 @@
+{
+ "id": "kongfu_dangerroom3",
+ "name": "Kongfu Danger Room",
+ "name_key": "[DANGER_ROOM_KONGFU_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_DANGER_ROOM]",
+ "number": 666,
+ "stage": "AbbotStage",
+ "minigames": [
+  {
+   "type": "endless",
+   "world_specific_properties": "KongfuDangerRoomProps",
+   "level_designers": [
+    {
+     "starting_points": 100,
+     "base_point_increment_per_wave": 30,
+     "base_point_increment_per_level": 5,
+     "min_dynamic_zombie_type": 4,
+     "must_contain_zombie": [
+      "abbot"
+     ],
+     "zombie_pool": [
+      "abbot_armor1",
+      "abbot_armor2",
+      "abbot_3section_staff",
+      "abbot_fan",
+      "abbot_chi",
+      "monk_imp",
+      "abbot_torch",
+      "monk_drink",
+      "kongfu_chi",
+      "kongfu_bomb",
+      "kongfu_bronze_strong",
+      "kongfu_bronze_hook",
+      "kongfu_bronze_chi_without_torch"
+     ],
+     "type": "jittered_wave_generator"
+    },
+    {
+     "min_gravestone_count": 3,
+     "base_gravestone_count_per_level": 1,
+     "max_generated_gravestones": 12,
+     "min_starting_gravestone_spawn_col": 5,
+     "max_starting_gravestone_spawn_col": 4,
+     "max_starting_gravestone_spawn_col_offset_per_level": -0.25,
+     "min_ending_gravestone_spawn_col": 7,
+     "max_ending_gravestone_spawn_col": 6,
+     "max_ending_gravestone_spawn_col_offset_per_level": 0,
+     "types": [
+      "kongfu_rack_torch",
+      "kongfu_rack_3section_staff",
+      "kongfu_rack_fan",
+      "kongfu_rack_flag",
+      "kongfu_rack_helmet"
+     ],
+     "type": "kongfu_rack_generator"
+    },
+    {
+     "wave_min_per_flag": 0,
+     "wave_max_per_flag_base": 0,
+     "wave_max_per_flag_increment_per_level": 0.5,
+     "wave_max_per_flag_slope": 3,
+     "gravestones_min_per_spawn_event": 1,
+     "gravestones_max_per_spawn_event_base": 1,
+     "gravestones_max_per_spawn_event_increment_per_level": 0.5,
+     "gravestones_max_per_spawn_event_slope": 10,
+     "beneficial_gravestones_per_spawn_event_min": 0,
+     "beneficial_gravestones_per_spawn_event_max": 0,
+     "chance_that_beneficial_gravestone_is_plantfood_not_sun": 0,
+     "gravestone_spawn_column_max": 7,
+     "gravestone_spawn_column_min_base": 6,
+     "gravestone_spawn_column_min_increment_per_level": -0.2,
+     "gravestone_spawn_column_min_lower_limit": 4,
+     "gravestone_spawn_column_min_upper_limit": 6,
+     "types": [
+      "kongfu_rack_torch",
+      "kongfu_rack_3section_staff",
+      "kongfu_rack_fan",
+      "kongfu_rack_flag",
+      "kongfu_rack_helmet"
+     ],
+     "type": "kongfu_rack_event_generator"
+    },
+    {
+     "zombie_type": "abbot_imp",
+     "wave_start_message": "[WARNING_QIGONG_STRIKE]",
+     "level_range": {
+      "min": 1,
+      "max": 15
+     },
+     "strike_count_min": {
+      "min": 1,
+      "max": 2
+     },
+     "strike_count_max": {
+      "min": 2,
+      "max": 4
+     },
+     "strike_start_wave_min": {
+      "min": 4,
+      "max": 3
+     },
+     "strike_start_wave_max": {
+      "min": 7,
+      "max": 5
+     },
+     "strike_interval_wave_min": {
+      "min": 4,
+      "max": 3
+     },
+     "strike_interval_wave_max": {
+      "min": 7,
+      "max": 5
+     },
+     "zombie_count_max": {
+      "min": 1,
+      "max": 3
+     },
+     "zombie_count_min": {
+      "min": 1,
+      "max": 1
+     },
+     "min_column": {
+      "min": 4,
+      "max": 3
+     },
+     "max_column": {
+      "min": 6,
+      "max": 5
+     },
+     "type": "qigong_strike_designer"
+    }
+   ],
+   "initial_plants": [
+    "sunflower",
+    "firegourd",
+    "cabbagepult",
+    "peashooter",
+    "turnip"
+   ],
+   "exclude_plants": [
+    "gravebuster",
+    "lilypad",
+    "tanglekelp",
+    "empea",
+    "hotpotato"
+   ],
+   "minigame": false
+  }
+ ],
+ "seedbank": {
+  "mode": "chooser",
+  "selection": "chooser",
+  "blacklist": [],
+  "always_chooser": true
+ },
+ "sun": {
+  "interval": 10.0
+ },
+ "mowers": true,
+ "extra": [
+  {
+   "objclass": "DangerRoomLevelIntroProperties",
+   "aliases": [
+    "DangerRoomIntro"
+   ],
+   "objdata": {}
+  }
+ ]
+}

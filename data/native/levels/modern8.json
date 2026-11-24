@@ -1,0 +1,164 @@
+{
+ "id": "modern8",
+ "name": "Modern 8",
+ "name_key": "[MODERN_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_MODERN]",
+ "number": 8,
+ "stage": "ModernNightStage",
+ "intro_narrative": "BEGHOULED_INTRO",
+ "minigames": [
+  {
+   "type": "beghouled",
+   "match_counts_to_stage_advance": [
+    {
+     "match_count": 30,
+     "stage_number": 1
+    },
+    {
+     "match_count": 70,
+     "stage_number": 2
+    }
+   ],
+   "stages": [
+    {
+     "spawn_delay": 2,
+     "types": [
+      {
+       "zombie_type": "beghouled"
+      },
+      {
+       "zombie_type": "beghouled_armor1"
+      },
+      {
+       "zombie_type": "beghouled_armor2"
+      }
+     ]
+    },
+    {
+     "spawn_delay": 2,
+     "types": [
+      {
+       "zombie_type": "tutorial"
+      },
+      {
+       "zombie_type": "tutorial_armor1"
+      },
+      {
+       "zombie_type": "tutorial_armor2"
+      }
+     ]
+    },
+    {
+     "spawn_delay": 2,
+     "types": [
+      {
+       "zombie_type": "tutorial"
+      },
+      {
+       "zombie_type": "tutorial_armor1"
+      },
+      {
+       "zombie_type": "tutorial_armor2"
+      },
+      {
+       "zombie_type": "beghouled_newspaper"
+      }
+     ]
+    }
+   ],
+   "selection_method": "beghouled",
+   "preset_plant_list": [
+    {
+     "plant_type": "firepeashooter",
+     "level": -1
+    },
+    {
+     "plant_type": "repeater",
+     "level": -1
+    },
+    {
+     "plant_type": "tallnut",
+     "level": -1
+    },
+    {
+     "plant_type": "endurian",
+     "level": -1
+    },
+    {
+     "plant_type": "pepperpult",
+     "level": -1
+    },
+    {
+     "plant_type": "melonpult",
+     "level": -1
+    },
+    {
+     "plant_type": "coldsnapdragon",
+     "level": -1
+    },
+    {
+     "plant_type": "laser_bean",
+     "level": -1
+    }
+   ],
+   "beghouled_upgrade_list": [
+    "threepeater",
+    "wintermelon"
+   ],
+   "matches_to_win": 100,
+   "initial_plants": [
+    "peashooter",
+    "wallnut",
+    "cabbagepult",
+    "snapdragon",
+    "lightningreed"
+   ],
+   "upgrade_map": [
+    {
+     "base_plant": "peashooter",
+     "upgraded_plant": "firepeashooter"
+    },
+    {
+     "base_plant": "peashooter",
+     "upgraded_plant": "repeater"
+    },
+    {
+     "base_plant": "repeater",
+     "upgraded_plant": "threepeater"
+    },
+    {
+     "base_plant": "wallnut",
+     "upgraded_plant": "tallnut"
+    },
+    {
+     "base_plant": "wallnut",
+     "upgraded_plant": "endurian"
+    },
+    {
+     "base_plant": "cabbagepult",
+     "upgraded_plant": "pepperpult"
+    },
+    {
+     "base_plant": "cabbagepult",
+     "upgraded_plant": "melonpult"
+    },
+    {
+     "base_plant": "melonpult",
+     "upgraded_plant": "wintermelon"
+    },
+    {
+     "base_plant": "snapdragon",
+     "upgraded_plant": "coldsnapdragon"
+    },
+    {
+     "base_plant": "lightningreed",
+     "upgraded_plant": "laser_bean"
+    }
+   ]
+  }
+ ],
+ "scripts": [
+  "BeghouledArcade",
+  "BeghouledIntro"
+ ]
+}

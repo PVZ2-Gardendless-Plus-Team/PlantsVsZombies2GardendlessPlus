@@ -1,0 +1,128 @@
+{
+ "id": "kongfu_dangerroom",
+ "name": "Kongfu Danger Room",
+ "name_key": "[DANGER_ROOM_KONGFU_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_DANGER_ROOM]",
+ "number": 666,
+ "stage": "KongfuStage",
+ "minigames": [
+  {
+   "type": "endless",
+   "world_specific_properties": "KongfuDangerRoomProps",
+   "level_designers": [
+    {
+     "starting_points": 100,
+     "base_point_increment_per_wave": 30,
+     "base_point_increment_per_level": 5,
+     "min_dynamic_zombie_type": 4,
+     "must_contain_zombie": [
+      "kongfu"
+     ],
+     "zombie_pool": [
+      "kongfu_armor1",
+      "kongfu_armor2",
+      "kongfu_gong",
+      "kongfu_bomb",
+      "kongfu_hammer",
+      "kongfu_torch",
+      "kongfu_drink",
+      "kongfu_chi",
+      "kongfu_bronze_strong"
+     ],
+     "type": "jittered_wave_generator"
+    },
+    {
+     "min_gravestone_count": 3,
+     "base_gravestone_count_per_level": 1,
+     "max_generated_gravestones": 12,
+     "min_starting_gravestone_spawn_col": 5,
+     "max_starting_gravestone_spawn_col": 4,
+     "max_starting_gravestone_spawn_col_offset_per_level": -0.25,
+     "min_ending_gravestone_spawn_col": 7,
+     "max_ending_gravestone_spawn_col": 6,
+     "max_ending_gravestone_spawn_col_offset_per_level": 0,
+     "types": [
+      "kongfu_rack_torch",
+      "kongfu_rack_flag",
+      "kongfu_rack_bomb",
+      "kongfu_rack_hammer",
+      "kongfu_rack_helmet"
+     ],
+     "type": "kongfu_rack_generator"
+    },
+    {
+     "wave_min_per_flag": 0,
+     "wave_max_per_flag_base": 0,
+     "wave_max_per_flag_increment_per_level": 0.5,
+     "wave_max_per_flag_slope": 3,
+     "gravestones_min_per_spawn_event": 1,
+     "gravestones_max_per_spawn_event_base": 1,
+     "gravestones_max_per_spawn_event_increment_per_level": 0.5,
+     "gravestones_max_per_spawn_event_slope": 10,
+     "beneficial_gravestones_per_spawn_event_min": 0,
+     "beneficial_gravestones_per_spawn_event_max": 0,
+     "chance_that_beneficial_gravestone_is_plantfood_not_sun": 0,
+     "gravestone_spawn_column_max": 7,
+     "gravestone_spawn_column_min_base": 6,
+     "gravestone_spawn_column_min_increment_per_level": -0.2,
+     "gravestone_spawn_column_min_lower_limit": 4,
+     "gravestone_spawn_column_min_upper_limit": 6,
+     "types": [
+      "kongfu_rack_torch",
+      "kongfu_rack_bomb",
+      "kongfu_rack_flag",
+      "kongfu_rack_hammer",
+      "kongfu_rack_helmet"
+     ],
+     "type": "kongfu_rack_event_generator"
+    },
+    {
+     "zombie_type": "kongfu_rocket_imp",
+     "base_party_count": 0,
+     "base_party_count_per_level": 0.5,
+     "base_party_zombies_count": 1,
+     "base_party_zombies_count_per_level": 0.4,
+     "max_party_zombies": 10,
+     "max_party_count": 5,
+     "base_party_start_wave": 5,
+     "wave_start_message": "[WARNING_ROCKET_STRIKE]",
+     "type": "raiding_party_designer"
+    }
+   ],
+   "initial_plants": [
+    "sunflower",
+    "firegourd",
+    "cabbagepult",
+    "peashooter",
+    "turnip"
+   ],
+   "exclude_plants": [
+    "gravebuster",
+    "lilypad",
+    "tanglekelp",
+    "empea",
+    "hotpotato"
+   ],
+   "minigame": false
+  }
+ ],
+ "seedbank": {
+  "mode": "chooser",
+  "selection": "chooser",
+  "blacklist": [],
+  "always_chooser": true
+ },
+ "sun": {
+  "interval": 10.0
+ },
+ "mowers": true,
+ "extra": [
+  {
+   "objclass": "DangerRoomLevelIntroProperties",
+   "aliases": [
+    "DangerRoomIntro"
+   ],
+   "objdata": {}
+  }
+ ]
+}

@@ -1,0 +1,359 @@
+{
+ "id": "egypt24",
+ "name": "Egypt Challenge LastStand C",
+ "name_key": "[EGYPT_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_EGYPT]",
+ "number": 24,
+ "stage": "EgyptNightStage",
+ "reward": {
+  "type": "unlock_plant",
+  "param": "twinsunflower"
+ },
+ "objectives": [
+  {
+   "type": "survive_waves",
+   "description": "[STARCHALLENGE_LASTSTAND_MINIGAME]"
+  }
+ ],
+ "gravestones": {
+  "count": 8,
+  "col_start": 2,
+  "col_end": 8
+ },
+ "seedbank": {
+  "mode": "chooser",
+  "selection": "chooser",
+  "blacklist": [
+   "sunflower",
+   "twinsunflower",
+   "sunshroom",
+   "puffshroom",
+   "seashroom",
+   "sunbean",
+   "gravebuster",
+   "toadstool",
+   "goldleaf",
+   "stallia",
+   "primalsunflower",
+   "goldbloom"
+  ],
+  "decks": {
+   "recommended": [
+    {
+     "name": "Persevere to the End",
+     "plants": [
+      "bloomerang",
+      "wallnut",
+      "repeater",
+      "iceburg"
+     ]
+    },
+    {
+     "name": "Take Tailored Measures",
+     "plants": [
+      "wallnut",
+      "iceweed",
+      "repeater",
+      "iceburg"
+     ]
+    },
+    {
+     "name": "Retirement",
+     "plants": [
+      "lightningreed",
+      "wallnut"
+     ]
+    },
+    {
+     "name": "Meteor Shower",
+     "plants": [
+      "shootingstarfruit"
+     ]
+    },
+    {
+     "name": "No Hardship",
+     "plants": [
+      "laser_bean",
+      "peach",
+      "chardguard"
+     ]
+    }
+   ]
+  }
+ },
+ "minigames": [
+  {
+   "type": "last_stand",
+   "starting_plantfood": 3,
+   "starting_sun": 2250
+  }
+ ],
+ "waves": [
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "mummy_armor1"
+    },
+    {
+     "type": "mummy_armor1"
+    },
+    {
+     "type": "mummy_armor1"
+    },
+    {
+     "type": "pharaoh",
+     "row": 3
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "explorer",
+     "row": 1
+    },
+    {
+     "type": "explorer",
+     "row": 2
+    },
+    {
+     "type": "explorer",
+     "row": 4
+    },
+    {
+     "type": "explorer",
+     "row": 5
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "pharaoh"
+      },
+      {
+       "type": "pharaoh"
+      }
+     ]
+    },
+    {
+     "kind": "storm",
+     "style": "sandstorm",
+     "zombies": [
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy"
+     ],
+     "col_start": 4,
+     "col_end": 7,
+     "row_start": 0,
+     "row_end": 4,
+     "group_size": 2,
+     "group_interval": 8
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "explorer"
+    },
+    {
+     "type": "pharaoh",
+     "row": 3
+    },
+    {
+     "type": "mummy_armor1"
+    },
+    {
+     "type": "mummy_armor2"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "pharaoh"
+    },
+    {
+     "type": "mummy_armor2",
+     "row": 1
+    },
+    {
+     "type": "mummy_armor2",
+     "row": 5
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "pharaoh"
+    },
+    {
+     "type": "pharaoh"
+    },
+    {
+     "type": "pharaoh"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "mummy_armor1",
+     "row": 1
+    },
+    {
+     "type": "mummy_armor2",
+     "row": 2
+    },
+    {
+     "type": "mummy_armor1",
+     "row": 3
+    },
+    {
+     "type": "mummy_armor2",
+     "row": 4
+    },
+    {
+     "type": "mummy_armor1",
+     "row": 5
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "pharaoh",
+     "row": 1
+    },
+    {
+     "type": "pharaoh",
+     "row": 3
+    },
+    {
+     "type": "pharaoh",
+     "row": 5
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "explorer",
+     "row": 1
+    },
+    {
+     "type": "explorer",
+     "row": 2
+    },
+    {
+     "type": "explorer",
+     "row": 3
+    },
+    {
+     "type": "explorer",
+     "row": 4
+    },
+    {
+     "type": "explorer",
+     "row": 5
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "explorer"
+      },
+      {
+       "type": "mummy_armor1"
+      },
+      {
+       "type": "mummy_armor1"
+      },
+      {
+       "type": "mummy_armor2"
+      },
+      {
+       "type": "mummy_armor2"
+      },
+      {
+       "type": "pharaoh"
+      },
+      {
+       "type": "explorer"
+      },
+      {
+       "type": "pharaoh"
+      }
+     ]
+    },
+    {
+     "kind": "storm",
+     "style": "sandstorm",
+     "zombies": [
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy"
+     ],
+     "col_start": 3,
+     "col_end": 6,
+     "row_start": 0,
+     "row_end": 4,
+     "group_size": 2,
+     "group_interval": 6
+    }
+   ]
+  }
+ ],
+ "wave_pacing": {
+  "flag_interval": 10,
+  "points": 800,
+  "point_increment": 50
+ },
+ "mowers": true
+}

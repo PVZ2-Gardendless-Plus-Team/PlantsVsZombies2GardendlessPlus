@@ -1,0 +1,790 @@
+{
+ "id": "eighties13",
+ "name": "Eighties 13",
+ "name_key": "[EIGHTIES_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_EIGHTIES]",
+ "number": 13,
+ "stage": "EightiesStage",
+ "seedbank": {
+  "mode": "chooser",
+  "selection": "chooser",
+  "blacklist": [
+   "sunflower",
+   "twinsunflower",
+   "iceburg",
+   "gravebuster",
+   "sunshroom",
+   "puffshroom",
+   "seashroom",
+   "sunbean",
+   "melonpult",
+   "toadstool",
+   "goldleaf",
+   "stallia",
+   "primalsunflower",
+   "goldbloom"
+  ]
+ },
+ "waves": [
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "eighties_glitter",
+     "row": 1
+    },
+    {
+     "type": "eighties_glitter",
+     "row": 2
+    },
+    {
+     "type": "eighties_glitter",
+     "row": 3
+    },
+    {
+     "type": "eighties_glitter",
+     "row": 4
+    },
+    {
+     "type": "eighties_glitter",
+     "row": 5
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 1
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 2
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 3
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 4
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 5
+    },
+    {
+     "type": "eighties_glitter",
+     "row": 1
+    },
+    {
+     "type": "eighties_glitter",
+     "row": 2
+    },
+    {
+     "type": "eighties_glitter",
+     "row": 3
+    },
+    {
+     "type": "eighties_glitter",
+     "row": 4
+    },
+    {
+     "type": "eighties_glitter",
+     "row": 5
+    },
+    {
+     "type": "eighties_armor1",
+     "row": 1
+    },
+    {
+     "type": "eighties_armor1",
+     "row": 2
+    },
+    {
+     "type": "eighties_armor1",
+     "row": 3
+    },
+    {
+     "type": "eighties_armor1",
+     "row": 4
+    },
+    {
+     "type": "eighties_armor1",
+     "row": 5
+    }
+   ],
+   "notify": [
+    "jam_pop"
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "eighties_armor2",
+     "row": 1
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 2
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 3
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 4
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 5
+    },
+    {
+     "type": "eighties_glitter",
+     "row": 1
+    },
+    {
+     "type": "eighties_glitter",
+     "row": 2
+    },
+    {
+     "type": "eighties_glitter",
+     "row": 3
+    },
+    {
+     "type": "eighties_glitter",
+     "row": 4
+    },
+    {
+     "type": "eighties_glitter",
+     "row": 5
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 1
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 2
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 3
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 4
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 5
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "eighties_glitter",
+     "row": 1
+    },
+    {
+     "type": "eighties_glitter",
+     "row": 2
+    },
+    {
+     "type": "eighties_glitter",
+     "row": 3
+    },
+    {
+     "type": "eighties_glitter",
+     "row": 4
+    },
+    {
+     "type": "eighties_glitter",
+     "row": 5
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 5
+    },
+    {
+     "type": "eighties_punk",
+     "row": 5
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 4
+    },
+    {
+     "type": "eighties_punk",
+     "row": 4
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 3
+    },
+    {
+     "type": "eighties_punk",
+     "row": 3
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 2
+    },
+    {
+     "type": "eighties_punk",
+     "row": 2
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 1
+    },
+    {
+     "type": "eighties_punk",
+     "row": 1
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "eighties_armor2",
+     "row": 1
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 2
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 3
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 4
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 5
+    },
+    {
+     "type": "eighties_punk",
+     "row": 1
+    },
+    {
+     "type": "eighties_punk",
+     "row": 2
+    },
+    {
+     "type": "eighties_punk",
+     "row": 3
+    },
+    {
+     "type": "eighties_punk",
+     "row": 4
+    },
+    {
+     "type": "eighties_punk",
+     "row": 5
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 1
+    },
+    {
+     "type": "eighties_punk",
+     "row": 1
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 5
+    },
+    {
+     "type": "eighties_punk",
+     "row": 5
+    }
+   ],
+   "notify": [
+    "jam_punk"
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "eighties_armor2",
+     "row": 1
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 1
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 5
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 5
+    },
+    {
+     "type": "eighties_punk",
+     "row": 1
+    },
+    {
+     "type": "eighties_punk",
+     "row": 1
+    },
+    {
+     "type": "eighties_glitter",
+     "row": 1
+    },
+    {
+     "type": "eighties_punk",
+     "row": 1
+    },
+    {
+     "type": "eighties_punk",
+     "row": 5
+    },
+    {
+     "type": "eighties_punk",
+     "row": 5
+    },
+    {
+     "type": "eighties_glitter",
+     "row": 5
+    },
+    {
+     "type": "eighties_punk",
+     "row": 5
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "eighties_armor2",
+     "row": 1
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 2
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 3
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 4
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 5
+    },
+    {
+     "type": "eighties_glitter",
+     "row": 1
+    },
+    {
+     "type": "eighties_glitter",
+     "row": 2
+    },
+    {
+     "type": "eighties_glitter",
+     "row": 3
+    },
+    {
+     "type": "eighties_glitter",
+     "row": 4
+    },
+    {
+     "type": "eighties_glitter",
+     "row": 5
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 1
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 2
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 3
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 4
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 5
+    }
+   ],
+   "notify": [
+    "jam_pop"
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "eighties_armor2",
+     "row": 1
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 2
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 3
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 4
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 5
+    },
+    {
+     "type": "eighties_glitter",
+     "row": 1
+    },
+    {
+     "type": "eighties_glitter",
+     "row": 2
+    },
+    {
+     "type": "eighties_glitter",
+     "row": 3
+    },
+    {
+     "type": "eighties_glitter",
+     "row": 4
+    },
+    {
+     "type": "eighties_glitter",
+     "row": 5
+    },
+    {
+     "type": "eighties_mc",
+     "row": 1
+    },
+    {
+     "type": "eighties_mc",
+     "row": 2
+    },
+    {
+     "type": "eighties_mc",
+     "row": 3
+    },
+    {
+     "type": "eighties_mc",
+     "row": 4
+    },
+    {
+     "type": "eighties_mc",
+     "row": 5
+    },
+    {
+     "type": "eighties_mc",
+     "row": 1
+    },
+    {
+     "type": "eighties_mc",
+     "row": 2
+    },
+    {
+     "type": "eighties_mc",
+     "row": 3
+    },
+    {
+     "type": "eighties_mc",
+     "row": 4
+    },
+    {
+     "type": "eighties_mc",
+     "row": 5
+    }
+   ],
+   "notify": [
+    "jam_rap"
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "eighties_armor2",
+     "row": 1
+    },
+    {
+     "type": "eighties_mc",
+     "row": 1
+    },
+    {
+     "type": "eighties_mc",
+     "row": 1
+    },
+    {
+     "type": "eighties_glitter",
+     "row": 1
+    },
+    {
+     "type": "eighties_mc",
+     "row": 1
+    },
+    {
+     "type": "eighties_mc",
+     "row": 1
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 5
+    },
+    {
+     "type": "eighties_mc",
+     "row": 5
+    },
+    {
+     "type": "eighties_mc",
+     "row": 5
+    },
+    {
+     "type": "eighties_glitter",
+     "row": 5
+    },
+    {
+     "type": "eighties_mc",
+     "row": 5
+    },
+    {
+     "type": "eighties_mc",
+     "row": 5
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 3
+    },
+    {
+     "type": "eighties_mc",
+     "row": 3
+    },
+    {
+     "type": "eighties_mc",
+     "row": 3
+    },
+    {
+     "type": "eighties_glitter",
+     "row": 3
+    },
+    {
+     "type": "eighties_mc",
+     "row": 3
+    },
+    {
+     "type": "eighties_mc",
+     "row": 3
+    }
+   ],
+   "plantfood": 1
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "eighties_armor2",
+     "row": 5
+    },
+    {
+     "type": "eighties_glitter",
+     "row": 5
+    },
+    {
+     "type": "eighties_mc",
+     "row": 5
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 4
+    },
+    {
+     "type": "eighties_glitter",
+     "row": 4
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 3
+    },
+    {
+     "type": "eighties_glitter",
+     "row": 3
+    },
+    {
+     "type": "eighties_mc",
+     "row": 3
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 2
+    },
+    {
+     "type": "eighties_glitter",
+     "row": 2
+    },
+    {
+     "type": "eighties_mc",
+     "row": 2
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 1
+    },
+    {
+     "type": "eighties_glitter",
+     "row": 1
+    },
+    {
+     "type": "eighties_mc",
+     "row": 1
+    }
+   ],
+   "notify": [
+    "jam_pop"
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "eighties_armor2",
+     "row": 5
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 4
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 3
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 2
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 1
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 4
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 5
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 2
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 3
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 1
+    },
+    {
+     "type": "eighties_mc",
+     "row": 5
+    },
+    {
+     "type": "eighties_mc",
+     "row": 5
+    },
+    {
+     "type": "eighties_mc",
+     "row": 5
+    },
+    {
+     "type": "eighties_mc",
+     "row": 1
+    },
+    {
+     "type": "eighties_mc",
+     "row": 1
+    },
+    {
+     "type": "eighties_mc",
+     "row": 1
+    },
+    {
+     "type": "eighties_mc",
+     "row": 3
+    },
+    {
+     "type": "eighties_mc",
+     "row": 3
+    },
+    {
+     "type": "eighties_mc",
+     "row": 3
+    }
+   ],
+   "notify": [
+    "jam_rap"
+   ]
+  }
+ ],
+ "wave_pacing": {
+  "flag_interval": 5,
+  "points": 100,
+  "point_increment": 100
+ },
+ "minigames": [
+  {
+   "type": "last_stand",
+   "starting_plantfood": 2,
+   "starting_sun": 2000
+  }
+ ],
+ "objectives": [
+  {
+   "type": "survive_waves",
+   "description": "[STARCHALLENGE_LASTSTAND_MINIGAME]"
+  }
+ ],
+ "mowers": true,
+ "extra": [
+  {
+   "objclass": "PlantModifierProperties",
+   "aliases": [
+    "ModPlants"
+   ],
+   "objdata": {
+    "List": [
+     {
+      "Type": "wintermelon",
+      "NewObjdata": {
+       "SunCost": 0,
+       "Cooldown": 0.1,
+       "CooldownFrom": 0.1,
+       "Toughness": 4000000,
+       "AttractsEveryFrame": true,
+       "LaneChangeTime": 0.2,
+       "TimeBetweenLaneChanges": 0
+      }
+     }
+    ]
+   }
+  }
+ ]
+}

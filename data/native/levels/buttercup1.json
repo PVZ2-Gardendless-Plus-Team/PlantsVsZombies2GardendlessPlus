@@ -1,0 +1,576 @@
+{
+ "id": "buttercup1",
+ "name": "Egypt Challenge Protect B",
+ "name_key": "[EPIC_PLANT_LEVEL_NAME]",
+ "description": "[PLAYERS_ATTEMPT_TO_GET_PLANT]",
+ "author": "莱池_余垛",
+ "number": 1,
+ "stage": "FallsStage",
+ "introduces_plant": "buttercup",
+ "gravestones": {
+  "forced": [
+   {
+    "col": 1,
+    "row": 3
+   },
+   {
+    "col": 1,
+    "row": 4
+   },
+   {
+    "col": 3,
+    "row": 0
+   },
+   {
+    "col": 3,
+    "row": 3
+   },
+   {
+    "col": 3,
+    "row": 4
+   },
+   {
+    "col": 4,
+    "row": 0
+   },
+   {
+    "col": 4,
+    "row": 1
+   },
+   {
+    "col": 4,
+    "row": 3
+   },
+   {
+    "col": 4,
+    "row": 4
+   },
+   {
+    "col": 7,
+    "row": 0
+   },
+   {
+    "col": 7,
+    "row": 3
+   },
+   {
+    "col": 7,
+    "row": 4
+   },
+   {
+    "col": 8,
+    "row": 2
+   }
+  ]
+ },
+ "seedbank": {
+  "mode": "chooser",
+  "selection": "preset",
+  "preset": [
+   "buttercup"
+  ]
+ },
+ "initial": {
+  "grid_items": [
+   {
+    "type": "potholepuddle",
+    "row": 0,
+    "col": 5
+   },
+   {
+    "type": "potholepuddle",
+    "row": 1,
+    "col": 5
+   },
+   {
+    "type": "potholepuddle",
+    "row": 2,
+    "col": 5
+   },
+   {
+    "type": "potholepuddle",
+    "row": 3,
+    "col": 5
+   },
+   {
+    "type": "potholepuddle",
+    "row": 4,
+    "col": 5
+   }
+  ],
+  "plants": [
+   {
+    "col": 6,
+    "row": 1,
+    "type": "buttercup"
+   },
+   {
+    "col": 0,
+    "row": 2,
+    "type": "holonut",
+    "plantfood": true
+   },
+   {
+    "col": 2,
+    "row": 0,
+    "type": "spikeweed"
+   },
+   {
+    "col": 2,
+    "row": 1,
+    "type": "spikeweed"
+   },
+   {
+    "col": 2,
+    "row": 2,
+    "type": "spikeweed"
+   },
+   {
+    "col": 2,
+    "row": 3,
+    "type": "spikeweed"
+   },
+   {
+    "col": 2,
+    "row": 4,
+    "type": "spikeweed"
+   }
+  ]
+ },
+ "objectives": [
+  {
+   "type": "survive_waves"
+  },
+  {
+   "type": "zombie_distance",
+   "distance": 1.5
+  }
+ ],
+ "railcarts": {
+  "carts": [
+   {
+    "col": 6,
+    "row": 1
+   }
+  ],
+  "rails": [
+   {
+    "col": 6,
+    "row_start": 0,
+    "row_end": 4
+   },
+   {
+    "col": 1,
+    "row_start": 0,
+    "row_end": 2
+   },
+   {
+    "col": 3,
+    "row_start": 1,
+    "row_end": 2
+   },
+   {
+    "col": 4,
+    "row_start": 2,
+    "row_end": 3
+   },
+   {
+    "col": 7,
+    "row_start": 1,
+    "row_end": 2
+   },
+   {
+    "col": 8,
+    "row_start": 0,
+    "row_end": 1
+   },
+   {
+    "col": 8,
+    "row_start": 3,
+    "row_end": 4
+   }
+  ]
+ },
+ "waves": [
+  {
+   "kind": "multi",
+   "actions": []
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "dark_juggler",
+     "row": 1,
+     "col": "8"
+    }
+   ],
+   "plantfood": 1,
+   "dynamic_plantfood": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "dark_juggler",
+     "row": 4,
+     "col": "8"
+    },
+    {
+     "type": "dark_imp",
+     "row": 1,
+     "col": "5"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "dark_imp",
+     "row": 4,
+     "col": "5"
+    },
+    {
+     "type": "dark_juggler",
+     "row": 1,
+     "col": "8"
+    },
+    {
+     "type": "dark_imp",
+     "row": 1,
+     "col": "4"
+    },
+    {
+     "type": "dark_juggler",
+     "row": 2,
+     "col": "8"
+    },
+    {
+     "type": "dark_imp",
+     "row": 2,
+     "col": "5"
+    }
+   ],
+   "plantfood": 1,
+   "dynamic_plantfood": [
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "dark_juggler",
+     "row": 3,
+     "col": "8"
+    },
+    {
+     "type": "dark_imp",
+     "row": 3,
+     "col": "4"
+    },
+    {
+     "type": "dark_juggler",
+     "row": 4,
+     "col": "8"
+    },
+    {
+     "type": "dark_imp",
+     "row": 4,
+     "col": "5"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "dark_juggler",
+     "row": 1,
+     "col": "8"
+    },
+    {
+     "type": "dark_imp",
+     "row": 1,
+     "col": "4"
+    },
+    {
+     "type": "dark_juggler",
+     "row": 2,
+     "col": "9"
+    },
+    {
+     "type": "dark_imp",
+     "row": 2,
+     "col": "5"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "dark_juggler",
+     "row": 3,
+     "col": "8"
+    },
+    {
+     "type": "dark_imp",
+     "row": 3,
+     "col": "4"
+    },
+    {
+     "type": "dark_juggler",
+     "row": 2,
+     "col": "9"
+    },
+    {
+     "type": "dark_imp",
+     "row": 2,
+     "col": "5"
+    },
+    {
+     "type": "dark_juggler",
+     "row": 1
+    }
+   ],
+   "plantfood": 1,
+   "dynamic_plantfood": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "dark_juggler",
+     "row": 5,
+     "col": "8"
+    },
+    {
+     "type": "dark_imp",
+     "row": 5,
+     "col": "4"
+    },
+    {
+     "type": "dark_juggler",
+     "row": 4,
+     "col": "9"
+    },
+    {
+     "type": "dark_imp",
+     "row": 4,
+     "col": "5"
+    },
+    {
+     "type": "dark_imp",
+     "row": 1,
+     "col": "3"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "dark_juggler",
+     "row": 1,
+     "col": "8"
+    },
+    {
+     "type": "dark_imp",
+     "row": 1,
+     "col": "4"
+    },
+    {
+     "type": "dark_juggler",
+     "row": 3,
+     "col": "9"
+    },
+    {
+     "type": "dark_imp",
+     "row": 3,
+     "col": "5"
+    },
+    {
+     "type": "dark_juggler",
+     "row": 5,
+     "col": "9"
+    },
+    {
+     "type": "dark_imp",
+     "row": 5,
+     "col": "5"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "dark_juggler",
+     "row": 4,
+     "col": "8"
+    },
+    {
+     "type": "dark_imp",
+     "row": 4,
+     "col": "4"
+    },
+    {
+     "type": "dark_juggler",
+     "row": 3,
+     "col": "9"
+    },
+    {
+     "type": "dark_imp",
+     "row": 3,
+     "col": "5"
+    },
+    {
+     "type": "dark_juggler",
+     "row": 2,
+     "col": "9"
+    },
+    {
+     "type": "dark_imp",
+     "row": 2,
+     "col": "5"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "dark_juggler",
+     "row": 3,
+     "col": "8"
+    },
+    {
+     "type": "dark_imp",
+     "row": 3,
+     "col": "4"
+    },
+    {
+     "type": "dark_juggler",
+     "row": 1,
+     "col": "9"
+    },
+    {
+     "type": "dark_imp",
+     "row": 1,
+     "col": "5"
+    },
+    {
+     "type": "dark_juggler",
+     "row": 2,
+     "col": "9"
+    },
+    {
+     "type": "dark_imp",
+     "row": 2,
+     "col": "5"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "dark_juggler",
+     "row": 5,
+     "col": "8"
+    },
+    {
+     "type": "dark_imp",
+     "row": 5,
+     "col": "4"
+    },
+    {
+     "type": "dark_juggler",
+     "row": 4,
+     "col": "9"
+    },
+    {
+     "type": "dark_imp",
+     "row": 4,
+     "col": "5"
+    },
+    {
+     "type": "dark_juggler",
+     "row": 3,
+     "col": "9"
+    },
+    {
+     "type": "dark_imp",
+     "row": 3,
+     "col": "5"
+    }
+   ]
+  }
+ ],
+ "wave_pacing": {
+  "flag_interval": 4,
+  "points": 100,
+  "point_increment": 50,
+  "suppress_flag": true,
+  "next_wave_health_min": 0.05,
+  "next_wave_health_max": 0.1
+ },
+ "minigames": [
+  {
+   "type": "bowling",
+   "bowling_foul_line": 26,
+   "suppress_objective_tip": true
+  }
+ ],
+ "scripts": [
+  "StandardIntro"
+ ],
+ "extra": [
+  {
+   "objclass": "SpawnPlantsWaveActionProps",
+   "aliases": [
+    "pf"
+   ],
+   "objdata": {
+    "Plants": [
+     {
+      "TypeName": "powerlily",
+      "SpawnAnim": "grow",
+      "AllowSpawnOnOtherPlants": true,
+      "RandomSpawnMatrix": [
+       "111111111",
+       "111111111",
+       "111111111",
+       "111111111",
+       "111111111"
+      ]
+     }
+    ]
+   }
+  }
+ ]
+}

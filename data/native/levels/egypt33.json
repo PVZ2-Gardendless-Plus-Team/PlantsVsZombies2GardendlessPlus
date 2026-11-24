@@ -1,0 +1,310 @@
+{
+ "id": "egypt33",
+ "name": "Egypt 33",
+ "name_key": "[EGYPT_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_EGYPT]",
+ "number": 33,
+ "stage": "EgyptNightStage",
+ "waves": [
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "egypt_gargantuar",
+     "row": 3
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "explorer"
+    },
+    {
+     "type": "egypt_gargantuar",
+     "row": 2
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "explorer"
+    },
+    {
+     "type": "explorer"
+    },
+    {
+     "type": "explorer"
+    },
+    {
+     "type": "explorer"
+    },
+    {
+     "type": "explorer"
+    },
+    {
+     "type": "explorer_veteran"
+    },
+    {
+     "type": "egypt_gargantuar",
+     "row": 1
+    },
+    {
+     "type": "egypt_gargantuar",
+     "row": 4
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "explorer"
+    },
+    {
+     "type": "explorer"
+    },
+    {
+     "type": "egypt_gargantuar",
+     "row": 5
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "explorer"
+    },
+    {
+     "type": "explorer"
+    },
+    {
+     "type": "egypt_gargantuar",
+     "row": 2
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "explorer"
+    },
+    {
+     "type": "explorer_veteran"
+    },
+    {
+     "type": "explorer_veteran"
+    },
+    {
+     "type": "explorer_veteran"
+    },
+    {
+     "type": "egypt_gargantuar",
+     "row": 1
+    },
+    {
+     "type": "egypt_gargantuar",
+     "row": 5
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "explorer"
+    },
+    {
+     "type": "explorer"
+    },
+    {
+     "type": "explorer"
+    },
+    {
+     "type": "egypt_gargantuar",
+     "row": 4
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "explorer"
+    },
+    {
+     "type": "explorer"
+    },
+    {
+     "type": "explorer"
+    },
+    {
+     "type": "egypt_gargantuar",
+     "row": 1
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "explorer_veteran"
+      },
+      {
+       "type": "explorer_veteran"
+      },
+      {
+       "type": "explorer"
+      },
+      {
+       "type": "explorer_veteran"
+      },
+      {
+       "type": "explorer_veteran"
+      },
+      {
+       "type": "egypt_gargantuar",
+       "row": 3
+      }
+     ]
+    },
+    {
+     "kind": "storm",
+     "style": "sandstorm",
+     "zombies": [
+      "egypt_gargantuar"
+     ],
+     "col_start": 6,
+     "col_end": 7,
+     "row_start": 0,
+     "row_end": 4,
+     "group_size": 1,
+     "group_interval": 3
+    }
+   ]
+  }
+ ],
+ "wave_pacing": {
+  "flag_interval": 3,
+  "points": 2000,
+  "point_increment": 100
+ },
+ "dynamic_zombies": [
+  {
+   "start_wave": 3,
+   "points": -100,
+   "increment": -10,
+   "pool": [
+    "explorer"
+   ]
+  },
+  {
+   "start_wave": 4,
+   "points": -50,
+   "increment": -10,
+   "pool": [
+    "explorer"
+   ]
+  },
+  {
+   "start_wave": 5,
+   "points": -1,
+   "increment": -10,
+   "pool": [
+    "explorer"
+   ]
+  },
+  {
+   "start_wave": 5,
+   "points": 200,
+   "increment": 20,
+   "pool": [
+    "explorer"
+   ]
+  },
+  {
+   "start_wave": 4,
+   "points": 300,
+   "increment": 40,
+   "pool": [
+    "explorer"
+   ]
+  },
+  {
+   "start_wave": 3,
+   "points": 500,
+   "increment": 60,
+   "pool": [
+    "explorer"
+   ]
+  }
+ ],
+ "gravestones": {},
+ "seedbank": {
+  "mode": "chooser",
+  "selection": "chooser",
+  "blacklist": [
+   "sunflower",
+   "iceburg",
+   "twinsunflower",
+   "sunshroom",
+   "puffshroom",
+   "seashroom",
+   "sunbean",
+   "gravebuster",
+   "toadstool",
+   "goldleaf",
+   "stallia",
+   "primalsunflower",
+   "goldbloom"
+  ],
+  "decks": {
+   "recommended": [
+    {
+     "name": "Good Luck",
+     "plants": [
+      "snowdrop",
+      "potatomine"
+     ]
+    },
+    {
+     "name": "Retirement",
+     "plants": [
+      "peach",
+      "chardguard",
+      "wintermelon",
+      "lightningreed",
+      "primalpotatomine"
+     ]
+    },
+    {
+     "name": "No Hardship",
+     "plants": [
+      "electricblueberry"
+     ]
+    }
+   ]
+  }
+ },
+ "minigames": [
+  {
+   "type": "last_stand",
+   "starting_plantfood": 2,
+   "starting_sun": 2250
+  }
+ ],
+ "objectives": [
+  {
+   "type": "survive_waves",
+   "description": "[STARCHALLENGE_LASTSTAND_MINIGAME]"
+  }
+ ]
+}

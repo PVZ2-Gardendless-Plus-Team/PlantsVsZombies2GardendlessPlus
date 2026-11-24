@@ -1,0 +1,144 @@
+{
+ "id": "epic_beghouled1",
+ "name": "Beghouled - Epic Quest 001",
+ "name_key": "[EPIC_QUEST_BEGHOULED_BLITZ_001_LEVEL_NAME]",
+ "description": "[PLAYERS_EPIC_QUEST_BEGHOULED_BLITZ_001]",
+ "number": 1,
+ "stage": "EgyptStage",
+ "intro_narrative": "EPIC_QUEST_BEGHOULED_BLITZ_001_1_INTRO",
+ "minigames": [
+  {
+   "type": "beghouled",
+   "match_counts_to_stage_advance": [
+    {
+     "match_count": 25,
+     "stage_number": 1
+    },
+    {
+     "match_count": 60,
+     "stage_number": 2
+    },
+    {
+     "match_count": 100,
+     "stage_number": 3
+    }
+   ],
+   "stages": [
+    {
+     "spawn_delay": 2,
+     "types": [
+      {
+       "zombie_type": "ra"
+      },
+      {
+       "zombie_type": "egypt_imp"
+      },
+      {
+       "zombie_type": "mummy"
+      }
+     ]
+    },
+    {
+     "spawn_delay": 2,
+     "types": [
+      {
+       "zombie_type": "explorer"
+      },
+      {
+       "zombie_type": "mummy"
+      },
+      {
+       "zombie_type": "mummy_armor1"
+      }
+     ]
+    },
+    {
+     "spawn_delay": 1.9,
+     "types": [
+      {
+       "zombie_type": "explorer"
+      },
+      {
+       "zombie_type": "pharaoh"
+      },
+      {
+       "zombie_type": "mummy"
+      },
+      {
+       "zombie_type": "mummy_armor1"
+      }
+     ]
+    },
+    {
+     "spawn_delay": 1.8,
+     "types": [
+      {
+       "zombie_type": "explorer"
+      },
+      {
+       "zombie_type": "pharaoh"
+      },
+      {
+       "zombie_type": "mummy_armor2"
+      }
+     ]
+    }
+   ],
+   "selection_method": "beghouled",
+   "preset_plant_list": [
+    {
+     "plant_type": "snowpea",
+     "level": -1
+    },
+    {
+     "plant_type": "bloomerang",
+     "level": -1
+    },
+    {
+     "plant_type": "tallnut",
+     "level": -1
+    },
+    {
+     "plant_type": "phatbeet",
+     "level": -1
+    }
+   ],
+   "beghouled_upgrade_list": [
+    "akee"
+   ],
+   "matches_to_win": 125,
+   "initial_plants": [
+    "peashooter",
+    "kernelpult",
+    "wallnut",
+    "bonkchoy"
+   ],
+   "upgrade_map": [
+    {
+     "base_plant": "peashooter",
+     "upgraded_plant": "snowpea"
+    },
+    {
+     "base_plant": "kernelpult",
+     "upgraded_plant": "bloomerang"
+    },
+    {
+     "base_plant": "bloomerang",
+     "upgraded_plant": "akee"
+    },
+    {
+     "base_plant": "wallnut",
+     "upgraded_plant": "tallnut"
+    },
+    {
+     "base_plant": "bonkchoy",
+     "upgraded_plant": "phatbeet"
+    }
+   ]
+  }
+ ],
+ "scripts": [
+  "BeghouledArcade",
+  "BeghouledIntro"
+ ]
+}

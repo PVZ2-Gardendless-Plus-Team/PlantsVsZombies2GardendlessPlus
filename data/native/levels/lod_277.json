@@ -1,0 +1,82 @@
+{
+ "id": "lod_277",
+ "name": "[LOD_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_LOD]",
+ "author": "蔓逐I蝶舞",
+ "stage": "PirateStage",
+ "vasebreaker": true,
+ "level_of_the_day": true,
+ "minigames": [
+  {
+   "type": "vasebreaker",
+   "min_column_index": 4,
+   "max_column_index": 8,
+   "num_colored_plant_vases": 3,
+   "num_colored_zombie_vases": 0,
+   "vases": [
+    {
+     "plant_type_name": "kernelpult",
+     "count": 8
+    },
+    {
+     "zombie_type_name": "pelican",
+     "count": 2
+    },
+    {
+     "zombie_type_name": "pirate",
+     "count": 2
+    },
+    {
+     "zombie_type_name": "seagull",
+     "count": 13
+    }
+   ]
+  }
+ ],
+ "waves": [],
+ "scripts": [
+  "VaseBreakerArcade",
+  "VaseBreakerIntro"
+ ],
+ "extra": [
+  {
+   "objclass": "PlantModifierProperties",
+   "aliases": [
+    "ModPlants"
+   ],
+   "objdata": {
+    "HidePlantfood": true,
+    "SuppressParticle": true,
+    "List": [
+     {
+      "Type": "kernelpult",
+      "NewObjdata": {
+       "CabbageType": "corn",
+       "ButterType": "butter",
+       "CabbageTypePlantfood": "butter2",
+       "ThrowInterval": 2.2,
+       "ThrowIntervalAdditional": 0.15,
+       "ChanceToButter": 0.6,
+       "Cooldown": 5,
+       "CooldownFrom": 0.5,
+       "SunCost": 100,
+       "BeghouledCost": 1500,
+       "Toughness": 300,
+       "Family": "Lobber"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "objclass": "PlantType",
+   "aliases": [
+    "kernelpult"
+   ],
+   "objdata": {
+    "PlantBasedOn": "kernelpult",
+    "Properties": "RTID(kernelpult@CurrentLevel)"
+   }
+  }
+ ]
+}

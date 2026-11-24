@@ -1,0 +1,444 @@
+{
+ "id": "cowboy6",
+ "name": "Cowboy Last Stand A",
+ "name_key": "[WEST_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_WEST]",
+ "number": 6,
+ "stage": "WestStage",
+ "intro_narrative": "COWBOY_CHALLENGE_LASTSTAND_A",
+ "reward": {
+  "type": "unlock_plant",
+  "param": "peapod"
+ },
+ "objectives": [
+  {
+   "type": "survive_waves",
+   "description": "[STARCHALLENGE_LASTSTAND_MINIGAME]"
+  }
+ ],
+ "railcarts": {
+  "carts": [
+   {
+    "col": 0,
+    "row": 0
+   },
+   {
+    "col": 1,
+    "row": 2
+   },
+   {
+    "col": 2,
+    "row": 4
+   }
+  ],
+  "rails": [
+   {
+    "col": 0,
+    "row_start": 0,
+    "row_end": 4
+   },
+   {
+    "col": 1,
+    "row_start": 0,
+    "row_end": 4
+   },
+   {
+    "col": 2,
+    "row_start": 0,
+    "row_end": 4
+   }
+  ],
+  "type": "railcart_cowboy"
+ },
+ "seedbank": {
+  "mode": "chooser",
+  "selection": "chooser",
+  "blacklist": [
+   "sunflower",
+   "twinsunflower",
+   "sunshroom",
+   "puffshroom",
+   "seashroom",
+   "sunbean",
+   "iceburg",
+   "toadstool",
+   "goldleaf",
+   "stallia",
+   "primalsunflower",
+   "goldbloom"
+  ],
+  "decks": {
+   "recommended": [
+    {
+     "name": "Strong Eagerness",
+     "plants": [
+      "bloomerang",
+      "wallnut",
+      "chilibean",
+      "potatomine"
+     ]
+    },
+    {
+     "name": "Sailors on Land",
+     "plants": [
+      "coconutcannon",
+      "snapdragon",
+      "chilibean"
+     ]
+    },
+    {
+     "name": "Meteor Shower",
+     "plants": [
+      "shootingstarfruit"
+     ]
+    },
+    {
+     "name": "Many a Little\nMakes a Mickle",
+     "plants": [
+      "slingpea"
+     ]
+    },
+    {
+     "name": "Heavy Gunfire",
+     "plants": [
+      "poisonpeashooter",
+      "applemortar"
+     ]
+    }
+   ]
+  }
+ },
+ "minigames": [
+  {
+   "type": "last_stand",
+   "starting_plantfood": 3,
+   "starting_sun": 2000
+  }
+ ],
+ "waves": [
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "cowboy",
+     "row": 1
+    },
+    {
+     "type": "cowboy_armor1",
+     "row": 2
+    },
+    {
+     "type": "cowboy",
+     "row": 3
+    },
+    {
+     "type": "cowboy_armor1",
+     "row": 4
+    },
+    {
+     "type": "cowboy",
+     "row": 5
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "cowboy",
+     "row": 3
+    },
+    {
+     "type": "poncho_no_plate",
+     "row": 4
+    },
+    {
+     "type": "cowboy_armor1",
+     "row": 5
+    },
+    {
+     "type": "cowboy_armor1",
+     "row": 1
+    },
+    {
+     "type": "poncho_plate",
+     "row": 2
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "cowboy",
+     "row": 5
+    },
+    {
+     "type": "cowboy",
+     "row": 1
+    },
+    {
+     "type": "piano",
+     "row": 3
+    },
+    {
+     "type": "poncho_no_plate",
+     "row": 2
+    },
+    {
+     "type": "poncho_no_plate",
+     "row": 4
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "cowboy_armor1",
+     "row": 2
+    },
+    {
+     "type": "cowboy",
+     "row": 1
+    },
+    {
+     "type": "cowboy_armor1",
+     "row": 4
+    },
+    {
+     "type": "cowboy",
+     "row": 5
+    },
+    {
+     "type": "poncho_plate",
+     "row": 3
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "piano",
+     "row": 2
+    },
+    {
+     "type": "poncho_no_plate",
+     "row": 3
+    },
+    {
+     "type": "cowboy",
+     "row": 1
+    },
+    {
+     "type": "cowboy",
+     "row": 5
+    },
+    {
+     "type": "poncho_plate",
+     "row": 4
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "cowboy",
+     "row": 1
+    },
+    {
+     "type": "poncho_no_plate",
+     "row": 2
+    },
+    {
+     "type": "poncho_no_plate",
+     "row": 3
+    },
+    {
+     "type": "cowboy",
+     "row": 2
+    },
+    {
+     "type": "poncho_plate",
+     "row": 5
+    },
+    {
+     "type": "piano",
+     "row": 4
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "piano",
+     "row": 1
+    },
+    {
+     "type": "cowboy",
+     "row": 2
+    },
+    {
+     "type": "cowboy",
+     "row": 3
+    },
+    {
+     "type": "cowboy",
+     "row": 5
+    },
+    {
+     "type": "poncho_no_plate",
+     "row": 5
+    },
+    {
+     "type": "poncho_plate",
+     "row": 4
+    },
+    {
+     "type": "poncho_no_plate",
+     "row": 3
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "piano",
+     "row": 3
+    },
+    {
+     "type": "poncho_no_plate",
+     "row": 5
+    },
+    {
+     "type": "cowboy",
+     "row": 4
+    },
+    {
+     "type": "poncho_plate",
+     "row": 1
+    },
+    {
+     "type": "cowboy",
+     "row": 2
+    },
+    {
+     "type": "cowboy",
+     "row": 4
+    },
+    {
+     "type": "cowboy_armor1",
+     "row": 5
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "piano",
+     "row": 5
+    },
+    {
+     "type": "cowboy_armor1",
+     "row": 1
+    },
+    {
+     "type": "cowboy",
+     "row": 2
+    },
+    {
+     "type": "poncho_plate",
+     "row": 3
+    },
+    {
+     "type": "cowboy",
+     "row": 4
+    },
+    {
+     "type": "poncho_no_plate",
+     "row": 2
+    },
+    {
+     "type": "cowboy",
+     "row": 5
+    },
+    {
+     "type": "poncho_no_plate",
+     "row": 4
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "piano",
+     "row": 2
+    },
+    {
+     "type": "cowboy",
+     "row": 4
+    },
+    {
+     "type": "cowboy",
+     "row": 1
+    },
+    {
+     "type": "poncho_plate",
+     "row": 3
+    },
+    {
+     "type": "cowboy_armor1",
+     "row": 5
+    },
+    {
+     "type": "poncho_plate",
+     "row": 1
+    },
+    {
+     "type": "poncho_plate",
+     "row": 5
+    },
+    {
+     "type": "poncho_no_plate",
+     "row": 4
+    },
+    {
+     "type": "cowboy",
+     "row": 2
+    },
+    {
+     "type": "piano",
+     "row": 4
+    },
+    {
+     "type": "cowboy_armor1",
+     "row": 1
+    },
+    {
+     "type": "cowboy",
+     "row": 4
+    },
+    {
+     "type": "cowboy",
+     "row": 3
+    },
+    {
+     "type": "poncho_no_plate",
+     "row": 2
+    }
+   ]
+  }
+ ],
+ "wave_pacing": {
+  "flag_interval": 10,
+  "points": 600,
+  "point_increment": 50
+ },
+ "mowers": true
+}

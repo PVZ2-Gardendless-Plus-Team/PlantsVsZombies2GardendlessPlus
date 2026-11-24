@@ -1,0 +1,879 @@
+{
+ "id": "plantern5",
+ "name": "Plantern2",
+ "name_key": "[EPIC_PLANT_LEVEL_NAME]",
+ "description": "[PLAYERS_ATTEMPT_TO_GET_PLANT]",
+ "author": "莱池_余垛",
+ "number": 5,
+ "stage": "WestStage",
+ "introduces_plant": "plantern",
+ "reward": {
+  "type": "unlock_plant",
+  "param": "plantern"
+ },
+ "railcarts": {
+  "carts": [
+   {
+    "col": 3,
+    "row": 2
+   }
+  ],
+  "rails": [
+   {
+    "col": 3,
+    "row_start": 0,
+    "row_end": 4
+   },
+   {
+    "col": 8,
+    "row_start": 0,
+    "row_end": 4
+   }
+  ],
+  "type": "railcart_cowboy"
+ },
+ "seedbank": {
+  "mode": "chooser",
+  "selection": "preset",
+  "preset": [
+   "intensivecarrot",
+   "iceburg",
+   "imitater"
+  ]
+ },
+ "initial": {
+  "grid_items": [
+   {
+    "type": "thelavaguava",
+    "row": 0,
+    "col": 0
+   },
+   {
+    "type": "thelavaguava",
+    "row": 0,
+    "col": 1
+   },
+   {
+    "type": "thelavaguava",
+    "row": 1,
+    "col": 0
+   },
+   {
+    "type": "thelavaguava",
+    "row": 1,
+    "col": 1
+   },
+   {
+    "type": "thelavaguava",
+    "row": 2,
+    "col": 0
+   },
+   {
+    "type": "thelavaguava",
+    "row": 2,
+    "col": 1
+   },
+   {
+    "type": "thelavaguava",
+    "row": 3,
+    "col": 0
+   },
+   {
+    "type": "thelavaguava",
+    "row": 3,
+    "col": 1
+   },
+   {
+    "type": "thelavaguava",
+    "row": 4,
+    "col": 0
+   },
+   {
+    "type": "thelavaguava",
+    "row": 4,
+    "col": 1
+   }
+  ],
+  "plants": [
+   {
+    "col": 3,
+    "row": 2,
+    "type": "plantern",
+    "plantfood": true
+   },
+   {
+    "col": 0,
+    "row": 0,
+    "type": "primalwallnut"
+   },
+   {
+    "col": 0,
+    "row": 1,
+    "type": "primalwallnut"
+   },
+   {
+    "col": 0,
+    "row": 2,
+    "type": "primalwallnut"
+   },
+   {
+    "col": 0,
+    "row": 3,
+    "type": "primalwallnut"
+   },
+   {
+    "col": 0,
+    "row": 4,
+    "type": "primalwallnut"
+   }
+  ]
+ },
+ "objectives": [
+  {
+   "type": "protect_plants",
+   "must_protect": 5,
+   "plants": [
+    {
+     "col": 4,
+     "row": 0,
+     "type": "marigold_yellow"
+    },
+    {
+     "col": 4,
+     "row": 1,
+     "type": "marigold_yellow"
+    },
+    {
+     "col": 4,
+     "row": 2,
+     "type": "sunshroom"
+    },
+    {
+     "col": 4,
+     "row": 3,
+     "type": "marigold_yellow"
+    },
+    {
+     "col": 4,
+     "row": 4,
+     "type": "marigold_yellow"
+    }
+   ]
+  },
+  {
+   "type": "survive_waves"
+  }
+ ],
+ "minigames": [
+  {
+   "type": "bowling",
+   "bowling_foul_line": 26,
+   "suppress_objective_tip": true
+  },
+  {
+   "type": "fight_alone",
+   "suppress_objective_tip": true,
+   "position": {
+    "m_x": 8,
+    "m_y": 0
+   },
+   "plant_upgrade_list": [
+    {
+     "type": "blover",
+     "full_point": 10,
+     "upgrade_details": {
+      "shoot_interval_scale": 0
+     }
+    },
+    {
+     "type": "blover",
+     "upgrade_details": {
+      "shoot_interval_scale": 0
+     }
+    }
+   ]
+  }
+ ],
+ "waves": [
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "modern_allstar",
+     "row": 3
+    },
+    {
+     "type": "modern_allstar",
+     "row": 5
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "modern_allstar",
+     "row": 1
+    },
+    {
+     "type": "modern_allstar",
+     "row": 4
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "modern_allstar",
+     "row": 2
+    },
+    {
+     "type": "west_bull_veteran_plantern_5",
+     "row": 1
+    },
+    {
+     "type": "west_bull_veteran_plantern_5",
+     "row": 3
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "RandomEventsProps",
+     "data": {
+      "EventCount": {
+       "Min": 1,
+       "Max": 1
+      },
+      "Events": [
+       "RTID(Event00@CurrentLevel)",
+       "RTID(Event01@CurrentLevel)",
+       "RTID(Event02@CurrentLevel)"
+      ]
+     }
+    },
+    {
+     "kind": "schedule",
+     "delay": {
+      "min": 4.5,
+      "max": 5
+     },
+     "interval": {
+      "min": 30,
+      "max": 30
+     },
+     "repeat": {
+      "min": 1,
+      "max": 1
+     },
+     "events": [
+      {
+       "kind": "spawn",
+       "zombies": [
+        {
+         "type": "west_bull_veteran_plantern_5",
+         "row": 2
+        },
+        {
+         "type": "west_bull_veteran_plantern_5",
+         "row": 5
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "west_bull_veteran_plantern_5",
+       "row": 1
+      },
+      {
+       "type": "west_bull_veteran_plantern_5",
+       "row": 2
+      },
+      {
+       "type": "west_bull_veteran_plantern_5",
+       "row": 3
+      },
+      {
+       "type": "west_bull_veteran_plantern_5",
+       "row": 4
+      }
+     ]
+    },
+    {
+     "kind": "schedule",
+     "delay": {
+      "min": 4.5,
+      "max": 5
+     },
+     "interval": {
+      "min": 30,
+      "max": 30
+     },
+     "repeat": {
+      "min": 1,
+      "max": 1
+     },
+     "events": [
+      {
+       "kind": "RandomEventsProps",
+       "data": {
+        "EventCount": {
+         "Min": 1,
+         "Max": 1
+        },
+        "Events": [
+         "RTID(Event00@CurrentLevel)",
+         "RTID(Event01@CurrentLevel)",
+         "RTID(Event02@CurrentLevel)"
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "RandomEventsProps",
+     "data": {
+      "EventCount": {
+       "Min": 1,
+       "Max": 1
+      },
+      "Events": [
+       "RTID(Event00@CurrentLevel)",
+       "RTID(Event01@CurrentLevel)"
+      ]
+     }
+    },
+    {
+     "kind": "schedule",
+     "delay": {
+      "min": 4.5,
+      "max": 5
+     },
+     "interval": {
+      "min": 30,
+      "max": 30
+     },
+     "repeat": {
+      "min": 1,
+      "max": 1
+     },
+     "events": [
+      {
+       "kind": "RandomEventsProps",
+       "data": {
+        "EventCount": {
+         "Min": 1,
+         "Max": 1
+        },
+        "Events": [
+         "RTID(Event20@CurrentLevel)",
+         "RTID(Event21@CurrentLevel)"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "modern_allstar",
+       "row": 3
+      },
+      {
+       "type": "modern_allstar",
+       "row": 5
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "RandomEventsProps",
+     "data": {
+      "EventCount": {
+       "Min": 1,
+       "Max": 1
+      },
+      "Events": [
+       "RTID(Event02@CurrentLevel)",
+       "RTID(Event01@CurrentLevel)"
+      ]
+     }
+    },
+    {
+     "kind": "schedule",
+     "delay": {
+      "min": 4.5,
+      "max": 5
+     },
+     "interval": {
+      "min": 30,
+      "max": 30
+     },
+     "repeat": {
+      "min": 1,
+      "max": 1
+     },
+     "events": [
+      {
+       "kind": "RandomEventsProps",
+       "data": {
+        "EventCount": {
+         "Min": 1,
+         "Max": 1
+        },
+        "Events": [
+         "RTID(Event10@CurrentLevel)",
+         "RTID(Event11@CurrentLevel)"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "modern_allstar",
+       "row": 1
+      },
+      {
+       "type": "modern_allstar",
+       "row": 3
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "RandomEventsProps",
+     "data": {
+      "EventCount": {
+       "Min": 1,
+       "Max": 1
+      },
+      "Events": [
+       "RTID(Event02@CurrentLevel)",
+       "RTID(Event00@CurrentLevel)"
+      ]
+     }
+    },
+    {
+     "kind": "schedule",
+     "delay": {
+      "min": 4.5,
+      "max": 5
+     },
+     "interval": {
+      "min": 30,
+      "max": 30
+     },
+     "repeat": {
+      "min": 1,
+      "max": 1
+     },
+     "events": [
+      {
+       "kind": "RandomEventsProps",
+       "data": {
+        "EventCount": {
+         "Min": 1,
+         "Max": 1
+        },
+        "Events": [
+         "RTID(Event20@CurrentLevel)",
+         "RTID(Event21@CurrentLevel)",
+         "RTID(Event22@CurrentLevel)"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "modern_allstar",
+       "row": 2
+      },
+      {
+       "type": "modern_allstar",
+       "row": 4
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "RandomEventsProps",
+     "data": {
+      "EventCount": {
+       "Min": 1,
+       "Max": 1
+      },
+      "Events": [
+       "RTID(Event01@CurrentLevel)",
+       "RTID(Event00@CurrentLevel)"
+      ]
+     }
+    },
+    {
+     "kind": "schedule",
+     "delay": {
+      "min": 4.5,
+      "max": 5
+     },
+     "interval": {
+      "min": 12,
+      "max": 14
+     },
+     "repeat": {
+      "min": 6,
+      "max": 6
+     },
+     "events": [
+      {
+       "kind": "RandomEventsProps",
+       "data": {
+        "EventCount": {
+         "Min": 1,
+         "Max": 1
+        },
+        "Events": [
+         "RTID(Event20@CurrentLevel)",
+         "RTID(Event21@CurrentLevel)",
+         "RTID(Event22@CurrentLevel)"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "modern_allstar",
+       "row": 3
+      },
+      {
+       "type": "modern_allstar",
+       "row": 5
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": []
+  }
+ ],
+ "wave_pacing": {
+  "flag_interval": 5,
+  "points": 200,
+  "point_increment": 100,
+  "suppress_flag": true,
+  "next_wave_health_min": 0.15,
+  "next_wave_health_max": 0.2
+ },
+ "dynamic_zombies": [
+  {
+   "start_wave": 5,
+   "points": 1000,
+   "increment": 0,
+   "pool": [
+    "west_bull_veteran_plantern_5"
+   ]
+  },
+  {
+   "start_wave": 4,
+   "points": 1000,
+   "increment": 0,
+   "pool": [
+    "west_bull_veteran_plantern_5"
+   ]
+  },
+  {
+   "start_wave": 3,
+   "points": 1000,
+   "increment": 0,
+   "pool": [
+    "west_bull_veteran_plantern_5"
+   ]
+  }
+ ],
+ "sun": {
+  "interval": 10.0
+ },
+ "scripts": [
+  "AutoCollect",
+  "StandardIntro"
+ ],
+ "extra": [
+  {
+   "objclass": "LevelSchedulerProps",
+   "aliases": [
+    "LevelScheduler"
+   ],
+   "objdata": {
+    "RewardWhenEnded": false,
+    "SuppressRewardState": false,
+    "TimeBeforeFirst": {
+     "Max": 5,
+     "Min": 2
+    },
+    "TimeBetween": {
+     "Max": 1,
+     "Min": 1
+    },
+    "Repeat": {
+     "Max": 1,
+     "Min": 1
+    },
+    "Events": [
+     "RTID(Missile@CurrentLevel)"
+    ]
+   }
+  },
+  {
+   "objclass": "TileLiquidType",
+   "aliases": [
+    "thelavaguava"
+   ],
+   "objdata": {
+    "Properties": "RTID(thelavaguavaprop@CurrentLevel)",
+    "TileLiquidBasedOn": "moltenpool"
+   }
+  },
+  {
+   "objclass": "TileLiquidProperties",
+   "aliases": [
+    "thelavaguavaprop"
+   ],
+   "objdata": {
+    "DPS": 80,
+    "SapflingDuration": 0.25,
+    "LifeSpan": 3000000,
+    "Priority": 0,
+    "BurnsPlants": false,
+    "Rect": "RTID(TileDefaultRect@RectangleProps)"
+   }
+  },
+  {
+   "objclass": "MissileLocateWaveActionProps",
+   "aliases": [
+    "Missile"
+   ],
+   "objdata": {
+    "MissileFallCountdown": 0,
+    "WaveStartMessage": "",
+    "ProjectileType": "zomboss_missile_cowboy",
+    "Locations": [
+     {
+      "mX": 0,
+      "mY": 0
+     },
+     {
+      "mX": 0,
+      "mY": 1
+     },
+     {
+      "mX": 0,
+      "mY": 2
+     },
+     {
+      "mX": 0,
+      "mY": 3
+     },
+     {
+      "mX": 0,
+      "mY": 4
+     }
+    ]
+   }
+  },
+  {
+   "objclass": "SpawnZombiesJitteredWaveActionProps",
+   "aliases": [
+    "Event00"
+   ],
+   "objdata": {
+    "Zombies": [
+     {
+      "Row": "1",
+      "Type": "RTID(west_bull_veteran_plantern_5@ZombieTypes)"
+     },
+     {
+      "Row": "3",
+      "Type": "RTID(west_bull_veteran_plantern_5@ZombieTypes)"
+     }
+    ]
+   }
+  },
+  {
+   "objclass": "SpawnZombiesJitteredWaveActionProps",
+   "aliases": [
+    "Event01"
+   ],
+   "objdata": {
+    "Zombies": [
+     {
+      "Row": "2",
+      "Type": "RTID(west_bull_veteran_plantern_5@ZombieTypes)"
+     },
+     {
+      "Row": "4",
+      "Type": "RTID(west_bull_veteran_plantern_5@ZombieTypes)"
+     }
+    ]
+   }
+  },
+  {
+   "objclass": "SpawnZombiesJitteredWaveActionProps",
+   "aliases": [
+    "Event02"
+   ],
+   "objdata": {
+    "Zombies": [
+     {
+      "Row": "3",
+      "Type": "RTID(west_bull_veteran_plantern_5@ZombieTypes)"
+     },
+     {
+      "Row": "5",
+      "Type": "RTID(west_bull_veteran_plantern_5@ZombieTypes)"
+     }
+    ]
+   }
+  },
+  {
+   "objclass": "SpawnZombiesJitteredWaveActionProps",
+   "aliases": [
+    "Event10"
+   ],
+   "objdata": {
+    "Zombies": [
+     {
+      "Row": "1",
+      "Type": "RTID(west_bull_veteran_plantern_5@ZombieTypes)"
+     },
+     {
+      "Row": "4",
+      "Type": "RTID(west_bull_veteran_plantern_5@ZombieTypes)"
+     }
+    ]
+   }
+  },
+  {
+   "objclass": "SpawnZombiesJitteredWaveActionProps",
+   "aliases": [
+    "Event11"
+   ],
+   "objdata": {
+    "Zombies": [
+     {
+      "Row": "2",
+      "Type": "RTID(west_bull_veteran_plantern_5@ZombieTypes)"
+     },
+     {
+      "Row": "5",
+      "Type": "RTID(west_bull_veteran_plantern_5@ZombieTypes)"
+     }
+    ]
+   }
+  },
+  {
+   "objclass": "SpawnZombiesJitteredWaveActionProps",
+   "aliases": [
+    "Event20"
+   ],
+   "objdata": {
+    "Zombies": [
+     {
+      "Row": "2",
+      "Type": "RTID(west_bull_veteran_plantern_5@ZombieTypes)"
+     },
+     {
+      "Row": "4",
+      "Type": "RTID(west_bull_veteran_plantern_5@ZombieTypes)"
+     },
+     {
+      "Row": "5",
+      "Type": "RTID(west_bull_veteran_plantern_5@ZombieTypes)"
+     }
+    ]
+   }
+  },
+  {
+   "objclass": "SpawnZombiesJitteredWaveActionProps",
+   "aliases": [
+    "Event21"
+   ],
+   "objdata": {
+    "Zombies": [
+     {
+      "Row": "1",
+      "Type": "RTID(west_bull_veteran_plantern_5@ZombieTypes)"
+     },
+     {
+      "Row": "3",
+      "Type": "RTID(west_bull_veteran_plantern_5@ZombieTypes)"
+     },
+     {
+      "Row": "5",
+      "Type": "RTID(west_bull_veteran_plantern_5@ZombieTypes)"
+     }
+    ]
+   }
+  },
+  {
+   "objclass": "SpawnZombiesJitteredWaveActionProps",
+   "aliases": [
+    "Event22"
+   ],
+   "objdata": {
+    "Zombies": [
+     {
+      "Row": "2",
+      "Type": "RTID(west_bull_veteran_plantern_5@ZombieTypes)"
+     },
+     {
+      "Row": "4",
+      "Type": "RTID(west_bull_veteran_plantern_5@ZombieTypes)"
+     },
+     {
+      "Row": "1",
+      "Type": "RTID(west_bull_veteran_plantern_5@ZombieTypes)"
+     }
+    ]
+   }
+  }
+ ]
+}

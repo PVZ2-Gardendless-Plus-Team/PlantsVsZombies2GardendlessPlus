@@ -1,0 +1,143 @@
+{
+ "id": "lod_124",
+ "name": "LOD 223 - Beghouled - Wasabi Whip",
+ "name_key": "[LOD_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_LOD]",
+ "number": 3,
+ "stage": "FutureStage",
+ "level_of_the_day": true,
+ "promo_plant": "wasabiwhip",
+ "level_of_the_day_config": {
+  "flags": 0,
+  "waves_per_flag": 0,
+  "points": 0,
+  "point_increment": 0,
+  "plantfood": 0
+ },
+ "minigames": [
+  {
+   "type": "beghouled",
+   "match_counts_to_stage_advance": [
+    {
+     "match_count": 30,
+     "stage_number": 1
+    },
+    {
+     "match_count": 55,
+     "stage_number": 2
+    },
+    {
+     "match_count": 80,
+     "stage_number": 3
+    }
+   ],
+   "stages": [
+    {
+     "spawn_delay": 2,
+     "types": [
+      {
+       "zombie_type": "future"
+      },
+      {
+       "zombie_type": "future_imp"
+      }
+     ]
+    },
+    {
+     "spawn_delay": 2,
+     "types": [
+      {
+       "zombie_type": "future"
+      },
+      {
+       "zombie_type": "future_imp"
+      },
+      {
+       "zombie_type": "future_armor1"
+      }
+     ]
+    },
+    {
+     "spawn_delay": 2,
+     "types": [
+      {
+       "zombie_type": "future_jetpack"
+      },
+      {
+       "zombie_type": "future_armor1"
+      },
+      {
+       "zombie_type": "future_armor2"
+      }
+     ]
+    },
+    {
+     "spawn_delay": 2.2,
+     "types": [
+      {
+       "zombie_type": "future"
+      },
+      {
+       "zombie_type": "future_armor1"
+      },
+      {
+       "zombie_type": "mech_cone"
+      },
+      {
+       "zombie_type": "future_protector"
+      }
+     ]
+    }
+   ],
+   "selection_method": "beghouled",
+   "preset_plant_list": [
+    {
+     "plant_type": "laser_bean",
+     "level": -1
+    },
+    {
+     "plant_type": "citron",
+     "level": -1
+    },
+    {
+     "plant_type": "endurian",
+     "level": -1
+    },
+    {
+     "plant_type": "wasabiwhip",
+     "level": -1
+    }
+   ],
+   "beghouled_upgrade_list": [],
+   "matches_to_win": 100,
+   "initial_plants": [
+    "bloomerang",
+    "magnifyinggrass",
+    "wallnut",
+    "bonkchoy"
+   ],
+   "upgrade_map": [
+    {
+     "base_plant": "bloomerang",
+     "upgraded_plant": "laser_bean"
+    },
+    {
+     "base_plant": "magnifyinggrass",
+     "upgraded_plant": "citron"
+    },
+    {
+     "base_plant": "wallnut",
+     "upgraded_plant": "endurian"
+    },
+    {
+     "base_plant": "bonkchoy",
+     "upgraded_plant": "wasabiwhip"
+    }
+   ]
+  }
+ ],
+ "scripts": [
+  "BeghouledArcade",
+  "BeghouledIntro"
+ ]
+}

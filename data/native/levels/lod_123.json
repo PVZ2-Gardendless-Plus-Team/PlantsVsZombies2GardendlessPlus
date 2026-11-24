@@ -1,0 +1,149 @@
+{
+ "id": "lod_123",
+ "name": "LOD 222 - Beghouled - Wasabi Whip",
+ "name_key": "[LOD_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_LOD]",
+ "number": 2,
+ "stage": "IceageStage",
+ "level_of_the_day": true,
+ "promo_plant": "wasabiwhip",
+ "level_of_the_day_config": {
+  "flags": 0,
+  "waves_per_flag": 0,
+  "points": 0,
+  "point_increment": 0,
+  "plantfood": 0
+ },
+ "minigames": [
+  {
+   "type": "beghouled",
+   "match_counts_to_stage_advance": [
+    {
+     "match_count": 25,
+     "stage_number": 1
+    },
+    {
+     "match_count": 50,
+     "stage_number": 2
+    },
+    {
+     "match_count": 75,
+     "stage_number": 3
+    }
+   ],
+   "stages": [
+    {
+     "spawn_delay": 2,
+     "types": [
+      {
+       "zombie_type": "iceage"
+      },
+      {
+       "zombie_type": "iceage_imp"
+      }
+     ]
+    },
+    {
+     "spawn_delay": 2,
+     "types": [
+      {
+       "zombie_type": "iceage"
+      },
+      {
+       "zombie_type": "iceage_armor1"
+      },
+      {
+       "zombie_type": "iceage_weaselhoarder"
+      }
+     ]
+    },
+    {
+     "spawn_delay": 2,
+     "types": [
+      {
+       "zombie_type": "iceage_imp"
+      },
+      {
+       "zombie_type": "iceage_armor1"
+      },
+      {
+       "zombie_type": "iceage_hunter"
+      }
+     ]
+    },
+    {
+     "spawn_delay": 2,
+     "types": [
+      {
+       "zombie_type": "iceage_armor1"
+      },
+      {
+       "zombie_type": "iceage_armor2"
+      },
+      {
+       "zombie_type": "iceage_hunter"
+      },
+      {
+       "zombie_type": "iceage_troglobite_1block"
+      }
+     ]
+    }
+   ],
+   "selection_method": "beghouled",
+   "preset_plant_list": [
+    {
+     "plant_type": "repeater",
+     "level": -1
+    },
+    {
+     "plant_type": "xshot",
+     "level": -1
+    },
+    {
+     "plant_type": "chardguard",
+     "level": -1
+    },
+    {
+     "plant_type": "wasabiwhip",
+     "level": -1
+    }
+   ],
+   "beghouled_upgrade_list": [
+    "primalpeashooter"
+   ],
+   "matches_to_win": 100,
+   "initial_plants": [
+    "peashooter",
+    "puffshroom",
+    "wallnut",
+    "bonkchoy"
+   ],
+   "upgrade_map": [
+    {
+     "base_plant": "peashooter",
+     "upgraded_plant": "repeater"
+    },
+    {
+     "base_plant": "repeater",
+     "upgraded_plant": "primalpeashooter"
+    },
+    {
+     "base_plant": "puffshroom",
+     "upgraded_plant": "xshot"
+    },
+    {
+     "base_plant": "wallnut",
+     "upgraded_plant": "chardguard"
+    },
+    {
+     "base_plant": "bonkchoy",
+     "upgraded_plant": "wasabiwhip"
+    }
+   ]
+  }
+ ],
+ "scripts": [
+  "BeghouledArcade",
+  "BeghouledIntro"
+ ]
+}

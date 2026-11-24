@@ -1,0 +1,218 @@
+{
+ "id": "future_dangerroom_sunbomb",
+ "name": "Future Danger Room",
+ "name_key": "[DANGER_ROOM_FUTURE_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_DANGER_ROOM]",
+ "number": 666,
+ "stage": "FutureNightStage",
+ "minigames": [
+  {
+   "type": "endless",
+   "world_specific_properties": "FutureDangerRoomProps",
+   "level_designers": [
+    {
+     "starting_points": 100,
+     "base_point_increment_per_wave": 30,
+     "base_point_increment_per_level": 5,
+     "min_dynamic_zombie_type": 4,
+     "must_contain_zombie": [
+      "future"
+     ],
+     "zombie_pool": [
+      "mech_cone",
+      "future_protector",
+      "future_armor1",
+      "future_armor2",
+      "future_armor4",
+      "football_mech",
+      "disco_mech",
+      "future_jetpack",
+      "future_jetpack_veteran",
+      "future_gargantuar"
+     ],
+     "type": "jittered_wave_generator"
+    },
+    {
+     "base_spider_rain_count": 0,
+     "max_spider_rain_count": 4,
+     "base_spider_rain_count_per_level": 0.5,
+     "base_spider_rain_zombie_count": 3,
+     "max_spider_rain_zombies": 6,
+     "base_spider_rain_zombies_count_per_level": 0.4,
+     "base_spider_rain_start_wave": 5,
+     "type": "spider_rain_designer"
+    },
+    {
+     "pick_by_row_column": false,
+     "base_tile_set_count": 1,
+     "base_tile_set_count_per_level": 0.4,
+     "max_tile_set_count": 4,
+     "column_count": 4,
+     "tile_set_layouts": [
+      [
+       "11"
+      ],
+      [
+       "101"
+      ],
+      [
+       "10101"
+      ],
+      [
+       "1",
+       "1"
+      ],
+      [
+       "1",
+       "0",
+       "1"
+      ],
+      [
+       "10",
+       "01",
+       "10"
+      ],
+      [
+       "01",
+       "10",
+       "01"
+      ],
+      [
+       "1",
+       "1",
+       "1"
+      ],
+      [
+       "1",
+       "0",
+       "0",
+       "0",
+       "1"
+      ],
+      [
+       "1",
+       "0",
+       "1",
+       "0",
+       "1"
+      ],
+      [
+       "10",
+       "00",
+       "01",
+       "00",
+       "10"
+      ],
+      [
+       "01",
+       "00",
+       "10",
+       "00",
+       "01"
+      ],
+      [
+       "01",
+       "00",
+       "10",
+       "00",
+       "01"
+      ],
+      [
+       "101",
+       "000",
+       "101"
+      ],
+      [
+       "101",
+       "000",
+       "101",
+       "000",
+       "000"
+      ],
+      [
+       "000",
+       "000",
+       "101",
+       "000",
+       "101"
+      ],
+      [
+       "001",
+       "000",
+       "100",
+       "000",
+       "001"
+      ],
+      [
+       "010",
+       "101",
+       "010"
+      ],
+      [
+       "00001",
+       "00000",
+       "00001",
+       "00000",
+       "00001"
+      ],
+      [
+       "01001",
+       "01001"
+      ]
+     ],
+     "type": "power_tile_designer"
+    }
+   ],
+   "initial_plants": [
+    "sunflower",
+    "peashooter",
+    "wallnut"
+   ],
+   "exclude_plants": [
+    "lilypad",
+    "tanglekelp",
+    "floawerPot",
+    "hotpotato",
+    "perfumeshroom"
+   ],
+   "minigame": false
+  }
+ ],
+ "seedbank": {
+  "mode": "chooser",
+  "selection": "chooser",
+  "blacklist": [
+   "sunflower",
+   "twinsunflower",
+   "sunshroom",
+   "primalsunflower"
+  ],
+  "always_chooser": true
+ },
+ "mowers": true,
+ "scripts": [
+  "SunBombs"
+ ],
+ "extra": [
+  {
+   "objclass": "DangerRoomLevelIntroProperties",
+   "aliases": [
+    "DangerRoomIntro"
+   ],
+   "objdata": {}
+  },
+  {
+   "objclass": "SunDropperProperties",
+   "aliases": [
+    "SunDropper"
+   ],
+   "objdata": {
+    "InitialSunDropDelay": 2,
+    "SunCountdownBase": 4,
+    "SunCountdownIncreasePerSun": 0,
+    "SunCountdownMax": 4,
+    "SunCountdownRange": 0
+   }
+  }
+ ]
+}
