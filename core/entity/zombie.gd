@@ -77,6 +77,9 @@ var _poison_accumulator: float = 0.0
 ## A peaceful zombie walks but never stops to fight: a solar-sage convert
 ## wandering off the lawn, or a zombie being dragged somewhere.
 var peaceful: bool = false
+## A held zombie stands where it is, neither walking nor eating, until let
+## go: the cowboy corral keeps each wave waiting for the player's move.
+var held: bool = false
 
 
 func art_kind() -> StringName:
@@ -402,6 +405,9 @@ func _process(delta: float) -> void:
 		_sync_armor_art()
 	# A stunned or encased zombie neither walks nor eats.
 	if is_stunned() or is_encased():
+		return
+	if held:
+		_show_state(&"idle")
 		return
 	if is_instance_valid(target) and not target.is_dead:
 		_show_state(&"attack")

@@ -11,9 +11,10 @@
  },
  "components": [
   {
-   "type": "shooter",
+   "type": "tap_shooter",
    "projectile": "coconut",
-   "projectile_plantfood": "coconut_pf"
+   "projectile_plantfood": "coconut_pf",
+   "rest": 15
   }
  ],
  "mint_boost": {

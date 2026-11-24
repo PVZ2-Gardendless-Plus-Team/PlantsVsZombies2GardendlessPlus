@@ -1,0 +1,806 @@
+{
+ "id": "doomshroom5",
+ "name": "[EPIC_PLANT_LEVEL_NAME]",
+ "description": "[PLAYERS_ATTEMPT_TO_GET_PLANT]",
+ "author": "莱池_余垛",
+ "number": 5,
+ "stage": "FutureNightStage",
+ "introduces_plant": "doomshroom",
+ "intro_narrative": "DOOMSHROOM_E_INTRO",
+ "reward": {
+  "type": "unlock_plant",
+  "param": "doomshroom"
+ },
+ "seedbank": {
+  "mode": "chooser",
+  "selection": "chooser",
+  "preset": [
+   "doomshroom"
+  ],
+  "exclude_sun_producers": "true",
+  "decks": {
+   "recommended": [
+    {
+     "name": "Strong Eagerness",
+     "plants": [
+      "doomshroom",
+      "wintermelon",
+      "empea",
+      "puffshroom",
+      "iceburg",
+      "potatomine"
+     ]
+    },
+    {
+     "name": "Swipe Their Heads Off!",
+     "plants": [
+      "doomshroom",
+      "empea",
+      "moonflower",
+      "dusklobber",
+      "scaredyshroom",
+      "blover"
+     ]
+    },
+    {
+     "name": "Mushroom Garden",
+     "plants": [
+      "doomshroom",
+      "imitater",
+      "shootingstarfruit",
+      "cranjelly",
+      "scaredyshroom",
+      "puffshroom"
+     ]
+    },
+    {
+     "name": "Crashing & Ashing",
+     "plants": [
+      "doomshroom",
+      "empea",
+      "explodeonut",
+      "imitater",
+      "guacodile",
+      "blover"
+     ]
+    }
+   ],
+   "challenging": [
+    {
+     "name": "Stick Together",
+     "plants": [
+      "doomshroom",
+      "empea",
+      "skyshooter"
+     ]
+    }
+   ]
+  }
+ },
+ "minigames": [
+  {
+   "type": "sun_bomb",
+   "plant_bomb_explosion_radius": 25,
+   "plant_damage": 1000,
+   "zombie_bomb_explosion_radius": 80,
+   "zombie_damage": 500
+  }
+ ],
+ "objectives": [
+  {
+   "type": "survive_waves",
+   "description": "[STARCHALLENGE_SUNBOMBS]"
+  }
+ ],
+ "initial": {
+  "plants": [
+   {
+    "col": 1,
+    "row": 3,
+    "type": "goldleaf"
+   },
+   {
+    "col": 1,
+    "row": 1,
+    "type": "goldleaf"
+   }
+  ]
+ },
+ "waves": [
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "future"
+    },
+    {
+     "type": "future"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "lostcity_jane",
+     "row": 3
+    },
+    {
+     "type": "future_gargantuar",
+     "row": 3
+    },
+    {
+     "type": "lostcity_excavator",
+     "row": 3
+    }
+   ],
+   "plantfood": 1,
+   "dynamic_plantfood": [
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "future_armor1"
+    },
+    {
+     "type": "future_armor1"
+    },
+    {
+     "type": "future_armor1"
+    },
+    {
+     "type": "future_armor1"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "disco_mech",
+     "row": 3
+    },
+    {
+     "type": "disco_mech",
+     "row": 4
+    },
+    {
+     "type": "disco_mech",
+     "row": 1
+    },
+    {
+     "type": "disco_mech",
+     "row": 5
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "lostcity_jane",
+     "row": 1
+    },
+    {
+     "type": "lostcity_jane",
+     "row": 2
+    },
+    {
+     "type": "lostcity_jane",
+     "row": 3
+    },
+    {
+     "type": "lostcity_jane",
+     "row": 4
+    },
+    {
+     "type": "lostcity_jane",
+     "row": 5
+    },
+    {
+     "type": "mech_cone",
+     "row": 3
+    },
+    {
+     "type": "mech_cone",
+     "row": 4
+    },
+    {
+     "type": "mech_cone",
+     "row": 1
+    },
+    {
+     "type": "mech_cone",
+     "row": 2
+    },
+    {
+     "type": "future_gargantuar",
+     "row": 2
+    },
+    {
+     "type": "future_gargantuar",
+     "row": 4
+    },
+    {
+     "type": "mech_cone",
+     "row": 5
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "mech_cone",
+     "row": 1
+    },
+    {
+     "type": "mech_cone",
+     "row": 2
+    },
+    {
+     "type": "mech_cone",
+     "row": 3
+    },
+    {
+     "type": "mech_cone",
+     "row": 4
+    },
+    {
+     "type": "mech_cone",
+     "row": 5
+    },
+    {
+     "type": "eighties_breakdancer",
+     "row": 3
+    },
+    {
+     "type": "eighties_breakdancer",
+     "row": 1
+    },
+    {
+     "type": "eighties_breakdancer",
+     "row": 5
+    },
+    {
+     "type": "eighties_breakdancer",
+     "row": 2
+    },
+    {
+     "type": "eighties_breakdancer",
+     "row": 4
+    }
+   ],
+   "notify": [
+    "jam_rap"
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "future_gargantuar",
+     "row": 1
+    },
+    {
+     "type": "future_gargantuar",
+     "row": 4
+    },
+    {
+     "type": "eighties_breakdancer",
+     "row": 1
+    },
+    {
+     "type": "eighties_breakdancer",
+     "row": 1
+    },
+    {
+     "type": "eighties_breakdancer",
+     "row": 4
+    }
+   ],
+   "plantfood": 1,
+   "dynamic_plantfood": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "future_gargantuar",
+     "row": 5
+    },
+    {
+     "type": "future_gargantuar",
+     "row": 3
+    },
+    {
+     "type": "eighties_breakdancer",
+     "row": 3
+    },
+    {
+     "type": "eighties_breakdancer",
+     "row": 3
+    },
+    {
+     "type": "eighties_breakdancer",
+     "row": 5
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "mech_cone",
+     "row": 1
+    },
+    {
+     "type": "mech_cone",
+     "row": 2
+    },
+    {
+     "type": "mech_cone",
+     "row": 3
+    },
+    {
+     "type": "mech_cone",
+     "row": 4
+    },
+    {
+     "type": "mech_cone",
+     "row": 5
+    },
+    {
+     "type": "eighties_arcade",
+     "row": 3
+    },
+    {
+     "type": "eighties_arcade",
+     "row": 1
+    },
+    {
+     "type": "eighties_arcade",
+     "row": 5
+    },
+    {
+     "type": "eighties_arcade",
+     "row": 2
+    },
+    {
+     "type": "eighties_arcade",
+     "row": 4
+    }
+   ],
+   "plantfood": 1,
+   "dynamic_plantfood": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0
+   ],
+   "notify": [
+    "jam_8bit"
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "future_gargantuar",
+     "row": 1
+    },
+    {
+     "type": "disco_mech",
+     "row": 2
+    },
+    {
+     "type": "future_gargantuar",
+     "row": 3
+    },
+    {
+     "type": "disco_mech",
+     "row": 4
+    },
+    {
+     "type": "future_gargantuar",
+     "row": 5
+    },
+    {
+     "type": "eighties_arcade",
+     "row": 3
+    },
+    {
+     "type": "eighties_arcade",
+     "row": 1
+    },
+    {
+     "type": "eighties_arcade",
+     "row": 5
+    },
+    {
+     "type": "eighties_arcade",
+     "row": 2
+    },
+    {
+     "type": "eighties_arcade",
+     "row": 4
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "disco_mech",
+     "row": 1
+    },
+    {
+     "type": "future_gargantuar",
+     "row": 2
+    },
+    {
+     "type": "disco_mech",
+     "row": 3
+    },
+    {
+     "type": "future_gargantuar",
+     "row": 4
+    },
+    {
+     "type": "disco_mech",
+     "row": 5
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "mech_cone",
+       "row": 1
+      },
+      {
+       "type": "mech_cone",
+       "row": 2
+      },
+      {
+       "type": "mech_cone",
+       "row": 3
+      },
+      {
+       "type": "mech_cone",
+       "row": 4
+      },
+      {
+       "type": "mech_cone",
+       "row": 5
+      },
+      {
+       "type": "eighties_breakdancer",
+       "row": 1
+      },
+      {
+       "type": "eighties_breakdancer",
+       "row": 2
+      },
+      {
+       "type": "eighties_breakdancer",
+       "row": 3
+      },
+      {
+       "type": "eighties_breakdancer",
+       "row": 4
+      },
+      {
+       "type": "eighties_breakdancer",
+       "row": 5
+      }
+     ],
+     "plantfood": 1,
+     "dynamic_plantfood": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+     ],
+     "notify": [
+      "jam_rap"
+     ]
+    },
+    {
+     "kind": "SpiderRainZombieSpawnerProps",
+     "data": {
+      "ColumnEnd": "8",
+      "ColumnStart": 4,
+      "GroupSize": 1,
+      "SpiderCount": 5,
+      "SpiderZombieName": "future_imp",
+      "TimeBeforeFullSpawn": "1",
+      "TimeBetweenGroups": "0.2",
+      "WaveStartMessage": "[WARNING_SPIDERRAIN]",
+      "ZombieFallTime": "1.5"
+     }
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "lostcity_jane",
+     "row": 1
+    },
+    {
+     "type": "lostcity_jane",
+     "row": 2
+    },
+    {
+     "type": "lostcity_jane",
+     "row": 3
+    },
+    {
+     "type": "lostcity_jane",
+     "row": 4
+    },
+    {
+     "type": "lostcity_jane",
+     "row": 5
+    },
+    {
+     "type": "eighties_breakdancer",
+     "row": 1
+    },
+    {
+     "type": "eighties_breakdancer",
+     "row": 2
+    },
+    {
+     "type": "eighties_breakdancer",
+     "row": 3
+    },
+    {
+     "type": "eighties_breakdancer",
+     "row": 4
+    },
+    {
+     "type": "eighties_breakdancer",
+     "row": 5
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "disco_mech",
+     "row": 1
+    },
+    {
+     "type": "disco_mech",
+     "row": 2
+    },
+    {
+     "type": "disco_mech",
+     "row": 3
+    },
+    {
+     "type": "disco_mech",
+     "row": 4
+    },
+    {
+     "type": "disco_mech",
+     "row": 5
+    },
+    {
+     "type": "future_gargantuar",
+     "row": 2
+    },
+    {
+     "type": "future_gargantuar",
+     "row": 5
+    },
+    {
+     "type": "eighties_breakdancer",
+     "row": 2
+    },
+    {
+     "type": "eighties_breakdancer",
+     "row": 2
+    },
+    {
+     "type": "eighties_breakdancer",
+     "row": 5
+    }
+   ],
+   "plantfood": 1,
+   "dynamic_plantfood": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "disco_mech",
+     "row": 1
+    },
+    {
+     "type": "disco_mech",
+     "row": 2
+    },
+    {
+     "type": "disco_mech",
+     "row": 3
+    },
+    {
+     "type": "disco_mech",
+     "row": 4
+    },
+    {
+     "type": "disco_mech",
+     "row": 5
+    },
+    {
+     "type": "mech_cone",
+     "row": 1
+    },
+    {
+     "type": "mech_cone",
+     "row": 2
+    },
+    {
+     "type": "mech_cone",
+     "row": 3
+    },
+    {
+     "type": "mech_cone",
+     "row": 4
+    },
+    {
+     "type": "mech_cone",
+     "row": 5
+    },
+    {
+     "type": "future_gargantuar",
+     "row": 3
+    },
+    {
+     "type": "future_gargantuar",
+     "row": 4
+    },
+    {
+     "type": "eighties_breakdancer",
+     "row": 3
+    },
+    {
+     "type": "eighties_breakdancer",
+     "row": 3
+    },
+    {
+     "type": "eighties_breakdancer",
+     "row": 4
+    },
+    {
+     "type": "eighties_breakdancer",
+     "row": 4
+    }
+   ],
+   "plantfood": 1,
+   "dynamic_plantfood": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ]
+  }
+ ],
+ "wave_pacing": {
+  "flag_interval": 5,
+  "points": 200,
+  "point_increment": 100
+ },
+ "dynamic_zombies": [
+  {
+   "start_wave": 5,
+   "points": 300,
+   "increment": 20,
+   "pool": [
+    "future_armor1",
+    "future_armor2",
+    "future_gargantuar",
+    "lostcity_excavator",
+    "lostcity_jane"
+   ]
+  },
+  {
+   "start_wave": 5,
+   "points": 400,
+   "increment": 20,
+   "pool": [
+    "future_armor1",
+    "future_armor2",
+    "future_gargantuar",
+    "lostcity_excavator",
+    "lostcity_jane"
+   ]
+  },
+  {
+   "start_wave": 4,
+   "points": 500,
+   "increment": 40,
+   "pool": [
+    "future_armor1",
+    "future_armor2",
+    "future_gargantuar",
+    "lostcity_excavator",
+    "lostcity_jane"
+   ]
+  },
+  {
+   "start_wave": 3,
+   "points": 600,
+   "increment": 60,
+   "pool": [
+    "future_armor1",
+    "future_armor2",
+    "future_gargantuar",
+    "lostcity_excavator",
+    "lostcity_jane"
+   ]
+  }
+ ],
+ "mowers": true,
+ "scripts": [
+  "StandardIntro"
+ ],
+ "extra": [
+  {
+   "objclass": "SunDropperProperties",
+   "aliases": [
+    "SunDropper"
+   ],
+   "objdata": {
+    "InitialSunDropDelay": 2,
+    "SunCountdownBase": 4,
+    "SunCountdownIncreasePerSun": 0,
+    "SunCountdownMax": 4,
+    "SunCountdownRange": 0
+   }
+  }
+ ]
+}

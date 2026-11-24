@@ -100,6 +100,7 @@ func _run() -> void:
 	_test_world_unlocks()
 	await _test_menu_flow()
 	await _test_minigames()
+	await _test_more_minigames()
 	await _test_minigame_menu()
 	await _test_almanac()
 	_test_modding()
@@ -4539,7 +4540,8 @@ func _report() -> void:
 ## The minigame modes PVZGE plays inside its worlds, each on a bare lawn.
 func _test_minigames() -> void:
 	section("minigames")
-	for t in [&"bowling", &"last_stand", &"vasebreaker", &"beghouled", &"endless"]:
+	for t in [&"bowling", &"last_stand", &"vasebreaker", &"beghouled", &"endless",
+			&"cannon", &"camel", &"cowboy", &"fight_alone", &"sun_bomb", &"rhythm"]:
 		check("minigame '%s' exists" % t, Components.has_minigame(t))
 
 	# Every shipped minigame level is played by modes that exist, and names
@@ -4562,6 +4564,12 @@ func _test_minigames() -> void:
 				for id in (g.get("initial_plants", []) as Array):
 					if Data.plant(StringName(id)) == null:
 						missing.append("%s: plant %s" % [entry["id"], id])
+				for p in (g.get("plant_upgrade_list", []) as Array):
+					if Data.plant(StringName(p.get("type", ""))) == null:
+						missing.append("%s: plant %s" % [entry["id"], p.get("type")])
+				for z in (g.get("zombies", []) as Array):
+					if Data.zombie(StringName(z.get("type", ""))) == null:
+						missing.append("%s: zombie %s" % [entry["id"], z.get("type")])
 	check("every minigame level is consistent", missing.is_empty(), ", ".join(missing.slice(0, 5)))
 
 	# Bowling: nothing past the foul line, and a ball's packet rolls the ball
@@ -4692,6 +4700,155 @@ func _test_minigames() -> void:
 	check_eq("the first wave comes", zone.wave, 1)
 	check("zombies are on the lawn", board.zombie_count() > 0)
 	check("an endless zone is never won", not zone.is_met())
+	_finish_feature_level(pair)
+	end_section()
+
+
+func _test_more_minigames() -> void:
+	section("more minigames")
+	# Sun Bomb: the sky drops bombs instead of sun.
+	var pair := _start_feature_level({"minigames": [{"type": "sun_bomb", "zombie_damage": 500,
+			"zombie_bomb_explosion_radius": 80, "plant_damage": 1000,
+			"plant_bomb_explosion_radius": 25}]})
+	var board: Board = pair[0]
+	var runner: LevelRunner = pair[1]
+	runner._sun_timer = 0.0
+	await _wait_game_seconds(0.1)
+	var bombs := board._suns.get_children().filter(func(n): return n is SunBomb)
+	var suns := board._suns.get_children().filter(func(n): return n is SunToken)
+	check_eq("a sun bomb falls", bombs.size(), 1)
+	check_eq("instead of sun", suns.size(), 0)
+	if bombs.size() == 1:
+		check_eq("with the level's zombie damage", bombs[0].zombie_damage, 500.0)
+	_finish_feature_level(pair)
+
+	# Corral: a wave waits for the player's move, then walks.
+	pair = _start_feature_level({"minigames": [{"type": "cowboy"}],
+			"waves": [{"kind": "spawn", "zombies": [{"type": "tutorial", "row": 1}]},
+				{"kind": "spawn", "zombies": [{"type": "tutorial", "row": 2}]}]})
+	board = pair[0]
+	runner = pair[1]
+	var corral = runner.minigame(&"cowboy")
+	runner._timer = 0.0
+	await _wait_game_seconds(0.3)
+	check_eq("the first wave comes", runner.wave_index, 0)
+	check("and waits", corral.waiting)
+	for i in 60:
+		if board.zombie_count() > 0:
+			break
+		await get_tree().process_frame
+	await get_tree().process_frame
+	var z: Zombie = board.all_hostile_zombies()[0] if board.zombie_count() > 0 else null
+	check("its zombie is held", z != null and z.held)
+	var x0: float = z.position.x if z != null else 0.0
+	await _wait_game_seconds(0.5)
+	check("a held zombie stands still", z != null and is_equal_approx(z.position.x, x0))
+	check_eq("no next wave while it waits", runner.wave_index, 0)
+	board.place_plant(&"peashooter", 0, 0)
+	check("planting lets it go", not corral.waiting and z != null and not z.held)
+	check("the next wave waits for this one to be cleared", corral.holds_waves())
+	if z != null:
+		z.die()
+	await _wait_game_seconds(0.3)
+	check_eq("then the next wave comes", runner.wave_index, 1)
+	_finish_feature_level(pair)
+
+	# Fight alone: one plant that grows on the damage it deals.
+	pair = _start_feature_level({"minigames": [{"type": "fight_alone",
+			"position": {"m_x": 0, "m_y": 2},
+			"plant_upgrade_list": [{"type": "peashooter", "full_point": 300,
+				"upgrade_details": {"damage_scale": 2}},
+				{"type": "repeater", "upgrade_details": {"damage_scale": 3,
+					"shoot_interval_scale": 0.5}}]}]})
+	board = pair[0]
+	runner = pair[1]
+	var lone = runner.minigame(&"fight_alone")
+	check_eq("the lone plant is planted", board.plant_at(2, 0).def.id if board.plant_at(2, 0) else &"", &"peashooter")
+	check_eq("with its damage scale", board.plant_at(2, 0).damage_scale if board.plant_at(2, 0) else 0.0, 2.0)
+	check("nothing else can be planted", board.placement_refusal(&"plant", &"wallnut", 1, 1) != "")
+	check("and it cannot be dug up", not runner.minigames_allow(&"allows_shovel"))
+	lone.add_points(300)
+	var grown := board.plant_at(2, 0)
+	check_eq("a full bar grows it", grown.def.id if grown else &"", &"repeater")
+	check("faster", grown != null and grown.fire_rate_scale > 1.5)
+	var pea := board.spawn_projectile(&"pea", 2, Vector2.ZERO, grown)
+	check_eq("its shots hit harder", pea.damage, float(Data.projectile_damage(&"pea")) * 3.0)
+	pea.queue_free()
+	runner.begin()
+	grown.die()
+	check("losing it loses the level", lone.is_failed())
+	_finish_feature_level(pair)
+
+	# Cannon Away: cannons in the second column; shots score, combos more.
+	pair = _start_feature_level({"minigames": [{"type": "cannon", "min_score": 1000,
+			"base_zombie_kill_score": 100, "row_has_cannon": [1, 0, 1, 0, 0],
+			"combo_brackets": [{"zombies_killed": 3, "score_multiplier": 2}]}]})
+	board = pair[0]
+	runner = pair[1]
+	var cannon_mode = runner.minigame(&"cannon")
+	var cannon := board.plant_at(0, 1)
+	check_eq("a cannon in a cannon row", cannon.def.id if cannon else &"", &"coconutcannon")
+	check("none where the level says not", board.plant_at(1, 1) == null)
+	check_eq("one kill scores the base", cannon_mode.shot_score(1), 100)
+	check_eq("three in a shot score double", cannon_mode.shot_score(3), 600)
+	check("a cannon fires when tapped", board.tap_plant(0, 1))
+	check("and then rests", not board.tap_plant(0, 1))
+	for i in 3:
+		var victim = board.spawn_zombie(&"tutorial", 0)
+		victim.take_damage(99999.0, cannon)
+	await _wait_game_seconds(0.6)
+	check_eq("kills by one shot are scored together", cannon_mode.score, 600)
+	check("short of the target is not met", not cannon_mode.is_met())
+	cannon_mode.add_score(400)
+	check("reaching it is", cannon_mode.is_met())
+	_finish_feature_level(pair)
+
+	# Camel match: two planks alike fell both camels; two that differ turn back.
+	pair = _start_feature_level({"minigames": [{"type": "camel", "card_types_used": 3,
+			"card_matching_time": 0.1, "card_no_match_time": 0.1}]})
+	board = pair[0]
+	runner = pair[1]
+	var camels = runner.minigame(&"camel")
+	runner.begin()
+	var c: Array = []
+	for row in 3:
+		var camel = board.spawn_zombie_at(&"camel_onehump_touch", row, board.grid_to_world(row, 6).x)
+		camel.held = true
+		c.append(camel)
+	await _wait_game_seconds(0.05)
+	camels.set_symbol(c[0], 0)
+	camels.set_symbol(c[1], 1)
+	camels.set_symbol(c[2], 0)
+	check("tapping a camel turns its plank", camels.handle_click(0, 6) and camels.is_face_up(c[0]))
+	camels.flip(c[1])
+	await _wait_game_seconds(0.3)
+	check("a mismatch turns back", not camels.is_face_up(c[0]) and not camels.is_face_up(c[1]))
+	camels.flip(c[0])
+	camels.flip(c[2])
+	await _wait_game_seconds(0.3)
+	var gone := func(n): return not is_instance_valid(n) or n.is_dead
+	check("a match fells both", gone.call(c[0]) and gone.call(c[2]) and not gone.call(c[1]))
+	check_eq("and counts", camels.matches, 1)
+	_finish_feature_level(pair)
+
+	# Rhythm: beets in the target column, zombies due there on the beat.
+	pair = _start_feature_level({"minigames": [{"type": "rhythm", "target_column": 2,
+			"zombies": [{"type": "tutorial", "row": 1, "arrive_time": 1.0, "time_before_arrive": 1.0}]}]})
+	board = pair[0]
+	runner = pair[1]
+	var song = runner.minigame(&"rhythm")
+	check_eq("a beet in every row", board.plant_at(4, 2).def.id if board.plant_at(4, 2) else &"", &"phatbeet_rhythm")
+	runner.begin()
+	await _wait_game_seconds(0.2)
+	check_eq("the zombie glides in", board.zombie_count(), 1)
+	while song.song_time < 0.97:
+		await get_tree().process_frame
+	var dancer: Zombie = board.all_hostile_zombies()[0] if board.zombie_count() > 0 else null
+	check("it is at the beets on its beat", dancer != null
+			and absf(dancer.position.x - board.grid_to_world(1, 2).x) < board.cell_size.x * 0.6)
+	check("tapping the beet smashes it", board.tap_plant(1, 2) and dancer != null and dancer.is_dead)
+	await _wait_game_seconds(0.1)
+	check("the song is won once all are gone", song.is_met())
 	_finish_feature_level(pair)
 	end_section()
 

@@ -1,0 +1,606 @@
+{
+ "id": "cowboy20",
+ "name": "Cowboy Minigame C",
+ "name_key": "[WEST_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_WEST]",
+ "number": 20,
+ "stage": "WestStage",
+ "reward": {
+  "type": "upgrade",
+  "param": "upgrade_pf_refresh"
+ },
+ "objectives": [
+  {
+   "type": "survive_waves",
+   "description": "[STARCHALLENGE_CORRAL_MINIGAME]"
+  }
+ ],
+ "railcarts": {
+  "carts": [
+   {
+    "col": 0,
+    "row": 0
+   },
+   {
+    "col": 1,
+    "row": 0
+   },
+   {
+    "col": 2,
+    "row": 0
+   },
+   {
+    "col": 3,
+    "row": 2
+   },
+   {
+    "col": 4,
+    "row": 0
+   },
+   {
+    "col": 5,
+    "row": 4
+   },
+   {
+    "col": 6,
+    "row": 4
+   },
+   {
+    "col": 7,
+    "row": 3
+   },
+   {
+    "col": 8,
+    "row": 1
+   }
+  ],
+  "rails": [
+   {
+    "col": 0,
+    "row_start": 0,
+    "row_end": 4
+   },
+   {
+    "col": 1,
+    "row_start": 0,
+    "row_end": 4
+   },
+   {
+    "col": 2,
+    "row_start": 0,
+    "row_end": 4
+   },
+   {
+    "col": 3,
+    "row_start": 0,
+    "row_end": 4
+   },
+   {
+    "col": 4,
+    "row_start": 0,
+    "row_end": 4
+   },
+   {
+    "col": 5,
+    "row_start": 0,
+    "row_end": 4
+   },
+   {
+    "col": 6,
+    "row_start": 0,
+    "row_end": 4
+   },
+   {
+    "col": 7,
+    "row_start": 0,
+    "row_end": 4
+   },
+   {
+    "col": 8,
+    "row_start": 0,
+    "row_end": 4
+   }
+  ],
+  "type": "railcart_cowboy"
+ },
+ "seedbank": {
+  "mode": "conveyor",
+  "plants": [
+   {
+    "type": "peashooter",
+    "weight": null,
+    "max": null
+   }
+  ],
+  "speed": [
+   {
+    "speed": 100,
+    "max_packets": 0
+   }
+  ]
+ },
+ "minigames": [
+  {
+   "type": "cowboy",
+   "begin_string": "[COWBOY_MINIGAME_TUTORIAL_1]"
+  }
+ ],
+ "waves": [
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "cowboy",
+     "row": 2
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "cowboy",
+       "row": 4
+      },
+      {
+       "type": "cowboy",
+       "row": 5
+      }
+     ]
+    },
+    {
+     "kind": "conveyor",
+     "add": [
+      {
+       "type": null,
+       "weight": null,
+       "max": null
+      }
+     ],
+     "remove": [
+      null
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "cowboy_armor2",
+       "row": 2
+      },
+      {
+       "type": "cowboy",
+       "row": 1
+      },
+      {
+       "type": "cowboy",
+       "row": 4
+      },
+      {
+       "type": "cowboy",
+       "row": 5
+      }
+     ]
+    },
+    {
+     "kind": "conveyor",
+     "add": [
+      {
+       "type": null,
+       "weight": null,
+       "max": null
+      }
+     ],
+     "remove": [
+      null
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "cowboy_armor1",
+       "row": 4
+      },
+      {
+       "type": "cowboy",
+       "row": 3
+      },
+      {
+       "type": "cowboy",
+       "row": 1
+      },
+      {
+       "type": "cowboy",
+       "row": 4
+      }
+     ]
+    },
+    {
+     "kind": "conveyor",
+     "add": [
+      {
+       "type": null,
+       "weight": null,
+       "max": null
+      }
+     ],
+     "remove": [
+      null
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "cowboy",
+       "row": 5
+      },
+      {
+       "type": "cowboy",
+       "row": 4
+      },
+      {
+       "type": "cowboy",
+       "row": 3
+      },
+      {
+       "type": "cowboy_armor1",
+       "row": 2
+      },
+      {
+       "type": "cowboy_armor1",
+       "row": 1
+      }
+     ]
+    },
+    {
+     "kind": "conveyor",
+     "add": [
+      {
+       "type": null,
+       "weight": null,
+       "max": null
+      }
+     ],
+     "remove": [
+      null
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "cowboy_armor2",
+       "row": 4
+      },
+      {
+       "type": "cowboy",
+       "row": 5
+      },
+      {
+       "type": "cowboy",
+       "row": 2
+      },
+      {
+       "type": "cowboy",
+       "row": 5
+      },
+      {
+       "type": "cowboy",
+       "row": 1
+      },
+      {
+       "type": "cowboy",
+       "row": 1
+      }
+     ]
+    },
+    {
+     "kind": "conveyor",
+     "add": [
+      {
+       "type": null,
+       "weight": null,
+       "max": null
+      }
+     ],
+     "remove": [
+      null
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "cowboy",
+       "row": 5
+      },
+      {
+       "type": "cowboy",
+       "row": 5
+      },
+      {
+       "type": "cowboy_armor2",
+       "row": 2
+      },
+      {
+       "type": "cowboy",
+       "row": 1
+      },
+      {
+       "type": "cowboy",
+       "row": 3
+      },
+      {
+       "type": "cowboy",
+       "row": 3
+      }
+     ]
+    },
+    {
+     "kind": "conveyor",
+     "add": [
+      {
+       "type": null,
+       "weight": null,
+       "max": null
+      }
+     ],
+     "remove": [
+      null
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "cowboy_armor2",
+       "row": 5
+      },
+      {
+       "type": "cowboy",
+       "row": 3
+      },
+      {
+       "type": "cowboy",
+       "row": 1
+      },
+      {
+       "type": "cowboy",
+       "row": 3
+      },
+      {
+       "type": "cowboy",
+       "row": 2
+      },
+      {
+       "type": "cowboy",
+       "row": 4
+      },
+      {
+       "type": "cowboy_armor1",
+       "row": 4
+      }
+     ]
+    },
+    {
+     "kind": "conveyor",
+     "add": [
+      {
+       "type": null,
+       "weight": null,
+       "max": null
+      }
+     ],
+     "remove": [
+      null
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "cowboy_armor1",
+       "row": 3
+      },
+      {
+       "type": "cowboy_armor1",
+       "row": 4
+      },
+      {
+       "type": "cowboy_armor1",
+       "row": 2
+      },
+      {
+       "type": "cowboy",
+       "row": 1
+      },
+      {
+       "type": "cowboy",
+       "row": 4
+      },
+      {
+       "type": "cowboy",
+       "row": 2
+      },
+      {
+       "type": "cowboy",
+       "row": 5
+      }
+     ]
+    },
+    {
+     "kind": "conveyor",
+     "add": [
+      {
+       "type": null,
+       "weight": null,
+       "max": null
+      }
+     ],
+     "remove": [
+      null
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "cowboy_armor2",
+     "row": 2
+    },
+    {
+     "type": "cowboy_armor2",
+     "row": 4
+    },
+    {
+     "type": "chicken_farmer",
+     "row": 3
+    },
+    {
+     "type": "cowboy"
+    },
+    {
+     "type": "cowboy",
+     "row": 5
+    },
+    {
+     "type": "cowboy_armor1",
+     "row": 4
+    },
+    {
+     "type": "cowboy_armor1",
+     "row": 2
+    },
+    {
+     "type": "cowboy",
+     "row": 1
+    }
+   ]
+  }
+ ],
+ "wave_pacing": {
+  "flag_interval": 10,
+  "points": 100,
+  "point_increment": 100,
+  "suppress_flag": true
+ },
+ "extra": [
+  {
+   "objclass": "PlantModifierProperties",
+   "aliases": [
+    "ModPlants"
+   ],
+   "objdata": {
+    "SuppressParticle": false,
+    "List": [
+     {
+      "Type": "repeater",
+      "NewObjdata": {
+       "ShootInterval": 0.5
+      }
+     },
+     {
+      "Type": "peashooter",
+      "NewObjdata": {
+       "ShootInterval": 0.5
+      }
+     }
+    ]
+   }
+  },
+  {
+   "objclass": "LevelSchedulerProps",
+   "aliases": [
+    "LevelScheduler"
+   ],
+   "objdata": {
+    "//": "0  -> Infinity",
+    "RewardWhenEnded": false,
+    "SuppressRewardState": false,
+    "TimeBeforeFirst": {
+     "Max": 1,
+     "Min": 1
+    },
+    "TimeBetween": {
+     "Max": 10,
+     "Min": 10
+    },
+    "Repeat": {
+     "Max": 10,
+     "Min": 10
+    },
+    "Events": [
+     "RTID(Wave1@CurrentLevel)"
+    ]
+   }
+  },
+  {
+   "objclass": "WaveSchedulerProps",
+   "aliases": [
+    "Wave2Scheduler"
+   ],
+   "objdata": {
+    "//": "0  -> Infinity",
+    "RewardWhenEnded": true,
+    "SuppressRewardState": false,
+    "TimeBeforeFirst": {
+     "Max": 1,
+     "Min": 1
+    },
+    "TimeBetween": {
+     "Max": 10,
+     "Min": 10
+    },
+    "Repeat": {
+     "Max": 10,
+     "Min": 10
+    },
+    "Events": [
+     "RTID(Wave1@CurrentLevel)"
+    ]
+   }
+  }
+ ]
+}

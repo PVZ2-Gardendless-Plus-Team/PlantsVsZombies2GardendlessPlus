@@ -26,10 +26,23 @@ MODES = [
      "description": "Break the vases and beat whatever comes out"},
     {"id": "beghouled", "name": "Beghouled",
      "description": "Match three plants in a row to beat the zombies"},
+    {"id": "cannon", "name": "Cannon Away",
+     "description": "Reach the target score"},
+    {"id": "camel", "name": "Camel Match",
+     "description": "Match symbols to destroy the zombies"},
+    {"id": "cowboy", "name": "Corral",
+     "description": "Survive the zombie attack"},
+    {"id": "fight_alone", "name": "Fight Alone",
+     "description": "Survive with the only plant you've got"},
+    {"id": "sun_bomb", "name": "Sun Bombs",
+     "description": "Survive while Sun Bombs fall"},
+    {"id": "rhythm", "name": "Rhythm",
+     "description": "Smash the zombies to the beat"},
     {"id": "endless", "name": "Endless Zones",
      "description": "Survive as many levels as you can"},
 ]
-PRIORITY = ["endless", "beghouled", "vasebreaker", "bowling", "last_stand"]
+PRIORITY = ["endless", "beghouled", "vasebreaker", "bowling", "last_stand",
+            "cannon", "camel", "cowboy", "fight_alone", "sun_bomb", "rhythm"]
 
 # World order on the map, so a mode's levels read Egypt first, Sky last, and
 # the names PVZGE's map gives each one.
@@ -51,6 +64,20 @@ def world_of(level):
         if key.lower().startswith(w.lower()):
             return i
     return len(WORLDS)
+
+
+def missing_entities(level, data_dir):
+    """Plants and zombies a mode's settings name that the game does not have
+    (Far Future's primal peashooter team, Lord of the Day guests)."""
+    out = []
+    for g in level.get("minigames") or []:
+        for p in g.get("plant_upgrade_list") or []:
+            if not os.path.exists(os.path.join(data_dir, "plants", p.get("type", "") + ".json")):
+                out.append(p.get("type"))
+        for z in g.get("zombies") or []:
+            if not os.path.exists(os.path.join(data_dir, "zombies", z.get("type", "") + ".json")):
+                out.append(z.get("type"))
+    return out
 
 
 def mode_of(level):
@@ -81,6 +108,10 @@ def main():
     for path in sorted(glob.glob(os.path.join(src, "*.json"))):
         level = json.load(open(path, encoding="utf-8"))
         mode = mode_of(level)
+        gaps = missing_entities(level, os.path.dirname(dest.rstrip("/")))
+        if mode and gaps:
+            print(f"skipping {level['id']}: no {', '.join(sorted(set(gaps)))}")
+            continue
         if mode:
             by_mode[mode].append(level)
 

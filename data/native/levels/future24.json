@@ -1,0 +1,491 @@
+{
+ "id": "future24",
+ "name": "Future Challenge SunBombs C",
+ "name_key": "[FUTURE_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_FUTURE]",
+ "number": 24,
+ "stage": "FutureNightStage",
+ "reward": {
+  "type": "unlock_plant",
+  "param": "powerplant"
+ },
+ "power_tiles": [
+  {
+   "group": "gamma",
+   "row": 0,
+   "col": 1,
+   "delay": 1.5
+  },
+  {
+   "group": "beta",
+   "row": 1,
+   "col": 0,
+   "delay": 0.25
+  },
+  {
+   "group": "beta",
+   "row": 1,
+   "col": 2,
+   "delay": 0.25
+  },
+  {
+   "group": "gamma",
+   "row": 2,
+   "col": 1,
+   "delay": 1.5
+  },
+  {
+   "group": "beta",
+   "row": 3,
+   "col": 0,
+   "delay": 0.25
+  },
+  {
+   "group": "beta",
+   "row": 3,
+   "col": 2,
+   "delay": 0.25
+  },
+  {
+   "group": "gamma",
+   "row": 4,
+   "col": 1,
+   "delay": 1.5
+  }
+ ],
+ "seedbank": {
+  "mode": "chooser",
+  "selection": "chooser",
+  "blacklist": [
+   "sunflower",
+   "twinsunflower",
+   "sunshroom",
+   "primalsunflower"
+  ]
+ },
+ "minigames": [
+  {
+   "type": "sun_bomb",
+   "plant_bomb_explosion_radius": 25,
+   "plant_damage": 1000,
+   "zombie_bomb_explosion_radius": 80,
+   "zombie_damage": 500
+  }
+ ],
+ "objectives": [
+  {
+   "type": "survive_waves",
+   "description": "[STARCHALLENGE_SUNBOMBS]"
+  }
+ ],
+ "waves": [
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "future"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "future"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "future_armor1"
+    }
+   ],
+   "plantfood": 1,
+   "dynamic_plantfood": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "future"
+    },
+    {
+     "type": "future"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "future"
+    },
+    {
+     "type": "future_armor1"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "disco_mech",
+     "row": 2
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "future"
+    },
+    {
+     "type": "future_armor1"
+    },
+    {
+     "type": "future_jetpack"
+    }
+   ],
+   "plantfood": 1,
+   "dynamic_plantfood": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "football_mech",
+       "row": 3
+      }
+     ]
+    },
+    {
+     "kind": "SpiderRainZombieSpawnerProps",
+     "data": {
+      "ColumnEnd": "8",
+      "ColumnStart": "4",
+      "GroupSize": 1,
+      "SpiderCount": 5,
+      "SpiderZombieName": "future_imp",
+      "TimeBeforeFullSpawn": 1,
+      "TimeBetweenGroups": "0.2",
+      "WaveStartMessage": "[WARNING_SPIDERRAIN]",
+      "ZombieFallTime": "1.5"
+     }
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "future"
+    },
+    {
+     "type": "future"
+    },
+    {
+     "type": "future_armor2"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "future_jetpack",
+     "row": 3
+    },
+    {
+     "type": "football_mech",
+     "row": 1
+    },
+    {
+     "type": "future_jetpack",
+     "row": 5
+    }
+   ],
+   "plantfood": 1,
+   "dynamic_plantfood": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "disco_mech",
+     "row": 4
+    },
+    {
+     "type": "future"
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "disco_mech",
+       "row": 2
+      }
+     ],
+     "plantfood": 1,
+     "dynamic_plantfood": [
+      1,
+      1,
+      1,
+      1,
+      0,
+      1,
+      0
+     ]
+    },
+    {
+     "kind": "SpiderRainZombieSpawnerProps",
+     "data": {
+      "ColumnEnd": "8",
+      "ColumnStart": 4,
+      "GroupSize": 1,
+      "SpiderCount": 5,
+      "SpiderZombieName": "future_imp",
+      "TimeBeforeFullSpawn": "1",
+      "TimeBetweenGroups": "0.2",
+      "WaveStartMessage": "[WARNING_SPIDERRAIN]",
+      "ZombieFallTime": "1.5"
+     }
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "football_mech",
+     "row": 1
+    },
+    {
+     "type": "football_mech",
+     "row": 4
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "disco_mech",
+     "row": 3
+    },
+    {
+     "type": "football_mech",
+     "row": 5
+    }
+   ],
+   "plantfood": 1,
+   "dynamic_plantfood": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "disco_mech",
+     "row": 1
+    },
+    {
+     "type": "future_jetpack",
+     "row": 3
+    },
+    {
+     "type": "future_jetpack",
+     "row": 4
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "football_mech",
+       "row": 2
+      },
+      {
+       "type": "football_mech",
+       "row": 3
+      },
+      {
+       "type": "football_mech",
+       "row": 4
+      }
+     ],
+     "plantfood": 1,
+     "dynamic_plantfood": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0
+     ]
+    },
+    {
+     "kind": "SpiderRainZombieSpawnerProps",
+     "data": {
+      "ColumnEnd": "8",
+      "ColumnStart": "4",
+      "GroupSize": 1,
+      "SpiderCount": 6,
+      "SpiderZombieName": "future_imp",
+      "TimeBeforeFullSpawn": "1",
+      "TimeBetweenGroups": "0.2",
+      "WaveStartMessage": "[WARNING_SPIDERRAIN]",
+      "ZombieFallTime": "1.5"
+     }
+    }
+   ]
+  }
+ ],
+ "wave_pacing": {
+  "flag_interval": 8,
+  "points": 100,
+  "point_increment": 50
+ },
+ "dynamic_zombies": [
+  {
+   "start_wave": 3,
+   "points": -100,
+   "increment": -40,
+   "pool": [
+    "disco_mech",
+    "football_mech",
+    "future",
+    "future_armor1",
+    "future_armor2",
+    "future_jetpack"
+   ]
+  },
+  {
+   "start_wave": 4,
+   "points": -100,
+   "increment": -25,
+   "pool": [
+    "disco_mech",
+    "football_mech",
+    "future",
+    "future_armor1",
+    "future_armor2",
+    "future_jetpack"
+   ]
+  },
+  {
+   "start_wave": 5,
+   "points": -100,
+   "increment": -10,
+   "pool": [
+    "disco_mech",
+    "football_mech",
+    "future",
+    "future_armor1",
+    "future_armor2",
+    "future_jetpack"
+   ]
+  },
+  {
+   "start_wave": 5,
+   "points": 100,
+   "increment": 20,
+   "pool": [
+    "disco_mech",
+    "football_mech",
+    "future",
+    "future_armor1",
+    "future_armor2",
+    "future_jetpack"
+   ]
+  },
+  {
+   "start_wave": 4,
+   "points": 200,
+   "increment": 40,
+   "pool": [
+    "disco_mech",
+    "football_mech",
+    "future_armor1",
+    "future_armor2",
+    "future_jetpack"
+   ]
+  },
+  {
+   "start_wave": 3,
+   "points": 400,
+   "increment": 60,
+   "pool": [
+    "disco_mech",
+    "football_mech",
+    "future_armor2",
+    "future_jetpack"
+   ]
+  }
+ ],
+ "mowers": true,
+ "scripts": [
+  "StandardIntro"
+ ],
+ "extra": [
+  {
+   "objclass": "SunDropperProperties",
+   "aliases": [
+    "SunDropper"
+   ],
+   "objdata": {
+    "InitialSunDropDelay": 2,
+    "SunCountdownBase": 4,
+    "SunCountdownIncreasePerSun": 0,
+    "SunCountdownMax": 4,
+    "SunCountdownRange": 0
+   }
+  }
+ ]
+}

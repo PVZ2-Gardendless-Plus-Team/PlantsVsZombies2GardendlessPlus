@@ -1558,6 +1558,8 @@ func spawn_projectile(id: StringName, row: int, from: Vector2, source: Node,
 	pr.board = self
 	pr.source = source
 	pr.damage = float(Data.projectile_damage(id))
+	if source is Character:
+		pr.damage *= source.damage_scale
 	pr.from_zombie = source is Zombie
 	pr.direction = direction if direction != 0 else (-1 if pr.from_zombie else 1)
 	pr.kind = id

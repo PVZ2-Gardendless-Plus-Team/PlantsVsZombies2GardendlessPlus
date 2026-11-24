@@ -1,0 +1,380 @@
+{
+ "id": "lod_229",
+ "name": "By Zero",
+ "name_key": "[LOD_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_LOD]",
+ "author": "ZERO",
+ "stage": "DarkStage",
+ "level_of_the_day": true,
+ "waves": [
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "ref",
+     "ref": "RTID(Wave1@CurrentLevel)"
+    },
+    {
+     "kind": "ref",
+     "ref": "RTID(Wave1ModConveyor@CurrentLevel)"
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "ref",
+     "ref": "RTID(Wave2@CurrentLevel)"
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "ref",
+     "ref": "RTID(Wave3@CurrentLevel)"
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "ref",
+     "ref": "RTID(Wave4@CurrentLevel)"
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "ref",
+     "ref": "RTID(Wave5@CurrentLevel)"
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "ref",
+     "ref": "RTID(Wave6@CurrentLevel)"
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "ref",
+     "ref": "RTID(Wave7@CurrentLevel)"
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "ref",
+     "ref": "RTID(Wave8@CurrentLevel)"
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "ref",
+     "ref": "RTID(Wave9@CurrentLevel)"
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "ref",
+     "ref": "RTID(Wave10@CurrentLevel)"
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "ref",
+     "ref": "RTID(Wave11@CurrentLevel)"
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "ref",
+     "ref": "RTID(Wave12@CurrentLevel)"
+    }
+   ]
+  }
+ ],
+ "wave_pacing": {
+  "next_wave_health_min": 0.8,
+  "next_wave_health_max": 0.9
+ },
+ "level_of_the_day_config": {
+  "flags": 10,
+  "waves_per_flag": 4,
+  "points": 1000,
+  "point_increment": 500,
+  "plantfood": 4,
+  "pool": [
+   "dark_armor1",
+   "dark_armor2",
+   "dark_king_veteran",
+   "sky_twin",
+   "dark_armor4",
+   "dark_gargantuar",
+   "sky_electric"
+  ]
+ },
+ "objectives": [
+  {
+   "type": "survive_waves"
+  }
+ ],
+ "minigames": [
+  {
+   "type": "fight_alone",
+   "position": {
+    "m_x": 0,
+    "m_y": 2
+   },
+   "plant_upgrade_list": [
+    {
+     "type": "firegourd",
+     "full_point": 4000,
+     "upgrade_details": {
+      "damage_scale": 10,
+      "shoot_interval_scale": 2
+     }
+    },
+    {
+     "type": "jackolantern",
+     "full_point": 8000,
+     "upgrade_details": {
+      "damage_scale": 7,
+      "shoot_interval_scale": 0.1
+     }
+    },
+    {
+     "type": "firepeashooter",
+     "full_point": 16000,
+     "upgrade_details": {
+      "damage_scale": 5,
+      "shoot_interval_scale": 0.2
+     }
+    },
+    {
+     "type": "pepperpult",
+     "upgrade_details": {
+      "damage_scale": 10,
+      "shoot_interval_scale": 0.1
+     }
+    }
+   ]
+  }
+ ],
+ "railcarts": {
+  "carts": [
+   {
+    "col": 0,
+    "row": 2
+   }
+  ],
+  "rails": [
+   {
+    "col": 0,
+    "row_start": 0,
+    "row_end": 4
+   }
+  ]
+ },
+ "initial": {
+  "grid_items": [
+   {
+    "type": "gravestone_dark",
+    "row": 0,
+    "col": 3
+   },
+   {
+    "type": "gravestone_dark",
+    "row": 0,
+    "col": 4
+   },
+   {
+    "type": "gravestone_dark",
+    "row": 0,
+    "col": 5
+   },
+   {
+    "type": "gravestone_dark",
+    "row": 0,
+    "col": 6
+   },
+   {
+    "type": "gravestone_dark",
+    "row": 0,
+    "col": 7
+   },
+   {
+    "type": "gravestone_dark",
+    "row": 0,
+    "col": 8
+   },
+   {
+    "type": "gravestone_dark",
+    "row": 1,
+    "col": 3
+   },
+   {
+    "type": "gravestone_dark",
+    "row": 1,
+    "col": 4
+   },
+   {
+    "type": "gravestone_dark",
+    "row": 1,
+    "col": 5
+   },
+   {
+    "type": "gravestone_dark",
+    "row": 1,
+    "col": 6
+   },
+   {
+    "type": "gravestone_dark",
+    "row": 1,
+    "col": 7
+   },
+   {
+    "type": "gravestone_dark",
+    "row": 1,
+    "col": 8
+   },
+   {
+    "type": "gravestone_dark",
+    "row": 2,
+    "col": 3
+   },
+   {
+    "type": "gravestone_dark",
+    "row": 2,
+    "col": 4
+   },
+   {
+    "type": "gravestone_dark",
+    "row": 2,
+    "col": 5
+   },
+   {
+    "type": "gravestone_dark",
+    "row": 2,
+    "col": 6
+   },
+   {
+    "type": "gravestone_dark",
+    "row": 2,
+    "col": 7
+   },
+   {
+    "type": "gravestone_dark",
+    "row": 2,
+    "col": 8
+   },
+   {
+    "type": "gravestone_dark",
+    "row": 3,
+    "col": 3
+   },
+   {
+    "type": "gravestone_dark",
+    "row": 3,
+    "col": 4
+   },
+   {
+    "type": "gravestone_dark",
+    "row": 3,
+    "col": 5
+   },
+   {
+    "type": "gravestone_dark",
+    "row": 3,
+    "col": 6
+   },
+   {
+    "type": "gravestone_dark",
+    "row": 3,
+    "col": 7
+   },
+   {
+    "type": "gravestone_dark",
+    "row": 3,
+    "col": 8
+   },
+   {
+    "type": "gravestone_dark",
+    "row": 4,
+    "col": 3
+   },
+   {
+    "type": "gravestone_dark",
+    "row": 4,
+    "col": 4
+   },
+   {
+    "type": "gravestone_dark",
+    "row": 4,
+    "col": 5
+   },
+   {
+    "type": "gravestone_dark",
+    "row": 4,
+    "col": 6
+   },
+   {
+    "type": "gravestone_dark",
+    "row": 4,
+    "col": 7
+   },
+   {
+    "type": "gravestone_dark",
+    "row": 4,
+    "col": 8
+   }
+  ]
+ },
+ "scripts": [
+  "LevelOfTheDayIntro"
+ ],
+ "extra": [
+  {
+   "objclass": "PlantModifierProperties",
+   "aliases": [
+    "PlantMods"
+   ],
+   "objdata": {
+    "List": [
+     {
+      "Type": "jackolantern",
+      "NewObjdata": {
+       "Distance": 6
+      }
+     }
+    ]
+   }
+  }
+ ]
+}

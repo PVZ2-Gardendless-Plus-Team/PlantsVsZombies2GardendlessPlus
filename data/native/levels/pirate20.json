@@ -1,0 +1,1409 @@
+{
+ "id": "pirate20",
+ "name": "[PIRATE_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_PIRATE_SHIP]",
+ "number": 20,
+ "stage": "PirateStage",
+ "objectives": [
+  {
+   "type": "survive_waves",
+   "description": "[STARCHALLENGE_CANNON_MINIGAME]"
+  }
+ ],
+ "minigames": [
+  {
+   "type": "cannon",
+   "base_movement_rate": 130,
+   "base_zombie_kill_score": 100,
+   "buffer_distance": 50,
+   "max_reward_gold": 50,
+   "min_reward_gold": 0,
+   "min_score": 40000,
+   "slowdown_movement_rate": 100,
+   "combo_brackets": [
+    {
+     "audio_cue": "Play_CrazyDave_Short",
+     "score_multiplier": 2,
+     "zombies_killed": 3,
+     "exclamations": [
+      "[DAVE_CANNONMINIGAME_3_KILLED_1]",
+      "[DAVE_CANNONMINIGAME_3_KILLED_2]",
+      "[DAVE_CANNONMINIGAME_3_KILLED_3]"
+     ],
+     "message_color": {
+      "m_alpha": 255,
+      "m_blue": 220,
+      "m_green": 255,
+      "m_red": 220
+     }
+    },
+    {
+     "audio_cue": "Play_CrazyDave_Scream",
+     "score_multiplier": 3,
+     "zombies_killed": 5,
+     "exclamations": [
+      "[DAVE_CANNONMINIGAME_5_KILLED_1]",
+      "[DAVE_CANNONMINIGAME_5_KILLED_2]",
+      "[DAVE_CANNONMINIGAME_5_KILLED_3]"
+     ],
+     "message_color": {
+      "m_alpha": 255,
+      "m_blue": 255,
+      "m_green": 220,
+      "m_red": 220
+     }
+    },
+    {
+     "audio_cue": "Play_CrazyDave_Scream2",
+     "score_multiplier": 4,
+     "zombies_killed": 8,
+     "exclamations": [
+      "[DAVE_CANNONMINIGAME_8_KILLED_1]",
+      "[DAVE_CANNONMINIGAME_8_KILLED_2]",
+      "[DAVE_CANNONMINIGAME_8_KILLED_3]"
+     ],
+     "message_color": {
+      "m_alpha": 255,
+      "m_blue": 220,
+      "m_green": 240,
+      "m_red": 255
+     }
+    },
+    {
+     "audio_cue": "Play_CrazyDave_Crazy",
+     "score_multiplier": 5,
+     "zombies_killed": 12,
+     "exclamations": [
+      "[DAVE_CANNONMINIGAME_12_KILLED_1]",
+      "[DAVE_CANNONMINIGAME_12_KILLED_2]",
+      "[DAVE_CANNONMINIGAME_12_KILLED_3]"
+     ],
+     "message_color": {
+      "m_alpha": 255,
+      "m_blue": 200,
+      "m_green": 200,
+      "m_red": 255
+     }
+    }
+   ],
+   "lanes": [
+    {
+     "spline_points": [
+      {
+       "x": 797,
+       "y": 3
+      },
+      {
+       "x": 475,
+       "y": 100
+      },
+      {
+       "x": 376,
+       "y": 213
+      },
+      {
+       "x": 468,
+       "y": 210
+      },
+      {
+       "x": 423,
+       "y": 167
+      },
+      {
+       "x": 421,
+       "y": 217
+      },
+      {
+       "x": 541,
+       "y": 209
+      },
+      {
+       "x": 510,
+       "y": 171
+      },
+      {
+       "x": 478,
+       "y": 206
+      },
+      {
+       "x": 613,
+       "y": 214
+      },
+      {
+       "x": 592,
+       "y": 175
+      },
+      {
+       "x": 582,
+       "y": 530
+      },
+      {
+       "x": 628,
+       "y": 506
+      },
+      {
+       "x": 532,
+       "y": 475
+      },
+      {
+       "x": 507,
+       "y": 534
+      },
+      {
+       "x": 560,
+       "y": 496
+      },
+      {
+       "x": 464,
+       "y": 477
+      },
+      {
+       "x": 428,
+       "y": 529
+      },
+      {
+       "x": 485,
+       "y": 502
+      },
+      {
+       "x": 400,
+       "y": 473
+      },
+      {
+       "x": 370,
+       "y": 528
+      },
+      {
+       "x": 427,
+       "y": 492
+      },
+      {
+       "x": 378,
+       "y": 310
+      },
+      {
+       "x": 375,
+       "y": 5
+      }
+     ]
+    },
+    {
+     "spline_points": [
+      {
+       "x": 794,
+       "y": 593
+      },
+      {
+       "x": 453,
+       "y": 553
+      },
+      {
+       "x": 371,
+       "y": 482
+      },
+      {
+       "x": 450,
+       "y": 486
+      },
+      {
+       "x": 485,
+       "y": 529
+      },
+      {
+       "x": 415,
+       "y": 522
+      },
+      {
+       "x": 491,
+       "y": 477
+      },
+      {
+       "x": 547,
+       "y": 522
+      },
+      {
+       "x": 503,
+       "y": 515
+      },
+      {
+       "x": 592,
+       "y": 475
+      },
+      {
+       "x": 631,
+       "y": 505
+      },
+      {
+       "x": 581,
+       "y": 522
+      },
+      {
+       "x": 564,
+       "y": 253
+      },
+      {
+       "x": 594,
+       "y": 164
+      },
+      {
+       "x": 613,
+       "y": 217
+      },
+      {
+       "x": 514,
+       "y": 221
+      },
+      {
+       "x": 541,
+       "y": 162
+      },
+      {
+       "x": 550,
+       "y": 206
+      },
+      {
+       "x": 446,
+       "y": 222
+      },
+      {
+       "x": 464,
+       "y": 161
+      },
+      {
+       "x": 485,
+       "y": 207
+      },
+      {
+       "x": 370,
+       "y": 221
+      },
+      {
+       "x": 387,
+       "y": 153
+      },
+      {
+       "x": 396,
+       "y": 273
+      },
+      {
+       "x": 389,
+       "y": 587
+      }
+     ]
+    },
+    {
+     "spline_points": [
+      {
+       "x": 438,
+       "y": 0
+      },
+      {
+       "x": 415,
+       "y": 238
+      },
+      {
+       "x": 457,
+       "y": 249
+      },
+      {
+       "x": 450,
+       "y": 189
+      },
+      {
+       "x": 414,
+       "y": 317
+      },
+      {
+       "x": 430,
+       "y": 379
+      },
+      {
+       "x": 466,
+       "y": 299
+      },
+      {
+       "x": 410,
+       "y": 282
+      },
+      {
+       "x": 422,
+       "y": 444
+      },
+      {
+       "x": 461,
+       "y": 432
+      },
+      {
+       "x": 442,
+       "y": 336
+      },
+      {
+       "x": 409,
+       "y": 486
+      },
+      {
+       "x": 439,
+       "y": 553
+      },
+      {
+       "x": 501,
+       "y": 510
+      },
+      {
+       "x": 594,
+       "y": 464
+      },
+      {
+       "x": 560,
+       "y": 530
+      },
+      {
+       "x": 509,
+       "y": 385
+      },
+      {
+       "x": 603,
+       "y": 411
+      },
+      {
+       "x": 520,
+       "y": 468
+      },
+      {
+       "x": 527,
+       "y": 289
+      },
+      {
+       "x": 612,
+       "y": 332
+      },
+      {
+       "x": 536,
+       "y": 380
+      },
+      {
+       "x": 518,
+       "y": 215
+      },
+      {
+       "x": 598,
+       "y": 197
+      },
+      {
+       "x": 600,
+       "y": 273
+      },
+      {
+       "x": 509,
+       "y": 226
+      },
+      {
+       "x": 552,
+       "y": 4
+      }
+     ]
+    },
+    {
+     "spline_points": [
+      {
+       "x": 411,
+       "y": 595
+      },
+      {
+       "x": 418,
+       "y": 485
+      },
+      {
+       "x": 430,
+       "y": 405
+      },
+      {
+       "x": 464,
+       "y": 481
+      },
+      {
+       "x": 425,
+       "y": 517
+      },
+      {
+       "x": 412,
+       "y": 405
+      },
+      {
+       "x": 432,
+       "y": 364
+      },
+      {
+       "x": 469,
+       "y": 393
+      },
+      {
+       "x": 438,
+       "y": 450
+      },
+      {
+       "x": 405,
+       "y": 323
+      },
+      {
+       "x": 440,
+       "y": 242
+      },
+      {
+       "x": 473,
+       "y": 310
+      },
+      {
+       "x": 432,
+       "y": 329
+      },
+      {
+       "x": 429,
+       "y": 185
+      },
+      {
+       "x": 529,
+       "y": 165
+      },
+      {
+       "x": 571,
+       "y": 221
+      },
+      {
+       "x": 558,
+       "y": 309
+      },
+      {
+       "x": 517,
+       "y": 321
+      },
+      {
+       "x": 536,
+       "y": 226
+      },
+      {
+       "x": 586,
+       "y": 342
+      },
+      {
+       "x": 561,
+       "y": 438
+      },
+      {
+       "x": 512,
+       "y": 414
+      },
+      {
+       "x": 542,
+       "y": 355
+      },
+      {
+       "x": 582,
+       "y": 485
+      },
+      {
+       "x": 548,
+       "y": 542
+      },
+      {
+       "x": 510,
+       "y": 496
+      },
+      {
+       "x": 553,
+       "y": 433
+      },
+      {
+       "x": 598,
+       "y": 595
+      }
+     ]
+    },
+    {
+     "spline_points": [
+      {
+       "x": 850,
+       "y": 328
+      },
+      {
+       "x": 713,
+       "y": 227
+      },
+      {
+       "x": 564,
+       "y": 167
+      },
+      {
+       "x": 488,
+       "y": 298
+      },
+      {
+       "x": 524,
+       "y": 515
+      },
+      {
+       "x": 645,
+       "y": 403
+      },
+      {
+       "x": 595,
+       "y": 207
+      },
+      {
+       "x": 457,
+       "y": 171
+      },
+      {
+       "x": 404,
+       "y": 339
+      },
+      {
+       "x": 430,
+       "y": 509
+      },
+      {
+       "x": 586,
+       "y": 364
+      },
+      {
+       "x": 543,
+       "y": 222
+      },
+      {
+       "x": 407,
+       "y": 154
+      },
+      {
+       "x": 366,
+       "y": 389
+      },
+      {
+       "x": 392,
+       "y": 595
+      }
+     ]
+    }
+   ],
+   "resource_group_names": [],
+   "row_has_cannon": [
+    1,
+    1,
+    1,
+    1,
+    1
+   ]
+  }
+ ],
+ "waves": [
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "seagull",
+     "row": 1
+    },
+    {
+     "type": "seagull",
+     "row": 1
+    },
+    {
+     "type": "seagull",
+     "row": 1
+    },
+    {
+     "type": "seagull",
+     "row": 1
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "seagull",
+     "row": 2
+    },
+    {
+     "type": "seagull",
+     "row": 2
+    },
+    {
+     "type": "seagull",
+     "row": 2
+    },
+    {
+     "type": "seagull",
+     "row": 2
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "seagull",
+     "row": 1
+    },
+    {
+     "type": "seagull",
+     "row": 1
+    },
+    {
+     "type": "seagull",
+     "row": 1
+    },
+    {
+     "type": "seagull",
+     "row": 1
+    },
+    {
+     "type": "seagull",
+     "row": 2
+    },
+    {
+     "type": "seagull",
+     "row": 2
+    },
+    {
+     "type": "seagull",
+     "row": 2
+    },
+    {
+     "type": "seagull",
+     "row": 2
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "seagull",
+     "row": 3
+    },
+    {
+     "type": "seagull",
+     "row": 3
+    },
+    {
+     "type": "seagull",
+     "row": 3
+    },
+    {
+     "type": "seagull",
+     "row": 3
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "seagull",
+     "row": 4
+    },
+    {
+     "type": "seagull",
+     "row": 4
+    },
+    {
+     "type": "seagull",
+     "row": 4
+    },
+    {
+     "type": "seagull",
+     "row": 4
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "seagull",
+     "row": 4
+    },
+    {
+     "type": "seagull",
+     "row": 4
+    },
+    {
+     "type": "seagull",
+     "row": 4
+    },
+    {
+     "type": "seagull",
+     "row": 4
+    },
+    {
+     "type": "seagull",
+     "row": 3
+    },
+    {
+     "type": "seagull",
+     "row": 3
+    },
+    {
+     "type": "seagull",
+     "row": 3
+    },
+    {
+     "type": "seagull",
+     "row": 3
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "seagull",
+     "row": 1
+    },
+    {
+     "type": "seagull",
+     "row": 1
+    },
+    {
+     "type": "seagull",
+     "row": 1
+    },
+    {
+     "type": "seagull",
+     "row": 1
+    },
+    {
+     "type": "seagull",
+     "row": 4
+    },
+    {
+     "type": "seagull",
+     "row": 4
+    },
+    {
+     "type": "seagull",
+     "row": 4
+    },
+    {
+     "type": "seagull",
+     "row": 4
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "seagull",
+     "row": 2
+    },
+    {
+     "type": "seagull",
+     "row": 2
+    },
+    {
+     "type": "seagull",
+     "row": 2
+    },
+    {
+     "type": "seagull",
+     "row": 2
+    },
+    {
+     "type": "seagull",
+     "row": 3
+    },
+    {
+     "type": "seagull",
+     "row": 3
+    },
+    {
+     "type": "seagull",
+     "row": 3
+    },
+    {
+     "type": "seagull",
+     "row": 3
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "seagull",
+     "row": 4
+    },
+    {
+     "type": "seagull",
+     "row": 4
+    },
+    {
+     "type": "seagull",
+     "row": 4
+    },
+    {
+     "type": "seagull",
+     "row": 4
+    },
+    {
+     "type": "seagull",
+     "row": 4
+    },
+    {
+     "type": "seagull",
+     "row": 5
+    },
+    {
+     "type": "seagull",
+     "row": 5
+    },
+    {
+     "type": "seagull",
+     "row": 5
+    },
+    {
+     "type": "seagull",
+     "row": 5
+    },
+    {
+     "type": "seagull",
+     "row": 5
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "seagull",
+     "row": 2
+    },
+    {
+     "type": "seagull",
+     "row": 2
+    },
+    {
+     "type": "seagull",
+     "row": 2
+    },
+    {
+     "type": "seagull",
+     "row": 2
+    },
+    {
+     "type": "seagull",
+     "row": 2
+    },
+    {
+     "type": "seagull",
+     "row": 4
+    },
+    {
+     "type": "seagull",
+     "row": 4
+    },
+    {
+     "type": "seagull",
+     "row": 4
+    },
+    {
+     "type": "seagull",
+     "row": 4
+    },
+    {
+     "type": "seagull",
+     "row": 4
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "seagull",
+     "row": 1
+    },
+    {
+     "type": "seagull",
+     "row": 1
+    },
+    {
+     "type": "seagull",
+     "row": 1
+    },
+    {
+     "type": "seagull",
+     "row": 1
+    },
+    {
+     "type": "seagull",
+     "row": 1
+    },
+    {
+     "type": "seagull",
+     "row": 1
+    },
+    {
+     "type": "seagull",
+     "row": 5
+    },
+    {
+     "type": "seagull",
+     "row": 5
+    },
+    {
+     "type": "seagull",
+     "row": 5
+    },
+    {
+     "type": "seagull",
+     "row": 5
+    },
+    {
+     "type": "seagull",
+     "row": 5
+    },
+    {
+     "type": "seagull",
+     "row": 5
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "seagull",
+     "row": 3
+    },
+    {
+     "type": "seagull",
+     "row": 3
+    },
+    {
+     "type": "seagull",
+     "row": 3
+    },
+    {
+     "type": "seagull",
+     "row": 3
+    },
+    {
+     "type": "seagull",
+     "row": 3
+    },
+    {
+     "type": "seagull",
+     "row": 3
+    },
+    {
+     "type": "seagull",
+     "row": 5
+    },
+    {
+     "type": "seagull",
+     "row": 5
+    },
+    {
+     "type": "seagull",
+     "row": 5
+    },
+    {
+     "type": "seagull",
+     "row": 5
+    },
+    {
+     "type": "seagull",
+     "row": 5
+    },
+    {
+     "type": "seagull",
+     "row": 5
+    },
+    {
+     "type": "seagull",
+     "row": 1
+    },
+    {
+     "type": "seagull",
+     "row": 1
+    },
+    {
+     "type": "seagull",
+     "row": 1
+    },
+    {
+     "type": "seagull",
+     "row": 1
+    },
+    {
+     "type": "seagull",
+     "row": 1
+    },
+    {
+     "type": "seagull",
+     "row": 1
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "seagull",
+     "row": 4
+    },
+    {
+     "type": "seagull",
+     "row": 4
+    },
+    {
+     "type": "seagull",
+     "row": 4
+    },
+    {
+     "type": "seagull",
+     "row": 4
+    },
+    {
+     "type": "seagull",
+     "row": 4
+    },
+    {
+     "type": "seagull",
+     "row": 4
+    },
+    {
+     "type": "seagull",
+     "row": 4
+    },
+    {
+     "type": "seagull",
+     "row": 2
+    },
+    {
+     "type": "seagull",
+     "row": 2
+    },
+    {
+     "type": "seagull",
+     "row": 2
+    },
+    {
+     "type": "seagull",
+     "row": 2
+    },
+    {
+     "type": "seagull",
+     "row": 2
+    },
+    {
+     "type": "seagull",
+     "row": 2
+    },
+    {
+     "type": "seagull",
+     "row": 2
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "seagull",
+     "row": 4
+    },
+    {
+     "type": "seagull",
+     "row": 4
+    },
+    {
+     "type": "seagull",
+     "row": 4
+    },
+    {
+     "type": "seagull",
+     "row": 4
+    },
+    {
+     "type": "seagull",
+     "row": 4
+    },
+    {
+     "type": "seagull",
+     "row": 4
+    },
+    {
+     "type": "seagull",
+     "row": 4
+    },
+    {
+     "type": "seagull",
+     "row": 4
+    },
+    {
+     "type": "seagull",
+     "row": 4
+    },
+    {
+     "type": "seagull",
+     "row": 1
+    },
+    {
+     "type": "seagull",
+     "row": 1
+    },
+    {
+     "type": "seagull",
+     "row": 1
+    },
+    {
+     "type": "seagull",
+     "row": 1
+    },
+    {
+     "type": "seagull",
+     "row": 1
+    },
+    {
+     "type": "seagull",
+     "row": 1
+    },
+    {
+     "type": "seagull",
+     "row": 1
+    },
+    {
+     "type": "seagull",
+     "row": 1
+    },
+    {
+     "type": "seagull",
+     "row": 1
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "seagull",
+     "row": 5
+    },
+    {
+     "type": "seagull",
+     "row": 5
+    },
+    {
+     "type": "seagull",
+     "row": 5
+    },
+    {
+     "type": "seagull",
+     "row": 5
+    },
+    {
+     "type": "seagull",
+     "row": 5
+    },
+    {
+     "type": "seagull",
+     "row": 5
+    },
+    {
+     "type": "seagull",
+     "row": 5
+    },
+    {
+     "type": "seagull",
+     "row": 5
+    },
+    {
+     "type": "seagull",
+     "row": 5
+    },
+    {
+     "type": "seagull",
+     "row": 2
+    },
+    {
+     "type": "seagull",
+     "row": 2
+    },
+    {
+     "type": "seagull",
+     "row": 2
+    },
+    {
+     "type": "seagull",
+     "row": 2
+    },
+    {
+     "type": "seagull",
+     "row": 2
+    },
+    {
+     "type": "seagull",
+     "row": 2
+    },
+    {
+     "type": "seagull",
+     "row": 2
+    },
+    {
+     "type": "seagull",
+     "row": 2
+    },
+    {
+     "type": "seagull",
+     "row": 2
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "seagull",
+     "row": 1
+    },
+    {
+     "type": "seagull",
+     "row": 2
+    },
+    {
+     "type": "seagull",
+     "row": 3
+    },
+    {
+     "type": "seagull",
+     "row": 4
+    },
+    {
+     "type": "seagull",
+     "row": 5
+    },
+    {
+     "type": "seagull",
+     "row": 1
+    },
+    {
+     "type": "seagull",
+     "row": 2
+    },
+    {
+     "type": "seagull",
+     "row": 3
+    },
+    {
+     "type": "seagull",
+     "row": 4
+    },
+    {
+     "type": "seagull",
+     "row": 5
+    },
+    {
+     "type": "seagull",
+     "row": 5
+    },
+    {
+     "type": "seagull",
+     "row": 5
+    },
+    {
+     "type": "seagull",
+     "row": 5
+    },
+    {
+     "type": "seagull",
+     "row": 5
+    },
+    {
+     "type": "seagull",
+     "row": 4
+    },
+    {
+     "type": "seagull",
+     "row": 4
+    },
+    {
+     "type": "seagull",
+     "row": 4
+    },
+    {
+     "type": "seagull",
+     "row": 4
+    },
+    {
+     "type": "seagull",
+     "row": 3
+    },
+    {
+     "type": "seagull",
+     "row": 3
+    },
+    {
+     "type": "seagull",
+     "row": 3
+    },
+    {
+     "type": "seagull",
+     "row": 3
+    },
+    {
+     "type": "seagull",
+     "row": 2
+    },
+    {
+     "type": "seagull",
+     "row": 2
+    },
+    {
+     "type": "seagull",
+     "row": 2
+    },
+    {
+     "type": "seagull",
+     "row": 2
+    },
+    {
+     "type": "seagull",
+     "row": 1
+    },
+    {
+     "type": "seagull",
+     "row": 1
+    },
+    {
+     "type": "seagull",
+     "row": 1
+    },
+    {
+     "type": "seagull",
+     "row": 1
+    }
+   ]
+  }
+ ],
+ "wave_pacing": {
+  "flag_interval": 16,
+  "points": 600,
+  "point_increment": 60,
+  "suppress_flag": true
+ },
+ "extra": [
+  {
+   "objclass": "PirateCannonTutorialProperties",
+   "aliases": [
+    "PirateCannonTutorial"
+   ],
+   "objdata": {
+    "ShowTutorial": false,
+    "ResourceGroupNames": []
+   }
+  }
+ ]
+}

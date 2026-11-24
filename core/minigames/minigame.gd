@@ -61,6 +61,12 @@ func drops_sky_sun() -> bool:
 	return true
 
 
+## Called in place of each sky sun. A mode that drops something else - Sun
+## Bomb's bombs - does so here and returns true.
+func drop_from_sky() -> bool:
+	return false
+
+
 ## Whether the player gets a shovel and plant food in this mode.
 func allows_shovel() -> bool:
 	return true

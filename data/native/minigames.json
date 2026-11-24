@@ -362,6 +362,180 @@
    ]
   },
   {
+   "id": "cannon",
+   "name": "Cannon Away",
+   "description": "Reach the target score",
+   "levels": [
+    {
+     "id": "pirate20_1",
+     "name": "Pirate Seas 1"
+    },
+    {
+     "id": "pirate3",
+     "name": "Pirate Seas 2"
+    },
+    {
+     "id": "pirate11",
+     "name": "Pirate Seas 3"
+    },
+    {
+     "id": "pirate20",
+     "name": "Pirate Seas 4"
+    },
+    {
+     "id": "lod_230",
+     "name": "Sky City 1"
+    }
+   ]
+  },
+  {
+   "id": "camel",
+   "name": "Camel Match",
+   "description": "Match symbols to destroy the zombies",
+   "levels": [
+    {
+     "id": "egypt7",
+     "name": "Ancient Egypt 1"
+    },
+    {
+     "id": "egypt16",
+     "name": "Ancient Egypt 2"
+    },
+    {
+     "id": "egypt23",
+     "name": "Ancient Egypt 3"
+    }
+   ]
+  },
+  {
+   "id": "cowboy",
+   "name": "Corral",
+   "description": "Survive the zombie attack",
+   "levels": [
+    {
+     "id": "ghostpepper2",
+     "name": "Neon Mixtape Tour 1"
+    },
+    {
+     "id": "poisonpeashooter2",
+     "name": "Neon Mixtape Tour 2"
+    },
+    {
+     "id": "lod_lunar_16",
+     "name": "Bonus 1"
+    },
+    {
+     "id": "atombomb2",
+     "name": "Bonus 2"
+    },
+    {
+     "id": "cowboy12_1",
+     "name": "Bonus 3"
+    },
+    {
+     "id": "cowboy4",
+     "name": "Bonus 4"
+    },
+    {
+     "id": "arma7",
+     "name": "Bonus 5"
+    },
+    {
+     "id": "cowboy12",
+     "name": "Bonus 6"
+    },
+    {
+     "id": "cowboy20",
+     "name": "Bonus 7"
+    }
+   ]
+  },
+  {
+   "id": "fight_alone",
+   "name": "Fight Alone",
+   "description": "Survive with the only plant you've got",
+   "levels": [
+    {
+     "id": "lod_226",
+     "name": "Far Future 1"
+    },
+    {
+     "id": "future10_1",
+     "name": "Far Future 2"
+    },
+    {
+     "id": "future10_2",
+     "name": "Far Future 3"
+    },
+    {
+     "id": "future10_3",
+     "name": "Far Future 4"
+    },
+    {
+     "id": "lod_200",
+     "name": "Dark Ages 1"
+    },
+    {
+     "id": "lod_229",
+     "name": "Dark Ages 2"
+    }
+   ]
+  },
+  {
+   "id": "sun_bomb",
+   "name": "Sun Bombs",
+   "description": "Survive while Sun Bombs fall",
+   "levels": [
+    {
+     "id": "conceal2",
+     "name": "Far Future 1"
+    },
+    {
+     "id": "future4",
+     "name": "Far Future 2"
+    },
+    {
+     "id": "doomshroom5",
+     "name": "Far Future 3"
+    },
+    {
+     "id": "future19",
+     "name": "Far Future 4"
+    },
+    {
+     "id": "future24",
+     "name": "Far Future 5"
+    },
+    {
+     "id": "future30",
+     "name": "Far Future 6"
+    },
+    {
+     "id": "future34",
+     "name": "Far Future 7"
+    },
+    {
+     "id": "mirrornut5",
+     "name": "Neon Mixtape Tour 1"
+    },
+    {
+     "id": "arma4",
+     "name": "Bonus 1"
+    }
+   ]
+  },
+  {
+   "id": "rhythm",
+   "name": "Rhythm",
+   "description": "Smash the zombies to the beat",
+   "levels": [
+    {
+     "id": "rhythm1",
+     "name": "Neon Mixtape Tour 1"
+    }
+   ]
+  },
+  {
    "id": "endless",
    "name": "Endless Zones",
    "description": "Survive as many levels as you can",

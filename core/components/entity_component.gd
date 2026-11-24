@@ -55,7 +55,7 @@ func cfg_range(key: StringName, fallback: float = 0.0) -> float:
 func scaled(seconds: float) -> float:
 	if host == null:
 		return seconds
-	return seconds / maxf(host.attack_rate * host.suppression, 0.01)
+	return seconds / maxf(host.attack_rate * host.suppression * host.fire_rate_scale, 0.01)
 
 
 ## Whether this component takes over the host's attack. A zombie whose attack

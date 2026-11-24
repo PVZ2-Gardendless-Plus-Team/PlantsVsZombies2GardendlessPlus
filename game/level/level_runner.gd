@@ -359,6 +359,15 @@ func minigames_allow(rule: StringName) -> bool:
 	return true
 
 
+## Lets a mode drop something else from the sky in place of sun: Sun Bomb's
+## falling bombs. True if one did.
+func _minigame_drops_from_sky() -> bool:
+	for m in minigames:
+		if m.drop_from_sky():
+			return true
+	return false
+
+
 ## Offers a picked packet to the modes; true if one spent it.
 func minigame_use_seed(id: StringName) -> bool:
 	for m in minigames:
@@ -511,7 +520,7 @@ func _process(delta: float) -> void:
 
 	_sun_timer -= delta
 	if _sun_timer <= 0.0:
-		if minigames_allow(&"drops_sky_sun"):
+		if minigames_allow(&"drops_sky_sun") and not _minigame_drops_from_sky():
 			board.drop_sun_from_sky()
 		_sun_timer = _sun_cycle()
 	features.tick(delta)

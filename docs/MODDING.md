@@ -960,6 +960,12 @@ the level and configured from data like an objective:
 | `vasebreaker` | `min_column_index`, `max_column_index`, `vases`, `num_colored_plant_vases`, `num_colored_zombie_vases` | click vases to break them; their plants go on the belt; won once every vase is broken |
 | `beghouled` | `matches_to_win`, `initial_plants`, `upgrade_map`, `preset_plant_list`, `stages` | swap neighbouring plants to match three; the bank sells upgrades |
 | `endless` | `max_flag_wave`, `level_designers` | waves built from wave points, level after level, forever; the best streak is kept |
+| `cannon` | `min_score`, `base_zombie_kill_score`, `combo_brackets`, `row_has_cannon` | tap coconut cannons; kills score, many in one shot score more; the target must be reached |
+| `camel` | `card_types_used`, `card_matching_time`, `card_no_match_time`, `combo_counter` | tap touch camels to turn their planks; two alike fell both |
+| `cowboy` | | each wave stands waiting until the player plants, and the next waits for it to be cleared |
+| `fight_alone` | `position`, `plant_upgrade_list` | one plant only; the damage it deals grows it into the next on the list |
+| `sun_bomb` | `zombie_damage`, `zombie_bomb_explosion_radius`, `plant_damage`, `plant_bomb_explosion_radius` | the sky drops sun bombs instead of sun |
+| `rhythm` | `target_column`, `zombies`, `music_name`, `time_offset` | zombies glide in to the beat; tap the phat beets to smash them |
 
 The keys are PVZGE's module fields in snake_case, which is what
 `tools/import_levels.py` writes. Projectile seed packets
@@ -968,7 +974,7 @@ ball and vanish when placed.
 
 A pack adds or replaces a mode as `minigames/<type>.gd`, extending
 `Minigame`. The hooks it can override say how the level changes:
-`holds_waves()`, `drops_sky_sun()`, `allows_shovel()`, `allows_plant_food()`,
+`holds_waves()`, `drops_sky_sun()`, `drop_from_sky()`, `allows_shovel()`, `allows_plant_food()`,
 `skips_seed_chooser()`, `uses_belt()`, `seeds()`, `use_seed(id)`,
 `placement_refusal()`, `handle_click(row, col)`, `is_met()`, `is_failed()`,
 `describe()`, `start_word()`, `intro_text()`, and `save_state()` /
