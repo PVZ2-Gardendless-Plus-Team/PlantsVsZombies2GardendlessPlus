@@ -298,7 +298,10 @@ func set_currency(kind: StringName, total: int) -> void:
 ## for state that is not a currency, a collection or a plant. The copy is the
 ## caller's; hand it back with `set_section` to keep changes.
 func section(name: StringName) -> Dictionary:
-	var value: Variant = _progress.get("section_" + String(name), {})
+	# Zen Garden saves made before the two section helpers were merged sit
+	# under the bare name.
+	var value: Variant = _progress.get("section_" + String(name),
+			_progress.get(String(name), {}))
 	return (value as Dictionary).duplicate(true) if value is Dictionary else {}
 
 
@@ -377,19 +380,9 @@ func add_plant_boost(plant_id: StringName, amount: int = 1) -> int:
 	return total
 
 
-# --- sections ---------------------------------------------------------------
-
-## A screen's own saved state, kept whole under `name` in the progress file -
-## the Zen Garden's plants and slots. A copy: change it and hand it back to
-## `store_section`.
-func section(name: StringName) -> Dictionary:
-	var data: Variant = _progress.get(String(name), {})
-	return (data as Dictionary).duplicate(true) if data is Dictionary else {}
-
-
+## The Zen Garden's name for `set_section`.
 func store_section(name: StringName, data: Dictionary) -> void:
-	_progress[String(name)] = data.duplicate(true)
-	_save_progress()
+	set_section(name, data)
 
 
 ## The best score kept under `key` (an endless zone's longest streak), or 0.
