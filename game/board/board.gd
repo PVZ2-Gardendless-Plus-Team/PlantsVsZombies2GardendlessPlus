@@ -1847,17 +1847,14 @@ func click(at: Vector2) -> void:
 		aim_at(world_to_row(at.y), world_to_col(at.x))
 		get_viewport().set_input_as_handled()
 		return
-<<<<<<< HEAD
 	if selected_seed.is_empty() and not shovel_active:
 		for handler in click_handlers:
 			if handler.call(world_to_row(at.y), world_to_col(at.x)):
 				get_viewport().set_input_as_handled()
 				return
-=======
 	if selected_seed.is_empty() and not shovel_active and press_mower(at):
 		get_viewport().set_input_as_handled()
 		return
->>>>>>> origin/master
 	if selected_seed.is_empty() and not shovel_active \
 			and tap_plant(world_to_row(at.y), world_to_col(at.x)):
 		get_viewport().set_input_as_handled()

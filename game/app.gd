@@ -48,7 +48,6 @@ func show_world_map(campaign_id: StringName = &"") -> void:
 	_swap(map)
 
 
-<<<<<<< HEAD
 ## The minigames screen, opened on `mode` (or the first mode).
 func show_minigames(mode: StringName = &"") -> void:
 	var menu := MinigameMenu.new()
@@ -65,10 +64,6 @@ func _play_minigame(level_id: StringName, menu: MinigameMenu) -> void:
 	play_level(level_id, func(): show_minigames(mode))
 
 
-## Plays a level. `back` is where leaving it for the map goes; by default
-## the level's world on the map.
-func play_level(level_id: StringName, back: Callable = Callable()) -> void:
-=======
 ## PVZGE's almanac is reached from the world map and returns to it.
 func show_almanac(campaign_id: StringName = &"") -> void:
 	var almanac := AlmanacScreen.new()
@@ -76,8 +71,9 @@ func show_almanac(campaign_id: StringName = &"") -> void:
 	_swap(almanac)
 
 
-func play_level(level_id: StringName) -> void:
->>>>>>> origin/master
+## Plays a level. `back` is where leaving it for the map goes; by default
+## the level's world on the map.
+func play_level(level_id: StringName, back: Callable = Callable()) -> void:
 	var campaign := Data.campaign_for_level(level_id)
 	var level := LEVEL_SCENE.instantiate()
 	level.campaign_id = campaign.id if campaign != null else &""
