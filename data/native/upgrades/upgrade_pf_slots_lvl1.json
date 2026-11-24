@@ -1,0 +1,16 @@
+{
+ "id": "upgrade_pf_slots_lvl1",
+ "order": 2,
+ "type": "pf_slot",
+ "amount": 1,
+ "world": "egypt",
+ "sprite": "PlantfoodSlot",
+ "name": {
+  "en": "Plantfood Slot Bonus",
+  "zh": "叶绿素容量奖励"
+ },
+ "description": {
+  "en": "Hold onto one more Plant Food during a level!",
+  "zh": "可额外持有一枚叶绿素！"
+ }
+}

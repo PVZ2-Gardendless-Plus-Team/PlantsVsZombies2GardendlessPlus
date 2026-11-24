@@ -1,0 +1,44 @@
+{
+ "id": "celerystalker",
+ "name": {
+  "en": "Celery Stalker",
+  "zh": "潜伏芹菜"
+ },
+ "brief": {
+  "en": "Pops up and bashes zombies from behind",
+  "zh": "身后有僵尸时冒出并造成伤害"
+ },
+ "description": {
+  "en": "Celery Stalkers wait until zombies pass, then pop up and bash them from behind.",
+  "zh": "潜伏芹菜会等待僵尸走过，在他们走到身后时冒出并抽打他们。"
+ },
+ "chat": {
+  "en": "Celery Stalker resents the implication that there's anything unsavory about his attack style. He simply believes that discretion is the better part of vegetation.",
+  "zh": "潜伏芹菜非常讨厌别人说他的攻击方式没特色。他觉得保持低调对植物来说更重要。"
+ },
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 25
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "Close Backwards",
+    "zh": "靠近身后时"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

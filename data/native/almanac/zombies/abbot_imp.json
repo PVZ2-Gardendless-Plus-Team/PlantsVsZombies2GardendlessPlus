@@ -1,0 +1,46 @@
+{
+ "id": "abbot_imp",
+ "name": {
+  "en": "Abbot Imp",
+  "zh": "住持小鬼"
+ },
+ "world": "kongfu",
+ "description": {
+  "en": "A genius that learns Qigong well though he's really young.",
+  "zh": "年轻的天才，极大程度地掌握气功运用。"
+ },
+ "chat": {
+  "en": "He was willing to stand on the front lines. Was it this spirit that made him a genius, or did such talent forge this spirit?",
+  "zh": "他甘愿站在前线，究竟是这种精神让他成为天才，还是他的天赋铸就这种精神？"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "swiftly enters your lawn and repels all projectiles",
+    "zh": "快速进入你的草坪，排开所有的弹射物"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.5,
+   "text": {
+    "en": "Protected",
+    "zh": "加强"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.6,
+   "text": {
+    "en": "Hungry",
+    "zh": "饥渴"
+   }
+  }
+ ]
+}

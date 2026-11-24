@@ -1,0 +1,44 @@
+{
+ "id": "slingpea",
+ "name": {
+  "en": "Sling Pea",
+  "zh": "豌豆迫击炮"
+ },
+ "brief": {
+  "en": "Fires 5 peas at whole board",
+  "zh": "向全场发射 5 颗豌豆"
+ },
+ "description": {
+  "en": "Sling Peas fire 5 peas in a burst, targeting the zombies closest to your house each time.",
+  "zh": "豌豆迫击炮每次朝离房子最近的僵尸发射 5 颗豌豆。"
+ },
+ "chat": {
+  "en": "Sling Pea keeps a keen eye on the whole battle space. He's alert and attentive. \"If something slips through,\" he muses quietly, \"it would be my fault. And I just couldn't forgive myself if that happened.\"",
+  "zh": "豌豆迫击炮对整片战场保持着敏锐的观察，他时刻警觉而专注。“如果有漏网之鱼，”他低声沉吟，“那都是我的过错。若真发生那种情况，我绝不会原谅自己。”"
+ },
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 20
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "Full Board",
+    "zh": "全屏"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

@@ -1,0 +1,46 @@
+{
+ "id": "kongfu_hammer",
+ "name": {
+  "en": "Hammer Zombie",
+  "zh": "捶鼓僵尸"
+ },
+ "world": "kongfu",
+ "description": {
+  "en": "Hammer Zombie rotates when a projectile hits him while walking.",
+  "zh": "捶鼓僵尸被直射子弹击中时开始旋转。"
+ },
+ "chat": {
+  "en": "Every joint between his bones can rotate with ease — given by years of hammer-swinging practice.",
+  "zh": "他身上的所有关节都能自由旋转，这可是常年用巧劲连续捶鼓积累出来的。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "rotates and returns projectiles that are shot straightly ahead",
+    "zh": "旋转并反弹直射过来的子弹"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.5,
+   "text": {
+    "en": "Protected",
+    "zh": "加强"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ]
+}

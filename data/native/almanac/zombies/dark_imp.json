@@ -1,0 +1,34 @@
+{
+ "id": "dark_imp",
+ "name": {
+  "en": "Imp Monk Zombie",
+  "zh": "僧侣小鬼"
+ },
+ "world": "dark",
+ "description": {
+  "en": "Summoned past most of your defenses, then shambles forward.",
+  "zh": "登场时通常越过你的大部分防御，然后摇摇晃晃地向前走。"
+ },
+ "chat": {
+  "en": "Frankly, Imp Monk Zombie decided to don the robes because of the sweet haircut that went with them.",
+  "zh": "老实说，僧侣小鬼决定穿上长袍，是因为它的发型很可爱。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.25,
+   "text": {
+    "en": "Average",
+    "zh": "一般"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.6,
+   "text": {
+    "en": "Hungry",
+    "zh": "饥渴"
+   }
+  }
+ ]
+}

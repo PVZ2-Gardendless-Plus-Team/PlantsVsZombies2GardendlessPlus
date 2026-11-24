@@ -1,0 +1,41 @@
+{
+ "id": "spearmint",
+ "name": {
+  "en": "Spear-mint",
+  "zh": "穿刺薄荷"
+ },
+ "brief": {
+  "en": "Boosts piercing plants",
+  "zh": "强化穿刺植物"
+ },
+ "description": {
+  "en": "Spear-mints generate a column of saws from the house and provide a temporary boost to all Spear-mint Family plants on the lawn.",
+  "zh": "穿刺薄荷在种植时从草坪左侧产生一列锋利的圆锯，并为所有穿刺家族植物带来增益效果。"
+ },
+ "chat": {
+  "en": "\"Slash!\" Spear-mint enthuses. \"Slishy-slashy-slice!\" she adds, wanting to make sure she's getting her point across. She wants to be very clear on this.",
+  "zh": "“斩！” 穿刺薄荷激昂道。“唰唰嚓嚓——切！”她补充道，为了确保自己的意思传达到位，并且表达得极其明确。"
+ },
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "duration",
+   "value": 18
+  },
+  {
+   "type": "special",
+   "text": {
+    "en": "Saw Attack",
+    "zh": "锯齿攻击"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

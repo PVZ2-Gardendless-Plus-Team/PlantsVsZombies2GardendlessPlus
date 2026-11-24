@@ -1,0 +1,56 @@
+{
+ "id": "scaredyshroom",
+ "name": {
+  "en": "Scaredy Shroom",
+  "zh": "胆小菇"
+ },
+ "brief": {
+  "en": "Shoots spore projectiles at the zombies, but hides when they get too close",
+  "zh": "向僵尸发射子弹，但是当僵尸靠近时躲避"
+ },
+ "description": {
+  "en": "A timid mushroom that shoots spore projectiles at zombies in its lane, but hides when they get too close.",
+  "zh": "向僵尸发射孢子的胆小的蘑菇，当僵尸靠近身边时躲避起来。"
+ },
+ "chat": {
+  "en": "\"How did I get talked into this? I wish I was at home.\"",
+  "zh": "“我当初为什么会被说服站在这里？我现在只想回家啊！”"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "stops attacking when zombies appears around",
+    "zh": "有僵尸在附近时停止攻击"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 20
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "Straight",
+    "zh": "直线"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

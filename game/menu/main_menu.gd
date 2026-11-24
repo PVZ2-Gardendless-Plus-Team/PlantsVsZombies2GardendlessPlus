@@ -52,7 +52,7 @@ func _ready() -> void:
 
 	var resume := latest_save()
 	if resume != &"":
-		var b := MenuUI.button("Continue: %s" % level_name(resume),
+		var b := MenuUI.button(tr("Continue: %s") % level_name(resume),
 				continue_requested.emit.bind(resume), Vector2(372, 54), &"purple")
 		b.name = "Continue"
 		b.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
@@ -90,8 +90,8 @@ func _ready() -> void:
 		add_child(quit)
 
 	var mods := Data.mod_order().size() - 1    # "base" is not a mod
-	var footer := MenuUI.label("Unofficial fan work - not affiliated with "
-			+ "PopCap Games or Electronic Arts.    %d mod(s) enabled" % mods, 14)
+	var footer := MenuUI.label(tr("Unofficial fan work - not affiliated with "
+			+ "PopCap Games or Electronic Arts.    %d mod(s) enabled") % mods, 14)
 	footer.modulate.a = 0.8
 	footer.set_anchors_and_offsets_preset(Control.PRESET_TOP_WIDE)
 	footer.offset_top = 6
@@ -127,7 +127,7 @@ static func latest_save() -> StringName:
 
 static func level_name(level_id: StringName) -> String:
 	var level := Data.level(level_id)
-	return str(level.get("name", level_id))
+	return TranslationServer.translate(str(level.get("name", level_id)))
 
 
 func _open_settings() -> void:

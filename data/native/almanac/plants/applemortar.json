@@ -1,0 +1,51 @@
+{
+ "id": "applemortar",
+ "name": {
+  "en": "Apple Mortar",
+  "zh": "苹果迫击炮"
+ },
+ "brief": {
+  "en": "Lobs stunning cores down three lanes",
+  "zh": "向三行投射眩晕的苹果核"
+ },
+ "description": {
+  "en": "Apple Mortars lob apple cores that damage and briefly stun zombies over three lanes.",
+  "zh": "苹果迫击炮向邻近三行发射有轻微眩晕效果的苹果核子弹。"
+ },
+ "chat": {
+  "en": "Apple Mortar stuns three zombies dead in their tracks. SPAF! That'll show 'em! That'll show ALL of them!",
+  "zh": "苹果迫击炮让三个僵尸死死的定在原地。啪！这就是杀鸡儆猴！让别的僵尸好好看清楚我的威力！"
+ },
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 30
+  },
+  {
+   "type": "special",
+   "text": {
+    "en": "Stun",
+    "zh": "眩晕"
+   }
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "Multi-Lane",
+    "zh": "多行"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

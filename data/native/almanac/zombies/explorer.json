@@ -1,0 +1,60 @@
+{
+ "id": "explorer",
+ "name": {
+  "en": "Explorer Zombie",
+  "zh": "探险家僵尸"
+ },
+ "world": "egypt",
+ "description": {
+  "en": "Carries a torch that can instantly destroy your plants.",
+  "zh": "手持能秒杀你的植物的火把。"
+ },
+ "chat": {
+  "en": "His impressive friendly mutton chops has always kept food in them for weeks, making sure his explorations are filled with snacks.",
+  "zh": "他那柔和的连鬓胡子总是能藏着存放了几个星期的食物，这使他在探索时有源源不断的零食享用。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Damage",
+    "zh": "攻击"
+   },
+   "text": {
+    "en": "torch destroys a plant on contact",
+    "zh": "火把迅速烧毁接触到的植物"
+   }
+  },
+  {
+   "name": {
+    "en": "Weakness",
+    "zh": "弱点"
+   },
+   "text": {
+    "en": "cold attacks extinguish torch",
+    "zh": "冰冻攻击能使火把熄灭"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.4,
+   "text": {
+    "en": "Solid",
+    "zh": "略强"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.6,
+   "text": {
+    "en": "Hungry",
+    "zh": "饥渴"
+   }
+  }
+ ],
+ "display_offset": [
+  20,
+  0
+ ]
+}

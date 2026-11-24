@@ -20,4 +20,4 @@ func _refuse(_kind: StringName, _id: StringName, _row: int, _col: int) -> String
 
 
 func describe() -> String:
-	return "Plants: %d / %d at once" % [board.plant_count(), maximum]
+	return tr("Plants: %d / %d at once") % [board.plant_count(), maximum]

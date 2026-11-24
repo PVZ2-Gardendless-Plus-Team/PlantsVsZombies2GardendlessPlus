@@ -1,0 +1,52 @@
+{
+ "id": "moonflower",
+ "name": {
+  "en": "Moonflower",
+  "zh": "月光花"
+ },
+ "brief": {
+  "en": "Gives suns and powers up adjacent shadow plants",
+  "zh": "生产阳光并强化周围的暗影植物"
+ },
+ "description": {
+  "en": "Moonflowers radiate a glow that powers up adjacent shadow plant.",
+  "zh": "月光花释放可以使周围暗影植物进入暗影状态的月光。"
+ },
+ "chat": {
+  "en": "Moonflower is a fierce collaborator. She'll collaborate with anything. She'd collaborate with a table if she could.",
+  "zh": "月光花非常喜欢合作。她可以和任何事物合作。如果可以的话，她甚至能和一张桌子合作。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Sun Production",
+    "zh": "阳光生产"
+   },
+   "text": {
+    "en": "emits sun as well as additional sun for each adjacent shadow plant up to four",
+    "zh": "随着身边暗影植物增多而增多，四株（包括自己）时最多"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "sun_production",
+   "text": {
+    "en": "Variable",
+    "zh": "多种"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

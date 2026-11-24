@@ -1,0 +1,16 @@
+{
+ "id": "upgrade_manual_mowers_1",
+ "order": 11,
+ "type": "manual_mower",
+ "amount": 1,
+ "world": "future",
+ "sprite": "Mower",
+ "name": {
+  "en": "Mower Launch",
+  "zh": "触发小推车"
+ },
+ "description": {
+  "en": "Manually launch one mower by tapping and holding!",
+  "zh": "可以按住以自由启动小推车！"
+ }
+}

@@ -1,0 +1,51 @@
+{
+ "id": "poisonpeashooter",
+ "name": {
+  "en": "Goo Peashooter",
+  "zh": "黏毒豌豆"
+ },
+ "brief": {
+  "en": "Shoots sticky poison peas",
+  "zh": "发射黏性毒液豌豆子弹"
+ },
+ "description": {
+  "en": "Goo Peashooters shoot poison peas at zombies, poisoning them as well as slowing them down.",
+  "zh": "黏毒豌豆向僵尸发射毒性子弹，利用剧毒伤害僵尸，并使之减速。"
+ },
+ "chat": {
+  "en": "Goo Peashooter is a goopy shooter. See? See how that works? It's a play on words. Words are often playful, folks!",
+  "zh": "黏毒豌豆是黏弹的射手。懂了吗？明白其中的妙处了吗？这有个多音字。朋友们，语言往往就是这么有趣！"
+ },
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 30
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "Straight",
+    "zh": "直线"
+   }
+  },
+  {
+   "type": "special",
+   "text": {
+    "en": "Poison",
+    "zh": "毒伤"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

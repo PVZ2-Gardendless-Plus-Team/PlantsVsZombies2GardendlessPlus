@@ -825,7 +825,8 @@ def convert(payload, source):
                      ("IsVasebreaker", "vasebreaker"),
                      ("IsLevelOfTheDay", "level_of_the_day"),
                      ("FirstIntroNarrative", "intro_narrative"),
-                     ("DraperPromo", "promo_plant")]:
+                     ("DraperPromo", "promo_plant"),
+                     ("StartingSun", "starting_sun")]:
         if dd.get(src) is not None:
             out[dst] = dd[src]
 

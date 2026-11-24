@@ -1,0 +1,44 @@
+{
+ "id": "bloomerang",
+ "name": {
+  "en": "Bloomerang",
+  "zh": "回旋镖射手"
+ },
+ "brief": {
+  "en": "Hits up to three targets in its lane, twice",
+  "zh": "击打本行的三个目标，各两次"
+ },
+ "description": {
+  "en": "Bloomerangs can hit multiple targets in their lane, twice each coming and going!",
+  "zh": "回旋镖射手可以每次击打本行的多个目标，回旋镖来回都能造成伤害！"
+ },
+ "chat": {
+  "en": "As the first new member to your home defence team, Bloomerang enjoys long walkabouts with his friends, Koala Bear, and listening to his Bob Barley albums out back.",
+  "zh": "由于他是植物队列里的第一位稀客，回旋镖射手非常享受与他的朋友考拉散步，并在回来的时候听鲍勃·大麦的专辑。"
+ },
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 20
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "Multi-hit",
+    "zh": "多重打击"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

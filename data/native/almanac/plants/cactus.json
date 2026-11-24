@@ -1,0 +1,63 @@
+{
+ "id": "cactus",
+ "name": {
+  "en": "Cactus",
+  "zh": "仙人掌"
+ },
+ "brief": {
+  "en": "Fires a penetrating thorn, hides for ground damage",
+  "zh": "射出穿透性的刺，僵尸靠近时缩进地里攻击"
+ },
+ "description": {
+  "en": "Cactus fires a penetrating thorn that can damage multiple enemies! Hides underground when zombies are close. Can pop balloon zombies.",
+  "zh": "仙人掌发射能穿透击打多个目标的刺！在僵尸靠近时躲在地下。能直接扎破气球僵尸。"
+ },
+ "chat": {
+  "en": "Things have really changed for Cactus lately. Book deals, movies, truck show appearances... she's just trying to focus on staying humble and launching thorns like always.",
+  "zh": "仙人掌最近真的变了好多。买书、电影、卡车展……她现在只想努力保持低调，像以往一样发射一些刺。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "hides and does ground damage when zombies are near",
+    "zh": "躲在地下时会对经过的僵尸造成伤害"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 30
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "Multi-hit",
+    "zh": "多重打击"
+   }
+  },
+  {
+   "type": "special",
+   "text": {
+    "en": "Spike Damage",
+    "zh": "刺击"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

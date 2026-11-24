@@ -6,6 +6,10 @@ extends Collectable
 ## configurable. The original game drops 25; this is 50.
 const VALUE := 50
 
+## What this sun banks. Falling and produced sun is always VALUE; a shovel
+## refund (the Shovel Bonus upgrades) is worth a share of the plant's cost.
+var value: int = VALUE
+
 @export var core_color: Color = Color("ffd83d")
 @export var glow_color: Color = Color("ffee8a")
 

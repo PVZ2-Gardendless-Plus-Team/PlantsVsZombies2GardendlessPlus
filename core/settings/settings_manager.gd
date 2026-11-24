@@ -32,6 +32,8 @@ const DEFAULTS := {
 	&"pause_on_focus_loss": true,
 	## Every plant is choosable whether or not a reward has given it yet.
 	&"unlock_all_plants": false,
+	## A locale from I18n.languages(), or "" to follow the operating system.
+	&"language": "",
 }
 
 var _values: Dictionary = {}
@@ -97,6 +99,8 @@ func _apply(key: StringName) -> void:
 		Audio.set_bus_volume(VOLUME_BUSES[key], value)
 		return
 	match key:
+		&"language":
+			I18n.set_language(value)
 		&"fullscreen":
 			var mode := (DisplayServer.WINDOW_MODE_FULLSCREEN if value
 					else DisplayServer.WINDOW_MODE_WINDOWED)

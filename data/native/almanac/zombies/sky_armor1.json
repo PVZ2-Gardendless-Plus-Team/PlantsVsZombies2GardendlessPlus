@@ -1,0 +1,34 @@
+{
+ "id": "sky_armor1",
+ "name": {
+  "en": "Conehead Pilot",
+  "zh": "路障飞行员"
+ },
+ "world": "sky",
+ "description": {
+  "en": "His cone glued to his head makes him twice tougher than normal pilot.",
+  "zh": "他那胶粘在头上的路障使他变得比原先抗打两倍。"
+ },
+ "chat": {
+  "en": "In order to adapt to the strong wind in air, Conehead Pilot purchased a new strong adhesive. Although others advised him not to take the cone high in the air, he considers himself a symbol of his stylish image.",
+  "zh": "为了适应空中强劲的风速，路障飞行员购买了一款新型强效粘合剂。尽管僵尸们都建议他不要将路障带到高空中，但是他自认为那是他时尚形象的象征。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.5,
+   "text": {
+    "en": "Protected",
+    "zh": "加强"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.6,
+   "text": {
+    "en": "Hungry",
+    "zh": "饥渴"
+   }
+  }
+ ]
+}

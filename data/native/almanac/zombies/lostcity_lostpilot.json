@@ -1,0 +1,46 @@
+{
+ "id": "lostcity_lostpilot",
+ "name": {
+  "en": "Lost Pilot Zombie",
+  "zh": "失事飞行员僵尸"
+ },
+ "world": "lostcity",
+ "description": {
+  "en": "Drops in past defenses.",
+  "zh": "掉入你的防御中心。"
+ },
+ "chat": {
+  "en": "He faked his pilot's license and figured nobody would notice. But they did.",
+  "zh": "他伪造了自己的飞行证，还以为大家没注意到，实际上所有人都很清楚。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "drops in and hangs for a moment between your lawn",
+    "zh": "坠入并在草坪中央悬挂一段时间"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.5,
+   "text": {
+    "en": "Protected",
+    "zh": "加强"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ]
+}

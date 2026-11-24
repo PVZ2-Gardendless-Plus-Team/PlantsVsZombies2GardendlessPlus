@@ -1,0 +1,52 @@
+{
+ "id": "chomper",
+ "name": {
+  "en": "Chomper",
+  "zh": "大嘴花"
+ },
+ "brief": {
+  "en": "Devours zombies, then chews on each for a while",
+  "zh": "吃掉僵尸，并花费时间消化"
+ },
+ "description": {
+  "en": "Chompers can devour 2 zombies whole, but they are vulnerable while chewing.",
+  "zh": "大嘴花可以完整地吃掉两只僵尸，但是他们在咀嚼时很脆弱。"
+ },
+ "chat": {
+  "en": "Everyone appreciates what Chomper does. His appetite has saved them on numerous occasions. But truth be told, Chomper's friends think that eating zombies is gross. And his breath! No one has the heart to tell him, and he never gets the hint when you offer him a mint.",
+  "zh": "大家都因大嘴花的事迹而钦佩他。他奇特的口味三番两次地拯救了他们。但是说实话，大嘴花的朋友们觉得吃僵尸很恶心。而且他口气很重！但是大家都不愿意告诉他这一点，即使送他一颗薄荷糖也不能让他意识到这一点。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "moderate delay between chomps",
+    "zh": "需要消耗时间咀嚼"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "Close",
+    "zh": "靠近时"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

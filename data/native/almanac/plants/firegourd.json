@@ -1,0 +1,66 @@
+{
+ "id": "firegourd",
+ "name": {
+  "en": "Fire Gourd",
+  "zh": "火葫芦"
+ },
+ "brief": {
+  "en": "Tap on the gourd to breathe fire ahead",
+  "zh": "点击向前喷射火焰"
+ },
+ "description": {
+  "en": "Fire Gourds charge for a while and breathes fire ahead, damage to zombies continuously and damage more to armor racks.",
+  "zh": "火葫芦蓄力后能朝前方吐火，造成持续火焰伤害，对付木制的兵器架特别有效。"
+ },
+ "chat": {
+  "en": "Fire Gourd used to be a sidekick in an acrobatic class. But since he came to fight against zombies, he's found his unique value.",
+  "zh": "火葫芦原先只是个杂技班里的小配角, 但自从上了战场后, 他才发现自己真正的价值。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Usage",
+    "zh": "用途"
+   },
+   "text": {
+    "en": "tap to fire",
+    "zh": "点击喷火"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "the longer he charges, the farther he breathes",
+    "zh": "蓄力时间越长，攻击距离越远"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 750
+  },
+  {
+   "type": "area",
+   "text": {
+    "en": "Straight",
+    "zh": "直线"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

@@ -1,0 +1,56 @@
+{
+ "id": "monk_torch",
+ "name": {
+  "en": "Torch Monk Zombie",
+  "zh": "火把武僧"
+ },
+ "world": "kongfu",
+ "description": {
+  "en": "Speedily swings a torch that can instantly destroy your plants.",
+  "zh": "转动火把，秒杀你的植物。"
+ },
+ "chat": {
+  "en": "Monks in the Shaolin Temple practice day and night. Thanks to Torch Monk Zombie making everyone think the sun never sets.",
+  "zh": "少林寺的武僧夜以继日地训练。多亏火把武僧让大家以为太阳一直不落山。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Damage",
+    "zh": "攻击"
+   },
+   "text": {
+    "en": "torch destroys a plant on contact, including that are short",
+    "zh": "火把迅速烧毁接触到的植物，包括低矮植物"
+   }
+  },
+  {
+   "name": {
+    "en": "Weakness",
+    "zh": "弱点"
+   },
+   "text": {
+    "en": "cold attacks extinguish torch",
+    "zh": "冰冻攻击能使火把熄灭"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.4,
+   "text": {
+    "en": "Solid",
+    "zh": "略强"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.6,
+   "text": {
+    "en": "Hungry",
+    "zh": "饥渴"
+   }
+  }
+ ]
+}

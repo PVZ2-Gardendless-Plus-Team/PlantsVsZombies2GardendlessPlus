@@ -1,0 +1,53 @@
+{
+ "id": "zombossmech_dino",
+ "name": {
+  "en": "Zombot Dinotronic Mechasaur",
+  "zh": "恐龙支配者"
+ },
+ "world": "dino",
+ "description": {
+  "en": "A mechanical means of dinosaurian destruction.",
+  "zh": "摧毁你前院的远古时期最凶狠的机械恶兽。"
+ },
+ "chat": {
+  "en": "With flagrant disregard for temporal tidiness and simple good taste, Dr. Zomboss figured it would be a good idea to build a big metal dinosaur.",
+  "zh": "由于自身对时空秩序的蔑视与对基本审美的不屑，僵尸博士认为造个巨型金属恐龙是个绝妙的主意。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "summons zombies and dinosaurs",
+    "zh": "召唤僵尸时同时召唤恐龙"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 1,
+   "text": {
+    "en": "Undying",
+    "zh": "不朽"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.6,
+   "text": {
+    "en": "Hungry",
+    "zh": "饥渴"
+   }
+  }
+ ],
+ "display_offset": [
+  -60,
+  -100
+ ],
+ "variants": [
+  "zombossmech_dino2"
+ ]
+}

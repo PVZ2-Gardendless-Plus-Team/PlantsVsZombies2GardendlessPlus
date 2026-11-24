@@ -29,6 +29,7 @@ mods/my_pack/
   levels/*.json
   campaigns/*.json    ordered runs of levels
   audio/events.json   add or replace sounds
+  i18n/<locale>.json  add a language, or fix strings in one (docs/TRANSLATING.md)
   components/*.gd     new behaviours, or overrides of built-in ones
   minigames/*.gd      new level modes, or overrides of built-in ones
   minigames.json      modes and levels to add to the Minigames screen
@@ -339,6 +340,39 @@ Sun is collected by hovering the cursor over it, not by clicking.
 Reuse the id. A file at `mods/my_pack/zombies/tutorial.json` replaces the base
 `tutorial` zombie outright, as long as your pack sits above the base game in
 the load order (it always does).
+
+## Almanac pages
+
+Each plant and zombie gets its almanac page from one file:
+`almanac/plants/<id>.json` or `almanac/zombies/<id>.json` in your pack. The
+same id as a base page replaces it. Text fields take a plain string or a
+`{"en": ..., "zh": ...}` dictionary; the player's language is picked, then
+English.
+
+```json
+{
+ "id": "burst_pea",
+ "name": "Burst Pea",
+ "brief": "Fires three peas at once",
+ "description": "Burst Peas fire a quick volley of three peas.",
+ "chat": "Burst Pea never finishes a sentence. Or a sente-",
+ "special": [{"name": "Usage", "text": "fires in bursts"}],
+ "stats": [{"type": "sun_cost"}, {"type": "recharge"},
+           {"type": "damage", "value": 20}, {"type": "range", "text": "Straight"}]
+}
+```
+
+Plant stat rows `sun_cost`, `recharge`, `toughness` and `family` read the
+plant's own numbers; the others show `text` or `value`. Other types are
+`damage`, `range`, `area`, `duration`, `plant_food`, `sun_production`,
+`arming_time`, `grow_time` and `special` (give it a `name`). Zombie rows are
+`toughness` and `speed` with a `text` and a 0-1 `level` for the bar; zombie
+pages also take `world` (the backing tile) and `variants`, the ids that count
+as this zombie when met. A pack's plants are listed after the base plants; list
+zombies in order with `zombie_order` in your pack's `almanac.json`.
+
+A zombie's page stays hidden until it is met on a lawn, shows "???" until a
+level it was in is won, and is described in full after that.
 
 ## Adding a behaviour
 
@@ -1016,7 +1050,7 @@ the player sweeps over it.
 | `type` | `param` / `amount` | Effect |
 |---|---|---|
 | `unlock_plant` | plant id | the plant becomes choosable, marked NEW in the chooser |
-| `upgrade` | upgrade id | kept in the `upgrades` collection |
+| `upgrade` | upgrade id | the player owns that upgrade (see [Upgrades](#upgrades)) |
 | `worldtrophy` | trophy id | kept in `trophies`; `worldkey` adds a world key instead |
 | `note` | note id | kept in `notes` |
 | `coins` | `amount` | a coin bag worth that much |
@@ -1036,6 +1070,46 @@ setting opens everything for testing.
 Progress lives in `Saves`: `unlock_plant`, `is_plant_unlocked`,
 `add_currency` / `currency` (`coins`, `gems`, `worldkeys`, or a pack's own),
 and `grant_item` / `has_item` for named collections.
+
+## Upgrades
+
+PVZGE has no per-plant levels; its "upgrades" are fourteen permanent perks,
+won as a level's first reward or bought in the store, and switched on or off
+on the almanac's Upgrades page (`game/menu/upgrades_page.gd`). Each is a file
+in `upgrades/`, so a pack can add one or change an existing one by shipping a
+file with the same id:
+
+```json
+{
+ "id": "upgrade_sunshovel_lvl1",
+ "order": 6,
+ "type": "sunshovel",
+ "amount": 0.25,
+ "world": "pirate",
+ "sprite": "SunShovel",
+ "name": {"en": "Shovel Bonus", "zh": "阳光铲奖励"},
+ "description": {"en": "Get an additional 25% of sun cost back when shoveling up plants!"}
+}
+```
+
+`world` picks the tile behind the card, `sprite` the trophy animation in the
+`hud:upgrade_trophy` rig. Copies of a type add up, as PVZGE's do:
+
+| `type` | `amount` (default) | Effect |
+|---|---|---|
+| `starting_sun` | 25 | added to the level's `starting_sun` (50 when unset) |
+| `pf_slot` | 1 | one more plant food slot, up to 5 |
+| `seedslot` | 1 | one more seed chooser slot, up to `max_slots`; a level's own `slots` is kept |
+| `sunshovel` | 0.25 | share of a plant's sun cost the shovel gives back |
+| `firstaid` | - | planting a damaged defender (a `blocker`, or tagged `replantable`) onto itself heals it |
+| `refresh` | - | plant food dropped on a recharging packet makes it ready |
+| `manual_mower` | 1 | mowers the player may launch by holding them down for a second |
+| `sky_shield` | 0.5 | extra shield for a Sky City ship (no ship in the port yet) |
+
+Code asks `Upgrades` (`core/upgrades/upgrades.gd`): `owns`, `grant`,
+`is_enabled`, `set_enabled`, and the per-level totals such as
+`starting_sun_bonus()`. Owned upgrades are the `upgrades` collection in
+Saves; switched-off ones are `upgrades_disabled`.
 
 ## I-Zombie costs
 

@@ -1,0 +1,15 @@
+{
+ "id": "upgrade_pf_refresh",
+ "order": 5,
+ "type": "refresh",
+ "world": "cowboy",
+ "sprite": "Cooldown",
+ "name": {
+  "en": "Instant Recharge",
+  "zh": "快速装填"
+ },
+ "description": {
+  "en": "Instantly refresh a seed packet by dragging and dropping Plant Food on it.",
+  "zh": "可以对正在冷却的卡槽使用叶绿素，使之迅速结束冷却。"
+ }
+}

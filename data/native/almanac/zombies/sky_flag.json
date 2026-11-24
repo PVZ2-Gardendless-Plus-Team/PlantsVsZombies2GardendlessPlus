@@ -1,0 +1,34 @@
+{
+ "id": "sky_flag",
+ "name": {
+  "en": "Flag Pilot",
+  "zh": "旗帜飞行员"
+ },
+ "world": "sky",
+ "description": {
+  "en": "Marks the arrival of an aeronautical \"wave\" of zombies.",
+  "zh": "预示着一大波飞行的僵尸的到来。"
+ },
+ "chat": {
+  "en": "In Flag Pilot's view, an outstanding flag is very important if they want to keep up with the latest trend. However, the zombies are only concerned about whether he can lead them to fresh brains... Neither do trends nor anything but brains could fulfill their appetites.",
+  "zh": "在旗帜飞行员看来，若是想要走在时尚的前沿，一面鲜明的旗帜是非常重要的。然而，僵尸们却只关心他能否带领他们找到新鲜的脑子，时尚什么的，并不能拿来吃啊。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.25,
+   "text": {
+    "en": "Average",
+    "zh": "一般"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.6,
+   "text": {
+    "en": "Hungry",
+    "zh": "饥渴"
+   }
+  }
+ ]
+}

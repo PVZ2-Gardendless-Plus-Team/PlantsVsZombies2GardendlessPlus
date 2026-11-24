@@ -1,8 +1,14 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+/Build/
 
 **/__pycache__/
+
+# The FMOD GDExtension bundles FMOD's engine libraries, which may not be
+# republished here. Install it with tools/install_fmod.py.
+/addons/fmod/
+/_fmod_addons.zip
 
 # Built FMOD banks in audio/banks/ are committed (through LFS) by the
 # "Update FMOD banks" workflow - see Music/docs/BUILD_RUNNER.md.

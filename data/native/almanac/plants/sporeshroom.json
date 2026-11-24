@@ -1,0 +1,44 @@
+{
+ "id": "sporeshroom",
+ "name": {
+  "en": "Spore-shroom",
+  "zh": "孢子菇"
+ },
+ "brief": {
+  "en": "Spawns new Spore-shrooms from defeated zombies",
+  "zh": "使僵尸被击败时能产生新的孢子菇"
+ },
+ "description": {
+  "en": "Spore-shrooms fire spores that make zombies create new Spore-shrooms when defeated.",
+  "zh": "孢子菇向僵尸发射能使僵尸被击败时产生孢子菇的子弹。"
+ },
+ "chat": {
+  "en": "\"My favorite arithmetic operation?\" wonders Spore-shroom. \"I guess I'd have to say, um, addition. Hang on, no... multiplication.\"",
+  "zh": "“我最喜欢的算术方式？”孢子菇想。“我猜应该是，嗯，加法！等等，不……是乘法。”"
+ },
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 50
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "Lobbed",
+    "zh": "抛物线"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

@@ -1,0 +1,34 @@
+{
+ "id": "dark",
+ "name": {
+  "en": "Peasant Zombie",
+  "zh": "农夫僵尸"
+ },
+ "world": "dark",
+ "description": {
+  "en": "Regular lower class commoner zombie.",
+  "zh": "普通的底层平民僵尸。"
+ },
+ "chat": {
+  "en": "Someone shouted, \"Bring out your undead!\" And then Peasant Zombie found himself here. He simply doesn't remember anything that happened before that.",
+  "zh": "有人喊道：“把你们的亡灵交出来！”然后农民僵尸就把自己交出去了，他只是不记得在此之前发生的什么了。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.25,
+   "text": {
+    "en": "Average",
+    "zh": "一般"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ]
+}

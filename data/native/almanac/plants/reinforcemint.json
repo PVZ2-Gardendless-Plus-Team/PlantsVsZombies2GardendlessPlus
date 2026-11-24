@@ -1,0 +1,41 @@
+{
+ "id": "reinforcemint",
+ "name": {
+  "en": "Reinforce-mint",
+  "zh": "防御薄荷"
+ },
+ "brief": {
+  "en": "Boosts defence plants",
+  "zh": "强化防御植物"
+ },
+ "description": {
+  "en": "Reinforce-mints push all zombies back and provide a temporary boost to all Reinforce-mint Family plants on the lawn.",
+  "zh": "防御薄荷将所有僵尸击退，并为草坪上所有防御家族植物带来强化效果。"
+ },
+ "chat": {
+  "en": "Reinforce-mint isn't scowling. He's just workshopping defense strategies, doing what he can to support the team. Maybe he's scowling just a little bit. Fine.",
+  "zh": "防御薄荷没有皱着眉头，他只是在反复推敲防御策略，尽其所能支援团队。好吧，也许……他确实皱了一点点眉头。行吧。"
+ },
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "duration",
+   "value": 16
+  },
+  {
+   "type": "special",
+   "text": {
+    "en": "KnockBack",
+    "zh": "击退"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

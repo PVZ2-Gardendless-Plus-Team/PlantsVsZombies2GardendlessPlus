@@ -1,0 +1,56 @@
+{
+ "id": "splitpea",
+ "name": {
+  "en": "Split Pea",
+  "zh": "裂荚射手"
+ },
+ "brief": {
+  "en": "Shoots peas forward and backward",
+  "zh": "向身前和身后发射豌豆"
+ },
+ "description": {
+  "en": "Split Peas shoot peas forward and backwards.",
+  "zh": "裂荚射手向前后方发射豌豆。"
+ },
+ "chat": {
+  "en": "\"It's my turn with the eyebrows,\" said Frontie. \"Fine, we'll split them,\" said Backie. Sprouted two minutes apart, their eyebrow war is eternal.",
+  "zh": "“该让我戴眉毛了！”前面的头说道。“好吧，那我们平分一下。”后面的头回答道。只是分开了两分钟，他们的眉毛争夺战就到达了无法停歇的地步。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Firing Speed",
+    "zh": "射速"
+   },
+   "text": {
+    "en": "1x forward, 2x backwards",
+    "zh": "向前方正常，向后方两倍"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 20
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "Front & Back",
+    "zh": "前后"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

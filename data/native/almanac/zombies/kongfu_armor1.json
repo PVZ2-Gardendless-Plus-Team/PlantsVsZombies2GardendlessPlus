@@ -1,0 +1,34 @@
+{
+ "id": "kongfu_armor1",
+ "name": {
+  "en": "Kongfu Conehead Zombie",
+  "zh": "武斗路障僵尸"
+ },
+ "world": "kongfu",
+ "description": {
+  "en": "His ink painting decorated cone makes him twice tougher than normal zombies.",
+  "zh": "他的水墨画装饰路障使他变得比原先抗打两倍。"
+ },
+ "chat": {
+  "en": "Why does Kongfu Zombie need cones for protection? The answer is that it makes them fashionable.",
+  "zh": "为什么功夫僵尸还需要路障作为保护？答案是，这样显得比较时髦。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.5,
+   "text": {
+    "en": "Protected",
+    "zh": "加强"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ]
+}

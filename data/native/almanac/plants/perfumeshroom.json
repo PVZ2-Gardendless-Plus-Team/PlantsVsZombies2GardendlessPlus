@@ -1,0 +1,56 @@
+{
+ "id": "perfumeshroom",
+ "name": {
+  "en": "Perfume-shroom",
+  "zh": "香水菇"
+ },
+ "brief": {
+  "en": "Charms dinosaurs against zombies",
+  "zh": "魅惑恐龙以僵尸为敌"
+ },
+ "description": {
+  "en": "Perfume-shrooms enchant dinosaurs and charm them into working against the zombies.",
+  "zh": "香水菇魅惑当行的恐龙，使它们帮上僵尸的倒忙。"
+ },
+ "chat": {
+  "en": "Perfume-shroom emits a pure, concentrated mist of aerosolized love.",
+  "zh": "香水菇释放出一股纯净且浓缩的雾状的爱。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Usage",
+    "zh": "用途"
+   },
+   "text": {
+    "en": "single use, instant",
+    "zh": "一次性使用，立刻触发"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "affects all dinosaurs in a lane",
+    "zh": "影响到整行的恐龙"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "area",
+   "text": {
+    "en": "Lane",
+    "zh": "整行"
+   }
+  }
+ ]
+}

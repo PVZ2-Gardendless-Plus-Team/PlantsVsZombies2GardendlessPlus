@@ -1,0 +1,60 @@
+{
+ "id": "kongfu_boss_explode",
+ "name": {
+  "en": "Devil of Dynamite",
+  "zh": "火药魔头"
+ },
+ "world": "kongfu",
+ "description": {
+  "en": "The first of the Big Three to arrive at your lawn, leading an army of kongfu zombies.",
+  "zh": "最先到访你的前院的武林巨头，引领着所有武斗僵尸。"
+ },
+ "chat": {
+  "en": "As the third-in-command of the Big Three, Devil of Dynamite excels in diplomacy. Dr.Zomboss took advantage of this, forging an alliance with all the zombies at Kongfu Temple, and even developing a new method to open a space-time portal.",
+  "zh": "作为武林三巨头的三把手，火药魔头最擅长外交。僵尸博士利用这一点与少林寺的所有僵尸达成共识，甚至研究出打开时空大门的新方法。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "lobbed bombs destroy plants in a 3x3 area if their targets are not shoveled in time",
+    "zh": "如果没能及时铲除目标，丢出的炸弹将摧毁 3x3 范围内的植物"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "summon Rocket Imps, both launched from the right and lobbed from his back",
+    "zh": "从背后丢出或从场外召唤出火箭小鬼"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 1,
+   "text": {
+    "en": "Undying",
+    "zh": "不朽"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.6,
+   "text": {
+    "en": "Hungry",
+    "zh": "饥渴"
+   }
+  }
+ ],
+ "display_offset": [
+  20,
+  -60
+ ]
+}

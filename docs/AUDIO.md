@@ -50,47 +50,48 @@ changing events in Studio. A stream written into `events.json` by hand
 
 ## Installing FMOD
 
-**Versions must match.** FMOD Studio and FMOD Engine ship as a pair, and a
-Studio project will not load into a different Engine runtime.
+One command, from the project root:
 
-The Studio project in this workspace reports `Studio.02.03.00`, so the pair is:
+```sh
+python tools/install_fmod.py
+```
 
-| | Version |
-|---|---|
-| FMOD Studio | **2.03.00** (installed) |
-| FMOD Engine | **2.03.00** (must match) |
+It downloads [utopia-rise/fmod-gdextension](https://github.com/utopia-rise/fmod-gdextension)
+6.1.0 (pinned and checksummed) into `addons/fmod/`. That release bundles the
+FMOD Engine 2.03.06 libraries for Windows, Linux and macOS (`--all` adds
+Android and iOS), so nothing has to be downloaded from an FMOD account.
+`addons/fmod/` is gitignored: FMOD's licence lets a game ship those
+libraries inside a build, not republish them in a public source repository.
 
-1. Make an account at [fmod.com](https://www.fmod.com/download) and download
-   **FMOD Engine 2.03.00** for Linux, matching the installed Studio.
-2. Install a Godot integration. The GDExtension at
-   [utopia-rise/fmod-gdextension](https://github.com/utopia-rise/fmod-gdextension)
-   is the one to prefer: it targets FMOD 2.03 and installs as an addon, so
-   Godot itself never has to be recompiled. The module-based integrations
-   ([timoschwarzer](https://github.com/timoschwarzer/godot-fmod),
-   [jordigulley](https://github.com/jordigulley/fmod_gd4)) require building
-   Godot from source.
-3. Drop the FMOD Engine libraries where the integration asks, and enable the
-   plugin (Project Settings > Plugins). Its `FmodManager` autoload pumps FMOD
-   every frame; if the plugin is off, `fmod_backend.gd` pumps it itself.
-4. Export your banks from FMOD Studio to `res://audio/banks/`. The master bank
-   and its `.strings` bank are both required before any event resolves.
-   See "Running Studio under Proton" below if Studio is running through Wine.
-   They are normally built and committed for you: see "Automated bank builds" below.
-5. Restart. `fmod_backend.gd` looks for the `FmodServer` singleton and takes
-   over automatically; the boot log should now read `backend=fmod`.
-6. For an exported build, add `*.bank` to the export's non-resource filter, or
-   the banks are left out and every event fails to resolve.
+Then open the project once (or `godot --headless --import`). The extension
+initialises FMOD itself, `fmod_backend.gd` finds the `FmodServer` singleton,
+and the boot log reads `backend=fmod`. Enabling the editor plugin (Project
+Settings > Plugins > FMOD GDExtension) is optional: it adds a bank explorer
+and the `FmodManager` autoload, and when it is off `fmod_backend.gd` pumps
+FMOD every frame itself.
+
+**Versions.** Banks load on any FMOD Engine of the same major.minor version.
+The bank runner uses FMOD Studio 2.03.14 and the addon carries Engine
+2.03.06, which is fine; moving Studio to 2.04 would need an addon built on
+2.04. The addon declares `compatibility_minimum = 4.5` and is checked on
+Godot 4.7.1 (the test suite passes with and without it installed).
+
+**Banks** load from `res://audio/banks/`, strings banks first. They are
+built and committed for you (see "Automated bank builds" below). The export
+presets include `audio/banks/*.bank`, since banks are not Godot resources and
+would otherwise be left out of a build.
+
+**Events missing from the banks** fall back to the Godot backend one by one.
+A cue added to `events.json` before the banks are rebuilt still plays its
+clips, and `--verbose` logs each one that was not found in the banks.
+Parameters (`state` and friends) are only set on events and globals the banks
+actually define, because the extension logs an error for any other name.
 
 The backend is written against utopia-rise's `FmodServer` API:
 `play_one_shot` for effects, `create_event_instance` for music (held, so it
-can be stopped and steered), `set_global_parameter_by_name`, `get_bus`, and
-`load_bank`. The test suite drives it against a stand-in for that API, so the
-calls are checked even where FMOD is not installed.
-
-**Compatibility:** the GDExtension declares `compatibility_minimum = 4.5`, and
-GDExtensions load on later Godot minor versions, so a current release should
-load in 4.7 as is. Only if it refuses to load does it need rebuilding against
-4.7's headers - still much cheaper than rebuilding the engine for a module.
+can be stopped and steered), `check_event_path`, `set_global_parameter_by_name`,
+`get_bus`, and `load_bank`. The test suite drives it against a stand-in for
+that API, so the calls are checked even where FMOD is not installed.
 
 FMOD is free below its revenue threshold but the project must be registered.
 

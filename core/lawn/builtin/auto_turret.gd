@@ -43,4 +43,4 @@ func _process(delta: float) -> void:
 
 
 func describe() -> String:
-	return "Base fire: %.0f dmg / %.1fs" % [damage, interval]
+	return tr("Base fire: %.0f dmg / %.1fs") % [damage, interval]

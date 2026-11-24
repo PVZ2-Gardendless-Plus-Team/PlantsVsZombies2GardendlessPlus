@@ -1,0 +1,34 @@
+{
+ "id": "iceage_imp",
+ "name": {
+  "en": "Yeti Imp",
+  "zh": "雪人小鬼"
+ },
+ "world": "ice",
+ "description": {
+  "en": "Thrown over most of your defenses, then ambles onward.",
+  "zh": "被丢出越过你的防线，然后再往前或往后走。"
+ },
+ "chat": {
+  "en": "Yeti Imp recently took up knitting. He started with a scarf, moved to mittens and eventually knitted an entire bodysuit out of hair he shaved off of Yeti Zombie. He just loves knitting. When those needles are in his hands, he feels a sense of calm he's never felt before.",
+  "zh": "雪人小鬼最近开始编织了。他从围巾开始，到手套，最后用从雪人僵尸身上剃下来的头发编织了一整套连体服。他就是喜欢编织。当针在他手中时，他感到一种前所未有的平静。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.25,
+   "text": {
+    "en": "Average",
+    "zh": "一般"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.6,
+   "text": {
+    "en": "Hungry",
+    "zh": "饥渴"
+   }
+  }
+ ]
+}

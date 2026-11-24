@@ -1,0 +1,53 @@
+{
+ "id": "grimrose",
+ "name": {
+  "en": "Grimrose",
+  "zh": "暗樱草"
+ },
+ "brief": {
+  "en": "Drags zombies into the ground",
+  "zh": "把僵尸拖入地底"
+ },
+ "description": {
+  "en": "Grimroses are shadow plants that behave like landbound Tangle Kelps, dragging up to 3 zombies into the dirt.",
+  "zh": "暗樱草是一种暗影植物，她就像是陆地上的缠绕水草，最多可将 3 个僵尸拖入地下。"
+ },
+ "chat": {
+  "en": "\"When you think about it, the proper place for a zombie is in the ground,\" says Grimrose. \"So, really, I'm just expediting the process.\"",
+  "zh": "“仔细想想，僵尸本就该待在地里，”暗樱草说， “所以实际上，我只是在加速这个过程罢了。”"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "powered Grimroses can drag 3 zombies before expiring",
+    "zh": "得到暗影能量时才能发挥拖下 3 只僵尸的能力"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "damage",
+   "value": 600
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "Lane",
+    "zh": "整行"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

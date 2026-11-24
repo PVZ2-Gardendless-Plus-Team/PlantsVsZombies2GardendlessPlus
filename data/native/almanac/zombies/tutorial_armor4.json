@@ -1,0 +1,37 @@
+{
+ "id": "tutorial_armor4",
+ "name": {
+  "en": "Brickhead Zombie",
+  "zh": "砖头僵尸"
+ },
+ "world": "frontyard",
+ "description": {
+  "en": "Brickhead Zombie's brick head provides thorough brickheaded brickheadness.",
+  "zh": "砖头僵尸的砖头让他彻底变得比砖头还要更砖头。"
+ },
+ "chat": {
+  "en": "After consultation with various storybook wolves, it was determined that straw helmets and wood helmets were not up to snuff, and that brick helmets had to be seriously considered.",
+  "zh": "经过与各路童话恶狼的答辩，事实证明稻草头盔和木头盔质量根本不行，砖头盔才是最值得考虑的方案。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.8,
+   "text": {
+    "en": "Machined",
+    "zh": "重甲"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ],
+ "variants": [
+  "easter_armor4"
+ ]
+}

@@ -1,0 +1,44 @@
+{
+ "id": "bloominghearts",
+ "name": {
+  "en": "Blooming Heart",
+  "zh": "心蕊"
+ },
+ "brief": {
+  "en": "Lobs projectiles that infatuate zombies, causing their defences reduced",
+  "zh": "向僵尸投掷子弹，使之防御力下降"
+ },
+ "description": {
+  "en": "Blooming Hearts lob projectiles that infatuate zombies, causing their defences reduced.",
+  "zh": "心蕊向僵尸投掷子弹，使之防御力下降。"
+ },
+ "chat": {
+  "en": "Blooming Heart loves zombies. She gets guff from her fellow plants over it, but she stands firm. She's into zombies and makes no apologies about it.",
+  "zh": "心蕊喜欢僵尸，并因此受到植物同伴的嘲笑，但她依然坚持己见。她对僵尸情有独钟，而且毫无愧疚。"
+ },
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 40
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "Lobbed",
+    "zh": "抛物线"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

@@ -1,0 +1,34 @@
+{
+ "id": "bobsled",
+ "name": {
+  "en": "Zombie Bobsled Crew",
+  "zh": "雪橇运动员僵尸"
+ },
+ "world": "modern",
+ "description": {
+  "en": "Zombie Bobsled Crews will carry on even without their trusty sled.",
+  "zh": "雪橇运动员僵尸即使丢掉了他们的雪橇也会不断前行。"
+ },
+ "chat": {
+  "en": "Their bobsled might be history, but these zombies are living for the thrill of the chill!",
+  "zh": "也许他们的雪橇运动事迹已成历史，但他们可是为了霜冻的快乐而生！"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.25,
+   "text": {
+    "en": "Average",
+    "zh": "一般"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ]
+}

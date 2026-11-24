@@ -1,0 +1,34 @@
+{
+ "id": "dino_armor3",
+ "name": {
+  "en": "Jurassic Fossilhead",
+  "zh": "侏罗纪龙骨头僵尸"
+ },
+ "world": "dino",
+ "description": {
+  "en": "Fossil skulls not only provide a huge amount of damage absorption, but are also extremely classy.",
+  "zh": "头骨化石不仅能吸收大量伤害，而且提高了他的档次。"
+ },
+ "chat": {
+  "en": "Contrary to his name, Jurassic Fossilhead's fossil head isn't actually a fossil. That skull's maybe a week and a half old, tops.",
+  "zh": "与他的名字相反，侏罗纪龙骨头僵尸的化石头实际上并不是化石，那个头骨最多只有一周半的历史。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.8,
+   "text": {
+    "en": "Machined",
+    "zh": "重甲"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ]
+}

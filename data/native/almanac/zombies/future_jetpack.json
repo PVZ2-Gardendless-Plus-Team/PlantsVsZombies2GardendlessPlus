@@ -1,0 +1,63 @@
+{
+ "id": "future_jetpack",
+ "name": {
+  "en": "Jetpack Zombie",
+  "zh": "喷气背包僵尸"
+ },
+ "world": "future",
+ "description": {
+  "en": "Boosts to float over all but the tallest plant barriers.",
+  "zh": "按下油门能飞跃植物，除非植物能高到挡住他。"
+ },
+ "chat": {
+  "en": "The Jetpack Zombie was an early adopter during the brain acquisition tech explosion of 2113. Little did he know he would be stuck with version 1.0 of the simple jetpack.",
+  "zh": "喷气背包僵尸是 2113 年大脑采集技术大爆炸时期的早期使用者。那时他不知道自己将只能使用 1.0 版本的简易喷气背包。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "floats over low plants, boosts over most other plants",
+    "zh": "飞跃低矮的植物，喷气越过大部分其他植物"
+   }
+  },
+  {
+   "name": {
+    "en": "Weakness",
+    "zh": "弱点"
+   },
+   "text": {
+    "en": "tall blocking plants",
+    "zh": "高个子植物"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.4,
+   "text": {
+    "en": "Solid",
+    "zh": "略强"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.85,
+   "text": {
+    "en": "Speedy",
+    "zh": "快速"
+   }
+  }
+ ],
+ "display_offset": [
+  0,
+  -50
+ ],
+ "variants": [
+  "birthday_jetpack"
+ ]
+}

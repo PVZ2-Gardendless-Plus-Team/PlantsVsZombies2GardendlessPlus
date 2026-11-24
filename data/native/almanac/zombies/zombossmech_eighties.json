@@ -1,0 +1,49 @@
+{
+ "id": "zombossmech_eighties",
+ "name": {
+  "en": "Zombot Multi-stage Masher",
+  "zh": "节奏引领者"
+ },
+ "world": "eighties",
+ "description": {
+  "en": "An intimate evening with some of Dr. Zomboss' most recent and painful explorations.",
+  "zh": "与僵尸博士一起狂欢一晚吧，度过这场惊险旅行的休息时光。"
+ },
+ "chat": {
+  "en": "In another world, in another time, Dr. Zomboss would receive the bounty of enthusiastic applause that is his due. Not here and now, though. Nope.",
+  "zh": "在另一个世界，另一个时空，僵尸博士本应收获如潮掌声——那是他应得的礼赞。可惜此时此刻，此地此景，并没有。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "speakers do passive damage (except to ground plants and Phat Beet) and send out shockwave attacks",
+    "zh": "音响对近前的植物（除了地下植物和魔音甜菜）造成伤害，也会发射音波"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 1,
+   "text": {
+    "en": "Undying",
+    "zh": "不朽"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.6,
+   "text": {
+    "en": "Hungry",
+    "zh": "饥渴"
+   }
+  }
+ ],
+ "variants": [
+  "zombossmech_eighties2"
+ ]
+}

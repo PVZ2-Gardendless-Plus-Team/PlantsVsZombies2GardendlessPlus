@@ -79,6 +79,14 @@ func spend(slot: int) -> void:
 		changed.emit()
 
 
+## Makes a packet ready at once: plant food on it, with Instant Recharge.
+func finish_recharge(slot: int) -> void:
+	var p := packet(slot)
+	if p != null and not p.is_recharged():
+		p.charge = p.recharge
+		changed.emit()
+
+
 ## What a successful placement does to the packet. The chooser recharges it;
 ## a conveyor belt takes it away instead.
 func consume(slot: int) -> void:

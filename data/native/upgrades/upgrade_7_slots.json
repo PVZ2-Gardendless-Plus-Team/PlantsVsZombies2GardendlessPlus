@@ -1,0 +1,16 @@
+{
+ "id": "upgrade_7_slots",
+ "order": 9,
+ "type": "seedslot",
+ "amount": 1,
+ "world": "pirate",
+ "sprite": "SeedSlot",
+ "name": {
+  "en": "Bonus Seed Slot",
+  "zh": "奖励卡槽"
+ },
+ "description": {
+  "en": "Lets you choose another plant type every level!",
+  "zh": "在游戏开始前能额外选择一种植物！"
+ }
+}

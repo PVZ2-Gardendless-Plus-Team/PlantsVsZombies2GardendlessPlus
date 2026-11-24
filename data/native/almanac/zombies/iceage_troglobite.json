@@ -1,0 +1,50 @@
+{
+ "id": "iceage_troglobite",
+ "name": {
+  "en": "Troglobite",
+  "zh": "穴居僵尸"
+ },
+ "world": "ice",
+ "description": {
+  "en": "Strong zombie that can push blocks of ice across the lawn.",
+  "zh": "健壮到能推动冰块的僵尸。"
+ },
+ "chat": {
+  "en": "Troglobite has been pushing ice blocks across the tundra day in and day out for as long as he can remember. It's cold and exhausting work, and frankly, he's ready for a vacation. He'd like to go somewhere sunny and warm for a change. He'd like to relax in the sand. He hears Big Wave Beach is nice this time of year.",
+  "zh": "从穴居僵尸记事起，他就日复一日地在冻原上推冰块。这项工作又冷又累，老实说，他已经准备好去度假了。他想去一个阳光明媚、温暖的地方，换换心情。他想在沙滩上放松一下，正好听说这个季节的巨浪沙滩很不错。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Damage",
+    "zh": "伤害"
+   },
+   "text": {
+    "en": "crushes plants with frozen blocks",
+    "zh": "推动的冰块能碾压植物"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.6,
+   "text": {
+    "en": "Dense",
+    "zh": "结实"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ],
+ "variants": [
+  "iceage_troglobite_1block",
+  "iceage_troglobite_2block"
+ ]
+}

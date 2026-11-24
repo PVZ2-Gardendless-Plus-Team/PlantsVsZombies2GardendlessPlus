@@ -1,0 +1,61 @@
+{
+ "id": "pvine",
+ "name": {
+  "en": "Pea Vine",
+  "zh": "豌豆藤蔓"
+ },
+ "brief": {
+  "en": "Boosts Appease-mint plants",
+  "zh": "加强本格的豌豆类植物和豌豆家族植物"
+ },
+ "description": {
+  "en": "Pea Vines planted on top of Appease-mint Family plants provide a significant damage boost to those plants.",
+  "zh": "为豌豆家族植物套上豌豆藤蔓，他们会得到显著的伤害增益。"
+ },
+ "chat": {
+  "en": "Pea Vine boosts Appease-mint Family plants, and he himself is an Appease-mint Family plant, so therefore... hang on... don't tell me... I can do this. I said DON'T TELL ME.",
+  "zh": "豌豆藤蔓加强豌豆家族植物，而他自己也是豌豆家族的植物，所以……因此……等等……先别告诉我……我记得是啥！我说了不要告诉我！"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Usage",
+    "zh": "用途"
+   },
+   "text": {
+    "en": "boosts Appease-mint Family plants",
+    "zh": "增强豌豆家族植物"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 20
+  },
+  {
+   "type": "damage",
+   "value": 1.5,
+   "name": {
+    "en": "Damage Multiplier",
+    "zh": "伤害增倍"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ],
+ "display_offset": [
+  0,
+  20
+ ]
+}

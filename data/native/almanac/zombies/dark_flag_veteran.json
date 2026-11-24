@@ -1,0 +1,38 @@
+{
+ "id": "dark_flag_veteran",
+ "name": {
+  "en": "Peasant Rally Zombie",
+  "zh": "农夫大动员僵尸"
+ },
+ "world": "dark",
+ "description": {
+  "en": "Peasant Rally Zombie and his flag marks the arrival of a large wave of zombies.",
+  "zh": "农夫大动员僵尸和他的旗帜代表着超大群僵尸的来临。"
+ },
+ "chat": {
+  "en": "Keep a mind on what you're talkin' about. King Zombie will be unhappy to hear zombies wondering whether Peasant Rally Zombie with a helm is stronger than the King.",
+  "zh": "千万别多嘴。国王僵尸很不乐意听到大家讨论戴上头盔的农夫大动员僵尸是否比国王还要强大。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.5,
+   "text": {
+    "en": "Protected",
+    "zh": "加强"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.85,
+   "text": {
+    "en": "Speedy",
+    "zh": "快速"
+   }
+  }
+ ],
+ "display_offset": [
+  30,
+  0
+ ]
+}

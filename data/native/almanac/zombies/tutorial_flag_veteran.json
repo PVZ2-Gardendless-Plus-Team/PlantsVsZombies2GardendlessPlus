@@ -1,0 +1,38 @@
+{
+ "id": "tutorial_flag_veteran",
+ "name": {
+  "en": "Rally Zombie",
+  "zh": "大动员僵尸"
+ },
+ "world": "frontyard",
+ "description": {
+  "en": "Rally Zombie and his flag marks the arrival of a large clot or \"pile\" of zombies.",
+  "zh": "大动员僵尸和他的旗帜代表着超大群僵尸的来临。"
+ },
+ "chat": {
+  "en": "Rally Zombie splurged on the all-leather flag because, heck, he's worth it.",
+  "zh": "大动员僵尸花大价钱买来了这面全皮制的旗帜，因为，啧，总之这很值得。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.5,
+   "text": {
+    "en": "Protected",
+    "zh": "加强"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.85,
+   "text": {
+    "en": "Speedy",
+    "zh": "快速"
+   }
+  }
+ ],
+ "display_offset": [
+  30,
+  0
+ ]
+}

@@ -1,0 +1,49 @@
+{
+ "id": "magnifyinggrass",
+ "name": {
+  "en": "Magnifying Grass",
+  "zh": "棱镜草"
+ },
+ "brief": {
+  "en": "Tap to spend sun for a powerful attack",
+  "zh": "点击后，花费阳光发射光能子弹"
+ },
+ "description": {
+  "en": "Magnifying Grass turns sun into a bolt of colorful damage.",
+  "zh": "棱镜草将阳光转换为高能的彩虹子弹。"
+ },
+ "chat": {
+  "en": "Magnifying Grass understands the inherent power of a rainbow. Beneath her stoic features she takes great joy in delivering radiant multicolored destruction to the zombie horde.",
+  "zh": "棱镜草知道如何运用隐藏在彩虹中的无穷能量。在她冷峻的面孔下，驱动五彩缤纷的辐射对抗僵尸大军使她获得巨大的享受与满足。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "tap to spend sun for an attack",
+    "zh": "点击消耗阳光攻击"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 550
+  },
+  {
+   "type": "family"
+  }
+ ]
+}
