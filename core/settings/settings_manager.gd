@@ -32,6 +32,9 @@ const DEFAULTS := {
 	&"pause_on_focus_loss": true,
 	## Every plant is choosable whether or not a reward has given it yet.
 	&"unlock_all_plants": false,
+	## Owned upgrades (Sun Bonus, extra slots, Mower Launch...) apply in
+	## levels. Off, every level plays as if none were owned.
+	&"upgrades_enabled": true,
 	## A locale from I18n.languages(), or "" to follow the operating system.
 	&"language": "",
 }

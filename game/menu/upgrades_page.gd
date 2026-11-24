@@ -19,6 +19,7 @@ const TOGGLE_SIZE := Vector2(150, 46)
 const LOCKED_TINT := Color(150 / 255.0, 150 / 255.0, 150 / 255.0)
 
 var _grid: GridContainer
+var _off_note: Label
 ## Upgrade id -> its card's toggle button.
 var _toggles: Dictionary = {}
 var _cards: Dictionary = {}
@@ -26,10 +27,18 @@ var _cards: Dictionary = {}
 
 func _ready() -> void:
 	set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	var stack := VBoxContainer.new()
+	stack.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	add_child(stack)
+	# Upgrades are optional: with Settings' Upgrades switch off, none apply.
+	_off_note = MenuUI.label("Upgrades are turned off in Settings, so none of these apply.",
+			MenuUI.BODY_SIZE)
+	_off_note.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	stack.add_child(_off_note)
 	var scroll := ScrollContainer.new()
-	scroll.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
-	add_child(scroll)
+	stack.add_child(scroll)
 	var center := CenterContainer.new()
 	center.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	scroll.add_child(center)
@@ -40,10 +49,24 @@ func _ready() -> void:
 	center.add_child(_grid)
 	refresh()
 	Saves.progress_changed.connect(_on_progress_changed)
+	Settings.changed.connect(func(key: StringName, _v: Variant) -> void:
+		if key == &"upgrades_enabled":
+			_update_off_note())
+
+
+## Whether the "turned off in Settings" note shows.
+func is_off_note_visible() -> bool:
+	return _off_note.visible
+
+
+func _update_off_note() -> void:
+	_off_note.visible = not Upgrades.system_enabled()
+	_grid.modulate = Color.WHITE if Upgrades.system_enabled() else Color(1, 1, 1, 0.6)
 
 
 ## Rebuilds every card from the catalogue and the player's saves.
 func refresh() -> void:
+	_update_off_note()
 	for child in _grid.get_children():
 		child.queue_free()
 	_toggles.clear()

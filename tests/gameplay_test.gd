@@ -4581,6 +4581,16 @@ func _test_upgrades() -> void:
 	runner.start({"id": "upgrade_test", "waves": [], "starting_sun": 150}, board)
 	check_eq("on top of a level's own starting sun", board.sun, 200)
 
+	# Upgrades are optional: the Settings switch turns them all off at once.
+	Settings.set_value(&"upgrades_enabled", false)
+	board.reset()
+	runner.start(level, board)
+	check_eq("with upgrades off, the usual starting sun", board.sun, 50)
+	check_eq("and the usual plant food bar", board.max_plant_food, 3)
+	check_eq("and no hand-launched mowers", board.manual_mowers_left, 0)
+	check("the upgrades stay owned", Upgrades.owns(&"upgrade_starting_sun_lvl1"))
+	Settings.set_value(&"upgrades_enabled", true)
+
 	# Switched off in the almanac, an upgrade stops counting.
 	Upgrades.set_enabled(&"upgrade_starting_sun_lvl2", false)
 	check("it reads as disabled", not Upgrades.is_enabled(&"upgrade_starting_sun_lvl2"))
@@ -4666,6 +4676,10 @@ func _test_upgrades() -> void:
 	var page := UpgradesPage.new()
 	add_child(page)
 	check_eq("a card per upgrade", page.card_count(), 14)
+	check("no off note while upgrades are on", not page.is_off_note_visible())
+	Settings.set_value(&"upgrades_enabled", false)
+	check("the page says when they are turned off", page.is_off_note_visible())
+	Settings.set_value(&"upgrades_enabled", true)
 	check("a locked upgrade has no switch", page.toggle_for(&"upgrade_sky_shield") == null)
 	var toggle := page.toggle_for(&"upgrade_7_slots")
 	check("an owned one does", toggle != null)

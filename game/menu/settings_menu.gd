@@ -73,6 +73,7 @@ func _ready() -> void:
 	_add_toggle(rows, "VSync", &"vsync")
 	_add_toggle(rows, "Pause When Unfocused", &"pause_on_focus_loss")
 	_add_toggle(rows, "Unlock Every Plant", &"unlock_all_plants")
+	_add_toggle(rows, "Upgrades", &"upgrades_enabled")
 	_add_language(rows)
 
 	var row := HBoxContainer.new()
