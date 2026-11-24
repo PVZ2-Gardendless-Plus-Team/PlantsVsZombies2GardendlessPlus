@@ -1066,6 +1066,11 @@ Code asks `Upgrades` (`core/upgrades/upgrades.gd`): `owns`, `grant`,
 `starting_sun_bonus()`. Owned upgrades are the `upgrades` collection in
 Saves; switched-off ones are `upgrades_disabled`.
 
+Upgrades are optional. The **Upgrades** switch in Settings
+(`upgrades_enabled`) turns every one of them off at once; levels then play
+exactly as if none were owned, and what the player owns is kept for when it
+is switched back on.
+
 ## I-Zombie costs
 
 A zombie's `sun_cost` is what it costs to place from a seed packet. PopCap's
