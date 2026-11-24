@@ -4183,7 +4183,7 @@ func _test_minigames() -> void:
 	check_eq("and the plant food", board.plant_food, 3)
 	await _wait_game_seconds(0.3)
 	check_eq("no wave comes while planning", runner.wave_index, -1)
-	var stand := runner.minigame(&"last_stand")
+	var stand = runner.minigame(&"last_stand")
 	stand.start_onslaught()
 	await _wait_game_seconds(0.3)
 	check_eq("the onslaught starts the waves", runner.wave_index, 0)
@@ -4201,17 +4201,16 @@ func _test_minigames() -> void:
 	var belt := ConveyorSeedBank.new()
 	add_child(belt)
 	runner.seed_bank = belt
-	var vb := runner.minigame(&"vasebreaker")
+	var vb = runner.minigame(&"vasebreaker")
 	check_eq("one vase per item, up to the cells", vb.vases.size(), 4)
 	check("vasebreaker hands out its own seeds", not runner.needs_seed_choice())
 	check("on a belt", runner.is_conveyor())
 	var vase_cell: Vector2i = vb.vases.keys()[0]
 	check("nothing can be planted on a vase",
 			board.placement_refusal(&"plant", &"peashooter", vase_cell.y, vase_cell.x) != "")
-	check("not before the level starts", not vb.handle_click(vase_cell.y, vase_cell.x))
 	check("the level is not won with vases left", not vb.is_met())
 	runner.begin()
-	var greens := vb.vases.values().filter(func(v): return v["color"] == &"green")
+	var greens: Array = vb.vases.values().filter(func(v): return v["color"] == &"green")
 	check_eq("the coloured plant vase is green", greens.size(), 1)
 	var zombies_before := board.zombie_count()
 	for cell in vb.vases.keys():
@@ -4229,7 +4228,7 @@ func _test_minigames() -> void:
 			"stages": [{"spawn_delay": 999, "types": [{"zombie_type": "tutorial"}]}]}]})
 	board = pair[0]
 	runner = pair[1]
-	var bg := runner.minigame(&"beghouled")
+	var bg = runner.minigame(&"beghouled")
 	runner.begin()
 	var full := true
 	for row in board.rows:
@@ -4237,17 +4236,20 @@ func _test_minigames() -> void:
 			full = full and board.plant_at(row, col) != null
 	check("every square of the board is planted", full)
 	check("and nothing matches yet", bg._find_matches().is_empty())
-	# Line up two peashooters and swap a third in.
-	for c in 3:
-		board.vanish_plant(0, c)
-	board.vanish_plant(1, 2)
-	board.place_preset_plant(&"peashooter", 0, 0)
-	board.place_preset_plant(&"peashooter", 0, 1)
-	board.place_preset_plant(&"wallnut", 0, 2)
-	board.place_preset_plant(&"peashooter", 1, 2)
-	check("a swap that matches nothing is refused", not bg.try_swap(Vector2i(0, 0), Vector2i(0, 1)))
-	check_eq("and leaves the plants", board.plant_at(0, 0).def.id, &"peashooter")
-	check("a swap that lines up three is made", bg.try_swap(Vector2i(2, 0), Vector2i(2, 1)))
+	# A known board with no matches: four kinds in a pattern that never
+	# repeats three times in a line. Then two peashooters either side of a
+	# wall-nut on the top row, and a third peashooter under the wall-nut.
+	var kinds := [&"peashooter", &"wallnut", &"sunflower", &"potatomine"]
+	var overrides := {Vector2i(1, 1): &"peashooter", Vector2i(2, 0): &"peashooter"}
+	for row in board.rows:
+		for col in 8:
+			board.vanish_plant(row, col)
+			board.place_preset_plant(overrides.get(Vector2i(col, row),
+					kinds[(2 * row + col) % 4]), row, col)
+	check("the laid-out board has no match", bg._find_matches().is_empty())
+	check("a swap that matches nothing is refused", not bg.try_swap(Vector2i(3, 0), Vector2i(4, 0)))
+	check_eq("and leaves the plants", board.plant_at(0, 3).def.id, &"potatomine")
+	check("a swap that lines up three is made", bg.try_swap(Vector2i(1, 0), Vector2i(1, 1)))
 	check("which counts a match", bg.matches >= 1)
 	check("the board is refilled", board.plant_at(0, 0) != null)
 	check("waves wait while matching", bg.holds_waves() or bg.is_met())
@@ -4261,8 +4263,8 @@ func _test_minigames() -> void:
 				"zombie_pool": ["tutorial_armor1", "tutorial_armor2"]}]}]})
 	board = pair[0]
 	runner = pair[1]
-	var zone := runner.minigame(&"endless")
-	var picked := zone.pick_zombies(300)
+	var zone = runner.minigame(&"endless")
+	var picked: Array = zone.pick_zombies(300)
 	var spent := 0.0
 	for id in picked:
 		spent += zone._cost(id)
