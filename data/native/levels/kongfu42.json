@@ -1,0 +1,722 @@
+{
+ "id": "kongfu42",
+ "name": "kongfu minigame II C",
+ "name_key": "[KONGFU_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_KONGFU]",
+ "author": "莱池_余垛",
+ "number": 42,
+ "stage": "AbbotStage",
+ "gravestones": {
+  "forced": [
+   {
+    "col": 3,
+    "row": 0,
+    "type": "kongfu_rack_torch"
+   },
+   {
+    "col": 3,
+    "row": 1,
+    "type": "kongfu_rack_torch"
+   },
+   {
+    "col": 3,
+    "row": 2,
+    "type": "kongfu_rack_torch"
+   },
+   {
+    "col": 3,
+    "row": 3,
+    "type": "kongfu_rack_torch"
+   },
+   {
+    "col": 3,
+    "row": 4,
+    "type": "kongfu_rack_torch"
+   },
+   {
+    "col": 4,
+    "row": 0,
+    "type": "kongfu_rack_helmet"
+   },
+   {
+    "col": 4,
+    "row": 1,
+    "type": "kongfu_rack_helmet"
+   },
+   {
+    "col": 4,
+    "row": 2,
+    "type": "kongfu_rack_helmet"
+   },
+   {
+    "col": 4,
+    "row": 3,
+    "type": "kongfu_rack_helmet"
+   },
+   {
+    "col": 4,
+    "row": 4,
+    "type": "kongfu_rack_helmet"
+   },
+   {
+    "col": 6,
+    "row": 0,
+    "type": "kongfu_rack_fan"
+   },
+   {
+    "col": 6,
+    "row": 1,
+    "type": "kongfu_rack_fan"
+   },
+   {
+    "col": 6,
+    "row": 2,
+    "type": "kongfu_rack_fan"
+   },
+   {
+    "col": 6,
+    "row": 3,
+    "type": "kongfu_rack_fan"
+   },
+   {
+    "col": 6,
+    "row": 4,
+    "type": "kongfu_rack_fan"
+   }
+  ]
+ },
+ "seedbank": {
+  "mode": "chooser",
+  "selection": "chooser",
+  "exclude": [
+   "puffshroom",
+   "gravebuster",
+   "toadstool",
+   "goldleaf",
+   "stallia",
+   "melonpult",
+   "iceburg"
+  ],
+  "exclude_sun_producers": "true",
+  "decks": {
+   "recommended": [
+    {
+     "name": "Sheer Force Conquers All",
+     "plants": [
+      "citron",
+      "stunion",
+      "potatomine",
+      "turnip",
+      "wallnut",
+      "seashroom"
+     ]
+    },
+    {
+     "name": "Swipe Their Heads Off!",
+     "plants": [
+      "moonflower",
+      "dusklobber",
+      "turnip"
+     ]
+    },
+    {
+     "name": "Sit by and Win",
+     "plants": [
+      "electriccurrant",
+      "electricpeashooter",
+      "turnip"
+     ]
+    },
+    {
+     "name": "Sit by and Win - 2",
+     "plants": [
+      "caulipower",
+      "turnip"
+     ]
+    }
+   ]
+  }
+ },
+ "minigames": [
+  {
+   "type": "last_stand",
+   "starting_plantfood": 2,
+   "starting_sun": 2250
+  }
+ ],
+ "objectives": [
+  {
+   "type": "survive_waves",
+   "description": "[STARCHALLENGE_LASTSTAND_MINIGAME]"
+  }
+ ],
+ "waves": [
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "monk_drink",
+     "row": 2
+    },
+    {
+     "type": "abbot_fan",
+     "row": 2
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "monk_drink",
+     "row": 3
+    },
+    {
+     "type": "abbot_fan",
+     "row": 3
+    },
+    {
+     "type": "monk_drink",
+     "row": 5
+    },
+    {
+     "type": "abbot_fan",
+     "row": 5
+    }
+   ],
+   "must_clear": true
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "KongfuChiHoleProps",
+     "data": {
+      "Direction": 1,
+      "WaveStartMessage": "[WARNING_QIGONG_HOLE]",
+      "PlantMovingTimeBetweenSquares": 2,
+      "LifeSpan": 1.5,
+      "TimeBeforeAbsorbing": 1.5,
+      "Column": 8,
+      "SuppressesNextWave": true,
+      "SuppressObjectiveTip": false,
+      "LanesToAffect": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "abbot_armor1",
+     "row": 1
+    },
+    {
+     "type": "abbot_armor1",
+     "row": 2
+    },
+    {
+     "type": "abbot_armor1",
+     "row": 3
+    },
+    {
+     "type": "abbot_armor1",
+     "row": 4
+    },
+    {
+     "type": "abbot_armor1",
+     "row": 5
+    },
+    {
+     "type": "kongfu_gong",
+     "row": 2
+    },
+    {
+     "type": "kongfu_gong",
+     "row": 4
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "abbot_armor2",
+     "row": 1
+    },
+    {
+     "type": "abbot_armor2",
+     "row": 3
+    },
+    {
+     "type": "abbot_fan",
+     "row": 1
+    },
+    {
+     "type": "abbot_fan",
+     "row": 3
+    },
+    {
+     "type": "monk_imp",
+     "row": 1
+    },
+    {
+     "type": "monk_imp",
+     "row": 2
+    },
+    {
+     "type": "monk_imp",
+     "row": 3
+    },
+    {
+     "type": "monk_imp",
+     "row": 4
+    },
+    {
+     "type": "monk_imp",
+     "row": 5
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "abbot_armor2",
+     "row": 2
+    },
+    {
+     "type": "abbot_armor2",
+     "row": 4
+    },
+    {
+     "type": "abbot_fan",
+     "row": 2
+    },
+    {
+     "type": "abbot_fan",
+     "row": 4
+    },
+    {
+     "type": "kongfu_chi",
+     "row": 1
+    },
+    {
+     "type": "kongfu_chi",
+     "row": 3
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "kongfu_gong",
+     "row": 2
+    },
+    {
+     "type": "kongfu_gong",
+     "row": 4
+    },
+    {
+     "type": "monk_drink",
+     "row": 1
+    },
+    {
+     "type": "monk_drink",
+     "row": 3
+    },
+    {
+     "type": "monk_drink",
+     "row": 5
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "KongfuChiHoleProps",
+     "data": {
+      "Direction": 1,
+      "WaveStartMessage": "[WARNING_QIGONG_HOLE]",
+      "PlantMovingTimeBetweenSquares": 4,
+      "LifeSpan": 1.5,
+      "TimeBeforeAbsorbing": 1.5,
+      "Column": 8,
+      "SuppressesNextWave": true,
+      "SuppressObjectiveTip": false,
+      "LanesToAffect": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "monk_drink",
+     "row": 1
+    },
+    {
+     "type": "monk_drink",
+     "row": 2
+    },
+    {
+     "type": "monk_drink",
+     "row": 3
+    },
+    {
+     "type": "monk_drink",
+     "row": 4
+    },
+    {
+     "type": "monk_drink",
+     "row": 5
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "abbot_armor2",
+     "row": 2
+    },
+    {
+     "type": "abbot_fan",
+     "row": 2
+    },
+    {
+     "type": "abbot_armor2",
+     "row": 5
+    },
+    {
+     "type": "abbot_fan",
+     "row": 5
+    },
+    {
+     "type": "kongfu_gong",
+     "row": 3
+    },
+    {
+     "type": "kongfu_gong",
+     "row": 4
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "abbot_armor1",
+       "row": 2
+      },
+      {
+       "type": "abbot_armor1",
+       "row": 4
+      }
+     ]
+    },
+    {
+     "kind": "gravestones",
+     "pool": [
+      {
+       "type": "kongfu_rack_helmet",
+       "count": 2
+      }
+     ],
+     "positions": [
+      {
+       "col": 7,
+       "row": 1
+      },
+      {
+       "col": 7,
+       "row": 3
+      }
+     ]
+    },
+    {
+     "kind": "gravestones",
+     "pool": [
+      {
+       "type": "kongfu_rack_torch",
+       "count": 3
+      }
+     ],
+     "positions": [
+      {
+       "col": 6,
+       "row": 1
+      },
+      {
+       "col": 6,
+       "row": 2
+      },
+      {
+       "col": 6,
+       "row": 4
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "abbot_armor1",
+     "row": 1
+    },
+    {
+     "type": "abbot_armor1",
+     "row": 3
+    },
+    {
+     "type": "abbot_armor1",
+     "row": 5
+    },
+    {
+     "type": "abbot_fan",
+     "row": 1
+    },
+    {
+     "type": "abbot_fan",
+     "row": 3
+    },
+    {
+     "type": "abbot_fan",
+     "row": 5
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "KongfuChiHoleProps",
+     "data": {
+      "Direction": 1,
+      "WaveStartMessage": "[WARNING_QIGONG_HOLE]",
+      "PlantMovingTimeBetweenSquares": 3,
+      "LifeSpan": 1.5,
+      "TimeBeforeAbsorbing": 1.5,
+      "Column": 8,
+      "SuppressesNextWave": true,
+      "SuppressObjectiveTip": false,
+      "LanesToAffect": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "kongfu_chi",
+     "row": 1
+    },
+    {
+     "type": "kongfu_chi",
+     "row": 2
+    },
+    {
+     "type": "kongfu_chi",
+     "row": 3
+    },
+    {
+     "type": "kongfu_chi",
+     "row": 4
+    },
+    {
+     "type": "kongfu_chi",
+     "row": 5
+    },
+    {
+     "type": "monk_imp",
+     "row": 1
+    },
+    {
+     "type": "monk_imp",
+     "row": 2
+    },
+    {
+     "type": "monk_imp",
+     "row": 3
+    },
+    {
+     "type": "monk_imp",
+     "row": 4
+    },
+    {
+     "type": "monk_imp",
+     "row": 5
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "abbot_armor2",
+     "row": 2
+    },
+    {
+     "type": "abbot_fan",
+     "row": 2
+    },
+    {
+     "type": "abbot_armor2",
+     "row": 4
+    },
+    {
+     "type": "abbot_fan",
+     "row": 4
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "kongfu_gong",
+     "row": 2
+    },
+    {
+     "type": "kongfu_gong",
+     "row": 4
+    },
+    {
+     "type": "monk_imp",
+     "row": 2
+    },
+    {
+     "type": "monk_imp",
+     "row": 4
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "KongfuChiHoleProps",
+     "data": {
+      "Direction": 1,
+      "WaveStartMessage": "[WARNING_QIGONG_HOLE]",
+      "PlantMovingTimeBetweenSquares": 2,
+      "LifeSpan": 1.5,
+      "TimeBeforeAbsorbing": 1.5,
+      "Column": 8,
+      "SuppressesNextWave": true,
+      "SuppressObjectiveTip": false,
+      "LanesToAffect": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "monk_drink",
+     "row": 1
+    },
+    {
+     "type": "monk_drink",
+     "row": 2
+    },
+    {
+     "type": "monk_drink",
+     "row": 3
+    },
+    {
+     "type": "monk_drink",
+     "row": 4
+    },
+    {
+     "type": "monk_drink",
+     "row": 5
+    },
+    {
+     "type": "monk_imp",
+     "row": 1
+    },
+    {
+     "type": "monk_imp",
+     "row": 2
+    },
+    {
+     "type": "monk_imp",
+     "row": 3
+    },
+    {
+     "type": "monk_imp",
+     "row": 4
+    },
+    {
+     "type": "monk_imp",
+     "row": 5
+    },
+    {
+     "type": "abbot_fan",
+     "row": 1
+    },
+    {
+     "type": "abbot_fan",
+     "row": 2
+    },
+    {
+     "type": "abbot_fan",
+     "row": 3
+    },
+    {
+     "type": "abbot_fan",
+     "row": 4
+    },
+    {
+     "type": "abbot_fan",
+     "row": 5
+    }
+   ]
+  }
+ ],
+ "wave_pacing": {
+  "flag_interval": 9,
+  "points": 100,
+  "point_increment": 100
+ },
+ "mowers": true,
+ "scripts": [
+  "StandardIntro"
+ ]
+}

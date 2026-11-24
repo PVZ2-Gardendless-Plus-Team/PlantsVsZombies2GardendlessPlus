@@ -1,0 +1,199 @@
+{
+ "id": "lod_easter_12",
+ "name": "Modern 8",
+ "name_key": "[LOD_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_LOD]",
+ "author": "蔓逐I蝶舞",
+ "stage": "SpringStage",
+ "level_of_the_day": true,
+ "minigames": [
+  {
+   "type": "beghouled",
+   "match_counts_to_stage_advance": [
+    {
+     "match_count": 10,
+     "stage_number": 1
+    },
+    {
+     "match_count": 40,
+     "stage_number": 2
+    },
+    {
+     "match_count": 70,
+     "stage_number": 3
+    },
+    {
+     "match_count": 100,
+     "stage_number": 4
+    }
+   ],
+   "stages": [
+    {
+     "spawn_delay": 2,
+     "types": [
+      {
+       "zombie_type": "lawn"
+      },
+      {
+       "zombie_type": "lawn_armor1"
+      }
+     ]
+    },
+    {
+     "spawn_delay": 2,
+     "types": [
+      {
+       "zombie_type": "lawn"
+      },
+      {
+       "zombie_type": "lawn_armor1"
+      },
+      {
+       "zombie_type": "lawn_armor2"
+      }
+     ]
+    },
+    {
+     "spawn_delay": 2,
+     "types": [
+      {
+       "zombie_type": "lawn"
+      },
+      {
+       "zombie_type": "lawn_armor1"
+      },
+      {
+       "zombie_type": "lawn_armor2"
+      },
+      {
+       "zombie_type": "lawn_armor3"
+      },
+      {
+       "zombie_type": "dino_bully"
+      }
+     ]
+    },
+    {
+     "spawn_delay": 2,
+     "types": [
+      {
+       "zombie_type": "lawn_imp"
+      },
+      {
+       "zombie_type": "lawn_armor1"
+      },
+      {
+       "zombie_type": "lawn_armor2"
+      },
+      {
+       "zombie_type": "lawn_armor3"
+      },
+      {
+       "zombie_type": "dino_bully"
+      }
+     ]
+    },
+    {
+     "spawn_delay": 2,
+     "types": [
+      {
+       "zombie_type": "lawn_imp"
+      },
+      {
+       "zombie_type": "lawn_armor1"
+      },
+      {
+       "zombie_type": "lawn_armor2"
+      },
+      {
+       "zombie_type": "lawn_armor3"
+      },
+      {
+       "zombie_type": "dino_bully"
+      },
+      {
+       "zombie_type": "lawn_gargantuar"
+      }
+     ]
+    }
+   ],
+   "selection_method": "beghouled",
+   "preset_plant_list": [
+    {
+     "plant_type": "anthurium",
+     "level": -1
+    },
+    {
+     "plant_type": "lightningreed",
+     "level": -1
+    },
+    {
+     "plant_type": "lychee",
+     "level": -1
+    },
+    {
+     "plant_type": "endurian",
+     "level": -1
+    },
+    {
+     "plant_type": "fumeshroom",
+     "level": -1
+    },
+    {
+     "plant_type": "wintermelon",
+     "level": -1
+    },
+    {
+     "plant_type": "coldsnapdragon",
+     "level": -1
+    }
+   ],
+   "beghouled_upgrade_list": [
+    "threepeater",
+    "wintermelon"
+   ],
+   "matches_to_win": 120,
+   "initial_plants": [
+    "peashooter",
+    "pepperpult",
+    "wallnut",
+    "primalpeashooter",
+    "bloomerang"
+   ],
+   "upgrade_map": [
+    {
+     "base_plant": "peashooter",
+     "upgraded_plant": "threepeater"
+    },
+    {
+     "base_plant": "pepperpult",
+     "upgraded_plant": "melonpult"
+    },
+    {
+     "base_plant": "wallnut",
+     "upgraded_plant": "primalwallnut"
+    },
+    {
+     "base_plant": "wallnut",
+     "upgraded_plant": "peanut"
+    },
+    {
+     "base_plant": "bloomerang",
+     "upgraded_plant": "laser_bean"
+    },
+    {
+     "base_plant": "bloomerang",
+     "upgraded_plant": "cactus"
+    }
+   ]
+  }
+ ],
+ "sun": {
+  "interval": 10.0
+ },
+ "scripts": [
+  "BeghouledArcade",
+  "BeghouledIntro",
+  "LevelOfTheDayIntro"
+ ]
+}

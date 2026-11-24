@@ -1,0 +1,72 @@
+{
+ "id": "modern_dangerroom",
+ "name": "Modern Danger Room",
+ "name_key": "[DANGER_ROOM_MODERN_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_DANGER_ROOM]",
+ "number": 666,
+ "stage": "ModernStage",
+ "minigames": [
+  {
+   "type": "endless",
+   "world_specific_properties": "ModernDangerRoomProps",
+   "level_designers": [
+    {
+     "starting_points": 100,
+     "base_point_increment_per_wave": 20,
+     "base_point_increment_per_level": 5,
+     "min_dynamic_zombie_type": 4,
+     "must_contain_zombie": [
+      "tutorial"
+     ],
+     "zombie_pool": [
+      "tutorial_armor1",
+      "tutorial_armor2",
+      "tutorial_imp",
+      "tutorial_gargantuar",
+      "modern_newspaper",
+      "modern_balloon",
+      "modern_allstar",
+      "modern_superfanimp"
+     ],
+     "type": "jittered_wave_generator"
+    },
+    {
+     "type": "shared",
+     "name": "PortalDesigner"
+    }
+   ],
+   "initial_plants": [
+    "moonflower",
+    "nightshade",
+    "shadowshroom"
+   ],
+   "exclude_plants": [
+    "lilypad",
+    "floawerPot",
+    "tanglekelp",
+    "empea",
+    "perfumeshroom"
+   ],
+   "minigame": false
+  }
+ ],
+ "seedbank": {
+  "mode": "chooser",
+  "selection": "chooser",
+  "blacklist": [],
+  "always_chooser": true
+ },
+ "sun": {
+  "interval": 10.0
+ },
+ "mowers": true,
+ "extra": [
+  {
+   "objclass": "DangerRoomLevelIntroProperties",
+   "aliases": [
+    "DangerRoomIntro"
+   ],
+   "objdata": {}
+  }
+ ]
+}

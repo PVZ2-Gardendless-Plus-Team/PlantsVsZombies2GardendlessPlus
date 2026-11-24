@@ -1,0 +1,556 @@
+{
+ "id": "future34",
+ "name": "Future 34",
+ "name_key": "[FUTURE_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_FUTURE]",
+ "number": 34,
+ "stage": "FutureNightStage",
+ "reward": {
+  "type": "pinata",
+  "param": "spine_future"
+ },
+ "power_tiles": [
+  {
+   "group": "gamma",
+   "row": 0,
+   "col": 1,
+   "delay": 1.5
+  },
+  {
+   "group": "delta",
+   "row": 0,
+   "col": 3,
+   "delay": 1.5
+  },
+  {
+   "group": "gamma",
+   "row": 0,
+   "col": 5,
+   "delay": 1.5
+  },
+  {
+   "group": "beta",
+   "row": 1,
+   "col": 4,
+   "delay": 1.5
+  },
+  {
+   "group": "alpha",
+   "row": 1,
+   "col": 2,
+   "delay": 0.2
+  },
+  {
+   "group": "beta",
+   "row": 2,
+   "col": 1,
+   "delay": 1.5
+  },
+  {
+   "group": "delta",
+   "row": 2,
+   "col": 3,
+   "delay": 1.5
+  },
+  {
+   "group": "alpha",
+   "row": 2,
+   "col": 5,
+   "delay": 0.2
+  },
+  {
+   "group": "beta",
+   "row": 3,
+   "col": 4,
+   "delay": 1.5
+  },
+  {
+   "group": "alpha",
+   "row": 3,
+   "col": 2,
+   "delay": 0.2
+  },
+  {
+   "group": "gamma",
+   "row": 4,
+   "col": 1,
+   "delay": 1.5
+  },
+  {
+   "group": "delta",
+   "row": 4,
+   "col": 3,
+   "delay": 1.5
+  },
+  {
+   "group": "gamma",
+   "row": 4,
+   "col": 5,
+   "delay": 1.5
+  }
+ ],
+ "seedbank": {
+  "mode": "chooser",
+  "selection": "chooser",
+  "blacklist": [
+   "sunflower",
+   "twinsunflower",
+   "sunshroom",
+   "primalsunflower"
+  ]
+ },
+ "minigames": [
+  {
+   "type": "sun_bomb",
+   "plant_bomb_explosion_radius": 25,
+   "plant_damage": 1000,
+   "zombie_bomb_explosion_radius": 80,
+   "zombie_damage": 500
+  }
+ ],
+ "objectives": [
+  {
+   "type": "survive_waves",
+   "description": "[STARCHALLENGE_SUNBOMBS]"
+  },
+  {
+   "type": "no_plant_zone",
+   "cells": [
+    {
+     "row": 0,
+     "col": 0
+    },
+    {
+     "row": 0,
+     "col": 2
+    },
+    {
+     "row": 0,
+     "col": 4
+    },
+    {
+     "row": 0,
+     "col": 6
+    },
+    {
+     "row": 0,
+     "col": 7
+    },
+    {
+     "row": 0,
+     "col": 8
+    },
+    {
+     "row": 1,
+     "col": 0
+    },
+    {
+     "row": 1,
+     "col": 1
+    },
+    {
+     "row": 1,
+     "col": 3
+    },
+    {
+     "row": 1,
+     "col": 5
+    },
+    {
+     "row": 1,
+     "col": 6
+    },
+    {
+     "row": 1,
+     "col": 7
+    },
+    {
+     "row": 1,
+     "col": 8
+    },
+    {
+     "row": 2,
+     "col": 0
+    },
+    {
+     "row": 2,
+     "col": 2
+    },
+    {
+     "row": 2,
+     "col": 4
+    },
+    {
+     "row": 2,
+     "col": 6
+    },
+    {
+     "row": 2,
+     "col": 7
+    },
+    {
+     "row": 2,
+     "col": 8
+    },
+    {
+     "row": 3,
+     "col": 0
+    },
+    {
+     "row": 3,
+     "col": 1
+    },
+    {
+     "row": 3,
+     "col": 3
+    },
+    {
+     "row": 3,
+     "col": 5
+    },
+    {
+     "row": 3,
+     "col": 6
+    },
+    {
+     "row": 3,
+     "col": 7
+    },
+    {
+     "row": 3,
+     "col": 8
+    },
+    {
+     "row": 4,
+     "col": 0
+    },
+    {
+     "row": 4,
+     "col": 2
+    },
+    {
+     "row": 4,
+     "col": 4
+    },
+    {
+     "row": 4,
+     "col": 6
+    },
+    {
+     "row": 4,
+     "col": 7
+    },
+    {
+     "row": 4,
+     "col": 8
+    }
+   ]
+  }
+ ],
+ "waves": [
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "mech_cone"
+    }
+   ],
+   "dynamic_plantfood": [
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "future_jetpack"
+    },
+    {
+     "type": "future_jetpack"
+    },
+    {
+     "type": "future_armor2"
+    }
+   ],
+   "plantfood": 1
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "future_armor1"
+    },
+    {
+     "type": "future_armor4"
+    },
+    {
+     "type": "future_armor2"
+    },
+    {
+     "type": "future_armor4"
+    },
+    {
+     "type": "mech_cone",
+     "row": 3
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "mech_cone",
+     "row": 4
+    },
+    {
+     "type": "mech_cone",
+     "row": 2
+    },
+    {
+     "type": "future_armor1"
+    }
+   ],
+   "plantfood": 1
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "future_protector",
+     "row": 4
+    },
+    {
+     "type": "future_protector",
+     "row": 2
+    },
+    {
+     "type": "future_jetpack_veteran",
+     "row": 2
+    },
+    {
+     "type": "future_jetpack_veteran",
+     "row": 3
+    },
+    {
+     "type": "future_jetpack_veteran",
+     "row": 4
+    },
+    {
+     "type": "future_armor2",
+     "row": 1
+    },
+    {
+     "type": "future_armor2",
+     "row": 5
+    }
+   ],
+   "plantfood": 1
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "future_protector",
+     "row": 3
+    },
+    {
+     "type": "mech_cone"
+    },
+    {
+     "type": "future_armor4"
+    },
+    {
+     "type": "future_armor4"
+    },
+    {
+     "type": "mech_cone"
+    },
+    {
+     "type": "future_jetpack_veteran"
+    },
+    {
+     "type": "future_jetpack_veteran"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "future_jetpack"
+    },
+    {
+     "type": "future_jetpack"
+    },
+    {
+     "type": "future_jetpack_veteran"
+    },
+    {
+     "type": "mech_cone",
+     "row": 4
+    },
+    {
+     "type": "mech_cone",
+     "row": 2
+    }
+   ],
+   "plantfood": 1
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "future_gargantuar",
+     "row": 3
+    },
+    {
+     "type": "future_armor4",
+     "row": 5
+    },
+    {
+     "type": "future_armor4",
+     "row": 1
+    }
+   ],
+   "plantfood": 1
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "future_protector",
+     "row": 3
+    },
+    {
+     "type": "future_armor1"
+    },
+    {
+     "type": "future_armor4"
+    },
+    {
+     "type": "future_armor2"
+    },
+    {
+     "type": "mech_cone",
+     "row": 4
+    },
+    {
+     "type": "mech_cone",
+     "row": 2
+    },
+    {
+     "type": "future_armor2"
+    },
+    {
+     "type": "future_gargantuar"
+    }
+   ]
+  }
+ ],
+ "wave_pacing": {
+  "flag_interval": 3,
+  "points": 600,
+  "point_increment": 200
+ },
+ "dynamic_zombies": [
+  {
+   "start_wave": 3,
+   "points": -1,
+   "increment": -1,
+   "pool": [
+    "future",
+    "future_armor1",
+    "future_armor2",
+    "future_armor4",
+    "future_jetpack",
+    "mech_cone"
+   ]
+  },
+  {
+   "start_wave": 4,
+   "points": -1,
+   "increment": -1,
+   "pool": [
+    "future",
+    "future_armor1",
+    "future_armor2",
+    "future_armor4",
+    "future_jetpack",
+    "mech_cone"
+   ]
+  },
+  {
+   "start_wave": 5,
+   "points": -1,
+   "increment": -1,
+   "pool": [
+    "future",
+    "future_armor1",
+    "future_armor2",
+    "future_armor4",
+    "future_jetpack",
+    "mech_cone"
+   ]
+  },
+  {
+   "start_wave": 5,
+   "points": 1,
+   "increment": 1,
+   "pool": [
+    "future",
+    "future_armor1",
+    "future_armor2",
+    "future_armor4",
+    "future_jetpack",
+    "mech_cone"
+   ]
+  },
+  {
+   "start_wave": 4,
+   "points": 1,
+   "increment": 1,
+   "pool": [
+    "future_armor1",
+    "future_armor2",
+    "future_armor4",
+    "future_jetpack",
+    "mech_cone"
+   ]
+  },
+  {
+   "start_wave": 3,
+   "points": 1,
+   "increment": 1,
+   "pool": [
+    "future_armor2",
+    "future_armor4",
+    "future_jetpack",
+    "mech_cone"
+   ]
+  }
+ ],
+ "scripts": [
+  "StandardIntro"
+ ],
+ "extra": [
+  {
+   "objclass": "SunDropperProperties",
+   "aliases": [
+    "SunDropper"
+   ],
+   "objdata": {
+    "InitialSunDropDelay": 2,
+    "SunCountdownBase": 4,
+    "SunCountdownIncreasePerSun": 0,
+    "SunCountdownMax": 4,
+    "SunCountdownRange": 0
+   }
+  }
+ ]
+}

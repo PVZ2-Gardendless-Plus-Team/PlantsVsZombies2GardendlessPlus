@@ -1,0 +1,125 @@
+{
+ "id": "sky_dangerroom",
+ "name": "Sky City Danger Room",
+ "name_key": "[DANGER_ROOM_SKYCITY_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_DANGER_ROOM]",
+ "number": 666,
+ "stage": "SkyStage",
+ "minigames": [
+  {
+   "type": "endless",
+   "world_specific_properties": "SkyDangerRoomProps",
+   "level_designers": [
+    {
+     "starting_points": 100,
+     "base_point_increment_per_wave": 30,
+     "base_point_increment_per_level": 5,
+     "min_dynamic_zombie_type": 4,
+     "must_contain_zombie": [
+      "sky"
+     ],
+     "zombie_pool": [
+      "sky_armor1",
+      "sky_armor2",
+      "sky_electric",
+      "sky_arbiterx",
+      "sky_battleplane",
+      "sky_dronemaker",
+      "sky_gargantuar",
+      "sky_twin"
+     ],
+     "type": "jittered_wave_generator"
+    },
+    {
+     "level_range": {
+      "min": 5,
+      "max": 30
+     },
+     "linked_plant_count_min": {
+      "min": 1,
+      "max": 4
+     },
+     "linked_plant_count_max": {
+      "min": 3,
+      "max": 5
+     },
+     "thunder_count_min": {
+      "min": 1,
+      "max": 2
+     },
+     "thunder_count_max": {
+      "min": 2,
+      "max": 3
+     },
+     "wave_lightning_chance": {
+      "min": 10,
+      "max": 33
+     },
+     "type": "lightning_designer"
+    },
+    {
+     "level_range": {
+      "min": 3,
+      "max": 15
+     },
+     "imp_column_min": {
+      "min": 3,
+      "max": 0
+     },
+     "imp_column_max": {
+      "min": 2,
+      "max": 2
+     },
+     "imp_count_min": {
+      "min": 1,
+      "max": 2
+     },
+     "imp_count_max": {
+      "min": 2,
+      "max": 3
+     },
+     "wave_drop_ship_chance": {
+      "min": 3,
+      "max": 10
+     },
+     "type": "drop_ship_designer"
+    }
+   ],
+   "initial_plants": [
+    "sunflower",
+    "skyshooter",
+    "bonkchoy",
+    "pineapple",
+    "anthurium"
+   ],
+   "exclude_plants": [
+    "gravebuster",
+    "lilypad",
+    "tanglekelp",
+    "hotpotato"
+   ],
+   "minigame": false
+  }
+ ],
+ "seedbank": {
+  "mode": "chooser",
+  "selection": "chooser",
+  "blacklist": [],
+  "always_chooser": true
+ },
+ "sun": {
+  "interval": 10.0
+ },
+ "scripts": [
+  "SkyCityShipDefault"
+ ],
+ "extra": [
+  {
+   "objclass": "DangerRoomLevelIntroProperties",
+   "aliases": [
+    "DangerRoomIntro"
+   ],
+   "objdata": {}
+  }
+ ]
+}

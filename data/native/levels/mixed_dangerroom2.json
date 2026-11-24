@@ -1,0 +1,241 @@
+{
+ "id": "mixed_dangerroom2",
+ "name": "Mixed Danger Room",
+ "name_key": "[DANGER_ROOM_MODERN_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_DANGER_ROOM]",
+ "number": 666,
+ "stage": "ModernNightStage",
+ "minigames": [
+  {
+   "type": "endless",
+   "world_specific_properties": "ModernDangerRoomProps",
+   "level_designers": [
+    {
+     "type": "shared",
+     "name": "FreezingWindDesigner"
+    },
+    {
+     "type": "shared",
+     "name": "IceBlockDesigner2"
+    },
+    {
+     "starting_points": 150,
+     "base_point_increment_per_wave": 45,
+     "base_point_increment_per_level": 5,
+     "min_dynamic_zombie_type": 5,
+     "must_contain_zombie": [
+      "beach",
+      "beach_fem"
+     ],
+     "zombie_pool": [
+      "lostcity_armor1",
+      "lostcity_armor2",
+      "lostcity_imp",
+      "lostcity_excavator",
+      "lostcity_jane",
+      "lostcity_bug",
+      "lostcity_bug_armor1",
+      "lostcity_bug_armor2",
+      "lostcity_impporter",
+      "lostcity_relichunter",
+      "lostcity_crystalskull",
+      "lostcity_gargantuar",
+      "iceage_armor1",
+      "iceage_armor2",
+      "iceage_armor3",
+      "iceage_armor4",
+      "iceage_hunter",
+      "iceage_hunter_veteran",
+      "iceage_dodo",
+      "iceage_troglobite",
+      "iceage_troglobite_veteran",
+      "iceage_weaselhoarder",
+      "iceage_gargantuar",
+      "dark_armor1",
+      "dark_armor2",
+      "dark_armor3",
+      "dark_armor4",
+      "dark_wizard",
+      "dark_wizard_veteran",
+      "dark_juggler",
+      "dark_king",
+      "dark_king_veteran",
+      "dark_imp_dragon",
+      "dark_gargantuar",
+      "mech_cone",
+      "future_protector",
+      "future_armor1",
+      "future_armor2",
+      "future_armor4",
+      "football_mech",
+      "disco_mech",
+      "future_jetpack",
+      "future_jetpack_veteran",
+      "future_gargantuar",
+      "chicken_farmer",
+      "piano",
+      "cowboy_armor1",
+      "cowboy_armor2",
+      "cowboy_armor4",
+      "poncho",
+      "prospector",
+      "west_bull",
+      "west_bull_veteran",
+      "cowboy_gargantuar",
+      "barrelroller",
+      "cannon",
+      "pirate_armor1",
+      "pirate_armor2",
+      "pirate_armor4",
+      "pirate_captain",
+      "seagull",
+      "pelican",
+      "swashbuckler",
+      "pirate_gargantuar",
+      "camel_onehump",
+      "explorer",
+      "explorer_veteran",
+      "mummy_armor1",
+      "mummy_armor2",
+      "mummy_armor4",
+      "pharaoh",
+      "ra",
+      "tomb_raiser",
+      "egypt_gargantuar",
+      "beach_armor1",
+      "beach_armor4",
+      "beach_fem_armor2",
+      "beach_snorkel",
+      "beach_surfer",
+      "beach_surfer_veteran",
+      "beach_octopus",
+      "beach_fisherman",
+      "beach_gargantuar",
+      "dino",
+      "dino_armor1",
+      "dino_armor2",
+      "dino_armor3",
+      "dino_armor4",
+      "dino_imp",
+      "dino_gargantuar",
+      "dino_bully",
+      "dino_bully_veteran",
+      "eighties_armor1",
+      "eighties_armor2",
+      "eighties_punk",
+      "eighties_mc",
+      "eighties_glitter",
+      "eighties_imp",
+      "eighties_gargantuar",
+      "eighties_breakdancer",
+      "eighties_arcade",
+      "eighties_boombox",
+      "tutorial_armor1",
+      "tutorial_armor2",
+      "tutorial_armor4",
+      "tutorial_imp",
+      "tutorial_gargantuar",
+      "modern_newspaper",
+      "newspaper_veteran",
+      "modern_balloon",
+      "modern_allstar",
+      "modern_allstar",
+      "modern_superfanimp",
+      "modern_superfanimp"
+     ],
+     "type": "jittered_wave_generator"
+    },
+    {
+     "type": "shared",
+     "name": "BeachLilypadPlacer"
+    },
+    {
+     "type": "shared",
+     "name": "DinosaurWeakDesigner"
+    },
+    {
+     "type": "shared",
+     "name": "JamDesigner"
+    },
+    {
+     "type": "shared",
+     "name": "PortalDesigner2"
+    },
+    {
+     "type": "shared",
+     "name": "EgyptWeakGravestoneGenerator"
+    },
+    {
+     "type": "shared",
+     "name": "EgyptWeakSandstormGenerator"
+    },
+    {
+     "type": "shared",
+     "name": "RaidingPartyGenerator"
+    },
+    {
+     "type": "shared",
+     "name": "SpiderRainDesigner"
+    },
+    {
+     "type": "shared",
+     "name": "DarkWaveWeakGravestoneEventGenerator"
+    },
+    {
+     "type": "shared",
+     "name": "DarkWaveWeakNecromancyEventGenerator2"
+    },
+    {
+     "type": "shared",
+     "name": "PowerTileDesigner2"
+    },
+    {
+     "type": "shared",
+     "name": "DangerRoomGoldTilePlacer"
+    },
+    {
+     "type": "shared",
+     "name": "DangerRoomParachuteRainDesigner"
+    },
+    {
+     "type": "shared",
+     "name": "BeachTideChanger"
+    }
+   ],
+   "initial_plants": [
+    "sunshroom",
+    "seashroom",
+    "fumeshroom",
+    "wallnut",
+    "lilypad"
+   ],
+   "minigame": false
+  }
+ ],
+ "seedbank": {
+  "mode": "chooser",
+  "selection": "chooser",
+  "blacklist": [],
+  "always_chooser": true
+ },
+ "initial": {},
+ "tide": {
+  "water_from": 6
+ },
+ "sun": {
+  "interval": 10.0
+ },
+ "mowers": true,
+ "scripts": [
+  "SunBombs"
+ ],
+ "extra": [
+  {
+   "objclass": "DangerRoomLevelIntroProperties",
+   "aliases": [
+    "DangerRoomIntro"
+   ],
+   "objdata": {}
+  }
+ ]
+}

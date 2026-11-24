@@ -1,0 +1,404 @@
+{
+ "id": "pirate14",
+ "name": "Pirate Challenge Last Stand A",
+ "name_key": "[PIRATE_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_PIRATE_SHIP]",
+ "number": 14,
+ "stage": "PirateStage",
+ "intro_narrative": "PIRATE_CHALLENGE_LASTSTAND_A",
+ "reward": {
+  "type": "unlock_plant",
+  "param": "threepeater"
+ },
+ "objectives": [
+  {
+   "type": "survive_waves",
+   "description": "[STARCHALLENGE_LASTSTAND_MINIGAME]"
+  }
+ ],
+ "seedbank": {
+  "mode": "chooser",
+  "selection": "chooser",
+  "blacklist": [
+   "sunflower",
+   "twinsunflower",
+   "iceburg",
+   "sunshroom",
+   "puffshroom",
+   "seashroom",
+   "sunbean",
+   "melonpult",
+   "toadstool",
+   "goldleaf",
+   "stallia",
+   "primalsunflower",
+   "goldbloom"
+  ],
+  "suggest": [
+   [
+    "phatbeet",
+    "bonkchoy"
+   ],
+   [
+    "wallnut"
+   ],
+   [
+    "garlic",
+    "cherry_bomb"
+   ],
+   [
+    "kernelpult",
+    "bloomerang"
+   ],
+   [
+    "cabbagepult"
+   ],
+   [
+    "snapdragon",
+    "repeater"
+   ],
+   [
+    "electricblueberry",
+    "lightningreed"
+   ],
+   [
+    "chardguard",
+    "chilibean"
+   ]
+  ],
+  "decks": {
+   "recommended": [
+    {
+     "name": "Future Technology",
+     "plants": [
+      "laser_bean",
+      "blover"
+     ]
+    },
+    {
+     "name": "Cannon-checkmate",
+     "plants": [
+      "coconutcannon",
+      "snapdragon",
+      "springbean"
+     ]
+    },
+    {
+     "name": "Sit By and Win",
+     "plants": [
+      "lightningreed"
+     ]
+    },
+    {
+     "name": "Meteor Shower",
+     "plants": [
+      "shootingstarfruit"
+     ]
+    },
+    {
+     "name": "Fire Show",
+     "plants": [
+      "firegourd",
+      "snapdragon"
+     ]
+    }
+   ]
+  }
+ },
+ "minigames": [
+  {
+   "type": "last_stand",
+   "starting_plantfood": 3,
+   "starting_sun": 2000
+  }
+ ],
+ "waves": [
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "pirate_armor1"
+    },
+    {
+     "type": "pirate"
+    },
+    {
+     "type": "pirate"
+    },
+    {
+     "type": "seagull",
+     "row": 5
+    },
+    {
+     "type": "seagull",
+     "row": 1
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "barrelroller",
+     "row": 2
+    },
+    {
+     "type": "barrelroller",
+     "row": 3
+    },
+    {
+     "type": "barrelroller",
+     "row": 4
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "seagull",
+       "row": 5
+      },
+      {
+       "type": "pirate_armor1",
+       "row": 4
+      },
+      {
+       "type": "pirate_armor1"
+      },
+      {
+       "type": "pirate_armor1",
+       "row": 2
+      },
+      {
+       "type": "seagull",
+       "row": 1
+      }
+     ]
+    },
+    {
+     "kind": "raiding_party",
+     "type": "swashbuckler",
+     "count": 4,
+     "group_size": 1,
+     "group_interval": 1
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "swashbuckler",
+     "row": 1
+    },
+    {
+     "type": "pirate_captain",
+     "row": 3
+    },
+    {
+     "type": "pirate_captain"
+    },
+    {
+     "type": "swashbuckler",
+     "row": 5
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "seagull",
+     "row": 1
+    },
+    {
+     "type": "pirate_armor1",
+     "row": 2
+    },
+    {
+     "type": "pirate_armor1",
+     "row": 4
+    },
+    {
+     "type": "pirate_armor1"
+    },
+    {
+     "type": "seagull",
+     "row": 5
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "barrelroller",
+       "row": 2
+      },
+      {
+       "type": "barrelroller",
+       "row": 3
+      },
+      {
+       "type": "barrelroller",
+       "row": 4
+      }
+     ]
+    },
+    {
+     "kind": "raiding_party",
+     "type": "swashbuckler",
+     "count": 5,
+     "group_size": 1,
+     "group_interval": 1
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "seagull",
+     "row": 1
+    },
+    {
+     "type": "seagull",
+     "row": 1
+    },
+    {
+     "type": "seagull",
+     "row": 5
+    },
+    {
+     "type": "pirate_armor1"
+    },
+    {
+     "type": "seagull",
+     "row": 5
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "swashbuckler",
+     "row": 1
+    },
+    {
+     "type": "pirate_captain"
+    },
+    {
+     "type": "pirate_captain"
+    },
+    {
+     "type": "swashbuckler",
+     "row": 5
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "seagull",
+     "row": 5
+    },
+    {
+     "type": "seagull",
+     "row": 1
+    },
+    {
+     "type": "seagull",
+     "row": 5
+    },
+    {
+     "type": "pirate_armor1"
+    },
+    {
+     "type": "pirate_armor1"
+    },
+    {
+     "type": "barrelroller",
+     "row": 3
+    },
+    {
+     "type": "seagull",
+     "row": 1
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "pirate_captain",
+       "row": 4
+      },
+      {
+       "type": "seagull",
+       "row": 1
+      },
+      {
+       "type": "seagull",
+       "row": 5
+      },
+      {
+       "type": "barrelroller"
+      },
+      {
+       "type": "seagull",
+       "row": 1
+      },
+      {
+       "type": "barrelroller",
+       "row": 2
+      },
+      {
+       "type": "seagull",
+       "row": 5
+      }
+     ]
+    },
+    {
+     "kind": "raiding_party",
+     "type": "swashbuckler",
+     "count": 8,
+     "group_size": 1,
+     "group_interval": 1
+    }
+   ]
+  }
+ ],
+ "wave_pacing": {
+  "flag_interval": 10,
+  "points": 600,
+  "point_increment": 50
+ },
+ "mowers": true,
+ "extra": [
+  {
+   "objclass": "PiratePlankProperties",
+   "aliases": [
+    "PiratePlanks"
+   ],
+   "objdata": {
+    "PlankRows": [
+     1,
+     2,
+     3
+    ]
+   }
+  }
+ ]
+}

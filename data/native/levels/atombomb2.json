@@ -1,0 +1,591 @@
+{
+ "id": "atombomb2",
+ "name": "[EPIC_PLANT_LEVEL_NAME]",
+ "description": "[PLAYERS_ATTEMPT_TO_GET_PLANT]",
+ "author": "莱池_余垛",
+ "number": 2,
+ "stage": "HalloweenStage",
+ "introduces_plant": "atombomb",
+ "waves": [
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "halloween_armor2",
+     "row": 1
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "halloween_armor2",
+       "row": 1
+      },
+      {
+       "type": "halloween_armor2",
+       "row": 4
+      }
+     ]
+    },
+    {
+     "kind": "conveyor",
+     "add": [
+      {
+       "type": null,
+       "weight": 100,
+       "max": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "beach_octopus",
+       "row": 4
+      },
+      {
+       "type": "beach_octopus",
+       "row": 5
+      }
+     ]
+    },
+    {
+     "kind": "conveyor",
+     "add": [
+      {
+       "type": null,
+       "weight": 100,
+       "max": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "beach_octopus",
+       "row": 1
+      },
+      {
+       "type": "beach_octopus",
+       "row": 3
+      }
+     ]
+    },
+    {
+     "kind": "dino",
+     "dino": "tyranno",
+     "row": 0,
+     "delay": 0
+    },
+    {
+     "kind": "conveyor",
+     "add": [
+      {
+       "type": null,
+       "weight": 100,
+       "max": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "kongfu_rocket_imp",
+       "row": 2
+      },
+      {
+       "type": "kongfu_rocket_imp",
+       "row": 3
+      },
+      {
+       "type": "kongfu_rocket_imp",
+       "row": 5
+      }
+     ]
+    },
+    {
+     "kind": "conveyor",
+     "add": [
+      {
+       "type": null,
+       "weight": 100,
+       "max": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "beach_octopus",
+       "row": 2
+      },
+      {
+       "type": "beach_octopus",
+       "row": 4
+      },
+      {
+       "type": "halloween_flag"
+      }
+     ]
+    },
+    {
+     "kind": "dino",
+     "dino": "tyranno",
+     "row": 1,
+     "delay": 0
+    },
+    {
+     "kind": "dino",
+     "dino": "tyranno",
+     "row": 3,
+     "delay": 0
+    },
+    {
+     "kind": "conveyor",
+     "add": [
+      {
+       "type": null,
+       "weight": 100,
+       "max": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "kongfu_rocket_imp",
+       "row": 1
+      },
+      {
+       "type": "kongfu_rocket_imp",
+       "row": 2
+      },
+      {
+       "type": "kongfu_rocket_imp",
+       "row": 3
+      },
+      {
+       "type": "kongfu_rocket_imp",
+       "row": 4
+      },
+      {
+       "type": "kongfu_rocket_imp",
+       "row": 5
+      }
+     ]
+    },
+    {
+     "kind": "conveyor",
+     "add": [
+      {
+       "type": null,
+       "weight": 100,
+       "max": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "beach_octopus",
+       "row": 3
+      },
+      {
+       "type": "beach_octopus",
+       "row": 5
+      },
+      {
+       "type": "beach_surfer",
+       "row": 3
+      },
+      {
+       "type": "beach_surfer",
+       "row": 5
+      },
+      {
+       "type": "halloween_armor2",
+       "row": 1
+      },
+      {
+       "type": "halloween_armor1",
+       "row": 2
+      }
+     ]
+    },
+    {
+     "kind": "conveyor",
+     "add": [
+      {
+       "type": null,
+       "weight": 100,
+       "max": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "beach_octopus",
+       "row": 1
+      },
+      {
+       "type": "beach_octopus",
+       "row": 2
+      },
+      {
+       "type": "beach_octopus",
+       "row": 4
+      },
+      {
+       "type": "beach_octopus",
+       "row": 5
+      }
+     ]
+    },
+    {
+     "kind": "conveyor",
+     "add": [
+      {
+       "type": null,
+       "weight": 100,
+       "max": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "kongfu_rocket_imp",
+       "row": 1
+      },
+      {
+       "type": "kongfu_rocket_imp",
+       "row": 2
+      },
+      {
+       "type": "kongfu_rocket_imp",
+       "row": 3
+      },
+      {
+       "type": "kongfu_rocket_imp",
+       "row": 4
+      },
+      {
+       "type": "kongfu_rocket_imp",
+       "row": 5
+      },
+      {
+       "type": "halloween_armor2",
+       "row": 3
+      },
+      {
+       "type": "beach_surfer",
+       "row": 3
+      },
+      {
+       "type": "halloween_armor2",
+       "row": 4
+      },
+      {
+       "type": "beach_surfer",
+       "row": 4
+      }
+     ]
+    },
+    {
+     "kind": "dino",
+     "dino": "ankylo",
+     "row": 2,
+     "delay": 0
+    },
+    {
+     "kind": "dino",
+     "dino": "ankylo",
+     "row": 3,
+     "delay": 0
+    },
+    {
+     "kind": "conveyor",
+     "add": [
+      {
+       "type": null,
+       "weight": 100,
+       "max": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "beach_octopus",
+       "row": 1
+      },
+      {
+       "type": "beach_octopus",
+       "row": 2
+      },
+      {
+       "type": "beach_octopus",
+       "row": 4
+      },
+      {
+       "type": "beach_octopus",
+       "row": 5
+      },
+      {
+       "type": "future_protector",
+       "row": 4
+      },
+      {
+       "type": "future_protector",
+       "row": 1
+      }
+     ]
+    },
+    {
+     "kind": "conveyor",
+     "add": [
+      {
+       "type": null,
+       "weight": 100,
+       "max": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "kongfu_rocket_imp",
+       "row": 1
+      },
+      {
+       "type": "kongfu_rocket_imp",
+       "row": 2
+      },
+      {
+       "type": "kongfu_rocket_imp",
+       "row": 3
+      },
+      {
+       "type": "kongfu_rocket_imp",
+       "row": 4
+      },
+      {
+       "type": "kongfu_rocket_imp",
+       "row": 5
+      },
+      {
+       "type": "halloween_gargantuar",
+       "row": 2
+      },
+      {
+       "type": "halloween_gargantuar",
+       "row": 5
+      },
+      {
+       "type": "halloween_flag"
+      }
+     ]
+    },
+    {
+     "kind": "dino",
+     "dino": "tyranno",
+     "row": 1,
+     "delay": 0
+    },
+    {
+     "kind": "dino",
+     "dino": "tyranno",
+     "row": 4,
+     "delay": 0
+    },
+    {
+     "kind": "conveyor",
+     "add": [
+      {
+       "type": null,
+       "weight": 100,
+       "max": null
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "wave_pacing": {
+  "flag_interval": 6,
+  "points": 150,
+  "point_increment": 100,
+  "suppress_flag": true
+ },
+ "railcarts": {
+  "carts": [
+   {
+    "col": 0,
+    "row": 1
+   },
+   {
+    "col": 2,
+    "row": 4
+   },
+   {
+    "col": 2,
+    "row": 1
+   },
+   {
+    "col": 4,
+    "row": 3
+   },
+   {
+    "col": 3,
+    "row": 2
+   }
+  ],
+  "rails": [
+   {
+    "col": 0,
+    "row_start": 0,
+    "row_end": 4
+   },
+   {
+    "col": 2,
+    "row_start": 3,
+    "row_end": 4
+   },
+   {
+    "col": 2,
+    "row_start": 0,
+    "row_end": 1
+   },
+   {
+    "col": 3,
+    "row_start": 0,
+    "row_end": 4
+   },
+   {
+    "col": 4,
+    "row_start": 0,
+    "row_end": 4
+   },
+   {
+    "col": 5,
+    "row_start": 0,
+    "row_end": 4
+   }
+  ],
+  "type": "railcart_tutorial"
+ },
+ "seedbank": {
+  "mode": "conveyor",
+  "plants": [
+   {
+    "type": "atombomb_seedling",
+    "weight": null,
+    "max": null
+   }
+  ],
+  "speed": [
+   {
+    "speed": 100,
+    "max_packets": 0
+   }
+  ]
+ },
+ "minigames": [
+  {
+   "type": "cowboy"
+  }
+ ],
+ "scripts": [
+  "StandardIntro"
+ ],
+ "extra": [
+  {
+   "objclass": "DinoWaveActionProps",
+   "aliases": [
+    "Wave8DinoTimeEvent0"
+   ],
+   "objdata": {
+    "DinoRow": 2,
+    "DinoType": "tyranno",
+    "DinoWaveDuration": "0"
+   }
+  },
+  {
+   "objclass": "DinoWaveActionProps",
+   "aliases": [
+    "Wave8DinoTimeEvent1"
+   ],
+   "objdata": {
+    "DinoRow": 4,
+    "DinoType": "tyranno",
+    "DinoWaveDuration": "0"
+   }
+  }
+ ]
+}

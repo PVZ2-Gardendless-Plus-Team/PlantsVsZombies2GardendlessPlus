@@ -1,0 +1,42 @@
+{
+ "id": "lod_274",
+ "name": "[LOD_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_LOD]",
+ "author": "蔓逐I蝶舞",
+ "stage": "IceageTutorialStage",
+ "vasebreaker": true,
+ "level_of_the_day": true,
+ "objectives": [
+  {
+   "type": "survive_waves"
+  }
+ ],
+ "minigames": [
+  {
+   "type": "vasebreaker",
+   "min_column_index": 5,
+   "max_column_index": 8,
+   "num_colored_plant_vases": 8,
+   "num_colored_zombie_vases": 0,
+   "vases": [
+    {
+     "plant_type_name": "caulipower",
+     "count": 8
+    },
+    {
+     "zombie_type_name": "zomboni",
+     "count": 11
+    },
+    {
+     "zombie_type_name": "zombossmech_iceage",
+     "count": 1
+    }
+   ]
+  }
+ ],
+ "waves": [],
+ "scripts": [
+  "VaseBreakerArcade",
+  "VaseBreakerIntro"
+ ]
+}

@@ -1,0 +1,492 @@
+{
+ "id": "future30",
+ "name": "Future 30",
+ "name_key": "[FUTURE_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_FUTURE]",
+ "number": 30,
+ "stage": "FutureNightStage",
+ "reward": {
+  "type": "pinata",
+  "param": "spine_future"
+ },
+ "seedbank": {
+  "mode": "chooser",
+  "selection": "chooser",
+  "blacklist": [
+   "sunflower",
+   "twinsunflower",
+   "sunshroom",
+   "primalsunflower",
+   "blover",
+   "hurrikale"
+  ]
+ },
+ "minigames": [
+  {
+   "type": "sun_bomb",
+   "plant_bomb_explosion_radius": 25,
+   "plant_damage": 1000,
+   "zombie_bomb_explosion_radius": 80,
+   "zombie_damage": 500
+  }
+ ],
+ "objectives": [
+  {
+   "type": "survive_waves",
+   "description": "[STARCHALLENGE_SUNBOMBS]"
+  }
+ ],
+ "waves": [
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "future_jetpack"
+    },
+    {
+     "type": "future_jetpack"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "future_jetpack",
+     "row": 1
+    },
+    {
+     "type": "future_jetpack",
+     "row": 3
+    },
+    {
+     "type": "future_jetpack",
+     "row": 5
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "future_jetpack"
+      },
+      {
+       "type": "future_jetpack"
+      }
+     ]
+    },
+    {
+     "kind": "SpawnZombiesFromGroundSpawnerProps",
+     "data": {
+      "ColumnEnd": 6,
+      "ColumnStart": 4,
+      "WaveStartMessage": "[WARNING_MECHRAIN]",
+      "Zombies": [
+       {
+        "Type": "RTID(future_protector@ZombieTypes)"
+       },
+       {
+        "Type": "RTID(future_protector@ZombieTypes)"
+       },
+       {
+        "Type": "RTID(future_protector@ZombieTypes)"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "future_jetpack",
+     "row": 5
+    },
+    {
+     "type": "future_jetpack",
+     "row": 4
+    },
+    {
+     "type": "future_jetpack",
+     "row": 2
+    },
+    {
+     "type": "future_jetpack",
+     "row": 1
+    },
+    {
+     "type": "future_jetpack_veteran"
+    },
+    {
+     "type": "future_jetpack_veteran"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "future_jetpack",
+     "row": 5
+    },
+    {
+     "type": "future_jetpack",
+     "row": 3
+    },
+    {
+     "type": "future_jetpack",
+     "row": 1
+    },
+    {
+     "type": "future_jetpack"
+    },
+    {
+     "type": "future_protector"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "future_jetpack_veteran",
+     "row": 4
+    },
+    {
+     "type": "future_jetpack_veteran",
+     "row": 2
+    },
+    {
+     "type": "future_jetpack"
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "future_jetpack"
+      },
+      {
+       "type": "future_jetpack"
+      },
+      {
+       "type": "future_jetpack_veteran"
+      },
+      {
+       "type": "future_jetpack"
+      }
+     ]
+    },
+    {
+     "kind": "SpawnZombiesFromGroundSpawnerProps",
+     "data": {
+      "ColumnEnd": 6,
+      "ColumnStart": 4,
+      "WaveStartMessage": "[WARNING_MECHRAIN]",
+      "Zombies": [
+       {
+        "Type": "RTID(future_protector@ZombieTypes)"
+       },
+       {
+        "Type": "RTID(future_protector@ZombieTypes)"
+       },
+       {
+        "Type": "RTID(future_protector@ZombieTypes)"
+       },
+       {
+        "Type": "RTID(future_protector@ZombieTypes)"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "future_jetpack_veteran",
+     "row": 5
+    },
+    {
+     "type": "future_jetpack_veteran",
+     "row": 4
+    },
+    {
+     "type": "future_jetpack",
+     "row": 4
+    },
+    {
+     "type": "future_jetpack_veteran",
+     "row": 3
+    },
+    {
+     "type": "future_jetpack",
+     "row": 3
+    },
+    {
+     "type": "future_jetpack_veteran",
+     "row": 2
+    },
+    {
+     "type": "future_jetpack",
+     "row": 2
+    },
+    {
+     "type": "future_jetpack_veteran",
+     "row": 1
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "future_jetpack_veteran",
+     "row": 5
+    },
+    {
+     "type": "future_jetpack",
+     "row": 4
+    },
+    {
+     "type": "future_jetpack",
+     "row": 3
+    },
+    {
+     "type": "future_jetpack",
+     "row": 2
+    },
+    {
+     "type": "future_jetpack_veteran",
+     "row": 1
+    },
+    {
+     "type": "future_protector"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "future_jetpack_veteran"
+    },
+    {
+     "type": "future_jetpack_veteran"
+    },
+    {
+     "type": "future_jetpack",
+     "row": 3
+    },
+    {
+     "type": "future_jetpack_veteran"
+    },
+    {
+     "type": "future_jetpack_veteran"
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "future_jetpack",
+       "row": 5
+      },
+      {
+       "type": "future_jetpack",
+       "row": 4
+      },
+      {
+       "type": "future_jetpack",
+       "row": 3
+      },
+      {
+       "type": "future_jetpack",
+       "row": 2
+      },
+      {
+       "type": "future_jetpack",
+       "row": 1
+      },
+      {
+       "type": "future_jetpack_veteran"
+      },
+      {
+       "type": "future_jetpack_veteran"
+      }
+     ]
+    },
+    {
+     "kind": "SpawnZombiesFromGroundSpawnerProps",
+     "data": {
+      "ColumnEnd": 6,
+      "ColumnStart": 4,
+      "WaveStartMessage": "[WARNING_MECHRAIN]",
+      "Zombies": [
+       {
+        "Type": "RTID(future_protector@ZombieTypes)"
+       },
+       {
+        "Type": "RTID(future_protector@ZombieTypes)"
+       },
+       {
+        "Type": "RTID(future_protector@ZombieTypes)"
+       },
+       {
+        "Type": "RTID(future_protector@ZombieTypes)"
+       },
+       {
+        "Type": "RTID(future_protector@ZombieTypes)"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "future_jetpack",
+     "row": 5
+    },
+    {
+     "type": "future_jetpack",
+     "row": 4
+    },
+    {
+     "type": "future_jetpack",
+     "row": 3
+    },
+    {
+     "type": "future_jetpack",
+     "row": 2
+    },
+    {
+     "type": "future_jetpack",
+     "row": 1
+    },
+    {
+     "type": "future_jetpack_veteran"
+    },
+    {
+     "type": "future_jetpack_veteran"
+    },
+    {
+     "type": "future_jetpack_veteran"
+    },
+    {
+     "type": "future_jetpack_veteran"
+    },
+    {
+     "type": "future_jetpack",
+     "row": 5
+    },
+    {
+     "type": "future_jetpack",
+     "row": 4
+    },
+    {
+     "type": "future_jetpack",
+     "row": 3
+    },
+    {
+     "type": "future_jetpack",
+     "row": 2
+    },
+    {
+     "type": "future_jetpack",
+     "row": 1
+    }
+   ]
+  }
+ ],
+ "wave_pacing": {
+  "flag_interval": 4,
+  "points": 300,
+  "point_increment": 100
+ },
+ "dynamic_zombies": [
+  {
+   "start_wave": 3,
+   "points": -1,
+   "increment": -1,
+   "pool": [
+    "future_jetpack"
+   ]
+  },
+  {
+   "start_wave": 4,
+   "points": -1,
+   "increment": -1,
+   "pool": [
+    "future_jetpack"
+   ]
+  },
+  {
+   "start_wave": 5,
+   "points": -1,
+   "increment": -1,
+   "pool": [
+    "future_jetpack"
+   ]
+  },
+  {
+   "start_wave": 5,
+   "points": 1,
+   "increment": 1,
+   "pool": [
+    "future_jetpack"
+   ]
+  },
+  {
+   "start_wave": 4,
+   "points": 1,
+   "increment": 1,
+   "pool": [
+    "future_jetpack"
+   ]
+  },
+  {
+   "start_wave": 3,
+   "points": 1,
+   "increment": 1,
+   "pool": [
+    "future_jetpack"
+   ]
+  }
+ ],
+ "mowers": true,
+ "scripts": [
+  "StandardIntro"
+ ],
+ "extra": [
+  {
+   "objclass": "SunDropperProperties",
+   "aliases": [
+    "SunDropper"
+   ],
+   "objdata": {
+    "InitialSunDropDelay": 2,
+    "SunCountdownBase": 4,
+    "SunCountdownIncreasePerSun": 0,
+    "SunCountdownMax": 4,
+    "SunCountdownRange": 0
+   }
+  }
+ ]
+}

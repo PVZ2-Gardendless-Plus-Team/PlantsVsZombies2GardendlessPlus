@@ -1,0 +1,97 @@
+{
+ "id": "izombie_1",
+ "name": "I, Zombie",
+ "number": 1,
+ "stage": "ModernStage",
+ "custom": true,
+ "minigames": [
+  {
+   "type": "izombie",
+   "starting_sun": 150,
+   "place_column": 5,
+   "zombies": [
+    "tutorial",
+    "tutorial_armor1",
+    "tutorial_armor2"
+   ],
+   "plants": [
+    {
+     "type": "sunflower",
+     "row": 0,
+     "col": 0
+    },
+    {
+     "type": "peashooter",
+     "row": 0,
+     "col": 1
+    },
+    {
+     "type": "peashooter",
+     "row": 0,
+     "col": 2
+    },
+    {
+     "type": "sunflower",
+     "row": 1,
+     "col": 0
+    },
+    {
+     "type": "wallnut",
+     "row": 1,
+     "col": 1
+    },
+    {
+     "type": "peashooter",
+     "row": 1,
+     "col": 2
+    },
+    {
+     "type": "sunflower",
+     "row": 2,
+     "col": 0
+    },
+    {
+     "type": "peashooter",
+     "row": 2,
+     "col": 1
+    },
+    {
+     "type": "peashooter",
+     "row": 2,
+     "col": 2
+    },
+    {
+     "type": "sunflower",
+     "row": 3,
+     "col": 0
+    },
+    {
+     "type": "peashooter",
+     "row": 3,
+     "col": 1
+    },
+    {
+     "type": "wallnut",
+     "row": 3,
+     "col": 2
+    },
+    {
+     "type": "sunflower",
+     "row": 4,
+     "col": 0
+    },
+    {
+     "type": "peashooter",
+     "row": 4,
+     "col": 1
+    },
+    {
+     "type": "peashooter",
+     "row": 4,
+     "col": 2
+    }
+   ]
+  }
+ ],
+ "waves": []
+}

@@ -1,0 +1,538 @@
+{
+ "id": "dino41",
+ "name": "Dino 41",
+ "name_key": "[DINO_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_DINO]",
+ "number": 41,
+ "stage": "DinoStage",
+ "reward": {
+  "type": "pinata",
+  "param": "spine_dino"
+ },
+ "seedbank": {
+  "mode": "chooser",
+  "selection": "chooser",
+  "blacklist": [
+   "sunflower",
+   "twinsunflower",
+   "iceburg",
+   "gravebuster",
+   "sunshroom",
+   "puffshroom",
+   "sunbean",
+   "melonpult",
+   "toadstool",
+   "goldleaf",
+   "stallia",
+   "primalsunflower",
+   "goldbloom"
+  ]
+ },
+ "waves": [
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "dino_armor1",
+     "row": 1
+    },
+    {
+     "type": "dino_armor4",
+     "row": 1
+    },
+    {
+     "type": "dino_armor1",
+     "row": 5
+    },
+    {
+     "type": "dino_armor4",
+     "row": 5
+    },
+    {
+     "type": "dino_imp",
+     "row": 2
+    },
+    {
+     "type": "dino_imp",
+     "row": 2
+    },
+    {
+     "type": "dino_imp",
+     "row": 4
+    },
+    {
+     "type": "dino_imp",
+     "row": 4
+    },
+    {
+     "type": "dino_imp",
+     "row": 3
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "dino_imp",
+       "row": 1
+      },
+      {
+       "type": "dino_imp",
+       "row": 1
+      },
+      {
+       "type": "dino_armor4",
+       "row": 2
+      },
+      {
+       "type": "dino_imp",
+       "row": 5
+      },
+      {
+       "type": "dino_imp",
+       "row": 5
+      },
+      {
+       "type": "dino_armor4",
+       "row": 4
+      },
+      {
+       "type": "dino_bully_veteran",
+       "row": 3
+      },
+      {
+       "type": "dino_imp",
+       "row": 3
+      }
+     ]
+    },
+    {
+     "kind": "dino",
+     "dino": "raptor",
+     "row": 2,
+     "delay": 0
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "dino_imp",
+       "row": 1
+      },
+      {
+       "type": "dino_imp",
+       "row": 1
+      },
+      {
+       "type": "dino_armor3",
+       "row": 2
+      },
+      {
+       "type": "dino_armor3",
+       "row": 3
+      },
+      {
+       "type": "dino_armor3",
+       "row": 4
+      },
+      {
+       "type": "dino_imp",
+       "row": 5
+      },
+      {
+       "type": "dino_imp",
+       "row": 5
+      }
+     ]
+    },
+    {
+     "kind": "dino",
+     "dino": "ptero",
+     "row": 0,
+     "delay": 1
+    },
+    {
+     "kind": "dino",
+     "dino": "ptero",
+     "row": 1,
+     "delay": 1
+    },
+    {
+     "kind": "dino",
+     "dino": "ptero",
+     "row": 2,
+     "delay": 1
+    },
+    {
+     "kind": "dino",
+     "dino": "ptero",
+     "row": 3,
+     "delay": 1
+    },
+    {
+     "kind": "dino",
+     "dino": "ptero",
+     "row": 4,
+     "delay": 1
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "dino_bully_veteran",
+     "row": 2
+    },
+    {
+     "type": "dino_imp",
+     "row": 1
+    },
+    {
+     "type": "dino_armor1",
+     "row": 1
+    },
+    {
+     "type": "dino_imp",
+     "row": 3
+    },
+    {
+     "type": "dino_imp",
+     "row": 3
+    },
+    {
+     "type": "dino_imp",
+     "row": 4
+    },
+    {
+     "type": "dino_imp",
+     "row": 4
+    },
+    {
+     "type": "dino_imp",
+     "row": 5
+    },
+    {
+     "type": "dino_imp",
+     "row": 5
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "dino_imp",
+     "row": 1
+    },
+    {
+     "type": "dino_imp",
+     "row": 1
+    },
+    {
+     "type": "dino_imp",
+     "row": 4
+    },
+    {
+     "type": "dino_armor1",
+     "row": 4
+    },
+    {
+     "type": "dino_armor1",
+     "row": 3
+    },
+    {
+     "type": "dino_imp",
+     "row": 3
+    },
+    {
+     "type": "dino_imp",
+     "row": 2
+    },
+    {
+     "type": "dino_armor1",
+     "row": 2
+    },
+    {
+     "type": "dino_imp",
+     "row": 5
+    },
+    {
+     "type": "dino_imp",
+     "row": 5
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "dino_armor4",
+       "row": 1
+      },
+      {
+       "type": "dino_armor4",
+       "row": 1
+      },
+      {
+       "type": "dino_armor4",
+       "row": 5
+      },
+      {
+       "type": "dino_armor4",
+       "row": 5
+      },
+      {
+       "type": "dino_armor4",
+       "row": 2
+      },
+      {
+       "type": "dino_armor4",
+       "row": 4
+      },
+      {
+       "type": "dino_imp",
+       "row": 3
+      },
+      {
+       "type": "dino_imp",
+       "row": 3
+      }
+     ]
+    },
+    {
+     "kind": "dino",
+     "dino": "tyranno",
+     "row": 0,
+     "delay": 1
+    },
+    {
+     "kind": "dino",
+     "dino": "tyranno",
+     "row": 1,
+     "delay": 1
+    },
+    {
+     "kind": "dino",
+     "dino": "tyranno",
+     "row": 3,
+     "delay": 1
+    },
+    {
+     "kind": "dino",
+     "dino": "raptor",
+     "row": 4,
+     "delay": 1
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "dino_imp",
+     "row": 1
+    },
+    {
+     "type": "dino_imp",
+     "row": 1
+    },
+    {
+     "type": "dino_imp",
+     "row": 1
+    },
+    {
+     "type": "dino_imp",
+     "row": 2
+    },
+    {
+     "type": "dino_armor3",
+     "row": 2
+    },
+    {
+     "type": "dino_imp",
+     "row": 5
+    },
+    {
+     "type": "dino_bully_veteran",
+     "row": 5
+    },
+    {
+     "type": "dino_bully_veteran",
+     "row": 4
+    },
+    {
+     "type": "dino_armor3",
+     "row": 4
+    },
+    {
+     "type": "dino_bully_veteran",
+     "row": 3
+    },
+    {
+     "type": "dino_armor3",
+     "row": 3
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "dino_imp",
+       "row": 1
+      },
+      {
+       "type": "dino_imp",
+       "row": 3
+      },
+      {
+       "type": "dino_imp",
+       "row": 4
+      },
+      {
+       "type": "dino_imp",
+       "row": 2
+      },
+      {
+       "type": "dino_imp",
+       "row": 5
+      }
+     ]
+    },
+    {
+     "kind": "dino",
+     "dino": "ankylo",
+     "row": 1,
+     "delay": 0
+    },
+    {
+     "kind": "dino",
+     "dino": "ankylo",
+     "row": 3,
+     "delay": 0
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "dino_armor3",
+     "row": 1
+    },
+    {
+     "type": "dino_armor3",
+     "row": 1
+    },
+    {
+     "type": "dino_armor3",
+     "row": 5
+    },
+    {
+     "type": "dino_armor3",
+     "row": 5
+    },
+    {
+     "type": "dino_armor4",
+     "row": 4
+    },
+    {
+     "type": "dino_bully_veteran",
+     "row": 4
+    },
+    {
+     "type": "dino_armor4",
+     "row": 2
+    },
+    {
+     "type": "dino_bully_veteran",
+     "row": 2
+    },
+    {
+     "type": "dino_imp",
+     "row": 3
+    },
+    {
+     "type": "dino_imp",
+     "row": 3
+    }
+   ]
+  }
+ ],
+ "wave_pacing": {
+  "flag_interval": 3,
+  "points": 1000,
+  "point_increment": 200
+ },
+ "dynamic_zombies": [
+  {
+   "start_wave": 3,
+   "points": -1,
+   "increment": -1,
+   "pool": []
+  },
+  {
+   "start_wave": 4,
+   "points": -1,
+   "increment": -1,
+   "pool": []
+  },
+  {
+   "start_wave": 5,
+   "points": -1,
+   "increment": -1,
+   "pool": []
+  },
+  {
+   "start_wave": 5,
+   "points": 1,
+   "increment": 1,
+   "pool": []
+  },
+  {
+   "start_wave": 4,
+   "points": 1,
+   "increment": 1,
+   "pool": []
+  },
+  {
+   "start_wave": 3,
+   "points": 1,
+   "increment": 1,
+   "pool": []
+  }
+ ],
+ "minigames": [
+  {
+   "type": "last_stand",
+   "starting_plantfood": 4,
+   "starting_sun": 2500
+  }
+ ],
+ "objectives": [
+  {
+   "type": "survive_waves",
+   "description": "[STARCHALLENGE_LASTSTAND_MINIGAME]"
+  },
+  {
+   "type": "zombie_distance",
+   "distance": 3
+  }
+ ]
+}

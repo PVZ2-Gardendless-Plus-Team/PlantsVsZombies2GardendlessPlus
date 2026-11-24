@@ -1,0 +1,436 @@
+{
+ "id": "cowboy4",
+ "name": "Cowboy 5",
+ "name_key": "[WEST_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_WEST]",
+ "number": 4,
+ "stage": "WestStage",
+ "reward": {
+  "type": "unlock_plant",
+  "param": "chilibean"
+ },
+ "objectives": [
+  {
+   "type": "survive_waves",
+   "description": "[STARCHALLENGE_CORRAL_MINIGAME]"
+  }
+ ],
+ "minigames": [
+  {
+   "type": "cowboy",
+   "begin_string": "[COWBOY_MINIGAME_TUTORIAL_1]",
+   "show_tutorial": true
+  }
+ ],
+ "railcarts": {
+  "carts": [
+   {
+    "col": 0,
+    "row": 0
+   },
+   {
+    "col": 0,
+    "row": 3
+   },
+   {
+    "col": 1,
+    "row": 1
+   },
+   {
+    "col": 2,
+    "row": 0
+   },
+   {
+    "col": 2,
+    "row": 3
+   },
+   {
+    "col": 3,
+    "row": 4
+   }
+  ],
+  "rails": [
+   {
+    "col": 0,
+    "row_start": 0,
+    "row_end": 1
+   },
+   {
+    "col": 0,
+    "row_start": 3,
+    "row_end": 4
+   },
+   {
+    "col": 1,
+    "row_start": 0,
+    "row_end": 4
+   },
+   {
+    "col": 2,
+    "row_start": 0,
+    "row_end": 1
+   },
+   {
+    "col": 2,
+    "row_start": 3,
+    "row_end": 4
+   },
+   {
+    "col": 3,
+    "row_start": 0,
+    "row_end": 4
+   }
+  ],
+  "type": "railcart_cowboy"
+ },
+ "seedbank": {
+  "mode": "conveyor",
+  "plants": [
+   {
+    "type": "peashooter",
+    "weight": null,
+    "max": null
+   }
+  ],
+  "speed": [
+   {
+    "speed": 100,
+    "max_packets": 0
+   }
+  ]
+ },
+ "waves": [
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "cowboy",
+     "row": 2
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "cowboy",
+     "row": 4
+    },
+    {
+     "type": "cowboy",
+     "row": 5
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "prospector",
+       "row": 2
+      },
+      {
+       "type": "cowboy",
+       "row": 1
+      },
+      {
+       "type": "cowboy",
+       "row": 5
+      }
+     ]
+    },
+    {
+     "kind": "conveyor",
+     "add": [
+      {
+       "type": null,
+       "weight": null,
+       "max": null
+      }
+     ],
+     "remove": [
+      null
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "prospector",
+     "row": 4
+    },
+    {
+     "type": "cowboy",
+     "row": 3
+    },
+    {
+     "type": "prospector",
+     "row": 1
+    },
+    {
+     "type": "cowboy",
+     "row": 4
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "cowboy",
+       "row": 5
+      },
+      {
+       "type": "cowboy",
+       "row": 4
+      },
+      {
+       "type": "prospector",
+       "row": 3
+      },
+      {
+       "type": "cowboy_armor1",
+       "row": 1
+      },
+      {
+       "type": "prospector",
+       "row": 2
+      }
+     ]
+    },
+    {
+     "kind": "conveyor",
+     "add": [
+      {
+       "type": null,
+       "weight": null,
+       "max": null
+      }
+     ],
+     "remove": [
+      null
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "cowboy_armor1",
+     "row": 4
+    },
+    {
+     "type": "cowboy",
+     "row": 5
+    },
+    {
+     "type": "cowboy",
+     "row": 3
+    },
+    {
+     "type": "cowboy_armor1",
+     "row": 2
+    },
+    {
+     "type": "cowboy",
+     "row": 5
+    },
+    {
+     "type": "cowboy",
+     "row": 1
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "cowboy",
+     "row": 5
+    },
+    {
+     "type": "cowboy_armor2",
+     "row": 2
+    },
+    {
+     "type": "cowboy",
+     "row": 1
+    },
+    {
+     "type": "cowboy",
+     "row": 3
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "cowboy",
+       "row": 3
+      },
+      {
+       "type": "cowboy",
+       "row": 1
+      },
+      {
+       "type": "cowboy_armor1",
+       "row": 1
+      },
+      {
+       "type": "cowboy",
+       "row": 3
+      },
+      {
+       "type": "cowboy",
+       "row": 2
+      },
+      {
+       "type": "cowboy",
+       "row": 4
+      },
+      {
+       "type": "prospector",
+       "row": 5
+      },
+      {
+       "type": "cowboy",
+       "row": 5
+      },
+      {
+       "type": "prospector",
+       "row": 2
+      }
+     ]
+    },
+    {
+     "kind": "conveyor",
+     "add": [
+      {
+       "type": null,
+       "weight": null,
+       "max": null
+      }
+     ],
+     "remove": [
+      null
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "cowboy_armor1",
+     "row": 3
+    },
+    {
+     "type": "cowboy_armor1",
+     "row": 4
+    },
+    {
+     "type": "cowboy",
+     "row": 5
+    },
+    {
+     "type": "cowboy",
+     "row": 2
+    },
+    {
+     "type": "prospector",
+     "row": 2
+    },
+    {
+     "type": "cowboy",
+     "row": 5
+    },
+    {
+     "type": "cowboy",
+     "row": 4
+    },
+    {
+     "type": "cowboy",
+     "row": 2
+    },
+    {
+     "type": "cowboy",
+     "row": 1
+    },
+    {
+     "type": "cowboy",
+     "row": 5
+    },
+    {
+     "type": "cowboy_armor1",
+     "row": 1
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "cowboy_armor2",
+     "row": 1
+    },
+    {
+     "type": "piano",
+     "row": 4
+    },
+    {
+     "type": "cowboy",
+     "row": 3
+    },
+    {
+     "type": "cowboy",
+     "row": 5
+    },
+    {
+     "type": "cowboy_armor1",
+     "row": 4
+    },
+    {
+     "type": "cowboy_armor1",
+     "row": 2
+    },
+    {
+     "type": "prospector",
+     "row": 5
+    },
+    {
+     "type": "prospector",
+     "row": 3
+    }
+   ],
+   "plantfood": 1,
+   "dynamic_plantfood": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0
+   ]
+  }
+ ],
+ "wave_pacing": {
+  "flag_interval": 10,
+  "points": 100,
+  "point_increment": 100,
+  "suppress_flag": true
+ }
+}

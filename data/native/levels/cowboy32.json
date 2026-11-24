@@ -1,0 +1,344 @@
+{
+ "id": "cowboy32",
+ "name": "Cowboy 32",
+ "name_key": "[WEST_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_WEST]",
+ "number": 32,
+ "stage": "WestStage",
+ "railcarts": {
+  "carts": [
+   {
+    "col": 0,
+    "row": 0
+   },
+   {
+    "col": 1,
+    "row": 1
+   },
+   {
+    "col": 1,
+    "row": 3
+   },
+   {
+    "col": 2,
+    "row": 4
+   },
+   {
+    "col": 3,
+    "row": 1
+   },
+   {
+    "col": 3,
+    "row": 3
+   },
+   {
+    "col": 7,
+    "row": 0
+   },
+   {
+    "col": 8,
+    "row": 0
+   }
+  ],
+  "rails": [
+   {
+    "col": 0,
+    "row_start": 0,
+    "row_end": 4
+   },
+   {
+    "col": 1,
+    "row_start": 0,
+    "row_end": 1
+   },
+   {
+    "col": 1,
+    "row_start": 3,
+    "row_end": 4
+   },
+   {
+    "col": 2,
+    "row_start": 0,
+    "row_end": 4
+   },
+   {
+    "col": 3,
+    "row_start": 0,
+    "row_end": 1
+   },
+   {
+    "col": 3,
+    "row_start": 3,
+    "row_end": 4
+   },
+   {
+    "col": 7,
+    "row_start": 0,
+    "row_end": 4
+   },
+   {
+    "col": 8,
+    "row_start": 0,
+    "row_end": 4
+   }
+  ],
+  "type": "railcart_cowboy"
+ },
+ "seedbank": {
+  "mode": "chooser",
+  "selection": "chooser",
+  "blacklist": [
+   "sunflower",
+   "twinsunflower",
+   "sunshroom",
+   "sunbean",
+   "puffshroom",
+   "seashroom",
+   "iceburg",
+   "gravebuster",
+   "toadstool",
+   "goldleaf",
+   "stallia",
+   "primalsunflower",
+   "goldbloom"
+  ],
+  "decks": {
+   "recommended": [
+    {
+     "name": "Strong Eagerness",
+     "plants": [
+      "wintermelon",
+      "lightningreed",
+      "potatomine"
+     ]
+    },
+    {
+     "name": "Heavy Gunfire",
+     "plants": [
+      "poisonpeashooter",
+      "applemortar",
+      "lightningreed"
+     ]
+    },
+    {
+     "name": "Leap into the Sky",
+     "plants": [
+      "hollyknight",
+      "blover"
+     ]
+    },
+    {
+     "name": "Meteor Shower",
+     "plants": [
+      "shootingstarfruit"
+     ]
+    },
+    {
+     "name": "Dangerous Wall",
+     "plants": [
+      "wintermelon",
+      "explodeonut"
+     ]
+    }
+   ]
+  }
+ },
+ "waves": [
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "prospector"
+    },
+    {
+     "type": "prospector"
+    },
+    {
+     "type": "prospector"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "poncho_plate"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "cowboy_armor2"
+    },
+    {
+     "type": "chicken_farmer"
+    },
+    {
+     "type": "cowboy_armor2"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "west_bull_veteran"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "cowboy_armor4"
+    },
+    {
+     "type": "west_bull_veteran"
+    },
+    {
+     "type": "west_bull_veteran"
+    },
+    {
+     "type": "cowboy_armor4"
+    }
+   ],
+   "plantfood": 1
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "cowboy_armor4"
+    },
+    {
+     "type": "cowboy_armor4"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "prospector"
+    },
+    {
+     "type": "prospector"
+    },
+    {
+     "type": "prospector"
+    },
+    {
+     "type": "prospector"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "chicken_farmer",
+     "row": 4
+    },
+    {
+     "type": "cowboy_gargantuar",
+     "row": 4
+    }
+   ],
+   "plantfood": 1
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "west_bull_veteran",
+     "row": 3
+    },
+    {
+     "type": "chicken_farmer",
+     "row": 1
+    },
+    {
+     "type": "chicken_farmer",
+     "row": 5
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "west_bull_veteran",
+     "row": 1
+    },
+    {
+     "type": "prospector",
+     "row": 1
+    },
+    {
+     "type": "west_bull_veteran",
+     "row": 2
+    },
+    {
+     "type": "prospector",
+     "row": 2
+    },
+    {
+     "type": "west_bull_veteran",
+     "row": 3
+    },
+    {
+     "type": "prospector",
+     "row": 3
+    },
+    {
+     "type": "west_bull_veteran",
+     "row": 4
+    },
+    {
+     "type": "prospector",
+     "row": 4
+    },
+    {
+     "type": "west_bull_veteran",
+     "row": 5
+    },
+    {
+     "type": "prospector",
+     "row": 5
+    },
+    {
+     "type": "cowboy_gargantuar",
+     "row": 2
+    },
+    {
+     "type": "cowboy_gargantuar",
+     "row": 3
+    },
+    {
+     "type": "cowboy_gargantuar",
+     "row": 4
+    }
+   ]
+  }
+ ],
+ "wave_pacing": {
+  "flag_interval": 5,
+  "points": 200,
+  "point_increment": 100
+ },
+ "minigames": [
+  {
+   "type": "last_stand",
+   "starting_plantfood": 2,
+   "starting_sun": 2000
+  }
+ ],
+ "objectives": [
+  {
+   "type": "survive_waves",
+   "description": "[STARCHALLENGE_LASTSTAND_MINIGAME]"
+  }
+ ]
+}

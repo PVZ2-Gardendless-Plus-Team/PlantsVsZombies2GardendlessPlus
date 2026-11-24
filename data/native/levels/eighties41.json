@@ -1,0 +1,1152 @@
+{
+ "id": "eighties41",
+ "name": "Eighties 34",
+ "name_key": "[EIGHTIES_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_EIGHTIES]",
+ "author": "莱池_余垛",
+ "number": 41,
+ "stage": "EightiesStage",
+ "intro_narrative": "EIGHTIES_41_INTRO",
+ "objectives": [
+  {
+   "type": "survive_waves"
+  }
+ ],
+ "seedbank": {
+  "mode": "conveyor",
+  "drop_delay": [
+   {
+    "delay": 1,
+    "max_packets": 0
+   }
+  ],
+  "speed": [
+   {
+    "speed": 75,
+    "max_packets": 0
+   }
+  ]
+ },
+ "waves": [
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "eighties_punk",
+       "row": 2
+      },
+      {
+       "type": "eighties_punk",
+       "row": 5
+      }
+     ],
+     "notify": [
+      "jam_punk"
+     ]
+    },
+    {
+     "kind": "gravestones",
+     "pool": [
+      {
+       "type": "speaker",
+       "count": 8
+      }
+     ],
+     "positions": [
+      {
+       "col": 4,
+       "row": 1
+      },
+      {
+       "col": 1,
+       "row": 4
+      },
+      {
+       "col": 6,
+       "row": 2
+      },
+      {
+       "col": 6,
+       "row": 1
+      },
+      {
+       "col": 6,
+       "row": 0
+      },
+      {
+       "col": 6,
+       "row": 3
+      },
+      {
+       "col": 6,
+       "row": 4
+      },
+      {
+       "col": 7,
+       "row": 3
+      }
+     ],
+     "displace_plants": false
+    },
+    {
+     "kind": "conveyor",
+     "add": [
+      {
+       "type": null,
+       "weight": 1,
+       "max": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "eighties_punk",
+       "row": 1
+      },
+      {
+       "type": "eighties_punk",
+       "row": 4
+      }
+     ],
+     "notify": [
+      "jam_punk"
+     ]
+    },
+    {
+     "kind": "conveyor",
+     "add": [
+      {
+       "type": null,
+       "weight": 1,
+       "max": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "eighties_punk",
+       "row": 3
+      },
+      {
+       "type": "eighties_punk",
+       "row": 3
+      },
+      {
+       "type": "eighties_armor2",
+       "row": 5
+      }
+     ],
+     "plantfood": 1,
+     "dynamic_plantfood": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0
+     ],
+     "notify": [
+      "jam_punk"
+     ]
+    },
+    {
+     "kind": "schedule",
+     "delay": {
+      "min": 3.5,
+      "max": 5
+     },
+     "interval": {
+      "min": 50,
+      "max": 50
+     },
+     "repeat": {
+      "min": 1,
+      "max": 1
+     },
+     "events": [
+      {
+       "kind": "spawn",
+       "zombies": [
+        {
+         "type": "eighties_armor2",
+         "row": 1
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "kind": "conveyor",
+     "add": [
+      {
+       "type": null,
+       "weight": 1,
+       "max": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "eighties_armor4",
+       "row": 4
+      },
+      {
+       "type": "eighties_armor4",
+       "row": 3
+      },
+      {
+       "type": "eighties_armor4",
+       "row": 5
+      }
+     ]
+    },
+    {
+     "kind": "ref",
+     "ref": "RTID(Wave4ModConveyor@CurrentLevel)"
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "eighties_mc",
+       "row": 1
+      },
+      {
+       "type": "eighties_mc",
+       "row": 4
+      },
+      {
+       "type": "eighties",
+       "row": 1
+      },
+      {
+       "type": "eighties",
+       "row": 4
+      }
+     ],
+     "notify": [
+      "jam_rap"
+     ]
+    },
+    {
+     "kind": "conveyor",
+     "add": [
+      {
+       "type": null,
+       "weight": 1,
+       "max": null
+      }
+     ]
+    },
+    {
+     "kind": "gravestones",
+     "pool": [
+      {
+       "type": "speaker",
+       "count": 5
+      }
+     ],
+     "positions": [
+      {
+       "col": 0,
+       "row": 0
+      },
+      {
+       "col": 0,
+       "row": 3
+      },
+      {
+       "col": 1,
+       "row": 4
+      },
+      {
+       "col": 1,
+       "row": 3
+      },
+      {
+       "col": 2,
+       "row": 0
+      }
+     ],
+     "displace_plants": false
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "eighties_mc",
+       "row": 2
+      },
+      {
+       "type": "eighties_mc",
+       "row": 5
+      },
+      {
+       "type": "eighties",
+       "row": 2
+      },
+      {
+       "type": "eighties",
+       "row": 5
+      }
+     ],
+     "plantfood": 1,
+     "dynamic_plantfood": [
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0
+     ],
+     "must_clear": true
+    },
+    {
+     "kind": "conveyor",
+     "add": [
+      {
+       "type": null,
+       "weight": 1,
+       "max": null
+      }
+     ]
+    },
+    {
+     "kind": "gravestones",
+     "pool": [
+      {
+       "type": "speaker",
+       "count": 6
+      }
+     ],
+     "positions": [
+      {
+       "col": 0,
+       "row": 1
+      },
+      {
+       "col": 0,
+       "row": 2
+      },
+      {
+       "col": 1,
+       "row": 0
+      },
+      {
+       "col": 1,
+       "row": 2
+      },
+      {
+       "col": 0,
+       "row": 4
+      },
+      {
+       "col": 3,
+       "row": 2
+      }
+     ],
+     "displace_plants": false
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "eighties",
+       "row": 1
+      },
+      {
+       "type": "eighties",
+       "row": 3
+      },
+      {
+       "type": "eighties",
+       "row": 1
+      },
+      {
+       "type": "eighties",
+       "row": 3
+      }
+     ],
+     "notify": [
+      "jam_punk"
+     ]
+    },
+    {
+     "kind": "conveyor",
+     "add": [
+      {
+       "type": null,
+       "weight": 1,
+       "max": null
+      }
+     ]
+    },
+    {
+     "kind": "MissileLocateWaveActionProps",
+     "data": {
+      "MissileCount": 3,
+      "MissileFallCountdown": 0,
+      "WaveStartMessage": "",
+      "ProjectileType": "Clear"
+     }
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "eighties",
+       "row": 2
+      },
+      {
+       "type": "eighties",
+       "row": 4
+      },
+      {
+       "type": "eighties",
+       "row": 2
+      },
+      {
+       "type": "eighties",
+       "row": 4
+      }
+     ]
+    },
+    {
+     "kind": "conveyor",
+     "add": [
+      {
+       "type": null,
+       "weight": 1,
+       "max": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "eighties_armor4",
+       "row": 2
+      },
+      {
+       "type": "eighties_glitter",
+       "row": 5
+      }
+     ],
+     "notify": [
+      "jam_pop"
+     ]
+    },
+    {
+     "kind": "schedule",
+     "delay": {
+      "min": 7,
+      "max": 7
+     },
+     "interval": {
+      "min": 50,
+      "max": 50
+     },
+     "repeat": {
+      "min": 1,
+      "max": 1
+     },
+     "events": [
+      {
+       "kind": "spawn",
+       "zombies": [
+        {
+         "type": "eighties_armor2",
+         "row": 1
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "kind": "schedule",
+     "delay": {
+      "min": 18,
+      "max": 20
+     },
+     "interval": {
+      "min": 50,
+      "max": 50
+     },
+     "repeat": {
+      "min": 1,
+      "max": 1
+     },
+     "events": [
+      {
+       "kind": "spawn",
+       "zombies": [
+        {
+         "type": "eighties_armor2",
+         "row": 5
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "kind": "conveyor",
+     "add": [
+      {
+       "type": null,
+       "weight": 1,
+       "max": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "eighties_glitter",
+       "row": 1
+      },
+      {
+       "type": "eighties_glitter",
+       "row": 4
+      }
+     ],
+     "must_clear": true
+    },
+    {
+     "kind": "schedule",
+     "delay": {
+      "min": 8,
+      "max": 8
+     },
+     "interval": {
+      "min": 50,
+      "max": 50
+     },
+     "repeat": {
+      "min": 1,
+      "max": 1
+     },
+     "events": [
+      {
+       "kind": "spawn",
+       "zombies": [
+        {
+         "type": "eighties_armor4",
+         "row": 4
+        },
+        {
+         "type": "eighties_armor2",
+         "row": 1
+        }
+       ],
+       "must_clear": true
+      }
+     ]
+    },
+    {
+     "kind": "conveyor",
+     "add": [
+      {
+       "type": null,
+       "weight": 1,
+       "max": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "eighties_gargantuar",
+       "row": 3
+      },
+      {
+       "type": "eighties",
+       "row": 4
+      },
+      {
+       "type": "eighties",
+       "row": 4
+      }
+     ],
+     "plantfood": 1,
+     "dynamic_plantfood": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0
+     ],
+     "notify": [
+      "jam_metal"
+     ],
+     "must_clear": true
+    },
+    {
+     "kind": "gravestones",
+     "pool": [
+      {
+       "type": "speaker",
+       "count": 2
+      }
+     ],
+     "positions": [
+      {
+       "col": 6,
+       "row": 4
+      },
+      {
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "displace_plants": false
+    },
+    {
+     "kind": "conveyor",
+     "add": [
+      {
+       "type": null,
+       "weight": 1,
+       "max": null
+      }
+     ]
+    },
+    {
+     "kind": "MissileLocateWaveActionProps",
+     "data": {
+      "MissileCount": 3,
+      "MissileFallCountdown": 0,
+      "WaveStartMessage": "",
+      "ProjectileType": "Clear"
+     }
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "eighties_gargantuar",
+       "row": 4
+      }
+     ],
+     "notify": [
+      "jam_rap"
+     ],
+     "must_clear": true
+    },
+    {
+     "kind": "conveyor",
+     "add": [
+      {
+       "type": null,
+       "weight": 1,
+       "max": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "eighties_gargantuar",
+       "row": 2
+      }
+     ],
+     "notify": [
+      "jam_metal"
+     ],
+     "must_clear": true
+    },
+    {
+     "kind": "gravestones",
+     "pool": [
+      {
+       "type": "speaker",
+       "count": 3
+      }
+     ],
+     "positions": [
+      {
+       "col": 4,
+       "row": 3
+      },
+      {
+       "col": 3,
+       "row": 0
+      },
+      {
+       "col": 1,
+       "row": 2
+      }
+     ],
+     "displace_plants": false
+    },
+    {
+     "kind": "conveyor",
+     "add": [
+      {
+       "type": null,
+       "weight": 1,
+       "max": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "eighties_armor4",
+       "row": 5
+      },
+      {
+       "type": "eighties_armor2",
+       "row": 5
+      },
+      {
+       "type": "eighties_breakdancer",
+       "row": 5
+      }
+     ],
+     "notify": [
+      "jam_rap"
+     ]
+    },
+    {
+     "kind": "conveyor",
+     "add": [
+      {
+       "type": null,
+       "weight": 1,
+       "max": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "eighties_mc",
+       "row": 2
+      },
+      {
+       "type": "eighties_breakdancer",
+       "row": 2
+      },
+      {
+       "type": "eighties_breakdancer",
+       "row": 2
+      }
+     ],
+     "notify": [
+      "jam_rap"
+     ]
+    },
+    {
+     "kind": "conveyor",
+     "add": [
+      {
+       "type": null,
+       "weight": 1,
+       "max": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "eighties_gargantuar",
+       "row": 1
+      },
+      {
+       "type": "eighties_armor4",
+       "row": 4
+      },
+      {
+       "type": "eighties_armor2",
+       "row": 4
+      },
+      {
+       "type": "eighties_armor1",
+       "row": 4
+      }
+     ],
+     "notify": [
+      "jam_metal"
+     ]
+    },
+    {
+     "kind": "conveyor",
+     "add": [
+      {
+       "type": null,
+       "weight": 1,
+       "max": null
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "wave_pacing": {
+  "flag_interval": 16,
+  "points": 150,
+  "point_increment": 200,
+  "suppress_flag": true
+ },
+ "minigames": [
+  {
+   "type": "bowling",
+   "bowling_foul_line": 26,
+   "suppress_objective_tip": true
+  }
+ ],
+ "initial": {
+  "plants": [
+   {
+    "col": 0,
+    "row": 0,
+    "type": "puffshroom"
+   },
+   {
+    "col": 0,
+    "row": 1,
+    "type": "puffshroom"
+   },
+   {
+    "col": 0,
+    "row": 2,
+    "type": "puffshroom"
+   },
+   {
+    "col": 0,
+    "row": 3,
+    "type": "puffshroom"
+   },
+   {
+    "col": 0,
+    "row": 4,
+    "type": "puffshroom"
+   },
+   {
+    "col": 3,
+    "row": 0,
+    "type": "puffshroom"
+   },
+   {
+    "col": 3,
+    "row": 1,
+    "type": "puffshroom"
+   },
+   {
+    "col": 3,
+    "row": 2,
+    "type": "puffshroom"
+   },
+   {
+    "col": 3,
+    "row": 3,
+    "type": "puffshroom"
+   },
+   {
+    "col": 3,
+    "row": 4,
+    "type": "puffshroom"
+   },
+   {
+    "col": 2,
+    "row": 0,
+    "type": "gumnut"
+   },
+   {
+    "col": 2,
+    "row": 1,
+    "type": "gumnut"
+   },
+   {
+    "col": 2,
+    "row": 2,
+    "type": "gumnut"
+   },
+   {
+    "col": 2,
+    "row": 3,
+    "type": "gumnut"
+   },
+   {
+    "col": 2,
+    "row": 4,
+    "type": "gumnut"
+   },
+   {
+    "col": 5,
+    "row": 0,
+    "type": "coconutcannon"
+   },
+   {
+    "col": 5,
+    "row": 1,
+    "type": "coconutcannon"
+   },
+   {
+    "col": 5,
+    "row": 2,
+    "type": "coconutcannon"
+   },
+   {
+    "col": 5,
+    "row": 3,
+    "type": "coconutcannon"
+   },
+   {
+    "col": 5,
+    "row": 4,
+    "type": "coconutcannon"
+   },
+   {
+    "col": 4,
+    "row": 0,
+    "type": "celerystalker"
+   },
+   {
+    "col": 4,
+    "row": 1,
+    "type": "celerystalker"
+   },
+   {
+    "col": 4,
+    "row": 2,
+    "type": "celerystalker"
+   },
+   {
+    "col": 4,
+    "row": 3,
+    "type": "celerystalker"
+   },
+   {
+    "col": 4,
+    "row": 4,
+    "type": "celerystalker"
+   },
+   {
+    "col": 1,
+    "row": 0,
+    "type": "phatbeet"
+   },
+   {
+    "col": 1,
+    "row": 1,
+    "type": "phatbeet"
+   },
+   {
+    "col": 1,
+    "row": 2,
+    "type": "phatbeet"
+   },
+   {
+    "col": 1,
+    "row": 3,
+    "type": "phatbeet"
+   },
+   {
+    "col": 1,
+    "row": 4,
+    "type": "phatbeet"
+   },
+   {
+    "col": 6,
+    "row": 0,
+    "type": "spikerock"
+   },
+   {
+    "col": 6,
+    "row": 1,
+    "type": "spikerock"
+   },
+   {
+    "col": 6,
+    "row": 2,
+    "type": "spikerock"
+   },
+   {
+    "col": 6,
+    "row": 3,
+    "type": "spikerock"
+   },
+   {
+    "col": 6,
+    "row": 4,
+    "type": "spikerock"
+   }
+  ]
+ },
+ "extra": [
+  {
+   "objclass": "LevelIntroProperties",
+   "aliases": [
+    "Intro"
+   ],
+   "objdata": {
+    "PanStartOffset": -40,
+    "PanStreetOffset": -40,
+    "PanEndOffset": 0,
+    "PanRightDuration": 0,
+    "PanLeftDuration": 1,
+    "PanMoveRightTime": 0,
+    "PanMoveLeftTime": 2,
+    "AdditionalStartingSun": 0,
+    "ZombiePreviewOff": true
+   }
+  },
+  {
+   "objclass": "LevelSchedulerProps",
+   "aliases": [
+    "LevelScheduler"
+   ],
+   "objdata": {
+    "RewardWhenEnded": false,
+    "SuppressRewardState": false,
+    "TimeBeforeFirst": {
+     "Max": 0,
+     "Min": 0
+    },
+    "TimeBetween": {
+     "Max": 30,
+     "Min": 30
+    },
+    "Repeat": {
+     "Max": 1,
+     "Min": 1
+    },
+    "Events": [
+     "RTID(ClearEvent@CurrentLevel)"
+    ]
+   }
+  },
+  {
+   "objclass": "ProjectileType",
+   "aliases": [
+    "Clear"
+   ],
+   "objdata": {
+    "ProjectileBasedOn": "armamint",
+    "Props": "RTID(ClearProp@CurrentLevel)"
+   }
+  },
+  {
+   "objclass": "ProjectileProperties",
+   "aliases": [
+    "ClearProp"
+   ],
+   "objdata": {
+    "Damage": 12000,
+    "SpeedMult": 3,
+    "ShakesScreenOnImpact": true,
+    "CannotBeReversedByJester": true,
+    "DamageType": "fire",
+    "SplashDamage": [
+     {
+      "Damage": 12000,
+      "Range": {
+       "w": 50,
+       "h": 50
+      }
+     }
+    ],
+    "Size": {
+     "w": 9,
+     "h": 9
+    }
+   }
+  }
+ ]
+}

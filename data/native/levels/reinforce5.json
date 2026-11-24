@@ -1,0 +1,384 @@
+{
+ "id": "reinforce5",
+ "name": "Reinforce 5",
+ "name_key": "[EPIC_PLANT_REINFORCE_LEVEL_NAME]",
+ "description": "[MEET_REINFORCE_FAMILY]",
+ "author": "莱池_余垛",
+ "number": 5,
+ "stage": "IceageVeteranStage",
+ "intro_narrative": "REINFORCE_E_INTRO",
+ "objectives": [
+  {
+   "type": "survive_waves"
+  }
+ ],
+ "seedbank": {
+  "mode": "chooser",
+  "selection": "preset",
+  "preset": [
+   "hurrikale",
+   "stunion",
+   "blover"
+  ]
+ },
+ "minigames": [
+  {
+   "type": "last_stand",
+   "suppress_objective_tip": true,
+   "starting_plantfood": 0,
+   "starting_sun": 50
+  }
+ ],
+ "waves": [
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "iceage_armor4",
+       "row": 2,
+       "col": "6"
+      },
+      {
+       "type": "iceage_armor4",
+       "row": 1
+      },
+      {
+       "type": "iceage_armor4",
+       "row": 3
+      }
+     ],
+     "must_clear": true
+    },
+    {
+     "kind": "SpawnPlantsWaveActionProps",
+     "data": {
+      "Plants": [
+       {
+        "TypeName": "hollyknight",
+        "SpawnAnim": "grow",
+        "AllowSpawnOnOtherPlants": true,
+        "RandomSpawnMatrix": [
+         "00000000",
+         "00000000",
+         "10000000",
+         "00000000",
+         "00000000"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "kind": "SpawnPlantsWaveActionProps",
+     "data": {
+      "Plants": [
+       {
+        "TypeName": "stunion",
+        "SpawnAnim": "grow",
+        "AllowSpawnOnOtherPlants": true,
+        "RandomSpawnMatrix": [
+         "00000000",
+         "00001000",
+         "00000000",
+         "00000000",
+         "00000000"
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "iceage_armor4",
+       "row": 3,
+       "col": "6"
+      },
+      {
+       "type": "iceage_armor4",
+       "row": 2
+      },
+      {
+       "type": "iceage_armor4",
+       "row": 5
+      }
+     ],
+     "must_clear": true
+    },
+    {
+     "kind": "gravestones",
+     "pool": [
+      {
+       "type": "slider_up",
+       "count": 1
+      }
+     ],
+     "positions": [
+      {
+       "col": 6,
+       "row": 4
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "iceage_armor4",
+       "row": 1,
+       "col": "4"
+      },
+      {
+       "type": "iceage_armor4",
+       "row": 2
+      },
+      {
+       "type": "iceage_armor4",
+       "row": 5
+      }
+     ],
+     "must_clear": true
+    },
+    {
+     "kind": "gravestones",
+     "pool": [
+      {
+       "type": "slider_down",
+       "count": 1
+      }
+     ],
+     "positions": [
+      {
+       "col": 6,
+       "row": 0
+      }
+     ]
+    },
+    {
+     "kind": "gravestones",
+     "pool": [
+      {
+       "type": "slider_up",
+       "count": 1
+      }
+     ],
+     "positions": [
+      {
+       "col": 7,
+       "row": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "iceage_armor4",
+       "row": 1
+      },
+      {
+       "type": "iceage_armor4",
+       "row": 3
+      },
+      {
+       "type": "iceage_armor4",
+       "row": 5,
+       "col": "5"
+      }
+     ],
+     "must_clear": true
+    },
+    {
+     "kind": "SpawnPlantsWaveActionProps",
+     "data": {
+      "Plants": [
+       {
+        "TypeName": "hollyknight",
+        "SpawnAnim": "grow",
+        "AllowSpawnOnOtherPlants": true,
+        "RandomSpawnMatrix": [
+         "00000000",
+         "00000000",
+         "10000000",
+         "00000000",
+         "00000000"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "kind": "gravestones",
+     "pool": [
+      {
+       "type": "slider_down",
+       "count": 1
+      }
+     ],
+     "positions": [
+      {
+       "col": 5,
+       "row": 3
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "iceage_armor4",
+     "row": 1
+    },
+    {
+     "type": "iceage_armor4",
+     "row": 3
+    },
+    {
+     "type": "iceage_armor4",
+     "row": 5
+    }
+   ],
+   "must_clear": true
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "iceage_armor4",
+       "row": 2
+      },
+      {
+       "type": "iceage_armor4",
+       "row": 3
+      },
+      {
+       "type": "iceage_armor4",
+       "row": 5,
+       "col": "5"
+      }
+     ],
+     "must_clear": true
+    },
+    {
+     "kind": "SpawnPlantsWaveActionProps",
+     "data": {
+      "Plants": [
+       {
+        "TypeName": "hollyknight",
+        "SpawnAnim": "grow",
+        "AllowSpawnOnOtherPlants": true,
+        "RandomSpawnMatrix": [
+         "00000000",
+         "00000000",
+         "10000000",
+         "00000000",
+         "00000000"
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "iceage_armor4",
+     "row": 4,
+     "col": "4"
+    },
+    {
+     "type": "iceage_armor4",
+     "row": 3
+    },
+    {
+     "type": "iceage_armor4",
+     "row": 2
+    }
+   ],
+   "must_clear": true
+  }
+ ],
+ "wave_pacing": {
+  "flag_interval": 7,
+  "points": 100,
+  "point_increment": 0,
+  "suppress_flag": true
+ },
+ "scripts": [
+  "StandardIntro"
+ ],
+ "extra": [
+  {
+   "objclass": "LevelDeadLineProps",
+   "aliases": [
+    "LevelDeadLine"
+   ],
+   "objdata": {
+    "SuppressObjectiveTip": false,
+    "Countdown": 150,
+    "Events": [
+     "RTID(Deadline@CurrentLevel)"
+    ]
+   }
+  },
+  {
+   "objclass": "PlantModifierProperties",
+   "aliases": [
+    "ModPlants"
+   ],
+   "objdata": {
+    "SuppressParticle": true,
+    "List": [
+     {
+      "Type": "hollyknight",
+      "NewObjdata": {
+       "Cooldown": 0
+      }
+     }
+    ]
+   }
+  },
+  {
+   "objclass": "LoseGameWaveActionProps",
+   "aliases": [
+    "Deadline"
+   ],
+   "objdata": {
+    "Tip": {
+     "en": "",
+     "zh": ""
+    },
+    "SmallTip": {
+     "en": "Mission Fail",
+     "zh": "任务失败"
+    }
+   }
+  }
+ ]
+}

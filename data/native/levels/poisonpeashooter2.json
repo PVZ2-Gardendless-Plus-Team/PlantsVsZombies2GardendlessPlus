@@ -1,0 +1,375 @@
+{
+ "id": "poisonpeashooter2",
+ "name": "[EPIC_PLANT_LEVEL_NAME]",
+ "description": "[PLAYERS_ATTEMPT_TO_GET_PLANT]",
+ "author": "砹化钫FrAt",
+ "number": 2,
+ "stage": "EightiesTutorialStage",
+ "introduces_plant": "poisonpeashooter",
+ "minigames": [
+  {
+   "type": "cowboy",
+   "begin_string": "[COWBOY_MINIGAME_TUTORIAL_1]",
+   "show_tutorial": false
+  }
+ ],
+ "railcarts": {
+  "carts": [
+   {
+    "col": 0,
+    "row": 0
+   },
+   {
+    "col": 0,
+    "row": 4
+   },
+   {
+    "col": 1,
+    "row": 2
+   },
+   {
+    "col": 2,
+    "row": 2
+   },
+   {
+    "col": 3,
+    "row": 1
+   },
+   {
+    "col": 3,
+    "row": 3
+   },
+   {
+    "col": 5,
+    "row": 2
+   },
+   {
+    "col": 6,
+    "row": 2
+   }
+  ],
+  "rails": [
+   {
+    "col": 0,
+    "row_start": 0,
+    "row_end": 4
+   },
+   {
+    "col": 1,
+    "row_start": 0,
+    "row_end": 4
+   },
+   {
+    "col": 2,
+    "row_start": 0,
+    "row_end": 4
+   },
+   {
+    "col": 3,
+    "row_start": 3,
+    "row_end": 4
+   },
+   {
+    "col": 3,
+    "row_start": 0,
+    "row_end": 1
+   },
+   {
+    "col": 5,
+    "row_start": 0,
+    "row_end": 4
+   },
+   {
+    "col": 6,
+    "row_start": 0,
+    "row_end": 4
+   },
+   {
+    "col": 7,
+    "row_start": 0,
+    "row_end": 4
+   },
+   {
+    "col": 8,
+    "row_start": 0,
+    "row_end": 4
+   }
+  ]
+ },
+ "seedbank": {
+  "mode": "conveyor",
+  "plants": [
+   {
+    "type": "poisonpeashooter",
+    "weight": null,
+    "max": null
+   }
+  ],
+  "speed": [
+   {
+    "speed": 100,
+    "max_packets": 0
+   }
+  ]
+ },
+ "waves": [
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "eighties_armor4",
+     "row": 1
+    },
+    {
+     "type": "eighties_armor4",
+     "row": 3
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "eighties_armor4",
+     "row": 2
+    },
+    {
+     "type": "eighties_armor4",
+     "row": 3
+    },
+    {
+     "type": "eighties_armor4",
+     "row": 4
+    },
+    {
+     "type": "eighties_armor4",
+     "row": 5
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "eighties",
+       "row": 1
+      },
+      {
+       "type": "eighties",
+       "row": 5
+      },
+      {
+       "type": "eighties_armor2",
+       "row": 3
+      }
+     ]
+    },
+    {
+     "kind": "conveyor",
+     "add": [
+      {
+       "type": null,
+       "weight": null,
+       "max": null
+      }
+     ],
+     "remove": [
+      null
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "eighties_arcade",
+       "row": 2
+      },
+      {
+       "type": "eighties_arcade",
+       "row": 4
+      }
+     ],
+     "plantfood": 1,
+     "dynamic_plantfood": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0
+     ],
+     "notify": [
+      "jam_8bit"
+     ]
+    },
+    {
+     "kind": "conveyor",
+     "add": [
+      {
+       "type": null,
+       "weight": null,
+       "max": null
+      }
+     ],
+     "remove": [
+      null
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "eighties_armor4",
+     "row": 1
+    },
+    {
+     "type": "eighties_arcade",
+     "row": 2
+    },
+    {
+     "type": "eighties_armor4",
+     "row": 3
+    },
+    {
+     "type": "eighties_arcade",
+     "row": 4
+    },
+    {
+     "type": "eighties_armor4",
+     "row": 5
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "mech_cone",
+     "row": 1
+    },
+    {
+     "type": "mech_cone",
+     "row": 3
+    },
+    {
+     "type": "mech_cone",
+     "row": 5
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "eighties_arcade",
+     "row": 1
+    },
+    {
+     "type": "modern_allstar",
+     "row": 2
+    },
+    {
+     "type": "eighties_arcade",
+     "row": 3
+    },
+    {
+     "type": "modern_allstar",
+     "row": 4
+    },
+    {
+     "type": "eighties_arcade",
+     "row": 5
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "modern_allstar",
+     "row": 1
+    },
+    {
+     "type": "eighties_armor4",
+     "row": 2
+    },
+    {
+     "type": "modern_allstar",
+     "row": 3
+    },
+    {
+     "type": "eighties_armor4",
+     "row": 4
+    },
+    {
+     "type": "modern_allstar",
+     "row": 5
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "eighties_armor2",
+     "row": 1
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 2
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 3
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 4
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 5
+    },
+    {
+     "type": "modern_allstar",
+     "row": 2
+    },
+    {
+     "type": "eighties_arcade",
+     "row": 3
+    },
+    {
+     "type": "modern_allstar",
+     "row": 4
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "eighties_gargantuar",
+     "row": 3
+    }
+   ],
+   "notify": [
+    "jam_metal"
+   ]
+  }
+ ],
+ "wave_pacing": {
+  "flag_interval": 10,
+  "suppress_flag": true
+ }
+}

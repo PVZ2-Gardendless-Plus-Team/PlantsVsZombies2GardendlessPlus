@@ -1,0 +1,2790 @@
+{
+ "id": "rhythm1",
+ "name": "Iceage 1",
+ "name_key": "Rhythm 1",
+ "description": "[PLAYERS_TRIP_TO_EIGHTIES]",
+ "number": 1,
+ "stage": "EightiesStage",
+ "minigames": [
+  {
+   "type": "rhythm",
+   "bpm": 94,
+   "beat_start_time": 0.411,
+   "beats_per_bar": 2,
+   "target_column": 2,
+   "music_name": "MG_Ballad",
+   "time_offset": 0.05,
+   "zombies": [
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 0.411,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 1.049,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 1.523,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 1.997,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 2.327,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 2.958,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 3.596,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 4.079,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 4.554,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 4.877,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 5.502,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 5.687,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 5.935,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 6.146,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 6.626,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 7.104,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 7.424,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 8.055,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 8.237,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 8.416,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 8.693,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 9.17,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 9.648,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 9.968,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 10.609,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 10.938,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 11.252,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 11.736,
+     "time_before_arrive": 2,
+     "row": 0
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 12.044,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 12.198,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 12.524,
+     "time_before_arrive": 2,
+     "row": 0
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 12.678,
+     "time_before_arrive": 2,
+     "row": 0
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 13.155,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 13.526,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 13.799,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 14.283,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 14.575,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 14.757,
+     "time_before_arrive": 2,
+     "row": 0
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 15.081,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 15.398,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 15.721,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 16.095,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 16.356,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 16.83,
+     "time_before_arrive": 2,
+     "row": 0
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 17.138,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 17.313,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 17.627,
+     "time_before_arrive": 2,
+     "row": 0
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 17.844,
+     "time_before_arrive": 2,
+     "row": 0
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 18.278,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 18.623,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 18.909,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 19.389,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 19.86,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 20.03,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 20.181,
+     "time_before_arrive": 2,
+     "row": 0
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 20.492,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 20.818,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 21.129,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 21.462,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 21.939,
+     "time_before_arrive": 2,
+     "row": 0
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 22.256,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 22.423,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 22.743,
+     "time_before_arrive": 2,
+     "row": 0
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 23.06,
+     "time_before_arrive": 2,
+     "row": 0
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 23.374,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 23.689,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 24.012,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 24.499,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 24.803,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 25.124,
+     "time_before_arrive": 2,
+     "row": 0
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 25.293,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 25.447,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 25.925,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 26.254,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 26.568,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 27.039,
+     "time_before_arrive": 2,
+     "row": 0
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 27.36,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 27.523,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 27.847,
+     "time_before_arrive": 2,
+     "row": 0
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 28.164,
+     "time_before_arrive": 2,
+     "row": 0
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 28.478,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 28.801,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 29.125,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 29.605,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 29.926,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 30.076,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 30.233,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 30.406,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 30.56,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 30.714,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 30.871,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 31.028,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 32.146,
+     "time_before_arrive": 2,
+     "row": 0
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 33.254,
+     "time_before_arrive": 2,
+     "row": 0
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 33.408,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 35.669,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 35.82,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 35.977,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 36.137,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 36.455,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 36.781,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 37.099,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 37.287,
+     "time_before_arrive": 2,
+     "row": 0
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 37.582,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 38.694,
+     "time_before_arrive": 2,
+     "row": 0
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 39.017,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 39.331,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 39.652,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 39.815,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 40.123,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 40.289,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 40.377,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 40.609,
+     "time_before_arrive": 2,
+     "row": 0
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 41.244,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 41.555,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 41.872,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 42.355,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 42.682,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 42.842,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 43.159,
+     "time_before_arrive": 2,
+     "row": 0
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 43.48,
+     "time_before_arrive": 2,
+     "row": 0
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 43.794,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 44.12,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 44.412,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 44.591,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 44.761,
+     "time_before_arrive": 2,
+     "row": 0
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 44.918,
+     "time_before_arrive": 2,
+     "row": 0
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 45.232,
+     "time_before_arrive": 2,
+     "row": 0
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 45.389,
+     "time_before_arrive": 2,
+     "row": 0
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 45.706,
+     "time_before_arrive": 2,
+     "row": 0
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 46.03,
+     "time_before_arrive": 2,
+     "row": 0
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 46.356,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 46.991,
+     "time_before_arrive": 2,
+     "row": 4
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 47.474,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 47.949,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 48.263,
+     "time_before_arrive": 2,
+     "row": 4
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 48.907,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 49.528,
+     "time_before_arrive": 2,
+     "row": 4
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 50.021,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 50.502,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 50.816,
+     "time_before_arrive": 2,
+     "row": 4
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 51.45,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 52.11,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 52.738,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 53.375,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 54.007,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 54.65,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 55.282,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 55.925,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 56.556,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 57.2,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 57.832,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 58.476,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 59.113,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 59.751,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 60.391,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 61.029,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 61.672,
+     "time_before_arrive": 2,
+     "row": 4
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 61.99,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 62.313,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 62.941,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 63.105,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 63.255,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 63.585,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 64.216,
+     "time_before_arrive": 2,
+     "row": 4
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 64.565,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 64.87,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 65.498,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 65.651,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 65.805,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 66.135,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 66.773,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 67.224,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 67.42,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 68.06,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 68.525,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 68.698,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 69.326,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 69.976,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 70.607,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 70.77,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 71.081,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 71.251,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 71.882,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 72.356,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 72.523,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 72.84,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 73.151,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 73.641,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 73.801,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 74.118,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 74.455,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 74.932,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 75.076,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 75.39,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 75.72,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 76.175,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 76.351,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 76.671,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 76.992,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 77.343,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 77.488,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 77.639,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 77.956,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 78.273,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 78.593,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 78.76,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 78.914,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 79.231,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 79.551,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 79.721,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 79.893,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 80.041,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 80.195,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 80.525,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 80.832,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 81.195,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 81.304,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 81.467,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 81.787,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 82.111,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 82.261,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 82.418,
+     "time_before_arrive": 2,
+     "row": 4
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 82.582,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 82.899,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 83.059,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 83.37,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 83.574,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 83.69,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 83.854,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 84.168,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 84.334,
+     "time_before_arrive": 2,
+     "row": 0
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 84.501,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 84.654,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 84.984,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 85.144,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 85.609,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 86.09,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 86.259,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 86.413,
+     "time_before_arrive": 2,
+     "row": 4
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 86.573,
+     "time_before_arrive": 2,
+     "row": 4
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 86.727,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 86.887,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 87.205,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 87.833,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 88.002,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 88.165,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 88.475,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 89.12,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 89.28,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 89.434,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 89.591,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 89.767,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 89.918,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 90.078,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 90.244,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 90.386,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 90.555,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 90.703,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 90.876,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 91.193,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 91.67,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 91.827,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 91.991,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 92.151,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 92.317,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 92.791,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 93.595,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 94.07,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 94.864,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 95.015,
+     "time_before_arrive": 2,
+     "row": 0
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 95.335,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 95.511,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 95.828,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 95.979,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 96.299,
+     "time_before_arrive": 2,
+     "row": 0
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 96.463,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 96.623,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 96.77,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 96.94,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 97.1,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 97.263,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 97.414,
+     "time_before_arrive": 2,
+     "row": 4
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 98.052,
+     "time_before_arrive": 2,
+     "row": 4
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 98.695,
+     "time_before_arrive": 2,
+     "row": 4
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 99.324,
+     "time_before_arrive": 2,
+     "row": 4
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 99.958,
+     "time_before_arrive": 2,
+     "row": 4
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 100.599,
+     "time_before_arrive": 2,
+     "row": 4
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 101.255,
+     "time_before_arrive": 2,
+     "row": 4
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 101.902,
+     "time_before_arrive": 2,
+     "row": 4
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 102.527,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 103.164,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 103.792,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 104.424,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 105.071,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 105.705,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 106.33,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 106.996,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 107.663,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 108.264,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 108.905,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 109.553,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 110.19,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 110.827,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 111.452,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 112.09,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 112.733,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 113.371,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 114.008,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 114.646,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 115.287,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 115.921,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 116.568,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 117.205,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 117.852,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 118.484,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 119.627,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 119.774,
+     "time_before_arrive": 2,
+     "row": 0
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 120.39,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 121.021,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 121.825,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 122.155,
+     "time_before_arrive": 2,
+     "row": 0
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 122.328,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 122.937,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 123.587,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 124.265,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 124.871,
+     "time_before_arrive": 2,
+     "row": 0
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 125.057,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 125.355,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 125.499,
+     "time_before_arrive": 2,
+     "row": 4
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 126.137,
+     "time_before_arrive": 2,
+     "row": 4
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 126.781,
+     "time_before_arrive": 2,
+     "row": 4
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 126.941,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 127.289,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 127.434,
+     "time_before_arrive": 2,
+     "row": 0
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 128.053,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 128.382,
+     "time_before_arrive": 2,
+     "row": 0
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 128.69,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 129.017,
+     "time_before_arrive": 2,
+     "row": 0
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 129.331,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 129.66,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 129.978,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 130.135,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 130.461,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 130.606,
+     "time_before_arrive": 2,
+     "row": 0
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 130.926,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 131.884,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 132.364,
+     "time_before_arrive": 2,
+     "row": 4
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 133.162,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 133.319,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 133.646,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 134.924,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 135.084,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 135.401,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 136.193,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 136.395,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 136.673,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 137.468,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 137.628,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 137.945,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 138.269,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 138.9,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 139.377,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 140.178,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 140.825,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 141.45,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 141.933,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 142.728,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 143.378,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 144.012,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 144.487,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 145.297,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 145.925,
+     "time_before_arrive": 2,
+     "row": 0
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 146.566,
+     "time_before_arrive": 2,
+     "row": 0
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 147.046,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 147.834,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 148.488,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 149.116,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 149.602,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 150.4,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 151.035,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 151.675,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 152.159,
+     "time_before_arrive": 2,
+     "row": 4
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 152.938,
+     "time_before_arrive": 2,
+     "row": 4
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 153.588,
+     "time_before_arrive": 2,
+     "row": 0
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 153.911,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 154.225,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 154.546,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 154.715,
+     "time_before_arrive": 2,
+     "row": 4
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 155.497,
+     "time_before_arrive": 2,
+     "row": 4
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 156.138,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 156.461,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 156.634,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 156.945,
+     "time_before_arrive": 2,
+     "row": 4
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 157.096,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 157.253,
+     "time_before_arrive": 2,
+     "row": 0
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 158.06,
+     "time_before_arrive": 2,
+     "row": 0
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 158.694,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 159.328,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 159.815,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 160.613,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 161.254,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 161.885,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 162.365,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 163.163,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 163.797,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 164.429,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 164.915,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 165.722,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 166.354,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 166.985,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 167.472,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "chicken",
+     "arrive_time": 168.273,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 168.91,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 169.391,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 169.554,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 169.701,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 170.022,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 170.185,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 170.352,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 170.659,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 171.146,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 171.46,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 171.623,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 171.787,
+     "time_before_arrive": 2,
+     "row": 0
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 171.944,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 172.098,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 172.258,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 172.578,
+     "time_before_arrive": 2,
+     "row": 0
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 172.898,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 173.068,
+     "time_before_arrive": 2,
+     "row": 0
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 173.379,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 174.013,
+     "time_before_arrive": 2,
+     "row": 3
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 174.18,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 174.337,
+     "time_before_arrive": 2,
+     "row": 0
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 174.497,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 174.657,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 174.814,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 175.144,
+     "time_before_arrive": 2,
+     "row": 0
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 175.458,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 175.615,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 175.926,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 176.243,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 176.563,
+     "time_before_arrive": 2,
+     "row": 0
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 176.877,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 177.195,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 177.515,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 177.685,
+     "time_before_arrive": 2,
+     "row": 0
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 178.002,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 178.168,
+     "time_before_arrive": 2,
+     "row": 0
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 178.488,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 179.12,
+     "time_before_arrive": 2,
+     "row": 0
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 179.443,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 179.767,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 180.087,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 180.238,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 180.564,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 180.709,
+     "time_before_arrive": 2,
+     "row": 1
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 181.026,
+     "time_before_arrive": 2,
+     "row": 2
+    },
+    {
+     "type": "eighties_8bit",
+     "arrive_time": 181.365,
+     "time_before_arrive": 2,
+     "row": 3
+    }
+   ],
+   "events": [
+    {
+     "time": 0,
+     "events": []
+    }
+   ]
+  }
+ ],
+ "scripts": [
+  "StandardIntro"
+ ]
+}

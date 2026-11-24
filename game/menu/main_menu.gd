@@ -6,6 +6,7 @@ extends Control
 ## is showing.
 
 signal play_requested
+signal minigames_requested
 signal continue_requested(level_id: StringName)
 signal quit_requested
 
@@ -63,6 +64,13 @@ func _ready() -> void:
 	play.add_theme_font_size_override("font_size", 46)
 	play.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
 	stack.add_child(play)
+
+	# PVZGE's extra games, and the modes its worlds play inside levels.
+	var extras := MenuUI.button(tr("Minigames"), minigames_requested.emit,
+			Vector2(240, 54), &"green")
+	extras.name = "Minigames"
+	extras.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
+	stack.add_child(extras)
 
 	# PVZGE's 50x50 corner buttons: close bottom-left, settings bottom-right.
 	var corner := Vector2(56, 56)

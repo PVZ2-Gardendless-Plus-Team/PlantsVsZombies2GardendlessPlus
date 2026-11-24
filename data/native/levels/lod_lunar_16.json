@@ -1,0 +1,526 @@
+{
+ "id": "lod_lunar_16",
+ "name": "Cowboy 5",
+ "name_key": "[LOD_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_LOD]",
+ "author": "蔓逐I蝶舞",
+ "stage": "LunarStage",
+ "level_of_the_day": true,
+ "objectives": [
+  {
+   "type": "survive_waves",
+   "description": "[STARCHALLENGE_CORRAL_MINIGAME]"
+  }
+ ],
+ "minigames": [
+  {
+   "type": "cowboy",
+   "begin_string": "[COWBOY_MINIGAME_TUTORIAL_1]",
+   "show_tutorial": true
+  }
+ ],
+ "railcarts": {
+  "carts": [
+   {
+    "col": 0,
+    "row": 1
+   },
+   {
+    "col": 0,
+    "row": 3
+   },
+   {
+    "col": 1,
+    "row": 2
+   },
+   {
+    "col": 2,
+    "row": 1
+   },
+   {
+    "col": 3,
+    "row": 1
+   },
+   {
+    "col": 3,
+    "row": 3
+   },
+   {
+    "col": 2,
+    "row": 3
+   }
+  ],
+  "rails": [
+   {
+    "col": 0,
+    "row_start": 0,
+    "row_end": 1
+   },
+   {
+    "col": 0,
+    "row_start": 3,
+    "row_end": 4
+   },
+   {
+    "col": 1,
+    "row_start": 0,
+    "row_end": 4
+   },
+   {
+    "col": 2,
+    "row_start": 0,
+    "row_end": 1
+   },
+   {
+    "col": 2,
+    "row_start": 3,
+    "row_end": 4
+   },
+   {
+    "col": 3,
+    "row_start": 0,
+    "row_end": 1
+   },
+   {
+    "col": 3,
+    "row_start": 3,
+    "row_end": 4
+   }
+  ],
+  "type": "railcart_kongfu"
+ },
+ "seedbank": {
+  "mode": "conveyor",
+  "plants": [
+   {
+    "type": "redstinger",
+    "weight": null,
+    "max": null
+   }
+  ],
+  "speed": [
+   {
+    "speed": 100,
+    "max_packets": 0
+   }
+  ]
+ },
+ "waves": [
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "lunar_armor1",
+     "row": 2
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "lunar_superfanimp",
+       "row": 3
+      },
+      {
+       "type": "lunar",
+       "row": 1
+      },
+      {
+       "type": "lunar",
+       "row": 1
+      },
+      {
+       "type": "kongfu_hammer",
+       "row": 4
+      }
+     ]
+    },
+    {
+     "kind": "conveyor",
+     "add": [
+      {
+       "type": null,
+       "weight": null,
+       "max": null
+      }
+     ],
+     "remove": [
+      null
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "lunar_camel_onehump",
+     "row": 2
+    },
+    {
+     "type": "kongfu_torch",
+     "row": 5
+    },
+    {
+     "type": "kongfu_torch",
+     "row": 3
+    },
+    {
+     "type": "lunar_superfanimp",
+     "row": 5
+    },
+    {
+     "type": "lunar_camel_onehump",
+     "row": 4
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "kongfu_hammer",
+       "row": 4
+      },
+      {
+       "type": "kongfu_bomb",
+       "row": 5
+      },
+      {
+       "type": "lunar_armor1",
+       "row": 4
+      },
+      {
+       "type": "lunar_camel_onehump",
+       "row": 1
+      }
+     ]
+    },
+    {
+     "kind": "conveyor",
+     "add": [
+      {
+       "type": null,
+       "weight": null,
+       "max": null
+      }
+     ],
+     "remove": [
+      null
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "kongfu_torch",
+     "row": 1
+    },
+    {
+     "type": "kongfu_hammer",
+     "row": 5
+    },
+    {
+     "type": "lunar",
+     "row": 5
+    },
+    {
+     "type": "lunar_armor2",
+     "row": 2
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "kongfu_drink",
+     "row": 1
+    },
+    {
+     "type": "lunar_superfanimp",
+     "row": 1
+    },
+    {
+     "type": "lunar_camel_onehump",
+     "row": 5
+    },
+    {
+     "type": "lunar_armor1",
+     "row": 4
+    },
+    {
+     "type": "lunar_superfanimp",
+     "row": 5
+    },
+    {
+     "type": "monk_nunchaku",
+     "row": 4
+    },
+    {
+     "type": "lunar_superfanimp",
+     "row": 5
+    },
+    {
+     "type": "lunar",
+     "row": 1
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "lunar_armor2",
+     "row": 5
+    },
+    {
+     "type": "lunar_armor1",
+     "row": 1
+    },
+    {
+     "type": "monk_blade",
+     "row": 1
+    },
+    {
+     "type": "monk_blade",
+     "row": 3
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "kongfu_drink",
+       "row": 4
+      },
+      {
+       "type": "lunar_armor2",
+       "row": 4
+      },
+      {
+       "type": "lunar_camel_onehump",
+       "row": 4
+      },
+      {
+       "type": "lunar_camel_onehump",
+       "row": 5
+      },
+      {
+       "type": "monk_torch",
+       "row": 2
+      },
+      {
+       "type": "monk_torch",
+       "row": 4
+      },
+      {
+       "type": "monk_torch",
+       "row": 5
+      },
+      {
+       "type": "lunar_armor2",
+       "row": 2
+      }
+     ]
+    },
+    {
+     "kind": "conveyor",
+     "add": [
+      {
+       "type": null,
+       "weight": null,
+       "max": null
+      }
+     ],
+     "remove": [
+      null
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "lunar_armor2",
+       "row": 1
+      },
+      {
+       "type": "lunar_armor1",
+       "row": 5
+      },
+      {
+       "type": "monk_blade",
+       "row": 3
+      },
+      {
+       "type": "lunar_armor1",
+       "row": 4
+      },
+      {
+       "type": "monk_nunchaku",
+       "row": 2
+      },
+      {
+       "type": "monk_blade",
+       "row": 4
+      },
+      {
+       "type": "monk_blade",
+       "row": 2
+      },
+      {
+       "type": "monk_blade",
+       "row": 2
+      },
+      {
+       "type": "lunar_superfanimp",
+       "row": 5
+      },
+      {
+       "type": "lunar_superfanimp",
+       "row": 4
+      },
+      {
+       "type": "lunar_superfanimp",
+       "row": 2
+      },
+      {
+       "type": "lunar_superfanimp",
+       "row": 1
+      },
+      {
+       "type": "lunar_armor2",
+       "row": 5
+      },
+      {
+       "type": "lunar",
+       "row": 1
+      },
+      {
+       "type": "lunar_armor1",
+       "row": 1
+      }
+     ]
+    },
+    {
+     "kind": "conveyor",
+     "add": [
+      {
+       "type": null,
+       "weight": null,
+       "max": null
+      }
+     ],
+     "remove": [
+      null
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "monk_drink",
+     "row": 4
+    },
+    {
+     "type": "monk_drink",
+     "row": 5
+    },
+    {
+     "type": "lunar_camel_onehump",
+     "row": 1
+    },
+    {
+     "type": "monk_blade",
+     "row": 1
+    },
+    {
+     "type": "monk_blade",
+     "row": 4
+    },
+    {
+     "type": "lunar_armor2",
+     "row": 1
+    },
+    {
+     "type": "lunar_superfanimp",
+     "row": 3
+    },
+    {
+     "type": "lunar_superfanimp",
+     "row": 5
+    },
+    {
+     "type": "lunar_armor2",
+     "row": 5
+    },
+    {
+     "type": "lunar_armor2",
+     "row": 2
+    },
+    {
+     "type": "lunar_armor2",
+     "row": 4
+    },
+    {
+     "type": "lunar_armor2",
+     "row": 5
+    },
+    {
+     "type": "lunar_armor1",
+     "row": 4
+    },
+    {
+     "type": "lunar_armor1",
+     "row": 2
+    },
+    {
+     "type": "monk_torch",
+     "row": 2
+    },
+    {
+     "type": "monk_torch",
+     "row": 3
+    }
+   ],
+   "plantfood": 1,
+   "dynamic_plantfood": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0
+   ]
+  }
+ ],
+ "wave_pacing": {
+  "flag_interval": 5,
+  "points": 100,
+  "point_increment": 100
+ },
+ "scripts": [
+  "LevelOfTheDayIntro"
+ ]
+}

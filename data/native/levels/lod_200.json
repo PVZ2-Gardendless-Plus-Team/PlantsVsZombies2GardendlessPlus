@@ -1,0 +1,494 @@
+{
+ "id": "lod_200",
+ "name": "Piñata Party 12",
+ "name_key": "[LOD_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_LOD]",
+ "author": "逍遥",
+ "stage": "DarkStage",
+ "level_of_the_day": true,
+ "seedbank": {
+  "mode": "chooser",
+  "selection": "preset",
+  "preset": [
+   "iceburg",
+   "solartomato",
+   "cherry_bomb",
+   "explodeonut"
+  ]
+ },
+ "railcarts": {
+  "carts": [
+   {
+    "col": "1",
+    "row": "2"
+   }
+  ],
+  "rails": [
+   {
+    "col": "1",
+    "row_start": "0",
+    "row_end": "4"
+   }
+  ],
+  "type": "railcart_dark"
+ },
+ "waves": [
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "dark_armor1"
+    },
+    {
+     "type": "dark_armor1"
+    },
+    {
+     "type": "dark_armor1"
+    },
+    {
+     "type": "dark_juggler"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "dark_armor3"
+    },
+    {
+     "type": "dark_armor3"
+    },
+    {
+     "type": "dark_armor3"
+    }
+   ],
+   "plantfood": 1
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "dark_armor4"
+    },
+    {
+     "type": "dark_armor3"
+    },
+    {
+     "type": "dark_armor3"
+    },
+    {
+     "type": "dark_armor3"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "dark"
+    },
+    {
+     "type": "dark"
+    },
+    {
+     "type": "dark_juggler"
+    },
+    {
+     "type": "dark_armor2"
+    },
+    {
+     "type": "dark_armor2"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "dark_armor2"
+    },
+    {
+     "type": "dark_armor2"
+    },
+    {
+     "type": "dark_armor2"
+    },
+    {
+     "type": "dark_gargantuar"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "dark_armor2"
+    },
+    {
+     "type": "dark_armor2"
+    },
+    {
+     "type": "dark_armor2"
+    },
+    {
+     "type": "dark_armor2"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "dark_juggler"
+    },
+    {
+     "type": "dark_armor2"
+    },
+    {
+     "type": "dark_armor3"
+    },
+    {
+     "type": "dark_armor3"
+    },
+    {
+     "type": "dark_armor3"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "dark_juggler"
+    },
+    {
+     "type": "dark_armor2"
+    },
+    {
+     "type": "dark_juggler"
+    },
+    {
+     "type": "dark_armor2"
+    },
+    {
+     "type": "dark_armor2"
+    },
+    {
+     "type": "dark_armor3"
+    },
+    {
+     "type": "dark_armor3"
+    },
+    {
+     "type": "dark_armor2"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "dark_gargantuar"
+    },
+    {
+     "type": "dark_armor3"
+    },
+    {
+     "type": "dark_juggler"
+    },
+    {
+     "type": "dark_armor3"
+    },
+    {
+     "type": "dark_armor3"
+    },
+    {
+     "type": "dark_juggler"
+    },
+    {
+     "type": "dark_juggler"
+    },
+    {
+     "type": "dark_gargantuar"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "dark_juggler"
+    },
+    {
+     "type": "dark_armor2"
+    },
+    {
+     "type": "dark_juggler"
+    },
+    {
+     "type": "dark_armor2"
+    },
+    {
+     "type": "dark_armor2"
+    },
+    {
+     "type": "dark_juggler"
+    },
+    {
+     "type": "dark_armor2"
+    },
+    {
+     "type": "dark_juggler"
+    },
+    {
+     "type": "dark_armor2"
+    },
+    {
+     "type": "dark_juggler"
+    },
+    {
+     "type": "dark_armor2"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "dark_juggler"
+    },
+    {
+     "type": "dark_juggler"
+    },
+    {
+     "type": "dark_juggler"
+    },
+    {
+     "type": "dark_juggler"
+    },
+    {
+     "type": "dark_gargantuar"
+    },
+    {
+     "type": "dark_gargantuar"
+    },
+    {
+     "type": "dark_armor4"
+    },
+    {
+     "type": "dark_armor4"
+    },
+    {
+     "type": "dark_armor3"
+    },
+    {
+     "type": "dark_juggler"
+    },
+    {
+     "type": "dark_armor3"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "dark_gargantuar"
+    },
+    {
+     "type": "dark_juggler"
+    },
+    {
+     "type": "dark_juggler"
+    },
+    {
+     "type": "dark_gargantuar"
+    },
+    {
+     "type": "dark_gargantuar"
+    },
+    {
+     "type": "dark_armor4"
+    },
+    {
+     "type": "dark_armor3"
+    },
+    {
+     "type": "dark_juggler"
+    },
+    {
+     "type": "dark_gargantuar"
+    },
+    {
+     "type": "dark_armor3"
+    },
+    {
+     "type": "dark_armor3"
+    },
+    {
+     "type": "dark_armor3"
+    },
+    {
+     "type": "dark_armor2"
+    },
+    {
+     "type": "dark_armor2"
+    },
+    {
+     "type": "dark_juggler"
+    },
+    {
+     "type": "dark_juggler"
+    },
+    {
+     "type": "dark_armor4"
+    }
+   ]
+  }
+ ],
+ "wave_pacing": {
+  "flag_interval": 4,
+  "points": 50,
+  "point_increment": 0
+ },
+ "level_of_the_day_config": {
+  "flags": 10,
+  "waves_per_flag": 10,
+  "points": 10,
+  "point_increment": 100,
+  "plantfood": 3,
+  "pool": [
+   "dark_armor2",
+   "dark_armor1"
+  ]
+ },
+ "minigames": [
+  {
+   "type": "fight_alone",
+   "suppress_objective_tip": true,
+   "position": {
+    "m_x": 1,
+    "m_y": 2
+   },
+   "plant_upgrade_list": [
+    {
+     "type": "bloomerang",
+     "full_point": 5000,
+     "upgrade_details": {
+      "damage_scale": 15,
+      "shoot_interval_scale": 0.5
+     }
+    },
+    {
+     "type": "megagatling",
+     "full_point": 18000,
+     "upgrade_details": {
+      "damage_scale": 25,
+      "shoot_interval_scale": 0.5
+     }
+    },
+    {
+     "type": "wintermelon",
+     "upgrade_details": {
+      "damage_scale": 10,
+      "shoot_interval_scale": 0.5
+     }
+    }
+   ]
+  }
+ ],
+ "mowers": true,
+ "scripts": [
+  "LevelOfTheDayIntro",
+  "StandardIntro"
+ ],
+ "extra": [
+  {
+   "objclass": "PlantModifierProperties",
+   "aliases": [
+    "ModPlants"
+   ],
+   "objdata": {
+    "HidePlantfood": true,
+    "SuppressParticle": true,
+    "List": [
+     {
+      "Type": "explodeonut",
+      "NewObjdata": {
+       "ArmorToughness": 4000,
+       "Damage": 1800,
+       "ArmorDamage": 1800,
+       "Cooldown": 10,
+       "CooldownFrom": 0.5,
+       "SunCost": 500,
+       "BeghouledCost": 2000,
+       "Toughness": 3000,
+       "Family": "Explosive"
+      }
+     },
+     {
+      "Type": "cherry_bomb",
+      "NewObjdata": {
+       "CannotBeSheepenedByWizard": true,
+       "Damage": 1800,
+       "Cooldown": 50,
+       "CooldownFrom": 1,
+       "SunCost": 250,
+       "BeghouledCost": 1000,
+       "Toughness": 300,
+       "Family": "Explosive",
+       "ImmuneToBoomBox": true,
+       "ImmuneToIceblock": true
+      }
+     },
+     {
+      "Type": "doomshroom",
+      "NewObjdata": {
+       "CannotBeSheepenedByWizard": true,
+       "Damage": 1800,
+       "Cooldown": 50,
+       "CooldownFrom": 1,
+       "SunCost": 1000,
+       "BeghouledCost": 1000,
+       "Toughness": 300,
+       "Family": "Explosive",
+       "ImmuneToBoomBox": true,
+       "ImmuneToIceblock": true
+      }
+     }
+    ]
+   }
+  },
+  {
+   "objclass": "ZombieType",
+   "aliases": [
+    "dark_juggler"
+   ],
+   "objdata": {
+    "Properties": "RTID(dark_juggler@CurrentLevel)",
+    "ZombieBasedOn": "dark_juggler"
+   }
+  },
+  {
+   "objclass": "ZombieProperties",
+   "aliases": [
+    "dark_juggler"
+   ],
+   "objdata": {
+    "WalkSPS": 0.3,
+    "EatDPS": 100,
+    "Toughness": 420,
+    "MoveSpeedMultiplierWhileJuggling": 4,
+    "RotateDuration": 8,
+    "WavePointCost": 450,
+    "Weight": 3500,
+    "HitRect": "RTID(CommonHitRect@RectangleProps)",
+    "AttackRect": "RTID(CommonAttackRect@RectangleProps)",
+    "StartingArmors": [
+     "dark_armor2"
+    ]
+   }
+  }
+ ]
+}

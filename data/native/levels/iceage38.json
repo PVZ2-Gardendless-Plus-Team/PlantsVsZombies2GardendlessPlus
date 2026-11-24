@@ -1,0 +1,602 @@
+{
+ "id": "iceage38",
+ "name": "Iceage 38",
+ "name_key": "[ICEAGE_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_ICEAGE]",
+ "author": "莱池_余垛",
+ "number": 38,
+ "stage": "IceageStage",
+ "seedbank": {
+  "mode": "chooser",
+  "selection": "chooser",
+  "exclude": [
+   "puffshroom",
+   "seashroom",
+   "iceburg",
+   "gravebuster",
+   "toadstool",
+   "goldleaf",
+   "stallia"
+  ],
+  "exclude_sun_producers": "true",
+  "decks": {
+   "recommended": [
+    {
+     "name": "Over and Over",
+     "plants": [
+      "moonflower",
+      "dusklobber",
+      "pepperpult",
+      "thymewarp",
+      "chardguard",
+      "peach"
+     ]
+    },
+    {
+     "name": "Leap into the Air",
+     "plants": [
+      "chomper",
+      "jackolantern",
+      "hotpotato",
+      "wallnut",
+      "blover",
+      "chardguard"
+     ]
+    },
+    {
+     "name": "Jack of All Trades",
+     "plants": [
+      "electricblueberry",
+      "jackolantern",
+      "hotpotato"
+     ]
+    }
+   ]
+  }
+ },
+ "minigames": [
+  {
+   "type": "last_stand",
+   "starting_plantfood": 2,
+   "starting_sun": 2750
+  }
+ ],
+ "initial": {
+  "grid_items": [
+   {
+    "col": 6,
+    "row": 1,
+    "type": "slider_up"
+   },
+   {
+    "col": 6,
+    "row": 4,
+    "type": "slider_up"
+   },
+   {
+    "col": 3,
+    "row": 0,
+    "type": "slider_down"
+   },
+   {
+    "col": 3,
+    "row": 3,
+    "type": "slider_down"
+   }
+  ],
+  "zombies": [
+   {
+    "col": 0,
+    "row": 0,
+    "type": "iceage_armor4",
+    "condition": "icecubed"
+   },
+   {
+    "col": 0,
+    "row": 2,
+    "type": "iceage_armor4",
+    "condition": "icecubed"
+   },
+   {
+    "col": 0,
+    "row": 4,
+    "type": "iceage_armor4",
+    "condition": "icecubed"
+   },
+   {
+    "col": 1,
+    "row": 0,
+    "type": "iceage_armor4",
+    "condition": "icecubed"
+   },
+   {
+    "col": 1,
+    "row": 1,
+    "type": "iceage_armor4",
+    "condition": "icecubed"
+   },
+   {
+    "col": 1,
+    "row": 3,
+    "type": "iceage_armor4",
+    "condition": "icecubed"
+   },
+   {
+    "col": 1,
+    "row": 4,
+    "type": "iceage_armor4",
+    "condition": "icecubed"
+   }
+  ]
+ },
+ "waves": [
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "iceage_armor4",
+       "row": 2
+      },
+      {
+       "type": "iceage_armor4",
+       "row": 5
+      }
+     ]
+    },
+    {
+     "kind": "frost_wind",
+     "blasts": 1,
+     "winds": [
+      {
+       "row": 0,
+       "direction": "right"
+      },
+      {
+       "row": 0,
+       "direction": "right"
+      },
+      {
+       "row": 3,
+       "direction": "right"
+      },
+      {
+       "row": 3,
+       "direction": "right"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "iceage_armor3",
+       "row": 1
+      },
+      {
+       "type": "iceage_armor3",
+       "row": 3
+      },
+      {
+       "type": "iceage_armor3",
+       "row": 4
+      },
+      {
+       "type": "iceage_weaselhoarder",
+       "row": 2
+      },
+      {
+       "type": "iceage_weaselhoarder",
+       "row": 4
+      }
+     ]
+    },
+    {
+     "kind": "frost_wind",
+     "blasts": 1,
+     "winds": [
+      {
+       "row": 1,
+       "direction": "right"
+      },
+      {
+       "row": 1,
+       "direction": "right"
+      },
+      {
+       "row": 4,
+       "direction": "right"
+      },
+      {
+       "row": 4,
+       "direction": "right"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "iceage_gargantuar",
+     "row": 3
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "iceage_armor2",
+       "row": 2,
+       "col": "5"
+      },
+      {
+       "type": "iceage_armor2",
+       "row": 5,
+       "col": "5"
+      },
+      {
+       "type": "iceage_weaselhoarder",
+       "row": 1
+      },
+      {
+       "type": "iceage_weaselhoarder",
+       "row": 4
+      }
+     ]
+    },
+    {
+     "kind": "frost_wind",
+     "blasts": 1,
+     "winds": [
+      {
+       "row": 2,
+       "direction": "right"
+      },
+      {
+       "row": 2,
+       "direction": "right"
+      },
+      {
+       "row": 1,
+       "direction": "right"
+      },
+      {
+       "row": 4,
+       "direction": "right"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "iceage_dodo",
+       "row": 1
+      },
+      {
+       "type": "iceage_dodo",
+       "row": 2
+      },
+      {
+       "type": "iceage_dodo",
+       "row": 3
+      },
+      {
+       "type": "iceage_dodo",
+       "row": 4
+      },
+      {
+       "type": "iceage_dodo",
+       "row": 5
+      }
+     ]
+    },
+    {
+     "kind": "frost_wind",
+     "blasts": 1,
+     "winds": [
+      {
+       "row": 1,
+       "direction": "right"
+      },
+      {
+       "row": 4,
+       "direction": "right"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "iceage_armor2",
+       "row": 2,
+       "col": "6"
+      },
+      {
+       "type": "iceage_armor2",
+       "row": 5,
+       "col": "6"
+      },
+      {
+       "type": "iceage_armor2",
+       "row": 1,
+       "col": "3"
+      },
+      {
+       "type": "iceage_armor2",
+       "row": 4,
+       "col": "3"
+      },
+      {
+       "type": "iceage_troglobite_veteran",
+       "row": 3
+      },
+      {
+       "type": "iceage_troglobite_veteran",
+       "row": 1
+      },
+      {
+       "type": "iceage_troglobite_veteran",
+       "row": 4
+      }
+     ]
+    },
+    {
+     "kind": "frost_wind",
+     "blasts": 1,
+     "winds": [
+      {
+       "row": 1,
+       "direction": "right"
+      },
+      {
+       "row": 4,
+       "direction": "right"
+      },
+      {
+       "row": 2,
+       "direction": "right"
+      },
+      {
+       "row": 0,
+       "direction": "right"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "iceage_weaselhoarder",
+     "row": 1
+    },
+    {
+     "type": "iceage_weaselhoarder",
+     "row": 3
+    },
+    {
+     "type": "iceage_weaselhoarder",
+     "row": 5
+    },
+    {
+     "type": "iceage_weaselhoarder",
+     "row": 2
+    },
+    {
+     "type": "iceage_weaselhoarder",
+     "row": 4
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "iceage_armor4",
+     "row": 2,
+     "col": "7"
+    },
+    {
+     "type": "iceage_armor4",
+     "row": 5,
+     "col": "7"
+    },
+    {
+     "type": "iceage_armor4",
+     "row": 1,
+     "col": "7"
+    },
+    {
+     "type": "iceage_armor4",
+     "row": 3,
+     "col": "7"
+    },
+    {
+     "type": "iceage_gargantuar",
+     "row": 5
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "iceage_troglobite_veteran",
+       "row": 3
+      },
+      {
+       "type": "iceage_troglobite_veteran",
+       "row": 1
+      },
+      {
+       "type": "iceage_troglobite_veteran",
+       "row": 4
+      }
+     ]
+    },
+    {
+     "kind": "frost_wind",
+     "blasts": 1,
+     "winds": [
+      {
+       "row": 1,
+       "direction": "right"
+      },
+      {
+       "row": 4,
+       "direction": "right"
+      },
+      {
+       "row": 3,
+       "direction": "right"
+      },
+      {
+       "row": 2,
+       "direction": "right"
+      },
+      {
+       "row": 0,
+       "direction": "right"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "iceage_gargantuar",
+     "row": 2
+    },
+    {
+     "type": "iceage_gargantuar",
+     "row": 4
+    }
+   ]
+  }
+ ],
+ "wave_pacing": {
+  "flag_interval": 2,
+  "points": 100,
+  "point_increment": 100
+ },
+ "dynamic_zombies": [
+  {
+   "start_wave": 3,
+   "points": -100,
+   "increment": -40,
+   "pool": [
+    "iceage",
+    "iceage_armor1",
+    "iceage_armor2",
+    "iceage_armor3",
+    "iceage_gargantuar",
+    "iceage_hunter",
+    "iceage_troglobite",
+    "iceage_weaselhoarder",
+    "iceage_dodo"
+   ]
+  },
+  {
+   "start_wave": 4,
+   "points": -100,
+   "increment": -25,
+   "pool": [
+    "iceage",
+    "iceage_armor1",
+    "iceage_armor2",
+    "iceage_armor3",
+    "iceage_gargantuar",
+    "iceage_hunter",
+    "iceage_troglobite",
+    "iceage_weaselhoarder",
+    "iceage_dodo"
+   ]
+  },
+  {
+   "start_wave": 5,
+   "points": -100,
+   "increment": -10,
+   "pool": [
+    "iceage",
+    "iceage_armor1",
+    "iceage_armor2",
+    "iceage_armor3",
+    "iceage_gargantuar",
+    "iceage_hunter",
+    "iceage_troglobite",
+    "iceage_weaselhoarder",
+    "iceage_dodo"
+   ]
+  },
+  {
+   "start_wave": 5,
+   "points": 200,
+   "increment": 20,
+   "pool": [
+    "iceage",
+    "iceage_armor1",
+    "iceage_armor2",
+    "iceage_armor3",
+    "iceage_troglobite",
+    "iceage_weaselhoarder"
+   ]
+  },
+  {
+   "start_wave": 4,
+   "points": 400,
+   "increment": 40,
+   "pool": [
+    "iceage_armor1",
+    "iceage_armor2",
+    "iceage_armor3",
+    "iceage_troglobite",
+    "iceage_weaselhoarder"
+   ]
+  },
+  {
+   "start_wave": 3,
+   "points": 600,
+   "increment": 60,
+   "pool": [
+    "iceage_armor2",
+    "iceage_armor3",
+    "iceage_troglobite",
+    "iceage_weaselhoarder"
+   ]
+  }
+ ],
+ "scripts": [
+  "StandardIntro"
+ ]
+}

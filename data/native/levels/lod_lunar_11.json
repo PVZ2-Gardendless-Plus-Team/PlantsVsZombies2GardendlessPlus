@@ -1,0 +1,1012 @@
+{
+ "id": "lod_lunar_11",
+ "name": "[LOD_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_LOD]",
+ "author": "莱池_余垛",
+ "stage": "LunarStage",
+ "level_of_the_day": true,
+ "waves": [
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "schedule",
+     "delay": {
+      "min": 2,
+      "max": 2
+     },
+     "interval": {
+      "min": 2,
+      "max": 2
+     },
+     "repeat": {
+      "min": 1,
+      "max": 1
+     },
+     "events": [
+      {
+       "kind": "RandomEventsProps",
+       "data": {
+        "EventCount": {
+         "Min": 1,
+         "Max": 1
+        },
+        "Events": [
+         "RTID(RocketEvent0@CurrentLevel)",
+         "RTID(RocketEvent1@CurrentLevel)",
+         "RTID(RocketEvent2@CurrentLevel)",
+         "RTID(RocketEvent0@CurrentLevel)",
+         "RTID(RocketEvent1@CurrentLevel)",
+         "RTID(RocketEvent2@CurrentLevel)",
+         "RTID(RocketEvent0@CurrentLevel)",
+         "RTID(RocketEvent1@CurrentLevel)",
+         "RTID(RocketEvent2@CurrentLevel)",
+         "RTID(RocketEvent3@CurrentLevel)",
+         "RTID(RocketEvent4@CurrentLevel)",
+         "RTID(RocketEvent5@CurrentLevel)",
+         "RTID(RocketEvent6@CurrentLevel)",
+         "RTID(RocketEvent7@CurrentLevel)"
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "schedule",
+     "delay": {
+      "min": 2,
+      "max": 2
+     },
+     "interval": {
+      "min": 2,
+      "max": 2
+     },
+     "repeat": {
+      "min": 1,
+      "max": 1
+     },
+     "events": [
+      {
+       "kind": "RandomEventsProps",
+       "data": {
+        "EventCount": {
+         "Min": 1,
+         "Max": 1
+        },
+        "Events": [
+         "RTID(RocketEvent0@CurrentLevel)",
+         "RTID(RocketEvent1@CurrentLevel)",
+         "RTID(RocketEvent2@CurrentLevel)",
+         "RTID(RocketEvent0@CurrentLevel)",
+         "RTID(RocketEvent1@CurrentLevel)",
+         "RTID(RocketEvent2@CurrentLevel)",
+         "RTID(RocketEvent0@CurrentLevel)",
+         "RTID(RocketEvent1@CurrentLevel)",
+         "RTID(RocketEvent2@CurrentLevel)",
+         "RTID(RocketEvent3@CurrentLevel)",
+         "RTID(RocketEvent4@CurrentLevel)",
+         "RTID(RocketEvent5@CurrentLevel)",
+         "RTID(RocketEvent6@CurrentLevel)",
+         "RTID(RocketEvent7@CurrentLevel)"
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "schedule",
+     "delay": {
+      "min": 2,
+      "max": 2
+     },
+     "interval": {
+      "min": 2,
+      "max": 2
+     },
+     "repeat": {
+      "min": 2,
+      "max": 2
+     },
+     "events": [
+      {
+       "kind": "RandomEventsProps",
+       "data": {
+        "EventCount": {
+         "Min": 1,
+         "Max": 1
+        },
+        "Events": [
+         "RTID(RocketEvent0@CurrentLevel)",
+         "RTID(RocketEvent1@CurrentLevel)",
+         "RTID(RocketEvent2@CurrentLevel)",
+         "RTID(RocketEvent0@CurrentLevel)",
+         "RTID(RocketEvent1@CurrentLevel)",
+         "RTID(RocketEvent2@CurrentLevel)",
+         "RTID(RocketEvent0@CurrentLevel)",
+         "RTID(RocketEvent1@CurrentLevel)",
+         "RTID(RocketEvent2@CurrentLevel)",
+         "RTID(RocketEvent3@CurrentLevel)",
+         "RTID(RocketEvent4@CurrentLevel)",
+         "RTID(RocketEvent5@CurrentLevel)",
+         "RTID(RocketEvent6@CurrentLevel)",
+         "RTID(RocketEvent7@CurrentLevel)"
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "schedule",
+     "delay": {
+      "min": 1.5,
+      "max": 1.5
+     },
+     "interval": {
+      "min": 1.5,
+      "max": 1.5
+     },
+     "repeat": {
+      "min": 4,
+      "max": 4
+     },
+     "events": [
+      {
+       "kind": "RandomEventsProps",
+       "data": {
+        "EventCount": {
+         "Min": 1,
+         "Max": 1
+        },
+        "Events": [
+         "RTID(RocketEvent0@CurrentLevel)",
+         "RTID(RocketEvent1@CurrentLevel)",
+         "RTID(RocketEvent2@CurrentLevel)",
+         "RTID(RocketEvent0@CurrentLevel)",
+         "RTID(RocketEvent1@CurrentLevel)",
+         "RTID(RocketEvent2@CurrentLevel)",
+         "RTID(RocketEvent0@CurrentLevel)",
+         "RTID(RocketEvent1@CurrentLevel)",
+         "RTID(RocketEvent2@CurrentLevel)",
+         "RTID(RocketEvent3@CurrentLevel)",
+         "RTID(RocketEvent4@CurrentLevel)",
+         "RTID(RocketEvent5@CurrentLevel)",
+         "RTID(RocketEvent6@CurrentLevel)",
+         "RTID(RocketEvent7@CurrentLevel)"
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "schedule",
+     "delay": {
+      "min": 2,
+      "max": 2
+     },
+     "interval": {
+      "min": 2,
+      "max": 2
+     },
+     "repeat": {
+      "min": 3,
+      "max": 3
+     },
+     "events": [
+      {
+       "kind": "RandomEventsProps",
+       "data": {
+        "EventCount": {
+         "Min": 1,
+         "Max": 1
+        },
+        "Events": [
+         "RTID(RocketEvent0@CurrentLevel)",
+         "RTID(RocketEvent1@CurrentLevel)",
+         "RTID(RocketEvent2@CurrentLevel)",
+         "RTID(RocketEvent0@CurrentLevel)",
+         "RTID(RocketEvent1@CurrentLevel)",
+         "RTID(RocketEvent2@CurrentLevel)",
+         "RTID(RocketEvent0@CurrentLevel)",
+         "RTID(RocketEvent1@CurrentLevel)",
+         "RTID(RocketEvent2@CurrentLevel)",
+         "RTID(RocketEvent3@CurrentLevel)",
+         "RTID(RocketEvent4@CurrentLevel)",
+         "RTID(RocketEvent5@CurrentLevel)",
+         "RTID(RocketEvent6@CurrentLevel)",
+         "RTID(RocketEvent7@CurrentLevel)"
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "schedule",
+     "delay": {
+      "min": 0,
+      "max": 0
+     },
+     "interval": {
+      "min": 1,
+      "max": 1.25
+     },
+     "repeat": {
+      "min": 5,
+      "max": 5
+     },
+     "events": [
+      {
+       "kind": "RandomEventsProps",
+       "data": {
+        "EventCount": {
+         "Min": 1,
+         "Max": 1
+        },
+        "Events": [
+         "RTID(RocketEvent0@CurrentLevel)",
+         "RTID(RocketEvent1@CurrentLevel)",
+         "RTID(RocketEvent2@CurrentLevel)",
+         "RTID(RocketEvent0@CurrentLevel)",
+         "RTID(RocketEvent1@CurrentLevel)",
+         "RTID(RocketEvent2@CurrentLevel)",
+         "RTID(RocketEvent0@CurrentLevel)",
+         "RTID(RocketEvent1@CurrentLevel)",
+         "RTID(RocketEvent2@CurrentLevel)",
+         "RTID(RocketEvent3@CurrentLevel)",
+         "RTID(RocketEvent4@CurrentLevel)",
+         "RTID(RocketEvent5@CurrentLevel)",
+         "RTID(RocketEvent6@CurrentLevel)",
+         "RTID(RocketEvent7@CurrentLevel)"
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "schedule",
+     "delay": {
+      "min": 1.5,
+      "max": 1.75
+     },
+     "interval": {
+      "min": 1.5,
+      "max": 1.75
+     },
+     "repeat": {
+      "min": 3,
+      "max": 3
+     },
+     "events": [
+      {
+       "kind": "RandomEventsProps",
+       "data": {
+        "EventCount": {
+         "Min": 1,
+         "Max": 1
+        },
+        "Events": [
+         "RTID(RocketEvent0@CurrentLevel)",
+         "RTID(RocketEvent1@CurrentLevel)",
+         "RTID(RocketEvent2@CurrentLevel)",
+         "RTID(RocketEvent0@CurrentLevel)",
+         "RTID(RocketEvent1@CurrentLevel)",
+         "RTID(RocketEvent2@CurrentLevel)",
+         "RTID(RocketEvent0@CurrentLevel)",
+         "RTID(RocketEvent1@CurrentLevel)",
+         "RTID(RocketEvent2@CurrentLevel)",
+         "RTID(RocketEvent3@CurrentLevel)",
+         "RTID(RocketEvent4@CurrentLevel)",
+         "RTID(RocketEvent5@CurrentLevel)",
+         "RTID(RocketEvent6@CurrentLevel)",
+         "RTID(RocketEvent7@CurrentLevel)"
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "ref",
+     "ref": "RTID(Wave8@CurrentLevel)"
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "schedule",
+     "delay": {
+      "min": 1.25,
+      "max": 1.5
+     },
+     "interval": {
+      "min": 1.25,
+      "max": 1.5
+     },
+     "repeat": {
+      "min": 3,
+      "max": 3
+     },
+     "events": [
+      {
+       "kind": "RandomEventsProps",
+       "data": {
+        "EventCount": {
+         "Min": 1,
+         "Max": 1
+        },
+        "Events": [
+         "RTID(RocketEvent0@CurrentLevel)",
+         "RTID(RocketEvent1@CurrentLevel)",
+         "RTID(RocketEvent2@CurrentLevel)",
+         "RTID(RocketEvent0@CurrentLevel)",
+         "RTID(RocketEvent1@CurrentLevel)",
+         "RTID(RocketEvent2@CurrentLevel)",
+         "RTID(RocketEvent0@CurrentLevel)",
+         "RTID(RocketEvent1@CurrentLevel)",
+         "RTID(RocketEvent2@CurrentLevel)",
+         "RTID(RocketEvent3@CurrentLevel)",
+         "RTID(RocketEvent4@CurrentLevel)",
+         "RTID(RocketEvent5@CurrentLevel)",
+         "RTID(RocketEvent6@CurrentLevel)",
+         "RTID(RocketEvent7@CurrentLevel)"
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "schedule",
+     "delay": {
+      "min": 1.25,
+      "max": 1.5
+     },
+     "interval": {
+      "min": 1.25,
+      "max": 1.5
+     },
+     "repeat": {
+      "min": 3,
+      "max": 3
+     },
+     "events": [
+      {
+       "kind": "RandomEventsProps",
+       "data": {
+        "EventCount": {
+         "Min": 1,
+         "Max": 1
+        },
+        "Events": [
+         "RTID(RocketEvent0@CurrentLevel)",
+         "RTID(RocketEvent1@CurrentLevel)",
+         "RTID(RocketEvent2@CurrentLevel)",
+         "RTID(RocketEvent0@CurrentLevel)",
+         "RTID(RocketEvent1@CurrentLevel)",
+         "RTID(RocketEvent2@CurrentLevel)",
+         "RTID(RocketEvent0@CurrentLevel)",
+         "RTID(RocketEvent1@CurrentLevel)",
+         "RTID(RocketEvent2@CurrentLevel)",
+         "RTID(RocketEvent3@CurrentLevel)",
+         "RTID(RocketEvent4@CurrentLevel)",
+         "RTID(RocketEvent5@CurrentLevel)",
+         "RTID(RocketEvent6@CurrentLevel)",
+         "RTID(RocketEvent7@CurrentLevel)"
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "schedule",
+     "delay": {
+      "min": 1.5,
+      "max": 1.75
+     },
+     "interval": {
+      "min": 1.5,
+      "max": 1.75
+     },
+     "repeat": {
+      "min": 5,
+      "max": 5
+     },
+     "events": [
+      {
+       "kind": "RandomEventsProps",
+       "data": {
+        "EventCount": {
+         "Min": 1,
+         "Max": 1
+        },
+        "Events": [
+         "RTID(RocketEvent0@CurrentLevel)",
+         "RTID(RocketEvent1@CurrentLevel)",
+         "RTID(RocketEvent2@CurrentLevel)",
+         "RTID(RocketEvent0@CurrentLevel)",
+         "RTID(RocketEvent1@CurrentLevel)",
+         "RTID(RocketEvent2@CurrentLevel)",
+         "RTID(RocketEvent0@CurrentLevel)",
+         "RTID(RocketEvent1@CurrentLevel)",
+         "RTID(RocketEvent2@CurrentLevel)",
+         "RTID(RocketEvent3@CurrentLevel)",
+         "RTID(RocketEvent4@CurrentLevel)",
+         "RTID(RocketEvent5@CurrentLevel)",
+         "RTID(RocketEvent6@CurrentLevel)",
+         "RTID(RocketEvent7@CurrentLevel)"
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "schedule",
+     "delay": {
+      "min": 0,
+      "max": 0
+     },
+     "interval": {
+      "min": 1,
+      "max": 1.25
+     },
+     "repeat": {
+      "min": 10,
+      "max": 10
+     },
+     "events": [
+      {
+       "kind": "RandomEventsProps",
+       "data": {
+        "EventCount": {
+         "Min": 1,
+         "Max": 1
+        },
+        "Events": [
+         "RTID(RocketEvent0@CurrentLevel)",
+         "RTID(RocketEvent1@CurrentLevel)",
+         "RTID(RocketEvent2@CurrentLevel)",
+         "RTID(RocketEvent0@CurrentLevel)",
+         "RTID(RocketEvent1@CurrentLevel)",
+         "RTID(RocketEvent2@CurrentLevel)",
+         "RTID(RocketEvent0@CurrentLevel)",
+         "RTID(RocketEvent1@CurrentLevel)",
+         "RTID(RocketEvent2@CurrentLevel)",
+         "RTID(RocketEvent3@CurrentLevel)",
+         "RTID(RocketEvent4@CurrentLevel)",
+         "RTID(RocketEvent5@CurrentLevel)",
+         "RTID(RocketEvent6@CurrentLevel)",
+         "RTID(RocketEvent7@CurrentLevel)"
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "wave_pacing": {
+  "suppress_flag": true,
+  "next_wave_health_min": 0.0025,
+  "next_wave_health_max": 0.005
+ },
+ "level_of_the_day_config": {
+  "flags": 2,
+  "waves_per_flag": 6,
+  "points": 100,
+  "point_increment": 0,
+  "plantfood": 3,
+  "pool": [
+   "kongfu_rocket_imp"
+  ]
+ },
+ "railcarts": {
+  "carts": [
+   {
+    "col": 3,
+    "row": 2
+   }
+  ],
+  "rails": [
+   {
+    "col": 3,
+    "row_start": 0,
+    "row_end": 4
+   }
+  ],
+  "type": "railcart_cowboy"
+ },
+ "minigames": [
+  {
+   "type": "bowling",
+   "bowling_foul_line": 26,
+   "suppress_objective_tip": true
+  }
+ ],
+ "objectives": [
+  {
+   "type": "survive_waves"
+  },
+  {
+   "type": "zombie_distance",
+   "distance": 4
+  }
+ ],
+ "initial": {
+  "plants": [
+   {
+    "col": 3,
+    "row": 2,
+    "type": "plantern",
+    "plantfood": true
+   },
+   {
+    "col": 0,
+    "row": 3,
+    "type": "glaciershroom"
+   },
+   {
+    "col": 0,
+    "row": 1,
+    "type": "glaciershroom"
+   },
+   {
+    "col": 4,
+    "row": 0,
+    "type": "sunbean"
+   },
+   {
+    "col": 4,
+    "row": 1,
+    "type": "sunbean"
+   },
+   {
+    "col": 4,
+    "row": 2,
+    "type": "sunbean"
+   },
+   {
+    "col": 4,
+    "row": 3,
+    "type": "sunbean"
+   },
+   {
+    "col": 4,
+    "row": 4,
+    "type": "sunbean"
+   }
+  ],
+  "grid_items": [
+   {
+    "type": "potholepuddle",
+    "row": 0,
+    "col": 1
+   },
+   {
+    "type": "potholepuddle",
+    "row": 0,
+    "col": 2
+   },
+   {
+    "type": "potholepuddle",
+    "row": 1,
+    "col": 1
+   },
+   {
+    "type": "potholepuddle",
+    "row": 1,
+    "col": 2
+   },
+   {
+    "type": "potholepuddle",
+    "row": 2,
+    "col": 1
+   },
+   {
+    "type": "potholepuddle",
+    "row": 2,
+    "col": 2
+   },
+   {
+    "type": "potholepuddle",
+    "row": 3,
+    "col": 1
+   },
+   {
+    "type": "potholepuddle",
+    "row": 3,
+    "col": 2
+   },
+   {
+    "type": "potholepuddle",
+    "row": 4,
+    "col": 1
+   },
+   {
+    "type": "potholepuddle",
+    "row": 4,
+    "col": 2
+   }
+  ]
+ },
+ "scripts": [
+  "LevelOfTheDayIntro"
+ ],
+ "extra": [
+  {
+   "objclass": "LevelSchedulerProps",
+   "aliases": [
+    "LevelScheduler"
+   ],
+   "objdata": {
+    "RewardWhenEnded": false,
+    "SuppressRewardState": false,
+    "TimeBeforeFirst": {
+     "Max": 1,
+     "Min": 1
+    },
+    "TimeBetween": {
+     "Max": 30,
+     "Min": 30
+    },
+    "Repeat": {
+     "Max": 1,
+     "Min": 1
+    },
+    "Events": [
+     "RTID(SpawnPlants0@CurrentLevel)"
+    ]
+   }
+  },
+  {
+   "objclass": "AutoCollectProperties",
+   "aliases": [
+    "TheAutoCollect"
+   ],
+   "objdata": {
+    "AutoCollectList": [
+     "sun"
+    ]
+   }
+  },
+  {
+   "objclass": "WaveSchedulerProps",
+   "aliases": [
+    "SpawnPlants0"
+   ],
+   "objdata": {
+    "RewardWhenEnded": false,
+    "SuppressRewardState": false,
+    "TimeBeforeFirst": {
+     "Max": 5,
+     "Min": 5
+    },
+    "TimeBetween": {
+     "Max": 5,
+     "Min": 5
+    },
+    "Repeat": {
+     "Max": 0,
+     "Min": 0
+    },
+    "Events": [
+     "RTID(SpawnPlantsEvent1@CurrentLevel)"
+    ]
+   }
+  },
+  {
+   "objclass": "SpawnPlantsWaveActionProps",
+   "aliases": [
+    "SpawnPlantsEvent0"
+   ],
+   "objdata": {
+    "Plants": [
+     {
+      "TypeName": "powerlily",
+      "SpawnAnim": "grow",
+      "AllowSpawnOnOtherPlants": false,
+      "RandomSpawnMatrix": [
+       "111111111",
+       "111111111",
+       "111111111",
+       "111111111",
+       "111111111"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "objclass": "SpawnPlantsWaveActionProps",
+   "aliases": [
+    "SpawnPlantsEvent1"
+   ],
+   "objdata": {
+    "Plants": [
+     {
+      "TypeName": "sunbean",
+      "GridX": 4,
+      "GridY": 0,
+      "SpawnAnim": "grow",
+      "AllowSpawnOnOtherPlants": false
+     },
+     {
+      "TypeName": "sunbean",
+      "GridX": 4,
+      "GridY": 1,
+      "SpawnAnim": "grow",
+      "AllowSpawnOnOtherPlants": false
+     },
+     {
+      "TypeName": "sunbean",
+      "GridX": 4,
+      "GridY": 2,
+      "SpawnAnim": "grow",
+      "AllowSpawnOnOtherPlants": false
+     },
+     {
+      "TypeName": "sunbean",
+      "GridX": 4,
+      "GridY": 3,
+      "SpawnAnim": "grow",
+      "AllowSpawnOnOtherPlants": false
+     },
+     {
+      "TypeName": "sunbean",
+      "GridX": 4,
+      "GridY": 4,
+      "SpawnAnim": "grow",
+      "AllowSpawnOnOtherPlants": false
+     }
+    ]
+   }
+  },
+  {
+   "objclass": "WaveSchedulerProps",
+   "aliases": [
+    "Wave13"
+   ],
+   "objdata": {
+    "RewardWhenEnded": false,
+    "SuppressRewardState": false,
+    "TimeBeforeFirst": {
+     "Max": 1.25,
+     "Min": 1
+    },
+    "TimeBetween": {
+     "Max": 1.25,
+     "Min": 1
+    },
+    "Repeat": {
+     "Max": 5,
+     "Min": 5
+    },
+    "Events": [
+     "RTID(RocketEvents@CurrentLevel)"
+    ]
+   }
+  },
+  {
+   "objclass": "WaveSchedulerProps",
+   "aliases": [
+    "Wave14"
+   ],
+   "objdata": {
+    "RewardWhenEnded": false,
+    "SuppressRewardState": false,
+    "TimeBeforeFirst": {
+     "Max": 1.25,
+     "Min": 1
+    },
+    "TimeBetween": {
+     "Max": 1.25,
+     "Min": 1
+    },
+    "Repeat": {
+     "Max": 5,
+     "Min": 5
+    },
+    "Events": [
+     "RTID(RocketEvents@CurrentLevel)"
+    ]
+   }
+  },
+  {
+   "objclass": "WaveSchedulerProps",
+   "aliases": [
+    "Wave15"
+   ],
+   "objdata": {
+    "RewardWhenEnded": false,
+    "SuppressRewardState": false,
+    "TimeBeforeFirst": {
+     "Max": 1.35,
+     "Min": 1.2
+    },
+    "TimeBetween": {
+     "Max": 1.35,
+     "Min": 1.2
+    },
+    "Repeat": {
+     "Max": 4,
+     "Min": 4
+    },
+    "Events": [
+     "RTID(RocketEvents@CurrentLevel)"
+    ]
+   }
+  },
+  {
+   "objclass": "SpawnZombiesJitteredWaveActionProps",
+   "aliases": [
+    "RocketEvent0"
+   ],
+   "objdata": {
+    "Zombies": [
+     {
+      "Row": "1",
+      "Type": "RTID(kongfu_rocket_imp@ZombieTypes)"
+     },
+     {
+      "Row": "3",
+      "Type": "RTID(kongfu_rocket_imp@ZombieTypes)"
+     }
+    ]
+   }
+  },
+  {
+   "objclass": "SpawnZombiesJitteredWaveActionProps",
+   "aliases": [
+    "RocketEvent1"
+   ],
+   "objdata": {
+    "Zombies": [
+     {
+      "Row": "2",
+      "Type": "RTID(kongfu_rocket_imp@ZombieTypes)"
+     },
+     {
+      "Row": "4",
+      "Type": "RTID(kongfu_rocket_imp@ZombieTypes)"
+     }
+    ]
+   }
+  },
+  {
+   "objclass": "SpawnZombiesJitteredWaveActionProps",
+   "aliases": [
+    "RocketEvent2"
+   ],
+   "objdata": {
+    "Zombies": [
+     {
+      "Row": "3",
+      "Type": "RTID(kongfu_rocket_imp@ZombieTypes)"
+     },
+     {
+      "Row": "5",
+      "Type": "RTID(kongfu_rocket_imp@ZombieTypes)"
+     }
+    ]
+   }
+  },
+  {
+   "objclass": "SpawnZombiesJitteredWaveActionProps",
+   "aliases": [
+    "RocketEvent3"
+   ],
+   "objdata": {
+    "Zombies": [
+     {
+      "Row": "1",
+      "Type": "RTID(kongfu_rocket_imp@ZombieTypes)"
+     }
+    ]
+   }
+  },
+  {
+   "objclass": "SpawnZombiesJitteredWaveActionProps",
+   "aliases": [
+    "RocketEvent4"
+   ],
+   "objdata": {
+    "Zombies": [
+     {
+      "Row": "2",
+      "Type": "RTID(kongfu_rocket_imp@ZombieTypes)"
+     }
+    ]
+   }
+  },
+  {
+   "objclass": "SpawnZombiesJitteredWaveActionProps",
+   "aliases": [
+    "RocketEvent5"
+   ],
+   "objdata": {
+    "Zombies": [
+     {
+      "Row": "3",
+      "Type": "RTID(kongfu_rocket_imp@ZombieTypes)"
+     }
+    ]
+   }
+  },
+  {
+   "objclass": "SpawnZombiesJitteredWaveActionProps",
+   "aliases": [
+    "RocketEvent6"
+   ],
+   "objdata": {
+    "Zombies": [
+     {
+      "Row": "4",
+      "Type": "RTID(kongfu_rocket_imp@ZombieTypes)"
+     }
+    ]
+   }
+  },
+  {
+   "objclass": "SpawnZombiesJitteredWaveActionProps",
+   "aliases": [
+    "RocketEvent7"
+   ],
+   "objdata": {
+    "Zombies": [
+     {
+      "Row": "5",
+      "Type": "RTID(kongfu_rocket_imp@ZombieTypes)"
+     }
+    ]
+   }
+  }
+ ]
+}

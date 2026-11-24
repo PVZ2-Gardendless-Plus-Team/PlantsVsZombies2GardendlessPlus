@@ -1,0 +1,76 @@
+{
+ "id": "eighties_dangerroom",
+ "name": "Eighties Danger Room",
+ "name_key": "[DANGER_ROOM_EIGHTIES_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_DANGER_ROOM]",
+ "number": 666,
+ "stage": "EightiesStage",
+ "minigames": [
+  {
+   "type": "endless",
+   "world_specific_properties": "EightiesDangerRoomProps",
+   "suppress_mini_game_music": true,
+   "level_designers": [
+    {
+     "starting_points": 100,
+     "base_point_increment_per_wave": 30,
+     "base_point_increment_per_level": 5,
+     "min_dynamic_zombie_type": 4,
+     "must_contain_zombie": [
+      "eighties"
+     ],
+     "zombie_pool": [
+      "eighties_armor1",
+      "eighties_armor2",
+      "eighties_punk",
+      "eighties_mc",
+      "eighties_glitter",
+      "eighties_imp",
+      "eighties_gargantuar",
+      "eighties_breakdancer",
+      "eighties_arcade",
+      "eighties_boombox"
+     ],
+     "type": "jittered_wave_generator"
+    },
+    {
+     "type": "shared",
+     "name": "JamDesigner"
+    }
+   ],
+   "initial_plants": [
+    "sunflower",
+    "peashooter",
+    "wallnut",
+    "phatbeet"
+   ],
+   "exclude_plants": [
+    "lilypad",
+    "tanglekelp",
+    "floawerPot",
+    "gravebuster",
+    "hotpotato",
+    "perfumeshroom"
+   ],
+   "minigame": false
+  }
+ ],
+ "seedbank": {
+  "mode": "chooser",
+  "selection": "chooser",
+  "always_chooser": true
+ },
+ "sun": {
+  "interval": 10.0
+ },
+ "mowers": true,
+ "extra": [
+  {
+   "objclass": "DangerRoomLevelIntroProperties",
+   "aliases": [
+    "DangerRoomIntro"
+   ],
+   "objdata": {}
+  }
+ ]
+}

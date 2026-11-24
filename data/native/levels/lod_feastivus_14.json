@@ -1,0 +1,241 @@
+{
+ "id": "lod_feastivus_14",
+ "name": "Modern 8",
+ "name_key": "[LOD_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_LOD]",
+ "author": "蔓逐I蝶舞",
+ "stage": "FeastivusNightStage",
+ "level_of_the_day": true,
+ "minigames": [
+  {
+   "type": "beghouled",
+   "match_counts_to_stage_advance": [
+    {
+     "match_count": 10,
+     "stage_number": 1
+    },
+    {
+     "match_count": 40,
+     "stage_number": 2
+    },
+    {
+     "match_count": 70,
+     "stage_number": 3
+    },
+    {
+     "match_count": 100,
+     "stage_number": 4
+    }
+   ],
+   "stages": [
+    {
+     "spawn_delay": 1.8,
+     "types": [
+      {
+       "zombie_type": "feastivus"
+      },
+      {
+       "zombie_type": "feastivus_imp"
+      },
+      {
+       "zombie_type": "holiday_imp"
+      },
+      {
+       "zombie_type": "feastivus_armor1"
+      }
+     ]
+    },
+    {
+     "spawn_delay": 1.8,
+     "types": [
+      {
+       "zombie_type": "feastivus"
+      },
+      {
+       "zombie_type": "feastivus_imp"
+      },
+      {
+       "zombie_type": "holiday_imp"
+      },
+      {
+       "zombie_type": "feastivus_swashbuckler"
+      },
+      {
+       "zombie_type": "feastivus_camel_onehump"
+      },
+      {
+       "zombie_type": "feastivus_armor1"
+      },
+      {
+       "zombie_type": "feastivus_armor2"
+      }
+     ]
+    },
+    {
+     "spawn_delay": 1.5,
+     "types": [
+      {
+       "zombie_type": "feastivus_imp"
+      },
+      {
+       "zombie_type": "holiday_imp"
+      },
+      {
+       "zombie_type": "feastivus_swashbuckler"
+      },
+      {
+       "zombie_type": "feastivus_camel_onehump"
+      },
+      {
+       "zombie_type": "feastivus_piano"
+      },
+      {
+       "zombie_type": "feastivus_armor1"
+      },
+      {
+       "zombie_type": "feastivus_armor2"
+      }
+     ]
+    },
+    {
+     "spawn_delay": 1.5,
+     "types": [
+      {
+       "zombie_type": "feastivus_poncho"
+      },
+      {
+       "zombie_type": "feastivus_imp"
+      },
+      {
+       "zombie_type": "holiday_imp"
+      },
+      {
+       "zombie_type": "feastivus_swashbuckler"
+      },
+      {
+       "zombie_type": "feastivus_camel_onehump"
+      },
+      {
+       "zombie_type": "feastivus_piano"
+      },
+      {
+       "zombie_type": "feastivus_armor1"
+      },
+      {
+       "zombie_type": "feastivus_armor2"
+      }
+     ]
+    },
+    {
+     "spawn_delay": 1.8,
+     "types": [
+      {
+       "zombie_type": "feastivus_poncho"
+      },
+      {
+       "zombie_type": "feastivus_gargantuar"
+      },
+      {
+       "zombie_type": "feastivus_imp"
+      },
+      {
+       "zombie_type": "holiday_gargantuar"
+      },
+      {
+       "zombie_type": "holiday_imp"
+      },
+      {
+       "zombie_type": "feastivus_swashbuckler"
+      },
+      {
+       "zombie_type": "feastivus_camel_onehump"
+      },
+      {
+       "zombie_type": "feastivus_piano"
+      },
+      {
+       "zombie_type": "feastivus_armor1"
+      },
+      {
+       "zombie_type": "feastivus_armor2"
+      }
+     ]
+    }
+   ],
+   "selection_method": "beghouled",
+   "preset_plant_list": [
+    {
+     "plant_type": "anthurium",
+     "level": -1
+    },
+    {
+     "plant_type": "lightningreed",
+     "level": -1
+    },
+    {
+     "plant_type": "lychee",
+     "level": -1
+    },
+    {
+     "plant_type": "endurian",
+     "level": -1
+    },
+    {
+     "plant_type": "fumeshroom",
+     "level": -1
+    },
+    {
+     "plant_type": "wintermelon",
+     "level": -1
+    },
+    {
+     "plant_type": "coldsnapdragon",
+     "level": -1
+    }
+   ],
+   "beghouled_upgrade_list": [
+    "threepeater",
+    "wintermelon"
+   ],
+   "matches_to_win": 150,
+   "initial_plants": [
+    "peashooter",
+    "cabbagepult",
+    "repeater",
+    "puffshroom",
+    "garlic"
+   ],
+   "upgrade_map": [
+    {
+     "base_plant": "peashooter",
+     "upgraded_plant": "snowpea"
+    },
+    {
+     "base_plant": "peashooter",
+     "upgraded_plant": "firepeashooter"
+    },
+    {
+     "base_plant": "cabbagepult",
+     "upgraded_plant": "akee"
+    },
+    {
+     "base_plant": "repeater",
+     "upgraded_plant": "gatling"
+    },
+    {
+     "base_plant": "repeater",
+     "upgraded_plant": "megagatling"
+    },
+    {
+     "base_plant": "puffshroom",
+     "upgraded_plant": "fumeshroom"
+    }
+   ]
+  }
+ ],
+ "scripts": [
+  "BeghouledArcade",
+  "BeghouledIntro",
+  "LevelOfTheDayIntro"
+ ]
+}

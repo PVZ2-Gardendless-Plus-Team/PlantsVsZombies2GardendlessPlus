@@ -1,0 +1,31 @@
+{
+ "id": "izombie_2",
+ "name": "I, Zombie Too",
+ "number": 2,
+ "stage": "ModernStage",
+ "custom": true,
+ "minigames": [
+  {
+   "type": "izombie",
+   "starting_sun": 150,
+   "place_column": 5,
+   "plant_columns": 4,
+   "zombies": [
+    "tutorial",
+    "tutorial_armor1",
+    "tutorial_armor2",
+    "tutorial_imp"
+   ],
+   "plant_pool": [
+    "sunflower",
+    "sunflower",
+    "peashooter",
+    "snowpea",
+    "wallnut",
+    "potatomine",
+    "repeater"
+   ]
+  }
+ ],
+ "waves": []
+}

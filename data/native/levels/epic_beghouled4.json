@@ -1,0 +1,186 @@
+{
+ "id": "epic_beghouled4",
+ "name": "Beghouled - Epic Quest 004",
+ "name_key": "[EPIC_QUEST_BEGHOULED_BLITZ_001_LEVEL_NAME]",
+ "description": "[PLAYERS_EPIC_QUEST_BEGHOULED_BLITZ_001]",
+ "number": 4,
+ "stage": "IceageStage",
+ "minigames": [
+  {
+   "type": "beghouled",
+   "match_counts_to_stage_advance": [
+    {
+     "match_count": 25,
+     "stage_number": 1
+    },
+    {
+     "match_count": 35,
+     "stage_number": 2
+    },
+    {
+     "match_count": 50,
+     "stage_number": 3
+    },
+    {
+     "match_count": 53,
+     "stage_number": 4
+    },
+    {
+     "match_count": 80,
+     "stage_number": 5
+    },
+    {
+     "match_count": 83,
+     "stage_number": 6
+    },
+    {
+     "match_count": 110,
+     "stage_number": 7
+    }
+   ],
+   "stages": [
+    {
+     "spawn_delay": 2,
+     "types": [
+      {
+       "zombie_type": "iceage"
+      },
+      {
+       "zombie_type": "iceage_armor1"
+      },
+      {
+       "zombie_type": "iceage_imp"
+      }
+     ]
+    },
+    {
+     "spawn_delay": 2,
+     "types": [
+      {
+       "zombie_type": "iceage_troglobite_1block"
+      }
+     ]
+    },
+    {
+     "spawn_delay": 1.8,
+     "types": [
+      {
+       "zombie_type": "iceage_weaselhoarder"
+      },
+      {
+       "zombie_type": "iceage"
+      },
+      {
+       "zombie_type": "iceage_armor1"
+      }
+     ]
+    },
+    {
+     "spawn_delay": 15,
+     "types": [
+      {
+       "zombie_type": "iceage_gargantuar"
+      }
+     ]
+    },
+    {
+     "spawn_delay": 1.8,
+     "types": [
+      {
+       "zombie_type": "iceage_dodo"
+      },
+      {
+       "zombie_type": "iceage_armor1"
+      }
+     ]
+    },
+    {
+     "spawn_delay": 15,
+     "types": [
+      {
+       "zombie_type": "iceage_gargantuar"
+      }
+     ]
+    },
+    {
+     "spawn_delay": 1.8,
+     "types": [
+      {
+       "zombie_type": "iceage_dodo"
+      },
+      {
+       "zombie_type": "iceage_imp"
+      },
+      {
+       "zombie_type": "iceage_armor2"
+      }
+     ]
+    },
+    {
+     "spawn_delay": 1.8,
+     "types": [
+      {
+       "zombie_type": "iceage_armor3"
+      }
+     ]
+    }
+   ],
+   "selection_method": "beghouled",
+   "preset_plant_list": [
+    {
+     "plant_type": "citron",
+     "level": -1
+    },
+    {
+     "plant_type": "starfruit",
+     "level": -1
+    },
+    {
+     "plant_type": "chardguard",
+     "level": -1
+    },
+    {
+     "plant_type": "fumeshroom",
+     "level": -1
+    }
+   ],
+   "beghouled_upgrade_list": [
+    "snapdragon"
+   ],
+   "matches_to_win": 125,
+   "initial_plants": [
+    "peashooter",
+    "xshot",
+    "bloomerang",
+    "wallnut",
+    "puffshroom"
+   ],
+   "upgrade_map": [
+    {
+     "base_plant": "peashooter",
+     "upgraded_plant": "citron"
+    },
+    {
+     "base_plant": "xshot",
+     "upgraded_plant": "starfruit"
+    },
+    {
+     "base_plant": "wallnut",
+     "upgraded_plant": "chardguard"
+    },
+    {
+     "base_plant": "puffshroom",
+     "upgraded_plant": "fumeshroom"
+    },
+    {
+     "base_plant": "fumeshroom",
+     "upgraded_plant": "snapdragon"
+    }
+   ]
+  }
+ ],
+ "scripts": [
+  "BeghouledArcade",
+  "BeghouledIntro"
+ ]
+}

@@ -1,0 +1,205 @@
+{
+ "id": "lod_5",
+ "name": "Modern 8",
+ "name_key": "[LOD_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_LOD]",
+ "author": "蔓逐I蝶舞",
+ "stage": "PirateStage",
+ "level_of_the_day": true,
+ "minigames": [
+  {
+   "type": "beghouled",
+   "match_counts_to_stage_advance": [
+    {
+     "match_count": 5,
+     "stage_number": 1
+    },
+    {
+     "match_count": 35,
+     "stage_number": 2
+    },
+    {
+     "match_count": 65,
+     "stage_number": 3
+    }
+   ],
+   "stages": [
+    {
+     "spawn_delay": 1.5,
+     "types": [
+      {
+       "zombie_type": "seagull"
+      },
+      {
+       "zombie_type": "pirate"
+      },
+      {
+       "zombie_type": "pirate_armor1"
+      }
+     ]
+    },
+    {
+     "spawn_delay": 1.5,
+     "types": [
+      {
+       "zombie_type": "pirate"
+      },
+      {
+       "zombie_type": "pirate_armor1"
+      },
+      {
+       "zombie_type": "pirate_armor2"
+      },
+      {
+       "zombie_type": "seagull"
+      },
+      {
+       "zombie_type": "swashbuckler"
+      },
+      {
+       "zombie_type": "pirate_captain"
+      }
+     ]
+    },
+    {
+     "spawn_delay": 1.5,
+     "types": [
+      {
+       "zombie_type": "pirate_armor1"
+      },
+      {
+       "zombie_type": "pirate_armor2"
+      },
+      {
+       "zombie_type": "seagull"
+      },
+      {
+       "zombie_type": "swashbuckler"
+      },
+      {
+       "zombie_type": "pirate_captain"
+      },
+      {
+       "zombie_type": "cannon"
+      },
+      {
+       "zombie_type": "barrelroller"
+      }
+     ]
+    },
+    {
+     "spawn_delay": 1.5,
+     "types": [
+      {
+       "zombie_type": "pirate_armor1"
+      },
+      {
+       "zombie_type": "pirate_armor2"
+      },
+      {
+       "zombie_type": "pirate_armor4"
+      },
+      {
+       "zombie_type": "seagull"
+      },
+      {
+       "zombie_type": "swashbuckler"
+      },
+      {
+       "zombie_type": "pirate_captain"
+      },
+      {
+       "zombie_type": "cannon"
+      },
+      {
+       "zombie_type": "barrelroller"
+      },
+      {
+       "zombie_type": "pelican"
+      },
+      {
+       "zombie_type": "pirate_gargantuar"
+      }
+     ]
+    }
+   ],
+   "selection_method": "beghouled",
+   "preset_plant_list": [
+    {
+     "plant_type": "anthurium",
+     "level": -1
+    },
+    {
+     "plant_type": "lightningreed",
+     "level": -1
+    },
+    {
+     "plant_type": "lychee",
+     "level": -1
+    },
+    {
+     "plant_type": "endurian",
+     "level": -1
+    },
+    {
+     "plant_type": "fumeshroom",
+     "level": -1
+    },
+    {
+     "plant_type": "wintermelon",
+     "level": -1
+    },
+    {
+     "plant_type": "coldsnapdragon",
+     "level": -1
+    }
+   ],
+   "beghouled_upgrade_list": [
+    "threepeater",
+    "wintermelon"
+   ],
+   "matches_to_win": 150,
+   "initial_plants": [
+    "cabbagepult",
+    "lightningreed",
+    "snapdragon",
+    "scaredyshroom",
+    "repeater"
+   ],
+   "upgrade_map": [
+    {
+     "base_plant": "cabbagepult",
+     "upgraded_plant": "kernelpult"
+    },
+    {
+     "base_plant": "snapdragon",
+     "upgraded_plant": "coldsnapdragon"
+    },
+    {
+     "base_plant": "lightningreed",
+     "upgraded_plant": "laser_bean"
+    },
+    {
+     "base_plant": "laser_bean",
+     "upgraded_plant": "electricpeashooter"
+    },
+    {
+     "base_plant": "repeater",
+     "upgraded_plant": "gatling"
+    },
+    {
+     "base_plant": "repeater",
+     "upgraded_plant": "megagatling"
+    }
+   ]
+  }
+ ],
+ "sun": {
+  "interval": 10.0
+ },
+ "scripts": [
+  "BeghouledArcade",
+  "BeghouledIntro",
+  "LevelOfTheDayIntro"
+ ]
+}

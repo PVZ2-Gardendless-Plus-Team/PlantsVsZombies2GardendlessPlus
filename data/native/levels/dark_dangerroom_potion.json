@@ -1,0 +1,99 @@
+{
+ "id": "dark_dangerroom_potion",
+ "name": "DarkAges Danger Room",
+ "name_key": "[DANGER_ROOM_DARKAGES_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_DANGER_ROOM]",
+ "number": 666,
+ "stage": "DarkStage",
+ "minigames": [
+  {
+   "type": "endless",
+   "world_specific_properties": "DarkDangerRoomProps",
+   "level_designers": [
+    {
+     "starting_points": 100,
+     "base_point_increment_per_wave": 30,
+     "base_point_increment_per_level": 5,
+     "min_dynamic_zombie_type": 4,
+     "must_contain_zombie": [
+      "dark"
+     ],
+     "zombie_pool": [
+      "dark_armor1",
+      "dark_armor2",
+      "dark_armor3",
+      "dark_armor4",
+      "dark_wizard",
+      "dark_wizard_veteran",
+      "dark_juggler",
+      "dark_king",
+      "dark_king_veteran",
+      "dark_imp_dragon",
+      "dark_gargantuar"
+     ],
+     "type": "jittered_wave_generator"
+    },
+    {
+     "type": "shared",
+     "name": "DarkGravestoneGeneratorPotion"
+    },
+    {
+     "type": "shared",
+     "name": "DarkWaveGravestoneEventGeneratorPotion"
+    },
+    {
+     "type": "shared",
+     "name": "DarkWaveNecromancyEventGenerator"
+    }
+   ],
+   "initial_plants": [
+    "sunshroom",
+    "puffshroom",
+    "fumeshroom",
+    "wallnut",
+    "magnetshroom"
+   ],
+   "exclude_plants": [
+    "lilypad",
+    "tanglekelp",
+    "empea",
+    "hotpotato",
+    "perfumeshroom"
+   ],
+   "minigame": false
+  }
+ ],
+ "potions": {
+  "initial": 10,
+  "max": 25,
+  "interval": {
+   "min": 10,
+   "max": 14
+  },
+  "types": [
+   "zombiepotion_speed",
+   "zombiepotion_toughness"
+  ]
+ },
+ "gravestones": {
+  "count": 0,
+  "col_start": -1,
+  "col_end": -1
+ },
+ "seedbank": {
+  "mode": "chooser",
+  "selection": "chooser",
+  "blacklist": [],
+  "always_chooser": true
+ },
+ "mowers": true,
+ "extra": [
+  {
+   "objclass": "DangerRoomLevelIntroProperties",
+   "aliases": [
+    "DangerRoomIntro"
+   ],
+   "objdata": {}
+  }
+ ]
+}

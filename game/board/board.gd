@@ -145,6 +145,13 @@ var _held_cart: GridObject = null
 ## a refusal or "". Level objectives such as a plant cap or a mold colony add
 ## themselves here, so the board does not need to know about them.
 var placement_checks: Array[Callable] = []
+## Minigame clicks on the lawn, each `func(row, col) -> bool` returning true
+## to consume the click: breaking a vase, swapping two matching plants. Asked
+## before anything else a click could do with an empty hand.
+var click_handlers: Array[Callable] = []
+## Asked first when a zombie reaches the house, as (zombie) -> bool; true
+## means the zombie was dealt with. An I, Zombie level's brains live here.
+var house_handlers: Array[Callable] = []
 
 ## Lanes the player may plant in, 0-based. Empty means every lane is open.
 ## Tutorial 1 uses this to confine the player to a single lane.
@@ -723,12 +730,12 @@ func placement_refusal(kind: StringName, id: StringName, row: int, col: int) -> 
 		return "out of bounds"
 	if not is_row_plantable(row):
 		return "lane is closed"
-	if kind == &"zombie":
-		return ""
 	for check in placement_checks:
 		var why: String = check.call(kind, id, row, col)
 		if why != "":
 			return why
+	if kind == &"zombie":
+		return ""
 
 	var plant_def := Data.plant(id)
 	var item := object_at(row, col)
@@ -1004,6 +1011,40 @@ func move_plant(from_row: int, from_col: int, to_row: int, to_col: int) -> bool:
 		_cell_provides.erase(Vector2i(from_col, from_row))
 		_cell_provides[Vector2i(to_col, to_row)] = provided
 	return true
+
+
+## Trades the plants on top of two cells, as a Beghouled swap does. Either
+## cell may be empty. Returns false if neither holds a plant.
+func swap_plants(row_a: int, col_a: int, row_b: int, col_b: int) -> bool:
+	var a := Vector2i(col_a, row_a)
+	var b := Vector2i(col_b, row_b)
+	var pa: Plant = _plants.get(a)
+	var pb: Plant = _plants.get(b)
+	if pa == null and pb == null:
+		return false
+	_plants.erase(a)
+	_plants.erase(b)
+	for pair in [[pa, b], [pb, a]]:
+		var p: Plant = pair[0]
+		var cell: Vector2i = pair[1]
+		if p == null or not is_instance_valid(p):
+			continue
+		_plants[cell] = p
+		p.row = cell.y
+		p.col = cell.x
+		p.position = grid_to_world(cell.y, cell.x)
+		p.z_index = lane_z(cell.y, LAYER_PLANT)
+	return true
+
+
+## Takes a plant off the lawn at once, with no death and no dirt: a matched
+## Beghouled plant, a ball's seed packet.
+func vanish_plant(row: int, col: int) -> void:
+	var p := plant_at(row, col)
+	if p == null:
+		return
+	remove_plant(row, col, p)
+	p.queue_free()
 
 
 ## Digs up the plant in a cell, freeing the square. Returns false if empty.
@@ -1456,6 +1497,9 @@ func quietest_row(candidates: Array) -> int:
 func _on_zombie_reached_house(who: Zombie) -> void:
 	zombie_reached_house.emit(who)
 
+	for handler in house_handlers:
+		if handler.call(who):
+			return
 	# The world gets first refusal: a lawn with its own threshold rule - house
 	# health instead of mowers, say - consumes the zombie here.
 	for c in lawn_components:
@@ -1581,6 +1625,8 @@ func spawn_projectile(id: StringName, row: int, from: Vector2, source: Node,
 	pr.board = self
 	pr.source = source
 	pr.damage = float(Data.projectile_damage(id))
+	if source is Character:
+		pr.damage *= source.damage_scale
 	pr.from_zombie = source is Zombie
 	pr.direction = direction if direction != 0 else (-1 if pr.from_zombie else 1)
 	pr.kind = id
@@ -1894,6 +1940,11 @@ func click(at: Vector2) -> void:
 		aim_at(world_to_row(at.y), world_to_col(at.x))
 		get_viewport().set_input_as_handled()
 		return
+	if selected_seed.is_empty() and not shovel_active:
+		for handler in click_handlers:
+			if handler.call(world_to_row(at.y), world_to_col(at.x)):
+				get_viewport().set_input_as_handled()
+				return
 	if selected_seed.is_empty() and not shovel_active and press_mower(at):
 		get_viewport().set_input_as_handled()
 		return

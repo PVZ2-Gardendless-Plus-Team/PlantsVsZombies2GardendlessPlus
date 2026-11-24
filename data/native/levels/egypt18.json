@@ -1,0 +1,352 @@
+{
+ "id": "egypt18",
+ "name": "Egypt Challenge LastStand A",
+ "name_key": "[EGYPT_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_EGYPT]",
+ "number": 18,
+ "stage": "EgyptNightStage",
+ "intro_narrative": "EGYPT_CHALLENGE_LASTSTAND_A",
+ "objectives": [
+  {
+   "type": "survive_waves",
+   "description": "[STARCHALLENGE_LASTSTAND_MINIGAME]"
+  }
+ ],
+ "gravestones": {
+  "count": 6,
+  "col_start": 2,
+  "col_end": 8
+ },
+ "seedbank": {
+  "mode": "chooser",
+  "selection": "chooser",
+  "blacklist": [
+   "sunflower",
+   "twinsunflower",
+   "iceburg",
+   "gravebuster",
+   "sunshroom",
+   "puffshroom",
+   "seashroom",
+   "sunbean",
+   "melonpult",
+   "toadstool",
+   "goldleaf",
+   "stallia",
+   "primalsunflower",
+   "goldbloom"
+  ],
+  "decks": {
+   "recommended": [
+    {
+     "name": "Persevere to the End",
+     "plants": [
+      "bloomerang",
+      "wallnut"
+     ]
+    },
+    {
+     "name": "Defend to Offend",
+     "plants": [
+      "iceweed",
+      "wallnut"
+     ]
+    },
+    {
+     "name": "Retirement",
+     "plants": [
+      "laser_bean",
+      "magnetshroom",
+      "wallnut"
+     ]
+    },
+    {
+     "name": "Meteor Shower",
+     "plants": [
+      "shootingstarfruit"
+     ]
+    }
+   ]
+  }
+ },
+ "minigames": [
+  {
+   "type": "last_stand",
+   "starting_plantfood": 2,
+   "starting_sun": 2000
+  }
+ ],
+ "waves": [
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "camel_twohump",
+       "row": 5
+      },
+      {
+       "type": "camel_manyhump",
+       "row": 3
+      },
+      {
+       "type": "camel_onehump",
+       "row": 1
+      }
+     ]
+    },
+    {
+     "kind": "storm",
+     "style": "sandstorm",
+     "zombies": [
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy"
+     ],
+     "col_start": 4,
+     "col_end": 8,
+     "row_start": 0,
+     "row_end": 4,
+     "group_size": 2,
+     "group_interval": 5
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "camel_twohump",
+     "row": 4
+    },
+    {
+     "type": "mummy_armor1"
+    },
+    {
+     "type": "camel_twohump",
+     "row": 2
+    },
+    {
+     "type": "camel_onehump"
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "camel_twohump",
+       "row": 5
+      },
+      {
+       "type": "camel_twohump",
+       "row": 4
+      },
+      {
+       "type": "camel_twohump",
+       "row": 2
+      },
+      {
+       "type": "camel_manyhump",
+       "row": 1
+      }
+     ]
+    },
+    {
+     "kind": "storm",
+     "style": "sandstorm",
+     "zombies": [
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy"
+     ],
+     "col_start": 4,
+     "col_end": 8,
+     "row_start": 0,
+     "row_end": 4,
+     "group_size": 2,
+     "group_interval": 5
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "camel_onehump",
+     "row": 1
+    },
+    {
+     "type": "camel_twohump",
+     "row": 3
+    },
+    {
+     "type": "mummy_armor2"
+    },
+    {
+     "type": "camel_onehump",
+     "row": 5
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "camel_twohump",
+       "row": 4
+      },
+      {
+       "type": "camel_onehump"
+      },
+      {
+       "type": "camel_twohump"
+      },
+      {
+       "type": "camel_manyhump",
+       "row": 2
+      }
+     ]
+    },
+    {
+     "kind": "storm",
+     "style": "sandstorm",
+     "zombies": [
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy"
+     ],
+     "col_start": 5,
+     "col_end": 8,
+     "row_start": 0,
+     "row_end": 4,
+     "group_size": 2,
+     "group_interval": 5
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "camel_onehump"
+    },
+    {
+     "type": "camel_twohump"
+    },
+    {
+     "type": "camel_manyhump"
+    },
+    {
+     "type": "camel_twohump"
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "mummy_armor1",
+       "row": 5
+      },
+      {
+       "type": "mummy_armor1",
+       "row": 3
+      },
+      {
+       "type": "mummy_armor1",
+       "row": 4
+      },
+      {
+       "type": "mummy_armor1",
+       "row": 2
+      },
+      {
+       "type": "mummy_armor1",
+       "row": 1
+      },
+      {
+       "type": "camel_manyhump"
+      },
+      {
+       "type": "mummy_armor2"
+      },
+      {
+       "type": "mummy_armor2"
+      },
+      {
+       "type": "mummy_armor1"
+      },
+      {
+       "type": "mummy_armor1"
+      }
+     ]
+    },
+    {
+     "kind": "storm",
+     "style": "sandstorm",
+     "zombies": [
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy"
+     ],
+     "col_start": 4,
+     "col_end": 8,
+     "row_start": 0,
+     "row_end": 4,
+     "group_size": 2,
+     "group_interval": 5
+    }
+   ]
+  }
+ ],
+ "wave_pacing": {
+  "flag_interval": 7,
+  "points": 800,
+  "point_increment": 50
+ },
+ "mowers": true
+}

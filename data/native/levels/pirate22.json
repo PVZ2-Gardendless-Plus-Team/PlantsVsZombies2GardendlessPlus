@@ -1,0 +1,433 @@
+{
+ "id": "pirate22",
+ "name": "Pirate Challenge Laststand C",
+ "name_key": "[PIRATE_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_PIRATE_SHIP]",
+ "number": 22,
+ "stage": "PirateStage",
+ "objectives": [
+  {
+   "type": "survive_waves",
+   "description": "[STARCHALLENGE_LASTSTAND_MINIGAME]"
+  }
+ ],
+ "seedbank": {
+  "mode": "chooser",
+  "selection": "chooser",
+  "blacklist": [
+   "sunflower",
+   "twinsunflower",
+   "iceburg",
+   "sunshroom",
+   "sunbean",
+   "puffshroom",
+   "seashroom",
+   "melonpult",
+   "toadstool",
+   "goldleaf",
+   "stallia",
+   "primalsunflower",
+   "goldbloom"
+  ],
+  "suggest": [
+   [
+    "bonkchoy",
+    "springbean"
+   ],
+   [
+    "wallnut"
+   ],
+   [
+    "spikeweed",
+    "potatomine"
+   ],
+   [
+    "kernelpult",
+    "cabbagepult"
+   ],
+   [
+    "primalpeashooter",
+    "repeater"
+   ],
+   [
+    "snapdragon",
+    "bloomerang"
+   ],
+   [
+    "sporeshroom",
+    "xshot"
+   ],
+   [
+    "electricblueberry",
+    "lightningreed"
+   ]
+  ],
+  "decks": {
+   "recommended": [
+    {
+     "name": "Sit By and Wait",
+     "plants": [
+      "spikeweed"
+     ]
+    },
+    {
+     "name": "Precise Strike",
+     "plants": [
+      "coconutcannon",
+      "snapdragon"
+     ]
+    },
+    {
+     "name": "Sit By and Win",
+     "plants": [
+      "lightningreed"
+     ]
+    },
+    {
+     "name": "Meteor Shower",
+     "plants": [
+      "shootingstarfruit"
+     ]
+    },
+    {
+     "name": "Future Technology",
+     "plants": [
+      "laser_bean"
+     ]
+    }
+   ]
+  }
+ },
+ "minigames": [
+  {
+   "type": "last_stand",
+   "starting_plantfood": 2,
+   "starting_sun": 2750
+  }
+ ],
+ "waves": [
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "cannon",
+     "row": 3
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "swashbuckler",
+     "row": 5
+    },
+    {
+     "type": "swashbuckler",
+     "row": 4
+    },
+    {
+     "type": "swashbuckler",
+     "row": 2
+    },
+    {
+     "type": "swashbuckler",
+     "row": 1
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "cannon",
+     "row": 2
+    },
+    {
+     "type": "cannon",
+     "row": 4
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "cannon",
+     "row": 1
+    },
+    {
+     "type": "cannon",
+     "row": 3
+    },
+    {
+     "type": "cannon",
+     "row": 5
+    },
+    {
+     "type": "swashbuckler",
+     "row": 2
+    },
+    {
+     "type": "swashbuckler",
+     "row": 5
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "cannon",
+     "row": 1
+    },
+    {
+     "type": "cannon",
+     "row": 2
+    },
+    {
+     "type": "cannon",
+     "row": 3
+    },
+    {
+     "type": "cannon",
+     "row": 4
+    },
+    {
+     "type": "cannon",
+     "row": 5
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "cannon",
+       "row": 1
+      },
+      {
+       "type": "cannon",
+       "row": 2
+      },
+      {
+       "type": "cannon",
+       "row": 3
+      },
+      {
+       "type": "cannon",
+       "row": 4
+      },
+      {
+       "type": "cannon",
+       "row": 5
+      }
+     ]
+    },
+    {
+     "kind": "raiding_party",
+     "type": "swashbuckler",
+     "count": 5,
+     "group_size": 1,
+     "group_interval": 1
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "cannon",
+     "row": 1
+    },
+    {
+     "type": "cannon",
+     "row": 2
+    },
+    {
+     "type": "cannon",
+     "row": 3
+    },
+    {
+     "type": "cannon",
+     "row": 4
+    },
+    {
+     "type": "cannon",
+     "row": 5
+    },
+    {
+     "type": "swashbuckler",
+     "row": 1
+    },
+    {
+     "type": "swashbuckler",
+     "row": 3
+    },
+    {
+     "type": "swashbuckler",
+     "row": 5
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "cannon",
+     "row": 1
+    },
+    {
+     "type": "cannon",
+     "row": 2
+    },
+    {
+     "type": "cannon",
+     "row": 3
+    },
+    {
+     "type": "cannon",
+     "row": 4
+    },
+    {
+     "type": "cannon",
+     "row": 5
+    },
+    {
+     "type": "swashbuckler",
+     "row": 2
+    },
+    {
+     "type": "swashbuckler",
+     "row": 4
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "cannon",
+     "row": 1
+    },
+    {
+     "type": "cannon",
+     "row": 2
+    },
+    {
+     "type": "cannon",
+     "row": 3
+    },
+    {
+     "type": "cannon",
+     "row": 4
+    },
+    {
+     "type": "cannon",
+     "row": 5
+    },
+    {
+     "type": "swashbuckler",
+     "row": 1
+    },
+    {
+     "type": "swashbuckler",
+     "row": 2
+    },
+    {
+     "type": "swashbuckler",
+     "row": 3
+    },
+    {
+     "type": "swashbuckler",
+     "row": 4
+    },
+    {
+     "type": "swashbuckler",
+     "row": 5
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "cannon",
+       "row": 1
+      },
+      {
+       "type": "cannon",
+       "row": 2
+      },
+      {
+       "type": "cannon",
+       "row": 3
+      },
+      {
+       "type": "cannon",
+       "row": 4
+      },
+      {
+       "type": "cannon",
+       "row": 5
+      },
+      {
+       "type": "cannon",
+       "row": 1
+      },
+      {
+       "type": "cannon",
+       "row": 2
+      },
+      {
+       "type": "cannon",
+       "row": 3
+      },
+      {
+       "type": "cannon",
+       "row": 4
+      },
+      {
+       "type": "cannon",
+       "row": 5
+      }
+     ]
+    },
+    {
+     "kind": "raiding_party",
+     "type": "swashbuckler",
+     "count": 15,
+     "group_size": 1,
+     "group_interval": 1
+    }
+   ]
+  }
+ ],
+ "wave_pacing": {
+  "flag_interval": 10,
+  "points": 600,
+  "point_increment": 50,
+  "suppress_flag": true
+ },
+ "mowers": true,
+ "scripts": [
+  "StandardIntro"
+ ],
+ "extra": [
+  {
+   "objclass": "PiratePlankProperties",
+   "aliases": [
+    "PiratePlanks"
+   ],
+   "objdata": {
+    "PlankRows": []
+   }
+  }
+ ]
+}
