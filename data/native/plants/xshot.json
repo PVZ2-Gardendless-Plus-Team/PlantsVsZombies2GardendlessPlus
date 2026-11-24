@@ -19,6 +19,9 @@
    "plantfood_count": 60
   }
  ],
+ "zen_garden": {
+  "place": "fly"
+ },
  "mint_boost": {
   "resistance": 1,
   "speed": 2,

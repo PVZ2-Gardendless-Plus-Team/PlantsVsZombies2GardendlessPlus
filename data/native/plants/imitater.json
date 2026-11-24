@@ -16,6 +16,9 @@
    "delay": 1.0
   }
  ],
+ "zen_garden": {
+  "weight": 1
+ },
  "extra": {
   "CannotBeSheepenedByWizard": true,
   "ImmuneToIceblock": true

@@ -1,0 +1,220 @@
+{
+ "//": "The Zen Garden's art, keyed like scenery.json. `zen:*` rigs are drawn in garden units (the garden node is scaled to the screen), so their scales are PVZGE's prefab scales: the need props are 0.5, pots, floaters, sprouts and the selection ring 1. `hud:zen_*` are the tool buttons, at the Buttons column's 0.4 x 1.125.",
+ "zen:pot": {
+  "bundle": "rigs_ZenGardenAnimate_WaterPour",
+  "armature": "FlowerPot",
+  "scale": 1.0,
+  "offset_x": 0,
+  "offset_y": 0,
+  "animations": {
+   "idle": "Idle",
+   "golden": "Idle_Golden",
+   "water": "Water",
+   "water_golden": "Water_Golden"
+  }
+ },
+ "zen:floater": {
+  "bundle": "rigs_BeachGardenGrouper",
+  "armature": "Floater",
+  "scale": 1.0,
+  "offset_x": 0,
+  "offset_y": 0,
+  "animations": {
+   "idle": "Idle",
+   "golden": "Idle_Golden",
+   "water": "Water",
+   "water_golden": "Water_Golden",
+   "sink": "Sink",
+   "sink_golden": "Sink_Golden"
+  }
+ },
+ "zen:sprout": {
+  "bundle": "rigs_ZenGardenAnimate_WaterPour",
+  "armature": "Sprout",
+  "scale": 1.0,
+  "offset_x": 0,
+  "offset_y": 0,
+  "animations": {
+   "idle": "Idle",
+   "grow": "Grow",
+   "birth": "Birth",
+   "empty": "Empty",
+   "none": "Null"
+  }
+ },
+ "zen:selection": {
+  "bundle": "rigs_ZenGardenAnimate_WaterPour",
+  "armature": "Selection",
+  "scale": 1.0,
+  "offset_x": 0,
+  "offset_y": 0,
+  "animations": {
+   "white": "White",
+   "yellow": "Yellow",
+   "none": "Null"
+  }
+ },
+ "zen:water": {
+  "bundle": "rigs_ZenGardenAnimate_WaterPour",
+  "armature": "WaterPour",
+  "scale": 0.5,
+  "offset_x": 0,
+  "offset_y": 0,
+  "animations": {
+   "idle": "Idle",
+   "play": "Play",
+   "play_gold": "Play_Gold"
+  }
+ },
+ "zen:fertilizer": {
+  "bundle": "rigs_ZenGardenAnimate_WaterPour",
+  "armature": "Fertilizer",
+  "scale": 0.5,
+  "offset_x": 0,
+  "offset_y": 0,
+  "animations": {
+   "idle": "Idle",
+   "play": "Play"
+  }
+ },
+ "zen:jukebox": {
+  "bundle": "rigs_ZenGardenAnimate_WaterPour",
+  "armature": "JukeBox",
+  "scale": 0.5,
+  "offset_x": 0,
+  "offset_y": 0,
+  "animations": {
+   "idle": "Idle",
+   "play": "Play"
+  }
+ },
+ "zen:pesticide": {
+  "bundle": "rigs_ZenGardenAnimate_WaterPour",
+  "armature": "Pesticide",
+  "scale": 0.5,
+  "offset_x": 0,
+  "offset_y": 0,
+  "animations": {
+   "idle": "Idle",
+   "play": "Play"
+  }
+ },
+ "zen:shade": {
+  "bundle": "rigs_Particles",
+  "armature": "shade",
+  "scale": 0.6,
+  "offset_x": 0,
+  "offset_y": 0,
+  "animations": {
+   "idle": "shade"
+  }
+ },
+ "zen:coin_silver": {
+  "bundle": "rigs_Collections",
+  "armature": "CoinSilver",
+  "scale": 0.35,
+  "offset_x": 0,
+  "offset_y": 0,
+  "animations": {
+   "idle": "Idle"
+  }
+ },
+ "zen:coin_gold": {
+  "bundle": "rigs_Collections",
+  "armature": "CoinGolden",
+  "scale": 0.35,
+  "offset_x": 0,
+  "offset_y": 0,
+  "animations": {
+   "idle": "Idle"
+  }
+ },
+ "zen:gem": {
+  "bundle": "rigs_Collections",
+  "armature": "Gem",
+  "scale": 0.35,
+  "offset_x": 0,
+  "offset_y": 0,
+  "animations": {
+   "idle": "Idle"
+  }
+ },
+ "hud:zen_next": {
+  "bundle": "rigs_Glove",
+  "armature": "nextButton",
+  "scale": 0.45,
+  "offset_x": 0,
+  "offset_y": 0,
+  "animations": {
+   "idle": "Idle",
+   "pointed": "Pointed",
+   "chosen": "Chosen"
+  }
+ },
+ "hud:zen_glove": {
+  "bundle": "rigs_Glove",
+  "armature": "GloveButton",
+  "scale": 0.45,
+  "offset_x": 0,
+  "offset_y": 0,
+  "animations": {
+   "idle": "Idle",
+   "pointed": "Pointed",
+   "chosen": "Chosen"
+  }
+ },
+ "hud:zen_cart": {
+  "bundle": "rigs_Glove",
+  "armature": "CartButton",
+  "scale": 0.45,
+  "offset_x": 0,
+  "offset_y": 0,
+  "animations": {
+   "idle": "Idle",
+   "pointed": "Pointed",
+   "chosen": "Chosen"
+  }
+ },
+ "hud:zen_shovel": {
+  "bundle": "rigs_Shovel",
+  "armature": "shovelButtonNormal",
+  "scale": 0.45,
+  "offset_x": 0,
+  "offset_y": 0,
+  "animations": {
+   "idle": "Idle",
+   "pointed": "Pointed",
+   "chosen": "Chosen"
+  }
+ },
+ "hud:zen_glove_cursor": {
+  "bundle": "rigs_Glove",
+  "armature": "gloveInHand",
+  "scale": 0.3375,
+  "offset_x": 0,
+  "offset_y": 0,
+  "animations": {
+   "idle": "ShovelInHand"
+  }
+ },
+ "hud:zen_cart_cursor": {
+  "bundle": "rigs_Glove",
+  "armature": "cartInHand",
+  "scale": 0.45,
+  "offset_x": 0,
+  "offset_y": 0,
+  "animations": {
+   "idle": "Idle"
+  }
+ },
+ "hud:zen_shovel_cursor": {
+  "bundle": "rigs_Shovel",
+  "armature": "shovelInHand",
+  "scale": 0.5625,
+  "offset_x": 0,
+  "offset_y": 0,
+  "animations": {
+   "idle": "ShovelInHand"
+  }
+ }
+}

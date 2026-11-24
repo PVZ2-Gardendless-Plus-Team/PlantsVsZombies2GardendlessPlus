@@ -23,6 +23,9 @@
  "tags": [
   "imitate_disallowed"
  ],
+ "zen_garden": {
+  "place": "fly"
+ },
  "mint_boost": {
   "resistance": 1,
   "speed": 1,

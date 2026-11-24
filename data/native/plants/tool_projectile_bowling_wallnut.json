@@ -15,6 +15,10 @@
    "projectile": "bowling_wallnut"
   }
  ],
+ "zen_garden": {
+  "place": "none",
+  "weight": 0
+ },
  "extra": {
   "ImmuneToIceblock": true,
   "SpeedX": 4,

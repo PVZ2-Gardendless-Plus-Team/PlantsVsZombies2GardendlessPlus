@@ -25,6 +25,9 @@
  "tags": [
   "aquatic"
  ],
+ "zen_garden": {
+  "place": "solid"
+ },
  "mint_boost": {
   "resistance": 1,
   "speed": 6,

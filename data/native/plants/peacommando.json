@@ -15,6 +15,9 @@
    "projectile": "pea_commando"
   }
  ],
+ "zen_garden": {
+  "place": "fly"
+ },
  "mint_boost": {
   "resistance": 1,
   "speed": 2,

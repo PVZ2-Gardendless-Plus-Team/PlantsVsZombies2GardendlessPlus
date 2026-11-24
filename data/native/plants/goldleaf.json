@@ -18,6 +18,9 @@
  "tags": [
   "sun_producer"
  ],
+ "zen_garden": {
+  "weight": 1
+ },
  "extra": {
   "SunCostIncrement": 25
  }

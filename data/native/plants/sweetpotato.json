@@ -18,6 +18,9 @@
    "plantfood_duration": 6
   }
  ],
+ "zen_garden": {
+  "place": "solid"
+ },
  "mint_boost": {
   "resistance": 3,
   "speed": 1,

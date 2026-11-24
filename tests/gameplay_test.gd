@@ -928,7 +928,7 @@ func _test_almanac() -> void:
 	await get_tree().process_frame
 	app.show_world_map(&"tutorial")
 	await get_tree().process_frame
-	var button := app.screen.find_child("Almanac", true, false) as Button
+	var button := app.screen.find_child("Almanac", true, false) as BaseButton
 	check("the map has an almanac button", button != null)
 	if button != null:
 		button.pressed.emit()
