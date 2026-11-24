@@ -294,16 +294,22 @@ func set_currency(kind: StringName, total: int) -> void:
 
 # --- sections -------------------------------------------------------------
 
-## A system's own corner of the progress file (the store's weekly plant, say),
-## for state that is not a currency, a collection or a plant. The copy is the
-## caller's; hand it back with `set_section` to keep changes.
+## A system's own corner of the progress file (the store's weekly plant, the
+## Zen Garden's plants and slots), for state that is not a currency, a
+## collection or a plant. The copy is the caller's; hand it back with
+## `set_section` to keep changes.
 func section(name: StringName) -> Dictionary:
-	var value: Variant = _progress.get("section_" + String(name), {})
+	var value: Variant = _progress.get("section_" + String(name), null)
+	if value == null:
+		# Saves made before the two section APIs were merged kept the Zen
+		# Garden under its bare name.
+		value = _progress.get(String(name), {})
 	return (value as Dictionary).duplicate(true) if value is Dictionary else {}
 
 
 func set_section(name: StringName, data: Dictionary) -> void:
 	_progress["section_" + String(name)] = data.duplicate(true)
+	_progress.erase(String(name))
 	_save_progress()
 
 
@@ -375,21 +381,6 @@ func add_plant_boost(plant_id: StringName, amount: int = 1) -> int:
 	_save_progress()
 	progress_changed.emit()
 	return total
-
-
-# --- sections ---------------------------------------------------------------
-
-## A screen's own saved state, kept whole under `name` in the progress file -
-## the Zen Garden's plants and slots. A copy: change it and hand it back to
-## `store_section`.
-func section(name: StringName) -> Dictionary:
-	var data: Variant = _progress.get(String(name), {})
-	return (data as Dictionary).duplicate(true) if data is Dictionary else {}
-
-
-func store_section(name: StringName, data: Dictionary) -> void:
-	_progress[String(name)] = data.duplicate(true)
-	_save_progress()
 
 
 func reset_progress() -> void:
