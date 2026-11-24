@@ -1,0 +1,715 @@
+{
+ "//": "The store, converted from PVZGE's StoreCommodityFeatures by tools/import_store.py. Pages are the tabs, in order. Items: type plant (param = plant id), upgrade (param = upgrade id) or currency (param = coins/gems/tickets/sprouts, `count` of it); `currency` and `price` are what it costs; `unlock_level` hides a plant until that level is won; `weekly_discount` marks a plant that can be plant of the week, sold at that fraction of its price that week. A pack's store.json replaces items with the same id, adds new ones and drops the ids it lists in `remove`.",
+ "pages": [
+  {
+   "id": "plants",
+   "title": {
+    "en": "Plants",
+    "zh": "植物"
+   },
+   "icon": "PlayerIcon"
+  },
+  {
+   "id": "upgrades",
+   "title": {
+    "en": "Upgrades",
+    "zh": "升级"
+   },
+   "icon": "MedalIcon"
+  },
+  {
+   "id": "coins",
+   "title": {
+    "en": "Coins",
+    "zh": "金币"
+   },
+   "icon": "CoinIcon"
+  },
+  {
+   "id": "gems",
+   "title": {
+    "en": "Gems",
+    "zh": "钻石"
+   },
+   "icon": "GemIcon"
+  },
+  {
+   "id": "zen",
+   "title": {
+    "en": "Zen Garden",
+    "zh": "禅境花园"
+   },
+   "icon": "ZenTag"
+  }
+ ],
+ "items": [
+  {
+   "page": "plants",
+   "id": "plant_imitater",
+   "type": "plant",
+   "param": "imitater",
+   "currency": "tickets",
+   "price": 1000,
+   "weekly_discount": 0.25
+  },
+  {
+   "page": "plants",
+   "id": "plant_darkmatterdragonfruit",
+   "type": "plant",
+   "param": "darkmatterdragonfruit",
+   "currency": "tickets",
+   "price": 1000,
+   "weekly_discount": 0.25
+  },
+  {
+   "page": "plants",
+   "id": "plant_snappea",
+   "type": "plant",
+   "param": "snappea",
+   "currency": "tickets",
+   "price": 1000,
+   "weekly_discount": 0.25
+  },
+  {
+   "page": "plants",
+   "id": "plant_witchhazel",
+   "type": "plant",
+   "param": "witchhazel",
+   "currency": "tickets",
+   "price": 1000,
+   "weekly_discount": 0.25
+  },
+  {
+   "page": "plants",
+   "id": "plant_turkeypult",
+   "type": "plant",
+   "param": "turkeypult",
+   "currency": "tickets",
+   "price": 1000,
+   "weekly_discount": 0.25
+  },
+  {
+   "page": "plants",
+   "id": "plant_shootingstarfruit",
+   "type": "plant",
+   "param": "shootingstarfruit",
+   "currency": "tickets",
+   "price": 1000,
+   "weekly_discount": 0.25
+  },
+  {
+   "page": "plants",
+   "id": "plant_slingpea",
+   "type": "plant",
+   "param": "slingpea",
+   "currency": "tickets",
+   "price": 1000,
+   "weekly_discount": 0.25
+  },
+  {
+   "page": "plants",
+   "id": "plant_iceweed",
+   "type": "plant",
+   "param": "iceweed",
+   "currency": "gems",
+   "price": 20,
+   "unlock_level": "egypt9"
+  },
+  {
+   "page": "plants",
+   "id": "plant_snowdrop",
+   "type": "plant",
+   "param": "snowdrop",
+   "currency": "gems",
+   "price": 40,
+   "unlock_level": "egypt28"
+  },
+  {
+   "page": "plants",
+   "id": "plant_jalapeno",
+   "type": "plant",
+   "param": "jalapeno",
+   "currency": "gems",
+   "price": 40
+  },
+  {
+   "page": "plants",
+   "id": "plant_chillypepper",
+   "type": "plant",
+   "param": "chillypepper",
+   "currency": "gems",
+   "price": 40
+  },
+  {
+   "page": "plants",
+   "id": "plant_starfruit",
+   "type": "plant",
+   "param": "starfruit",
+   "currency": "gems",
+   "price": 20,
+   "unlock_level": "future20"
+  },
+  {
+   "page": "plants",
+   "id": "plant_pinkstarfruit",
+   "type": "plant",
+   "param": "pinkstarfruit",
+   "currency": "gems",
+   "price": 30,
+   "unlock_level": "future28"
+  },
+  {
+   "page": "plants",
+   "id": "plant_asparagus",
+   "type": "plant",
+   "param": "asparagus",
+   "currency": "gems",
+   "price": 40,
+   "unlock_level": "sky14"
+  },
+  {
+   "page": "plants",
+   "id": "plant_hypnoshroom",
+   "type": "plant",
+   "param": "hypnoshroom",
+   "currency": "gems",
+   "price": 40,
+   "unlock_level": "dark8"
+  },
+  {
+   "page": "plants",
+   "id": "plant_peanut",
+   "type": "plant",
+   "param": "peanut",
+   "currency": "gems",
+   "price": 20,
+   "unlock_level": "dark18"
+  },
+  {
+   "page": "plants",
+   "id": "plant_homingthistle",
+   "type": "plant",
+   "param": "homingthistle",
+   "currency": "gems",
+   "price": 30,
+   "unlock_level": "beach31"
+  },
+  {
+   "page": "plants",
+   "id": "plant_chomper",
+   "type": "plant",
+   "param": "chomper",
+   "currency": "gems",
+   "price": 25,
+   "unlock_level": "beach14"
+  },
+  {
+   "page": "plants",
+   "id": "plant_hurrikale",
+   "type": "plant",
+   "param": "hurrikale",
+   "currency": "gems",
+   "price": 40,
+   "unlock_level": "iceage14"
+  },
+  {
+   "page": "plants",
+   "id": "plant_lavaguava",
+   "type": "plant",
+   "param": "lavaguava",
+   "currency": "gems",
+   "price": 40,
+   "unlock_level": "lostcity14"
+  },
+  {
+   "page": "plants",
+   "id": "plant_toadstool",
+   "type": "plant",
+   "param": "toadstool",
+   "currency": "gems",
+   "price": 30,
+   "unlock_level": "lostcity31"
+  },
+  {
+   "page": "plants",
+   "id": "plant_powerlily",
+   "type": "plant",
+   "param": "powerlily",
+   "currency": "gems",
+   "price": 40,
+   "unlock_level": "kongfu22"
+  },
+  {
+   "page": "plants",
+   "id": "plant_bamboozle",
+   "type": "plant",
+   "param": "bamboozle",
+   "currency": "gems",
+   "price": 40,
+   "unlock_level": "kongfu38"
+  },
+  {
+   "page": "plants",
+   "id": "plant_firepeashooter",
+   "type": "plant",
+   "param": "firepeashooter",
+   "currency": "gems",
+   "price": 30,
+   "unlock_level": "iceage29"
+  },
+  {
+   "page": "plants",
+   "id": "plant_cactus",
+   "type": "plant",
+   "param": "cactus",
+   "currency": "gems",
+   "price": 30,
+   "unlock_level": "eighties14"
+  },
+  {
+   "page": "plants",
+   "id": "plant_electricblueberry",
+   "type": "plant",
+   "param": "electricblueberry",
+   "currency": "gems",
+   "price": 40,
+   "unlock_level": "eighties31"
+  },
+  {
+   "page": "plants",
+   "id": "plant_caulipower",
+   "type": "plant",
+   "param": "caulipower",
+   "currency": "gems",
+   "price": 40,
+   "unlock_level": "eighties39"
+  },
+  {
+   "page": "plants",
+   "id": "plant_jackolantern",
+   "type": "plant",
+   "param": "jackolantern",
+   "currency": "gems",
+   "price": 40,
+   "unlock_level": "iceage34"
+  },
+  {
+   "page": "plants",
+   "id": "plant_grapeshot",
+   "type": "plant",
+   "param": "grapeshot",
+   "currency": "gems",
+   "price": 40,
+   "unlock_level": "dino3"
+  },
+  {
+   "page": "plants",
+   "id": "plant_escaperoot",
+   "type": "plant",
+   "param": "escaperoot",
+   "currency": "gems",
+   "price": 40,
+   "unlock_level": "modern31"
+  },
+  {
+   "page": "plants",
+   "id": "plant_explodeonut",
+   "type": "plant",
+   "param": "explodeonut",
+   "currency": "gems",
+   "price": 40,
+   "unlock_level": "dino39"
+  },
+  {
+   "page": "plants",
+   "id": "plant_applemortar",
+   "type": "plant",
+   "param": "applemortar",
+   "currency": "gems",
+   "price": 30,
+   "unlock_level": "future31"
+  },
+  {
+   "page": "plants",
+   "id": "plant_floawerPot",
+   "type": "plant",
+   "param": "floawerPot",
+   "currency": "gems",
+   "price": 40,
+   "unlock_level": "sky31"
+  },
+  {
+   "page": "plants",
+   "id": "plant_coldsnapdragon",
+   "type": "plant",
+   "param": "coldsnapdragon",
+   "currency": "gems",
+   "price": 40,
+   "unlock_level": "dino19"
+  },
+  {
+   "page": "plants",
+   "id": "plant_missiletoe",
+   "type": "plant",
+   "param": "missiletoe",
+   "currency": "gems",
+   "price": 40,
+   "unlock_level": "beach35"
+  },
+  {
+   "page": "plants",
+   "id": "plant_electricpeashooter",
+   "type": "plant",
+   "param": "electricpeashooter",
+   "currency": "gems",
+   "price": 35,
+   "unlock_level": "cowboy28"
+  },
+  {
+   "page": "plants",
+   "id": "plant_zoybeanpod",
+   "type": "plant",
+   "param": "zoybeanpod",
+   "currency": "gems",
+   "price": 40,
+   "unlock_level": "lostcity37"
+  },
+  {
+   "page": "plants",
+   "id": "plant_shrinkingviolet",
+   "type": "plant",
+   "param": "shrinkingviolet",
+   "currency": "gems",
+   "price": 35,
+   "unlock_level": "modern14"
+  },
+  {
+   "page": "plants",
+   "id": "plant_cranjelly",
+   "type": "plant",
+   "param": "cranjelly",
+   "currency": "gems",
+   "price": 50
+  },
+  {
+   "page": "upgrades",
+   "id": "upgrade_sunshovel_lvl3",
+   "type": "upgrade",
+   "param": "upgrade_sunshovel_lvl3",
+   "currency": "gems",
+   "price": 30
+  },
+  {
+   "page": "upgrades",
+   "id": "upgrade_8_slots",
+   "type": "upgrade",
+   "param": "upgrade_8_slots",
+   "currency": "gems",
+   "price": 30
+  },
+  {
+   "page": "upgrades",
+   "id": "upgrade_pf_slots_lvl2",
+   "type": "upgrade",
+   "param": "upgrade_pf_slots_lvl2",
+   "currency": "gems",
+   "price": 30
+  },
+  {
+   "page": "upgrades",
+   "id": "upgrade_starting_sun_lvl2",
+   "type": "upgrade",
+   "param": "upgrade_starting_sun_lvl2",
+   "currency": "gems",
+   "price": 30
+  },
+  {
+   "page": "upgrades",
+   "id": "upgrade_manual_mowers_2",
+   "type": "upgrade",
+   "param": "upgrade_manual_mowers_2",
+   "currency": "gems",
+   "price": 30
+  },
+  {
+   "page": "coins",
+   "id": "coins_5000",
+   "type": "currency",
+   "param": "coins",
+   "count": 5000,
+   "stack": 0,
+   "currency": "gems",
+   "price": 25,
+   "name": {
+    "en": "Coins, coins, coins!",
+    "zh": "钱钱钱！"
+   }
+  },
+  {
+   "page": "coins",
+   "id": "coins_10000",
+   "type": "currency",
+   "param": "coins",
+   "count": 10000,
+   "stack": 1,
+   "currency": "gems",
+   "price": 40,
+   "name": {
+    "en": "This'll buy me a thing or two!",
+    "zh": "拿这些钱能买些好东西了！"
+   }
+  },
+  {
+   "page": "coins",
+   "id": "coins_22000",
+   "type": "currency",
+   "param": "coins",
+   "count": 22000,
+   "stack": 2,
+   "currency": "gems",
+   "price": 72,
+   "name": {
+    "en": "More coins, more fun!",
+    "zh": "钱越多，越幸福！"
+   }
+  },
+  {
+   "page": "coins",
+   "id": "coins_50000",
+   "type": "currency",
+   "param": "coins",
+   "count": 50000,
+   "stack": 3,
+   "currency": "gems",
+   "price": 142,
+   "name": {
+    "en": "Coins galore!",
+    "zh": "一大笔钱！"
+   }
+  },
+  {
+   "page": "coins",
+   "id": "coins_150000",
+   "type": "currency",
+   "param": "coins",
+   "count": 150000,
+   "stack": 4,
+   "currency": "gems",
+   "price": 375,
+   "name": {
+    "en": "So many coins!",
+    "zh": "好多钱！"
+   }
+  },
+  {
+   "page": "coins",
+   "id": "coins_350000",
+   "type": "currency",
+   "param": "coins",
+   "count": 350000,
+   "stack": 5,
+   "currency": "gems",
+   "price": 777,
+   "name": {
+    "en": "So very many coins!",
+    "zh": "真的好多钱！"
+   }
+  },
+  {
+   "page": "coins",
+   "id": "coins_500000",
+   "type": "currency",
+   "param": "coins",
+   "count": 500000,
+   "stack": 6,
+   "currency": "gems",
+   "price": 1666,
+   "name": {
+    "en": "Guess you can't carry them!",
+    "zh": "猜你搬不动这些钱！"
+   }
+  },
+  {
+   "page": "coins",
+   "id": "coins_1000000",
+   "type": "currency",
+   "param": "coins",
+   "count": 1000000,
+   "stack": 7,
+   "currency": "gems",
+   "price": 1818,
+   "name": {
+    "en": "Fresh from the deep seas!",
+    "zh": "刚从海里打出来的！"
+   }
+  },
+  {
+   "page": "gems",
+   "id": "gems_20",
+   "type": "currency",
+   "param": "gems",
+   "count": 20,
+   "stack": 0,
+   "currency": "coins",
+   "price": 16000,
+   "name": {
+    "en": "Pocket full of Gems!",
+    "zh": "一大包钻石！"
+   }
+  },
+  {
+   "page": "gems",
+   "id": "gems_50",
+   "type": "currency",
+   "param": "gems",
+   "count": 50,
+   "stack": 1,
+   "currency": "coins",
+   "price": 37500,
+   "name": {
+    "en": "The sparkle and shine, so many Gems!",
+    "zh": "好多闪闪发光的钻石！"
+   }
+  },
+  {
+   "page": "gems",
+   "id": "gems_110",
+   "type": "currency",
+   "param": "gems",
+   "count": 110,
+   "stack": 2,
+   "currency": "coins",
+   "price": 77000,
+   "name": {
+    "en": "It's raining Gems, Gems, Gems!",
+    "zh": "下钻石雨了！"
+   }
+  },
+  {
+   "page": "gems",
+   "id": "gems_250",
+   "type": "currency",
+   "param": "gems",
+   "count": 250,
+   "stack": 3,
+   "currency": "coins",
+   "price": 162500,
+   "name": {
+    "en": "A treasure trove of Gems!",
+    "zh": "整麻袋的钻石！"
+   }
+  },
+  {
+   "page": "gems",
+   "id": "gems_700",
+   "type": "currency",
+   "param": "gems",
+   "count": 700,
+   "stack": 4,
+   "currency": "coins",
+   "price": 420000,
+   "name": {
+    "en": "Swimming in Gems!",
+    "zh": "在钻石里游泳！"
+   }
+  },
+  {
+   "page": "gems",
+   "id": "gems_1800",
+   "type": "currency",
+   "param": "gems",
+   "count": 1800,
+   "stack": 5,
+   "currency": "coins",
+   "price": 990000,
+   "name": {
+    "en": "Gem Pack 1800",
+    "zh": "钻石包 1800"
+   }
+  },
+  {
+   "page": "zen",
+   "id": "sprouts_1",
+   "type": "currency",
+   "param": "sprouts",
+   "count": 1,
+   "stack": 0,
+   "currency": "gems",
+   "price": 5,
+   "name": {
+    "en": "A Sprout",
+    "zh": "1 株幼苗"
+   }
+  },
+  {
+   "page": "zen",
+   "id": "sprouts_3",
+   "type": "currency",
+   "param": "sprouts",
+   "count": 3,
+   "stack": 1,
+   "currency": "gems",
+   "price": 15,
+   "name": {
+    "en": "3 Sprouts",
+    "zh": "3 株幼苗"
+   }
+  },
+  {
+   "page": "zen",
+   "id": "sprouts_15",
+   "type": "currency",
+   "param": "sprouts",
+   "count": 15,
+   "stack": 2,
+   "currency": "gems",
+   "price": 60,
+   "name": {
+    "en": "Our Future!",
+    "zh": "我们的未来！"
+   }
+  },
+  {
+   "page": "zen",
+   "id": "sprouts_20",
+   "type": "currency",
+   "param": "sprouts",
+   "count": 20,
+   "stack": 3,
+   "currency": "gems",
+   "price": 75,
+   "name": {
+    "en": "Sprout Bucket!",
+    "zh": "一大桶幼苗！"
+   }
+  },
+  {
+   "page": "zen",
+   "id": "sprouts_30",
+   "type": "currency",
+   "param": "sprouts",
+   "count": 30,
+   "stack": 4,
+   "currency": "gems",
+   "price": 90,
+   "name": {
+    "en": "Gems Beget Gems!",
+    "zh": "钱能生钱！"
+   }
+  },
+  {
+   "page": "zen",
+   "id": "sprouts_50",
+   "type": "currency",
+   "param": "sprouts",
+   "count": 50,
+   "stack": 5,
+   "currency": "gems",
+   "price": 120,
+   "name": {
+    "en": "Lives and Growths!",
+    "zh": "生生不息！"
+   }
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "//": "What zombies and plants drop, as PVZGE rolls it (Zombie.dropCoin/dropSprout). `drops` names each pickup: the currency it pays, how much, and its `collectable:<id>` art. `zombie` is rolled for every zombie that dies on its own side: `one_of` takes the first entry whose cumulative chance the roll falls under (PVZGE: 0.3% gem, then 0.7% gold, then 1.5% silver - 2.5% for anything), each entry of `also` rolls on its own. `feature` gates an entry on Saves.has_feature; `lod_only` keeps it to Lawn of Doom levels; `per_level` caps how many one level hands out. `mower` is what each unused lawn mower turns into when a level is won; `marigold` is a coin-producing plant's roll. A pack's loot.json replaces the keys it sets.",
+ "drops": {
+  "coin_silver": {"currency": "coins", "value": 10},
+  "coin_gold": {"currency": "coins", "value": 50},
+  "gem": {"currency": "gems", "value": 1},
+  "ticket": {"currency": "tickets", "value": 10},
+  "sprout": {"currency": "sprouts", "value": 1}
+ },
+ "zombie": {
+  "feature": "coins",
+  "one_of": [
+   {"drop": "gem", "chance": 0.003},
+   {"drop": "coin_gold", "chance": 0.007},
+   {"drop": "coin_silver", "chance": 0.015}
+  ],
+  "also": [
+   {"drop": "sprout", "chance": 0.003, "feature": "zengarden"},
+   {"drop": "ticket", "chance": 0.12, "lod_only": true, "per_level": 10}
+  ]
+ },
+ "mower": {"drop": "coin_gold", "feature": "coins"},
+ "marigold": {
+  "one_of": [
+   {"drop": "coin_gold", "chance": 0.1},
+   {"drop": "coin_silver", "chance": 0.9}
+  ]
+ }
+}

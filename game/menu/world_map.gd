@@ -9,6 +9,7 @@ extends Control
 
 signal level_chosen(level_id: StringName)
 signal back_requested
+signal store_requested
 signal almanac_requested
 ## The Zen Garden button, once the garden is open.
 signal zen_garden_requested
@@ -142,6 +143,13 @@ func _build() -> void:
 	back.name = "Back"
 	back.position = Vector2(45, 43) - back.custom_minimum_size * 0.5
 	add_child(back)
+	# storeButton, the next square along once egypt6 opens the store.
+	if Saves.has_feature(&"store"):
+		var store := MenuUI.icon_button("store", "store_pressed", Vector2(67, 67),
+				store_requested.emit, "Store")
+		store.name = "Store"
+		store.position = Vector2(123, 43) - store.custom_minimum_size * 0.5
+		add_child(store)
 	# almanacButton, the next square along, once a level has opened it.
 	if AlmanacData.is_unlocked():
 		var almanac := MenuUI.icon_button("AlmanacUp", "AlmanacDown",

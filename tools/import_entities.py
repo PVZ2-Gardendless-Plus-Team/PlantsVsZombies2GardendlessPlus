@@ -747,6 +747,9 @@ def split_plant(name, entry, prop_lookup, feature=None):
                 cfg[dst] = strip_rtid(merged[src])
                 used.add(src)
         used.update(triggers)
+        # PVZGE's MariGoldPlant is a coinProducer: it drops coins, not sun.
+        if ctype == "sun_producer" and name == "marigold":
+            cfg["loot_table"] = "marigold"
         components.append(cfg)
         break
 
