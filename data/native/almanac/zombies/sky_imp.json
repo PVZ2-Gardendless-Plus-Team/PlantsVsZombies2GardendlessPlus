@@ -1,0 +1,37 @@
+{
+ "id": "sky_imp",
+ "name": {
+  "en": "Imp Paratrooper",
+  "zh": "伞兵小鬼"
+ },
+ "world": "sky",
+ "description": {
+  "en": "Parachute directly into your ship and proceed rightwards.",
+  "zh": "空降直至你的飞船中，并向右行进。"
+ },
+ "chat": {
+  "en": "Imp Paratrooper is actually not good at landing and falls every time, but his greatest achievement is inventing the self-storing parachute.",
+  "zh": "伞兵小鬼的实际上不善于着陆，每次都摔一跤，但实际上他最伟大的成就是发明了可以自动收纳的降落伞。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.25,
+   "text": {
+    "en": "Average",
+    "zh": "一般"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.6,
+   "text": {
+    "en": "Hungry",
+    "zh": "饥渴"
+   }
+  }
+ ],
+ "variants": [
+  "sky_dropship"
+ ]
+}

@@ -1,0 +1,16 @@
+{
+ "id": "upgrade_starting_sun_lvl1",
+ "order": 0,
+ "type": "starting_sun",
+ "amount": 25,
+ "world": "egypt",
+ "sprite": "StartingSun",
+ "name": {
+  "en": "Sun Bonus",
+  "zh": "初始阳光奖励"
+ },
+ "description": {
+  "en": "Start with 25 extra sun in the bank!",
+  "zh": "关卡初始阳光值增加25！"
+ }
+}

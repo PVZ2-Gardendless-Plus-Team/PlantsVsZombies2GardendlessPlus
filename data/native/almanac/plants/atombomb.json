@@ -1,0 +1,94 @@
+{
+ "id": "atombomb",
+ "name": {
+  "en": "Atomic Bombegranate",
+  "zh": "原子石榴弹"
+ },
+ "brief": {
+  "en": "Explodes on contact, spawning Seedlings around",
+  "zh": "在僵尸触碰时爆炸，并在周围生成小种子"
+ },
+ "description": {
+  "en": "Atomic Bombegranates explode on contact, dealing heavy damages in a huge area and spawning Seedlings around them.",
+  "zh": "原子石榴弹在被僵尸接触时自爆，生成小种子。"
+ },
+ "chat": {
+  "en": "Remember: Never ever EVER split a fruit. Oh, hold on, actually fruits are ok, just never split an atom.",
+  "zh": "记住，永远不要，千万不要切开一个水果。哦，不对，切开水果没关系，不要切开原子就行。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Usage",
+    "zh": "用途"
+   },
+   "text": {
+    "en": "single use, on contact",
+    "zh": "一次性使用，接触到僵尸时触发"
+   }
+  },
+  {
+   "name": {
+    "en": "Range",
+    "zh": "范围"
+   },
+   "text": {
+    "en": "5x5",
+    "zh": "5x5 范围"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "starts with Seedling",
+    "zh": "种下时是小种子"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "Seedlings around will grow up into new bombegranates",
+    "zh": "在周围产生的小种子长大后会变成新的原子石榴弹"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "damage",
+   "value": 1800
+  },
+  {
+   "type": "area",
+   "text": {
+    "en": "5x5",
+    "zh": "5x5 范围"
+   }
+  },
+  {
+   "type": "special",
+   "text": {
+    "en": "Duplication",
+    "zh": "分身"
+   }
+  },
+  {
+   "type": "grow_time",
+   "value": 24
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

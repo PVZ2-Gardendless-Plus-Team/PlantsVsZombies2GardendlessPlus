@@ -231,6 +231,27 @@ func mark_plants_seen(plant_ids: Array) -> void:
 		_save_progress()
 
 
+# --- almanac ---------------------------------------------------------------
+
+## How far the player has got with a zombie's almanac page: AlmanacData.HIDDEN,
+## MET (seen on a lawn) or KNOWN (seen in a level they then won).
+func zombie_progress(page_id: StringName) -> int:
+	return int((_progress.get("zombies", {}) as Dictionary).get(String(page_id), 0))
+
+
+## Raises a page's progress, never lowers it. Writes only on a change, so it
+## is cheap to call for every zombie that spawns.
+func discover_zombie(page_id: StringName, progress: int) -> bool:
+	if page_id == &"" or zombie_progress(page_id) >= progress:
+		return false
+	var zombies: Dictionary = _progress.get("zombies", {})
+	zombies[String(page_id)] = progress
+	_progress["zombies"] = zombies
+	_save_progress()
+	progress_changed.emit()
+	return true
+
+
 # --- currency -------------------------------------------------------------
 
 ## How much of `kind` the player holds: &"coins", &"gems", &"worldkeys", or
@@ -304,6 +325,18 @@ func grant_item(collection: StringName, item_id: StringName) -> bool:
 
 func has_item(collection: StringName, item_id: StringName) -> bool:
 	return (_progress.get(String(collection), []) as Array).has(String(item_id))
+
+
+## Takes `item_id` back out of a collection. Returns false if it was not there.
+func revoke_item(collection: StringName, item_id: StringName) -> bool:
+	var items: Array = _progress.get(String(collection), [])
+	if not items.has(String(item_id)):
+		return false
+	items.erase(String(item_id))
+	_progress[String(collection)] = items
+	_save_progress()
+	progress_changed.emit()
+	return true
 
 
 func items(collection: StringName) -> Array:

@@ -1,0 +1,49 @@
+{
+ "id": "squash",
+ "name": {
+  "en": "Squash",
+  "zh": "倭瓜"
+ },
+ "brief": {
+  "en": "Squashes zombies",
+  "zh": "碾压一群僵尸"
+ },
+ "description": {
+  "en": "Squashes will smash the first zombie that gets close.",
+  "zh": "倭瓜会砸向第一只向他靠近的僵尸。"
+ },
+ "chat": {
+  "en": "Squash is actually his stage name. His birth name was Tracy.",
+  "zh": "“倭瓜”其实是他的艺名，他的本名其实是“特雷西”。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Area",
+    "zh": "范围"
+   },
+   "text": {
+    "en": "all zombies around target",
+    "zh": "目标身边的所有僵尸"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "Close",
+    "zh": "靠近时"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

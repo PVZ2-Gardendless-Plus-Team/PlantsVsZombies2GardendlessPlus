@@ -1,0 +1,46 @@
+{
+ "id": "lostcity_relichunter",
+ "name": {
+  "en": "Relic Hunter Zombie",
+  "zh": "遗迹猎宝僵尸"
+ },
+ "world": "lostcity",
+ "description": {
+  "en": "Swings in on a vine to lane midway onto your lawn.",
+  "zh": "抓着藤蔓进入草坪的中央。"
+ },
+ "chat": {
+  "en": "Relic Hunter has hunted some pretty impressive relic in his days. Idols, antiques, curios... he's hunted 'em all.",
+  "zh": "遗迹猎宝僵尸曾猎取过一些令人印象深刻的文物。偶像、古董、古玩……他都猎过。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "lands four to six tiles into your lawn",
+    "zh": "直接越过四到六格进入你的草坪"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.6,
+   "text": {
+    "en": "Dense",
+    "zh": "结实"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ]
+}

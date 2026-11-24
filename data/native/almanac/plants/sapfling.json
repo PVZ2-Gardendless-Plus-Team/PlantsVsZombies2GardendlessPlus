@@ -1,0 +1,62 @@
+{
+ "id": "sapfling",
+ "name": {
+  "en": "Sap-fling",
+  "zh": "树脂投手"
+ },
+ "brief": {
+  "en": "Creates zombies-slowing puddles of sap",
+  "zh": "投掷释放树脂的子弹，使僵尸减速"
+ },
+ "description": {
+  "en": "Sap-flings create zombie-slowing puddles of sap.",
+  "zh": "树脂投手会在地上留下能让僵尸减速的树脂。"
+ },
+ "chat": {
+  "en": "You've gotta see Sap-fling's throwing arm to believe it. He may be young, but everyone agrees ... the kid's got TALENT. Scouts from some of the biggest Pinecone Ball teams have been keeping a close eye on him. He could be headed to the majors. Oh sure, some knock him for his incredibly sticky spitball. But he only uses all-natural sap, so it's entirely legal.",
+  "zh": "不看树脂投手的手臂都不会觉得他年轻而且有不可否认的才华。一些知名的的 Pinecone Ball 球队的球探一直在密切关注他。他可能会去参加大满贯赛。哦，当然，有些人因为他老是丢出黏糊糊的球而觉得他在作弊。但他只使用全天然的汁液，所以这是完全合法的。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Damage Details",
+    "zh": "具体伤害"
+   },
+   "text": {
+    "en": "does no damage on impact, but create sap puddle",
+    "zh": "不会造成伤害，但是子弹爆裂时在地上留下树脂"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "slows zombies who walk in puddle",
+    "zh": "走在树脂上的僵尸会被减速"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "Lobbed",
+    "zh": "抛物线"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

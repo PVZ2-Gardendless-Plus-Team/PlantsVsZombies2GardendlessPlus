@@ -1,0 +1,34 @@
+{
+ "id": "kongfu_armor4",
+ "name": {
+  "en": "Kongfu Censer-headed Zombie",
+  "zh": "武斗香炉僵尸"
+ },
+ "world": "kongfu",
+ "description": {
+  "en": "Kongfu Censer-headed Zombie wears a hard-tiled censer, providing sturdy protection.",
+  "zh": "武斗香炉僵尸的头戴坚硬的瓦制香炉，得到了厚实的防护。"
+ },
+ "chat": {
+  "en": "In order to wear this censer, he specially learned the Bone-contraction Skill.",
+  "zh": "为了戴上这个香炉，他特意学会了缩骨功。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.8,
+   "text": {
+    "en": "Machined",
+    "zh": "重甲"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ]
+}

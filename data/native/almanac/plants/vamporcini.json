@@ -1,0 +1,52 @@
+{
+ "id": "vamporcini",
+ "name": {
+  "en": "Vamporcini",
+  "zh": "吸血牛肝菌"
+ },
+ "brief": {
+  "en": "Drains HP from surrounding zombies for a few seconds",
+  "zh": "一段时间内吸收周围僵尸的血量"
+ },
+ "description": {
+  "en": "Vamporcinis are defensive plants that drain HP from surrounding zombies for a few seconds.",
+  "zh": "吸血牛肝菌是从周围的僵尸吸取血量以强化自身的防御型植物。"
+ },
+ "chat": {
+  "en": "\"Zombie blood Is Like Pizza, in that even when It's Bad It's Good!\" - Vamporcini... probably",
+  "zh": "“僵尸的血就像是披萨，就算变质了也照样美味！”————吸血牛肝菌（……可能吧）"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "HP from zombies becomes her own toughness",
+    "zh": "从僵尸吸取的血量用于增加自身血量"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "3x3",
+    "zh": "3x3 范围"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

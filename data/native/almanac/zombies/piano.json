@@ -1,0 +1,59 @@
+{
+ "id": "piano",
+ "name": {
+  "en": "Pianist Zombie",
+  "zh": "奏琴僵尸"
+ },
+ "world": "cowboy",
+ "description": {
+  "en": "His rolling piano crushes plants while his music causes dancing zombies to switch lanes.",
+  "zh": "行进的钢琴会碾压植物，弹奏的音乐让跳舞的僵尸在行间穿梭。"
+ },
+ "chat": {
+  "en": "Pianist Zombie only knows two songs, and they're both groaners.",
+  "zh": "奏琴僵尸只知道两首曲子，而且歌词都是吼叫。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Damage",
+    "zh": "攻击"
+   },
+   "text": {
+    "en": "crushes plants with piano",
+    "zh": "用钢琴碾压植物"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "causes cowboy zombies to switch lanes",
+    "zh": "使牛仔僵尸们开始舞蹈换行"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.7,
+   "text": {
+    "en": "Hardened",
+    "zh": "强化"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.3,
+   "text": {
+    "en": "Creeper",
+    "zh": "静步"
+   }
+  }
+ ],
+ "variants": [
+  "feastivus_piano"
+ ]
+}

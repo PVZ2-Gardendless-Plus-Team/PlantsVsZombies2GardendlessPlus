@@ -1,0 +1,56 @@
+{
+ "id": "parsnip",
+ "name": {
+  "en": "Parsnip",
+  "zh": "防风草"
+ },
+ "brief": {
+  "en": "Snips zombies, than charges down lane",
+  "zh": "夹击僵尸，被啃咬时冲出并攻击前方所有僵尸"
+ },
+ "description": {
+  "en": "Parsnips snip at zombies, then charge down the lane at the last moment.",
+  "zh": "防风草掐伤身前的僵尸，被啃咬后冲出夹击本行前方的僵尸"
+ },
+ "chat": {
+  "en": "\"Snip!\" said Parsnip. \"Snip snip snip! If it wasn't for my scrapbook, my coupons, and snipping zombies to death, I just don't know what I'd do with myself!\"",
+  "zh": "“我掐！”防风草叫道。“我掐我掐我掐！要不是为了制作我的剪贴簿、抢我的优惠券，还有掐死僵尸，我都不知道拿自己怎么办！”"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "charges down the lane when defeated and snips zombies in front",
+    "zh": "被啃食完毕后沿着本行冲出，掐前方的僵尸"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 70
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "Close",
+    "zh": "靠近时"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

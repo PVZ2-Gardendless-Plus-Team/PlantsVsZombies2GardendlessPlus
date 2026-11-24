@@ -1,0 +1,60 @@
+{
+ "id": "west_bull",
+ "name": {
+  "en": "Machine Bull",
+  "zh": "机械牛"
+ },
+ "world": "cowboy",
+ "description": {
+  "en": "Can launch his zombie rider past most of your defenses.",
+  "zh": "能将身上的牛骑手投出并越过你的大部分防线。"
+ },
+ "chat": {
+  "en": "He's not an angry bull. He loves flowers, playing in the fields, sitting in the trees, and long walks across the pasture. He wants to settle down when he meets the right cow. Too bad he's a robot.",
+  "zh": "它不是一只暴躁的牛。它喜欢花草，喜欢在田野间玩耍，在树底下歇息，在草场间闲逛。他希望和合适的另一半成家。但很可惜他是个机器。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "launches a low flying imp rider over plants",
+    "zh": "低空丢出一只小鬼，越过植物"
+   }
+  },
+  {
+   "name": {
+    "en": "Weakness",
+    "zh": "弱点"
+   },
+   "text": {
+    "en": "Tall-nut blocks flying imp",
+    "zh": "高坚果能挡住飞出的小鬼"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.7,
+   "text": {
+    "en": "Hardened",
+    "zh": "强化"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.4,
+   "text": {
+    "en": "Stiff",
+    "zh": "迟钝"
+   }
+  }
+ ],
+ "display_offset": [
+  30,
+  0
+ ]
+}

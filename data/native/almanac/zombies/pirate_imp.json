@@ -1,0 +1,34 @@
+{
+ "id": "pirate_imp",
+ "name": {
+  "en": "Imp Pirate Zombie",
+  "zh": "海盗小鬼"
+ },
+ "world": "pirate",
+ "description": {
+  "en": "Prefers the compact space of barrels, both cannon and rolling.",
+  "zh": "喜欢木桶或炮膛这样的密闭空间。"
+ },
+ "chat": {
+  "en": "He was a bootblack, with a side trade as a pickpocket on the streets of London, but all hestole were oversized footwear. \"Time to steal some booty!\" was his catchphrase.",
+  "zh": "他是个擦鞋匠，在伦敦街头兼营扒手行当，但只偷超大尺码的鞋。“是时候搞点宝贝了！”是他的口头禅。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.25,
+   "text": {
+    "en": "Average",
+    "zh": "一般"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.6,
+   "text": {
+    "en": "Hungry",
+    "zh": "饥渴"
+   }
+  }
+ ]
+}

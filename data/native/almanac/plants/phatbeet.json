@@ -1,0 +1,44 @@
+{
+ "id": "phatbeet",
+ "name": {
+  "en": "Phat Beet",
+  "zh": "魔音甜菜"
+ },
+ "brief": {
+  "en": "Thumps out damage every few seconds",
+  "zh": "每隔一段时间发动音波攻击"
+ },
+ "description": {
+  "en": "Phat Beets thump out damage every second.",
+  "zh": "魔音甜菜每秒震出音波攻击僵尸。"
+ },
+ "chat": {
+  "en": "Phat Beet has been known to drop sick rhymes, dope grooves, and highly satisfactory jams, often within seconds of each other.",
+  "zh": "魔音甜菜拥有劲爆的节奏和韵律，还有令人沉迷的曲子，不过只有短短几秒。"
+ },
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 15
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "3x3",
+    "zh": "3x3 范围"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

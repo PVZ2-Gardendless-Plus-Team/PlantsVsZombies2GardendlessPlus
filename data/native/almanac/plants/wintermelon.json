@@ -1,0 +1,70 @@
+{
+ "id": "wintermelon",
+ "name": {
+  "en": "Winter Melon",
+  "zh": "冰西瓜"
+ },
+ "brief": {
+  "en": "Does heavy damage and slows groups of zombies",
+  "zh": "对一群僵尸造成大量伤害并减速"
+ },
+ "description": {
+  "en": "Winter Melons do heavy damage and slow to groups of zombies.",
+  "zh": "冰西瓜会对成群的僵尸造成大量伤害，并使他们减速。"
+ },
+ "chat": {
+  "en": "You may recognize Winter Melon's voice from such incredible documentaries as \"It's Cold Up Here\",\"Ice Bingo\", and \"Surfin' Swedes\".",
+  "zh": "你可以在一些有名的文献里看读出冰西瓜的写作腔调，比如《高处不胜寒》《冰果》以及《冲浪的甘蓝》。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Firing Speed",
+    "zh": "攻速"
+   },
+   "text": {
+    "en": "1/2x",
+    "zh": "豌豆射手的1/2"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 80
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "Lobbed",
+    "zh": "抛物线"
+   }
+  },
+  {
+   "type": "area",
+   "text": {
+    "en": "3x3",
+    "zh": "3x3 范围"
+   }
+  },
+  {
+   "type": "special",
+   "text": {
+    "en": "Chill",
+    "zh": "冷冻"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

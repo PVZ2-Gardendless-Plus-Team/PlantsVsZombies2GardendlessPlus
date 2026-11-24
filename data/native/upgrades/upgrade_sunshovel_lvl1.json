@@ -1,0 +1,16 @@
+{
+ "id": "upgrade_sunshovel_lvl1",
+ "order": 6,
+ "type": "sunshovel",
+ "amount": 0.25,
+ "world": "pirate",
+ "sprite": "SunShovel",
+ "name": {
+  "en": "Shovel Bonus",
+  "zh": "阳光铲奖励"
+ },
+ "description": {
+  "en": "Get an additional 25% of sun cost back when shoveling up plants!",
+  "zh": "铲除植物时掉落的阳光增加了其花费的 25% ！"
+ }
+}

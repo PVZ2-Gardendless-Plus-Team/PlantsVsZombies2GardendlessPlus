@@ -1,0 +1,59 @@
+{
+ "id": "hollyknight",
+ "name": {
+  "en": "Holly Knight",
+  "zh": "冬青骑士"
+ },
+ "brief": {
+  "en": "Damages attacking zombies, tap to launch barriers",
+  "zh": "伤害身边的僵尸，点击发射障碍"
+ },
+ "description": {
+  "en": "Holly Knight deals damage to zombies attacking him, and can launch 3 prickly barrier leaves to knock back and damage zombies.",
+  "zh": "冬青骑士对身边的僵尸造成伤害，还能发射三株带刺的障碍来击退并伤害僵尸。"
+ },
+ "chat": {
+  "en": "Holly Knight would like to advise folks not to eat his berries. \"It's rude to eat somebody's berries without asking,\" he says. \"In addition, they are highly toxic.\"",
+  "zh": "冬青骑士会告诫大伙不要吃他身上的莓果。“不提前打声招呼就吃别人身上的莓果是很无礼的，”他说。“另外，他们是剧毒的。”"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Usage",
+    "zh": "用途"
+   },
+   "text": {
+    "en": "tap to arm, tap on target tile to fire",
+    "zh": "点击瞄准，再点击目标格子发射"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "projectiles become prickly barriers when hitting the floor",
+    "zh": "子弹砸中地面时生成带刺的障碍"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 20
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

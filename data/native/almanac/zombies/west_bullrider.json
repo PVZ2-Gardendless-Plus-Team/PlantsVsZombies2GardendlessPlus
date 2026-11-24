@@ -1,0 +1,34 @@
+{
+ "id": "west_bullrider",
+ "name": {
+  "en": "Zombie Bull Rider",
+  "zh": "牛骑手"
+ },
+ "world": "cowboy",
+ "description": {
+  "en": "Gets launched past all but the tallest plants, then proceeds on foot.",
+  "zh": "被丢出时越过所有比他矮的植物，之后步行前进。"
+ },
+ "chat": {
+  "en": "Had dreams of becoming a rodeo clown but found the clown make-up to just be too creepy.",
+  "zh": "梦想过成为一个牛仔小丑，但不由得发觉小丑的化妆太过令人毛骨悚然。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.25,
+   "text": {
+    "en": "Average",
+    "zh": "一般"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.6,
+   "text": {
+    "en": "Hungry",
+    "zh": "饥渴"
+   }
+  }
+ ]
+}

@@ -1,0 +1,63 @@
+{
+ "id": "snowdrop",
+ "name": {
+  "en": "Snowdrop",
+  "zh": "雪滴花"
+ },
+ "brief": {
+  "en": "Throw snow balls and icicles at zombies",
+  "zh": "向僵尸投掷雪球和冰锥"
+ },
+ "description": {
+  "en": "Snowdrops throw chilly snow balls and freezy icicles at zombies.",
+  "zh": "雪滴花向僵尸投掷寒冷的雪球和结冰的冰锥。"
+ },
+ "chat": {
+  "en": "Zombies are always looking at her with a frozen expression.",
+  "zh": "僵尸看到她时心都凉了半截。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "icicles freezes zombies",
+    "zh": "冰锥使僵尸冻结"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 30
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "Lobbed",
+    "zh": "抛物线"
+   }
+  },
+  {
+   "type": "special",
+   "text": {
+    "en": "Freeze",
+    "zh": "冻结"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

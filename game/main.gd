@@ -154,6 +154,8 @@ func load_level(level_id: StringName) -> void:
 	elif runner.needs_seed_choice():
 		_open_chooser()
 
+	_plant_food_bar.set_slots(board.max_plant_food)
+	_plant_food_bar.set_count(board.plant_food)
 	_set_status("")
 	_wave_label.text = ""
 	_sun_counter.set_total(board.sun, true)
@@ -167,8 +169,8 @@ func load_level(level_id: StringName) -> void:
 
 func _level_title(level: Dictionary) -> String:
 	# The world's own name, which a pack can rename without touching levels.
-	var world := runner.world_name()
-	var title := str(level.get("comment", level.get("name", _current_level)))
+	var world := tr(runner.world_name())
+	var title := tr(str(level.get("comment", level.get("name", _current_level))))
 	if world != "":
 		title = "%s - %s" % [world, title]
 	if _campaign != null:
@@ -637,9 +639,9 @@ func _toggle_fast_forward() -> void:
 func _refresh_mode_label() -> void:
 	var bits := []
 	if board.plant_food_active:
-		bits.append("Plant Food")
+		bits.append(tr("Plant Food"))
 	if board.shovel_active:
-		bits.append("Shovel")
+		bits.append(tr("Shovel"))
 	if _fast_forward:
 		bits.append("x%.1f" % fast_forward_scale)
 	_mode_label.text = "  ".join(bits)
@@ -649,6 +651,10 @@ func _refresh_mode_label() -> void:
 ## Selects a seed slot, or clears the selection when `slot` is out of range.
 ## Selecting the slot that is already active clears it, so a hotkey toggles.
 func _select_seed(slot: int) -> void:
+	# With Instant Recharge, plant food dropped on a packet that is still
+	# recharging makes it ready, as PVZGE's clearCool does.
+	if board.plant_food_active and refresh_packet(slot):
+		return
 	# As in PVZGE's tryChangingIndex, a packet that is recharging or that the
 	# bank cannot pay for is not picked up at all. Short of sun, the counter
 	# flashes too.
@@ -666,6 +672,23 @@ func _select_seed(slot: int) -> void:
 		Audio.play(&"ui.seed.select")
 		board.selected_seed = _seeds[slot].duplicate()
 	_refresh_seed_buttons()
+
+
+## Spends a plant food to finish a packet's recharge, with the Instant
+## Recharge upgrade. Returns false, spending nothing, when it cannot.
+func refresh_packet(slot: int) -> bool:
+	if not Upgrades.has_instant_recharge() or seed_bank == null:
+		return false
+	var packet := seed_bank.packet(slot)
+	if packet == null or packet.is_recharged() or board.plant_food <= 0:
+		return false
+	seed_bank.finish_recharge(slot)
+	board.spend_plant_food()
+	board.plant_food_active = false
+	Audio.play(&"plant.food")
+	_refresh_seed_buttons()
+	_refresh_mode_label()
+	return true
 
 
 func _on_sun_changed(total: int) -> void:
@@ -721,11 +744,11 @@ func _on_objective_failed(objective: Objective) -> void:
 		return
 	var text := objective.describe()
 	_on_lost()
-	_set_status("Objective failed: %s" % (text if text != "" else objective.name))
+	_set_status(tr("Objective failed: %s") % (text if text != "" else objective.name))
 
 
 func _on_wave_started(index: int, total: int) -> void:
-	_wave_label.text = "Wave %d / %d" % [index, total]
+	_wave_label.text = tr("Wave %d / %d") % [index, total]
 	# PVZGE warns on every flag wave and once more on the last one.
 	if index == total and total > 1:
 		_banner.final_wave()
@@ -762,6 +785,8 @@ func _on_won() -> void:
 	if first_win:
 		for feature in (runner.level.get("unlocks_features", []) as Array):
 			Saves.unlock_feature(StringName(feature))
+	for page in board.met_zombies:
+		Saves.discover_zombie(page, AlmanacData.KNOWN)
 	var reward := LevelReward.for_level(runner.level, first_win)
 	# Granted as it drops, so leaving before picking it up cannot lose it.
 	reward.grant()
@@ -816,8 +841,8 @@ func _on_reward_collected(drop: Collectable) -> void:
 func _finish_level(delay: float) -> void:
 	if _campaign == null or _campaign.is_last(_current_level) \
 			or _campaign.index_of(_current_level) < 0:
-		_set_status(_campaign.completion_message if _campaign != null
-				else "Level complete!")
+		_set_status(tr(_campaign.completion_message) if _campaign != null
+				else tr("Level complete!"))
 		if return_to_map:
 			_leave_after(delay)
 		return

@@ -1,0 +1,38 @@
+{
+ "id": "kongfu_flag_veteran",
+ "name": {
+  "en": "Kongfu Rally Zombie",
+  "zh": "武斗大动员僵尸"
+ },
+ "world": "kongfu",
+ "description": {
+  "en": "Kongfu Rally Zombie and his flag marks the arrival of a large crew of skilled zombies.",
+  "zh": "武斗大动员僵尸和他的旗帜代表着超大群身怀绝技僵尸的来临。"
+ },
+ "chat": {
+  "en": "Kongfu Rally Zombie can even use his flag as a weapon.",
+  "zh": "武斗大动员僵尸甚至能用他的旗帜作为武器。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.5,
+   "text": {
+    "en": "Protected",
+    "zh": "加强"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.85,
+   "text": {
+    "en": "Speedy",
+    "zh": "快速"
+   }
+  }
+ ],
+ "display_offset": [
+  30,
+  0
+ ]
+}

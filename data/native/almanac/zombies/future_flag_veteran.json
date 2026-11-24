@@ -1,0 +1,38 @@
+{
+ "id": "future_flag_veteran",
+ "name": {
+  "en": "Robo-Rally Zombie",
+  "zh": "未来大动员僵尸"
+ },
+ "world": "future",
+ "description": {
+  "en": "Robo-Rally Zombie and his flag marks the arrival of an above-average number of zombies.",
+  "zh": "未来大动员僵尸和他的旗帜标志着数量非常的一批僵尸的到来。"
+ },
+ "chat": {
+  "en": "If you look carefully, you'll notice that Robo-Rally Zombie's flag is a sophisticated piece of hovertech combined with a stick.",
+  "zh": "如果你仔细观察，就会发现未来大动员僵尸的旗帜是一个精密的悬浮技术与一根棍子的结合体。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.5,
+   "text": {
+    "en": "Protected",
+    "zh": "加强"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.85,
+   "text": {
+    "en": "Speedy",
+    "zh": "快速"
+   }
+  }
+ ],
+ "display_offset": [
+  30,
+  0
+ ]
+}

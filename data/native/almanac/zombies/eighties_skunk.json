@@ -1,0 +1,46 @@
+{
+ "id": "eighties_skunk",
+ "name": {
+  "en": "Zombie Skunk",
+  "zh": "僵尸臭鼬"
+ },
+ "world": "eighties",
+ "description": {
+  "en": "Released to protect their owner — as it should be.",
+  "zh": "被丢出保护自己的主人，本应如此。"
+ },
+ "chat": {
+  "en": "A weasel with dyed fur, carrying stink bombs, which make it way more reliable than a real skunk. Skunks are way to rare!",
+  "zh": "被染发的黄鼠狼，携带臭气弹，这样可比真的臭鼬可靠多了。谁叫臭鼬那么稀有呢！"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "releases foul stenches and stuns nearby plants",
+    "zh": "释放难闻的臭味，眩晕接触到的植物"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.2,
+   "text": {
+    "en": "Fragile",
+    "zh": "脆弱"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 1,
+   "text": {
+    "en": "Flighty",
+    "zh": "飞速"
+   }
+  }
+ ]
+}

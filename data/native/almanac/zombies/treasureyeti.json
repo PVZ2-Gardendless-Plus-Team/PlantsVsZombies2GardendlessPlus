@@ -1,0 +1,60 @@
+{
+ "id": "treasureyeti",
+ "name": {
+  "en": "Treasure Yeti",
+  "zh": "宝藏雪人"
+ },
+ "world": "market",
+ "description": {
+  "en": "A rare and curious creature, he always packs with treasures.",
+  "zh": "罕见且稀奇的生物，经常带着一些宝物。"
+ },
+ "chat": {
+  "en": "The rare and wondrous Yeti carries his lunch box up and down Mount Brainer to his isolated mountain lodge.",
+  "zh": "罕见而奇妙的雪人提着午餐盒，在脑山上下往返，前往他那与世隔绝的山间小屋。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "runs away after a short while",
+    "zh": "进场一段时间后就撤离"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "carries treasure",
+    "zh": "携带宝物"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.7,
+   "text": {
+    "en": "Hardened",
+    "zh": "强化"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ],
+ "display_offset": [
+  10,
+  -20
+ ]
+}

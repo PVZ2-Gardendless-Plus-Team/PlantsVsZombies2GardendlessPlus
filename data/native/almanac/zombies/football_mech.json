@@ -1,0 +1,50 @@
+{
+ "id": "football_mech",
+ "name": {
+  "en": "Mecha-Football Zombie",
+  "zh": "机甲橄榄球盔僵尸"
+ },
+ "world": "future",
+ "description": {
+  "en": "Pushes plants across the lawn.",
+  "zh": "将植物沿本行推出。"
+ },
+ "chat": {
+  "en": "Now past his prime, Mecha-Football Zombie is ready to be put back into the game. Until he gets some brains, concussions aren't a concern.",
+  "zh": "即使已经过气，机甲橄榄球盔僵尸还是准备重返游戏。在他得到脑子之前，不会再出现脑震荡的问题。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "pushes plants left instead of eating",
+    "zh": "向左侧推走植物，而不是啃食"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.8,
+   "text": {
+    "en": "Machined",
+    "zh": "重甲"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ],
+ "display_offset": [
+  0,
+  -20
+ ]
+}

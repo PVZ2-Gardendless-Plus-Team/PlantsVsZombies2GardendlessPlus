@@ -1,0 +1,38 @@
+{
+ "id": "mummy_flag_veteran",
+ "name": {
+  "en": "Egypt Rally Zombie",
+  "zh": "大动员木乃伊"
+ },
+ "world": "egypt",
+ "description": {
+  "en": "He celebrates with increased vigor and truculence the arrival of a new wave of bandaged baddies.",
+  "zh": "他以更旺盛的精力和更粗暴的方式庆祝一大波缠着绷带的亡灵的到来。"
+ },
+ "chat": {
+  "en": "Sometimes, a regular Flag Mummy Zombie simply isn't enough to inspire the desired amount of terror and disgust. In these instances, upgrading to the Egypt Rally Zombie isn't the sensible choice, it's the only choice.",
+  "zh": "有时，普通的旗帜木乃伊僵尸根本无法唤出数量可观的恐怖和死尸。在这种情况下，升级到木乃伊大动员不仅是最明智的选择，更是唯一的选择。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.5,
+   "text": {
+    "en": "Protected",
+    "zh": "加强"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.85,
+   "text": {
+    "en": "Speedy",
+    "zh": "快速"
+   }
+  }
+ ],
+ "display_offset": [
+  30,
+  0
+ ]
+}

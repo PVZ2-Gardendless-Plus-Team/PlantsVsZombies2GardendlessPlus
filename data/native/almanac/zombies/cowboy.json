@@ -1,0 +1,34 @@
+{
+ "id": "cowboy",
+ "name": {
+  "en": "Cowboy Zombie",
+  "zh": "牛仔僵尸"
+ },
+ "world": "cowboy",
+ "description": {
+  "en": "Regular rootin' tootin' cowboy zombie.",
+  "zh": "普通但活得风光的牛仔僵尸。"
+ },
+ "chat": {
+  "en": "Cowboy Zombie thinks he's the roughest, toughest, meanest zombie varmint in the west, south, and east. He's anxious to test his skills in the central coast region.",
+  "zh": "牛仔僵尸认为自己是整个西部最难缠、最健硕、最残酷的僵尸，南部也是，东部也是。因为他没胆子去中部跟别人较量。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.25,
+   "text": {
+    "en": "Average",
+    "zh": "一般"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ]
+}

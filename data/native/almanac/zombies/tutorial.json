@@ -1,0 +1,47 @@
+{
+ "id": "tutorial",
+ "name": {
+  "en": "Basic Zombie",
+  "zh": "普通僵尸"
+ },
+ "world": "frontyard",
+ "description": {
+  "en": "Regular Garden-variety zombie.",
+  "zh": "普普通通的前院僵尸。"
+ },
+ "chat": {
+  "en": "Basic Zombie hates the term \"Basic\". He doesn't consider himself some generic foe or common corpse. He's individual, darn it, and he's going to make a difference even if it kills you.",
+  "zh": "普通僵尸讨厌被称作“普通”。他不认为自己只是一个平凡的敌对者，甚至只是个随处可见的死尸。他可是很独立的，该死的，而且在你死之前他都会对局面造成影响。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.25,
+   "text": {
+    "en": "Average",
+    "zh": "一般"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ],
+ "variants": [
+  "birthday",
+  "birthday_armored",
+  "sportzball",
+  "stpatrick",
+  "easter",
+  "valentines",
+  "lunar",
+  "halloween",
+  "foodfight",
+  "feastivus",
+  "zoybean"
+ ]
+}

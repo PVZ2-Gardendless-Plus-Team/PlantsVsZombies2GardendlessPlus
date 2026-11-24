@@ -1,0 +1,16 @@
+{
+ "id": "upgrade_8_slots",
+ "order": 10,
+ "type": "seedslot",
+ "amount": 1,
+ "world": "modern",
+ "sprite": "SeedSlot",
+ "name": {
+  "en": "Extra Seed Slot",
+  "zh": "额外卡槽"
+ },
+ "description": {
+  "en": "Lets you choose another plant type every level!",
+  "zh": "在游戏开始前能额外选择一种植物！"
+ }
+}

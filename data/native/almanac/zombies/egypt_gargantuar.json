@@ -1,0 +1,60 @@
+{
+ "id": "egypt_gargantuar",
+ "name": {
+  "en": "Mummified Gargantuar",
+  "zh": "木乃伊巨尸"
+ },
+ "world": "egypt",
+ "description": {
+  "en": "Massive zombie from a royal line of mummies.",
+  "zh": "王室木乃伊中最巨大的那一位。"
+ },
+ "chat": {
+  "en": "True Fact #1: The pyramids were built in an attempt to make Mummified Gargantuar seem small. It didn't work. True Fact #2: The Sphinx isn't missing its nose... that is the face of... Gargantuar.",
+  "zh": "事实 No.1：金字塔的建造是为了显得干巨尸没那么大，但没啥效果。事实 No.2：狮身人面像并没有丢掉鼻子......那是......巨尸的脸。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Damage",
+    "zh": "攻击"
+   },
+   "text": {
+    "en": "crushes plants with sarcophagus",
+    "zh": "用石棺摧毁植物"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "launches Imp Mummy when damaged",
+    "zh": "受重伤时丢出木乃伊小鬼"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.9,
+   "text": {
+    "en": "Great",
+    "zh": "巨大"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.6,
+   "text": {
+    "en": "Hungry",
+    "zh": "饥渴"
+   }
+  }
+ ],
+ "display_offset": [
+  20,
+  -60
+ ]
+}

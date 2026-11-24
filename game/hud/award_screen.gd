@@ -122,11 +122,14 @@ func open(prize: LevelReward) -> void:
 		_packet.setup(&"plant", prize.param, cost, "")
 		_packet.disabled = true
 		_packet.visible = _display_art == null
-		_detail.text = "Costs %d sun. You can pick it before levels where you choose your seeds." % cost
+		_detail.text = tr("Costs %d sun. You can pick it before levels where you choose your seeds.") % cost
 	else:
 		_packet.hide()
 		if prize.type == &"gems":
 			_detail.text = "Gems: %d" % Saves.currency(&"gems")
+		elif prize.type == &"upgrade" and Upgrades.exists(prize.param):
+			# PVZGE's award screen reads the upgrade's own DESCRIPTION.
+			_detail.text = Upgrades.description(prize.param)
 	show()
 	_button.grab_focus()
 

@@ -1,0 +1,59 @@
+{
+ "id": "stunion",
+ "name": {
+  "en": "Stunion",
+  "zh": "眩晕洋葱"
+ },
+ "brief": {
+  "en": "Stuns nearby zombies in the lane",
+  "zh": "使本行靠近的僵尸眩晕"
+ },
+ "description": {
+  "en": "Stunions breathe a stunning cloud of gas on nearby zombies in the lane.",
+  "zh": "眩晕洋葱向本行靠近的僵尸吐出眩晕的气体。"
+ },
+ "chat": {
+  "en": "Oh sure, everyone knows Stunion as the battle-hardened warrior with the potent breath. But he's so much more than that. He's an accomplished pianist. He speaks five languages fluently. Heck, he's the leader of a Cub Shallots group in his spare time. Dude's got layers. Go on, peel 'em back. You'll see.",
+  "zh": "哦，当然，每个人都知道眩晕洋葱作为战士以他强大的气团在战场上驰骋多年。但他可远不止这点本事。他是一个多才多艺的钢琴家。他会说五种流利的语言。哎呀，他在业余时间还是青葱年少组织的组长。这位老兄层次很多哦。来吧，一层层剥开，你就会看到。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Usage",
+    "zh": "用法"
+   },
+   "text": {
+    "en": "single use, activates when zombie is close",
+    "zh": "一次性使用，僵尸靠近时触发"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "stuns nearby zombies",
+    "zh": "使靠近的僵尸眩晕"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "Close",
+    "zh": "靠近时"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

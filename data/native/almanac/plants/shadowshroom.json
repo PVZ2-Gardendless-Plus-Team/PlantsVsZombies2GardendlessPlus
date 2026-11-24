@@ -1,0 +1,66 @@
+{
+ "id": "shadowshroom",
+ "name": {
+  "en": "Shadow-shroom",
+  "zh": "毒影菇"
+ },
+ "brief": {
+  "en": "Poisons zombies over time",
+  "zh": "使僵尸获得一段时间的中毒效果"
+ },
+ "description": {
+  "en": "Shadow-shrooms poison zombies who touch them, inflicting damage over time.",
+  "zh": "毒影菇接触到僵尸时，对其施加毒性效果，中毒僵尸一段时间内持续受到伤害。"
+ },
+ "chat": {
+  "en": "Despite being such a poisonous and profoundly inedible fungus, Shadow-shroom is nonetheless a total cutie-pie.",
+  "zh": "尽管毒影菇是一种有毒且不容易食用的真菌，但他仍然是一道美味的食物。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Usage",
+    "zh": "用法"
+   },
+   "text": {
+    "en": "single use, on contact",
+    "zh": "一次性使用，接触型"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "powered Shadow-shrooms make poisoned zombies poison other zombies",
+    "zh": "暗影状态下，使僵尸身上的毒有传染性"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "special",
+   "text": {
+    "en": "Poison",
+    "zh": "毒性"
+   }
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "Touch",
+    "zh": "接触"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

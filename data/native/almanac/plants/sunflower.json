@@ -1,0 +1,40 @@
+{
+ "id": "sunflower",
+ "name": {
+  "en": "Sunflower",
+  "zh": "向日葵"
+ },
+ "brief": {
+  "en": "Gives you additional sun",
+  "zh": "提供额外的阳光"
+ },
+ "description": {
+  "en": "Sunflowers are essential for you to produce extra sun. Try planting as many as you can!",
+  "zh": "向日葵为你提供额外的阳光。种得越多越好！"
+ },
+ "chat": {
+  "en": "After the release of her first major YouTuber video \"Zombies On Your Lawn\", Sunflower's YouTube channel has been bursting with fun. She is currently putting the final touches on her reality show TV pitch \"Sunflower Thinks She Can Dance\".",
+  "zh": "在发布了她的第一个油管视频 \"Zombies On Your Lawn\"，向日葵的油管频道充满了欢声笑语。她现在正在完善她的真人秀电视节目 \"Sunflower Thinks She Can Dance\" 的各种细节。"
+ },
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "sun_production",
+   "text": {
+    "en": "Normal",
+    "zh": "正常"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

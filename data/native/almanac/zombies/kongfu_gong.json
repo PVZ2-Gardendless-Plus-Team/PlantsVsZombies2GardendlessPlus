@@ -1,0 +1,60 @@
+{
+ "id": "kongfu_gong",
+ "name": {
+  "en": "Gong Zombie",
+  "zh": "铜锣僵尸"
+ },
+ "world": "kongfu",
+ "description": {
+  "en": "Bangs his gong and summons Bomb Zombies.",
+  "zh": "敲击铜锣，召唤自爆僵尸。"
+ },
+ "chat": {
+  "en": "Gong Zombie is Bomb Zombie's brother, neither of them has access to kongfu. But in difference, Gong Zombie have the talent to play the instruments.",
+  "zh": "铜锣僵尸本是自爆僵尸的兄弟，他们都不会功夫，不同的是，铜锣僵尸对乐器更有兴趣。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "summons Bomb Zombies",
+    "zh": "召唤自爆僵尸"
+   }
+  },
+  {
+   "name": {
+    "en": "Weakness",
+    "zh": "弱点"
+   },
+   "text": {
+    "en": "cannot play his gong with his arm broken",
+    "zh": "断手后不再能敲击铜锣"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.4,
+   "text": {
+    "en": "Solid",
+    "zh": "略强"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.4,
+   "text": {
+    "en": "Stiff",
+    "zh": "迟钝"
+   }
+  }
+ ],
+ "display_offset": [
+  15,
+  0
+ ]
+}

@@ -1,0 +1,44 @@
+{
+ "id": "shootingstarfruit",
+ "name": {
+  "en": "Shooting Starfruit",
+  "zh": "流星果"
+ },
+ "brief": {
+  "en": "Shoots 5 stars along the lanes at a time",
+  "zh": "沿五行发射星星"
+ },
+ "description": {
+  "en": "Shooting Starfruits shoot stars in 5 lanes.",
+  "zh": "流星果会沿着五个行发射星星子弹。"
+ },
+ "chat": {
+  "en": "When you see a Shooting Starfruit, make a wish, any wish! Any wish that involves takin' down Zombies, that is.",
+  "zh": "当你遇见一只流星果，许愿，任何愿望！只要是关于打倒僵尸的愿望，他都会为你实现的！"
+ },
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 30
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "5 Lanes",
+    "zh": "五个方向"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

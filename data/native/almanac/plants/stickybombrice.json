@@ -1,0 +1,66 @@
+{
+ "id": "stickybombrice",
+ "name": {
+  "en": "Stickybomb Rice",
+  "zh": "糯米投弹手"
+ },
+ "brief": {
+  "en": "Lobs sticky bombs",
+  "zh": "扔出黏性炸弹"
+ },
+ "description": {
+  "en": "Stickybomb Rice lobs sticky rice bombs with timers at zombies.",
+  "zh": "糯米投弹手向僵尸投掷糯米定时炸弹。"
+ },
+ "chat": {
+  "en": "Stickybomb Rice has extreme confidence in bombs, rice, and the abstract concept of stickiness. She's published scholarly articles about all three.",
+  "zh": "糯米投弹手在炸弹和糯米方面很有自信，以及对黏性的认识，并发表了三篇论文讨论了以上三个概念。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "sticky rice sticks zombies to the ground",
+    "zh": "糯米把僵尸固定在原地"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "exploding sticky bombs trigger other sticky bombs",
+    "zh": "爆炸的糯米炸弹会引爆其他的糯米炸弹"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 40
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "Lobbed",
+    "zh": "抛物线"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

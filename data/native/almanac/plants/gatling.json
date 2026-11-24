@@ -1,0 +1,56 @@
+{
+ "id": "gatling",
+ "name": {
+  "en": "Gatling Pea",
+  "zh": "机枪射手"
+ },
+ "brief": {
+  "en": "Shoots 4 peas at a time",
+  "zh": "向敌人发射 4 颗豌豆"
+ },
+ "description": {
+  "en": "Gatling Peas fire 4 peas at one time at a shorter shooting rate.",
+  "zh": "机枪射手每次发射 4 豌豆，并且拥有更高的射速。"
+ },
+ "chat": {
+  "en": "During a certain explosion at a research center, a reed was thunderstruck and became Lightning Reed. Meanwhile, a Peashooter on a gatling was also zapped, that's the origin of our new superhero, Gatling Pea.",
+  "zh": "某次研究中心的爆炸事故发生时，一棵芦苇刚好被闪电击中，于是他变成了闪电芦苇；而与此同时，正在操作机枪的豌豆射手也被击中，这就是我们全新的超级英雄————机枪豌豆的来历。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Firing Speed",
+    "zh": "射速"
+   },
+   "text": {
+    "en": "4x",
+    "zh": "4倍"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 20
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "Straight",
+    "zh": "直线"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

@@ -1,0 +1,60 @@
+{
+ "id": "dark_juggler",
+ "name": {
+  "en": "Jester Zombie",
+  "zh": "弄臣僵尸"
+ },
+ "world": "dark",
+ "description": {
+  "en": "Returns projectiles that are shot at him.",
+  "zh": "将砸向他的弹射物丢回。"
+ },
+ "chat": {
+  "en": "Oh sure, everyone loves to laugh at Jester Zombie's clownish routines. But what no one knows is that he has a Master of Fine Arts from the Chewliard Performing Arts School. Heck, he's been on stage with some of the finest classical theatre companies this side of the lawn. But sometimes you just gotta go where the paycheck is.",
+  "zh": "当然，每个人都喜欢嘲笑小丑僵尸的小丑表演。但没有人知道的是，他曾在“咀嚼者”表演艺术学校获得艺术硕士学位。见鬼，他曾与最优秀的古典剧团同台演出。但有时候，去薪水高的地方才是最佳选择。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特殊"
+   },
+   "text": {
+    "en": "speeds up while spinning",
+    "zh": "旋转时会加速行进"
+   }
+  },
+  {
+   "name": {
+    "en": "Weakness",
+    "zh": "弱点"
+   },
+   "text": {
+    "en": "attacks from bubbles or flame",
+    "zh": "来自火焰或者泡泡的攻击"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.5,
+   "text": {
+    "en": "Protected",
+    "zh": "加强"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ],
+ "variants": [
+  "foodfight_chefster",
+  "birthday_juggler"
+ ]
+}

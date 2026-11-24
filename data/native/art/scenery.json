@@ -960,6 +960,25 @@
    "chosen": "Pushed"
   }
  },
+ "hud:upgrade_trophy": {
+  "bundle": "rigs_PrizeItems",
+  "armature": "Upgrades",
+  "scale": 0.4,
+  "offset_x": -3,
+  "offset_y": 32,
+  "animations": {
+   "idle": "StartingSun",
+   "StartingSun": "StartingSun",
+   "SunShovel": "SunShovel",
+   "PlantfoodSlot": "PlantfoodSlot",
+   "SeedSlot": "SeedSlot",
+   "Pinata": "Pinata",
+   "Mower": "Mower",
+   "Cooldown": "Cooldown",
+   "Wallnut": "Wallnut",
+   "Shield": "Shield"
+  }
+ },
  "hud:seed_packet": {
   "bundle": "rigs_SeedPacker_Card",
   "portraits": {}

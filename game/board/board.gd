@@ -101,6 +101,11 @@ var loot_rng := RandomNumberGenerator.new()
 
 var sun: int = 50
 var plant_food: int = 0
+## Mowers the player may still launch by holding them down this level - one
+## per Mower Launch upgrade, as PVZGE's ManualMower counts them.
+var manual_mowers_left: int = 0
+## The plant food bar's size before upgrades, as set on the node.
+var _base_max_plant_food: int = -1
 ## What the player has picked from the seed bank, as {kind, id, slot}.
 ## Zombies are placeable too, for level types where the player plays the
 ## zombie side.
@@ -189,6 +194,7 @@ func _ready() -> void:
 	scenery.name = "Scenery"
 	add_child(scenery)
 	sun = starting_sun
+	_base_max_plant_food = max_plant_food
 	for r in rows:
 		_zombies_by_row[r] = []
 	sun_changed.emit(sun)
@@ -226,6 +232,24 @@ func reset() -> void:
 	sun_changed.emit(sun)
 	plant_food_changed.emit(plant_food)
 	queue_redraw()
+
+
+## Applies the player's upgrades to the lawn for a new level: the plant food
+## bar's size and the mowers they may launch by hand. PVZGE reads them afresh
+## each time a level loads (getUpgradeProps), so switching one off in the
+## almanac counts from the next level.
+func apply_upgrades() -> void:
+	if _base_max_plant_food < 0:
+		_base_max_plant_food = max_plant_food
+	max_plant_food = Upgrades.plant_food_slots(_base_max_plant_food)
+	plant_food = mini(plant_food, max_plant_food)
+	manual_mowers_left = Upgrades.manual_mowers()
+
+
+## Starts the level with `amount` sun in the bank.
+func set_starting_sun(amount: int) -> void:
+	sun = maxi(amount, 0)
+	sun_changed.emit(sun)
 
 
 ## Builds the world's own behaviours from its lawn data. Replaces whatever the
@@ -298,6 +322,7 @@ func setup_mowers() -> void:
 		m.position = Vector2(house_x() - mower_offset, grid_to_world(r, 0).y)
 		m.z_index = lane_z(r, LAYER_MOWER)
 		m.finished.connect(_on_mower_finished)
+		m.launched_by_hand.connect(_on_mower_launched_by_hand)
 		_mowers_node.add_child(m)
 		_mowers[r] = m
 
@@ -343,6 +368,23 @@ func cash_in_mowers() -> Array[CoinToken]:
 
 func _on_mower_finished(row: int) -> void:
 	_mowers.erase(row)
+
+
+## Starts holding down the parked mower under `at` (board coordinates), with
+## Mower Launch. Held for Mower.LAUNCH_HOLD it drives off. Returns true when a
+## mower took the press.
+func press_mower(at: Vector2) -> bool:
+	if manual_mowers_left <= 0:
+		return false
+	for m in _mowers.values():
+		if is_instance_valid(m) and m.is_available() and m.contains_point(at - m.position):
+			return m.press()
+	return false
+
+
+func _on_mower_launched_by_hand(row: int) -> void:
+	manual_mowers_left = maxi(manual_mowers_left - 1, 0)
+	mower_triggered.emit(row)
 
 
 ## Everything on the lawn, as plain data. The board knows how to describe
@@ -402,6 +444,7 @@ func snapshot() -> Dictionary:
 
 	return {
 		"sun": sun, "plant_food": plant_food,
+		"manual_mowers_left": manual_mowers_left,
 		"plantable_rows": plantable_rows.duplicate(),
 		"mower_rows": _remaining_mower_rows(),
 		"plants": plants, "zombies": zombies, "objects": objects,
@@ -523,6 +566,7 @@ func apply_snapshot(state: Dictionary) -> void:
 
 	sun = int(state.get("sun", starting_sun))
 	plant_food = int(state.get("plant_food", 0))
+	manual_mowers_left = int(state.get("manual_mowers_left", manual_mowers_left))
 	sun_changed.emit(sun)
 	plant_food_changed.emit(plant_food)
 	queue_redraw()
@@ -700,6 +744,8 @@ func placement_refusal(kind: StringName, id: StringName, row: int, col: int) -> 
 			return "cell is occupied"
 		return ""
 	if occupant_at(row, col) != null:
+		if replant_target(id, row, col) != null:
+			return ""
 		return "cell is occupied"
 	if is_carrier_def(plant_def) and carrier_at(row, col) != null:
 		return "cell is occupied"
@@ -726,6 +772,32 @@ func placement_refusal(kind: StringName, id: StringName, row: int, col: int) -> 
 		if not (plant_ok or cell_ok):
 			return "%s needs %s" % [ground.id, ground.requires_tag]
 	return ""
+
+
+## The damaged plant that planting `id` in this cell would patch up, with
+## the Wall-nut First Aid upgrade: the same plant, standing there, hurt, and
+## a defender - a blocker, or anything tagged `replantable`. PVZGE asks each
+## plant's own replantable(); its defenders are the ones whose answer is
+## "when damaged". Null when the seed would not replant anything.
+func replant_target(id: StringName, row: int, col: int) -> Plant:
+	if not Upgrades.has_first_aid():
+		return null
+	var p := occupant_at(row, col)
+	if p == null or p.def == null or p.def.id != id or p.is_encased():
+		return null
+	if p.health >= p.max_health:
+		return null
+	if not (p.has_tag(&"blocker") or p.has_tag(&"replantable")):
+		return null
+	return p
+
+
+func _replant(p: Plant) -> void:
+	p.heal(p.max_health)
+	Audio.play(&"plant.place.water" if is_water(p.row, p.col) else &"plant.place", p.position)
+	if not is_water(p.row, p.col):
+		Effect.spawn(_projectiles, &"plant_dirt", &"place", p.position,
+				lane_z(p.row, LAYER_PROJECTILE))
 
 
 ## The GraveDef flag a plant must be planted onto, from its
@@ -771,6 +843,11 @@ func place_entity(kind: StringName, id: StringName, row: int, col: int,
 		if z != null:
 			z.position.x = grid_to_world(row, col).x
 		return z
+	var patient := replant_target(id, row, col)
+	if patient != null:
+		_replant(patient)
+		plant_placed.emit(patient)
+		return patient
 	var p := _place_plant_at(id, row, col, imitates)
 	if p != null:
 		_claim_provides(id, row, col)
@@ -943,8 +1020,24 @@ func dig_up(row: int, col: int) -> bool:
 	if not is_water(row, col):
 		Effect.spawn(_projectiles, &"plant_dirt", &"dig", p.position,
 				lane_z(row, LAYER_PROJECTILE))
+	_refund_shovelled(p)
 	p.queue_free()
 	return true
+
+
+## With the Shovel Bonus upgrades, a dug-up plant gives back a share of its
+## sun cost, as a sun that goes straight to the bank (PVZGE's removePlant:
+## suncost x SunShovelRate, produced and collected at once).
+func _refund_shovelled(p: Plant) -> void:
+	var rate := Upgrades.shovel_refund_rate()
+	if rate <= 0.0 or p.def == null or p.has_tag(&"no_shovel_sun"):
+		return
+	var amount := roundi(float(p.def.stat(&"sun_cost", 0)) * rate)
+	if amount <= 0:
+		return
+	var s := _add_sun_token(p.position, p.position.y)
+	s.value = amount
+	s.collect()
 
 
 # --- grid objects --------------------------------------------------------
@@ -991,12 +1084,13 @@ func remove_object(row: int, col: int) -> void:
 	_objects.erase(Vector2i(col, row))
 
 
-## Living gravestones in one row, nearest the house first.
+## Living gravestones in one row, nearest the house first. One a grave buster
+## has sunk out of sight is left out, as PVZGE skips a hidden tombstone.
 func graves_in_row(row: int) -> Array:
 	var out: Array = []
 	for c in cols:
 		var o := object_at(row, c)
-		if o is Grave:
+		if o is Grave and not o.sunk:
 			out.append(o)
 	return out
 
@@ -1287,8 +1381,22 @@ func spawn_zombie(id: StringName, row: int, x_offset: float = 0.0,
 	z.died.connect(_on_zombie_gone)
 	z.tree_exiting.connect(_on_zombie_gone.bind(z))
 	z.reached_house.connect(_on_zombie_reached_house)
+	_meet(id)
 	Audio.play(&"zombie.spawn", z.position)
 	return z
+
+
+## Almanac pages for the zombies this lawn has shown; winning the level makes
+## them known, as PVZGE's _metZombies does.
+var met_zombies: Array[StringName] = []
+
+
+func _meet(id: StringName) -> void:
+	var page := AlmanacData.entry_for_zombie(id)
+	if page == &"" or met_zombies.has(page):
+		return
+	met_zombies.append(page)
+	Saves.discover_zombie(page, AlmanacData.MET)
 
 
 ## Spawns a zombie at a point on the lawn rather than off the right edge.
@@ -1577,8 +1685,9 @@ func _add_sun_token(at: Vector2, rest_y: float) -> SunToken:
 
 
 func _on_sun_collected(token: Collectable) -> void:
-	add_sun(SunToken.VALUE)
-	sun_collected.emit(SunToken.VALUE)
+	var value: int = token.value if token is SunToken else SunToken.VALUE
+	add_sun(value)
+	sun_collected.emit(value)
 	Audio.play(&"sun.collect", token.position)
 
 
@@ -1782,6 +1891,9 @@ func click(at: Vector2) -> void:
 		return
 	if aiming != null:
 		aim_at(world_to_row(at.y), world_to_col(at.x))
+		get_viewport().set_input_as_handled()
+		return
+	if selected_seed.is_empty() and not shovel_active and press_mower(at):
 		get_viewport().set_input_as_handled()
 		return
 	if selected_seed.is_empty() and not shovel_active \

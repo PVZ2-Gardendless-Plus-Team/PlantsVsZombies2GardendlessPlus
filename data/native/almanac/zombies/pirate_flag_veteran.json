@@ -1,0 +1,38 @@
+{
+ "id": "pirate_flag_veteran",
+ "name": {
+  "en": "Rally Roger Zombie",
+  "zh": "大动员海盗旗僵尸"
+ },
+ "world": "pirate",
+ "description": {
+  "en": "Rally Roger Zombie marks the arrival of lots and lots of zombies.",
+  "zh": "大动员海盗旗僵尸的出现代表着一大大大大群的僵尸的来临。"
+ },
+ "chat": {
+  "en": "Rally Roger Zombie and his flag are fused into a single brain-munching unit. Their teamwork is an inspiration to ghouls everywhere.",
+  "zh": "大动员海盗旗僵尸和他的旗帜融合形成一个只知道啃食脑子的个体。他们的合作关系不论在哪振奋尸心。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.5,
+   "text": {
+    "en": "Protected",
+    "zh": "加强"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.85,
+   "text": {
+    "en": "Speedy",
+    "zh": "快速"
+   }
+  }
+ ],
+ "display_offset": [
+  30,
+  0
+ ]
+}

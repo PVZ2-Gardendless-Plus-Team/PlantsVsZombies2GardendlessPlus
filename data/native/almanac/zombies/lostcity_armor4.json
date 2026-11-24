@@ -1,0 +1,34 @@
+{
+ "id": "lostcity_armor4",
+ "name": {
+  "en": "Tent-headed Adventurer",
+  "zh": "帐篷头探宝家"
+ },
+ "world": "lostcity",
+ "description": {
+  "en": "His resin-covered tent provides incredible protection.",
+  "zh": "他那粘满树脂的帐篷为他提供无以伦比的保护。"
+ },
+ "chat": {
+  "en": "Tent-headed Adventurer loves to lie in bed and is reluctant to leave his tent... Now he's got the solution!",
+  "zh": "帐篷头探险家特别喜欢赖床，迟迟不肯离开自己的帐篷……现在他彻底解决了这个问题！"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.8,
+   "text": {
+    "en": "Machined",
+    "zh": "重甲"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ]
+}

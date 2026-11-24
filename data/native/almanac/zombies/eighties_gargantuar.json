@@ -1,0 +1,70 @@
+{
+ "id": "eighties_gargantuar",
+ "name": {
+  "en": "Hair Metal Gargantuar",
+  "zh": "重金属巨尸"
+ },
+ "world": "eighties",
+ "description": {
+  "en": "Dominating leviathan of power-rocking mayhem.",
+  "zh": "震撼人心的力量型巨尸。"
+ },
+ "chat": {
+  "en": "Hair Metal Gargantuar only knows one chord, but you'd better believe he'll play it all night and then some.",
+  "zh": "重金属巨尸只懂和弦，但你最好相信他会弹吉他，否则他要弹上一整晚甚至更久。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Damage",
+    "zh": "攻击"
+   },
+   "text": {
+    "en": "crushes plants with guitar",
+    "zh": "用电吉他摧毁植物"
+   }
+  },
+  {
+   "name": {
+    "en": "Damage",
+    "zh": "攻击"
+   },
+   "text": {
+    "en": "bashes sonic blast when metal music plays",
+    "zh": "当重金属音乐响起时，砸出震耳欲聋的音波"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "launches Impunk when damaged",
+    "zh": "受重伤时丢出朋克小鬼"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.9,
+   "text": {
+    "en": "Great",
+    "zh": "巨大"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.6,
+   "text": {
+    "en": "Hungry",
+    "zh": "饥渴"
+   }
+  }
+ ],
+ "display_offset": [
+  20,
+  -60
+ ]
+}

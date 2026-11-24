@@ -1,0 +1,60 @@
+{
+ "id": "beach_gargantuar",
+ "name": {
+  "en": "Deep Sea Gargantuar",
+  "zh": "深海巨尸"
+ },
+ "world": "beach",
+ "description": {
+  "en": "Titanic zombie who isn't shellfish with his might.",
+  "zh": "这个巨尸并不是贝类动物，但威力依然很强大。"
+ },
+ "chat": {
+  "en": "This big guy loves the water. When he's deep down in it, he feels light as a feather. He feels like he's flying. Most importantly, during those precious moments, he feels as if the weight of Imp Mermaid Zombie has been lifted from his shoulders.",
+  "zh": "这个大家伙喜欢水，当他深入水中时，感觉轻如鸿毛。他感觉自己在飞翔。最重要的是，在那段美好时光中，他感觉自己肩上美人鱼小鬼带来的重担被卸下了。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Damage",
+    "zh": "攻击"
+   },
+   "text": {
+    "en": "crushes plants with driftwood",
+    "zh": "用浮木摧毁植物"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "launches Imp Mermaid when damaged",
+    "zh": "受重伤时丢出美人鱼小鬼"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.9,
+   "text": {
+    "en": "Great",
+    "zh": "巨大"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.6,
+   "text": {
+    "en": "Hungry",
+    "zh": "饥渴"
+   }
+  }
+ ],
+ "display_offset": [
+  20,
+  -60
+ ]
+}

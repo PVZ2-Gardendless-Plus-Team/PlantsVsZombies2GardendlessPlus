@@ -1,0 +1,53 @@
+{
+ "id": "dark_wizard",
+ "name": {
+  "en": "Wizard Zombie",
+  "zh": "巫师僵尸"
+ },
+ "world": "dark",
+ "description": {
+  "en": "Transforms plants into passive sheep.",
+  "zh": "将植物变为毫无攻击力的绵羊。"
+ },
+ "chat": {
+  "en": "All the zombies agree, Wizard Zombie's powers of transmutation are impressive. But what they don't get is ... why sheep? Everyone knows it would be more helpful if the Wizard used his powers to turn plants into, say, more zombies. But yeah, no one is going to say that to his face.",
+  "zh": "所有僵尸都认为，巫师僵尸的变身能力令人印象深刻。但他们不明白的是……为什么是羊？大家都知道，如果魔法师用他的能力把植物变成，比如说，更多的僵尸，那会更有帮助。不过是的，没人会当着他的面这么说。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Weakness",
+    "zh": "弱点"
+   },
+   "text": {
+    "en": "plants in Floawerpots cannot be transformed",
+    "zh": "飞天花盆里的植物无法被变为绵羊"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.4,
+   "text": {
+    "en": "Solid",
+    "zh": "略强"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.3,
+   "text": {
+    "en": "Creeper",
+    "zh": "静步"
+   }
+  }
+ ],
+ "display_offset": [
+  20,
+  0
+ ],
+ "variants": [
+  "easter_wizard"
+ ]
+}

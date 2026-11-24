@@ -1,0 +1,49 @@
+{
+ "id": "iceage_dodo",
+ "name": {
+  "en": "Dodo Rider Zombie",
+  "zh": "渡渡鸟骑手"
+ },
+ "world": "ice",
+ "description": {
+  "en": "Dodo bird with an imp rider.",
+  "zh": "载着小鬼的渡渡鸟。"
+ },
+ "chat": {
+  "en": "Dodo Rider believes dodos are the future of transportation. He believes a public dodo-riding system is not only a wise expenditure of tax dollars but would help the vast majority of zombies get where they need to go more efficiently. Everyone keeps telling him there's no future in dodos, but he refuses to listen.",
+  "zh": "渡渡鸟骑手认为渡渡鸟是交通工具的进化方向。他认为，公共渡渡鸟骑行系统不仅是明智的节省税款手段，还能帮助绝大多数僵尸更高效地到达目的地。然而每个人都告诉他渡渡鸟没有未来，但他不信。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "dodo can flap and jump over barricades as well as troublesome plants",
+    "zh": "渡渡鸟可以扑腾飞起，越过障碍和麻烦的植物"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.5,
+   "text": {
+    "en": "Protected",
+    "zh": "加强"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.8,
+   "text": {
+    "en": "Speedy",
+    "zh": "快速"
+   }
+  }
+ ],
+ "variants": [
+  "stpatrick_dodo"
+ ]
+}

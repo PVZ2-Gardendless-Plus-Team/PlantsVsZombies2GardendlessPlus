@@ -1,0 +1,70 @@
+{
+ "id": "spikerock",
+ "name": {
+  "en": "Spikerock",
+  "zh": "钢地刺"
+ },
+ "brief": {
+  "en": "Breaks 3 rolling object, hurts zombies that step on it",
+  "zh": "对走过的僵尸造成伤害，并破坏 3 个滚动的物体"
+ },
+ "description": {
+  "en": "Spikerocks destroy multiple rolling zombies and damage zombies that walk over them.",
+  "zh": "钢地刺摧毁多个滚动前行的目标，并且对经过的僵尸造成伤害。"
+ },
+ "chat": {
+  "en": "Being the most metal plant, Spikerock has decided to hold his ultimate metal plant concert at Madison Rock Garden. Tickets have been sold out for many harvests.",
+  "zh": "作为最具金属性的植物，钢地刺打算在麦迪生石头花园举办他的终极重金属音乐节。票已经售罄了好几个丰收季了。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "can't be eaten by zombies",
+    "zh": "不会被僵尸啃食"
+   }
+  },
+  {
+   "name": {
+    "en": "Weakness",
+    "zh": "弱点"
+   },
+   "text": {
+    "en": "can take three hits from rolling zombies",
+    "zh": "能承受滚动前行的僵尸三次打击"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 20
+  },
+  {
+   "type": "area",
+   "text": {
+    "en": "Tile",
+    "zh": "本格"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ],
+ "display_offset": [
+  0,
+  10
+ ]
+}

@@ -1,0 +1,50 @@
+{
+ "id": "iceage_hunter_veteran",
+ "name": {
+  "en": "Hunter Leader Zombie",
+  "zh": "猎人领袖僵尸"
+ },
+ "world": "ice",
+ "description": {
+  "en": "Zombie that can throw snow balls towards his farthest target.",
+  "zh": "可以朝本行最远的目标投掷雪球。"
+ },
+ "chat": {
+  "en": "He won everyone else cuz no one is willing to be touched by his sparky helmet.",
+  "zh": "他能称霸是因为没人想碰到他那满是刺的头盔。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "snow balls cool down plants until they freeze into blocks",
+    "zh": "雪球能冷冻植物，直到植物被冻成冰块"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.6,
+   "text": {
+    "en": "Dense",
+    "zh": "结实"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ],
+ "display_offset": [
+  15,
+  0
+ ]
+}

@@ -1,0 +1,34 @@
+{
+ "id": "monk_armor2",
+ "name": {
+  "en": "Monk Kettlehead Zombie",
+  "zh": "武僧铁壶僵尸"
+ },
+ "world": "kongfu",
+ "description": {
+  "en": "His iron kettle headwear provides great protection from damage.",
+  "zh": "他的铁壶头盔使他极其抗揍。"
+ },
+ "chat": {
+  "en": "He not only does Kongfu skill trainings every day, but is also responsible for water heating in the temple.",
+  "zh": "他除了练武，还负责庙里的烧水工作。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.7,
+   "text": {
+    "en": "Hardened",
+    "zh": "强化"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ]
+}
