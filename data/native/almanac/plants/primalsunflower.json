@@ -1,0 +1,40 @@
+{
+ "id": "primalsunflower",
+ "name": {
+  "en": "Primal Sunflower",
+  "zh": "原始向日葵"
+ },
+ "brief": {
+  "en": "Gives large suns",
+  "zh": "提供巨大的阳光"
+ },
+ "description": {
+  "en": "Primal Sunflowers pop out large suns instead of regular ones.",
+  "zh": "原始向日葵产出大型阳光，而不是普通的阳光。"
+ },
+ "chat": {
+  "en": "Primal Sunflower is new to all this sun-giving business, so be patient with her. She's an early adopter of the all-you-can-stuff-yourself buffet style of sun production.",
+  "zh": "原始向日葵是阳光交易的新手，所以对她耐心点。她可是“想拿多少拿多少”自助阳光早期体验者之一。"
+ },
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "sun_production",
+   "text": {
+    "en": "Large",
+    "zh": "大量"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

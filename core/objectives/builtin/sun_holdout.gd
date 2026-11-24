@@ -46,5 +46,5 @@ func is_met() -> bool:
 
 
 func describe() -> String:
-	return "Held out without spending sun" if _done \
-			else "Spend no sun for %ds: %ds left" % [int(seconds), ceili(_left)]
+	return tr("Held out without spending sun") if _done \
+			else tr("Spend no sun for %ds: %ds left") % [int(seconds), ceili(_left)]

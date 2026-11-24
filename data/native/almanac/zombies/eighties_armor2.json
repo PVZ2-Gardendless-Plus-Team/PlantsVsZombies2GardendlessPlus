@@ -1,0 +1,34 @@
+{
+ "id": "eighties_armor2",
+ "name": {
+  "en": "Neon Buckethead",
+  "zh": "霓虹铁桶僵尸"
+ },
+ "world": "eighties",
+ "description": {
+  "en": "Buckets absorb damage because that's just what they do.",
+  "zh": "铁桶抵御攻击，因为这就是它的作用。"
+ },
+ "chat": {
+  "en": "Neon Buckethead Zombie had to go all the way to the dump to find a headband he really liked.",
+  "zh": "霓虹铁桶僵尸不得不跑到垃圾场去找他真正喜欢的头巾。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.7,
+   "text": {
+    "en": "Hardened",
+    "zh": "强化"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ]
+}

@@ -63,4 +63,4 @@ func health_fraction() -> float:
 
 
 func describe() -> String:
-	return "Base integrity: %d%%" % int(round(health_fraction() * 100.0))
+	return tr("Base integrity: %d%%") % int(round(health_fraction() * 100.0))

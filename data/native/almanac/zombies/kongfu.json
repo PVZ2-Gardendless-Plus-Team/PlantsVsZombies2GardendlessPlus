@@ -1,0 +1,37 @@
+{
+ "id": "kongfu",
+ "name": {
+  "en": "Kongfu Zombie",
+  "zh": "武斗僵尸"
+ },
+ "world": "kongfu",
+ "description": {
+  "en": "Regular Kongfu studying zombie.",
+  "zh": "普通的正在学习武术的僵尸。"
+ },
+ "chat": {
+  "en": "Don't underestimate these Kongfu Zombies, they’ve been learning kongfu for years, having had it forgotten though.",
+  "zh": "别小看这些普通僵尸，他们好歹也学了许多年功夫，尽管已经全都忘了。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.25,
+   "text": {
+    "en": "Average",
+    "zh": "一般"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ],
+ "variants": [
+  "kongfu_armor3"
+ ]
+}

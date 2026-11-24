@@ -669,5 +669,5 @@ func _spawn_one(entry: Dictionary, per_lane: Dictionary) -> Zombie:
 
 func wave_label() -> String:
 	if _finished_spawning:
-		return "Final wave"
-	return "Wave %d / %d" % [maxi(wave_index + 1, 0), waves.size()]
+		return tr("Final wave")
+	return tr("Wave %d / %d") % [maxi(wave_index + 1, 0), waves.size()]

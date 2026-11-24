@@ -1,0 +1,40 @@
+{
+ "id": "marigold_blue",
+ "name": {
+  "en": "Blue Marigold",
+  "zh": "冰蓝金盏花"
+ },
+ "brief": {
+  "en": "Gives you coins over time",
+  "zh": "时常产生金币"
+ },
+ "description": {
+  "en": "Blue Marigolds give you coins over time, freeze nearby zombies when defeated.",
+  "zh": "冰蓝金盏花时常为您生产金币，被打败时冻结身边僵尸。"
+ },
+ "chat": {
+  "en": "Marigold used to dedicate herself to the Zen lifestyle. She was a team player, and gave it her best there in the garden. But when she heard needed to confront zombies on the lawn again, she said she'd prepared for that!",
+  "zh": "金盏花曾沉浸生活在禅境花园中。她在那表现得很棒，在花园中尽己所能。当她听到了自己又要面对草坪上的僵尸时，她表示早已做好准备！"
+ },
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "special",
+   "text": {
+    "en": "Coin Producer",
+    "zh": "生产金币"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

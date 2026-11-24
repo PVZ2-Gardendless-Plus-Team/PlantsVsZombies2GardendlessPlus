@@ -1,0 +1,38 @@
+{
+ "id": "future_flag",
+ "name": {
+  "en": "Future Flag Zombie",
+  "zh": "未来旗帜僵尸"
+ },
+ "world": "future",
+ "description": {
+  "en": "Marks the arrival of a huge future-proof \"wave\" of zombies.",
+  "zh": "预示着一大波科技僵尸的到来。"
+ },
+ "chat": {
+  "en": "Sometimes Future Flag Zombie regrets having to be at the bleeding edge of zombie wave advancement technology.",
+  "zh": "有时候未来旗帜僵尸后悔走在大波僵尸的前沿，不论是科技还是阵型。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.25,
+   "text": {
+    "en": "Average",
+    "zh": "一般"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ],
+ "display_offset": [
+  15,
+  0
+ ]
+}

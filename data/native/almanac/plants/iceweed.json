@@ -1,0 +1,70 @@
+{
+ "id": "iceweed",
+ "name": {
+  "en": "Iceweed",
+  "zh": "冰地刺"
+ },
+ "brief": {
+  "en": "Hurts and chills zombies that step on it",
+  "zh": "对走过的僵尸造成伤害并使之冷冻"
+ },
+ "description": {
+  "en": "Iceweeds damage and chill zombies that walk over them.",
+  "zh": "冰地刺对经过的僵尸造成伤害，并使之冷冻。"
+ },
+ "chat": {
+  "en": "Iceweed is excited to get the call-up to the big leagues and can't wait to start refrigerating zombies whilst inflicting damage on them. He insisted we say \"whilst.\"",
+  "zh": "冰地刺激动地收到了顶级联赛的召唤，迫不及待地想要开始让扎穿僵尸，冻时冷藏他们。他坚持要我们用“冻时”而不是“同时”。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "can't be eaten by zombies",
+    "zh": "不会被僵尸啃食"
+   }
+  },
+  {
+   "name": {
+    "en": "Weakness",
+    "zh": "弱点"
+   },
+   "text": {
+    "en": "can take three hits from rolling zombies when fed with Plantfood",
+    "zh": "使用叶绿素后能承受滚动前行的僵尸三次打击"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 10
+  },
+  {
+   "type": "area",
+   "text": {
+    "en": "Tile",
+    "zh": "本格"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ],
+ "display_offset": [
+  0,
+  10
+ ]
+}

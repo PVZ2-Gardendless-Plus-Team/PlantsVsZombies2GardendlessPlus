@@ -1,0 +1,38 @@
+{
+ "id": "dino_flag_veteran",
+ "name": {
+  "en": "Jurassic Rally Zombie",
+  "zh": "侏罗纪大动员僵尸"
+ },
+ "world": "dino",
+ "description": {
+  "en": "Jurassic Rally Zombie marks the arrival of large group of zombies.",
+  "zh": "侏罗纪大动员僵尸的出现代表了一大群僵尸的到来。"
+ },
+ "chat": {
+  "en": "Where did Jurassic Rally Zombie get his fancy new flag? Nobody knows. It's a mystery. The police should look into it. Or maybe we could get a fund together and hire a detective. It's a real puzzle.",
+  "zh": "侏罗纪大动员僵尸从哪儿弄来的新旗帜？没人知道，这是个谜。警方应该调查一下，或者我们可以集资雇个侦探，这真是让人摸不着头脑。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.5,
+   "text": {
+    "en": "Protected",
+    "zh": "加强"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.85,
+   "text": {
+    "en": "Speedy",
+    "zh": "快速"
+   }
+  }
+ ],
+ "display_offset": [
+  30,
+  0
+ ]
+}

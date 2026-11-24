@@ -1,0 +1,69 @@
+{
+ "id": "umbrellaleaf",
+ "name": {
+  "en": "Umbrella Leaf",
+  "zh": "伞叶"
+ },
+ "brief": {
+  "en": "Protects plants from falling threats",
+  "zh": "保护植物免受来自空中的威胁"
+ },
+ "description": {
+  "en": "Umbrella Leaves protect plants from falling threats.",
+  "zh": "伞叶保护植物免受来自空中的威胁。"
+ },
+ "chat": {
+  "en": "She's not very frond of getting wet.",
+  "zh": "她不是很喜欢被“霖”湿。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "pushes zombies fell from sky to the right",
+    "zh": "将从空而降的僵尸弹回到最右边"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "invalidates falling projectiles",
+    "zh": "弹飞掉落的弹射物"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "special",
+   "text": {
+    "en": "Protection",
+    "zh": "保护"
+   }
+  },
+  {
+   "type": "area",
+   "text": {
+    "en": "3x3",
+    "zh": "3x3 范围"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

@@ -1,0 +1,41 @@
+{
+ "id": "containmint",
+ "name": {
+  "en": "Contain-mint",
+  "zh": "滞缓薄荷"
+ },
+ "brief": {
+  "en": "Boosts slowing plants",
+  "zh": "强化滞缓植物"
+ },
+ "description": {
+  "en": "Contain-mints stun all zombies on the board and provide a temporary boost to all Contain-mint Family plants on the lawn.",
+  "zh": "滞缓薄荷在种植时眩晕全场的僵尸，并为所有滞缓家族植物带来增益效果。"
+ },
+ "chat": {
+  "en": "\"Go easy, there,\" says Contain-mint. \"No need to be in such a rush all the time. Movement is totally overrated.\"",
+  "zh": "“放轻松，别着急，”滞缓薄荷说道。“没必要总是这么赶，行动什么的，完全被高估了。”"
+ },
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "duration",
+   "value": 16
+  },
+  {
+   "type": "special",
+   "text": {
+    "en": "Stun",
+    "zh": "眩晕"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

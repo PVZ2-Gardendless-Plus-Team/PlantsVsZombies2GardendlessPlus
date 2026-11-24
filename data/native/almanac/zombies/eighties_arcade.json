@@ -1,0 +1,56 @@
+{
+ "id": "eighties_arcade",
+ "name": {
+  "en": "Arcade Zombie",
+  "zh": "街机僵尸"
+ },
+ "world": "eighties",
+ "description": {
+  "en": "Enters pushing an arcade cabinet.",
+  "zh": "将一台游戏机推入场内。"
+ },
+ "chat": {
+  "en": "When it's a choice between quarters for games and quarters for laundry, Arcade Zombie is prepared to make the ultimate stinky sacrifice.",
+  "zh": "在游戏硬币和洗衣硬币之间做出选择时，街机僵尸准备做出最恶臭的牺牲。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Damage",
+    "zh": "攻击"
+   },
+   "text": {
+    "en": "crushes plants with arcade machine",
+    "zh": "用游戏机碾压植物"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "cabinet spits out 8-Bit Zombies during its theme",
+    "zh": "在像素的滴答声中，像素僵尸会从游戏机中跳出"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.6,
+   "text": {
+    "en": "Dense",
+    "zh": "结实"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.6,
+   "text": {
+    "en": "Hungry",
+    "zh": "饥渴"
+   }
+  }
+ ]
+}

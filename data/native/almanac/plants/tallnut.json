@@ -1,0 +1,52 @@
+{
+ "id": "tallnut",
+ "name": {
+  "en": "Tall-nut",
+  "zh": "高坚果"
+ },
+ "brief": {
+  "en": "Heavy-duty wall that blocks low flying zombies",
+  "zh": "血量更高的坚果墙，可以抵挡飞来的僵尸"
+ },
+ "description": {
+  "en": "Tall-nuts are heavy-duty wall plants that block low flying zombies.",
+  "zh": "高坚果是血量更厚的坚果墙，可以抵挡低空飞行的僵尸。"
+ },
+ "chat": {
+  "en": "Tall-nut is opening a chain of stores for Tall and Taller gentlemen. \"I'll shell out the savings to you!\"",
+  "zh": "高坚果打算为高个子的绅士们开张连锁店，“我会把我的存货特价卖给大家！”"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "blocks launched imps",
+    "zh": "挡住丢出的小鬼"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "plant_food",
+   "text": {
+    "en": "Armor",
+    "zh": "盔甲"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

@@ -34,7 +34,7 @@ func _init(font_size: int = 22) -> void:
 
 func _ready() -> void:
 	if not _icon.has_art():
-		_label.text = "Sun: %d" % target
+		_label.text = tr("Sun: %d") % target
 
 
 ## Sets the total. Spending snaps down at once - the price has been paid -
@@ -78,4 +78,4 @@ func _process(delta: float) -> void:
 
 func _refresh() -> void:
 	var n := roundi(shown)
-	_label.text = str(n) if _icon.has_art() else "Sun: %d" % n
+	_label.text = str(n) if _icon.has_art() else tr("Sun: %d") % n

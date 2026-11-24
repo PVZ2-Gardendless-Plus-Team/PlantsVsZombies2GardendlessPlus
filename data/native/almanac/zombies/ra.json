@@ -1,0 +1,50 @@
+{
+ "id": "ra",
+ "name": {
+  "en": "Ra Zombie",
+  "zh": "太阳神僵尸"
+ },
+ "world": "egypt",
+ "description": {
+  "en": "Tries to steal sun, just for safe keeping.",
+  "zh": "尝试偷走阳光，但也仅仅是暂时保存。"
+ },
+ "chat": {
+  "en": "Ra Zombie isn't actually named after the Sun God Ra, though that's a common mistake. He just likes to say \"Ra\" a lot.",
+  "zh": "太阳神并不是因为他是太阳神而被叫做太阳神，那只是一个误会。他只是很喜欢赞美太阳罢了。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "tries to steal sun",
+    "zh": "会尝试偷走阳光"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.25,
+   "text": {
+    "en": "Average",
+    "zh": "一般"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ],
+ "display_offset": [
+  15,
+  0
+ ]
+}

@@ -1,0 +1,56 @@
+{
+ "id": "laser_bean",
+ "name": {
+  "en": "Laser Bean",
+  "zh": "激光豆"
+ },
+ "brief": {
+  "en": "Shoots a laser that pierces through zombies",
+  "zh": "发射穿透僵尸的激光"
+ },
+ "description": {
+  "en": "Laser Beans fire down a lane, hitting all zombies ahead of it.",
+  "zh": "激光豆向整条路线发射，打击他前面的所有僵尸。"
+ },
+ "chat": {
+  "en": "After a laser eye surgery had gone horribly right, Laser Bean gained a sense of purpose and a new-found affinity for competitive staring contests.",
+  "zh": "经过了激光眼科手术后，他获得了不可思议的能力。现在激光豆拥有了强大的能量，以及不眨眼游戏中的压倒性实力。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Range",
+    "zh": "范围"
+   },
+   "text": {
+    "en": "all zombies in a lane",
+    "zh": "一行内的所有僵尸"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 40
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "Multi-hit",
+    "zh": "多重打击"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

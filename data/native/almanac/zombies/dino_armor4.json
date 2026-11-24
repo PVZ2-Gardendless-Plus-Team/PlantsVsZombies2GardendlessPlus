@@ -1,0 +1,34 @@
+{
+ "id": "dino_armor4",
+ "name": {
+  "en": "Amberhead Zombie",
+  "zh": "琥珀头僵尸"
+ },
+ "world": "dino",
+ "description": {
+  "en": "Amberhead Zombie's head-engulfing ball of amber provides hardened protection.",
+  "zh": "琥珀头僵尸那包裹着头部的琥珀球提供坚硬的保护。"
+ },
+ "chat": {
+  "en": "If you were to extract DNA from the Amberhead Zombie and combine it with the DNA of a frog, you'd be breaking the law at some point.",
+  "zh": "如果你从琥珀头僵尸身上提取 DNA 并与青蛙的 DNA 相结合，你在某种程度上会改变整个时间线。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.8,
+   "text": {
+    "en": "Machined",
+    "zh": "重甲"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ]
+}

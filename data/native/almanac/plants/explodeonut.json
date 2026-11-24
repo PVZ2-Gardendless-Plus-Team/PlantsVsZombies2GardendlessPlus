@@ -1,0 +1,51 @@
+{
+ "id": "explodeonut",
+ "name": {
+  "en": "Explode-O-Nut",
+  "zh": "爆炸坚果"
+ },
+ "brief": {
+  "en": "Explodes when eaten",
+  "zh": "被啃食后爆炸"
+ },
+ "description": {
+  "en": "Explode-O-Nuts provide protection, and when their shells are eaten, they explode to blow up zombies.",
+  "zh": "爆炸坚果保护身后的植物，当他们被吃掉时，炸死周围的僵尸。"
+ },
+ "chat": {
+  "en": "\"My only regret,\" says Explode-O-Nut, \"is that I have but one chewy center full of nitroglycerin to give in defense of this lawn.\"",
+  "zh": "“唯一令我遗憾的是，”爆炸坚果说道，“我只有一颗能被咬爆的硝酸甘油核心。”"
+ },
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "plant_food",
+   "text": {
+    "en": "Armor",
+    "zh": "盔甲"
+   }
+  },
+  {
+   "type": "damage",
+   "value": 1800
+  },
+  {
+   "type": "area",
+   "text": {
+    "en": "3x3",
+    "zh": "3x3 范围"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

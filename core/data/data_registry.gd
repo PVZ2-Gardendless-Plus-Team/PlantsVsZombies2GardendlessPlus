@@ -36,6 +36,13 @@ var upgrades: Dictionary = {}     ## StringName -> Dictionary (raw)
 ## Seed chooser defaults: slot counts and the order plants are listed in. Each
 ## source's `seed_chooser.json` overrides the keys it sets.
 var seed_chooser: Dictionary = {}
+## Almanac pages, raw, by plant or zombie id: names, descriptions and the
+## stat rows PVZGE's almanac lists. See AlmanacData for the lookups.
+var almanac_plants: Dictionary = {}
+var almanac_zombies: Dictionary = {}
+## The zombie page order: each source's `almanac.json` `zombie_order`, in
+## source order, so a pack's list extends the base one rather than replacing it.
+var almanac_zombie_order: Array[StringName] = []
 
 var _mod_order: Array[StringName] = [&"base"]
 var _errors: Array[String] = []
@@ -47,8 +54,10 @@ func _ready() -> void:
 
 func load_all() -> void:
 	for pool in [zombies, plants, projectiles, armors, graves, objects,
-			archetypes, levels, campaigns, lawns, speakers, dinos, portals, upgrades]:
+			archetypes, levels, campaigns, lawns, speakers, dinos, portals, upgrades,
+			almanac_plants, almanac_zombies]:
 		pool.clear()
+	almanac_zombie_order.clear()
 	seed_chooser.clear()
 	_errors.clear()
 	_mod_order = [&"base"]
@@ -92,6 +101,9 @@ func _load_source(root: String, mod: StringName) -> void:
 	_load_dir(root.path_join("upgrades"), upgrades, mod)
 	_load_campaigns(root.path_join("campaigns"), mod)
 	_load_seed_chooser(root.path_join("seed_chooser.json"))
+	_load_dir(root.path_join("almanac/plants"), almanac_plants, mod)
+	_load_dir(root.path_join("almanac/zombies"), almanac_zombies, mod)
+	_load_almanac_config(root.path_join("almanac.json"))
 
 
 func _load_seed_chooser(path: String) -> void:
@@ -102,6 +114,18 @@ func _load_seed_chooser(path: String) -> void:
 		seed_chooser.merge(parsed, true)
 	else:
 		_errors.append("%s: not a JSON object" % path)
+
+
+func _load_almanac_config(path: String) -> void:
+	if not FileAccess.file_exists(path):
+		return
+	var parsed = _read_json(path)
+	if not (parsed is Dictionary):
+		_errors.append("%s: not a JSON object" % path)
+		return
+	for id in (parsed.get("zombie_order", []) as Array):
+		if not almanac_zombie_order.has(StringName(id)):
+			almanac_zombie_order.append(StringName(id))
 
 
 ## Reads every definition file in `dir` into `target`, keyed by id. JSON is
@@ -392,6 +416,14 @@ func portal(id: StringName) -> Dictionary:
 
 func upgrade(id: StringName) -> Dictionary:
 	return upgrades.get(id, {})
+  
+## A plant's almanac page as authored, or {} when it has none.
+func almanac_plant(id: StringName) -> Dictionary:
+	return almanac_plants.get(id, {})
+
+
+func almanac_zombie(id: StringName) -> Dictionary:
+	return almanac_zombies.get(id, {})
 
 
 func seed_chooser_config() -> Dictionary:

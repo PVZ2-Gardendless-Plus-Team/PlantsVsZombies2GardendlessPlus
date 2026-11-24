@@ -1,0 +1,59 @@
+{
+ "id": "iceburg",
+ "name": {
+  "en": "Iceberg Lettuce",
+  "zh": "冰冻生菜"
+ },
+ "brief": {
+  "en": "Freezes zombies that step on it, and extinguishes flames",
+  "zh": "冻结接触到的僵尸，并熄灭火炬"
+ },
+ "description": {
+  "en": "Iceberg Lettuces freezes a zombie when stepped on.",
+  "zh": "冰冻生菜会冻结一只踩中他的僵尸。"
+ },
+ "chat": {
+  "en": "Don't get lost staring into Iceberg's adorably cute eyes. If you do, it will be your last step... but only if you're a zombie.",
+  "zh": "不要因为盯着他过分可爱的双眼而迷失自我。不然的话你将没法迈出下一步……除非你不是一只僵尸。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Usage",
+    "zh": "用途"
+   },
+   "text": {
+    "en": "single use, on contact",
+    "zh": "一次性使用，接触型"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "explodes, temporarily freezing a zombie",
+    "zh": "接触时爆裂，使一只僵尸冻结一段时间"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "special",
+   "text": {
+    "en": "Freeze",
+    "zh": "冻结"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

@@ -1,0 +1,49 @@
+{
+ "id": "swashbuckler",
+ "name": {
+  "en": "Swashbuckler Zombie",
+  "zh": "荡索僵尸"
+ },
+ "world": "pirate",
+ "description": {
+  "en": "Swings in on a rope to lane midway onto your lawn.",
+  "zh": "抓着荡索进入草坪的中央。"
+ },
+ "chat": {
+  "en": "He swashes. He buckles. But, he also writes home every third Sunday and sends brains and treasure via post. He's a good zombie at heart.",
+  "zh": "他喜欢摇荡，也喜欢绳索。但是他也会每个月第三个星期六给家里寄信，还会邮寄一些脑子。他打心里是一名好僵尸。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "lands four tiles into your lawn",
+    "zh": "直接越过四格进入你的草坪"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.25,
+   "text": {
+    "en": "Average",
+    "zh": "一般"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ],
+ "variants": [
+  "feastivus_swashbuckler"
+ ]
+}

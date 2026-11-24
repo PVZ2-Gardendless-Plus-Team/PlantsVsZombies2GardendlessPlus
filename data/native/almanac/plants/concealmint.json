@@ -1,0 +1,41 @@
+{
+ "id": "concealmint",
+ "name": {
+  "en": "Conceal-mint",
+  "zh": "暗影薄荷"
+ },
+ "brief": {
+  "en": "Boosts shadow plants",
+  "zh": "强化暗影植物"
+ },
+ "description": {
+  "en": "Conceal-mints power up all shadow plants on the lawn, drag some number of zombies to their doom, and provide an additional temporary boost to Conceal-mint Family plants.",
+  "zh": "暗影薄荷在种植时将场上的几只僵尸拽入地下，并为所有暗影家族植物带来增益效果。"
+ },
+ "chat": {
+  "en": "Conceal-mint ducks ninja-like out of the party without telling a soul. \"Where's Conceal-mint?\" ask the other plants. They don't know. Nobody does. Conceal-mint is just that sneaky.",
+  "zh": "暗影薄荷像忍者一样，悄无声息地从队伍里溜走了。“暗影薄荷去哪了？”其他植物问道。他们不知道，谁也不知道，暗影薄荷就是这般神出鬼没。"
+ },
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "duration",
+   "value": 12
+  },
+  {
+   "type": "special",
+   "text": {
+    "en": "Dragging Zombies",
+    "zh": "拽下僵尸"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

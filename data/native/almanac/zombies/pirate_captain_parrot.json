@@ -1,0 +1,50 @@
+{
+ "id": "pirate_captain_parrot",
+ "name": {
+  "en": "Zombie Parrot",
+  "zh": "僵尸鹦鹉"
+ },
+ "world": "pirate",
+ "description": {
+  "en": "Quickly flies from the Captain to carry away a plant.",
+  "zh": "快速从船长的头顶飞出，抓走一株植物。"
+ },
+ "chat": {
+  "en": "He's a third generation aviation revolutionary. He wants to serve his pirate brethren like his father and his grandmother, Salty Anne, before him.",
+  "zh": "他造就了第三代飞行革新。他愿意效忠自己的海盗同伙们，就像他的父亲和祖母安妮·咸卫那样。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "can fly to plants in other lanes to take them away",
+    "zh": "可跨行飞向并偷走植物"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.4,
+   "text": {
+    "en": "Solid",
+    "zh": "略强"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 1,
+   "text": {
+    "en": "Flighty",
+    "zh": "飞速"
+   }
+  }
+ ],
+ "display_offset": [
+  0,
+  60
+ ]
+}

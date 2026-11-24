@@ -1,0 +1,34 @@
+{
+ "id": "abbot_armor2",
+ "name": {
+  "en": "Abbot Kettlehead Zombie",
+  "zh": "住持铁壶僵尸"
+ },
+ "world": "kongfu",
+ "description": {
+  "en": "His iron kettle headwear provides great protection from damage.",
+  "zh": "他的铁壶头盔使他极其抗揍。"
+ },
+ "chat": {
+  "en": "He filled the iron kettle with tea and clamped it on his head so that he could sometimes experience the dizzy drunk-feelings while drinking is prohibited.",
+  "zh": "饮酒是被禁止的，因此他将这个铁壶装满茶水后扣在头上，这样第二天早上也能因彻夜难眠体验到醉酒的眩晕感。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.7,
+   "text": {
+    "en": "Hardened",
+    "zh": "强化"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ]
+}

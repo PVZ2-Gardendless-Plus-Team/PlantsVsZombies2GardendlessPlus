@@ -1,0 +1,34 @@
+{
+ "id": "cowboy_armor1",
+ "name": {
+  "en": "Conehead Cowboy",
+  "zh": "路障牛仔"
+ },
+ "world": "cowboy",
+ "description": {
+  "en": "His cowhide cone gives him twice the toughness more than regular cowboys.",
+  "zh": "他的牛皮路障使他变得比普通的牛仔抗打两倍。"
+ },
+ "chat": {
+  "en": "The sheriff of these here parts. Please pull over the horse and pull out your driver's license, registration, and proof of brains.",
+  "zh": "我是本地的警官，请你们把马牵好，掏出你们的驾驶照，交出有脑子的证明。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.5,
+   "text": {
+    "en": "Protected",
+    "zh": "加强"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ]
+}

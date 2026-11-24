@@ -1,0 +1,52 @@
+{
+ "id": "jackolantern",
+ "name": {
+  "en": "Jack O' Lantern",
+  "zh": "杰克南瓜"
+ },
+ "brief": {
+  "en": "Fires jets of flame over a short distance",
+  "zh": "短距离内喷射火焰攻击"
+ },
+ "description": {
+  "en": "Jack O' Lanterns spray fire down a lane, doing extensive burning damage over a short distance.",
+  "zh": "杰克南瓜向本行前方喷射火焰，对短距离内的敌人造成灼烧伤害。"
+ },
+ "chat": {
+  "en": "\"Boo! Mwah-ha-ha-haaaaah,\" opines Jack O' Lantern. Oh, yes. Things and stuff are scheduled to be seriously spooky when he's around. Count on it.",
+  "zh": "“唔！！！呜哈哈哈！”杰克南瓜又开始吓大家。是的，当他在身边的时候，你就应该时刻做好被惊吓的准备了。好好期待一下吧。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "fire recharges over time",
+    "zh": "火焰需要时间恢复"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "3 Tiles",
+    "zh": "3 格"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

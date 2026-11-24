@@ -1,0 +1,46 @@
+{
+ "id": "prospector",
+ "name": {
+  "en": "Prospector Zombie",
+  "zh": "炸矿僵尸"
+ },
+ "world": "cowboy",
+ "description": {
+  "en": "Launches over your defenses when his fuse blows down.",
+  "zh": "会被自己的炸药发射并越过所有植物。"
+ },
+ "chat": {
+  "en": "\"There once was a zombie who got old, spending all his day looking for gold. 'Til one day in the rain, he finally ate the brains… and, wait, where's his other shoe?\"",
+  "zh": "“曾经有个僵尸，找到了黄金，于是此后他花费所有的时间寻找黄金。直到某个雨天，他终于吃光了身上携带的脑子……然后，等等，他的另一只鞋哪去了？”"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "appears on the left side of your lawn when dynamite explodes",
+    "zh": "炸药爆炸后会落在草坪的最左侧"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.25,
+   "text": {
+    "en": "Average",
+    "zh": "一般"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.4,
+   "text": {
+    "en": "Stiff",
+    "zh": "迟钝"
+   }
+  }
+ ]
+}

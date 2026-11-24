@@ -1,0 +1,44 @@
+{
+ "id": "xshot",
+ "name": {
+  "en": "Rotobaga",
+  "zh": "旋转芜菁"
+ },
+ "brief": {
+  "en": "Shoots along the diagonal, up to four directions at a time",
+  "zh": "向四个对角方向发射子弹"
+ },
+ "description": {
+  "en": "Rotobagas shoot projectiles along the four diagonals, in each direction that has a target.",
+  "zh": "旋转芜菁向四个对角方向发射子弹"
+ },
+ "chat": {
+  "en": "Sometimes Rotobaga hears the other plants gossiping about each other. \"Did you notice that so-and-so has been putting on weight?\" they might say. Or, \"I hear that so-and-so is dating so-and-so. Can you believe it?\" But Rotobaga isn't the kind of plant to engage in idle gossiping. She's not interested in talking about anyone behind their leaves. She does her best to rise above it.",
+  "zh": "有时候旋转芜菁会听到其他植物说别人闲话。比如说，“你发现那个谁谁谁又增重了吗？”又比如，“我听说谁谁谁和谁谁谁约上了呢。你能相信嘛？哈哈。”但是旋转芜菁不是那种喜欢参与闲聊的植物，她对在别人叶后说闲话不感兴趣。因此她总是尽可能“上升”到别的话题。"
+ },
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 10
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "4 Way",
+    "zh": "四向"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

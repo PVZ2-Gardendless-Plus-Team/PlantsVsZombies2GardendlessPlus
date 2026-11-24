@@ -1,0 +1,34 @@
+{
+ "id": "iceage_armor2",
+ "name": {
+  "en": "Cave Buckethead Zombie",
+  "zh": "洞窟铁桶僵尸"
+ },
+ "world": "ice",
+ "description": {
+  "en": "His stone \"bucket\" hat provides great protection from damage.",
+  "zh": "他头上的夹杂着铁块的石头“铁桶”使他极其抗揍。"
+ },
+ "chat": {
+  "en": "Cave Buckethead Zombie likes rocks. He likes rocks A LOT. He strapped a rock to his head and called it a bucket. None of the other Cave Zombies know a \"bucket\" is, but they like his style.",
+  "zh": "洞窟铁桶僵尸喜欢石头，非常喜欢。他把石头绑在头上，称之为“铁桶”。其他洞窟僵尸都不知道“铁桶”是什么，但他们喜欢他的作风。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.7,
+   "text": {
+    "en": "Hardened",
+    "zh": "强化"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ]
+}

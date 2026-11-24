@@ -1,0 +1,56 @@
+{
+ "id": "dino_bully_veteran",
+ "name": {
+  "en": "Jurassic Rockpuncher",
+  "zh": "侏罗纪打火石野人"
+ },
+ "world": "dino",
+ "description": {
+  "en": "Jurassic Rockpuncher pummels plants with rocks tied to his hands.",
+  "zh": "侏罗纪打火石野人用绑在手上的石头猛击植物。"
+ },
+ "chat": {
+  "en": "Somebody tied rocks to Jurassic Rockpuncher's hands. Being unable to remove them (because he had rocks tied to his hands), he was left with no choice but to roll with it.",
+  "zh": "有人把石头绑在了侏罗纪野人的手上。由于无法取下这些石头（因为他的手上绑着石头），他别无选择，只能拎着石头到处跑。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Damage",
+    "zh": "攻击"
+   },
+   "text": {
+    "en": "crushes plants with rocks tied to his hands",
+    "zh": "用绑在手上的打火石砸击植物"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "immune to Primal Peashooter's knockback",
+    "zh": "免疫原始豌豆射手的击退"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.8,
+   "text": {
+    "en": "Machined",
+    "zh": "重甲"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.4,
+   "text": {
+    "en": "Stiff",
+    "zh": "迟钝"
+   }
+  }
+ ]
+}

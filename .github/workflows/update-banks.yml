@@ -49,7 +49,7 @@ jobs:
         with:
           name: fmod-banks-Desktop
           path: audio/banks
-          repository: Mackery6969/MacksPVZ2-Again.Music
+          repository: PVZ2-Gardendless-Plus-Team/PlantsVsZombies2GardendlessPlus.Music
           run-id: ${{ inputs.run_id }}
           github-token: ${{ secrets.BANKS_TOKEN }}
 
@@ -69,7 +69,7 @@ jobs:
           fi
           git diff --cached --stat
           git commit -m "Update FMOD banks from Music ${MUSIC_SHA:0:7}" \
-            -m "Built by https://github.com/Mackery6969/MacksPVZ2-Again.Music/actions/runs/$RUN_ID"
+            -m "Built by https://github.com/PVZ2-Gardendless-Plus-Team/PlantsVsZombies2GardendlessPlus.Music/actions/runs/$RUN_ID"
           # master may have moved while this ran; the banks never conflict
           # with hand-made commits, so rebasing onto it is safe.
           for attempt in 1 2 3; do

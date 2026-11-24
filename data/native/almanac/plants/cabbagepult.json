@@ -1,0 +1,51 @@
+{
+ "id": "cabbagepult",
+ "name": {
+  "en": "Cabbage-pult",
+  "zh": "卷心菜投手"
+ },
+ "brief": {
+  "en": "Hurls cabbages over obstacles at the enemy",
+  "zh": "向僵尸投掷能跨越障碍物的卷心菜"
+ },
+ "description": {
+  "en": "Cabbage-pults hurl cabbages at the enemy.",
+  "zh": "卷心菜投手向敌人投掷卷心菜。"
+ },
+ "chat": {
+  "en": "Cabbage-pult received his doctorate in pulting from Harvest University. He knows a thing or two about launching hit way to the top. He also makes a mean soup.",
+  "zh": "卷心菜投手在哈丰大学的投掷专业获取了博士学位。他在投掷方面可谓登峰造极。他也懂得做出美味的热汤！"
+ },
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 40
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "Lobbed",
+    "zh": "抛物线"
+   }
+  },
+  {
+   "type": "plant_food",
+   "text": {
+    "en": "Full-screen Cabbage",
+    "zh": "全屏卷心菜"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

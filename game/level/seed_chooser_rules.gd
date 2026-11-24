@@ -144,17 +144,17 @@ static func level_has_water(level: Dictionary, board: Board) -> bool:
 func refusal(id: StringName) -> String:
 	var def := Data.plant(id)
 	if def == null:
-		return "unknown plant"
+		return tr("unknown plant")
 	if locked.has(id):
 		return ""
 	if not _unlock_all and not Saves.is_plant_unlocked(id):
-		return "not unlocked yet"
+		return tr("not unlocked yet")
 	if _excluded.has(id):
-		return "not allowed in this level"
+		return tr("not allowed in this level")
 	if _ban_sun_producers and def.has_tag(&"sun_producer"):
-		return "sun producers are not allowed"
+		return tr("sun producers are not allowed")
 	if not _has_water and def.has_tag(&"water_only"):
-		return "needs water"
+		return tr("needs water")
 	return ""
 
 

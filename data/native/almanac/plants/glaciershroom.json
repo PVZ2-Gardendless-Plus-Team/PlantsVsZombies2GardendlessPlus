@@ -1,0 +1,91 @@
+{
+ "id": "glaciershroom",
+ "name": {
+  "en": "Ice-shroom",
+  "zh": "寒冰菇"
+ },
+ "brief": {
+  "en": "Tap to freeze all zombies",
+  "zh": "点击冻结所有的僵尸"
+ },
+ "description": {
+  "en": "Click on Ice-shrooms to freeze and chill all zombies on the lawn.",
+  "zh": "点击寒冰菇冻结全屏的僵尸，此后需要一段时间恢复。"
+ },
+ "chat": {
+  "en": "His coldness can make even flames feel chilly; his gaze is like an icicle in winter, just one look can make you feel the bone-chilling coldness. If you ask him to tell a joke, even the air might freeze. That's why he's popular during summer.",
+  "zh": "他的冷酷程度可以让火焰都能感到寒冷。他的眼神就像是冬天的冰柱，看一眼就能让你感觉到透进骨子里的寒冷。如果你要他讲一个笑话，可能连空气都能冷得凝固。因此，他在夏天特别受欢迎。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Usage",
+    "zh": "用法"
+   },
+   "text": {
+    "en": "tap to freeze all zombies on the lawn",
+    "zh": "点击冻结所有的僵尸"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "emits cold mists that chill zombies",
+    "zh": "释放能令僵尸减速的冰雾"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "buffs nearby Winter-mint plants and freezes attacking zombies if Plant Fooded",
+    "zh": "施加叶绿素后，强化周围的寒冰家族植物，并冻结啃食他的僵尸"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 20
+  },
+  {
+   "type": "area",
+   "text": {
+    "en": "Full Board",
+    "zh": "全屏"
+   },
+   "name": {
+    "en": "CHILL AREA",
+    "zh": "冻结范围"
+   }
+  },
+  {
+   "type": "area",
+   "text": {
+    "en": "3x3",
+    "zh": "3x3 范围"
+   },
+   "name": {
+    "en": "CHILL AREA",
+    "zh": "冷冻范围"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

@@ -1,0 +1,50 @@
+{
+ "id": "iceage_hunter",
+ "name": {
+  "en": "Hunter Zombie",
+  "zh": "猎人僵尸"
+ },
+ "world": "ice",
+ "description": {
+  "en": "Zombie that can throw snow balls at range.",
+  "zh": "可以在一定范围内投掷雪球。"
+ },
+ "chat": {
+  "en": "Shhhhh ... Hunter Zombie didn't actually kill that sabertooth tiger. He found the skin at a thrift store. Also, he's a vegetarian. Tell no one.",
+  "zh": "嘘……猎人僵尸其实并没有杀死头上顶着的那只剑齿虎，这是在旧货店找到的虎皮。另外，他是个素食主义者，别告诉别人。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "snow balls cool down plants until they freeze into blocks",
+    "zh": "雪球能冷冻植物，直到植物被冻成冰块"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.6,
+   "text": {
+    "en": "Dense",
+    "zh": "结实"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.3,
+   "text": {
+    "en": "Creeper",
+    "zh": "静步"
+   }
+  }
+ ],
+ "display_offset": [
+  15,
+  0
+ ]
+}

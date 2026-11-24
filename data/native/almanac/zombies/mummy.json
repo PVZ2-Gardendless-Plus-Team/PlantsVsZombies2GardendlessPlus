@@ -1,0 +1,34 @@
+{
+ "id": "mummy",
+ "name": {
+  "en": "Mummy Zombie",
+  "zh": "木乃伊僵尸"
+ },
+ "world": "egypt",
+ "description": {
+  "en": "Regular mummified zombie.",
+  "zh": "普普通通的干尸。"
+ },
+ "chat": {
+  "en": "Is he a mummy? Is he a zombie? It turns out he's a zombie who's rolled himself in toilet paper to protect his fair skin. True fact!",
+  "zh": "他是干尸？还是僵尸？事实上他只是不小心把纸巾缠在身上了。这倒是真的。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.25,
+   "text": {
+    "en": "Average",
+    "zh": "一般"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ]
+}

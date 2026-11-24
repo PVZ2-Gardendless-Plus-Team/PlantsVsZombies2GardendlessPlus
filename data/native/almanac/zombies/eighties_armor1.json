@@ -1,0 +1,34 @@
+{
+ "id": "eighties_armor1",
+ "name": {
+  "en": "Neon Conehead",
+  "zh": "霓虹路障僵尸"
+ },
+ "world": "eighties",
+ "description": {
+  "en": "Cones provide protection and focus the sound of righteous tunes.",
+  "zh": "路障可提供保护，还能助他专注于纠正自己的曲调。"
+ },
+ "chat": {
+  "en": "Neon Conehead Zombie used to be a big believer in de-evolution, but then he forgot what it meant.",
+  "zh": "霓虹路障僵尸曾经是退化论的忠实信徒，但后来他忘记了退化论的含义。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.5,
+   "text": {
+    "en": "Protected",
+    "zh": "加强"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ]
+}

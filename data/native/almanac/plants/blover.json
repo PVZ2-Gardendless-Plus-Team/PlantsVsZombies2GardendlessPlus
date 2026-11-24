@@ -1,0 +1,59 @@
+{
+ "id": "blover",
+ "name": {
+  "en": "Blover",
+  "zh": "三叶草"
+ },
+ "brief": {
+  "en": "Blows away all flying and floating zombies",
+  "zh": "吹飞所有的飞行僵尸"
+ },
+ "description": {
+  "en": "Blovers blow away all zombies in the air.",
+  "zh": "三叶草会吹飞空中的所有僵尸。"
+ },
+ "chat": {
+  "en": "The luckiest stunt clover around, Blover is the most recent recipient of the Stunty Award. You can see his work in \"Bulb Fiction,\" \"Rooty\", and \"Finding Flower\". He also teaches stunt class on Tuesdays at the community center.",
+  "zh": "作为最幸运的特技三叶草，三叶草也是特技奖的获得者。你可以在“球茎小说”、“寻根”和“寻花”中看到他的作品。他还每周二在社区中心教特技课。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Usage",
+    "zh": "用途"
+   },
+   "text": {
+    "en": "single use, instant",
+    "zh": "一次性使用，立刻生效"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "blows away all flying zombies",
+    "zh": "吹飞所有空中的僵尸"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "area",
+   "text": {
+    "en": "Full Board",
+    "zh": "全屏"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

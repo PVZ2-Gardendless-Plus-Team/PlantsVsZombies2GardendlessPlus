@@ -37,4 +37,4 @@ func is_met() -> bool:
 
 
 func describe() -> String:
-	return "Plants lost: %d / %d allowed" % [_lost, allowed]
+	return tr("Plants lost: %d / %d allowed") % [_lost, allowed]

@@ -1,0 +1,56 @@
+{
+ "id": "peapod",
+ "name": {
+  "en": "Pea Pod",
+  "zh": "豌豆荚"
+ },
+ "brief": {
+  "en": "Plant multiple times on the same spot to multiply damage",
+  "zh": "多次重叠种植提高攻击力"
+ },
+ "description": {
+  "en": "Pea Pods can be planted in the same space for up to 5 times the destruction.",
+  "zh": "在同一格种植豌豆荚，能让他们的攻击力提升到至多 5 倍。"
+ },
+ "chat": {
+  "en": "Having studied Quantum Spatial Mechanics in Clown College, Pea Pod has been amusing families of all ages.",
+  "zh": "自从毕业于职业小丑学院的空间量子力学专业，豌豆荚就一直在取悦家里的老小。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "increases rate of fire with multiple plantings",
+    "zh": "多次种植，提高单次发射豌豆数量"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 20
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "Straight",
+    "zh": "直线"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

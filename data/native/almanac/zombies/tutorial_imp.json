@@ -1,0 +1,44 @@
+{
+ "id": "tutorial_imp",
+ "name": {
+  "en": "Imp",
+  "zh": "小鬼"
+ },
+ "world": "frontyard",
+ "description": {
+  "en": "Is hurled onto the lawn past your defenses, then shuffles ahead.",
+  "zh": "通常被丢到草坪中央，越过你的防线，然后再一拐一拐往前走。"
+ },
+ "chat": {
+  "en": "What he lacks in reach he more than makes up for with his bad attitude, or zombattitude as he likes to call it. Don't encourage him.",
+  "zh": "他更倾向于用他的消极态度弥补了他缺失的东西，他称之为“丧度”。别惯着他比较好。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.25,
+   "text": {
+    "en": "Average",
+    "zh": "一般"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.6,
+   "text": {
+    "en": "Hungry",
+    "zh": "饥渴"
+   }
+  }
+ ],
+ "variants": [
+  "sportzball_imp",
+  "easter_egg",
+  "easter_imp",
+  "valentines_imp",
+  "summer_imp",
+  "halloween_imp",
+  "feastivus_imp",
+  "holiday_imp"
+ ]
+}

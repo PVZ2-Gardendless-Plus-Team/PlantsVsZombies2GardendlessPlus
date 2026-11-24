@@ -1,0 +1,34 @@
+{
+ "id": "beach",
+ "name": {
+  "en": "Pompadour Zombie",
+  "zh": "飞机头僵尸"
+ },
+ "world": "beach",
+ "description": {
+  "en": "Regular beach bum zombie.",
+  "zh": "普通的在海滩游荡的僵尸。"
+ },
+ "chat": {
+  "en": "Pompadour Zombie recently noticed that he was wearing only one flip-flop. He THINKS he lost the other one while doing the limbo at a bonfire party the other night. But to be honest, that entire night is a little hazy ... and that flip-flop could be anywhere.",
+  "zh": "飞机头僵尸最近发现自己只穿了一只人字拖。他以为是前几天晚上在篝火晚会上跳 “凌波舞 ”时弄丢了另一只。但说实话，整个晚上他都有点不明所以……那只人字拖可能在任何地方。"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.25,
+   "text": {
+    "en": "Average",
+    "zh": "一般"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.5,
+   "text": {
+    "en": "Basic",
+    "zh": "普通"
+   }
+  }
+ ]
+}

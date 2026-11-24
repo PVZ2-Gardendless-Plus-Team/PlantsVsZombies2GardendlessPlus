@@ -328,7 +328,7 @@ func _refresh() -> void:
 			var id := chosen[i]
 			var b := _packet_button(id)
 			if id == SeedChooserRules.IMITATER and i > 0:
-				b.tooltip_text = "Imitater, copying %s" % _plant_name(chosen[i - 1])
+				b.tooltip_text = tr("Imitater, copying %s") % _plant_name(chosen[i - 1])
 				if not b.has_art():
 					b.text = "%s\n(%s)" % [_plant_name(id), _plant_name(chosen[i - 1])]
 			if rules.locked.has(id):
@@ -355,7 +355,7 @@ func _refresh() -> void:
 		# PVZGE greys out a packet once it is in the hand, or when it is refused.
 		b.modulate = Color.WHITE if allowed and not chosen.has(id) else Color(0.45, 0.45, 0.45)
 
-	_title.text = "Choose your seeds  (%d / %d)" % [chosen.size(), rules.slots]
+	_title.text = tr("Choose your seeds  (%d / %d)") % [chosen.size(), rules.slots]
 	if _plant_name_label.text == "" and not rules.candidates.is_empty():
 		_show_plant(rules.candidates[0])
 	_start.disabled = not can_start()
@@ -373,10 +373,10 @@ func _show_plant(id: StringName) -> void:
 	var def := Data.plant(id)
 	var lines := PackedStringArray()
 	if def != null:
-		lines.append("Cost: %d sun" % int(def.stat(&"sun_cost", 0)))
-		lines.append("Recharge: %ss" % str(def.stat(&"cooldown", 0)))
+		lines.append(tr("Cost: %d sun") % int(def.stat(&"sun_cost", 0)))
+		lines.append(tr("Recharge: %ss") % str(def.stat(&"cooldown", 0)))
 		if def.family != &"":
-			lines.append("Family: %s" % String(def.family).capitalize())
+			lines.append(tr("Family: %s") % String(def.family).capitalize())
 	var why := rules.refusal(id) if rules != null else ""
 	if why != "":
 		lines.append(why)

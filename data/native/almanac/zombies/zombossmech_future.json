@@ -1,0 +1,54 @@
+{
+ "id": "zombossmech_future",
+ "name": {
+  "en": "Zombot Tommorrow-tron",
+  "zh": "明日缔造者"
+ },
+ "world": "future",
+ "description": {
+  "en": "The Power Tile crushing creation from the Far Future.",
+  "zh": "来自遥远的未来，为破坏超能瓷砖而生。"
+ },
+ "chat": {
+  "en": "When Dr. Zomboss is nestled into the comfy folds of his futuristic cerebral control pod he almost finds it hard to be evil. Of course once he sees a lawn full of happy plants that puts him right back where it needs to be, hungry and evil.",
+  "zh": "当僵尸博士赖在他舒适的未来型大脑控制舱里时，他几乎很难再邪恶下去。当然，一旦他看到草坪上长满了快乐的植物，他就又回到了饥饿和邪恶的状态。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "missile attacks can destroy Power Tiles",
+    "zh": "导弹爆炸时可以摧毁超能瓷砖"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 1,
+   "text": {
+    "en": "Undying",
+    "zh": "不朽"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.6,
+   "text": {
+    "en": "Hungry",
+    "zh": "饥渴"
+   }
+  }
+ ],
+ "display_offset": [
+  -60,
+  -100
+ ],
+ "variants": [
+  "zombossmech_future2",
+  "zombossmech_modern1"
+ ]
+}

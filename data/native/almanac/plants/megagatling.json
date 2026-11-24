@@ -1,0 +1,76 @@
+{
+ "id": "megagatling",
+ "name": {
+  "en": "Mega Gatling Pea",
+  "zh": "超级机枪射手"
+ },
+ "brief": {
+  "en": "Fire 4 peas at a time",
+  "zh": "向敌人发射 4 颗豌豆，概率释放叶绿素效果"
+ },
+ "description": {
+  "en": "Mega Gatling Peas fire 4 peas at one time.",
+  "zh": "超级机枪豌豆射手每次发射 4 颗豌豆。"
+ },
+ "chat": {
+  "en": "\"I used to be an upgrade,\" says Mega Gatling Pea with uncharacteristic shyness.\"Now I'm my own plant, with my own ambitions, dreams and gym club memberships!\"",
+  "zh": "“我曾经是某株植物的升级款，”超级机枪豌豆非常害羞地说，“但是我现在是一株独立的植物了,我有自己的志向、梦想，还有健身房会员！”"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Firing Speed",
+    "zh": "射速"
+   },
+   "text": {
+    "en": "4x",
+    "zh": "4倍"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "upgrades to 5x firing speed if Plant Fooded",
+    "zh": "使用叶绿素后，升级成为5倍射速"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "has chance to randomly Plant Food himself",
+    "zh": "有概率自己发动叶绿素效果"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 20
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "Straight",
+    "zh": "直线"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

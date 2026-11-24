@@ -1,0 +1,34 @@
+{
+ "id": "dino",
+ "name": {
+  "en": "Jurassic Zombie",
+  "zh": "侏罗纪僵尸"
+ },
+ "world": "dino",
+ "description": {
+  "en": "Regular beard-having zombie from the unimaginable past.",
+  "zh": "普通的留着胡须，来自远古的僵尸。"
+ },
+ "chat": {
+  "en": "Jurassic Zombie is NOT primitive. See, he's wearing a tie and everything!",
+  "zh": "侏罗纪僵尸并不原始。看，他还打着领带呢！"
+ },
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.25,
+   "text": {
+    "en": "Average",
+    "zh": "一般"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.6,
+   "text": {
+    "en": "Hungry",
+    "zh": "饥渴"
+   }
+  }
+ ]
+}

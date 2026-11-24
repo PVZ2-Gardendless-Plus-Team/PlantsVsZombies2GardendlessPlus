@@ -1,0 +1,60 @@
+{
+ "id": "dark_gargantuar",
+ "name": {
+  "en": "Dark Ages Gargantuar",
+  "zh": "黑暗巨尸"
+ },
+ "world": "dark",
+ "description": {
+  "en": "Immense zombie who brings the hammer down.",
+  "zh": "巨尸总能一锤定音。"
+ },
+ "chat": {
+  "en": "When Dark Ages Gargantuar wants to find pantaloons that fit him, he has to shop at the \"Enormous & Towering\" store. He hates it though. It's embarrassing. He just wants to shop for clothes where all the other zombies shop.",
+  "zh": "当黑暗巨尸想找一条合身的裤子时，肯定会去 “巨大与高耸 ”商店购物。但他讨厌这样，太尴尬了。他只想在其他僵尸购物的地方买衣服。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Damage",
+    "zh": "攻击"
+   },
+   "text": {
+    "en": "crushes plants with hammer",
+    "zh": "用石锤摧毁植物"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "launches Imp Monk when damaged",
+    "zh": "受重伤时丢出僧侣小鬼"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.9,
+   "text": {
+    "en": "Great",
+    "zh": "巨大"
+   }
+  },
+  {
+   "type": "speed",
+   "level": 0.6,
+   "text": {
+    "en": "Hungry",
+    "zh": "饥渴"
+   }
+  }
+ ],
+ "display_offset": [
+  20,
+  -60
+ ]
+}

@@ -31,4 +31,4 @@ func load_state(state: Dictionary) -> void:
 
 
 func describe() -> String:
-	return "Sun spent: %d / %d" % [_spent, maximum]
+	return tr("Sun spent: %d / %d") % [_spent, maximum]

@@ -1,0 +1,41 @@
+{
+ "id": "ailmint",
+ "name": {
+  "en": "Ail-mint",
+  "zh": "剧毒薄荷"
+ },
+ "brief": {
+  "en": "Boosts poison plants and fungi",
+  "zh": "强化毒性植物和菌类"
+ },
+ "description": {
+  "en": "Ail-mints poison all zombies when planted and provide a temporary boost to all Ail-mint Family plants on the lawn.",
+  "zh": "剧毒薄荷在种植时使所有僵尸沾上毒液，并为所有剧毒家族植物带来增益效果。"
+ },
+ "chat": {
+  "en": "Ail-mint is quick to state that poison should not be taken internally. Or externally, for that matter. Really, just leave it alone. It's poison!",
+  "zh": "剧毒薄荷紧急声明：毒药不可内服。同理，也不可外用。真的，碰都别碰。那可是毒药！"
+ },
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "duration",
+   "value": 12
+  },
+  {
+   "type": "special",
+   "text": {
+    "en": "Poison",
+    "zh": "剧毒"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

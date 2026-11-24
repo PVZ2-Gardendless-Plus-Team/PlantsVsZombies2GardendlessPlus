@@ -1035,12 +1035,13 @@ func remove_object(row: int, col: int) -> void:
 	_objects.erase(Vector2i(col, row))
 
 
-## Living gravestones in one row, nearest the house first.
+## Living gravestones in one row, nearest the house first. One a grave buster
+## has sunk out of sight is left out, as PVZGE skips a hidden tombstone.
 func graves_in_row(row: int) -> Array:
 	var out: Array = []
 	for c in cols:
 		var o := object_at(row, c)
-		if o is Grave:
+		if o is Grave and not o.sunk:
 			out.append(o)
 	return out
 
@@ -1331,8 +1332,22 @@ func spawn_zombie(id: StringName, row: int, x_offset: float = 0.0,
 	z.died.connect(_on_zombie_gone)
 	z.tree_exiting.connect(_on_zombie_gone.bind(z))
 	z.reached_house.connect(_on_zombie_reached_house)
+	_meet(id)
 	Audio.play(&"zombie.spawn", z.position)
 	return z
+
+
+## Almanac pages for the zombies this lawn has shown; winning the level makes
+## them known, as PVZGE's _metZombies does.
+var met_zombies: Array[StringName] = []
+
+
+func _meet(id: StringName) -> void:
+	var page := AlmanacData.entry_for_zombie(id)
+	if page == &"" or met_zombies.has(page):
+		return
+	met_zombies.append(page)
+	Saves.discover_zombie(page, AlmanacData.MET)
 
 
 ## Spawns a zombie at a point on the lawn rather than off the right edge.

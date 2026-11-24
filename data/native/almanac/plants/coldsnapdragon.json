@@ -1,0 +1,63 @@
+{
+ "id": "coldsnapdragon",
+ "name": {
+  "en": "Cold Snapdragon",
+  "zh": "冰龙草"
+ },
+ "brief": {
+  "en": "Breaths icy mist in an area in front of it",
+  "zh": "向身前区域吐出冰雾"
+ },
+ "description": {
+  "en": "Cold Snapdragons breathe icy mist into 6 adjacent tiles that both slows and damage zombies.",
+  "zh": "冰龙草向毗邻的 6 格吐出能够减慢僵尸并造成伤害的冰雾。"
+ },
+ "chat": {
+  "en": "Cold Snapdragon gets chilly when anyone brings up his cousin Snapdragon. \"We just view temperature very differently, and I'd really rather not discuss it,\" he says. Yikes.",
+  "zh": "当有人提起他的堂兄火龙草时，冰龙草就会变得冷酷无情。他说：“我们对温度的看法很不一样，而且我真的不想讨论这个问题。”真是的。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Area",
+    "zh": "范围"
+   },
+   "text": {
+    "en": "damages and chills all zombies in the 6 tiles in front of it",
+    "zh": "对身前 6 个格子内的所有僵尸造成伤害并使他们减速"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 30
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "Close",
+    "zh": "接近"
+   }
+  },
+  {
+   "type": "special",
+   "text": {
+    "en": "Chill",
+    "zh": "冷冻"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

@@ -1,0 +1,52 @@
+{
+ "id": "cannon",
+ "name": {
+  "en": "Imp Cannon",
+  "zh": "小鬼炮"
+ },
+ "world": "pirate",
+ "description": {
+  "en": "Shoots Pirate Imps past your defenses. Eventually it can explode and rain down imps.",
+  "zh": "发射出海盗小鬼，越过你的防线。一段时间后爆炸并投掷出一大群小鬼。"
+ },
+ "chat": {
+  "en": "The Imps joined the Order of the Cannon Fraternity, Kappa Pea, and quickly rose through the ranks due to constant firing of their leadership.",
+  "zh": "这些小鬼们加入了“大炮兄弟经验会”“河童豆”。他们总能因为踢飞老大而不断晋升。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Damage",
+    "zh": "攻击"
+   },
+   "text": {
+    "en": "fires imps to mid-lawn",
+    "zh": "向草坪中央射出小鬼"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "explodes into a shower of imps if not destroyed quickly",
+    "zh": "未被及时处理则会炸膛迸发出一群小鬼"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "toughness",
+   "level": 0.6,
+   "text": {
+    "en": "Dense",
+    "zh": "结实"
+   }
+  }
+ ],
+ "display_offset": [
+  30,
+  0
+ ]
+}

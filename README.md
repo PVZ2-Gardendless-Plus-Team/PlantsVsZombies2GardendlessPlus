@@ -30,6 +30,7 @@ core/
   save/         Saves - per-level save slots, campaign progress, unlocks, coins
   rewards/      LevelReward - what winning a level hands out
   settings/     Settings - volumes, display and gameplay options
+  i18n/         I18n - languages, PVZGE's text, see docs/TRANSLATING.md
   lawn/         LawnComponent - world-level mechanics and abilities
   objectives/   Objective - a level's win and lose rules, as data
   data/         DataRegistry - loads entities, resolves inheritance, layers mods
@@ -48,7 +49,7 @@ data/
   native/       clean per-entity content the game actually loads
 tools/          extraction and conversion scripts (Python)
 tests/          headless test suite
-docs/           MODDING.md
+docs/           MODDING.md, TRANSLATING.md
 mods/           packs, plus example_pack as a working reference
 ```
 
@@ -69,6 +70,7 @@ Definitions load from `.tres` (typed, inspector-editable) or `.json`
 ## Running
 
 ```sh
+python tools/install_fmod.py        # FMOD audio (optional, see docs/AUDIO.md)
 godot --headless --import           # first time
 godot                               # play
 godot --headless tests/gameplay_test.tscn   # test suite

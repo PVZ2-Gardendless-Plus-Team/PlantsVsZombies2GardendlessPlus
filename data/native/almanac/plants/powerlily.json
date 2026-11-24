@@ -1,0 +1,49 @@
+{
+ "id": "powerlily",
+ "name": {
+  "en": "Power Lily",
+  "zh": "能量花"
+ },
+ "brief": {
+  "en": "Creates one Plant Food for use",
+  "zh": "产生一个叶绿素"
+ },
+ "description": {
+  "en": "Power Lilies create one Plant Food out of thin air.",
+  "zh": "能量花凭空变出一颗叶绿素。"
+ },
+ "chat": {
+  "en": "From seedling to sapling, to full grown foliage, Power Lily's experience as a life coach has shown her the best way to empower and support plants everywhere.",
+  "zh": "从种子到树苗，再到枝繁叶茂，能量花作为生命导师的经验足以成为她滋养其他植物的最好资本。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Usage",
+    "zh": "用途"
+   },
+   "text": {
+    "en": "single use, instant",
+    "zh": "一次性使用，立刻生效"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "creates one Plant Food",
+    "zh": "产出一颗叶绿素"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  }
+ ]
+}

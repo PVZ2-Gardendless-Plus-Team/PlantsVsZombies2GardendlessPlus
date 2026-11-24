@@ -1,0 +1,59 @@
+{
+ "id": "bamboozle",
+ "name": {
+  "en": "Bamboozle",
+  "zh": "整人竹"
+ },
+ "brief": {
+  "en": "Click on bamboo, then a tile, to launch bamboo sticks",
+  "zh": "点击后，选择一格发射竹竿"
+ },
+ "description": {
+  "en": "Bamboozles can fire 5 bamboo sticks at most.",
+  "zh": "整人竹可以发射最多 5 根竹竿。"
+ },
+ "chat": {
+  "en": "Only when confronting those skilled kongfu plants could you be defeated by a single straw.",
+  "zh": "唯有在技艺高超的武林植物面前，你才会连一根草都打不过。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Usage",
+    "zh": "用途"
+   },
+   "text": {
+    "en": "tap to arm, tap on target tile to fire",
+    "zh": "点击瞄准，再点击目标格子发射"
+   }
+  },
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "bamboo sticks turn into bamboo buskets when hitting the floor",
+    "zh": "竹竿在砸到地面时会变成竹篮"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 600
+  },
+  {
+   "type": "family"
+  }
+ ]
+}

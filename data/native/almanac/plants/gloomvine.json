@@ -1,0 +1,60 @@
+{
+ "id": "gloomvine",
+ "name": {
+  "en": "Gloom Vine",
+  "zh": "忧郁藤蔓"
+ },
+ "brief": {
+  "en": "Shoots in 8 directions",
+  "zh": "攻击自身为中心的范围内的僵尸"
+ },
+ "description": {
+  "en": "Gloom Vines power individual shadow plants and shoot zombie-damaging gloom in eight directions.",
+  "zh": "忧郁藤蔓使本格的暗影植物进入暗影状态。同时能向八个方向发射孢子，对僵尸造成伤害。"
+ },
+ "chat": {
+  "en": "Gloom Vine's gloomy exterior shouldn't be seen as implying a gloomy interior. His interior is gloomy, but for complicated personal reasons that go way back.",
+  "zh": "忧郁藤蔓那幽暗的外观并不暗示他幽暗的内心。虽说他的内心确实很幽暗，但那是长久以来的个人原因导致的。"
+ },
+ "special": [
+  {
+   "name": {
+    "en": "Special",
+    "zh": "特点"
+   },
+   "text": {
+    "en": "powers shadow plants within",
+    "zh": "激活本格的暗影植物"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 45
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "3x3",
+    "zh": "3x3 范围"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ],
+ "display_offset": [
+  0,
+  20
+ ]
+}

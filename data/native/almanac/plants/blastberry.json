@@ -1,0 +1,44 @@
+{
+ "id": "blastberry",
+ "name": {
+  "en": "Blastberry Vine",
+  "zh": "爆莓藤蔓"
+ },
+ "brief": {
+  "en": "Protects and lobs",
+  "zh": "提供保护并投掷榴弹"
+ },
+ "description": {
+  "en": "Blastberry Vines can be planted on top of other plants to provide increased defense and an additional attack in the form of lobbed projectiles that break into explosive bomblets.",
+  "zh": "爆莓藤蔓可以被种在其他植物身上，同时发射在半空中爆裂的榴弹，并向前弹射。"
+ },
+ "chat": {
+  "en": "Blastberry Vine snickers to himself. He imagines lobbing bomblets. He's been reading up on it and he knows it's gonna make a big splash when it happens. \"Soon,\" he whispers.",
+  "zh": "爆莓藤蔓暗自窃笑，他想象着自己投掷榴弹的场景。他已经研究了一阵子，深知一旦出手必将一鸣惊人。“让子弹飞一会，”他低语道。"
+ },
+ "stats": [
+  {
+   "type": "sun_cost"
+  },
+  {
+   "type": "recharge"
+  },
+  {
+   "type": "toughness"
+  },
+  {
+   "type": "damage",
+   "value": 15
+  },
+  {
+   "type": "range",
+   "text": {
+    "en": "Lobbed",
+    "zh": "抛物线"
+   }
+  },
+  {
+   "type": "family"
+  }
+ ]
+}
