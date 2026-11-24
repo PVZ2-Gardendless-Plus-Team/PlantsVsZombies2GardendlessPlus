@@ -731,8 +731,20 @@ These optional fields place the world on the map:
 | `order` | position among worlds, lowest first (default 0) |
 | `unlock_after` | campaign id that must be finished first; empty means open from the start. Naming a campaign whose mod is off leaves the world open |
 | `description` | line shown under the world's name |
-| `map_color` | page tint, as `"#rrggbb"`, until the map has art |
+| `world_map` | the floating-island map to draw the world on: a PVZGE world's codename (`egypt`, `pirate`, `cowboy`, `future`, `dark`, `beach`, `iceage`, `lostcity`, `eighties`, `dino`, `modern`, `kongfu`, `sky`, `epic`) or a `res://` path to a layout of your own. Empty draws a plain path of round nodes |
+| `map_color` | page tint, as `"#rrggbb"`, for a world without a `world_map` |
 | `hidden` | keep it off the map (reachable only by id) |
+
+With a `world_map`, levels land on that map's islands. A campaign that uses
+PVZGE's level ids (`egypt1`, `egypt2`, ...) gets PVZGE's own islands for them;
+any other campaign has its levels laid on the level islands in path order, so
+a five-level world uses the first five islands and the map stops after the
+fifth. The layouts live in `data/native/worldmaps/` and come out of PVZGE with
+`tools/dump_worldmaps.js` and `tools/extract_worldmaps.py`; a layout of your
+own uses the same format (layers of rigs, each drifting by its `factor` as the
+map scrolls, and `islands` with their `position`, `kind`, `levels` and
+`next`). The world chooser shows the world's PVZGE globe, or PVZGE's
+"Unknown" globe for a world with no PVZGE map.
 
 ```json
 {

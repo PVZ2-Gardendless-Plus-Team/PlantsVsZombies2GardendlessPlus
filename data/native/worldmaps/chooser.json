@@ -1,0 +1,320 @@
+{
+ "scale": 0.4,
+ "icons": [
+  {
+   "id": "Egypt",
+   "x": 0,
+   "world": "egypt",
+   "at_night": false,
+   "piece": {
+    "id": "Layout/Egypt",
+    "bundle": "wm_WorldmapAnimate_bd09174c",
+    "armature": "Egypt",
+    "animation": "Idle",
+    "xform": [
+     1,
+     0,
+     0,
+     1,
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "id": "Pirate",
+   "x": 660,
+   "world": "pirate",
+   "at_night": false,
+   "piece": {
+    "id": "Layout/Pirate",
+    "bundle": "wm_WorldmapAnimate_bd09174c",
+    "armature": "Pirate",
+    "animation": "Idle",
+    "xform": [
+     1,
+     0,
+     0,
+     1,
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "id": "Cowboy",
+   "x": 1320,
+   "world": "cowboy",
+   "at_night": false,
+   "piece": {
+    "id": "Layout/Cowboy",
+    "bundle": "wm_WorldmapAnimate_bd09174c",
+    "armature": "Cowboy",
+    "animation": "Idle",
+    "xform": [
+     1,
+     0,
+     0,
+     1,
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "id": "Future",
+   "x": 1980,
+   "world": "future",
+   "at_night": false,
+   "piece": {
+    "id": "Layout/Future",
+    "bundle": "wm_WorldmapAnimate_bd09174c",
+    "armature": "Future",
+    "animation": "Idle",
+    "xform": [
+     1,
+     0,
+     0,
+     1,
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "id": "Dark",
+   "x": 2640,
+   "world": "dark",
+   "at_night": true,
+   "piece": {
+    "id": "Layout/Dark",
+    "bundle": "wm_WorldmapAnimate_bd09174c",
+    "armature": "Dark",
+    "animation": "newAnimation",
+    "xform": [
+     1,
+     0,
+     0,
+     1,
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "id": "Beach",
+   "x": 3300,
+   "world": "beach",
+   "at_night": false,
+   "piece": {
+    "id": "Layout/Beach",
+    "bundle": "wm_WorldmapAnimate_bd09174c",
+    "armature": "Beach",
+    "animation": "newAnimation",
+    "xform": [
+     1,
+     0,
+     0,
+     1,
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "id": "IceAge",
+   "x": 3960,
+   "world": "iceage",
+   "at_night": false,
+   "piece": {
+    "id": "Layout/IceAge",
+    "bundle": "wm_WorldmapAnimate_bd09174c",
+    "armature": "Iceage",
+    "animation": "Idle",
+    "xform": [
+     1,
+     0,
+     0,
+     1,
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "id": "LostCity",
+   "x": 4620,
+   "world": "lostcity",
+   "at_night": false,
+   "piece": {
+    "id": "Layout/LostCity",
+    "bundle": "wm_WorldmapAnimate_bd09174c",
+    "armature": "LostCity",
+    "animation": "Idle",
+    "xform": [
+     1,
+     0,
+     0,
+     1,
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "id": "Kongfu",
+   "x": 5280,
+   "world": "kongfu",
+   "at_night": false,
+   "piece": {
+    "id": "Layout/Kongfu",
+    "bundle": "wm_WorldmapAnimate_bd09174c",
+    "armature": "Kongfu",
+    "animation": "newAnimation",
+    "xform": [
+     1,
+     0,
+     0,
+     1,
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "id": "Eighties",
+   "x": 5940,
+   "world": "eighties",
+   "at_night": true,
+   "piece": {
+    "id": "Layout/Eighties",
+    "bundle": "wm_WorldmapAnimate_bd09174c",
+    "armature": "Eighties",
+    "animation": "Idle",
+    "xform": [
+     1,
+     0,
+     0,
+     1,
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "id": "Dino",
+   "x": 6600,
+   "world": "dino",
+   "at_night": false,
+   "piece": {
+    "id": "Layout/Dino",
+    "bundle": "wm_WorldmapAnimate_bd09174c",
+    "armature": "Dino",
+    "animation": "Idle",
+    "xform": [
+     1,
+     0,
+     0,
+     1,
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "id": "Sky",
+   "x": 7260,
+   "world": "sky",
+   "at_night": false,
+   "piece": {
+    "id": "Layout/Sky",
+    "bundle": "wm_WorldmapAnimate_bd09174c",
+    "armature": "Sky",
+    "animation": "newAnimation",
+    "xform": [
+     1,
+     0,
+     0,
+     1,
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "id": "Modern",
+   "x": 7920,
+   "world": "modern",
+   "at_night": false,
+   "piece": {
+    "id": "Layout/Modern",
+    "bundle": "wm_WorldmapAnimate_bd09174c",
+    "armature": "Modern",
+    "animation": "Idle",
+    "xform": [
+     1,
+     0,
+     0,
+     1,
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "id": "Unknown",
+   "x": 8580,
+   "world": "",
+   "at_night": false,
+   "piece": {
+    "id": "Layout/Unknown",
+    "bundle": "wm_WorldmapAnimate_bd09174c",
+    "armature": "Unknown",
+    "animation": "Idle",
+    "xform": [
+     1,
+     0,
+     0,
+     1,
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "id": "Crack",
+   "x": 9240,
+   "world": "",
+   "at_night": false,
+   "piece": {
+    "id": "Layout/Crack",
+    "bundle": "wm_WorldmapAnimate_bd09174c",
+    "armature": "Crack",
+    "animation": "Idle",
+    "xform": [
+     1,
+     0,
+     0,
+     1,
+     0,
+     0
+    ]
+   }
+  }
+ ],
+ "mid": {
+  "id": "Mid",
+  "bundle": "wm_WorldmapAnimate_bd09174c",
+  "armature": "rotateEffect",
+  "animation": "Idle",
+  "xform": [
+   0.4,
+   -0.0,
+   0.0,
+   0.4,
+   0,
+   0
+  ]
+ },
+ "name_y": 49.68399999999997
+}
