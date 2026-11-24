@@ -20,8 +20,12 @@ extends Resource
 @export var unlock_after: StringName = &""
 ## Line shown under the world's name.
 @export var description: String = ""
-## Tint for the world's page, until the map has real art.
+## Tint for the world's page when it has no island map.
 @export var map_color: Color = Color(0.25, 0.45, 0.2)
+## The floating-island map the world is drawn on: a PVZGE world's codename
+## (`egypt`, `modern`...) for one of data/native/worldmaps/, or a path to a
+## layout file of a pack's own. Empty draws the plain path of level nodes.
+@export var world_map: String = ""
 ## Hidden from the world map, for campaigns that are only reached by id
 ## (test runs, a pack's internal sequences).
 @export var hidden: bool = false
@@ -39,6 +43,7 @@ static func from_dict(d: Dictionary) -> CampaignDef:
 	c.unlock_after = StringName(d.get("unlock_after", &""))
 	c.description = String(d.get("description", ""))
 	c.hidden = bool(d.get("hidden", false))
+	c.world_map = String(d.get("world_map", ""))
 	if d.has("map_color"):
 		c.map_color = Color.from_string(String(d["map_color"]), c.map_color)
 	for level_id in (d.get("levels", []) as Array):

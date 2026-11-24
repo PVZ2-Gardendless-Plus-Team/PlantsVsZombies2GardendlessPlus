@@ -1,0 +1,5493 @@
+{
+ "codename": "iceage",
+ "res": "Iceage",
+ "difficulty": 3,
+ "at_night": false,
+ "epic_target": "epic_iceage",
+ "intro": "",
+ "starting_levels": [
+  "iceage1"
+ ],
+ "levels": [
+  "iceage1",
+  "iceage2",
+  "iceage3",
+  "iceage4",
+  "iceage5",
+  "iceage6",
+  "iceage7",
+  "iceage8",
+  "iceage9",
+  "iceage10",
+  "iceage11",
+  "iceage12",
+  "iceage13",
+  "iceage14",
+  "iceage15",
+  "iceage16",
+  "iceage17",
+  "iceage18",
+  "iceage19",
+  "iceage20",
+  "iceage21",
+  "iceage22",
+  "iceage23",
+  "iceage24",
+  "iceage25",
+  "iceage26",
+  "iceage27",
+  "iceage28",
+  "iceage29",
+  "iceage30",
+  "iceage31",
+  "iceage32",
+  "iceage33",
+  "iceage34",
+  "iceage35",
+  "iceage36",
+  "iceage37",
+  "iceage38",
+  "iceage39",
+  "iceage40",
+  "appease2_0",
+  "sweetpotato0",
+  "pepper0"
+ ],
+ "plants": [
+  "hotpotato",
+  "pepperpult",
+  "chardguard",
+  "stunion",
+  "xshot",
+  "firepeashooter",
+  "hurrikale",
+  "jackolantern"
+ ],
+ "layers": [
+  {
+   "kind": "pieces",
+   "factor": 0.0,
+   "origin": [
+    0,
+    0
+   ],
+   "pieces": [
+    {
+     "id": "FarTotal",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "FarTotal",
+     "animation": "Idle",
+     "xform": [
+      0.8,
+      -0.0,
+      -0.0,
+      0.8,
+      0.0,
+      -0.0
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "pieces",
+   "factor": 0.05,
+   "origin": [
+    2884.03,
+    30.72
+   ],
+   "pieces": [
+    {
+     "id": "Far/stars",
+     "bundle": "wm_StarClouds_47aabd6b",
+     "armature": "Stars",
+     "animation": "Idle",
+     "xform": [
+      1.0,
+      -0.0,
+      -0.0,
+      1.0,
+      0.0,
+      -0.0
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "pieces",
+   "factor": 0.1,
+   "origin": [
+    2884.03,
+    30.72
+   ],
+   "pieces": [
+    {
+     "id": "Far/starClouds",
+     "bundle": "wm_StarClouds_47aabd6b",
+     "armature": "StarCloud",
+     "animation": "Idle",
+     "xform": [
+      1.0,
+      -0.0,
+      -0.0,
+      1.0,
+      0.0,
+      -0.0
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "pieces",
+   "factor": 0.12,
+   "origin": [
+    -30.74,
+    30.72
+   ],
+   "pieces": [
+    {
+     "id": "Far/aurora",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Aurora",
+     "animation": "newAnimation",
+     "xform": [
+      1.0,
+      -0.0,
+      -0.0,
+      1.0,
+      0.0,
+      -0.0
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "pieces",
+   "factor": 0.3,
+   "origin": [
+    1851.03,
+    -253.25
+   ],
+   "pieces": [
+    {
+     "id": "Far/far11",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Far",
+     "animation": "i1",
+     "xform": [
+      1.0,
+      -0.0,
+      -0.0,
+      1.0,
+      0.0,
+      -0.0
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "pieces",
+   "factor": 0.4,
+   "origin": [
+    164.04,
+    138.62
+   ],
+   "pieces": [
+    {
+     "id": "Far/far1",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Far",
+     "animation": "i2",
+     "xform": [
+      1.0,
+      -0.0,
+      -0.0,
+      1.0,
+      0.0,
+      -0.0
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "pieces",
+   "factor": 0.4,
+   "origin": [
+    4904.49,
+    138.62
+   ],
+   "pieces": [
+    {
+     "id": "Far/far23",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Far",
+     "animation": "i2",
+     "xform": [
+      1.0,
+      -0.0,
+      -0.0,
+      1.0,
+      0.0,
+      -0.0
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "pieces",
+   "factor": 0.4,
+   "origin": [
+    633.37,
+    91.21
+   ],
+   "pieces": [
+    {
+     "id": "Far/far3",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Far",
+     "animation": "i1",
+     "xform": [
+      1.0,
+      -0.0,
+      -0.0,
+      1.0,
+      0.0,
+      -0.0
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "pieces",
+   "factor": 0.4,
+   "origin": [
+    1237.06,
+    -109.81
+   ],
+   "pieces": [
+    {
+     "id": "Far/far5",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Far",
+     "animation": "i1",
+     "xform": [
+      1.0,
+      -0.0,
+      -0.0,
+      1.0,
+      0.0,
+      -0.0
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "pieces",
+   "factor": 0.4,
+   "origin": [
+    1199.89,
+    179.02
+   ],
+   "pieces": [
+    {
+     "id": "Far/far6",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Far",
+     "animation": "i0",
+     "xform": [
+      1.0,
+      -0.0,
+      -0.0,
+      1.0,
+      0.0,
+      -0.0
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "pieces",
+   "factor": 0.4,
+   "origin": [
+    3034.17,
+    -138.28
+   ],
+   "pieces": [
+    {
+     "id": "Far/far14",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Far",
+     "animation": "i2",
+     "xform": [
+      1.0,
+      -0.0,
+      -0.0,
+      1.0,
+      0.0,
+      -0.0
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "pieces",
+   "factor": 0.5,
+   "origin": [
+    -90.02,
+    -151.96
+   ],
+   "pieces": [
+    {
+     "id": "Far/far0",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Far",
+     "animation": "i1",
+     "xform": [
+      1.0,
+      -0.0,
+      -0.0,
+      1.0,
+      0.0,
+      -0.0
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "pieces",
+   "factor": 0.4,
+   "origin": [
+    4719.91,
+    -151.96
+   ],
+   "pieces": [
+    {
+     "id": "Far/far22",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Far",
+     "animation": "i1",
+     "xform": [
+      1.0,
+      -0.0,
+      -0.0,
+      1.0,
+      0.0,
+      -0.0
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "pieces",
+   "factor": 0.5,
+   "origin": [
+    2098.48,
+    -111.35
+   ],
+   "pieces": [
+    {
+     "id": "Far/far8",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Far",
+     "animation": "i2",
+     "xform": [
+      1.0,
+      -0.0,
+      -0.0,
+      1.0,
+      0.0,
+      -0.0
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "pieces",
+   "factor": 0.6,
+   "origin": [
+    1184.74,
+    -108.44
+   ],
+   "pieces": [
+    {
+     "id": "Far/far4",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Far",
+     "animation": "i2",
+     "xform": [
+      1.0,
+      -0.0,
+      -0.0,
+      1.0,
+      0.0,
+      -0.0
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "pieces",
+   "factor": 0.7,
+   "origin": [
+    2931.78,
+    -32.31
+   ],
+   "pieces": [
+    {
+     "id": "Far/far7",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Far",
+     "animation": "i2",
+     "xform": [
+      1.0,
+      -0.0,
+      -0.0,
+      1.0,
+      0.0,
+      -0.0
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "pieces",
+   "factor": 0.7,
+   "origin": [
+    6229.16,
+    -163.44
+   ],
+   "pieces": [
+    {
+     "id": "Far/far13",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Far",
+     "animation": "i0",
+     "xform": [
+      1.0,
+      -0.0,
+      -0.0,
+      1.0,
+      0.0,
+      -0.0
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "pieces",
+   "factor": 0.75,
+   "origin": [
+    4132.74,
+    -179.56
+   ],
+   "pieces": [
+    {
+     "id": "Far/far10",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Far",
+     "animation": "i0",
+     "xform": [
+      1.0,
+      -0.0,
+      -0.0,
+      1.0,
+      0.0,
+      -0.0
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "pieces",
+   "factor": 0.8,
+   "origin": [
+    961.63,
+    -84.86
+   ],
+   "pieces": [
+    {
+     "id": "Far/far2",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Far",
+     "animation": "i0",
+     "xform": [
+      1.0,
+      -0.0,
+      -0.0,
+      1.0,
+      0.0,
+      -0.0
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "pieces",
+   "factor": 0.8,
+   "origin": [
+    4109.06,
+    201.78
+   ],
+   "pieces": [
+    {
+     "id": "Far/far9",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Far",
+     "animation": "i1",
+     "xform": [
+      1.0,
+      -0.0,
+      -0.0,
+      1.0,
+      0.0,
+      -0.0
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "pieces",
+   "factor": 0.8,
+   "origin": [
+    9953.26,
+    162.85
+   ],
+   "pieces": [
+    {
+     "id": "Far/far17",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Far",
+     "animation": "i2",
+     "xform": [
+      1.0,
+      -0.0,
+      -0.0,
+      1.0,
+      0.0,
+      -0.0
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "pieces",
+   "factor": 0.8,
+   "origin": [
+    9234.45,
+    -124.48
+   ],
+   "pieces": [
+    {
+     "id": "Far/far18",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Far",
+     "animation": "i1",
+     "xform": [
+      1.0,
+      -0.0,
+      -0.0,
+      1.0,
+      0.0,
+      -0.0
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "pieces",
+   "factor": 0.8,
+   "origin": [
+    5168.5,
+    242.35
+   ],
+   "pieces": [
+    {
+     "id": "Far/far12",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Far",
+     "animation": "i2",
+     "xform": [
+      1.0,
+      -0.0,
+      -0.0,
+      1.0,
+      0.0,
+      -0.0
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "pieces",
+   "factor": 0.8,
+   "origin": [
+    8684.12,
+    -119.62
+   ],
+   "pieces": [
+    {
+     "id": "Far/far19",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Far",
+     "animation": "i2",
+     "xform": [
+      1.0,
+      -0.0,
+      -0.0,
+      1.0,
+      0.0,
+      -0.0
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "pieces",
+   "factor": 0.8,
+   "origin": [
+    6844.55,
+    167.16
+   ],
+   "pieces": [
+    {
+     "id": "Far/far15",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Far",
+     "animation": "i1",
+     "xform": [
+      1.0,
+      -0.0,
+      -0.0,
+      1.0,
+      0.0,
+      -0.0
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "pieces",
+   "factor": 0.85,
+   "origin": [
+    8245.83,
+    -170.7
+   ],
+   "pieces": [
+    {
+     "id": "Far/far16",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Far",
+     "animation": "i2",
+     "xform": [
+      1.0,
+      -0.0,
+      -0.0,
+      1.0,
+      0.0,
+      -0.0
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "pieces",
+   "factor": 0.85,
+   "origin": [
+    8913.76,
+    161.32
+   ],
+   "pieces": [
+    {
+     "id": "Far/far21",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Far",
+     "animation": "i0",
+     "xform": [
+      1.0,
+      -0.0,
+      -0.0,
+      1.0,
+      0.0,
+      -0.0
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "pieces",
+   "factor": 0.9,
+   "origin": [
+    6546.47,
+    66.45
+   ],
+   "pieces": [
+    {
+     "id": "Far/far20",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Far",
+     "animation": "i1",
+     "xform": [
+      1.0,
+      -0.0,
+      -0.0,
+      1.0,
+      0.0,
+      -0.0
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "pieces",
+   "factor": 0.65,
+   "origin": [
+    7691.48,
+    61.36
+   ],
+   "pieces": [
+    {
+     "id": "Far/extension_cloud",
+     "bundle": "wm_CloudAnimate_3c1364a1",
+     "armature": "Clouds",
+     "animation": "Idle",
+     "xform": [
+      1.0,
+      -0.0,
+      -0.0,
+      1.0,
+      0.0,
+      -0.0
+     ],
+     "time_scale": 0.2,
+     "color": [
+      1.0,
+      1.0,
+      1.0,
+      0.361
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "pieces",
+   "factor": 1.0,
+   "origin": [
+    0,
+    0
+   ],
+   "pieces": [
+    {
+     "id": "Level_Islands/IceageDANGERROOM/Main",
+     "bundle": "wm_LevelNodeAnimate_a05134aa",
+     "armature": "Main",
+     "animation": "Idle_Locked",
+     "xform": [
+      0.4,
+      -0.0,
+      -0.0,
+      0.4,
+      6179.506,
+      -1.133
+     ]
+    },
+    {
+     "id": "Level_Islands/IceageDANGERROOM2/Main",
+     "bundle": "wm_LevelNodeAnimate_a05134aa",
+     "armature": "Main",
+     "animation": "Idle_Locked",
+     "xform": [
+      0.4,
+      -0.0,
+      -0.0,
+      0.4,
+      11387.804,
+      -1.133
+     ]
+    },
+    {
+     "id": "Level_Islands/Level1/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "PlayerHouse",
+     "animation": "Idle",
+     "xform": [
+      0.7,
+      -0.0,
+      -0.0,
+      0.7,
+      0.0,
+      80.464
+     ]
+    },
+    {
+     "id": "Level_Islands/HotPotato/tree",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Tree",
+     "animation": "idle",
+     "xform": [
+      0.6,
+      -0.0,
+      -0.0,
+      0.6,
+      329.661,
+      80.085
+     ]
+    },
+    {
+     "id": "Level_Islands/HotPotato/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Island",
+     "animation": "i0",
+     "xform": [
+      0.6,
+      -0.0,
+      -0.0,
+      0.6,
+      290.237,
+      73.018
+     ]
+    },
+    {
+     "id": "Level_Islands/HotPotato/float",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Float",
+     "animation": "i0",
+     "xform": [
+      0.6,
+      -0.0,
+      -0.0,
+      0.6,
+      381.646,
+      70.043
+     ]
+    },
+    {
+     "id": "Level_Islands/Level2/tree",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Bone",
+     "animation": "b",
+     "xform": [
+      0.6,
+      -0.0,
+      -0.0,
+      0.6,
+      514.259,
+      31.476
+     ]
+    },
+    {
+     "id": "Level_Islands/Level2/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Island",
+     "animation": "i2",
+     "xform": [
+      0.6,
+      -0.0,
+      -0.0,
+      0.6,
+      511.003,
+      38.562
+     ]
+    },
+    {
+     "id": "Level_Islands/Level2/snow",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Snow",
+     "animation": "idle",
+     "xform": [
+      0.6,
+      -0.0,
+      -0.0,
+      0.6,
+      514.259,
+      12.379
+     ]
+    },
+    {
+     "id": "Level_Islands/Level3/grass",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Grass",
+     "animation": "idle",
+     "xform": [
+      -0.5616,
+      -0.2111,
+      -0.2111,
+      0.5616,
+      747.758,
+      -57.097
+     ]
+    },
+    {
+     "id": "Level_Islands/Level3/grass1",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Grass",
+     "animation": "static",
+     "xform": [
+      0.4561,
+      -0.205,
+      0.205,
+      0.4561,
+      677.429,
+      -16.642
+     ]
+    },
+    {
+     "id": "Level_Islands/Level3/float0",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Float",
+     "animation": "i0",
+     "xform": [
+      0.6,
+      -0.0,
+      -0.0,
+      0.6,
+      640.618,
+      39.635
+     ]
+    },
+    {
+     "id": "Level_Islands/Level3/float1",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Float",
+     "animation": "i0",
+     "xform": [
+      -0.5953,
+      -0.0752,
+      0.0752,
+      -0.5953,
+      875.316,
+      8.523
+     ]
+    },
+    {
+     "id": "Level_Islands/Level3/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Island",
+     "animation": "i1",
+     "xform": [
+      0.6,
+      -0.0,
+      -0.0,
+      0.6,
+      719.121,
+      -15.51
+     ]
+    },
+    {
+     "id": "Level_Islands/Level4/tree",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Tree",
+     "animation": "idle",
+     "xform": [
+      -0.72,
+      -0.0,
+      -0.0,
+      0.72,
+      913.7692,
+      -65.023
+     ]
+    },
+    {
+     "id": "Level_Islands/Level4/grass",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Grass",
+     "animation": "idle",
+     "xform": [
+      -0.674,
+      -0.2533,
+      -0.2533,
+      0.674,
+      991.5508,
+      -72.463
+     ]
+    },
+    {
+     "id": "Level_Islands/Level4/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Island",
+     "animation": "i2",
+     "xform": [
+      0.72,
+      -0.0,
+      -0.0,
+      0.72,
+      946.768,
+      -61.441
+     ]
+    },
+    {
+     "id": "Level_Islands/Level4/float0",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Float",
+     "animation": "i0",
+     "xform": [
+      0.72,
+      -0.0,
+      -0.0,
+      0.72,
+      846.904,
+      -74.509
+     ],
+     "time_scale": 0.5
+    },
+    {
+     "id": "Level_Islands/Level4/float1",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Float",
+     "animation": "s1",
+     "xform": [
+      0.5555,
+      0.2267,
+      -0.2267,
+      0.5555,
+      1054.4416,
+      -5.6446
+     ],
+     "time_scale": 0.5
+    },
+    {
+     "id": "Level_Islands/GiftBox0/tree",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Tree",
+     "animation": "idle",
+     "xform": [
+      0.5,
+      -0.0,
+      -0.0,
+      0.5,
+      1242.593,
+      -2.664
+     ]
+    },
+    {
+     "id": "Level_Islands/GiftBox0/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Island",
+     "animation": "i0",
+     "xform": [
+      0.6,
+      -0.0,
+      -0.0,
+      0.6,
+      1206.029,
+      -4.808
+     ]
+    },
+    {
+     "id": "Level_Islands/GiftBox0/float0",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Float",
+     "animation": "i0",
+     "xform": [
+      0.6,
+      -0.0,
+      -0.0,
+      0.6,
+      1122.809,
+      -15.698
+     ],
+     "time_scale": 0.5
+    },
+    {
+     "id": "Level_Islands/Level5/tree",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Bone",
+     "animation": "b",
+     "xform": [
+      0.6,
+      -0.0,
+      -0.0,
+      0.6,
+      1394.475,
+      47.101
+     ]
+    },
+    {
+     "id": "Level_Islands/Level5/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Island",
+     "animation": "i2",
+     "xform": [
+      0.6,
+      -0.0,
+      -0.0,
+      0.6,
+      1391.219,
+      54.187
+     ]
+    },
+    {
+     "id": "Level_Islands/Level5/snow",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Snow",
+     "animation": "idle",
+     "xform": [
+      0.6,
+      -0.0,
+      -0.0,
+      0.6,
+      1394.475,
+      28.004
+     ],
+     "time_scale": 0.8
+    },
+    {
+     "id": "Level_Islands/Level6/grass",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Tree",
+     "animation": "idle",
+     "xform": [
+      0.72,
+      -0.0,
+      -0.0,
+      0.72,
+      1636.3466,
+      72.5584
+     ]
+    },
+    {
+     "id": "Level_Islands/Level6/grass1",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Tree",
+     "animation": "idle",
+     "xform": [
+      -0.6,
+      -0.0,
+      -0.0,
+      0.6,
+      1538.9306,
+      109.8196
+     ]
+    },
+    {
+     "id": "Level_Islands/Level6/float0",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Float",
+     "animation": "i0",
+     "xform": [
+      0.72,
+      -0.0,
+      -0.0,
+      0.72,
+      1494.7574,
+      177.352
+     ]
+    },
+    {
+     "id": "Level_Islands/Level6/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Island",
+     "animation": "i1",
+     "xform": [
+      0.72,
+      -0.0,
+      -0.0,
+      0.72,
+      1588.961,
+      111.178
+     ]
+    },
+    {
+     "id": "Level_Islands/Level6/float2",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Float",
+     "animation": "i1",
+     "xform": [
+      0.6,
+      -0.0,
+      -0.0,
+      0.6,
+      1694.003,
+      190.6576
+     ],
+     "time_scale": 0.5
+    },
+    {
+     "id": "Level_Islands/PepperPult/grass",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Grass",
+     "animation": "idle",
+     "xform": [
+      -0.5616,
+      -0.2111,
+      -0.2111,
+      0.5616,
+      1827.475,
+      45.159
+     ]
+    },
+    {
+     "id": "Level_Islands/PepperPult/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Island",
+     "animation": "i2",
+     "xform": [
+      0.6,
+      -0.0,
+      -0.0,
+      0.6,
+      1790.156,
+      54.344
+     ]
+    },
+    {
+     "id": "Level_Islands/PepperPult/float0",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Float",
+     "animation": "i0",
+     "xform": [
+      -0.6,
+      -0.0,
+      -0.0,
+      0.6,
+      1866.14,
+      93.452
+     ],
+     "time_scale": 0.5
+    },
+    {
+     "id": "Level_Islands/Level7/bone",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Bone",
+     "animation": "b",
+     "xform": [
+      -0.7,
+      -0.0,
+      -0.0,
+      0.7,
+      1972.599,
+      -19.52
+     ]
+    },
+    {
+     "id": "Level_Islands/Level7/grass",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Grass",
+     "animation": "idle",
+     "xform": [
+      0.4,
+      -0.0,
+      -0.0,
+      0.4,
+      1990.101,
+      -49.701
+     ]
+    },
+    {
+     "id": "Level_Islands/Level7/float0",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Float",
+     "animation": "i0",
+     "xform": [
+      0.6,
+      -0.0,
+      -0.0,
+      0.6,
+      1907.593,
+      -30.026
+     ]
+    },
+    {
+     "id": "Level_Islands/Level7/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Island",
+     "animation": "i1",
+     "xform": [
+      0.6,
+      -0.0,
+      -0.0,
+      0.6,
+      1976.627,
+      -6.036
+     ]
+    },
+    {
+     "id": "Level_Islands/Level7/float2",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Float",
+     "animation": "i1",
+     "xform": [
+      -0.5,
+      -0.0,
+      -0.0,
+      0.5,
+      2077.013,
+      27.732
+     ],
+     "time_scale": 0.5
+    },
+    {
+     "id": "Level_Islands/Level8/tree",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Grass",
+     "animation": "idle",
+     "xform": [
+      0.72,
+      -0.0,
+      -0.0,
+      0.72,
+      2219.7258,
+      -76.6828
+     ]
+    },
+    {
+     "id": "Level_Islands/Level8/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Island",
+     "animation": "i0",
+     "xform": [
+      0.72,
+      -0.0,
+      -0.0,
+      0.72,
+      2175.291,
+      -76.144
+     ]
+    },
+    {
+     "id": "Level_Islands/Level8/snow",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Snow",
+     "animation": "idle",
+     "xform": [
+      0.72,
+      -0.0,
+      -0.0,
+      0.72,
+      2179.1982,
+      -107.5636
+     ],
+     "time_scale": 1.2
+    },
+    {
+     "id": "Level_Islands/Level8/float0",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Float",
+     "animation": "i0",
+     "xform": [
+      0.36,
+      -0.0,
+      -0.0,
+      0.36,
+      2245.2738,
+      -19.0876
+     ]
+    },
+    {
+     "id": "Level_Islands/GiftBox1/tree",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Tree",
+     "animation": "idle",
+     "xform": [
+      0.5888,
+      -0.1155,
+      0.1155,
+      0.5888,
+      2396.319,
+      -35.16
+     ]
+    },
+    {
+     "id": "Level_Islands/GiftBox1/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Island",
+     "animation": "i2",
+     "xform": [
+      0.6,
+      -0.0,
+      -0.0,
+      0.6,
+      2369.51,
+      -33.138
+     ]
+    },
+    {
+     "id": "Level_Islands/GiftBox1/float0",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Float",
+     "animation": "i0",
+     "xform": [
+      -0.5,
+      -0.0,
+      -0.0,
+      0.5,
+      2446.696,
+      -46.909
+     ]
+    },
+    {
+     "id": "Level_Islands/GiftBox1/float1",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Float",
+     "animation": "i1",
+     "xform": [
+      0.5,
+      -0.0,
+      -0.0,
+      0.5,
+      2454.243,
+      22.899
+     ]
+    },
+    {
+     "id": "Level_Islands/Level9/bone",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Bone",
+     "animation": "b",
+     "xform": [
+      -0.7115,
+      0.3657,
+      0.3657,
+      0.7115,
+      2574.175,
+      12.055
+     ]
+    },
+    {
+     "id": "Level_Islands/Level9/grass",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Grass",
+     "animation": "idle",
+     "xform": [
+      0.3407,
+      0.2096,
+      -0.2096,
+      0.3407,
+      2629.608,
+      -4.799
+     ]
+    },
+    {
+     "id": "Level_Islands/Level9/float0",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Float",
+     "animation": "i0",
+     "xform": [
+      0.6,
+      -0.0,
+      -0.0,
+      0.6,
+      2521.471,
+      8.725
+     ]
+    },
+    {
+     "id": "Level_Islands/Level9/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Island",
+     "animation": "i1",
+     "xform": [
+      0.6,
+      -0.0,
+      -0.0,
+      0.6,
+      2590.505,
+      32.715
+     ]
+    },
+    {
+     "id": "Level_Islands/Level9/float2",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Float",
+     "animation": "i1",
+     "xform": [
+      -0.7,
+      -0.0,
+      -0.0,
+      0.7,
+      2672.438,
+      93.138
+     ],
+     "time_scale": 0.5
+    },
+    {
+     "id": "Level_Islands/Level9/snow",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Snow",
+     "animation": "idle",
+     "xform": [
+      1.0,
+      -0.0,
+      -0.0,
+      1.0,
+      2598.561,
+      0.169
+     ]
+    },
+    {
+     "id": "Level_Islands/Level9/wind",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Wind",
+     "animation": "Idle",
+     "xform": [
+      1.0,
+      -0.0,
+      -0.0,
+      1.0,
+      2581.017,
+      56.088
+     ],
+     "time_scale": 1.4
+    },
+    {
+     "id": "Level_Islands/Level10/tree",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Tree",
+     "animation": "idle",
+     "xform": [
+      -0.72,
+      -0.0,
+      -0.0,
+      0.72,
+      2779.97,
+      88.4824
+     ]
+    },
+    {
+     "id": "Level_Islands/Level10/grass",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Grass",
+     "animation": "idle",
+     "xform": [
+      -0.4688,
+      -0.1031,
+      -0.1031,
+      0.4688,
+      2848.328,
+      76.7224
+     ]
+    },
+    {
+     "id": "Level_Islands/Level10/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Island",
+     "animation": "i2",
+     "xform": [
+      0.72,
+      -0.0,
+      -0.0,
+      0.72,
+      2802.134,
+      88.858
+     ]
+    },
+    {
+     "id": "Level_Islands/Level11/tree",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Grass",
+     "animation": "idle",
+     "xform": [
+      0.5243,
+      -0.2918,
+      0.2918,
+      0.5243,
+      2970.146,
+      39.351
+     ]
+    },
+    {
+     "id": "Level_Islands/Level11/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Island",
+     "animation": "i0",
+     "xform": [
+      0.6,
+      -0.0,
+      -0.0,
+      0.6,
+      3005.488,
+      39.124
+     ]
+    },
+    {
+     "id": "Level_Islands/Level11/float0",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Float",
+     "animation": "i0",
+     "xform": [
+      0.6,
+      -0.0,
+      -0.0,
+      0.6,
+      3080.04,
+      -2.609
+     ]
+    },
+    {
+     "id": "Level_Islands/Level11/float1",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Float",
+     "animation": "i0",
+     "xform": [
+      -0.6,
+      -0.0,
+      -0.0,
+      0.6,
+      2950.178,
+      121.165
+     ]
+    },
+    {
+     "id": "Level_Islands/ChardGuard/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Island",
+     "animation": "i2",
+     "xform": [
+      0.6,
+      -0.0,
+      -0.0,
+      0.6,
+      3172.772,
+      -11.97
+     ]
+    },
+    {
+     "id": "Level_Islands/ChardGuard/snow",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Snow",
+     "animation": "idle",
+     "xform": [
+      1.0,
+      -0.0,
+      -0.0,
+      1.0,
+      3180.828,
+      -44.516
+     ],
+     "time_scale": 0.8
+    },
+    {
+     "id": "Level_Islands/Level12/bone",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Bone",
+     "animation": "b",
+     "xform": [
+      -0.72,
+      -0.0,
+      -0.0,
+      0.72,
+      3382.3328,
+      -126.0654
+     ]
+    },
+    {
+     "id": "Level_Islands/Level12/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Island",
+     "animation": "i1",
+     "xform": [
+      0.72,
+      -0.0,
+      -0.0,
+      0.72,
+      3366.404,
+      -94.695
+     ]
+    },
+    {
+     "id": "Level_Islands/Level12/float2",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Float",
+     "animation": "i1",
+     "xform": [
+      0.84,
+      -0.0,
+      -0.0,
+      0.84,
+      3285.7832,
+      14.6526
+     ],
+     "time_scale": 0.5
+    },
+    {
+     "id": "Level_Islands/Level12/wind",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Wind",
+     "animation": "Idle",
+     "xform": [
+      1.2,
+      -0.0,
+      -0.0,
+      1.2,
+      3355.0184,
+      -66.6474
+     ]
+    },
+    {
+     "id": "Level_Islands/Level12_1/tree",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Tree",
+     "animation": "idle",
+     "xform": [
+      0.5,
+      -0.0,
+      -0.0,
+      0.5,
+      3586.236,
+      -151.365
+     ]
+    },
+    {
+     "id": "Level_Islands/Level12_1/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Island",
+     "animation": "i0",
+     "xform": [
+      0.6,
+      -0.0,
+      -0.0,
+      0.6,
+      3549.672,
+      -153.509
+     ]
+    },
+    {
+     "id": "Level_Islands/Level12_1/float0",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Float",
+     "animation": "i0",
+     "xform": [
+      0.6,
+      -0.0,
+      -0.0,
+      0.6,
+      3466.452,
+      -164.399
+     ],
+     "time_scale": 0.5
+    },
+    {
+     "id": "Level_Islands/Level12_2/tree",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Bone",
+     "animation": "b",
+     "xform": [
+      0.6,
+      -0.0,
+      -0.0,
+      0.6,
+      3741.065,
+      -176.757
+     ]
+    },
+    {
+     "id": "Level_Islands/Level12_2/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Island",
+     "animation": "i2",
+     "xform": [
+      0.6,
+      -0.0,
+      -0.0,
+      0.6,
+      3737.809,
+      -169.671
+     ]
+    },
+    {
+     "id": "Level_Islands/Level12_2/snow",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Snow",
+     "animation": "idle",
+     "xform": [
+      0.6,
+      -0.0,
+      -0.0,
+      0.6,
+      3741.065,
+      -195.854
+     ],
+     "time_scale": 0.8
+    },
+    {
+     "id": "Level_Islands/GiftBox2/tree",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Grass",
+     "animation": "idle",
+     "xform": [
+      0.5438,
+      0.2536,
+      -0.2536,
+      0.5438,
+      3582.585,
+      -32.866
+     ]
+    },
+    {
+     "id": "Level_Islands/GiftBox2/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Island",
+     "animation": "i0",
+     "xform": [
+      0.8,
+      -0.0,
+      -0.0,
+      0.8,
+      3550.949,
+      -30.263
+     ]
+    },
+    {
+     "id": "Level_Islands/GiftBox2/float0",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Float",
+     "animation": "i1",
+     "xform": [
+      -0.5911,
+      0.1032,
+      0.1032,
+      0.5911,
+      3635.878,
+      41.207
+     ]
+    },
+    {
+     "id": "Level_Islands/GiftBox2/float1",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Float",
+     "animation": "i0",
+     "xform": [
+      -0.6,
+      -0.0,
+      -0.0,
+      0.6,
+      3444.698,
+      -4.823
+     ]
+    },
+    {
+     "id": "Level_Islands/Level13/tree",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Tree",
+     "animation": "idle",
+     "xform": [
+      0.4898,
+      -0.1005,
+      0.1005,
+      0.4898,
+      3781.571,
+      18.507
+     ]
+    },
+    {
+     "id": "Level_Islands/Level13/grass",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Grass",
+     "animation": "idle",
+     "xform": [
+      -0.3907,
+      -0.0859,
+      -0.0859,
+      0.3907,
+      3790.38,
+      11.325
+     ]
+    },
+    {
+     "id": "Level_Islands/Level13/grass1",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Grass",
+     "animation": "idle",
+     "xform": [
+      0.3856,
+      -0.1062,
+      0.1062,
+      0.3856,
+      3718.843,
+      10.539
+     ]
+    },
+    {
+     "id": "Level_Islands/Level13/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Island",
+     "animation": "i2",
+     "xform": [
+      0.6,
+      -0.0,
+      -0.0,
+      0.6,
+      3751.885,
+      21.438
+     ]
+    },
+    {
+     "id": "Level_Islands/Level14/float0",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Float",
+     "animation": "i0",
+     "xform": [
+      0.6,
+      -0.0,
+      -0.0,
+      0.6,
+      3954.2442,
+      -10.705
+     ],
+     "time_scale": 0.5
+    },
+    {
+     "id": "Level_Islands/Level14/float1",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Float",
+     "animation": "i0",
+     "xform": [
+      -0.72,
+      -0.0,
+      -0.0,
+      0.72,
+      3876.2586,
+      41.657
+     ],
+     "time_scale": 0.5
+    },
+    {
+     "id": "Level_Islands/Level14/float2",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Float",
+     "animation": "i1",
+     "xform": [
+      0.6,
+      -0.0,
+      -0.0,
+      0.6,
+      3997.6938,
+      18.2618
+     ],
+     "time_scale": 0.5
+    },
+    {
+     "id": "Level_Islands/Level14/grass1",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Grass",
+     "animation": "idle",
+     "xform": [
+      0.4628,
+      -0.1275,
+      0.1275,
+      0.4628,
+      3907.2006,
+      61.8362
+     ]
+    },
+    {
+     "id": "Level_Islands/Level14/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Island",
+     "animation": "i2",
+     "xform": [
+      0.72,
+      -0.0,
+      -0.0,
+      0.72,
+      3946.851,
+      74.915
+     ]
+    },
+    {
+     "id": "Level_Islands/Level14/wind",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Wind",
+     "animation": "Idle",
+     "xform": [
+      1.2,
+      -0.0,
+      -0.0,
+      1.2,
+      3935.4654,
+      102.9626
+     ],
+     "time_scale": 1.3
+    },
+    {
+     "id": "Level_Islands/Level14/snow",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Snow",
+     "animation": "idle",
+     "xform": [
+      1.2,
+      -0.0,
+      -0.0,
+      1.2,
+      3956.5182,
+      35.8598
+     ],
+     "time_scale": 1.2
+    },
+    {
+     "id": "Level_Islands/Level14/float3",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Float",
+     "animation": "i1",
+     "xform": [
+      -0.5631,
+      0.2072,
+      -0.2072,
+      -0.5631,
+      4043.9178,
+      159.7646
+     ],
+     "time_scale": 0.5
+    },
+    {
+     "id": "Level_Islands/GiftBox3/float0",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Float",
+     "animation": "i0",
+     "xform": [
+      0.55,
+      -0.0,
+      -0.0,
+      0.55,
+      4287.2201,
+      12.4074
+     ],
+     "time_scale": 0.5
+    },
+    {
+     "id": "Level_Islands/GiftBox3/float1",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Float",
+     "animation": "i0",
+     "xform": [
+      -0.66,
+      -0.0,
+      -0.0,
+      0.66,
+      4263.0069,
+      74.6685
+     ],
+     "time_scale": 0.5
+    },
+    {
+     "id": "Level_Islands/GiftBox3/tree",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Tree",
+     "animation": "idle",
+     "xform": [
+      -0.6526,
+      -0.0987,
+      -0.0987,
+      0.6526,
+      4177.8669,
+      -12.0456
+     ]
+    },
+    {
+     "id": "Level_Islands/GiftBox3/grass",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Grass",
+     "animation": "idle",
+     "xform": [
+      -0.3613,
+      -0.2511,
+      -0.2511,
+      0.3613,
+      4215.499,
+      -9.7191
+     ]
+    },
+    {
+     "id": "Level_Islands/GiftBox3/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Island",
+     "animation": "i1",
+     "xform": [
+      0.66,
+      -0.0,
+      -0.0,
+      0.66,
+      4172.764,
+      27.979
+     ]
+    },
+    {
+     "id": "Level_Islands/GiftBox3/wind",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Wind",
+     "animation": "Idle",
+     "xform": [
+      1.1,
+      -0.0,
+      -0.0,
+      1.1,
+      4162.3272,
+      53.6893
+     ],
+     "time_scale": 1.4
+    },
+    {
+     "id": "Level_Islands/Level16/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Gargantuar",
+     "animation": "Idle",
+     "xform": [
+      0.72,
+      -0.0,
+      -0.0,
+      0.72,
+      4763.369,
+      158.711
+     ]
+    },
+    {
+     "id": "Level_Islands/Level15/bone",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Bone",
+     "animation": "b",
+     "xform": [
+      0.72,
+      -0.0,
+      -0.0,
+      0.72,
+      4411.5762,
+      75.85
+     ]
+    },
+    {
+     "id": "Level_Islands/Level15/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Island",
+     "animation": "i0",
+     "xform": [
+      0.72,
+      -0.0,
+      -0.0,
+      0.72,
+      4410.201,
+      81.178
+     ]
+    },
+    {
+     "id": "Level_Islands/Level15/wind",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Wind",
+     "animation": "Idle",
+     "xform": [
+      1.2,
+      -0.0,
+      -0.0,
+      1.2,
+      4398.8154,
+      109.2256
+     ]
+    },
+    {
+     "id": "Level_Islands/Level17/bone",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Bone",
+     "animation": "b",
+     "xform": [
+      0.6,
+      -0.0,
+      -0.0,
+      0.6,
+      5130.184,
+      62.037
+     ]
+    },
+    {
+     "id": "Level_Islands/Level17/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Island",
+     "animation": "i5",
+     "xform": [
+      0.6,
+      -0.0,
+      -0.0,
+      0.6,
+      5129.038,
+      81.178
+     ]
+    },
+    {
+     "id": "Level_Islands/GiftBox4/iv0",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Ivory",
+     "animation": "i0",
+     "xform": [
+      0.72,
+      -0.0,
+      -0.0,
+      0.72,
+      5331.7568,
+      85.7504
+     ]
+    },
+    {
+     "id": "Level_Islands/GiftBox4/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Island",
+     "animation": "i4",
+     "xform": [
+      0.84,
+      -0.0,
+      -0.0,
+      0.84,
+      5307.596,
+      17.576
+     ]
+    },
+    {
+     "id": "Level_Islands/GiftBox4/iv1",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Ivory",
+     "animation": "i1",
+     "xform": [
+      0.72,
+      -0.0,
+      -0.0,
+      0.72,
+      5285.45,
+      79.8704
+     ]
+    },
+    {
+     "id": "Level_Islands/GiftBox4/wind",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Wind",
+     "animation": "Idle",
+     "xform": [
+      1.2,
+      -0.0,
+      -0.0,
+      1.2,
+      5296.2104,
+      45.6236
+     ],
+     "time_scale": 0.6
+    },
+    {
+     "id": "Level_Islands/Level18/iv0",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Glacier",
+     "animation": "idle",
+     "xform": [
+      0.9,
+      -0.0,
+      -0.0,
+      0.9,
+      5514.8322,
+      -23.6725
+     ]
+    },
+    {
+     "id": "Level_Islands/Level18/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Island",
+     "animation": "i3",
+     "xform": [
+      0.63,
+      -0.0,
+      -0.0,
+      0.63,
+      5509.281,
+      -21.22
+     ]
+    },
+    {
+     "id": "Level_Islands/Level18/wind",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Wind",
+     "animation": "Idle",
+     "xform": [
+      0.9,
+      -0.0,
+      -0.0,
+      0.9,
+      5475.3834,
+      -23.3377
+     ],
+     "time_scale": 0.9
+    },
+    {
+     "id": "Level_Islands/Level19/bone",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Bone",
+     "animation": "b",
+     "xform": [
+      -0.6,
+      -0.0,
+      -0.0,
+      0.6,
+      5700.601,
+      -15.949
+     ]
+    },
+    {
+     "id": "Level_Islands/Level19/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Island",
+     "animation": "i5",
+     "xform": [
+      0.7,
+      -0.0,
+      -0.0,
+      0.7,
+      5710.596,
+      4.306
+     ]
+    },
+    {
+     "id": "Level_Islands/Stunion/iv0",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Glacier",
+     "animation": "idle",
+     "xform": [
+      -0.4742,
+      0.0743,
+      0.0743,
+      0.4742,
+      5894.8772,
+      66.405
+     ]
+    },
+    {
+     "id": "Level_Islands/Stunion/iv1",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Glacier",
+     "animation": "idle",
+     "xform": [
+      0.4347,
+      0.2036,
+      -0.2036,
+      0.4347,
+      5938.3268,
+      69.7458
+     ]
+    },
+    {
+     "id": "Level_Islands/Stunion/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Island",
+     "animation": "i3",
+     "xform": [
+      0.56,
+      -0.0,
+      -0.0,
+      0.56,
+      5915.926,
+      83.505
+     ]
+    },
+    {
+     "id": "Level_Islands/Stunion/wind",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Wind",
+     "animation": "Idle",
+     "xform": [
+      0.8,
+      -0.0,
+      -0.0,
+      0.8,
+      5893.9108,
+      80.9458
+     ]
+    },
+    {
+     "id": "Level_Islands/Level20/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Island",
+     "animation": "i5",
+     "xform": [
+      0.6,
+      -0.0,
+      -0.0,
+      0.6,
+      6121.409,
+      149.865
+     ]
+    },
+    {
+     "id": "Level_Islands/Level21/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Island",
+     "animation": "i4",
+     "xform": [
+      0.77,
+      -0.0,
+      -0.0,
+      0.77,
+      6329.266,
+      138.739
+     ]
+    },
+    {
+     "id": "Level_Islands/Level21/iv0",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Ivory",
+     "animation": "i1",
+     "xform": [
+      0.66,
+      -0.0,
+      -0.0,
+      0.66,
+      6360.4532,
+      186.6286
+     ]
+    },
+    {
+     "id": "Level_Islands/Level21/iv1",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Ivory",
+     "animation": "i1",
+     "xform": [
+      -0.66,
+      -0.0,
+      -0.0,
+      0.66,
+      6297.839,
+      191.3223
+     ]
+    },
+    {
+     "id": "Level_Islands/Level21/wind",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Wind",
+     "animation": "Idle",
+     "xform": [
+      1.1,
+      -0.0,
+      -0.0,
+      1.1,
+      6318.8292,
+      164.4493
+     ],
+     "time_scale": 1.4
+    },
+    {
+     "id": "Level_Islands/Level22/iv0",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Bone",
+     "animation": "b",
+     "xform": [
+      -0.4218,
+      0.229,
+      0.229,
+      0.4218,
+      6509.3206,
+      71.6748
+     ]
+    },
+    {
+     "id": "Level_Islands/Level22/iv1",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Bone",
+     "animation": "b",
+     "xform": [
+      0.2898,
+      0.1357,
+      -0.1357,
+      0.2898,
+      6582.551,
+      69.862
+     ]
+    },
+    {
+     "id": "Level_Islands/Level22/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Island",
+     "animation": "i3",
+     "xform": [
+      0.56,
+      -0.0,
+      -0.0,
+      0.56,
+      6540.679,
+      75.03
+     ]
+    },
+    {
+     "id": "Level_Islands/Level22/wind",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Wind",
+     "animation": "Idle",
+     "xform": [
+      0.8,
+      -0.0,
+      -0.0,
+      0.8,
+      6518.6638,
+      72.4708
+     ],
+     "time_scale": 0.6
+    },
+    {
+     "id": "Level_Islands/GiftBox5/iv0",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Glacier",
+     "animation": "idle",
+     "xform": [
+      0.7,
+      -0.0,
+      -0.0,
+      0.7,
+      6720.374,
+      -10.04
+     ]
+    },
+    {
+     "id": "Level_Islands/GiftBox5/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Island",
+     "animation": "i4",
+     "xform": [
+      0.7,
+      -0.0,
+      -0.0,
+      0.7,
+      6714.206,
+      -7.315
+     ]
+    },
+    {
+     "id": "Level_Islands/GiftBox5/wind",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Wind",
+     "animation": "Idle",
+     "xform": [
+      1.0,
+      -0.0,
+      -0.0,
+      1.0,
+      6676.542,
+      -9.668
+     ]
+    },
+    {
+     "id": "Level_Islands/Level23/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Island",
+     "animation": "i5",
+     "xform": [
+      0.84,
+      -0.0,
+      -0.0,
+      0.84,
+      6945.281,
+      -76.026
+     ]
+    },
+    {
+     "id": "Level_Islands/Level23/snow",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Snow",
+     "animation": "idle",
+     "xform": [
+      1.4,
+      -0.0,
+      -0.0,
+      1.4,
+      6942.8786,
+      -69.0764
+     ]
+    },
+    {
+     "id": "Level_Islands/Level23/wind",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Wind",
+     "animation": "Idle",
+     "xform": [
+      1.4,
+      -0.0,
+      -0.0,
+      1.4,
+      6931.9978,
+      -43.3038
+     ],
+     "time_scale": 1.4
+    },
+    {
+     "id": "Level_Islands/Level24/bone",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Bone",
+     "animation": "b",
+     "xform": [
+      0.7,
+      -0.0,
+      -0.0,
+      0.7,
+      7185.154,
+      -80.29
+     ]
+    },
+    {
+     "id": "Level_Islands/Level24/iv0",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Ivory",
+     "animation": "i0",
+     "xform": [
+      0.7443,
+      -0.2932,
+      0.2932,
+      0.7443,
+      7238.15,
+      -15.228
+     ]
+    },
+    {
+     "id": "Level_Islands/Level24/iv1",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Ivory",
+     "animation": "i0",
+     "xform": [
+      -0.7756,
+      -0.1962,
+      -0.1962,
+      0.7756,
+      7145.46,
+      -9.497
+     ]
+    },
+    {
+     "id": "Level_Islands/Level24/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Island",
+     "animation": "i3",
+     "xform": [
+      0.7,
+      -0.0,
+      -0.0,
+      0.7,
+      7186.89,
+      -62.929
+     ]
+    },
+    {
+     "id": "Level_Islands/Level24/wind",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Wind",
+     "animation": "Idle",
+     "xform": [
+      1.0,
+      -0.0,
+      -0.0,
+      1.0,
+      7177.402,
+      -39.556
+     ],
+     "time_scale": 0.6
+    },
+    {
+     "id": "Level_Islands/GiftBox6/bone",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Glacier",
+     "animation": "idle",
+     "xform": [
+      0.9,
+      -0.0,
+      -0.0,
+      0.9,
+      7463.802,
+      0.754
+     ]
+    },
+    {
+     "id": "Level_Islands/GiftBox6/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Island",
+     "animation": "i4",
+     "xform": [
+      0.8,
+      -0.0,
+      -0.0,
+      0.8,
+      7465.538,
+      11.725
+     ]
+    },
+    {
+     "id": "Level_Islands/GiftBox6/iv0",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Ivory",
+     "animation": "i2",
+     "xform": [
+      -0.8,
+      -0.0,
+      -0.0,
+      0.8,
+      7440.445,
+      55.144
+     ]
+    },
+    {
+     "id": "Level_Islands/GiftBox6/snow",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Snow",
+     "animation": "idle",
+     "xform": [
+      1.0,
+      -0.0,
+      -0.0,
+      1.0,
+      7463.822,
+      16.689
+     ],
+     "time_scale": 0.8
+    },
+    {
+     "id": "Level_Islands/GiftBox6/wind",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Wind",
+     "animation": "Idle",
+     "xform": [
+      1.0,
+      -0.0,
+      -0.0,
+      1.0,
+      7456.05,
+      35.098
+     ]
+    },
+    {
+     "id": "Level_Islands/Level25/iv0",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Ivory",
+     "animation": "i0",
+     "xform": [
+      0.8,
+      -0.0,
+      -0.0,
+      0.8,
+      7713.739,
+      27.976
+     ]
+    },
+    {
+     "id": "Level_Islands/Level25/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Island",
+     "animation": "i5",
+     "xform": [
+      0.7,
+      -0.0,
+      -0.0,
+      0.7,
+      7688.832,
+      -3.541
+     ]
+    },
+    {
+     "id": "Level_Islands/Level25/iv1",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Ivory",
+     "animation": "i2",
+     "xform": [
+      0.8,
+      -0.0,
+      -0.0,
+      0.8,
+      7674.195,
+      35.008
+     ]
+    },
+    {
+     "id": "Level_Islands/Level25/wind",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Wind",
+     "animation": "Idle",
+     "xform": [
+      1.0,
+      -0.0,
+      -0.0,
+      1.0,
+      7679.344,
+      19.832
+     ],
+     "time_scale": 1.4
+    },
+    {
+     "id": "Level_Islands/Level30/island",
+     "bundle": "wm_WorldmapAnimate_3c316a65",
+     "armature": "Zomboss",
+     "animation": "Idle_Locked",
+     "xform": [
+      0.8,
+      -0.0,
+      -0.0,
+      0.8,
+      9632.229,
+      108.912
+     ]
+    },
+    {
+     "id": "Level_Islands/Level26/bone",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Bone",
+     "animation": "b",
+     "xform": [
+      -0.4,
+      -0.0,
+      -0.0,
+      0.4,
+      7901.418,
+      -107.417
+     ]
+    },
+    {
+     "id": "Level_Islands/Level26/snow",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Snow",
+     "animation": "idle",
+     "xform": [
+      1.0,
+      -0.0,
+      -0.0,
+      1.0,
+      7904.147,
+      -90.501
+     ],
+     "time_scale": 1.2
+    },
+    {
+     "id": "Level_Islands/Level26/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Island",
+     "animation": "i4",
+     "xform": [
+      0.6,
+      -0.0,
+      -0.0,
+      0.6,
+      7905.863,
+      -95.465
+     ]
+    },
+    {
+     "id": "Level_Islands/Level26/wind",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Wind",
+     "animation": "Idle",
+     "xform": [
+      1.0,
+      -0.0,
+      -0.0,
+      1.0,
+      7896.375,
+      -72.092
+     ],
+     "time_scale": 0.6
+    },
+    {
+     "id": "Level_Islands/Rotobaga/iv0",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Glacier",
+     "animation": "idle",
+     "xform": [
+      -0.7113,
+      0.1114,
+      0.1114,
+      0.7113,
+      8105.9878,
+      -193.424
+     ]
+    },
+    {
+     "id": "Level_Islands/Rotobaga/iv1",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Glacier",
+     "animation": "idle",
+     "xform": [
+      0.652,
+      0.3054,
+      -0.3054,
+      0.652,
+      8171.1622,
+      -188.4128
+     ]
+    },
+    {
+     "id": "Level_Islands/Rotobaga/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Island",
+     "animation": "i3",
+     "xform": [
+      0.84,
+      -0.0,
+      -0.0,
+      0.84,
+      8137.561,
+      -167.774
+     ]
+    },
+    {
+     "id": "Level_Islands/Rotobaga/wind",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Wind",
+     "animation": "Idle",
+     "xform": [
+      1.2,
+      -0.0,
+      -0.0,
+      1.2,
+      8104.5382,
+      -171.6128
+     ]
+    },
+    {
+     "id": "Level_Islands/Level27/iv0",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Ivory",
+     "animation": "i0",
+     "xform": [
+      0.8,
+      -0.0,
+      -0.0,
+      0.8,
+      8413.734,
+      -105.641
+     ]
+    },
+    {
+     "id": "Level_Islands/Level27/iv1",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Ivory",
+     "animation": "i0",
+     "xform": [
+      -0.7,
+      -0.0,
+      -0.0,
+      0.7,
+      8354.705,
+      -88.28
+     ]
+    },
+    {
+     "id": "Level_Islands/Level27/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Island",
+     "animation": "i5",
+     "xform": [
+      0.7,
+      -0.0,
+      -0.0,
+      0.7,
+      8388.827,
+      -137.158
+     ]
+    },
+    {
+     "id": "Level_Islands/Level27/wind",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Wind",
+     "animation": "Idle",
+     "xform": [
+      1.0,
+      -0.0,
+      -0.0,
+      1.0,
+      8379.339,
+      -113.785
+     ],
+     "time_scale": 1.4
+    },
+    {
+     "id": "Level_Islands/Level28/iv",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Ivory",
+     "animation": "i3",
+     "xform": [
+      0.8,
+      -0.0,
+      -0.0,
+      0.8,
+      8606.003,
+      -2.358
+     ]
+    },
+    {
+     "id": "Level_Islands/Level28/bone",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Bone",
+     "animation": "b",
+     "xform": [
+      0.8,
+      -0.0,
+      -0.0,
+      0.8,
+      8606.738,
+      -61.895
+     ]
+    },
+    {
+     "id": "Level_Islands/Level28/snow",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Snow",
+     "animation": "idle",
+     "xform": [
+      1.0,
+      -0.0,
+      -0.0,
+      1.0,
+      8604.674,
+      -50.57
+     ]
+    },
+    {
+     "id": "Level_Islands/Level28/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Island",
+     "animation": "i4",
+     "xform": [
+      0.6,
+      -0.0,
+      -0.0,
+      0.6,
+      8606.39,
+      -55.534
+     ]
+    },
+    {
+     "id": "Level_Islands/Level28/wind",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Wind",
+     "animation": "Idle",
+     "xform": [
+      1.0,
+      -0.0,
+      -0.0,
+      1.0,
+      8596.902,
+      -32.161
+     ],
+     "time_scale": 0.6
+    },
+    {
+     "id": "Level_Islands/Level29/iv0",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Glacier",
+     "animation": "idle",
+     "xform": [
+      -0.54,
+      -0.0,
+      -0.0,
+      0.54,
+      8811.4811,
+      -11.8296
+     ]
+    },
+    {
+     "id": "Level_Islands/Level29/iv2",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Ivory",
+     "animation": "i0",
+     "xform": [
+      -0.72,
+      -0.0,
+      -0.0,
+      0.72,
+      8794.4558,
+      41.2668
+     ]
+    },
+    {
+     "id": "Level_Islands/Level29/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Island",
+     "animation": "i3",
+     "xform": [
+      0.63,
+      -0.0,
+      -0.0,
+      0.63,
+      8817.071,
+      -9.378
+     ]
+    },
+    {
+     "id": "Level_Islands/Level29/iv1",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Ivory",
+     "animation": "i1",
+     "xform": [
+      -0.72,
+      -0.0,
+      -0.0,
+      0.72,
+      8829.0734,
+      62.559
+     ]
+    },
+    {
+     "id": "Level_Islands/Level29/wind",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Wind",
+     "animation": "Idle",
+     "xform": [
+      0.9,
+      -0.0,
+      -0.0,
+      0.9,
+      8783.1734,
+      -11.4957
+     ]
+    },
+    {
+     "id": "Level_Islands/GiftBox7/bone",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Glacier",
+     "animation": "idle",
+     "xform": [
+      0.84,
+      -0.0,
+      -0.0,
+      0.84,
+      9059.7942,
+      31.0678
+     ]
+    },
+    {
+     "id": "Level_Islands/GiftBox7/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Island",
+     "animation": "i4",
+     "xform": [
+      0.96,
+      -0.0,
+      -0.0,
+      0.96,
+      9059.649,
+      37.549
+     ]
+    },
+    {
+     "id": "Level_Islands/GiftBox7/snow",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Snow",
+     "animation": "idle",
+     "xform": [
+      1.2,
+      -0.0,
+      -0.0,
+      1.2,
+      9057.5898,
+      43.5058
+     ],
+     "time_scale": 0.8
+    },
+    {
+     "id": "Level_Islands/GiftBox7/wind",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Wind",
+     "animation": "Idle",
+     "xform": [
+      1.2,
+      -0.0,
+      -0.0,
+      1.2,
+      9048.2634,
+      65.5966
+     ],
+     "time_scale": 1.4
+    },
+    {
+     "id": "Level_Islands/Level25-1/bone",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Bone",
+     "animation": "b",
+     "xform": [
+      0.6,
+      -0.0,
+      -0.0,
+      0.6,
+      7873.41,
+      139.378
+     ]
+    },
+    {
+     "id": "Level_Islands/Level25-1/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Island",
+     "animation": "i5",
+     "xform": [
+      0.6,
+      -0.0,
+      -0.0,
+      0.6,
+      7872.264,
+      158.519
+     ]
+    },
+    {
+     "id": "Level_Islands/Level25-2/iv0",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Glacier",
+     "animation": "idle",
+     "xform": [
+      -0.4742,
+      0.0743,
+      0.0743,
+      0.4742,
+      8041.4842,
+      168.354
+     ]
+    },
+    {
+     "id": "Level_Islands/Level25-2/iv1",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Glacier",
+     "animation": "idle",
+     "xform": [
+      0.4347,
+      0.2036,
+      -0.2036,
+      0.4347,
+      8084.9338,
+      171.6948
+     ]
+    },
+    {
+     "id": "Level_Islands/Level25-2/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Island",
+     "animation": "i3",
+     "xform": [
+      0.56,
+      -0.0,
+      -0.0,
+      0.56,
+      8062.533,
+      185.454
+     ]
+    },
+    {
+     "id": "Level_Islands/Level25-2/wind",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Wind",
+     "animation": "Idle",
+     "xform": [
+      0.8,
+      -0.0,
+      -0.0,
+      0.8,
+      8040.5178,
+      182.8948
+     ]
+    },
+    {
+     "id": "Level_Islands/Level31/iv",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Ivory",
+     "animation": "i3",
+     "xform": [
+      0.8,
+      -0.0,
+      -0.0,
+      0.8,
+      10166.662,
+      111.071
+     ]
+    },
+    {
+     "id": "Level_Islands/Level31/bone",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Bone",
+     "animation": "b",
+     "xform": [
+      0.8,
+      -0.0,
+      -0.0,
+      0.8,
+      10167.397,
+      51.534
+     ]
+    },
+    {
+     "id": "Level_Islands/Level31/snow",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Snow",
+     "animation": "idle",
+     "xform": [
+      1.0,
+      -0.0,
+      -0.0,
+      1.0,
+      10165.333,
+      62.859
+     ]
+    },
+    {
+     "id": "Level_Islands/Level31/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Island",
+     "animation": "i4",
+     "xform": [
+      0.6,
+      -0.0,
+      -0.0,
+      0.6,
+      10167.049,
+      57.895
+     ]
+    },
+    {
+     "id": "Level_Islands/Level31/wind",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Wind",
+     "animation": "Idle",
+     "xform": [
+      1.0,
+      -0.0,
+      -0.0,
+      1.0,
+      10157.561,
+      81.268
+     ],
+     "time_scale": 0.6
+    },
+    {
+     "id": "Level_Islands/GiftBox8/bone",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Glacier",
+     "animation": "idle",
+     "xform": [
+      0.84,
+      -0.0,
+      -0.0,
+      0.84,
+      10413.2192,
+      -30.8022
+     ]
+    },
+    {
+     "id": "Level_Islands/GiftBox8/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Island",
+     "animation": "i4",
+     "xform": [
+      0.96,
+      -0.0,
+      -0.0,
+      0.96,
+      10413.074,
+      -24.321
+     ]
+    },
+    {
+     "id": "Level_Islands/GiftBox8/snow",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Snow",
+     "animation": "idle",
+     "xform": [
+      1.2,
+      -0.0,
+      -0.0,
+      1.2,
+      10411.0148,
+      -18.3642
+     ],
+     "time_scale": 0.8
+    },
+    {
+     "id": "Level_Islands/GiftBox8/wind",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Wind",
+     "animation": "Idle",
+     "xform": [
+      1.2,
+      -0.0,
+      -0.0,
+      1.2,
+      10401.6884,
+      3.7266
+     ],
+     "time_scale": 1.4
+    },
+    {
+     "id": "Level_Islands/Level32/iv0",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Glacier",
+     "animation": "idle",
+     "xform": [
+      -0.54,
+      -0.0,
+      -0.0,
+      0.54,
+      10665.0241,
+      -120.1026
+     ]
+    },
+    {
+     "id": "Level_Islands/Level32/iv2",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Ivory",
+     "animation": "i0",
+     "xform": [
+      -0.72,
+      -0.0,
+      -0.0,
+      0.72,
+      10647.9988,
+      -67.0062
+     ]
+    },
+    {
+     "id": "Level_Islands/Level32/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Island",
+     "animation": "i3",
+     "xform": [
+      0.63,
+      -0.0,
+      -0.0,
+      0.63,
+      10670.614,
+      -117.651
+     ]
+    },
+    {
+     "id": "Level_Islands/Level32/iv1",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Ivory",
+     "animation": "i1",
+     "xform": [
+      -0.72,
+      -0.0,
+      -0.0,
+      0.72,
+      10682.6164,
+      -45.714
+     ]
+    },
+    {
+     "id": "Level_Islands/Level32/wind",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Wind",
+     "animation": "Idle",
+     "xform": [
+      0.9,
+      -0.0,
+      -0.0,
+      0.9,
+      10636.7164,
+      -119.7687
+     ]
+    },
+    {
+     "id": "Level_Islands/Level33/iv0",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Ivory",
+     "animation": "i0",
+     "xform": [
+      0.8,
+      -0.0,
+      -0.0,
+      0.8,
+      10963.316,
+      -23.147
+     ]
+    },
+    {
+     "id": "Level_Islands/Level33/iv1",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Ivory",
+     "animation": "i0",
+     "xform": [
+      -0.7,
+      -0.0,
+      -0.0,
+      0.7,
+      10904.287,
+      -5.786
+     ]
+    },
+    {
+     "id": "Level_Islands/Level33/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Island",
+     "animation": "i5",
+     "xform": [
+      0.7,
+      -0.0,
+      -0.0,
+      0.7,
+      10938.409,
+      -54.664
+     ]
+    },
+    {
+     "id": "Level_Islands/Level33/wind",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Wind",
+     "animation": "Idle",
+     "xform": [
+      1.0,
+      -0.0,
+      -0.0,
+      1.0,
+      10928.921,
+      -31.291
+     ],
+     "time_scale": 1.4
+    },
+    {
+     "id": "Level_Islands/Level34/bone",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Bone",
+     "animation": "b",
+     "xform": [
+      -0.4,
+      -0.0,
+      -0.0,
+      0.4,
+      11126.417,
+      57.57
+     ]
+    },
+    {
+     "id": "Level_Islands/Level34/snow",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Snow",
+     "animation": "idle",
+     "xform": [
+      1.0,
+      -0.0,
+      -0.0,
+      1.0,
+      11129.146,
+      74.486
+     ],
+     "time_scale": 1.2
+    },
+    {
+     "id": "Level_Islands/Level34/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Island",
+     "animation": "i4",
+     "xform": [
+      0.6,
+      -0.0,
+      -0.0,
+      0.6,
+      11130.862,
+      69.522
+     ]
+    },
+    {
+     "id": "Level_Islands/Level34/wind",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Wind",
+     "animation": "Idle",
+     "xform": [
+      1.0,
+      -0.0,
+      -0.0,
+      1.0,
+      11121.374,
+      92.895
+     ],
+     "time_scale": 0.6
+    },
+    {
+     "id": "Level_Islands/GiftBox9/bone",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Glacier",
+     "animation": "idle",
+     "xform": [
+      0.9,
+      -0.0,
+      -0.0,
+      0.9,
+      11359.061,
+      103.871
+     ]
+    },
+    {
+     "id": "Level_Islands/GiftBox9/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Island",
+     "animation": "i4",
+     "xform": [
+      0.8,
+      -0.0,
+      -0.0,
+      0.8,
+      11360.797,
+      114.842
+     ]
+    },
+    {
+     "id": "Level_Islands/GiftBox9/iv0",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Ivory",
+     "animation": "i2",
+     "xform": [
+      -0.8,
+      -0.0,
+      -0.0,
+      0.8,
+      11335.704,
+      158.261
+     ]
+    },
+    {
+     "id": "Level_Islands/GiftBox9/snow",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Snow",
+     "animation": "idle",
+     "xform": [
+      1.0,
+      -0.0,
+      -0.0,
+      1.0,
+      11359.081,
+      119.806
+     ],
+     "time_scale": 0.8
+    },
+    {
+     "id": "Level_Islands/GiftBox9/wind",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Wind",
+     "animation": "Idle",
+     "xform": [
+      1.0,
+      -0.0,
+      -0.0,
+      1.0,
+      11351.309,
+      138.215
+     ]
+    },
+    {
+     "id": "Level_Islands/Level40/island",
+     "bundle": "wm_WorldmapAnimate_3c316a65",
+     "armature": "Zomboss",
+     "animation": "Idle_Locked",
+     "xform": [
+      0.8,
+      -0.0,
+      -0.0,
+      0.8,
+      13386.461,
+      108.912
+     ]
+    },
+    {
+     "id": "Level_Islands/Level35/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Island",
+     "animation": "i4",
+     "xform": [
+      0.77,
+      -0.0,
+      -0.0,
+      0.77,
+      11624.02,
+      29.136
+     ]
+    },
+    {
+     "id": "Level_Islands/Level35/iv0",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Ivory",
+     "animation": "i1",
+     "xform": [
+      0.66,
+      -0.0,
+      -0.0,
+      0.66,
+      11655.2072,
+      77.0256
+     ]
+    },
+    {
+     "id": "Level_Islands/Level35/iv1",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Ivory",
+     "animation": "i1",
+     "xform": [
+      -0.66,
+      -0.0,
+      -0.0,
+      0.66,
+      11592.593,
+      81.7193
+     ]
+    },
+    {
+     "id": "Level_Islands/Level35/wind",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Wind",
+     "animation": "Idle",
+     "xform": [
+      1.1,
+      -0.0,
+      -0.0,
+      1.1,
+      11613.5832,
+      54.8463
+     ],
+     "time_scale": 1.4
+    },
+    {
+     "id": "Level_Islands/Level36/iv0",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Ivory",
+     "animation": "i0",
+     "xform": [
+      0.8,
+      -0.0,
+      -0.0,
+      0.8,
+      11869.846,
+      -26.825
+     ]
+    },
+    {
+     "id": "Level_Islands/Level36/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Island",
+     "animation": "i5",
+     "xform": [
+      0.7,
+      -0.0,
+      -0.0,
+      0.7,
+      11844.939,
+      -58.342
+     ]
+    },
+    {
+     "id": "Level_Islands/Level36/iv1",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Ivory",
+     "animation": "i2",
+     "xform": [
+      0.8,
+      -0.0,
+      -0.0,
+      0.8,
+      11830.302,
+      -19.793
+     ]
+    },
+    {
+     "id": "Level_Islands/Level36/wind",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Wind",
+     "animation": "Idle",
+     "xform": [
+      1.0,
+      -0.0,
+      -0.0,
+      1.0,
+      11835.451,
+      -34.969
+     ],
+     "time_scale": 1.4
+    },
+    {
+     "id": "Level_Islands/Level37/bone",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Bone",
+     "animation": "b",
+     "xform": [
+      0.7,
+      -0.0,
+      -0.0,
+      0.7,
+      12102.389,
+      -110.735
+     ]
+    },
+    {
+     "id": "Level_Islands/Level37/iv0",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Ivory",
+     "animation": "i0",
+     "xform": [
+      0.7443,
+      -0.2932,
+      0.2932,
+      0.7443,
+      12155.385,
+      -45.673
+     ]
+    },
+    {
+     "id": "Level_Islands/Level37/iv1",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Ivory",
+     "animation": "i0",
+     "xform": [
+      -0.7756,
+      -0.1962,
+      -0.1962,
+      0.7756,
+      12062.695,
+      -39.942
+     ]
+    },
+    {
+     "id": "Level_Islands/Level37/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Island",
+     "animation": "i3",
+     "xform": [
+      0.7,
+      -0.0,
+      -0.0,
+      0.7,
+      12104.125,
+      -93.374
+     ]
+    },
+    {
+     "id": "Level_Islands/Level37/wind",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Wind",
+     "animation": "Idle",
+     "xform": [
+      1.0,
+      -0.0,
+      -0.0,
+      1.0,
+      12094.637,
+      -70.001
+     ],
+     "time_scale": 0.6
+    },
+    {
+     "id": "Level_Islands/GiftBox10/iv0",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Glacier",
+     "animation": "idle",
+     "xform": [
+      0.7,
+      -0.0,
+      -0.0,
+      0.7,
+      12368.291,
+      -70.93
+     ]
+    },
+    {
+     "id": "Level_Islands/GiftBox10/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Island",
+     "animation": "i4",
+     "xform": [
+      0.7,
+      -0.0,
+      -0.0,
+      0.7,
+      12362.123,
+      -68.205
+     ]
+    },
+    {
+     "id": "Level_Islands/GiftBox10/wind",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Wind",
+     "animation": "Idle",
+     "xform": [
+      1.0,
+      -0.0,
+      -0.0,
+      1.0,
+      12324.459,
+      -70.558
+     ]
+    },
+    {
+     "id": "Level_Islands/Level38/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Island",
+     "animation": "i5",
+     "xform": [
+      0.84,
+      -0.0,
+      -0.0,
+      0.84,
+      12587.109,
+      -57.759
+     ]
+    },
+    {
+     "id": "Level_Islands/Level38/snow",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Snow",
+     "animation": "idle",
+     "xform": [
+      1.4,
+      -0.0,
+      -0.0,
+      1.4,
+      12584.7066,
+      -50.8094
+     ]
+    },
+    {
+     "id": "Level_Islands/Level38/wind",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Wind",
+     "animation": "Idle",
+     "xform": [
+      1.4,
+      -0.0,
+      -0.0,
+      1.4,
+      12573.8258,
+      -25.0368
+     ],
+     "time_scale": 1.4
+    },
+    {
+     "id": "Level_Islands/Level39/iv0",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Bone",
+     "animation": "b",
+     "xform": [
+      -0.4218,
+      0.229,
+      0.229,
+      0.4218,
+      12796.5846,
+      16.8738
+     ]
+    },
+    {
+     "id": "Level_Islands/Level39/iv1",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Bone",
+     "animation": "b",
+     "xform": [
+      0.2898,
+      0.1357,
+      -0.1357,
+      0.2898,
+      12869.815,
+      15.061
+     ]
+    },
+    {
+     "id": "Level_Islands/Level39/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Island",
+     "animation": "i3",
+     "xform": [
+      0.56,
+      -0.0,
+      -0.0,
+      0.56,
+      12827.943,
+      20.229
+     ]
+    },
+    {
+     "id": "Level_Islands/Level39/wind",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Wind",
+     "animation": "Idle",
+     "xform": [
+      0.8,
+      -0.0,
+      -0.0,
+      0.8,
+      12805.9278,
+      17.6698
+     ],
+     "time_scale": 0.6
+    },
+    {
+     "id": "Level_Islands/Level27-1/iv0",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Bone",
+     "animation": "b",
+     "xform": [
+      -0.5273,
+      0.2863,
+      0.2863,
+      0.5273,
+      8427.33,
+      50.992
+     ]
+    },
+    {
+     "id": "Level_Islands/Level27-1/iv1",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Bone",
+     "animation": "b",
+     "xform": [
+      0.3622,
+      0.1697,
+      -0.1697,
+      0.3622,
+      8518.868,
+      48.726
+     ]
+    },
+    {
+     "id": "Level_Islands/Level27-1/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Island",
+     "animation": "i3",
+     "xform": [
+      0.7,
+      -0.0,
+      -0.0,
+      0.7,
+      8466.528,
+      55.186
+     ]
+    },
+    {
+     "id": "Level_Islands/Level27-1/wind",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Wind",
+     "animation": "Idle",
+     "xform": [
+      1.0,
+      -0.0,
+      -0.0,
+      1.0,
+      8439.009,
+      51.987
+     ],
+     "time_scale": 0.6
+    },
+    {
+     "id": "Level_Islands/Level27-2/iv0",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Glacier",
+     "animation": "idle",
+     "xform": [
+      0.7,
+      -0.0,
+      -0.0,
+      0.7,
+      8673.685,
+      179.34
+     ]
+    },
+    {
+     "id": "Level_Islands/Level27-2/island",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Island",
+     "animation": "i4",
+     "xform": [
+      0.7,
+      -0.0,
+      -0.0,
+      0.7,
+      8667.517,
+      182.065
+     ]
+    },
+    {
+     "id": "Level_Islands/Level27-2/wind",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Wind",
+     "animation": "Idle",
+     "xform": [
+      1.0,
+      -0.0,
+      -0.0,
+      1.0,
+      8629.853,
+      179.712
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "levels"
+  },
+  {
+   "kind": "pieces",
+   "factor": 1.2,
+   "origin": [
+    6381.33,
+    -0.0
+   ],
+   "pieces": [
+    {
+     "id": "Near/floats/float0",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Float",
+     "animation": "i0",
+     "xform": [
+      0.6,
+      -0.0,
+      -0.0,
+      0.6,
+      -17.726,
+      -242.357
+     ],
+     "time_scale": 0.5
+    },
+    {
+     "id": "Near/floats/float1",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Float",
+     "animation": "i1",
+     "xform": [
+      0.6,
+      -0.0,
+      -0.0,
+      0.6,
+      0.137,
+      218.878
+     ],
+     "time_scale": 0.5
+    },
+    {
+     "id": "Near/floats/float2",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Float",
+     "animation": "i0",
+     "xform": [
+      0.6,
+      -0.0,
+      -0.0,
+      0.6,
+      323.165,
+      165.253
+     ],
+     "time_scale": 0.5
+    },
+    {
+     "id": "Near/floats/float3",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Float",
+     "animation": "i0",
+     "xform": [
+      -0.8,
+      -0.0,
+      -0.0,
+      0.8,
+      264.73,
+      142.699
+     ],
+     "time_scale": 0.5
+    },
+    {
+     "id": "Near/floats/float4",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Float",
+     "animation": "i0",
+     "xform": [
+      0.6,
+      -0.0,
+      -0.0,
+      0.6,
+      592.891,
+      -147.893
+     ],
+     "time_scale": 0.5
+    },
+    {
+     "id": "Near/floats/float5",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Float",
+     "animation": "s1",
+     "xform": [
+      0.5955,
+      0.0731,
+      0.0731,
+      -0.5955,
+      1212.604,
+      -124.21
+     ],
+     "time_scale": 0.5
+    },
+    {
+     "id": "Near/floats/float6",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Float",
+     "animation": "i0",
+     "xform": [
+      0.6,
+      -0.0,
+      -0.0,
+      0.6,
+      1517.856,
+      202.093
+     ],
+     "time_scale": 0.5
+    },
+    {
+     "id": "Near/floats/float7",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Float",
+     "animation": "i0",
+     "xform": [
+      -1.0,
+      -0.0,
+      -0.0,
+      1.0,
+      1629.694,
+      240.25
+     ],
+     "time_scale": 0.5
+    },
+    {
+     "id": "Near/floats/float8",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Float",
+     "animation": "i0",
+     "xform": [
+      0.6,
+      -0.0,
+      -0.0,
+      0.6,
+      1909.946,
+      66.572
+     ],
+     "time_scale": 0.5
+    },
+    {
+     "id": "Near/floats/float9",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Float",
+     "animation": "i0",
+     "xform": [
+      -0.6,
+      -0.0,
+      -0.0,
+      0.6,
+      2019.152,
+      186.304
+     ],
+     "time_scale": 0.5
+    },
+    {
+     "id": "Near/floats/float10",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Float",
+     "animation": "i0",
+     "xform": [
+      0.537,
+      0.2677,
+      -0.2677,
+      0.537,
+      2477.029,
+      -261.046
+     ],
+     "time_scale": 0.5
+    },
+    {
+     "id": "Near/floats/float11",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Float",
+     "animation": "i0",
+     "xform": [
+      0.6,
+      -0.0,
+      -0.0,
+      0.6,
+      2852.014,
+      117.887
+     ],
+     "time_scale": 0.5
+    },
+    {
+     "id": "Near/floats/float12",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Float",
+     "animation": "s1",
+     "xform": [
+      -0.6,
+      -0.0,
+      -0.0,
+      0.6,
+      2991.482,
+      177.096
+     ],
+     "time_scale": 0.5
+    },
+    {
+     "id": "Near/floats/float13",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Float",
+     "animation": "s0",
+     "xform": [
+      -0.6,
+      -0.0,
+      -0.0,
+      0.6,
+      3245.495,
+      87.968
+     ],
+     "time_scale": 0.5
+    },
+    {
+     "id": "Near/floats/float14",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Float",
+     "animation": "s0",
+     "xform": [
+      0.6,
+      -0.0,
+      -0.0,
+      0.6,
+      3424.435,
+      -247.545
+     ],
+     "time_scale": 0.5
+    },
+    {
+     "id": "Near/floats/float15",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Float",
+     "animation": "i0",
+     "xform": [
+      -0.65,
+      -0.0,
+      -0.0,
+      0.65,
+      3567.85,
+      149.808
+     ],
+     "time_scale": 0.5
+    },
+    {
+     "id": "Near/floats/float16",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Float",
+     "animation": "i0",
+     "xform": [
+      0.6,
+      -0.0,
+      -0.0,
+      0.6,
+      3661.267,
+      176.122
+     ],
+     "time_scale": 0.5
+    },
+    {
+     "id": "Near/floats/float17",
+     "bundle": "wm_WorldmapAnimate_c7033e7d",
+     "armature": "Float",
+     "animation": "i0",
+     "xform": [
+      0.65,
+      -0.0,
+      -0.0,
+      0.65,
+      3788.894,
+      -233.072
+     ],
+     "time_scale": 0.5
+    }
+   ]
+  },
+  {
+   "kind": "pieces",
+   "factor": 1.3,
+   "origin": [
+    13616.34,
+    102.46
+   ],
+   "pieces": [
+    {
+     "id": "Near/Clouds/c0",
+     "bundle": "wm_CloudAnimate_3c1364a1",
+     "armature": "Clouds",
+     "animation": "Idle",
+     "xform": [
+      1.0,
+      -0.0,
+      -0.0,
+      0.7,
+      5.958,
+      195.107
+     ]
+    },
+    {
+     "id": "Near/Clouds/c1",
+     "bundle": "wm_CloudAnimate_3c1364a1",
+     "armature": "Clouds",
+     "animation": "Idle",
+     "xform": [
+      1.0,
+      -0.0,
+      -0.0,
+      1.0,
+      -275.28,
+      187.957
+     ],
+     "time_scale": 0.8
+    },
+    {
+     "id": "Near/Clouds/c2",
+     "bundle": "wm_CloudAnimate_3c1364a1",
+     "armature": "Clouds",
+     "animation": "Idle",
+     "xform": [
+      -1.2,
+      -0.0,
+      -0.0,
+      1.0,
+      274.45,
+      185.735
+     ],
+     "time_scale": -0.8
+    },
+    {
+     "id": "Near/Clouds/c5",
+     "bundle": "wm_CloudAnimate_3c1364a1",
+     "armature": "Clouds",
+     "animation": "Idle",
+     "xform": [
+      -1.0,
+      -0.0,
+      -0.0,
+      0.7,
+      1182.597,
+      206.819
+     ],
+     "time_scale": -1.1
+    },
+    {
+     "id": "Near/Clouds/c4",
+     "bundle": "wm_CloudAnimate_3c1364a1",
+     "armature": "Clouds",
+     "animation": "Idle",
+     "xform": [
+      1.5,
+      -0.0,
+      -0.0,
+      1.3,
+      1694.693,
+      178.219
+     ],
+     "time_scale": 0.676
+    },
+    {
+     "id": "Near/Clouds/c3",
+     "bundle": "wm_CloudAnimate_3c1364a1",
+     "armature": "Clouds",
+     "animation": "Idle",
+     "xform": [
+      -1.0,
+      -0.0,
+      -0.0,
+      0.7,
+      1297.856,
+      203.551
+     ],
+     "time_scale": -1
+    },
+    {
+     "id": "Near/Clouds/c9",
+     "bundle": "wm_CloudAnimate_3c1364a1",
+     "armature": "Clouds",
+     "animation": "Idle",
+     "xform": [
+      1.2,
+      -0.0,
+      -0.0,
+      1.0,
+      3219.783,
+      195.107
+     ],
+     "time_scale": 1.15
+    },
+    {
+     "id": "Near/Clouds/c6",
+     "bundle": "wm_CloudAnimate_3c1364a1",
+     "armature": "Clouds",
+     "animation": "Idle",
+     "xform": [
+      1.1,
+      -0.0,
+      -0.0,
+      1.0,
+      2159.805,
+      195.107
+     ],
+     "time_scale": 1.2
+    },
+    {
+     "id": "Near/Clouds/c8",
+     "bundle": "wm_CloudAnimate_3c1364a1",
+     "armature": "Clouds",
+     "animation": "Idle",
+     "xform": [
+      -1.3,
+      -0.0,
+      -0.0,
+      0.6,
+      2855.479,
+      204.959
+     ],
+     "time_scale": -0.7
+    },
+    {
+     "id": "Near/Clouds/c7",
+     "bundle": "wm_CloudAnimate_3c1364a1",
+     "armature": "Clouds",
+     "animation": "Idle",
+     "xform": [
+      1.0,
+      -0.0,
+      -0.0,
+      0.6,
+      623.456,
+      204.959
+     ],
+     "time_scale": 1.1
+    },
+    {
+     "id": "Near/Clouds/c12",
+     "bundle": "wm_CloudAnimate_3c1364a1",
+     "armature": "Clouds",
+     "animation": "Idle",
+     "xform": [
+      -1.3,
+      -0.0,
+      -0.0,
+      0.6,
+      4103.53,
+      204.959
+     ],
+     "time_scale": -0.7
+    },
+    {
+     "id": "Near/Clouds/c10",
+     "bundle": "wm_CloudAnimate_3c1364a1",
+     "armature": "Clouds",
+     "animation": "Idle",
+     "xform": [
+      1.0,
+      -0.0,
+      -0.0,
+      0.5,
+      878.334,
+      210.63
+     ]
+    },
+    {
+     "id": "Near/Clouds/c11",
+     "bundle": "wm_CloudAnimate_3c1364a1",
+     "armature": "Clouds",
+     "animation": "Idle",
+     "xform": [
+      1.4,
+      -0.0,
+      -0.0,
+      0.6,
+      3670.268,
+      204.959
+     ],
+     "time_scale": 0.8
+    }
+   ]
+  }
+ ],
+ "islands": [
+  {
+   "id": "Level_Islands/Level1",
+   "kind": "level",
+   "position": [
+    0.0,
+    80.46
+   ],
+   "next": [
+    "Level_Islands/HotPotato"
+   ],
+   "levels": [
+    "iceage1"
+   ],
+   "appearance": "normal",
+   "name": "1"
+  },
+  {
+   "id": "Level_Islands/HotPotato",
+   "kind": "plant",
+   "position": [
+    290.24,
+    73.02
+   ],
+   "next": [
+    "Level_Islands/Level2"
+   ],
+   "plant": 130
+  },
+  {
+   "id": "Level_Islands/Level2",
+   "kind": "level",
+   "position": [
+    511.0,
+    38.56
+   ],
+   "next": [
+    "Level_Islands/Level3"
+   ],
+   "levels": [
+    "iceage2"
+   ],
+   "appearance": "normal",
+   "name": "2"
+  },
+  {
+   "id": "Level_Islands/Level3",
+   "kind": "level",
+   "position": [
+    719.12,
+    -15.51
+   ],
+   "next": [
+    "Level_Islands/Level4"
+   ],
+   "levels": [
+    "iceage3"
+   ],
+   "appearance": "minigame",
+   "name": "3"
+  },
+  {
+   "id": "Level_Islands/Level4",
+   "kind": "level",
+   "position": [
+    946.77,
+    -61.44
+   ],
+   "next": [
+    "Level_Islands/GiftBox0"
+   ],
+   "levels": [
+    "iceage4"
+   ],
+   "appearance": "normal",
+   "name": "4"
+  },
+  {
+   "id": "Level_Islands/GiftBox0",
+   "kind": "giftbox",
+   "position": [
+    1206.03,
+    -4.81
+   ],
+   "next": [
+    "Level_Islands/Level5"
+   ]
+  },
+  {
+   "id": "Level_Islands/Level5",
+   "kind": "level",
+   "position": [
+    1391.22,
+    54.19
+   ],
+   "next": [
+    "Level_Islands/Level6"
+   ],
+   "levels": [
+    "iceage5"
+   ],
+   "appearance": "minigame",
+   "name": "5"
+  },
+  {
+   "id": "Level_Islands/Level6",
+   "kind": "level",
+   "position": [
+    1588.96,
+    111.18
+   ],
+   "next": [
+    "Level_Islands/PepperPult"
+   ],
+   "levels": [
+    "iceage6"
+   ],
+   "appearance": "normal",
+   "name": "6"
+  },
+  {
+   "id": "Level_Islands/PepperPult",
+   "kind": "plant",
+   "position": [
+    1790.16,
+    54.34
+   ],
+   "next": [
+    "Level_Islands/Level7"
+   ],
+   "plant": 129
+  },
+  {
+   "id": "Level_Islands/Level7",
+   "kind": "level",
+   "position": [
+    1976.63,
+    -6.04
+   ],
+   "next": [
+    "Level_Islands/Level8"
+   ],
+   "levels": [
+    "iceage7"
+   ],
+   "appearance": "normal",
+   "name": "7"
+  },
+  {
+   "id": "Level_Islands/Level8",
+   "kind": "level",
+   "position": [
+    2175.29,
+    -76.14
+   ],
+   "next": [
+    "Level_Islands/GiftBox1"
+   ],
+   "levels": [
+    "iceage8"
+   ],
+   "appearance": "minigame",
+   "name": "8"
+  },
+  {
+   "id": "Level_Islands/GiftBox1",
+   "kind": "giftbox",
+   "position": [
+    2369.51,
+    -33.14
+   ],
+   "next": [
+    "Level_Islands/Level9"
+   ]
+  },
+  {
+   "id": "Level_Islands/Level9",
+   "kind": "level",
+   "position": [
+    2590.51,
+    32.71
+   ],
+   "next": [
+    "Level_Islands/Level10"
+   ],
+   "levels": [
+    "iceage9"
+   ],
+   "appearance": "normal",
+   "name": "9"
+  },
+  {
+   "id": "Level_Islands/Level10",
+   "kind": "level",
+   "position": [
+    2802.13,
+    88.86
+   ],
+   "next": [
+    "Level_Islands/Level11"
+   ],
+   "levels": [
+    "iceage10"
+   ],
+   "appearance": "minigame",
+   "name": "10"
+  },
+  {
+   "id": "Level_Islands/Level11",
+   "kind": "level",
+   "position": [
+    3005.49,
+    39.12
+   ],
+   "next": [
+    "Level_Islands/ChardGuard"
+   ],
+   "levels": [
+    "iceage11"
+   ],
+   "appearance": "normal",
+   "name": "11"
+  },
+  {
+   "id": "Level_Islands/ChardGuard",
+   "kind": "plant",
+   "position": [
+    3172.77,
+    -11.97
+   ],
+   "next": [
+    "Level_Islands/Level12"
+   ],
+   "plant": 79
+  },
+  {
+   "id": "Level_Islands/Level12",
+   "kind": "level",
+   "position": [
+    3366.4,
+    -94.69
+   ],
+   "next": [
+    "Level_Islands/GiftBox2",
+    "Level_Islands/Level12_1"
+   ],
+   "levels": [
+    "iceage12"
+   ],
+   "appearance": "minigame",
+   "name": "12"
+  },
+  {
+   "id": "Level_Islands/GiftBox2",
+   "kind": "giftbox",
+   "position": [
+    3550.95,
+    -30.26
+   ],
+   "next": [
+    "Level_Islands/Level13"
+   ]
+  },
+  {
+   "id": "Level_Islands/Level13",
+   "kind": "level",
+   "position": [
+    3751.89,
+    21.44
+   ],
+   "next": [
+    "Level_Islands/Level14"
+   ],
+   "levels": [
+    "iceage13"
+   ],
+   "appearance": "normal",
+   "name": "13"
+  },
+  {
+   "id": "Level_Islands/Level14",
+   "kind": "level",
+   "position": [
+    3946.85,
+    74.91
+   ],
+   "next": [
+    "Level_Islands/GiftBox3"
+   ],
+   "levels": [
+    "iceage14"
+   ],
+   "appearance": "minigame",
+   "name": "14"
+  },
+  {
+   "id": "Level_Islands/GiftBox3",
+   "kind": "giftbox",
+   "position": [
+    4172.76,
+    27.98
+   ],
+   "next": [
+    "Level_Islands/Level15"
+   ]
+  },
+  {
+   "id": "Level_Islands/Level15",
+   "kind": "level",
+   "position": [
+    4410.2,
+    81.18
+   ],
+   "next": [
+    "Level_Islands/Level16"
+   ],
+   "levels": [
+    "iceage15"
+   ],
+   "appearance": "minigame",
+   "name": "15"
+  },
+  {
+   "id": "Level_Islands/Level16",
+   "kind": "level",
+   "position": [
+    4763.37,
+    158.71
+   ],
+   "next": [
+    "Level_Islands/Level17"
+   ],
+   "levels": [
+    "iceage16"
+   ],
+   "appearance": "gargantuar",
+   "name": "16"
+  },
+  {
+   "id": "Level_Islands/Level17",
+   "kind": "level",
+   "position": [
+    5129.04,
+    81.18
+   ],
+   "next": [
+    "Level_Islands/GiftBox4"
+   ],
+   "levels": [
+    "iceage17"
+   ],
+   "appearance": "normal",
+   "name": "17"
+  },
+  {
+   "id": "Level_Islands/GiftBox4",
+   "kind": "giftbox",
+   "position": [
+    5307.6,
+    17.58
+   ],
+   "next": [
+    "Level_Islands/Level18"
+   ]
+  },
+  {
+   "id": "Level_Islands/Level18",
+   "kind": "level",
+   "position": [
+    5509.28,
+    -21.22
+   ],
+   "next": [
+    "Level_Islands/Level19"
+   ],
+   "levels": [
+    "iceage18"
+   ],
+   "appearance": "minigame",
+   "name": "18"
+  },
+  {
+   "id": "Level_Islands/Level19",
+   "kind": "level",
+   "position": [
+    5710.6,
+    4.31
+   ],
+   "next": [
+    "Level_Islands/Stunion"
+   ],
+   "levels": [
+    "iceage19"
+   ],
+   "appearance": "normal",
+   "name": "19"
+  },
+  {
+   "id": "Level_Islands/Stunion",
+   "kind": "plant",
+   "position": [
+    5915.93,
+    83.5
+   ],
+   "next": [
+    "Level_Islands/Level20"
+   ],
+   "plant": 131
+  },
+  {
+   "id": "Level_Islands/Level20",
+   "kind": "level",
+   "position": [
+    6121.41,
+    149.87
+   ],
+   "next": [
+    "Level_Islands/Level21"
+   ],
+   "levels": [
+    "iceage20"
+   ],
+   "appearance": "normal",
+   "name": "20"
+  },
+  {
+   "id": "Level_Islands/Level21",
+   "kind": "level",
+   "position": [
+    6329.27,
+    138.74
+   ],
+   "next": [
+    "Level_Islands/Level22"
+   ],
+   "levels": [
+    "iceage21"
+   ],
+   "appearance": "minigame",
+   "name": "21"
+  },
+  {
+   "id": "Level_Islands/Level22",
+   "kind": "level",
+   "position": [
+    6540.68,
+    75.03
+   ],
+   "next": [
+    "Level_Islands/GiftBox5"
+   ],
+   "levels": [
+    "iceage22"
+   ],
+   "appearance": "normal",
+   "name": "22"
+  },
+  {
+   "id": "Level_Islands/GiftBox5",
+   "kind": "giftbox",
+   "position": [
+    6714.21,
+    -7.31
+   ],
+   "next": [
+    "Level_Islands/Level23"
+   ]
+  },
+  {
+   "id": "Level_Islands/Level23",
+   "kind": "level",
+   "position": [
+    6945.28,
+    -76.03
+   ],
+   "next": [
+    "Level_Islands/Level24"
+   ],
+   "levels": [
+    "iceage23"
+   ],
+   "appearance": "minigame",
+   "name": "23"
+  },
+  {
+   "id": "Level_Islands/Level24",
+   "kind": "level",
+   "position": [
+    7186.89,
+    -62.93
+   ],
+   "next": [
+    "Level_Islands/GiftBox6"
+   ],
+   "levels": [
+    "iceage24"
+   ],
+   "appearance": "normal",
+   "name": "24"
+  },
+  {
+   "id": "Level_Islands/GiftBox6",
+   "kind": "giftbox",
+   "position": [
+    7465.54,
+    11.73
+   ],
+   "next": [
+    "Level_Islands/Level25"
+   ]
+  },
+  {
+   "id": "Level_Islands/Level25",
+   "kind": "level",
+   "position": [
+    7688.83,
+    -3.54
+   ],
+   "next": [
+    "Level_Islands/Level25-1",
+    "Level_Islands/Level26"
+   ],
+   "levels": [
+    "iceage25"
+   ],
+   "appearance": "minigame",
+   "name": "25"
+  },
+  {
+   "id": "Level_Islands/Level26",
+   "kind": "level",
+   "position": [
+    7905.86,
+    -95.46
+   ],
+   "next": [
+    "Level_Islands/Rotobaga"
+   ],
+   "levels": [
+    "iceage26"
+   ],
+   "appearance": "normal",
+   "name": "26"
+  },
+  {
+   "id": "Level_Islands/Rotobaga",
+   "kind": "plant",
+   "position": [
+    8137.56,
+    -167.77
+   ],
+   "next": [
+    "Level_Islands/Level27"
+   ],
+   "plant": 19
+  },
+  {
+   "id": "Level_Islands/Level27",
+   "kind": "level",
+   "position": [
+    8388.83,
+    -137.16
+   ],
+   "next": [
+    "Level_Islands/Level28",
+    "Level_Islands/Level27-1"
+   ],
+   "levels": [
+    "iceage27"
+   ],
+   "appearance": "minigame",
+   "name": "27"
+  },
+  {
+   "id": "Level_Islands/Level25-1",
+   "kind": "level",
+   "position": [
+    7872.26,
+    158.52
+   ],
+   "next": [
+    "Level_Islands/Level25-2"
+   ],
+   "levels": [
+    "appease2_0"
+   ],
+   "appearance": "normal",
+   "name": "25-1"
+  },
+  {
+   "id": "Level_Islands/Level25-2",
+   "kind": "epic_portal",
+   "position": [
+    8062.53,
+    185.45
+   ],
+   "next": [],
+   "levels": [
+    "appease2_1"
+   ]
+  },
+  {
+   "id": "Level_Islands/Level28",
+   "kind": "level",
+   "position": [
+    8606.39,
+    -55.53
+   ],
+   "next": [
+    "Level_Islands/Level29"
+   ],
+   "levels": [
+    "iceage28"
+   ],
+   "appearance": "minigame",
+   "name": "28"
+  },
+  {
+   "id": "Level_Islands/Level29",
+   "kind": "level",
+   "position": [
+    8817.07,
+    -9.38
+   ],
+   "next": [
+    "Level_Islands/GiftBox7"
+   ],
+   "levels": [
+    "iceage29"
+   ],
+   "appearance": "minigame",
+   "name": "29"
+  },
+  {
+   "id": "Level_Islands/GiftBox7",
+   "kind": "giftbox",
+   "position": [
+    9059.65,
+    37.55
+   ],
+   "next": [
+    "Level_Islands/Level30"
+   ]
+  },
+  {
+   "id": "Level_Islands/Level30",
+   "kind": "level",
+   "position": [
+    9632.23,
+    108.91
+   ],
+   "next": [
+    "Level_Islands/Level31"
+   ],
+   "levels": [
+    "iceage30"
+   ],
+   "appearance": "zomboss",
+   "name": "30",
+   "displays": [
+    "Level_Islands/Level30/island"
+   ]
+  },
+  {
+   "id": "Level_Islands/Level31",
+   "kind": "level",
+   "position": [
+    10167.05,
+    57.89
+   ],
+   "next": [
+    "Level_Islands/GiftBox8"
+   ],
+   "levels": [
+    "iceage31"
+   ],
+   "appearance": "normal",
+   "name": "31"
+  },
+  {
+   "id": "Level_Islands/GiftBox8",
+   "kind": "giftbox",
+   "position": [
+    10413.07,
+    -24.32
+   ],
+   "next": [
+    "Level_Islands/Level32"
+   ]
+  },
+  {
+   "id": "Level_Islands/Level32",
+   "kind": "level",
+   "position": [
+    10670.61,
+    -117.65
+   ],
+   "next": [
+    "Level_Islands/Level33"
+   ],
+   "levels": [
+    "iceage32"
+   ],
+   "appearance": "normal",
+   "name": "32"
+  },
+  {
+   "id": "Level_Islands/Level33",
+   "kind": "level",
+   "position": [
+    10938.41,
+    -54.66
+   ],
+   "next": [
+    "Level_Islands/Level34"
+   ],
+   "levels": [
+    "iceage33"
+   ],
+   "appearance": "minigame",
+   "name": "33"
+  },
+  {
+   "id": "Level_Islands/Level34",
+   "kind": "level",
+   "position": [
+    11130.86,
+    69.52
+   ],
+   "next": [
+    "Level_Islands/GiftBox9"
+   ],
+   "levels": [
+    "iceage34"
+   ],
+   "appearance": "minigame",
+   "name": "34"
+  },
+  {
+   "id": "Level_Islands/GiftBox9",
+   "kind": "giftbox",
+   "position": [
+    11360.8,
+    114.84
+   ],
+   "next": [
+    "Level_Islands/Level35"
+   ]
+  },
+  {
+   "id": "Level_Islands/Level35",
+   "kind": "level",
+   "position": [
+    11624.02,
+    29.14
+   ],
+   "next": [
+    "Level_Islands/Level36"
+   ],
+   "levels": [
+    "iceage35"
+   ],
+   "appearance": "normal",
+   "name": "35"
+  },
+  {
+   "id": "Level_Islands/Level36",
+   "kind": "level",
+   "position": [
+    11844.94,
+    -58.34
+   ],
+   "next": [
+    "Level_Islands/Level37"
+   ],
+   "levels": [
+    "iceage36"
+   ],
+   "appearance": "normal",
+   "name": "36"
+  },
+  {
+   "id": "Level_Islands/Level37",
+   "kind": "level",
+   "position": [
+    12104.12,
+    -93.37
+   ],
+   "next": [
+    "Level_Islands/GiftBox10"
+   ],
+   "levels": [
+    "iceage37"
+   ],
+   "appearance": "minigame",
+   "name": "37"
+  },
+  {
+   "id": "Level_Islands/GiftBox10",
+   "kind": "giftbox",
+   "position": [
+    12362.12,
+    -68.2
+   ],
+   "next": [
+    "Level_Islands/Level38"
+   ]
+  },
+  {
+   "id": "Level_Islands/Level38",
+   "kind": "level",
+   "position": [
+    12587.11,
+    -57.76
+   ],
+   "next": [
+    "Level_Islands/Level39"
+   ],
+   "levels": [
+    "iceage38"
+   ],
+   "appearance": "minigame",
+   "name": "38"
+  },
+  {
+   "id": "Level_Islands/Level39",
+   "kind": "level",
+   "position": [
+    12827.94,
+    20.23
+   ],
+   "next": [
+    "Level_Islands/Level40"
+   ],
+   "levels": [
+    "iceage39"
+   ],
+   "appearance": "minigame",
+   "name": "39"
+  },
+  {
+   "id": "Level_Islands/Level40",
+   "kind": "level",
+   "position": [
+    13386.46,
+    108.91
+   ],
+   "next": [],
+   "levels": [
+    "iceage40"
+   ],
+   "appearance": "zomboss",
+   "name": "40",
+   "displays": [
+    "Level_Islands/Level40/island"
+   ]
+  },
+  {
+   "id": "Level_Islands/Level12_1",
+   "kind": "level",
+   "position": [
+    3549.67,
+    -153.51
+   ],
+   "next": [
+    "Level_Islands/Level12_2"
+   ],
+   "levels": [
+    "sweetpotato0"
+   ],
+   "appearance": "normal",
+   "name": "12-1"
+  },
+  {
+   "id": "Level_Islands/Level12_2",
+   "kind": "epic_portal",
+   "position": [
+    3737.81,
+    -169.67
+   ],
+   "next": [],
+   "levels": [
+    "sweetpotato1"
+   ]
+  },
+  {
+   "id": "Level_Islands/Level27-1",
+   "kind": "level",
+   "position": [
+    8466.53,
+    55.19
+   ],
+   "next": [
+    "Level_Islands/Level27-2"
+   ],
+   "levels": [
+    "pepper0"
+   ],
+   "appearance": "normal",
+   "name": "27-1"
+  },
+  {
+   "id": "Level_Islands/Level27-2",
+   "kind": "epic_portal",
+   "position": [
+    8667.52,
+    182.06
+   ],
+   "next": [],
+   "levels": [
+    "pepper1"
+   ]
+  }
+ ]
+}

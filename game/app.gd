@@ -38,8 +38,26 @@ func show_world_map(campaign_id: StringName = &"") -> void:
 	var map := WorldMap.new()
 	map.start_campaign = campaign_id
 	map.level_chosen.connect(play_level)
-	map.back_requested.connect(show_main_menu)
+	map.back_requested.connect(_leave_world_map.bind(map))
 	_swap(map)
+
+
+## PVZGE's Back on a world map goes to the world chooser; with only one
+## world there is nothing to choose, so it goes to the title.
+func _leave_world_map(map: WorldMap) -> void:
+	var world := map.current_world()
+	if Data.world_campaigns().size() > 1:
+		show_world_chooser(world.id if world != null else &"")
+	else:
+		show_main_menu()
+
+
+func show_world_chooser(campaign_id: StringName = &"") -> void:
+	var chooser := WorldChooser.new()
+	chooser.start_campaign = campaign_id
+	chooser.world_chosen.connect(show_world_map)
+	chooser.back_requested.connect(show_main_menu)
+	_swap(chooser)
 
 
 func play_level(level_id: StringName) -> void:

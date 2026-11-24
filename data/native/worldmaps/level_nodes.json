@@ -1,0 +1,185 @@
+{
+ "normalNode": {
+  "pieces": [
+   {
+    "id": "node/display",
+    "bundle": "wm_LevelNodeAnimate_c8bc39c9",
+    "armature": "LevelNode",
+    "animation": "IdleFinished",
+    "xform": [
+     0.4,
+     -0.0,
+     -0.0,
+     0.4,
+     0.0,
+     -0.0
+    ]
+   }
+  ],
+  "title": {
+   "xform": [
+    0.22,
+    -0.0,
+    0.0,
+    0.22,
+    0.0,
+    -43.2072
+   ],
+   "font_size": 124.9
+  },
+  "hit": [
+   -28.0,
+   -28.86,
+   56.0,
+   40.0
+  ]
+ },
+ "gargantuarNode": {
+  "pieces": [
+   {
+    "id": "node/display",
+    "bundle": "wm_LevelNodeAnimate_c8bc39c9",
+    "armature": "LevelNodeHard",
+    "animation": "IdleFinished",
+    "xform": [
+     0.4,
+     -0.0,
+     -0.0,
+     0.4,
+     0.0,
+     -0.0
+    ]
+   }
+  ],
+  "title": {
+   "xform": [
+    0.22,
+    -0.0,
+    0.0,
+    0.22,
+    0.0,
+    -43.2072
+   ],
+   "font_size": 124.9
+  },
+  "hit": [
+   -28.0,
+   -28.86,
+   56.0,
+   40.0
+  ]
+ },
+ "minigameNode": {
+  "pieces": [
+   {
+    "id": "node/display",
+    "bundle": "wm_LevelNodeAnimate_c8bc39c9",
+    "armature": "LevelNodeMinigame",
+    "animation": "IdleFinished",
+    "xform": [
+     0.4,
+     -0.0,
+     -0.0,
+     0.4,
+     0.0,
+     -0.0
+    ]
+   }
+  ],
+  "title": {
+   "xform": [
+    0.22,
+    -0.0,
+    0.0,
+    0.22,
+    0.0,
+    -43.2072
+   ],
+   "font_size": 124.9
+  },
+  "hit": [
+   -28.0,
+   -28.86,
+   56.0,
+   40.0
+  ]
+ },
+ "epicPortal": {
+  "pieces": [
+   {
+    "id": "node/display",
+    "bundle": "wm_PortalInGame_ce8294b0",
+    "armature": "Portal",
+    "animation": "Idle",
+    "xform": [
+     0.4,
+     -0.0,
+     -0.0,
+     0.4,
+     0.0,
+     -0.0
+    ]
+   }
+  ],
+  "hit": [
+   -28.0,
+   -103.18,
+   56.0,
+   104.32
+  ]
+ },
+ "giftbox": {
+  "pieces": [
+   {
+    "id": "node",
+    "bundle": "wm_GiftboxAnimation_b0a21e82",
+    "armature": "GiftBox",
+    "animation": "",
+    "xform": [
+     0.4,
+     -0.0,
+     -0.0,
+     0.4,
+     0.0,
+     -0.0
+    ]
+   }
+  ]
+ },
+ "path": {
+  "pieces": [
+   {
+    "id": "node/display",
+    "bundle": "wm_LevelNodeAnimate_c8bc39c9",
+    "armature": "Path",
+    "animation": "Idle",
+    "xform": [
+     0.4,
+     -0.0,
+     -0.0,
+     0.4,
+     0.0,
+     -0.0
+    ]
+   }
+  ]
+ },
+ "zombossHead": {
+  "pieces": [
+   {
+    "id": "node",
+    "bundle": "wm_LevelNodeAnimate_8f039fb8",
+    "armature": "ZombossHead",
+    "animation": "",
+    "xform": [
+     0.8,
+     -0.0,
+     -0.0,
+     0.8,
+     0.0,
+     -0.0
+    ]
+   }
+  ]
+ }
+}

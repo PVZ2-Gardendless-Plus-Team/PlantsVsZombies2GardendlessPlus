@@ -2,6 +2,11 @@ class_name WorldMap
 extends Control
 ## Level select: one page per world, its levels as nodes along a path.
 ##
+## A world whose campaign names a `world_map` is drawn as PVZGE's floating
+## islands (see IslandMap): the map scrolls sideways and the purple arrows in
+## the bottom corners push it along, as PVZGE's do. A world without one gets
+## the plain path of round nodes, and the arrows step between worlds.
+##
 ## Worlds are campaigns, so a pack that adds a campaign gets a page here with
 ## no code - and `order`, `unlock_after` and `map_color` on the campaign decide
 ## where it sits, when it opens and how it looks. Levels open one at a time as
@@ -44,6 +49,9 @@ var _card_title: Label
 var _card_status: Label
 var _play: Button
 var _restart: Button
+var _backdrop: Control
+## The current world's island map, or null for the plain path.
+var _island: IslandMap = null
 
 
 func _ready() -> void:
@@ -103,7 +111,8 @@ func _build() -> void:
 	# PVZGE's worldMapScene: the teal sky, its square buttons along the top
 	# left, the coin and gem counters top right, and purple arrows in the
 	# bottom corners to step between worlds.
-	add_child(MenuUI.space_backdrop())
+	_backdrop = MenuUI.space_backdrop()
+	add_child(_backdrop)
 
 	_map = ColorRect.new()
 	_map.color = Color.TRANSPARENT
@@ -242,7 +251,14 @@ func _arrow(left: bool) -> Button:
 	return b
 
 
+func island_map() -> IslandMap:
+	return _island
+
+
 func _show_world() -> void:
+	if _island != null:
+		_island.queue_free()
+		_island = null
 	var coins := Saves.currency(&"coins")
 	_coins.text = _thousands(coins)
 	_gems.text = _thousands(Saves.currency(&"gems"))
@@ -260,6 +276,14 @@ func _show_world() -> void:
 		_select(&"")
 		return
 
+	var islands := IslandMap.layout_for(world)
+	_set_night(bool(islands.get("at_night", false)))
+	if not islands.is_empty():
+		_show_islands(world, islands)
+		return
+	_map.visible = true
+	_title.visible = true
+	_progress.visible = true
 	_title.text = world.display_name
 	_title.tooltip_text = world.description
 	_path.default_color = world.map_color.lightened(0.6)
@@ -294,6 +318,42 @@ func _show_world() -> void:
 
 	_layout_nodes()
 	_select(world.next_unplayed(Saves.is_cleared) if is_world_open(world) else &"")
+
+
+## The world on PVZGE's islands. The title and the plain path give way to
+## the map, and the arrows scroll it instead of stepping between worlds.
+func _show_islands(world: CampaignDef, islands: Dictionary) -> void:
+	_map.visible = false
+	_title.visible = false
+	_progress.visible = false
+	_prev.disabled = false
+	_next.disabled = false
+	_island = IslandMap.new(world, islands)
+	_island.name = "Islands"
+	add_child(_island)
+	move_child(_island, _backdrop.get_index() + 1)
+	_island.node_pressed.connect(_on_node_pressed)
+	for level_id in world.levels:
+		var b := _island.level_button(level_id)
+		if b != null:
+			_nodes[level_id] = b
+	if not is_world_open(world):
+		var gate := Data.campaign(world.unlock_after)
+		_lock_label.text = "Finish %s to open this world" % (
+				gate.display_name if gate != null else world.unlock_after)
+		_lock_label.visible = true
+		_map.visible = true
+	var pick := world.next_unplayed(Saves.is_cleared) if is_world_open(world) else &""
+	_select(pick)
+	_island.focus(pick if pick != &"" else world.first_level())
+
+
+## PVZGE's sky turns to night for the night worlds (Dark Ages).
+func _set_night(night: bool) -> void:
+	for icon in _backdrop.find_children("*", "RigIcon", true, false):
+		var rig := icon as RigIcon
+		if rig.has_art():
+			rig.art.play(&"IdleNight" if night else &"IdleDay")
 
 
 static func _thousands(n: int) -> String:
@@ -338,6 +398,8 @@ func _style_node(b: Button, state: StringName) -> void:
 ## Lays the nodes out as a path that snakes back and forth across the map,
 ## so a long world wraps into rows instead of running off the side.
 func _layout_nodes() -> void:
+	if _island != null:
+		return
 	var world := current_world()
 	_path.clear_points()
 	if world == null or _nodes.is_empty():
@@ -366,6 +428,14 @@ func _layout_nodes() -> void:
 # --- selection ----------------------------------------------------------
 
 func _step(direction: int) -> void:
+	if _island != null:
+		# PVZGE's ButtonLeft and ButtonRight push the map along.
+		_island.scroll_by(-IslandMap.PUSH * direction)
+		return
+	_change_world(direction)
+
+
+func _change_world(direction: int) -> void:
 	var to := clampi(_index + direction, 0, _worlds.size() - 1)
 	if to == _index:
 		return
@@ -384,7 +454,11 @@ func _on_node_pressed(level_id: StringName) -> void:
 
 func _select(level_id: StringName) -> void:
 	_selected = level_id
+	if _island != null:
+		_island.select(level_id)
 	for id in _nodes:
+		if _island != null:
+			break
 		var b: Button = _nodes[id]
 		b.scale = Vector2.ONE * (1.15 if id == level_id else 1.0)
 		b.pivot_offset = NODE_SIZE * 0.5
@@ -439,6 +513,6 @@ func _unhandled_input(event: InputEvent) -> void:
 		get_viewport().set_input_as_handled()
 		back_requested.emit()
 	elif event.is_action_pressed(&"ui_page_up"):
-		_step(-1)
+		_change_world(-1)
 	elif event.is_action_pressed(&"ui_page_down"):
-		_step(1)
+		_change_world(1)

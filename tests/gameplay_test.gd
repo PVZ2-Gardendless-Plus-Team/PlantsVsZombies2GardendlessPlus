@@ -94,6 +94,7 @@ func _run() -> void:
 	_test_settings()
 	_test_world_unlocks()
 	await _test_menu_flow()
+	await _test_island_map()
 	_test_modding()
 
 
@@ -770,6 +771,76 @@ func _test_world_unlocks() -> void:
 			Saves.mark_cleared(level_id)
 		check("finishing its gate opens it", WorldMap.is_world_open(neon))
 		Saves.reset_progress()
+	end_section()
+
+
+## PVZGE's floating-island maps: layouts load, levels land on islands by id
+## or in path order, and Back leads to the world chooser.
+func _test_island_map() -> void:
+	section("island map")
+	_clear_all_saves()
+	var egypt := CampaignDef.new()
+	egypt.id = &"test_egypt"
+	egypt.world_map = "egypt"
+	egypt.order = 900
+	for id in ["egypt1", "egypt2", "egypt3"]:
+		egypt.levels.append(StringName(id))
+	var mine := CampaignDef.new()
+	mine.id = &"test_mine"
+	mine.world_map = "modern"
+	mine.order = 901
+	mine.levels.append_array(Data.campaign(&"tutorial").levels)
+	check("every PVZGE world has a layout", ["egypt", "pirate", "cowboy", "future", "dark",
+			"beach", "iceage", "lostcity", "eighties", "dino", "modern", "kongfu", "sky", "epic"].all(
+			func(w: String) -> bool:
+				var c := CampaignDef.new()
+				c.world_map = w
+				return not IslandMap.layout_for(c).is_empty()))
+	check("no world_map, no layout", IslandMap.layout_for(Data.campaign(&"tutorial")).is_empty())
+	Data.campaigns[egypt.id] = egypt
+	Data.campaigns[mine.id] = mine
+
+	var map := WorldMap.new()
+	map.start_campaign = egypt.id
+	add_child(map)
+	await get_tree().process_frame
+	var islands := map.island_map()
+	check("a world_map draws islands", islands != null)
+	if islands != null:
+		check("PVZGE's ids land on PVZGE's islands",
+				islands.level_button(&"egypt1") != null and islands.level_button(&"egypt3") != null)
+		check_eq("the first level is selected", map.selected_level(), &"egypt1")
+		check("level 2 is locked", map.level_button(&"egypt2").disabled)
+		var before := islands.map_x
+		map._step(1)
+		for i in 10:
+			await get_tree().process_frame
+		check("the arrows scroll the map", islands.map_x < before)
+	map.queue_free()
+
+	map = WorldMap.new()
+	map.start_campaign = mine.id
+	add_child(map)
+	await get_tree().process_frame
+	islands = map.island_map()
+	check("other ids are laid on islands in order", islands != null and mine.levels.all(
+			func(id: StringName) -> bool: return islands.level_button(id) != null))
+	map.queue_free()
+
+	var chooser := WorldChooser.new()
+	chooser.start_campaign = mine.id
+	add_child(chooser)
+	await get_tree().process_frame
+	check_eq("the chooser opens on the world it came from", chooser.current_world().id, mine.id)
+	var chosen: Array = []
+	chooser.world_chosen.connect(func(id: StringName) -> void: chosen.append(id))
+	check("an open world can be entered", chooser.enter() and chosen == [mine.id])
+	chooser.queue_free()
+
+	Data.campaigns.erase(egypt.id)
+	Data.campaigns.erase(mine.id)
+	await get_tree().process_frame
+	_clear_all_saves()
 	end_section()
 
 
