@@ -11,13 +11,13 @@
  },
  "components": [
   {
-   "type": "shooter",
-   "projectile": "bowling_primal_wallnut"
+   "type": "projectile_spawner",
+   "projectile": "bowling_primal_wallnut",
+   "speed_x": 4
   }
  ],
  "extra": {
   "ImmuneToIceblock": true,
-  "SpeedX": 4,
   "StartingHeight": 0
  }
 }

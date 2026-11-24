@@ -11,13 +11,13 @@
  },
  "components": [
   {
-   "type": "shooter",
-   "projectile": "bowling_explode_o_nut"
+   "type": "projectile_spawner",
+   "projectile": "bowling_explode_o_nut",
+   "speed_x": 4
   }
  ],
  "extra": {
   "ImmuneToIceblock": true,
-  "SpeedX": 4,
   "StartingHeight": 0
  }
 }

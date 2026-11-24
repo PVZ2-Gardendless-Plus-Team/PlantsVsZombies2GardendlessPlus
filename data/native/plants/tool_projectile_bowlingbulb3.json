@@ -11,8 +11,9 @@
  },
  "components": [
   {
-   "type": "shooter",
-   "projectile": "bowling2"
+   "type": "projectile_spawner",
+   "projectile": "bowling2",
+   "speed_x": 5
   }
  ],
  "extra": {

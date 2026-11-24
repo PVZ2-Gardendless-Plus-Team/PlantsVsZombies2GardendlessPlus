@@ -42,6 +42,9 @@ var from_zombie: bool = false
 var returns: bool = false
 ## A bowling bulb glances off what it hits into a neighbouring lane.
 var bounces: bool = false
+## An explode-o-nut blows up on the first thing it hits, hurting everything
+## in its SplashDamage area instead of just the target.
+var explodes: bool = false
 ## Chance per hit of pushing the target back, and how far (squares).
 var knockback_chance: float = 0.0
 var knockback_distance: float = 0.0
@@ -142,6 +145,10 @@ func _check_hit(from_x: float, to_x: float) -> bool:
 			best = t
 	if best == null:
 		return false
+	if explodes:
+		board.splash_at(row, best.position.x, kind, source)
+		queue_free()
+		return true
 	# The shooter may have been eaten or dug up while this was in flight.
 	best.take_damage(damage, source if is_instance_valid(source) else null)
 	if knockback_chance > 0.0 and best is Zombie and randf() < knockback_chance \

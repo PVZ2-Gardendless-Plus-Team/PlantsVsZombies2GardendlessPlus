@@ -733,6 +733,13 @@ def split_plant(name, entry, prop_lookup, feature=None):
     used = set(PLANT_STATS) | {"Family", "MintBoostedProps"}
     components = []
     keyed = plant_behaviour(name, merged)
+    if name.startswith("tool_projectile_"):
+        # PVZGE's ProjectileSpawnerPlant: a bowling ball's seed packet. It is
+        # never a plant on the lawn - placing it rolls the ball and it is gone.
+        spawner = {"type": "projectile_spawner",
+                   "projectile": strip_rtid(merged.get("ProjectileType", "bowling_wallnut")),
+                   "speed_x": merged.get("SpeedX", 5)}
+        keyed = (spawner, {"ProjectileType", "SpeedX"})
     if keyed:
         components.append(keyed[0])
         used.update(keyed[1])

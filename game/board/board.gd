@@ -129,6 +129,10 @@ var _held_cart: GridObject = null
 ## a refusal or "". Level objectives such as a plant cap or a mold colony add
 ## themselves here, so the board does not need to know about them.
 var placement_checks: Array[Callable] = []
+## Minigame clicks on the lawn, each `func(row, col) -> bool` returning true
+## to consume the click: breaking a vase, swapping two matching plants. Asked
+## before anything else a click could do with an empty hand.
+var click_handlers: Array[Callable] = []
 
 ## Lanes the player may plant in, 0-based. Empty means every lane is open.
 ## Tutorial 1 uses this to confine the player to a single lane.
@@ -1700,6 +1704,11 @@ func click(at: Vector2) -> void:
 		aim_at(world_to_row(at.y), world_to_col(at.x))
 		get_viewport().set_input_as_handled()
 		return
+	if selected_seed.is_empty() and not shovel_active:
+		for handler in click_handlers:
+			if handler.call(world_to_row(at.y), world_to_col(at.x)):
+				get_viewport().set_input_as_handled()
+				return
 	if selected_seed.is_empty() and not shovel_active \
 			and tap_plant(world_to_row(at.y), world_to_col(at.x)):
 		get_viewport().set_input_as_handled()

@@ -514,10 +514,92 @@ def challenge_refs(value):
 # module dispatch
 # --------------------------------------------------------------------------
 
+# Minigame modules: the level is played by different rules - nuts are bowled,
+# vases are broken, plants are matched. Each becomes one entry in the level's
+# `minigames` list, named by the mode that runs it (core/minigames/builtin/).
+# The module's own settings are kept, in snake_case, because each mode reads
+# its own; several modules that make up one mode (Beghouled's preset, seed
+# bank and spawner) fold into a single entry.
+MINIGAME_MODULES = {
+    "BowlingMinigameProperties": "bowling",
+    "LastStandMinigameProperties": "last_stand",
+    "VaseBreakerPresetProperties": "vasebreaker",
+    "BeghouledPresetProperties": "beghouled",
+    "BeghouledSeedBankProperties": "beghouled",
+    "BeghouledZombieSpawnerProperties": "beghouled",
+    "DangerRoomModuleProperties": "endless",
+    "DangerRoomMiniGameModuleProperties": "endless",
+    "CannonMinigameProperties": "cannon",
+    "CamelMinigameProperties": "camel",
+    "CowboyMinigameProperties": "cowboy",
+    "FutureMinigameProperties": "fight_alone",
+    "SkyMiniGameProperties": "sky",
+    "SunBombChallengeProperties": "sun_bomb",
+    "RhythmGameProperties": "rhythm",
+}
+
+
+def snake(name):
+    """PopCap's CamelCase key -> snake_case ("BowlingFoulLine" -> "bowling_foul_line")."""
+    name = re.sub(r"(?<=[a-z0-9])(?=[A-Z])|(?<=[A-Z])(?=[A-Z][a-z])", "_", name)
+    return name.lower()
+
+
+def snake_data(value):
+    """A module's objdata with every key in snake_case and RTIDs reduced to
+    their alias. Comment keys ("#comment", "//") are dropped."""
+    if isinstance(value, dict):
+        return {snake(k): snake_data(v) for k, v in value.items()
+                if not k.startswith(("#", "//"))}
+    if isinstance(value, list):
+        return [snake_data(v) for v in value]
+    return strip_rtid(value)
+
+
+def minigame_entry(out, mode):
+    """The level's entry for `mode`, created on first use."""
+    games = out.setdefault("minigames", [])
+    for g in games:
+        if g.get("type") == mode:
+            return g
+    g = {"type": mode}
+    games.append(g)
+    return g
+
+
+def handle_minigame(lvl, out, obj):
+    cls = obj.get("objclass", "")
+    mode = MINIGAME_MODULES[cls]
+    entry = minigame_entry(out, mode)
+    data = snake_data(obj.get("objdata") or {})
+    if mode == "endless":
+        # The level's designers - wave generators, tide changers, conveyor
+        # designers - are local objects the module points at. Pull them in
+        # so the mode reads one entry; shared ones from LevelModules stay as
+        # their names.
+        designers = []
+        for ref in (obj.get("objdata") or {}).get("LevelDesigners") or []:
+            local = lvl.resolve(ref)
+            if local is not None:
+                lvl.consumed.add(id(local))
+                d = snake_data(local.get("objdata") or {})
+                d["type"] = snake(local.get("objclass", "").removeprefix("DangerRoom"))
+                designers.append(d)
+            else:
+                designers.append({"type": "shared", "name": strip_rtid(ref)})
+        data["level_designers"] = designers
+        data["minigame"] = cls == "DangerRoomMiniGameModuleProperties"
+    entry.update(data)
+
+
 def handle_module(lvl, out, obj):
     """Fold one resolved module into the native level. -> True if handled."""
     cls = obj.get("objclass", "")
     d = obj.get("objdata") or {}
+
+    if cls in MINIGAME_MODULES:
+        handle_minigame(lvl, out, obj)
+        return True
 
     if cls in ("SeedBankProperties", "ConveyorSeedBankProperties"):
         out["seedbank"] = conv_seedbank(obj)
