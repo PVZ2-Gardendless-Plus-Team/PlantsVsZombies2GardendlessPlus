@@ -1,0 +1,16 @@
+{
+ "id": "upgrade_starting_sun_lvl2",
+ "order": 1,
+ "type": "starting_sun",
+ "amount": 25,
+ "world": "modern",
+ "sprite": "StartingSun",
+ "name": {
+  "en": "Sun Boost",
+  "zh": "初始阳光增加"
+ },
+ "description": {
+  "en": "Start with 25 extra sun in the bank!",
+  "zh": "关卡初始阳光值增加25！"
+ }
+}

@@ -88,7 +88,7 @@ func grant() -> void:
 		&"unlock_plant":
 			Saves.unlock_plant(param)
 		&"upgrade":
-			Saves.grant_item(&"upgrades", param)
+			Upgrades.grant(param)
 		&"worldtrophy":
 			if param == &"worldkey":
 				Saves.add_currency(&"worldkeys", 1)
@@ -120,6 +120,8 @@ func title() -> String:
 func item_name() -> String:
 	if type == &"unlock_plant":
 		return String(param).capitalize()
+	if type == &"upgrade" and Upgrades.exists(param):
+		return Upgrades.display_name(param)
 	if type == &"note":
 		return "Note: " + String(param).trim_prefix("note_").capitalize()
 	if param != &"":

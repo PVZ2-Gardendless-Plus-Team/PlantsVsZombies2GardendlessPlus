@@ -1,0 +1,16 @@
+{
+ "id": "upgrade_sky_shield",
+ "order": 13,
+ "type": "sky_shield",
+ "amount": 0.5,
+ "world": "sky",
+ "sprite": "Shield",
+ "name": {
+  "en": "Fortress Shield",
+  "zh": "堡垒护盾"
+ },
+ "description": {
+  "en": "Provides an additional 50% toughness for your ship!",
+  "zh": "为你的堡垒带来额外 50% 的强度！"
+ }
+}

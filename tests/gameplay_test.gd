@@ -91,6 +91,7 @@ func _run() -> void:
 	await _test_natural_win_condition()
 	await _test_campaign_progression()
 	await _test_rewards()
+	await _test_upgrades()
 	_test_settings()
 	_test_world_unlocks()
 	await _test_menu_flow()
@@ -4085,6 +4086,148 @@ func _collect_reward(main) -> void:
 	await _wait_game_seconds(drop.present_time + 0.3)
 	if main._award.visible:
 		main._award._on_continue()
+
+
+func _test_upgrades() -> void:
+	section("upgrades")
+	Saves.reset_progress()
+	check_eq("PVZGE's fourteen upgrades load", Upgrades.ids().size(), 14)
+	check_eq("listed in PVZGE's order", Upgrades.ids()[0], &"upgrade_starting_sun_lvl1")
+	check_eq("with their names", Upgrades.display_name(&"upgrade_7_slots"), "Bonus Seed Slot")
+	check("and what they do", Upgrades.description(&"upgrade_pf_refresh").contains("Plant Food"))
+	check("none owned to begin with", Upgrades.owned().is_empty())
+
+	var board := _make_board()
+	var runner := LevelRunner.new()
+	add_child(runner)
+	var level := {"id": "upgrade_test", "waves": []}
+	runner.start(level, board)
+	check_eq("no bonus: the usual starting sun", board.sun, 50)
+	check_eq("three plant food slots", board.max_plant_food, 3)
+	check_eq("no hand-launched mowers", board.manual_mowers_left, 0)
+	check_eq("no shovel refund", Upgrades.shovel_refund_rate(), 0.0)
+
+	# A level reward hands one over and names it on the award screen.
+	var prize := LevelReward.new()
+	prize.type = &"upgrade"
+	prize.param = &"upgrade_starting_sun_lvl1"
+	prize.grant()
+	check("a reward grants the upgrade", Upgrades.owns(&"upgrade_starting_sun_lvl1"))
+	check_eq("the award names it", prize.item_name(), "Sun Bonus")
+	Upgrades.grant(&"upgrade_starting_sun_lvl2")
+	for id in [&"upgrade_pf_slots_lvl1", &"upgrade_pf_slots_lvl2", &"upgrade_7_slots",
+			&"upgrade_8_slots", &"upgrade_sunshovel_lvl1", &"upgrade_sunshovel_lvl2",
+			&"upgrade_manual_mowers_1"]:
+		Upgrades.grant(id)
+
+	board.reset()
+	runner.start(level, board)
+	check_eq("Sun Bonus and Sun Boost add 25 each", board.sun, 100)
+	check_eq("the plant food bar grows to five", board.max_plant_food, 5)
+	board.reset()
+	runner.start({"id": "upgrade_test", "waves": [], "starting_sun": 150}, board)
+	check_eq("on top of a level's own starting sun", board.sun, 200)
+
+	# Switched off in the almanac, an upgrade stops counting.
+	Upgrades.set_enabled(&"upgrade_starting_sun_lvl2", false)
+	check("it reads as disabled", not Upgrades.is_enabled(&"upgrade_starting_sun_lvl2"))
+	board.reset()
+	runner.start(level, board)
+	check_eq("a disabled upgrade does not apply", board.sun, 75)
+	Upgrades.set_enabled(&"upgrade_starting_sun_lvl2", true)
+	check("and switches back on", Upgrades.is_enabled(&"upgrade_starting_sun_lvl2"))
+
+	# Seed slots: the base count grows, a level's own count stands.
+	Settings.set_value(&"unlock_all_plants", true)
+	var plain := {"seedbank": {"mode": "chooser", "selection": "chooser"}}
+	check_eq("two slot upgrades give eight slots",
+			SeedChooserRules.from_level(plain, board).slots, 8)
+	var fixed := {"seedbank": {"mode": "chooser", "selection": "chooser", "slots": 4}}
+	check_eq("a level's own slot count is kept",
+			SeedChooserRules.from_level(fixed, board).slots, 4)
+	Settings.set_value(&"unlock_all_plants", false)
+
+	# Shovel Bonus: half of a wall-nut's 50 sun comes back.
+	board.reset()
+	runner.start(level, board)
+	board.place_plant(&"wallnut", 2, 3)
+	var before := board.sun
+	check("the wall-nut is dug up", board.dig_up(2, 3))
+	await _wait_game_seconds(2.0)
+	check_eq("half its cost comes back as sun", board.sun - before, 25)
+
+	# Wall-nut First Aid: only with the upgrade, only on a hurt defender.
+	var nut := board.place_plant(&"wallnut", 1, 1)
+	nut.take_damage(nut.max_health * 0.5)
+	check("without First Aid the cell is taken",
+			not board.can_place_entity(&"plant", &"wallnut", 1, 1))
+	Upgrades.grant(&"upgrade_wallnut_firstaid")
+	check("with it a hurt wall-nut can be replanted",
+			board.can_place_entity(&"plant", &"wallnut", 1, 1))
+	check("not by another plant", not board.can_place_entity(&"plant", &"peashooter", 1, 1))
+	check("replanting patches the same plant up",
+			board.place_entity(&"plant", &"wallnut", 1, 1) == nut)
+	check_eq("back to full", nut.health, nut.max_health)
+	check("a whole wall-nut is not replantable",
+			not board.can_place_entity(&"plant", &"wallnut", 1, 1))
+	var pea := board.place_plant(&"peashooter", 3, 1)
+	pea.take_damage(pea.max_health * 0.5)
+	check("an attacker is not a defender",
+			not board.can_place_entity(&"plant", &"peashooter", 3, 1))
+
+	# Instant Recharge: plant food finishes a packet's recharge.
+	var bank := SeedBank.new()
+	add_child(bank)
+	bank.setup([{"kind": &"plant", "id": &"wallnut"}])
+	bank.spend(0)
+	check("the packet is recharging", not bank.is_recharged(0))
+	check("Instant Recharge is not owned yet", not Upgrades.has_instant_recharge())
+	Upgrades.grant(&"upgrade_pf_refresh")
+	check("now it is", Upgrades.has_instant_recharge())
+	bank.finish_recharge(0)
+	check("plant food readies the packet", bank.is_recharged(0))
+	bank.queue_free()
+
+	# Mower Launch: holding a parked mower down for a second sends it off.
+	board.reset()
+	runner.start({"id": "upgrade_test", "waves": [], "mowers": true}, board)
+	check_eq("one mower may be launched by hand", board.manual_mowers_left, 1)
+	var mower := board.mower_in_row(2)
+	check("the lane has a mower", mower != null)
+	if mower != null:
+		var lost := [false]
+		board.mower_triggered.connect(func(_r): lost[0] = true)
+		check("pressing it starts the launch", board.press_mower(mower.position))
+		check("a short hold does nothing", not mower.advance_hold(0.4))
+		check("a full second launches it", mower.advance_hold(0.7))
+		check("it is spent", not mower.is_available())
+		check("the board counts it as a mower used", lost[0])
+		check_eq("no hand launches left", board.manual_mowers_left, 0)
+		var other := board.mower_in_row(3)
+		check("the next mower cannot be pressed",
+				other != null and not board.press_mower(other.position))
+	check_eq("hand launches survive a save",
+			int(board.snapshot().get("manual_mowers_left", -1)), 0)
+
+	# The almanac's Upgrades page: a card each, a switch on the owned ones.
+	var page := UpgradesPage.new()
+	add_child(page)
+	check_eq("a card per upgrade", page.card_count(), 14)
+	check("a locked upgrade has no switch", page.toggle_for(&"upgrade_sky_shield") == null)
+	var toggle := page.toggle_for(&"upgrade_7_slots")
+	check("an owned one does", toggle != null)
+	if toggle != null:
+		check_eq("it starts enabled", toggle.text, "Enabled")
+		toggle.pressed.emit()
+		check("the switch disables it", not Upgrades.is_enabled(&"upgrade_7_slots"))
+		check_eq("and says so", page.toggle_for(&"upgrade_7_slots").text, "Disabled")
+	page.queue_free()
+
+	runner.stop()
+	runner.queue_free()
+	board.queue_free()
+	Saves.reset_progress()
+	end_section()
 
 
 func _make_board() -> Board:

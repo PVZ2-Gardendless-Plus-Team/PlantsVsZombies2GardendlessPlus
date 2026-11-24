@@ -9,6 +9,8 @@ extends Node2D
 
 signal triggered(row: int)
 signal finished(row: int)
+## The player held the mower down long enough to launch it (Mower Launch).
+signal launched_by_hand(row: int)
 
 @export var speed: float = 420.0
 @export var body_size := Vector2(46, 30)
@@ -30,6 +32,12 @@ var _revving: float = 0.0
 
 ## Longest a rev may hold the mower, for a rig whose Trans never says it is done.
 const MAX_REV := 0.6
+## Seconds a mower must be held down to launch it by hand: PVZGE's
+## maxPressTime, with the Mower Launch upgrade.
+const LAUNCH_HOLD := 1.0
+
+var _pressed: bool = false
+var _hold: float = 0.0
 
 
 ## Gives the mower its world's look. Without art it keeps drawing a box.
@@ -48,6 +56,8 @@ func attach_art(id: StringName) -> void:
 		queue_redraw()
 		return
 	art = built
+	# Under the mower's own drawing, so the hand-launch ring shows over it.
+	art.show_behind_parent = true
 	add_child(art)
 	art.event.connect(_on_art_event)
 	art.animation_finished.connect(_on_art_finished)
@@ -84,7 +94,64 @@ func trigger() -> bool:
 	return true
 
 
+## True when `local` (relative to the mower) is on it, for a press.
+func contains_point(local: Vector2) -> bool:
+	var reach := Vector2(maxf(body_size.x, 60.0), maxf(body_size.y, 50.0) * 1.5)
+	# The mower stands on its row's centre line; take a little below it too.
+	return Rect2(Vector2(-reach.x * 0.5, -reach.y), reach + Vector2(0, 20)).has_point(local)
+
+
+## Starts a hand launch. The player has to keep holding the mower down.
+func press() -> bool:
+	if _spent:
+		return false
+	_pressed = true
+	_hold = 0.0
+	queue_redraw()
+	return true
+
+
+func release() -> void:
+	if not _pressed:
+		return
+	_pressed = false
+	_hold = 0.0
+	queue_redraw()
+
+
+func is_pressed() -> bool:
+	return _pressed
+
+
+## How far a hand launch has got, 0 to 1: PVZGE's launchCircs fill.
+func hold_progress() -> float:
+	return clampf(_hold / LAUNCH_HOLD, 0.0, 1.0) if _pressed else 0.0
+
+
+## Holds the mower down a little longer. Returns true when that launches it.
+func advance_hold(delta: float) -> bool:
+	if not _pressed or _spent:
+		return false
+	_hold += delta
+	queue_redraw()
+	if _hold < LAUNCH_HOLD:
+		return false
+	_pressed = false
+	_hold = 0.0
+	if not trigger():
+		return false
+	launched_by_hand.emit(row)
+	return true
+
+
 func _process(delta: float) -> void:
+	if _pressed:
+		# Let go, or slid off it, and the launch is called off.
+		if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) \
+				and contains_point(get_local_mouse_position()):
+			advance_hold(delta)
+		else:
+			release()
 	if not _running or board == null:
 		return
 	if _revving > 0.0:
@@ -135,6 +202,12 @@ func _mow(from_x: float, to_x: float) -> void:
 
 
 func _draw() -> void:
+	if _pressed:
+		# PVZGE's launchCircs: a ring that fills while the mower is held.
+		var at := Vector2(0, -body_size.y - 34.0)
+		draw_circle(at, 15.0, Color(0, 0, 0, 0.45))
+		draw_arc(at, 12.0, -PI * 0.5, -PI * 0.5 + TAU * hold_progress(), 32,
+				Color("f2c744"), 5.0)
 	if art != null:
 		return
 	var rect := Rect2(Vector2(-body_size.x * 0.5, -body_size.y), body_size)

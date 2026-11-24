@@ -127,6 +127,9 @@ func open(prize: LevelReward) -> void:
 		_packet.hide()
 		if prize.type == &"gems":
 			_detail.text = "Gems: %d" % Saves.currency(&"gems")
+		elif prize.type == &"upgrade" and Upgrades.exists(prize.param):
+			# PVZGE's award screen reads the upgrade's own DESCRIPTION.
+			_detail.text = Upgrades.description(prize.param)
 	show()
 	_button.grab_focus()
 

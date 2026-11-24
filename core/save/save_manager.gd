@@ -264,6 +264,18 @@ func has_item(collection: StringName, item_id: StringName) -> bool:
 	return (_progress.get(String(collection), []) as Array).has(String(item_id))
 
 
+## Takes `item_id` back out of a collection. Returns false if it was not there.
+func revoke_item(collection: StringName, item_id: StringName) -> bool:
+	var items: Array = _progress.get(String(collection), [])
+	if not items.has(String(item_id)):
+		return false
+	items.erase(String(item_id))
+	_progress[String(collection)] = items
+	_save_progress()
+	progress_changed.emit()
+	return true
+
+
 func items(collection: StringName) -> Array:
 	return (_progress.get(String(collection), []) as Array).duplicate()
 

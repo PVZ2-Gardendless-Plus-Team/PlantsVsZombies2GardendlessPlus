@@ -149,6 +149,8 @@ func load_level(level_id: StringName) -> void:
 	elif runner.needs_seed_choice():
 		_open_chooser()
 
+	_plant_food_bar.set_slots(board.max_plant_food)
+	_plant_food_bar.set_count(board.plant_food)
 	_set_status("")
 	_wave_label.text = ""
 	_sun_counter.set_total(board.sun, true)
@@ -633,6 +635,10 @@ func _refresh_mode_label() -> void:
 ## Selects a seed slot, or clears the selection when `slot` is out of range.
 ## Selecting the slot that is already active clears it, so a hotkey toggles.
 func _select_seed(slot: int) -> void:
+	# With Instant Recharge, plant food dropped on a packet that is still
+	# recharging makes it ready, as PVZGE's clearCool does.
+	if board.plant_food_active and refresh_packet(slot):
+		return
 	# As in PVZGE's tryChangingIndex, a packet that is recharging or that the
 	# bank cannot pay for is not picked up at all. Short of sun, the counter
 	# flashes too.
@@ -650,6 +656,23 @@ func _select_seed(slot: int) -> void:
 		Audio.play(&"ui.seed.select")
 		board.selected_seed = _seeds[slot].duplicate()
 	_refresh_seed_buttons()
+
+
+## Spends a plant food to finish a packet's recharge, with the Instant
+## Recharge upgrade. Returns false, spending nothing, when it cannot.
+func refresh_packet(slot: int) -> bool:
+	if not Upgrades.has_instant_recharge() or seed_bank == null:
+		return false
+	var packet := seed_bank.packet(slot)
+	if packet == null or packet.is_recharged() or board.plant_food <= 0:
+		return false
+	seed_bank.finish_recharge(slot)
+	board.spend_plant_food()
+	board.plant_food_active = false
+	Audio.play(&"plant.food")
+	_refresh_seed_buttons()
+	_refresh_mode_label()
+	return true
 
 
 func _on_sun_changed(total: int) -> void:

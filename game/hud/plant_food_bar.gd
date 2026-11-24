@@ -34,19 +34,47 @@ func _init(slots: int = 3, font_size: int = 18) -> void:
 	_icon.set_anchors_preset(Control.PRESET_FULL_RECT)
 	_button.add_child(_icon)
 	for i in slots:
-		var slot := RigIcon.new(&"plant_food_slot",
-				Vector2(SLOT_STEP if _backing != null else 40.0, 52))
-		if _backing == null:
-			# The well a charge sits in; PVZGE's bar has them drawn in.
-			slot.draw.connect(func():
-				slot.draw_circle(slot.size * 0.5, 17.0, Color(0, 0, 0, 0.35)))
-		add_child(slot)
-		_slots.append(slot)
+		_add_slot()
 	_label = Label.new()
 	_label.add_theme_font_size_override("font_size", font_size)
 	_label.add_theme_color_override("font_color", Color.WHITE)
 	_label.add_theme_color_override("font_shadow_color", Color(0, 0, 0, 0.8))
 	add_child(_label)
+
+
+func _add_slot() -> RigIcon:
+	var slot := RigIcon.new(&"plant_food_slot",
+			Vector2(SLOT_STEP if _backing != null else 40.0, 52))
+	if _backing == null:
+		# The well a charge sits in; PVZGE's bar has them drawn in.
+		slot.draw.connect(func():
+			slot.draw_circle(slot.size * 0.5, 17.0, Color(0, 0, 0, 0.35)))
+	add_child(slot)
+	_slots.append(slot)
+	return slot
+
+
+func slot_count() -> int:
+	return _slots.size()
+
+
+## Grows or shrinks the bar to `count` slots: the Plantfood Slot upgrades
+## take PVZGE's three up to five.
+func set_slots(count: int) -> void:
+	count = maxi(count, 0)
+	while _slots.size() > count:
+		var slot: RigIcon = _slots.pop_back()
+		remove_child(slot)
+		slot.queue_free()
+	while _slots.size() < count:
+		var slot := _add_slot()
+		# Before the count label, which stays last.
+		if _label != null:
+			move_child(slot, _label.get_index())
+		if is_inside_tree():
+			slot.visible = slot.has_art()
+	set_count(mini(_count, count))
+	queue_redraw()
 
 
 func _ready() -> void:

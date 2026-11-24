@@ -89,10 +89,12 @@ func _read(level: Dictionary, board: Board) -> void:
 			_read_decks(deck_data.get("recommended", []), false)
 		_read_decks(deck_data.get("challenging", []), true)
 
+	# A level's own slot count stands as it is; otherwise the base count
+	# grows with the seed slot upgrades, as PVZGE's BaseSeedSlotcount does.
+	var cap := int(config.get("max_slots", 8))
 	var wanted := int(sb.get("slots", 0))
 	if wanted <= 0:
-		wanted = int(config.get("base_slots", 6))
-	var cap := int(config.get("max_slots", 8))
+		wanted = Upgrades.seed_slots(int(config.get("base_slots", 6)), cap)
 	var choosable := 0
 	for id in candidates:
 		if refusal(id) == "":
