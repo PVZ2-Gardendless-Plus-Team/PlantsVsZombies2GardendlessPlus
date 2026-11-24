@@ -99,6 +99,7 @@ func _ready() -> void:
 	runner.level_complete.connect(_on_won)
 	runner.level_failed.connect(_on_objective_failed)
 	runner.objectives_changed.connect(_on_objectives_changed)
+	runner.minigames_changed.connect(_on_objectives_changed)
 
 	print("[boot] ", Data.summary())
 	print("[boot] ", Components.summary())
@@ -161,7 +162,8 @@ func load_level(level_id: StringName) -> void:
 	_sun_counter.set_total(board.sun, true)
 	# A chooser level says "Ready, Set, Plant!" once the player has picked.
 	if runner.running:
-		_banner.ready_set_plant()
+		_banner.ready_set_plant(runner.start_word())
+	_apply_minigame_rules()
 	_refresh_mode_label()
 	_level_label.text = _level_title(level)
 	_refresh_ability_label()
@@ -385,7 +387,7 @@ func _on_seeds_chosen(hand: Array[StringName]) -> void:
 	_close_chooser()
 	_use_chosen_seeds(_chooser.rules.seeds_for(hand))
 	Audio.play(&"ui.chooseseeds.close")
-	_banner.ready_set_plant()
+	_banner.ready_set_plant(runner.start_word())
 
 
 ## Fills the bank with the player's picks and starts the level.
@@ -597,6 +599,8 @@ func _step_slot(step: int) -> void:
 
 
 func _toggle_shovel() -> void:
+	if not _shovel_button.visible:
+		return
 	board.shovel_active = not board.shovel_active
 	if board.shovel_active:
 		Audio.play(&"ui.shovel")
@@ -608,7 +612,7 @@ func _toggle_shovel() -> void:
 
 ## Arms plant food. The next click on a plant feeds it, if there is any left.
 func _toggle_plant_food() -> void:
-	if board.plant_food <= 0:
+	if board.plant_food <= 0 or not _plant_food_bar.visible:
 		board.plant_food_active = false
 		_refresh_mode_label()
 		return
@@ -662,6 +666,14 @@ func _select_seed(slot: int) -> void:
 		Audio.play(&"ui.seed.refuse")
 		if seed_bank.is_recharged(slot):
 			_sun_counter.warn()
+		return
+	if slot >= 0 and slot < _seeds.size() \
+			and runner.minigame_use_seed(StringName(_seeds[slot]["id"])):
+		# A packet the mode spends on the spot, such as a Beghouled upgrade.
+		board.spend_sun(seed_bank.cost_of(slot))
+		seed_bank.spend(slot)
+		board.selected_seed = {}
+		_refresh_seed_buttons()
 		return
 	if slot < 0 or slot >= _seeds.size():
 		board.selected_seed = {}
@@ -738,13 +750,40 @@ func _refresh_ability_label() -> void:
 	_ability_label.text = "   ".join(bits)
 
 
-## A broken objective loses the level, and names which rule broke.
+## A broken objective loses the level, and names which rule broke. A
+## minigame's own rule failing comes with no objective.
 func _on_objective_failed(objective: Objective) -> void:
 	if _transitioning:
+		return
+	if objective == null:
+		_on_lost()
 		return
 	var text := objective.describe()
 	_on_lost()
 	_set_status(tr("Objective failed: %s") % (text if text != "" else objective.name))
+
+
+## A minigame takes the tools it has no use for out of the HUD - no shovel
+## or plant food while bowling - and says what the mode is about.
+func _apply_minigame_rules() -> void:
+	var shovel := runner.minigames_allow(&"allows_shovel")
+	var food := runner.minigames_allow(&"allows_plant_food")
+	_shovel_button.visible = shovel
+	_plant_food_bar.visible = food
+	if not shovel:
+		board.shovel_active = false
+	if not food:
+		board.plant_food_active = false
+	var lines := runner.intro_lines()
+	if not lines.is_empty() and not runner.needs_seed_choice():
+		_show_intro("\n".join(lines))
+
+
+func _show_intro(text: String) -> void:
+	_set_status(text)
+	await get_tree().create_timer(4.0).timeout
+	if is_inside_tree() and _status.text == text:
+		_set_status("")
 
 
 func _on_wave_started(index: int, total: int) -> void:

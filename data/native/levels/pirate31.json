@@ -1,0 +1,452 @@
+{
+ "id": "pirate31",
+ "name": "Pirate 31",
+ "name_key": "[PIRATE_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_PIRATE_SHIP]",
+ "number": 31,
+ "stage": "PirateStage",
+ "intro_narrative": "PIRATE_31_INTRO",
+ "objectives": [
+  {
+   "type": "survive_waves",
+   "description": "[STARCHALLENGE_LASTSTAND_MINIGAME]"
+  },
+  {
+   "type": "zombie_distance",
+   "distance": 4
+  }
+ ],
+ "seedbank": {
+  "mode": "chooser",
+  "selection": "chooser",
+  "blacklist": [
+   "sunflower",
+   "twinsunflower",
+   "iceburg",
+   "sunshroom",
+   "sunbean",
+   "puffshroom",
+   "seashroom",
+   "melonpult",
+   "toadstool",
+   "goldleaf",
+   "stallia",
+   "primalsunflower",
+   "goldbloom"
+  ],
+  "suggest": [
+   [
+    "bonkchoy",
+    "springbean"
+   ],
+   [
+    "wallnut"
+   ],
+   [
+    "spikeweed",
+    "potatomine"
+   ],
+   [
+    "kernelpult",
+    "cabbagepult"
+   ],
+   [
+    "primalpeashooter",
+    "repeater"
+   ],
+   [
+    "snapdragon",
+    "bloomerang"
+   ],
+   [
+    "sporeshroom",
+    "xshot"
+   ],
+   [
+    "electricblueberry",
+    "lightningreed"
+   ]
+  ],
+  "decks": {
+   "recommended": [
+    {
+     "name": "Secret Expertise",
+     "plants": [
+      "laser_bean",
+      "tallnut"
+     ]
+    },
+    {
+     "name": "Sit By and Win",
+     "plants": [
+      "laser_bean",
+      "peach",
+      "chardguard"
+     ]
+    },
+    {
+     "name": "Meteor Shower",
+     "plants": [
+      "shootingstarfruit",
+      "wallnut"
+     ]
+    }
+   ]
+  }
+ },
+ "minigames": [
+  {
+   "type": "last_stand",
+   "starting_plantfood": 1,
+   "starting_sun": 1850
+  }
+ ],
+ "waves": [
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "cannon"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "swashbuckler"
+    },
+    {
+     "type": "swashbuckler"
+    },
+    {
+     "type": "swashbuckler"
+    },
+    {
+     "type": "swashbuckler"
+    },
+    {
+     "type": "seagull"
+    }
+   ],
+   "plantfood": 1,
+   "dynamic_plantfood": [
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "cannon"
+      },
+      {
+       "type": "cannon"
+      }
+     ]
+    },
+    {
+     "kind": "raiding_party",
+     "type": "swashbuckler",
+     "count": 5,
+     "group_size": 1,
+     "group_interval": 1
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "cannon"
+    },
+    {
+     "type": "cannon"
+    },
+    {
+     "type": "cannon"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "cannon"
+    },
+    {
+     "type": "cannon"
+    },
+    {
+     "type": "cannon"
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "cannon",
+       "row": 1
+      },
+      {
+       "type": "cannon",
+       "row": 2
+      },
+      {
+       "type": "cannon",
+       "row": 3
+      },
+      {
+       "type": "cannon",
+       "row": 4
+      },
+      {
+       "type": "cannon",
+       "row": 5
+      }
+     ]
+    },
+    {
+     "kind": "raiding_party",
+     "type": "swashbuckler",
+     "count": 5,
+     "group_size": 1,
+     "group_interval": 1
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "cannon",
+     "row": 1
+    },
+    {
+     "type": "cannon",
+     "row": 2
+    },
+    {
+     "type": "cannon",
+     "row": 3
+    },
+    {
+     "type": "cannon",
+     "row": 4
+    },
+    {
+     "type": "cannon",
+     "row": 5
+    },
+    {
+     "type": "swashbuckler",
+     "row": 1
+    },
+    {
+     "type": "swashbuckler",
+     "row": 3
+    },
+    {
+     "type": "swashbuckler",
+     "row": 5
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "seagull"
+    },
+    {
+     "type": "seagull"
+    },
+    {
+     "type": "seagull"
+    },
+    {
+     "type": "seagull"
+    },
+    {
+     "type": "seagull"
+    },
+    {
+     "type": "cannon",
+     "row": 1
+    },
+    {
+     "type": "cannon",
+     "row": 2
+    },
+    {
+     "type": "cannon",
+     "row": 3
+    },
+    {
+     "type": "cannon",
+     "row": 4
+    },
+    {
+     "type": "cannon",
+     "row": 5
+    },
+    {
+     "type": "seagull"
+    },
+    {
+     "type": "seagull"
+    }
+   ],
+   "plantfood": 1,
+   "dynamic_plantfood": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "cannon",
+     "row": 1
+    },
+    {
+     "type": "cannon",
+     "row": 2
+    },
+    {
+     "type": "cannon",
+     "row": 3
+    },
+    {
+     "type": "cannon",
+     "row": 4
+    },
+    {
+     "type": "cannon",
+     "row": 5
+    },
+    {
+     "type": "swashbuckler",
+     "row": 1
+    },
+    {
+     "type": "swashbuckler",
+     "row": 2
+    },
+    {
+     "type": "swashbuckler",
+     "row": 3
+    },
+    {
+     "type": "swashbuckler",
+     "row": 4
+    },
+    {
+     "type": "swashbuckler",
+     "row": 5
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "seagull"
+      },
+      {
+       "type": "seagull"
+      },
+      {
+       "type": "seagull"
+      },
+      {
+       "type": "seagull"
+      },
+      {
+       "type": "seagull"
+      },
+      {
+       "type": "cannon",
+       "row": 1
+      },
+      {
+       "type": "cannon",
+       "row": 2
+      },
+      {
+       "type": "cannon",
+       "row": 3
+      },
+      {
+       "type": "cannon",
+       "row": 4
+      },
+      {
+       "type": "cannon",
+       "row": 5
+      },
+      {
+       "type": "seagull"
+      },
+      {
+       "type": "seagull"
+      }
+     ]
+    },
+    {
+     "kind": "raiding_party",
+     "type": "swashbuckler",
+     "count": 5,
+     "group_size": 1,
+     "group_interval": 3
+    },
+    {
+     "kind": "raiding_party",
+     "type": "swashbuckler",
+     "count": 5,
+     "group_size": 1,
+     "group_interval": 3
+    }
+   ]
+  }
+ ],
+ "wave_pacing": {
+  "flag_interval": 10,
+  "points": 600,
+  "point_increment": 300,
+  "suppress_flag": true
+ },
+ "extra": [
+  {
+   "objclass": "PiratePlankProperties",
+   "aliases": [
+    "PiratePlanks"
+   ],
+   "objdata": {
+    "PlankRows": []
+   }
+  }
+ ]
+}

@@ -1,0 +1,566 @@
+{
+ "id": "conceal2",
+ "name": "[EPIC_PLANT_CONCEAL_LEVEL_NAME]",
+ "description": "[MEET_CONCEAL_FAMILY]",
+ "author": "莱池_余垛",
+ "number": 2,
+ "stage": "FutureNightStage",
+ "intro_narrative": "CONCEAL_B",
+ "waves": [
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "future_armor1",
+     "row": 2
+    },
+    {
+     "type": "future",
+     "row": 2
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "future_armor2",
+     "row": 3
+    }
+   ],
+   "plantfood": 1,
+   "dynamic_plantfood": [
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "future_armor2",
+     "row": 5
+    },
+    {
+     "type": "lostcity_excavator",
+     "row": 4
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "lostcity_excavator",
+     "row": 5
+    },
+    {
+     "type": "lostcity_excavator",
+     "row": 3
+    }
+   ],
+   "plantfood": 1,
+   "dynamic_plantfood": [
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "lostcity_excavator",
+     "row": 1
+    },
+    {
+     "type": "lostcity_excavator",
+     "row": 4
+    },
+    {
+     "type": "future_armor2",
+     "row": 2
+    },
+    {
+     "type": "future_armor1",
+     "row": 3
+    },
+    {
+     "type": "future_imp",
+     "row": 3
+    },
+    {
+     "type": "future_imp",
+     "row": 5
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "mech_cone",
+       "row": 4
+      }
+     ]
+    },
+    {
+     "kind": "portal",
+     "row": 1,
+     "col": 8,
+     "portal": {
+      "world": "imp",
+      "first": {
+       "min": 0.5,
+       "max": 1
+      },
+      "interval": {
+       "min": 12,
+       "max": 12.5
+      },
+      "zombies": [
+       {
+        "type": "lostcity_excavator",
+        "weight": 9999
+       },
+       {
+        "type": "newspaper_veteran",
+        "weight": 1
+       },
+       {
+        "type": "chicken_farmer",
+        "weight": 999
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "mech_cone",
+       "row": 1
+      },
+      {
+       "type": "future_armor2",
+       "row": 3
+      }
+     ]
+    },
+    {
+     "kind": "portal",
+     "row": 4,
+     "col": 7,
+     "portal": {
+      "world": "imp",
+      "first": {
+       "min": 0.5,
+       "max": 1
+      },
+      "interval": {
+       "min": 12,
+       "max": 12.5
+      },
+      "zombies": [
+       {
+        "type": "lostcity_excavator",
+        "weight": 9999
+       },
+       {
+        "type": "newspaper_veteran",
+        "weight": 1
+       },
+       {
+        "type": "chicken_farmer",
+        "weight": 999
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "lostcity_excavator",
+     "row": 1
+    },
+    {
+     "type": "lostcity_excavator",
+     "row": 2
+    },
+    {
+     "type": "lostcity_excavator",
+     "row": 3
+    },
+    {
+     "type": "lostcity_excavator",
+     "row": 4
+    },
+    {
+     "type": "lostcity_excavator",
+     "row": 5
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "mech_cone",
+       "row": 2
+      },
+      {
+       "type": "mech_cone",
+       "row": 5
+      }
+     ]
+    },
+    {
+     "kind": "portal",
+     "row": 0,
+     "col": 8,
+     "portal": {
+      "world": "imp",
+      "first": {
+       "min": 0.5,
+       "max": 1
+      },
+      "interval": {
+       "min": 12,
+       "max": 12.5
+      },
+      "zombies": [
+       {
+        "type": "lostcity_excavator",
+        "weight": 9999
+       },
+       {
+        "type": "newspaper_veteran",
+        "weight": 1
+       },
+       {
+        "type": "chicken_farmer",
+        "weight": 999
+       }
+      ]
+     }
+    },
+    {
+     "kind": "portal",
+     "row": 3,
+     "col": 8,
+     "portal": {
+      "world": "imp",
+      "first": {
+       "min": 0.5,
+       "max": 1
+      },
+      "interval": {
+       "min": 12,
+       "max": 12.5
+      },
+      "zombies": [
+       {
+        "type": "lostcity_excavator",
+        "weight": 9999
+       },
+       {
+        "type": "newspaper_veteran",
+        "weight": 1
+       },
+       {
+        "type": "chicken_farmer",
+        "weight": 999
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "future_armor2",
+       "row": 1
+      },
+      {
+       "type": "lostcity_excavator",
+       "row": 2
+      },
+      {
+       "type": "lostcity_excavator",
+       "row": 3
+      },
+      {
+       "type": "future_armor2",
+       "row": 4
+      },
+      {
+       "type": "lostcity_excavator",
+       "row": 5
+      },
+      {
+       "type": "mech_cone",
+       "row": 1
+      },
+      {
+       "type": "mech_cone",
+       "row": 3
+      },
+      {
+       "type": "mech_cone",
+       "row": 5
+      }
+     ],
+     "plantfood": 1,
+     "dynamic_plantfood": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0
+     ]
+    },
+    {
+     "kind": "portal",
+     "row": 1,
+     "col": 7,
+     "portal": {
+      "world": "imp",
+      "first": {
+       "min": 0.5,
+       "max": 1
+      },
+      "interval": {
+       "min": 12,
+       "max": 12.5
+      },
+      "zombies": [
+       {
+        "type": "lostcity_excavator",
+        "weight": 9999
+       },
+       {
+        "type": "newspaper_veteran",
+        "weight": 1
+       },
+       {
+        "type": "chicken_farmer",
+        "weight": 999
+       }
+      ]
+     }
+    },
+    {
+     "kind": "portal",
+     "row": 4,
+     "col": 8,
+     "portal": {
+      "world": "imp",
+      "first": {
+       "min": 0.5,
+       "max": 1
+      },
+      "interval": {
+       "min": 12,
+       "max": 12.5
+      },
+      "zombies": [
+       {
+        "type": "lostcity_excavator",
+        "weight": 9999
+       },
+       {
+        "type": "newspaper_veteran",
+        "weight": 1
+       },
+       {
+        "type": "chicken_farmer",
+        "weight": 999
+       }
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "wave_pacing": {
+  "flag_interval": 5,
+  "points": 150,
+  "point_increment": 100
+ },
+ "dynamic_zombies": [
+  {
+   "start_wave": 5,
+   "points": 100,
+   "increment": 20,
+   "pool": [
+    "lostcity_excavator",
+    "mech_cone",
+    "future_imp",
+    "future_armor1"
+   ]
+  },
+  {
+   "start_wave": 5,
+   "points": 200,
+   "increment": 40,
+   "pool": [
+    "lostcity_excavator",
+    "mech_cone",
+    "future_imp",
+    "future_armor2",
+    "future_armor1"
+   ]
+  },
+  {
+   "start_wave": 4,
+   "points": 300,
+   "increment": 50,
+   "pool": [
+    "lostcity_excavator",
+    "mech_cone",
+    "future_imp",
+    "future_armor2",
+    "future_armor1"
+   ]
+  },
+  {
+   "start_wave": 3,
+   "points": 400,
+   "increment": 60,
+   "pool": [
+    "lostcity_excavator",
+    "mech_cone",
+    "future_imp",
+    "future_armor2"
+   ]
+  }
+ ],
+ "objectives": [
+  {
+   "type": "survive_waves"
+  },
+  {
+   "type": "zombie_distance",
+   "distance": 4.7
+  },
+  {
+   "type": "protect_plants",
+   "must_protect": 3,
+   "plants": [
+    {
+     "col": 1,
+     "row": 1,
+     "type": "moonflower"
+    },
+    {
+     "col": 1,
+     "row": 4,
+     "type": "moonflower"
+    },
+    {
+     "col": 3,
+     "row": 3,
+     "type": "moonflower"
+    }
+   ]
+  }
+ ],
+ "seedbank": {
+  "mode": "chooser",
+  "selection": "preset",
+  "preset": [
+   "shadowpeashooter",
+   "spikerock",
+   "iceburg"
+  ]
+ },
+ "minigames": [
+  {
+   "type": "sun_bomb",
+   "suppress_objective_tip": true,
+   "plant_bomb_explosion_radius": 25,
+   "plant_damage": 1000,
+   "zombie_bomb_explosion_radius": 80,
+   "zombie_damage": 0
+  }
+ ],
+ "railcarts": {
+  "carts": [
+   {
+    "col": 1,
+    "row": 1
+   },
+   {
+    "col": 3,
+    "row": 3
+   }
+  ],
+  "rails": [
+   {
+    "col": 1,
+    "row_start": 0,
+    "row_end": 1
+   },
+   {
+    "col": 1,
+    "row_start": 2,
+    "row_end": 3
+   },
+   {
+    "col": 3,
+    "row_start": 0,
+    "row_end": 4
+   }
+  ],
+  "type": "railcart_future"
+ },
+ "mowers": true,
+ "scripts": [
+  "StandardIntro"
+ ],
+ "extra": [
+  {
+   "objclass": "SunDropperProperties",
+   "aliases": [
+    "SunDropper"
+   ],
+   "objdata": {
+    "InitialSunDropDelay": 2,
+    "SunCountdownBase": 4,
+    "SunCountdownIncreasePerSun": 0,
+    "SunCountdownMax": 4,
+    "SunCountdownRange": 0
+   }
+  }
+ ]
+}

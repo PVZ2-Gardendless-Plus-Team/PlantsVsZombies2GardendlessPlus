@@ -1,0 +1,87 @@
+{
+ "id": "lod_258",
+ "name": "Piñata Party 12 by Hoshiato",
+ "name_key": "[LOD_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_LOD]",
+ "author": "星痕_Hoshiato",
+ "number": 12,
+ "stage": "LostCityStage",
+ "vasebreaker": true,
+ "level_of_the_day": true,
+ "initial": {
+  "grid_items": [
+   {
+    "type": "potholepuddle",
+    "row": 0,
+    "col": 3
+   },
+   {
+    "type": "potholepuddle",
+    "row": 1,
+    "col": 3
+   },
+   {
+    "type": "potholepuddle",
+    "row": 2,
+    "col": 3
+   },
+   {
+    "type": "potholepuddle",
+    "row": 3,
+    "col": 3
+   },
+   {
+    "type": "potholepuddle",
+    "row": 4,
+    "col": 3
+   }
+  ]
+ },
+ "minigames": [
+  {
+   "type": "vasebreaker",
+   "min_column_index": 4,
+   "max_column_index": 8,
+   "num_colored_plant_vases": 3,
+   "num_colored_zombie_vases": 0,
+   "vases": [
+    {
+     "zombie_type_name": "lostcity_bug",
+     "count": 6
+    },
+    {
+     "zombie_type_name": "lostcity_bug_armor1",
+     "count": 4
+    },
+    {
+     "zombie_type_name": "lostcity_bug_armor2",
+     "count": 3
+    },
+    {
+     "plant_type_name": "wasabiwhip",
+     "count": 10
+    },
+    {
+     "collectable_type_name": "plantfood",
+     "count": 2
+    }
+   ]
+  }
+ ],
+ "scripts": [
+  "VaseBreakerArcade"
+ ],
+ "extra": [
+  {
+   "objclass": "LevelIntroProperties",
+   "aliases": [
+    "Intro"
+   ],
+   "objdata": {
+    "PanStartOffset": -40,
+    "PanStreetOffset": 0,
+    "ZombiePreviewOff": true
+   }
+  }
+ ]
+}

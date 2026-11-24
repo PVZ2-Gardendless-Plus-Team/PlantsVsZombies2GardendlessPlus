@@ -1,0 +1,416 @@
+{
+ "id": "modern37",
+ "name": "Modern 37",
+ "name_key": "[MODERN_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_MODERN]",
+ "number": 37,
+ "stage": "ModernNightStage",
+ "seedbank": {
+  "mode": "chooser",
+  "selection": "chooser",
+  "blacklist": [
+   "sunflower",
+   "twinsunflower",
+   "sunshroom",
+   "sunbean",
+   "puffshroom",
+   "seashroom",
+   "iceburg",
+   "gravebuster",
+   "toadstool",
+   "goldleaf",
+   "stallia",
+   "primalsunflower",
+   "goldbloom"
+  ],
+  "decks": {
+   "recommended": [
+    {
+     "name": "Regeneration",
+     "plants": [
+      "moonflower",
+      "grimrose"
+     ]
+    },
+    {
+     "name": "Sit By and Win",
+     "plants": [
+      "moonflower",
+      "dusklobber",
+      "chardguard",
+      "peach"
+     ]
+    },
+    {
+     "name": "Minefield",
+     "plants": [
+      "atombomb_seedling"
+     ]
+    },
+    {
+     "name": "Armor Specialist",
+     "plants": [
+      "poisonpeashooter"
+     ]
+    },
+    {
+     "name": "Jack of All Trades",
+     "plants": [
+      "electricblueberry"
+     ]
+    },
+    {
+     "name": "Not an Inch",
+     "plants": [
+      "moonflower",
+      "dusklobber",
+      "aloe",
+      "buttercup"
+     ]
+    }
+   ]
+  }
+ },
+ "minigames": [
+  {
+   "type": "last_stand",
+   "starting_plantfood": 2,
+   "starting_sun": 1700
+  }
+ ],
+ "objectives": [
+  {
+   "type": "survive_waves",
+   "description": "[STARCHALLENGE_LASTSTAND_MINIGAME]"
+  }
+ ],
+ "waves": [
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "tutorial_armor4"
+    },
+    {
+     "type": "tutorial_armor4"
+    },
+    {
+     "type": "tutorial_armor4"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "tutorial_armor4"
+    },
+    {
+     "type": "tutorial_armor4",
+     "row": 5
+    },
+    {
+     "type": "tutorial_armor4",
+     "row": 3
+    },
+    {
+     "type": "tutorial_armor4",
+     "row": 1
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "tutorial_armor4"
+    },
+    {
+     "type": "tutorial_armor4"
+    },
+    {
+     "type": "tutorial_armor4",
+     "row": 2
+    },
+    {
+     "type": "tutorial_armor4",
+     "row": 4
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "tutorial_armor4"
+    },
+    {
+     "type": "tutorial_armor4",
+     "row": 4
+    },
+    {
+     "type": "tutorial_armor4",
+     "row": 2
+    },
+    {
+     "type": "tutorial_armor4",
+     "row": 5
+    },
+    {
+     "type": "tutorial_armor4",
+     "row": 4
+    },
+    {
+     "type": "tutorial_armor4",
+     "row": 2
+    },
+    {
+     "type": "tutorial_armor4",
+     "row": 1
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "tutorial_armor4",
+     "row": 3
+    },
+    {
+     "type": "tutorial_armor4"
+    },
+    {
+     "type": "tutorial_armor4"
+    },
+    {
+     "type": "tutorial_armor4"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "tutorial_armor4"
+    },
+    {
+     "type": "tutorial_armor4",
+     "row": 1
+    },
+    {
+     "type": "tutorial_armor4",
+     "row": 5
+    },
+    {
+     "type": "tutorial_armor4",
+     "row": 3
+    },
+    {
+     "type": "tutorial_armor4",
+     "row": 4
+    },
+    {
+     "type": "tutorial_armor4",
+     "row": 2
+    },
+    {
+     "type": "tutorial_armor4",
+     "row": 5
+    },
+    {
+     "type": "tutorial_armor4",
+     "row": 1
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "tutorial_armor4"
+    },
+    {
+     "type": "tutorial_armor4"
+    },
+    {
+     "type": "tutorial_armor4",
+     "row": 5
+    },
+    {
+     "type": "tutorial_armor4",
+     "row": 3
+    },
+    {
+     "type": "tutorial_armor4",
+     "row": 1
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "tutorial_armor4"
+    },
+    {
+     "type": "tutorial_armor4"
+    },
+    {
+     "type": "tutorial_armor4"
+    },
+    {
+     "type": "tutorial_armor4"
+    },
+    {
+     "type": "tutorial_armor4",
+     "row": 5
+    },
+    {
+     "type": "tutorial_armor4",
+     "row": 4
+    },
+    {
+     "type": "tutorial_armor4",
+     "row": 3
+    },
+    {
+     "type": "tutorial_armor4",
+     "row": 2
+    },
+    {
+     "type": "tutorial_armor4",
+     "row": 1
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "tutorial_armor4"
+    },
+    {
+     "type": "tutorial_armor4"
+    },
+    {
+     "type": "tutorial_armor4",
+     "row": 4
+    },
+    {
+     "type": "tutorial_armor4",
+     "row": 2
+    },
+    {
+     "type": "tutorial_armor4"
+    },
+    {
+     "type": "tutorial_armor4"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "tutorial_armor4"
+    },
+    {
+     "type": "tutorial_armor4",
+     "row": 4
+    },
+    {
+     "type": "tutorial_armor4",
+     "row": 3
+    },
+    {
+     "type": "tutorial_armor4",
+     "row": 2
+    },
+    {
+     "type": "tutorial_armor4",
+     "row": 5
+    },
+    {
+     "type": "tutorial_armor4",
+     "row": 4
+    },
+    {
+     "type": "tutorial_armor4",
+     "row": 3
+    },
+    {
+     "type": "tutorial_armor4",
+     "row": 2
+    },
+    {
+     "type": "tutorial_armor4",
+     "row": 1
+    },
+    {
+     "type": "tutorial_armor4"
+    },
+    {
+     "type": "tutorial_armor4"
+    }
+   ]
+  }
+ ],
+ "wave_pacing": {
+  "flag_interval": 2,
+  "points": 600,
+  "point_increment": 100,
+  "suppress_flag": false
+ },
+ "dynamic_zombies": [
+  {
+   "start_wave": 3,
+   "points": -100,
+   "increment": -40,
+   "pool": [
+    "dark_armor3"
+   ]
+  },
+  {
+   "start_wave": 4,
+   "points": -50,
+   "increment": -25,
+   "pool": [
+    "dark_armor3"
+   ]
+  },
+  {
+   "start_wave": 5,
+   "points": -1,
+   "increment": -10,
+   "pool": [
+    "dark_armor3"
+   ]
+  },
+  {
+   "start_wave": 5,
+   "points": 200,
+   "increment": 20,
+   "pool": [
+    "dark_armor3"
+   ]
+  },
+  {
+   "start_wave": 4,
+   "points": 300,
+   "increment": 40,
+   "pool": [
+    "dark_armor3"
+   ]
+  },
+  {
+   "start_wave": 3,
+   "points": 500,
+   "increment": 60,
+   "pool": [
+    "dark_armor3"
+   ]
+  }
+ ],
+ "mowers": true
+}

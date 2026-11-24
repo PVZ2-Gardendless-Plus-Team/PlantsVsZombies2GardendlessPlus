@@ -1,0 +1,686 @@
+{
+ "id": "arma7",
+ "name": "[EPIC_PLANT_ARMA_LEVEL_NAME]",
+ "description": "[MEET_ARMA_FAMILY]",
+ "author": "莱池_余垛",
+ "number": 7,
+ "stage": "TheStage",
+ "reward": {
+  "type": "unlock_plant",
+  "param": "blastberry"
+ },
+ "minigames": [
+  {
+   "type": "cowboy"
+  }
+ ],
+ "seedbank": {
+  "mode": "conveyor",
+  "plants": [
+   {
+    "type": "blastberry",
+    "weight": null,
+    "max": null
+   }
+  ],
+  "speed": [
+   {
+    "speed": 100,
+    "max_packets": 0
+   }
+  ]
+ },
+ "railcarts": {
+  "carts": [
+   {
+    "col": 0,
+    "row": 1
+   },
+   {
+    "col": 1,
+    "row": 1
+   },
+   {
+    "col": 1,
+    "row": 3
+   },
+   {
+    "col": 2,
+    "row": 2
+   },
+   {
+    "col": 3,
+    "row": 1
+   }
+  ],
+  "rails": [
+   {
+    "col": 0,
+    "row_start": 1,
+    "row_end": 3
+   },
+   {
+    "col": 3,
+    "row_start": 0,
+    "row_end": 4
+   },
+   {
+    "col": 2,
+    "row_start": 1,
+    "row_end": 3
+   },
+   {
+    "col": 1,
+    "row_start": 3,
+    "row_end": 4
+   },
+   {
+    "col": 1,
+    "row_start": 0,
+    "row_end": 2
+   }
+  ]
+ },
+ "waves": [
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "lawn",
+     "row": 2
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "eighties_punk_veteran",
+     "row": 5
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "eighties_punk_veteran",
+     "row": 2
+    },
+    {
+     "type": "chicken_farmer",
+     "row": 4
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "lostcity_jane",
+       "row": 2
+      },
+      {
+       "type": "lostcity_jane",
+       "row": 4
+      }
+     ]
+    },
+    {
+     "kind": "conveyor",
+     "add": [
+      {
+       "type": null,
+       "weight": null,
+       "max": null
+      }
+     ],
+     "remove": [
+      null
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "sky_battleplane",
+       "row": 1
+      },
+      {
+       "type": "lawn_armor1",
+       "row": 2
+      },
+      {
+       "type": "lawn_armor1",
+       "row": 4
+      }
+     ]
+    },
+    {
+     "kind": "conveyor",
+     "add": [
+      {
+       "type": null,
+       "weight": null,
+       "max": null
+      }
+     ],
+     "remove": [
+      null
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "sky_battleplane",
+     "row": 2
+    },
+    {
+     "type": "sky_battleplane",
+     "row": 5
+    },
+    {
+     "type": "lawn_armor1",
+     "row": 1
+    },
+    {
+     "type": "lawn_armor2",
+     "row": 4
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "lostcity_jane",
+       "row": 2
+      },
+      {
+       "type": "lostcity_jane",
+       "row": 5
+      },
+      {
+       "type": "sky_battleplane",
+       "row": 2
+      },
+      {
+       "type": "sky_battleplane",
+       "row": 4
+      }
+     ]
+    },
+    {
+     "kind": "conveyor",
+     "add": [
+      {
+       "type": null,
+       "weight": null,
+       "max": null
+      }
+     ],
+     "remove": [
+      null
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "lawn_armor1",
+       "row": 1
+      },
+      {
+       "type": "lawn_armor2",
+       "row": 2
+      },
+      {
+       "type": "lawn_armor1",
+       "row": 3
+      },
+      {
+       "type": "lawn_armor2",
+       "row": 5
+      }
+     ]
+    },
+    {
+     "kind": "conveyor",
+     "add": [
+      {
+       "type": null,
+       "weight": null,
+       "max": null
+      }
+     ],
+     "remove": [
+      null
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "lostcity_jane",
+     "row": 1
+    },
+    {
+     "type": "lostcity_jane",
+     "row": 4
+    },
+    {
+     "type": "eighties_punk_veteran",
+     "row": 1
+    },
+    {
+     "type": "eighties_punk_veteran",
+     "row": 4
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "lostcity_jane",
+       "row": 2
+      },
+      {
+       "type": "lostcity_jane",
+       "row": 5
+      },
+      {
+       "type": "sky_battleplane",
+       "row": 2
+      },
+      {
+       "type": "sky_battleplane",
+       "row": 5
+      }
+     ]
+    },
+    {
+     "kind": "conveyor",
+     "add": [
+      {
+       "type": null,
+       "weight": null,
+       "max": null
+      }
+     ],
+     "remove": [
+      null
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "sky_battleplane",
+       "row": 1
+      },
+      {
+       "type": "sky_battleplane",
+       "row": 3
+      },
+      {
+       "type": "sky_battleplane",
+       "row": 5
+      },
+      {
+       "type": "lostcity_jane",
+       "row": 1
+      },
+      {
+       "type": "lostcity_jane",
+       "row": 2
+      },
+      {
+       "type": "lostcity_jane",
+       "row": 4
+      }
+     ]
+    },
+    {
+     "kind": "conveyor",
+     "add": [
+      {
+       "type": null,
+       "weight": null,
+       "max": null
+      }
+     ],
+     "remove": [
+      null
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "lawn_armor2",
+     "row": 1
+    },
+    {
+     "type": "lawn_armor1",
+     "row": 2
+    },
+    {
+     "type": "lawn_armor2",
+     "row": 3
+    },
+    {
+     "type": "lawn_armor2",
+     "row": 4
+    },
+    {
+     "type": "lawn_armor1",
+     "row": 5
+    },
+    {
+     "type": "eighties_punk_veteran",
+     "row": 2
+    },
+    {
+     "type": "eighties_punk_veteran",
+     "row": 3
+    },
+    {
+     "type": "eighties_punk_veteran",
+     "row": 5
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "lostcity_jane",
+     "row": 1
+    },
+    {
+     "type": "lostcity_jane",
+     "row": 2
+    },
+    {
+     "type": "lostcity_jane",
+     "row": 3
+    },
+    {
+     "type": "lostcity_jane",
+     "row": 4
+    },
+    {
+     "type": "lostcity_jane",
+     "row": 5
+    },
+    {
+     "type": "sky_battleplane",
+     "row": 2
+    },
+    {
+     "type": "sky_battleplane",
+     "row": 4
+    },
+    {
+     "type": "eighties_punk_veteran",
+     "row": 5
+    },
+    {
+     "type": "eighties_punk_veteran",
+     "row": 1
+    },
+    {
+     "type": "eighties_punk_veteran",
+     "row": 3
+    }
+   ]
+  }
+ ],
+ "wave_pacing": {
+  "flag_interval": 13,
+  "points": 150,
+  "point_increment": 100,
+  "next_wave_health_min": 0.7,
+  "next_wave_health_max": 0.7
+ },
+ "dynamic_zombies": [
+  {
+   "start_wave": 5,
+   "points": 150,
+   "increment": 30,
+   "pool": [
+    "lawn_imp",
+    "lawn_armor1",
+    "lostcity_jane",
+    "eighties_punk_veteran"
+   ]
+  },
+  {
+   "start_wave": 5,
+   "points": 200,
+   "increment": 40,
+   "pool": [
+    "lawn_imp",
+    "lawn_armor1",
+    "lawn_armor2",
+    "lostcity_jane",
+    "eighties_punk_veteran"
+   ]
+  },
+  {
+   "start_wave": 4,
+   "points": 300,
+   "increment": 50,
+   "pool": [
+    "lawn_imp",
+    "lawn_armor1",
+    "lawn_armor2",
+    "lostcity_jane",
+    "eighties_punk_veteran"
+   ]
+  },
+  {
+   "start_wave": 3,
+   "points": 400,
+   "increment": 60,
+   "pool": [
+    "lawn_imp",
+    "lawn_armor2",
+    "lostcity_jane",
+    "eighties_punk_veteran"
+   ]
+  }
+ ],
+ "scripts": [
+  "StandardIntro"
+ ],
+ "extra": [
+  {
+   "objclass": "PlantModifierProperties",
+   "aliases": [
+    "ModPlants"
+   ],
+   "objdata": {
+    "List": [
+     {
+      "Type": "sunflower",
+      "NewObjdata": {
+       "ProduceCountdownStart": 15,
+       "ProduceCountdownStartAdditional": 5,
+       "ProduceInterval": 32,
+       "ProduceIntervalAdditional": 4
+      }
+     },
+     {
+      "Type": "moonflower",
+      "NewObjdata": {
+       "ProduceCountdownStart": 15,
+       "ProduceCountdownStartAdditional": 5,
+       "ProduceInterval": 32,
+       "ProduceIntervalAdditional": 4
+      }
+     },
+     {
+      "Type": "twinsunflower",
+      "NewObjdata": {
+       "ProduceCountdownStart": 15,
+       "ProduceCountdownStartAdditional": 5,
+       "ProduceInterval": 32,
+       "ProduceIntervalAdditional": 4
+      }
+     },
+     {
+      "Type": "primalsunflower",
+      "NewObjdata": {
+       "ProduceCountdownStart": 15,
+       "ProduceCountdownStartAdditional": 5,
+       "ProduceInterval": 32,
+       "ProduceIntervalAdditional": 4
+      }
+     }
+    ]
+   }
+  },
+  {
+   "objclass": "LawnType",
+   "aliases": [
+    "TheStage"
+   ],
+   "objdata": {
+    "LawnBaseOn": "FarmStage",
+    "Properties": "RTID(TheStageProp@CurrentLevel)"
+   }
+  },
+  {
+   "objclass": "LawnProperties",
+   "aliases": [
+    "TheStageProp"
+   ],
+   "objdata": {
+    "RailCart": "railcart_cowboy",
+    "Music": "Cowboy",
+    "IsAtNight": false,
+    "Basic_Zombie": [
+     "future",
+     "mummy"
+    ],
+    "Flag_Zombie": [
+     "mummy_flag",
+     "future_flag"
+    ],
+    "Rally_Zombie": [
+     "mummy_flag_veteran",
+     "future_flag_veteran"
+    ],
+    "Armor1_Zombie": [
+     "future_armor1",
+     "mummy_armor1"
+    ],
+    "Armor2_Zombie": [
+     "mummy_armor2",
+     "future_armor2"
+    ],
+    "Armor3_Zombie": [
+     "mummy_armor2",
+     "future_armor2"
+    ],
+    "Armor4_Zombie": [
+     "mummy_armor4",
+     "future_armor4"
+    ],
+    "Imp_Zombie": [
+     "future_imp",
+     "egypt_imp"
+    ],
+    "Gargantuar_Zombie": [
+     "cowboy_gargantuar",
+     "egypt_gargantuar"
+    ],
+    "Gravestone": [
+     "surfer",
+     "gravestone_cowboy",
+     "gravestone_tutorial"
+    ]
+   }
+  },
+  {
+   "objclass": "SpawnZombiesJitteredWaveActionProps",
+   "aliases": [
+    "Wave0"
+   ],
+   "objdata": {
+    "AdditionalPlantfood": 1,
+    "NotificationEvents": [
+     "jam_punk"
+    ],
+    "DynamicPlantfood": [
+     1,
+     1,
+     1,
+     1,
+     1,
+     0,
+     0
+    ],
+    "Zombies": [
+     {
+      "Type": "RTID(lawn_armor1@ZombieTypes)"
+     },
+     {
+      "Type": "RTID(lawn_armor2@ZombieTypes)"
+     },
+     {
+      "Type": "RTID(pharaoh@ZombieTypes)"
+     },
+     {
+      "Type": "RTID(lawn_imp@ZombieTypes)"
+     },
+     {
+      "Type": "RTID(lawn_gargantuar@ZombieTypes)"
+     },
+     {
+      "Type": "RTID(lostcity_jane@ZombieTypes)"
+     },
+     {
+      "Type": "RTID(sky_battleplane@ZombieTypes)"
+     },
+     {
+      "Type": "RTID(eighties_punk_veteran@ZombieTypes)"
+     }
+    ]
+   }
+  }
+ ]
+}

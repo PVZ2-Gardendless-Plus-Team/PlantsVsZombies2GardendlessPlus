@@ -1,0 +1,705 @@
+{
+ "id": "lostcity39",
+ "name": "Lost City 30",
+ "name_key": "[LOSTCITY_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_LOSTCITY]",
+ "author": "莱池_余垛",
+ "number": 39,
+ "stage": "LostCityNightStage",
+ "reward": {
+  "type": "worldtrophy",
+  "param": "dangerroom_lostcity2"
+ },
+ "waves": [
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "ParachuteRainZombieSpawnerProps",
+     "data": {
+      "ColumnEnd": 8,
+      "ColumnStart": 7,
+      "GroupSize": 1,
+      "SpiderCount": 2,
+      "SpiderZombieName": "lostcity_lostpilot_veteran",
+      "TimeBeforeFullSpawn": "2",
+      "TimeBetweenGroups": "0.5",
+      "WaveStartMessage": "[WARNING_PARACHUTERAIN]",
+      "ZombieFallTime": "1.5",
+      "ZombiesToBringWith": [
+       {
+        "mY": 2,
+        "Type": "lostcity_armor1"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "ParachuteRainZombieSpawnerProps",
+     "data": {
+      "ColumnEnd": 6,
+      "ColumnStart": 5,
+      "GroupSize": 1,
+      "SpiderCount": 2,
+      "SpiderZombieName": "lostcity_lostpilot_veteran",
+      "TimeBeforeFullSpawn": "4",
+      "TimeBetweenGroups": "0.5",
+      "WaveStartMessage": "[WARNING_PARACHUTERAIN]",
+      "ZombieFallTime": "1.5",
+      "ZombiesToBringWith": [
+       {
+        "mY": 4,
+        "Type": "lostcity_armor2"
+       },
+       {
+        "mY": 1,
+        "Type": "lostcity_armor2"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "ParachuteRainZombieSpawnerProps",
+     "data": {
+      "ColumnEnd": 7,
+      "ColumnStart": 6,
+      "GroupSize": 1,
+      "SpiderCount": 2,
+      "SpiderZombieName": "lostcity_lostpilot_veteran",
+      "TimeBeforeFullSpawn": "4",
+      "TimeBetweenGroups": "0.5",
+      "WaveStartMessage": "[WARNING_PARACHUTERAIN]",
+      "ZombieFallTime": "1.5",
+      "ZombiesToBringWith": [
+       {
+        "mY": 0,
+        "Type": "lostcity_excavator"
+       },
+       {
+        "mY": 3,
+        "Type": "lostcity_excavator"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "ParachuteRainZombieSpawnerProps",
+     "data": {
+      "ColumnEnd": 8,
+      "ColumnStart": 7,
+      "GroupSize": 1,
+      "SpiderCount": 5,
+      "SpiderZombieName": "lostcity_lostpilot_veteran",
+      "TimeBeforeFullSpawn": "4",
+      "TimeBetweenGroups": "0.5",
+      "WaveStartMessage": "[WARNING_PARACHUTERAIN]",
+      "ZombieFallTime": "1.5",
+      "ZombiesToBringWith": [
+       {
+        "mX": 6,
+        "mY": 1,
+        "Type": "lostcity_armor1"
+       },
+       {
+        "mX": 6,
+        "mY": 2,
+        "Type": "lostcity_armor1"
+       },
+       {
+        "mX": 6,
+        "mY": 4,
+        "Type": "lostcity_armor1"
+       },
+       {
+        "mX": 7,
+        "Type": "lostcity_armor2"
+       },
+       {
+        "mX": 7,
+        "Type": "lostcity_armor2"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "ParachuteRainZombieSpawnerProps",
+     "data": {
+      "ColumnEnd": 8,
+      "ColumnStart": 6,
+      "GroupSize": 1,
+      "SpiderCount": 3,
+      "SpiderZombieName": "lostcity_lostpilot_veteran",
+      "TimeBeforeFullSpawn": "4",
+      "TimeBetweenGroups": "0.2",
+      "WaveStartMessage": "[WARNING_PARACHUTERAIN]",
+      "ZombieFallTime": "1.5",
+      "ZombiesToBringWith": [
+       {
+        "Type": "lostcity_armor4"
+       },
+       {
+        "Type": "lostcity_armor1"
+       },
+       {
+        "Type": "lostcity_armor1"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "ParachuteRainZombieSpawnerProps",
+     "data": {
+      "ColumnEnd": 6,
+      "ColumnStart": 5,
+      "GroupSize": 1,
+      "SpiderCount": 3,
+      "SpiderZombieName": "lostcity_lostpilot_veteran",
+      "TimeBeforeFullSpawn": "4",
+      "TimeBetweenGroups": "0.2",
+      "WaveStartMessage": "[WARNING_PARACHUTERAIN]",
+      "ZombieFallTime": "1.5",
+      "ZombiesToBringWith": [
+       {
+        "Type": "lostcity_jane"
+       },
+       {
+        "Type": "lostcity_jane"
+       },
+       {
+        "Type": "lostcity_jane"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "ParachuteRainZombieSpawnerProps",
+     "data": {
+      "ColumnEnd": 8,
+      "ColumnStart": 4,
+      "GroupSize": 2,
+      "SpiderCount": 6,
+      "SpiderZombieName": "lostcity_lostpilot_veteran",
+      "TimeBeforeFullSpawn": "4",
+      "TimeBetweenGroups": "0.5",
+      "WaveStartMessage": "[WARNING_PARACHUTERAIN]",
+      "ZombieFallTime": "1.5",
+      "ZombiesToBringWith": [
+       {
+        "mX": 5,
+        "Type": "lostcity_armor4"
+       },
+       {
+        "mX": 4,
+        "Type": "lostcity_armor2"
+       },
+       {
+        "mX": 4,
+        "Type": "lostcity_armor2"
+       },
+       {
+        "mX": 3,
+        "Type": "lostcity_armor1"
+       },
+       {
+        "mX": 3,
+        "Type": "lostcity"
+       },
+       {
+        "mX": 3,
+        "Type": "lostcity"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "ParachuteRainZombieSpawnerProps",
+     "data": {
+      "ColumnEnd": 6,
+      "ColumnStart": 5,
+      "GroupSize": 1,
+      "SpiderCount": 3,
+      "SpiderZombieName": "lostcity_lostpilot_veteran",
+      "TimeBeforeFullSpawn": "4",
+      "TimeBetweenGroups": "0.5",
+      "WaveStartMessage": "[WARNING_PARACHUTERAIN]",
+      "ZombieFallTime": "1.5",
+      "ZombiesToBringWith": [
+       {
+        "mY": 1,
+        "Type": "lostcity_excavator"
+       },
+       {
+        "mY": 2,
+        "Type": "lostcity_excavator"
+       },
+       {
+        "mY": 4,
+        "Type": "lostcity_excavator"
+       }
+      ]
+     }
+    },
+    {
+     "kind": "ParachuteRainZombieSpawnerProps",
+     "data": {
+      "ColumnEnd": 8,
+      "ColumnStart": 7,
+      "GroupSize": 1,
+      "SpiderCount": 2,
+      "SpiderZombieName": "lostcity_lostpilot_veteran",
+      "TimeBeforeFullSpawn": "4",
+      "TimeBetweenGroups": "0.5",
+      "WaveStartMessage": "[WARNING_PARACHUTERAIN]",
+      "ZombieFallTime": "1.5",
+      "ZombiesToBringWith": [
+       {
+        "mY": 0,
+        "Type": "lostcity_armor2"
+       },
+       {
+        "mY": 3,
+        "Type": "lostcity_armor2"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "ParachuteRainZombieSpawnerProps",
+     "data": {
+      "ColumnEnd": 5,
+      "ColumnStart": 4,
+      "GroupSize": 1,
+      "SpiderCount": 5,
+      "SpiderZombieName": "lostcity_lostpilot_veteran",
+      "TimeBeforeFullSpawn": "4",
+      "TimeBetweenGroups": "0.5",
+      "WaveStartMessage": "[WARNING_PARACHUTERAIN]",
+      "ZombieFallTime": "1.5",
+      "ZombiesToBringWith": [
+       {
+        "mY": 0,
+        "Type": "lostcity"
+       },
+       {
+        "mY": 1,
+        "Type": "lostcity"
+       },
+       {
+        "mY": 2,
+        "Type": "lostcity"
+       },
+       {
+        "mY": 3,
+        "Type": "lostcity"
+       },
+       {
+        "mY": 4,
+        "Type": "lostcity"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "ParachuteRainZombieSpawnerProps",
+     "data": {
+      "ColumnEnd": 8,
+      "ColumnStart": 7,
+      "GroupSize": 1,
+      "SpiderCount": 5,
+      "SpiderZombieName": "lostcity_lostpilot_veteran",
+      "TimeBeforeFullSpawn": "4",
+      "TimeBetweenGroups": "0.5",
+      "WaveStartMessage": "[WARNING_PARACHUTERAIN]",
+      "ZombieFallTime": "1.5",
+      "ZombiesToBringWith": [
+       {
+        "mY": 0,
+        "Type": "lostcity_excavator"
+       },
+       {
+        "mY": 1,
+        "Type": "lostcity_excavator"
+       },
+       {
+        "mY": 2,
+        "Type": "lostcity_excavator"
+       },
+       {
+        "mY": 3,
+        "Type": "lostcity_excavator"
+       },
+       {
+        "mY": 4,
+        "Type": "lostcity_excavator"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "ParachuteRainZombieSpawnerProps",
+     "data": {
+      "ColumnEnd": 8,
+      "ColumnStart": 4,
+      "GroupSize": 1,
+      "SpiderCount": 8,
+      "SpiderZombieName": "lostcity_lostpilot_veteran",
+      "TimeBeforeFullSpawn": "4",
+      "TimeBetweenGroups": "0.2",
+      "WaveStartMessage": "[WARNING_PARACHUTERAIN]",
+      "ZombieFallTime": "1.5",
+      "ZombiesToBringWith": [
+       {
+        "mY": 0,
+        "mX": 3,
+        "Type": "lostcity_jane"
+       },
+       {
+        "mY": 1,
+        "mX": 4,
+        "Type": "lostcity_jane"
+       },
+       {
+        "mY": 3,
+        "mX": 3,
+        "Type": "lostcity_jane"
+       },
+       {
+        "mY": 4,
+        "mX": 4,
+        "Type": "lostcity_jane"
+       },
+       {
+        "mY": 0,
+        "mX": 6,
+        "Type": "lostcity_crystalskull"
+       },
+       {
+        "mY": 1,
+        "mX": 7,
+        "Type": "lostcity_crystalskull"
+       },
+       {
+        "mY": 3,
+        "mX": 6,
+        "Type": "lostcity_crystalskull"
+       },
+       {
+        "mY": 4,
+        "mX": 7,
+        "Type": "lostcity_crystalskull"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "ParachuteRainZombieSpawnerProps",
+     "data": {
+      "ColumnEnd": 6,
+      "ColumnStart": 5,
+      "GroupSize": 1,
+      "SpiderCount": 5,
+      "SpiderZombieName": "lostcity_lostpilot_veteran",
+      "TimeBeforeFullSpawn": "4",
+      "TimeBetweenGroups": "0.5",
+      "WaveStartMessage": "[WARNING_PARACHUTERAIN]",
+      "ZombieFallTime": "1.5",
+      "ZombiesToBringWith": [
+       {
+        "mY": 2,
+        "Type": "lostcity_armor4"
+       },
+       {
+        "Type": "lostcity_armor4"
+       },
+       {
+        "Type": "lostcity_armor4"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "ParachuteRainZombieSpawnerProps",
+     "data": {
+      "ColumnEnd": 6,
+      "ColumnStart": 4,
+      "GroupSize": 1,
+      "SpiderCount": 5,
+      "SpiderZombieName": "lostcity_lostpilot_veteran",
+      "TimeBeforeFullSpawn": "4",
+      "TimeBetweenGroups": "0.5",
+      "WaveStartMessage": "[WARNING_PARACHUTERAIN]",
+      "ZombieFallTime": "1.5",
+      "ZombiesToBringWith": [
+       {
+        "mY": 0,
+        "Type": "lostcity_excavator"
+       },
+       {
+        "mY": 1,
+        "Type": "lostcity_excavator"
+       },
+       {
+        "mY": 3,
+        "Type": "lostcity_excavator"
+       },
+       {
+        "mY": 4,
+        "Type": "lostcity_excavator"
+       },
+       {
+        "Type": "lostcity_excavator"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "ParachuteRainZombieSpawnerProps",
+     "data": {
+      "ColumnEnd": 8,
+      "ColumnStart": 4,
+      "GroupSize": 1,
+      "SpiderCount": 8,
+      "SpiderZombieName": "lostcity_lostpilot_veteran",
+      "TimeBeforeFullSpawn": "4",
+      "TimeBetweenGroups": "0.2",
+      "WaveStartMessage": "[WARNING_PARACHUTERAIN]",
+      "ZombieFallTime": "1.5",
+      "ZombiesToBringWith": [
+       {
+        "mY": 0,
+        "mX": 3,
+        "Type": "lostcity_excavator"
+       },
+       {
+        "mY": 2,
+        "mX": 4,
+        "Type": "lostcity_excavator"
+       },
+       {
+        "mY": 3,
+        "mX": 3,
+        "Type": "lostcity_excavator"
+       },
+       {
+        "mY": 4,
+        "mX": 4,
+        "Type": "lostcity_excavator"
+       },
+       {
+        "mY": 0,
+        "mX": 6,
+        "Type": "lostcity_crystalskull"
+       },
+       {
+        "mY": 2,
+        "mX": 7,
+        "Type": "lostcity_crystalskull"
+       },
+       {
+        "mY": 3,
+        "mX": 6,
+        "Type": "lostcity_crystalskull"
+       },
+       {
+        "mY": 4,
+        "mX": 7,
+        "Type": "lostcity_crystalskull"
+       }
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "wave_pacing": {
+  "flag_interval": 7,
+  "points": 100,
+  "point_increment": 50
+ },
+ "dynamic_zombies": [
+  {
+   "start_wave": 3,
+   "points": -100,
+   "increment": -40,
+   "pool": [
+    "lostcity_bug",
+    "lostcity_bug_armor1",
+    "lostcity_bug_armor2",
+    "lostcity_relichunter"
+   ]
+  },
+  {
+   "start_wave": 4,
+   "points": -100,
+   "increment": -25,
+   "pool": [
+    "lostcity_bug",
+    "lostcity_bug_armor1",
+    "lostcity_bug_armor2",
+    "lostcity_relichunter"
+   ]
+  },
+  {
+   "start_wave": 5,
+   "points": -100,
+   "increment": -10,
+   "pool": [
+    "lostcity_bug",
+    "lostcity_bug_armor1",
+    "lostcity_bug_armor2",
+    "lostcity_relichunter"
+   ]
+  },
+  {
+   "start_wave": 5,
+   "points": 200,
+   "increment": 20,
+   "pool": [
+    "lostcity_bug",
+    "lostcity_bug_armor1",
+    "lostcity_relichunter"
+   ]
+  },
+  {
+   "start_wave": 4,
+   "points": 400,
+   "increment": 40,
+   "pool": [
+    "lostcity_bug_armor1",
+    "lostcity_bug_armor2",
+    "lostcity_relichunter"
+   ]
+  },
+  {
+   "start_wave": 3,
+   "points": 600,
+   "increment": 60,
+   "pool": [
+    "lostcity_bug_armor1",
+    "lostcity_bug_armor2",
+    "lostcity_relichunter"
+   ]
+  }
+ ],
+ "seedbank": {
+  "mode": "chooser",
+  "selection": "chooser",
+  "exclude": [
+   "puffshroom",
+   "iceburg",
+   "gravebuster",
+   "toadstool",
+   "goldleaf",
+   "stallia",
+   "seashroom"
+  ],
+  "exclude_sun_producers": "true",
+  "decks": {
+   "recommended": [
+    {
+     "name": "Off the Books",
+     "plants": [
+      "celerystalker"
+     ]
+    },
+    {
+     "name": "Emergency Rescuer",
+     "plants": [
+      "blover",
+      "snapdragon",
+      "chilibean"
+     ]
+    },
+    {
+     "name": "Jack of All Trades",
+     "plants": [
+      "moonflower",
+      "dusklobber",
+      "chardguard",
+      "explodeonut"
+     ]
+    }
+   ]
+  }
+ },
+ "minigames": [
+  {
+   "type": "last_stand",
+   "starting_plantfood": 2,
+   "starting_sun": 2250
+  }
+ ],
+ "objectives": [
+  {
+   "type": "survive_waves"
+  }
+ ],
+ "scripts": [
+  "StandardIntro"
+ ]
+}

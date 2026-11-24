@@ -19,6 +19,8 @@ signal level_failed(objective: Objective)
 signal objectives_changed(objectives: Array)
 ## Emits the seed bank contents as an Array of {kind, id} dictionaries.
 signal seedbank_ready(seeds: Array)
+## A minigame mode's HUD line changed.
+signal minigames_changed(minigames: Array)
 
 @export_group("Pacing")
 ## Seconds before the first wave arrives.
@@ -80,6 +82,9 @@ var _music_stage: int = -1
 var objectives: Array[Objective] = []
 ## Tides, rails, power tiles, potions and the special wave events.
 var features: LevelFeatures = null
+## The modes this level is played by - bowling, vasebreaker, last stand...
+## Empty for an ordinary level.
+var minigames: Array[Minigame] = []
 
 
 func start(level_def: Dictionary, target_board: Board) -> void:
@@ -128,20 +133,30 @@ func start(level_def: Dictionary, target_board: Board) -> void:
 	# Before objectives, so a protect-the-plant goal finds what it guards.
 	_place_initial()
 	_build_objectives()
+	# After objectives, which clear the board's placement rules first.
+	_build_minigames()
+	running = not needs_seed_choice()
 	_music_stage = -1
 	Audio.play_music(music_event())
 	_update_music_stage()
 	Audio.play(&"level.ready")
 	seedbank_ready.emit(seedbank_seeds())
+	if running:
+		_begin_minigames()
 
 
 ## Starts a level that was waiting on the seed chooser.
 func begin() -> void:
 	running = true
+	_begin_minigames()
 
 
-## True when the player picks this level's plants before it starts.
+## True when the player picks this level's plants before it starts. A mode
+## that hands out its own seeds - vases, a matching board - skips it.
 func needs_seed_choice() -> bool:
+	for m in minigames:
+		if m.skips_seed_chooser():
+			return false
 	return SeedChooserRules.level_uses_chooser(level)
 
 
@@ -151,6 +166,10 @@ func needs_seed_choice() -> bool:
 ## `"kind": "zombie"` hands the player zombies instead, which is how an
 ## I-Zombie style level works; individual entries may override it too.
 func seedbank_seeds() -> Array:
+	for m in minigames:
+		var own := m.seeds()
+		if not own.is_empty():
+			return own
 	var sb: Dictionary = level.get("seedbank", {})
 	var default_kind := StringName(sb.get("kind", &"plant"))
 	var source: Array = sb.get("plants", []) if String(sb.get("mode", "chooser")) == "conveyor" \
@@ -294,6 +313,90 @@ func _build_objectives() -> void:
 	objectives_changed.emit(objectives)
 
 
+## Builds the level's minigame modes. Their placement rules and clicks are
+## routed through the board for as long as the level lasts.
+func _build_minigames() -> void:
+	for m in minigames:
+		m.queue_free()
+	minigames.clear()
+	board.click_handlers.clear()
+	board.house_handlers.clear()
+	for spec in (level.get("minigames", []) as Array):
+		if not (spec is Dictionary):
+			continue
+		var game := Components.create_minigame(spec, self, board)
+		if game == null:
+			continue
+		add_child(game)
+		minigames.append(game)
+		game.progress_changed.connect(func(_m): minigames_changed.emit(minigames))
+		board.placement_checks.append(game.placement_refusal)
+		board.click_handlers.append(game.handle_click)
+		board.house_handlers.append(game.handle_zombie_at_house)
+		game.setup()
+	minigames_changed.emit(minigames)
+
+
+func _begin_minigames() -> void:
+	for m in minigames:
+		if not m.started:
+			m.started = true
+			m.begin()
+
+
+## The first mode of `type` this level is played by, or null.
+func minigame(type: StringName) -> Minigame:
+	for m in minigames:
+		if m.name == String(type):
+			return m
+	return null
+
+
+## What the level's modes say about a rule, all of them having to agree:
+## sun falls only if every mode lets it.
+func minigames_allow(rule: StringName) -> bool:
+	for m in minigames:
+		if not bool(m.call(rule)):
+			return false
+	return true
+
+
+## Lets a mode drop something else from the sky in place of sun: Sun Bomb's
+## falling bombs. True if one did.
+func _minigame_drops_from_sky() -> bool:
+	for m in minigames:
+		if m.drop_from_sky():
+			return true
+	return false
+
+
+## Offers a picked packet to the modes; true if one spent it.
+func minigame_use_seed(id: StringName) -> bool:
+	for m in minigames:
+		if m.use_seed(id):
+			return true
+	return false
+
+
+## The word "Ready... Set..." ends on for this level.
+func start_word() -> String:
+	for m in minigames:
+		var word := m.start_word()
+		if word != "":
+			return word
+	return tr("PLANT!")
+
+
+## The modes' goals, for the tips band before the level starts.
+func intro_lines() -> Array[String]:
+	var out: Array[String] = []
+	for m in minigames:
+		var text := m.intro_text()
+		if text != "":
+			out.append(text)
+	return out
+
+
 ## Forwards board events to the objectives, so they never poll.
 func _connect_board_events() -> void:
 	for pair in [["zombie_died", "on_zombie_died"],
@@ -318,6 +421,9 @@ func snapshot() -> Dictionary:
 	var objective_state: Array = []
 	for o in objectives:
 		objective_state.append({"type": o.name, "state": o.save_state()})
+	var minigame_state: Array = []
+	for m in minigames:
+		minigame_state.append({"type": m.name, "state": m.save_state()})
 	return {
 		"level_id": String(level.get("id", &"")),
 		"wave_index": wave_index,
@@ -326,6 +432,7 @@ func snapshot() -> Dictionary:
 		"sun_timer": _sun_timer,
 		"wave_spawned_health": _wave_spawned_health,
 		"objectives": objective_state,
+		"minigames": minigame_state,
 	}
 
 
@@ -348,14 +455,26 @@ func apply_snapshot(state: Dictionary) -> void:
 				o.load_state(entry.get("state", {}))
 				break
 
+	for entry in (state.get("minigames", []) as Array):
+		if not (entry is Dictionary):
+			continue
+		var m := minigame(StringName(entry.get("type", "")))
+		if m != null:
+			m.load_state(entry.get("state", {}))
+
 	_music_stage = -1
 	_update_music_stage()
 	objectives_changed.emit(objectives)
+	minigames_changed.emit(minigames)
 
 
-## Progress lines for the HUD, one per objective that reports any.
+## Progress lines for the HUD, one per objective or mode that reports any.
 func objective_lines() -> Array[String]:
 	var out: Array[String] = []
+	for m in minigames:
+		var text := m.describe()
+		if text != "":
+			out.append(text)
 	for o in objectives:
 		var text := o.describe()
 		if text != "":
@@ -366,6 +485,9 @@ func objective_lines() -> Array[String]:
 ## True when this level's seeds arrive on a conveyor belt rather than from a
 ## fixed set of chooser slots.
 func is_conveyor() -> bool:
+	for m in minigames:
+		if m.uses_belt():
+			return true
 	return String((level.get("seedbank", {}) as Dictionary)
 			.get("mode", "chooser")) == "conveyor"
 
@@ -400,20 +522,35 @@ func _process(delta: float) -> void:
 
 	_sun_timer -= delta
 	if _sun_timer <= 0.0:
-		board.drop_sun_from_sky()
+		if minigames_allow(&"drops_sky_sun") and not _minigame_drops_from_sky():
+			board.drop_sun_from_sky()
 		_sun_timer = _sun_cycle()
 	features.tick(delta)
+	for m in minigames:
+		m.tick(delta)
+	if not running:
+		return    # a mode ended the level from its tick
 
-	# Objectives own the outcome: all met wins, any broken loses.
+	# Objectives own the outcome: all met wins, any broken loses. A mode's
+	# own rule counts as one more objective.
 	for o in objectives:
 		if o.is_failed():
 			running = false
 			level_failed.emit(o)
 			return
-	if not objectives.is_empty():
+	for m in minigames:
+		if m.is_failed():
+			running = false
+			level_failed.emit(null)
+			return
+	if not objectives.is_empty() or not minigames.is_empty():
 		var all_met := true
 		for o in objectives:
 			if not o.is_met():
+				all_met = false
+				break
+		for m in minigames:
+			if not m.is_met():
 				all_met = false
 				break
 		if all_met:
@@ -422,6 +559,9 @@ func _process(delta: float) -> void:
 			return
 	if _finished_spawning:
 		return
+	for m in minigames:
+		if m.holds_waves():
+			return
 
 	_timer -= delta
 	if _timer <= 0.0 or _board_mostly_cleared():

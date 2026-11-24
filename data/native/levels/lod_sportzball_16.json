@@ -1,0 +1,795 @@
+{
+ "id": "lod_sportzball_16",
+ "name": "GOOOOOOAL",
+ "name_key": "[LOD_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_LOD]",
+ "author": "BlockAgent007",
+ "number": 1,
+ "stage": "SportzballStage",
+ "level_of_the_day": true,
+ "waves": [
+  {
+   "kind": "multi",
+   "actions": []
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "RandomEventsProps",
+     "data": {
+      "EventCount": {
+       "Min": 1,
+       "Max": 1
+      },
+      "Events": [
+       "RTID(SpawnBomb1@CurrentLevel)",
+       "RTID(SpawnBomb2@CurrentLevel)",
+       "RTID(SpawnBomb3@CurrentLevel)",
+       "RTID(SpawnBomb4@CurrentLevel)",
+       "RTID(SpawnBomb5@CurrentLevel)"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "RandomEventsProps",
+     "data": {
+      "EventCount": {
+       "Min": 1,
+       "Max": 1
+      },
+      "Events": [
+       "RTID(SpawnBomb1@CurrentLevel)",
+       "RTID(SpawnBomb2@CurrentLevel)",
+       "RTID(SpawnBomb3@CurrentLevel)",
+       "RTID(SpawnBomb4@CurrentLevel)",
+       "RTID(SpawnBomb5@CurrentLevel)"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "RandomEventsProps",
+     "data": {
+      "EventCount": {
+       "Min": 1,
+       "Max": 1
+      },
+      "Events": [
+       "RTID(SpawnBomb1@CurrentLevel)",
+       "RTID(SpawnBomb2@CurrentLevel)",
+       "RTID(SpawnBomb3@CurrentLevel)",
+       "RTID(SpawnBomb4@CurrentLevel)",
+       "RTID(SpawnBomb5@CurrentLevel)"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "RandomEventsProps",
+     "data": {
+      "EventCount": {
+       "Min": 2,
+       "Max": 2
+      },
+      "Events": [
+       "RTID(SpawnBomb1@CurrentLevel)",
+       "RTID(SpawnBomb2@CurrentLevel)",
+       "RTID(SpawnBomb3@CurrentLevel)",
+       "RTID(SpawnBomb4@CurrentLevel)",
+       "RTID(SpawnBomb5@CurrentLevel)"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "RandomEventsProps",
+     "data": {
+      "EventCount": {
+       "Min": 2,
+       "Max": 2
+      },
+      "Events": [
+       "RTID(SpawnBomb1@CurrentLevel)",
+       "RTID(SpawnBomb2@CurrentLevel)",
+       "RTID(SpawnBomb3@CurrentLevel)",
+       "RTID(SpawnBomb4@CurrentLevel)",
+       "RTID(SpawnBomb5@CurrentLevel)"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "RandomEventsProps",
+     "data": {
+      "EventCount": {
+       "Min": 2,
+       "Max": 2
+      },
+      "Events": [
+       "RTID(SpawnBomb1@CurrentLevel)",
+       "RTID(SpawnBomb2@CurrentLevel)",
+       "RTID(SpawnBomb3@CurrentLevel)",
+       "RTID(SpawnBomb4@CurrentLevel)",
+       "RTID(SpawnBomb5@CurrentLevel)"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "RandomEventsProps",
+     "data": {
+      "EventCount": {
+       "Min": 3,
+       "Max": 3
+      },
+      "Events": [
+       "RTID(SpawnBomb1@CurrentLevel)",
+       "RTID(SpawnBomb2@CurrentLevel)",
+       "RTID(SpawnBomb3@CurrentLevel)",
+       "RTID(SpawnBomb4@CurrentLevel)",
+       "RTID(SpawnBomb5@CurrentLevel)"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "RandomEventsProps",
+     "data": {
+      "EventCount": {
+       "Min": 3,
+       "Max": 3
+      },
+      "Events": [
+       "RTID(SpawnBomb1@CurrentLevel)",
+       "RTID(SpawnBomb2@CurrentLevel)",
+       "RTID(SpawnBomb3@CurrentLevel)",
+       "RTID(SpawnBomb4@CurrentLevel)",
+       "RTID(SpawnBomb5@CurrentLevel)"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "RandomEventsProps",
+     "data": {
+      "EventCount": {
+       "Min": 4,
+       "Max": 4
+      },
+      "Events": [
+       "RTID(SpawnBomb1@CurrentLevel)",
+       "RTID(SpawnBomb2@CurrentLevel)",
+       "RTID(SpawnBomb3@CurrentLevel)",
+       "RTID(SpawnBomb4@CurrentLevel)",
+       "RTID(SpawnBomb5@CurrentLevel)"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "wave_pacing": {
+  "flag_interval": 10,
+  "suppress_flag": true
+ },
+ "level_of_the_day_config": {
+  "flags": 1,
+  "waves_per_flag": 7,
+  "points": 1000,
+  "point_increment": 175,
+  "plantfood": 0,
+  "pool": [
+   "ball"
+  ]
+ },
+ "initial": {
+  "grid_items": [
+   {
+    "type": "potholepuddle",
+    "row": 0,
+    "col": 5
+   },
+   {
+    "type": "potholepuddle",
+    "row": 1,
+    "col": 5
+   },
+   {
+    "type": "potholepuddle",
+    "row": 2,
+    "col": 5
+   },
+   {
+    "type": "potholepuddle",
+    "row": 3,
+    "col": 5
+   },
+   {
+    "type": "potholepuddle",
+    "row": 4,
+    "col": 5
+   }
+  ],
+  "plants": [
+   {
+    "col": 0,
+    "row": 0,
+    "type": "peanut"
+   },
+   {
+    "col": 0,
+    "row": 1,
+    "type": "peanut"
+   },
+   {
+    "col": 0,
+    "row": 2,
+    "type": "peanut"
+   },
+   {
+    "col": 0,
+    "row": 3,
+    "type": "peanut"
+   },
+   {
+    "col": 0,
+    "row": 4,
+    "type": "peanut"
+   },
+   {
+    "col": 1,
+    "row": 0,
+    "type": "lilypad"
+   },
+   {
+    "col": 1,
+    "row": 1,
+    "type": "lilypad"
+   },
+   {
+    "col": 1,
+    "row": 2,
+    "type": "lilypad"
+   },
+   {
+    "col": 1,
+    "row": 3,
+    "type": "lilypad"
+   },
+   {
+    "col": 1,
+    "row": 4,
+    "type": "lilypad"
+   },
+   {
+    "col": 2,
+    "row": 0,
+    "type": "lilypad"
+   },
+   {
+    "col": 2,
+    "row": 1,
+    "type": "lilypad"
+   },
+   {
+    "col": 2,
+    "row": 2,
+    "type": "lilypad"
+   },
+   {
+    "col": 2,
+    "row": 3,
+    "type": "lilypad"
+   },
+   {
+    "col": 2,
+    "row": 4,
+    "type": "lilypad"
+   }
+  ],
+  "zombies": [
+   {
+    "col": 7,
+    "row": 2,
+    "type": "striker"
+   }
+  ]
+ },
+ "minigames": [
+  {
+   "type": "cannon",
+   "base_movement_rate": 100,
+   "base_zombie_kill_score": 100,
+   "buffer_distance": 50,
+   "min_score": 12000,
+   "max_reward_gold": 1000,
+   "min_reward_gold": 500,
+   "slowdown_movement_rate": 60,
+   "combo_brackets": [],
+   "row_has_cannon": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "type": "bowling",
+   "bowling_foul_line": 20,
+   "suppress_objective_tip": true
+  }
+ ],
+ "objectives": [
+  {
+   "type": "survive_waves"
+  },
+  {
+   "type": "no_plant_loss",
+   "allowed": 3
+  }
+ ],
+ "railcarts": {
+  "carts": [
+   {
+    "col": 7,
+    "row": 2
+   }
+  ],
+  "rails": [
+   {
+    "col": 7,
+    "row_start": 0,
+    "row_end": 4
+   }
+  ],
+  "type": "railcart_tutorial"
+ },
+ "scripts": [
+  "LevelOfTheDayIntro"
+ ],
+ "extra": [
+  {
+   "objclass": "LevelSchedulerProps",
+   "aliases": [
+    "LevelScheduler"
+   ],
+   "objdata": {
+    "RewardWhenEnded": false,
+    "SuppressRewardState": false,
+    "TimeBeforeFirst": {
+     "Max": 0.75,
+     "Min": 0.5
+    },
+    "TimeBetween": {
+     "Max": 0,
+     "Min": 0
+    },
+    "Repeat": {
+     "Max": 1,
+     "Min": 1
+    },
+    "Events": [
+     "RTID(preview@CurrentLevel)"
+    ]
+   }
+  },
+  {
+   "objclass": "ZombieType",
+   "aliases": [
+    "striker"
+   ],
+   "objdata": {
+    "Properties": "RTID(strikerP@CurrentLevel)",
+    "ZombieBasedOn": "sportzball_gargantuar"
+   }
+  },
+  {
+   "objclass": "ZombieProperties",
+   "aliases": [
+    "strikerP"
+   ],
+   "objdata": {
+    "CanBeCarriedByCarts": true,
+    "CanSurrender": true,
+    "ZombieSort": "Gargantuar",
+    "CannotBeEnlightenedBySolarSage": true,
+    "CannotBeGrabbedByPtero": true,
+    "CannotChangeLaneByPowerToss": true,
+    "CannotBeFlickedByPowerToss": true,
+    "CannotBeDetectedByPowerToss": true,
+    "CannotBeDraggedByTangleKelp": true,
+    "CannotBeTossedByCitron": true,
+    "CannotBeSwallowedByChomper": true,
+    "CannotCarryPlantfoodsInWaves": true,
+    "SmashDamage": 1500,
+    "WalkSPS": 0,
+    "EatDPS": 100,
+    "Toughness": 9999999999999,
+    "LivesInDeepWater": true,
+    "NormalDeathWhenMowed": true,
+    "WavePointCost": 1500,
+    "Weight": 3000,
+    "ImpType": "sportzball_imp",
+    "HitRect": "RTID(GargantuarHitRect@RectangleProps)",
+    "AttackRect": "RTID(GargantuarAttackRect@RectangleProps)"
+   }
+  },
+  {
+   "objclass": "ZombieType",
+   "aliases": [
+    "ball"
+   ],
+   "objdata": {
+    "Properties": "RTID(ballP@CurrentLevel)",
+    "ZombieBasedOn": "sportzball_imp"
+   }
+  },
+  {
+   "objclass": "ZombieProperties",
+   "aliases": [
+    "ballP"
+   ],
+   "objdata": {
+    "CanBeKickedByAllstar": true,
+    "KilledByShrinkingViolet": true,
+    "CannotBeGrabbedByPtero": true,
+    "ZombieSort": "Normal",
+    "IgnoredInWaves": false,
+    "WalkSPS": 0.3,
+    "EatDPS": 100,
+    "Toughness": 60,
+    "WavePointCost": 100,
+    "Weight": 9000,
+    "HitRect": "RTID(ImpHitRect@RectangleProps)",
+    "AttackRect": "RTID(AttackRect@CurrentLevel)",
+    "AllstarKickedColumn": {
+     "Min": 2,
+     "Max": 2
+    }
+   }
+  },
+  {
+   "objclass": "ZombieType",
+   "aliases": [
+    "dynamite"
+   ],
+   "objdata": {
+    "Properties": "RTID(dynamiteP@CurrentLevel)",
+    "ZombieBasedOn": "modern_superfanimp"
+   }
+  },
+  {
+   "objclass": "ZombieProperties",
+   "aliases": [
+    "dynamiteP"
+   ],
+   "objdata": {
+    "KilledByShrinkingViolet": true,
+    "CannotBeGrabbedByPtero": true,
+    "ExplosionDamage": 1201,
+    "MinTriggerColumn": 0,
+    "MaxTriggerColumn": 2,
+    "CanBeKickedByAllstar": true,
+    "WalkSPS": 0.33,
+    "EatDPS": 100,
+    "Toughness": 270,
+    "WavePointCost": 200,
+    "Weight": 1000,
+    "HitRect": "RTID(ImpHitRect@RectangleProps)",
+    "AttackRect": "RTID(AttackRect@CurrentLevel)",
+    "AllstarKickedColumn": {
+     "Min": 2,
+     "Max": 2
+    }
+   }
+  },
+  {
+   "objclass": "RectangleProps",
+   "aliases": [
+    "nope"
+   ],
+   "objdata": {
+    "Values": {
+     "x": -1000000000000000,
+     "y": -10000000,
+     "w": -1,
+     "h": -1
+    }
+   }
+  },
+  {
+   "objclass": "RectangleProps",
+   "aliases": [
+    "AttackRect"
+   ],
+   "objdata": {
+    "Values": {
+     "x": 0,
+     "y": 50,
+     "w": 32,
+     "h": 96
+    }
+   }
+  },
+  {
+   "objclass": "StarChallengeBeatTheLevelProps",
+   "aliases": [
+    "BeatTheLevel"
+   ],
+   "objdata": {
+    "DescriptionsMultilanguage": [
+     {
+      "en": "Protect at least 7 endangered plants",
+      "zh": "保护至少7种濒危植物"
+     }
+    ]
+   }
+  },
+  {
+   "objclass": "SpawnZombiesJitteredWaveActionProps",
+   "aliases": [
+    "preview"
+   ],
+   "objdata": {
+    "AdditionalPlantfood": 0,
+    "Zombies": [
+     {
+      "Type": "RTID(ball@CurrentLevel)",
+      "Row": 3
+     },
+     {
+      "Type": "RTID(dynamite@CurrentLevel)",
+      "Row": 1
+     },
+     {
+      "Type": "RTID(dynamite@CurrentLevel)",
+      "Row": 2
+     },
+     {
+      "Type": "RTID(dynamite@CurrentLevel)",
+      "Row": 4
+     },
+     {
+      "Type": "RTID(dynamite@CurrentLevel)",
+      "Row": 5
+     }
+    ]
+   }
+  },
+  {
+   "objclass": "WaveSchedulerProps",
+   "aliases": [
+    "SpawnBomb1"
+   ],
+   "objdata": {
+    "RewardWhenEnded": false,
+    "SuppressRewardState": false,
+    "TimeBeforeFirst": {
+     "Max": 0.75,
+     "Min": 0.75
+    },
+    "TimeBetween": {
+     "Max": 0,
+     "Min": 0
+    },
+    "Repeat": {
+     "Max": 1,
+     "Min": 1
+    },
+    "Events": [
+     "RTID(dynamite1@CurrentLevel)"
+    ]
+   }
+  },
+  {
+   "objclass": "WaveSchedulerProps",
+   "aliases": [
+    "SpawnBomb2"
+   ],
+   "objdata": {
+    "RewardWhenEnded": false,
+    "SuppressRewardState": false,
+    "TimeBeforeFirst": {
+     "Max": 0.75,
+     "Min": 0.75
+    },
+    "TimeBetween": {
+     "Max": 0,
+     "Min": 0
+    },
+    "Repeat": {
+     "Max": 1,
+     "Min": 1
+    },
+    "Events": [
+     "RTID(dynamite2@CurrentLevel)"
+    ]
+   }
+  },
+  {
+   "objclass": "WaveSchedulerProps",
+   "aliases": [
+    "SpawnBomb3"
+   ],
+   "objdata": {
+    "RewardWhenEnded": false,
+    "SuppressRewardState": false,
+    "TimeBeforeFirst": {
+     "Max": 0.75,
+     "Min": 0.75
+    },
+    "TimeBetween": {
+     "Max": 0,
+     "Min": 0
+    },
+    "Repeat": {
+     "Max": 1,
+     "Min": 1
+    },
+    "Events": [
+     "RTID(dynamite3@CurrentLevel)"
+    ]
+   }
+  },
+  {
+   "objclass": "WaveSchedulerProps",
+   "aliases": [
+    "SpawnBomb4"
+   ],
+   "objdata": {
+    "RewardWhenEnded": false,
+    "SuppressRewardState": false,
+    "TimeBeforeFirst": {
+     "Max": 0.75,
+     "Min": 0.75
+    },
+    "TimeBetween": {
+     "Max": 0,
+     "Min": 0
+    },
+    "Repeat": {
+     "Max": 1,
+     "Min": 1
+    },
+    "Events": [
+     "RTID(dynamite4@CurrentLevel)"
+    ]
+   }
+  },
+  {
+   "objclass": "WaveSchedulerProps",
+   "aliases": [
+    "SpawnBomb5"
+   ],
+   "objdata": {
+    "RewardWhenEnded": false,
+    "SuppressRewardState": false,
+    "TimeBeforeFirst": {
+     "Max": 0.75,
+     "Min": 0.75
+    },
+    "TimeBetween": {
+     "Max": 0,
+     "Min": 0
+    },
+    "Repeat": {
+     "Max": 1,
+     "Min": 1
+    },
+    "Events": [
+     "RTID(dynamite5@CurrentLevel)"
+    ]
+   }
+  },
+  {
+   "objclass": "SpawnZombiesJitteredWaveActionProps",
+   "aliases": [
+    "dynamite1"
+   ],
+   "objdata": {
+    "AdditionalPlantfood": 0,
+    "Zombies": [
+     {
+      "Type": "RTID(dynamite@CurrentLevel)",
+      "Row": 1
+     }
+    ]
+   }
+  },
+  {
+   "objclass": "SpawnZombiesJitteredWaveActionProps",
+   "aliases": [
+    "dynamite2"
+   ],
+   "objdata": {
+    "AdditionalPlantfood": 0,
+    "Zombies": [
+     {
+      "Type": "RTID(dynamite@CurrentLevel)",
+      "Row": 2
+     }
+    ]
+   }
+  },
+  {
+   "objclass": "SpawnZombiesJitteredWaveActionProps",
+   "aliases": [
+    "dynamite3"
+   ],
+   "objdata": {
+    "AdditionalPlantfood": 0,
+    "Zombies": [
+     {
+      "Type": "RTID(dynamite@CurrentLevel)",
+      "Row": 3
+     }
+    ]
+   }
+  },
+  {
+   "objclass": "SpawnZombiesJitteredWaveActionProps",
+   "aliases": [
+    "dynamite4"
+   ],
+   "objdata": {
+    "AdditionalPlantfood": 0,
+    "Zombies": [
+     {
+      "Type": "RTID(dynamite@CurrentLevel)",
+      "Row": 4
+     }
+    ]
+   }
+  },
+  {
+   "objclass": "SpawnZombiesJitteredWaveActionProps",
+   "aliases": [
+    "dynamite5"
+   ],
+   "objdata": {
+    "AdditionalPlantfood": 0,
+    "Zombies": [
+     {
+      "Type": "RTID(dynamite@CurrentLevel)",
+      "Row": 5
+     }
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,81 @@
+{
+ "id": "lostcity_dangerroom",
+ "name": "Lost City Danger Room",
+ "name_key": "[DANGER_ROOM_LOSTCITY_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_DANGER_ROOM]",
+ "number": 666,
+ "stage": "LostCityStage",
+ "minigames": [
+  {
+   "type": "endless",
+   "world_specific_properties": "LostcityDangerRoomProps",
+   "level_designers": [
+    {
+     "starting_points": 100,
+     "base_point_increment_per_wave": 30,
+     "base_point_increment_per_level": 5,
+     "min_dynamic_zombie_type": 4,
+     "must_contain_zombie": [
+      "lostcity"
+     ],
+     "zombie_pool": [
+      "lostcity_armor1",
+      "lostcity_armor2",
+      "lostcity_imp",
+      "lostcity_excavator",
+      "lostcity_jane",
+      "lostcity_bug",
+      "lostcity_bug_armor1",
+      "lostcity_bug_armor2",
+      "lostcity_impporter",
+      "lostcity_relichunter",
+      "lostcity_crystalskull",
+      "lostcity_gargantuar"
+     ],
+     "type": "jittered_wave_generator"
+    },
+    {
+     "type": "shared",
+     "name": "DangerRoomGoldTilePlacer"
+    },
+    {
+     "type": "shared",
+     "name": "DangerRoomParachuteRainDesigner"
+    }
+   ],
+   "initial_plants": [
+    "sunflower",
+    "peashooter",
+    "cabbagepult",
+    "wallnut"
+   ],
+   "exclude_plants": [
+    "gravebuster",
+    "lilypad",
+    "tanglekelp",
+    "empea",
+    "floawerPot",
+    "hotpotato",
+    "perfumeshroom"
+   ],
+   "minigame": false
+  }
+ ],
+ "seedbank": {
+  "mode": "chooser",
+  "selection": "chooser"
+ },
+ "sun": {
+  "interval": 10.0
+ },
+ "mowers": true,
+ "extra": [
+  {
+   "objclass": "DangerRoomLevelIntroProperties",
+   "aliases": [
+    "DangerRoomIntro"
+   ],
+   "objdata": {}
+  }
+ ]
+}

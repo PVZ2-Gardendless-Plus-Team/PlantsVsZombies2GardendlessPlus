@@ -1,0 +1,140 @@
+{
+ "id": "aloe3",
+ "name": "Hello Aloe 3",
+ "name_key": "[EPIC_PLANT_LEVEL_NAME]",
+ "description": "[PLAYERS_ATTEMPT_TO_GET_PLANT]",
+ "number": 3,
+ "stage": "LostCityNightStage",
+ "introduces_plant": "aloe",
+ "intro_narrative": "ALOE3_INTRO",
+ "minigames": [
+  {
+   "type": "beghouled",
+   "match_counts_to_stage_advance": [
+    {
+     "match_count": 30,
+     "stage_number": 1
+    },
+    {
+     "match_count": 70,
+     "stage_number": 2
+    }
+   ],
+   "stages": [
+    {
+     "spawn_delay": 2,
+     "types": [
+      {
+       "zombie_type": "lostcity"
+      },
+      {
+       "zombie_type": "lostcity_armor1"
+      },
+      {
+       "zombie_type": "lostcity_imp"
+      }
+     ]
+    },
+    {
+     "spawn_delay": 2,
+     "types": [
+      {
+       "zombie_type": "lostcity"
+      },
+      {
+       "zombie_type": "lostcity_armor1"
+      },
+      {
+       "zombie_type": "lostcity_jane"
+      }
+     ]
+    },
+    {
+     "spawn_delay": 2,
+     "types": [
+      {
+       "zombie_type": "lostcity"
+      },
+      {
+       "zombie_type": "lostcity_armor1"
+      },
+      {
+       "zombie_type": "lostcity_armor2"
+      },
+      {
+       "zombie_type": "lostcity_explorer"
+      }
+     ]
+    }
+   ],
+   "selection_method": "beghouled",
+   "preset_plant_list": [
+    {
+     "plant_type": "firepeashooter",
+     "level": -1
+    },
+    {
+     "plant_type": "repeater",
+     "level": -1
+    },
+    {
+     "plant_type": "tallnut",
+     "level": -1
+    },
+    {
+     "plant_type": "endurian",
+     "level": -1
+    },
+    {
+     "plant_type": "laser_bean",
+     "level": -1
+    }
+   ],
+   "beghouled_upgrade_list": [
+    "threepeater",
+    "explodeonut"
+   ],
+   "matches_to_win": 100,
+   "initial_plants": [
+    "peashooter",
+    "wallnut",
+    "aloe",
+    "lightningreed"
+   ],
+   "upgrade_map": [
+    {
+     "base_plant": "peashooter",
+     "upgraded_plant": "firepeashooter"
+    },
+    {
+     "base_plant": "peashooter",
+     "upgraded_plant": "repeater"
+    },
+    {
+     "base_plant": "repeater",
+     "upgraded_plant": "threepeater"
+    },
+    {
+     "base_plant": "wallnut",
+     "upgraded_plant": "tallnut"
+    },
+    {
+     "base_plant": "wallnut",
+     "upgraded_plant": "endurian"
+    },
+    {
+     "base_plant": "tallnut",
+     "upgraded_plant": "explodeonut"
+    },
+    {
+     "base_plant": "lightningreed",
+     "upgraded_plant": "laser_bean"
+    }
+   ]
+  }
+ ],
+ "scripts": [
+  "BeghouledArcade",
+  "BeghouledIntro"
+ ]
+}

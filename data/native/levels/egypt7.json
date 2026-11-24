@@ -1,0 +1,183 @@
+{
+ "id": "egypt7",
+ "name": "Egypt 8",
+ "name_key": "[EGYPT_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_EGYPT]",
+ "number": 7,
+ "stage": "EgyptNightStage",
+ "reward": {
+  "type": "note",
+  "param": "note_egypt"
+ },
+ "unlocks_features": [
+  "lod"
+ ],
+ "minigames": [
+  {
+   "type": "camel",
+   "additional_x_buffer_between_chains": 50,
+   "camel_segment_rise_stagger": 0.33,
+   "card_match_time": 0,
+   "card_matching_time": 0.5,
+   "card_no_match_time": 1.5,
+   "card_types_used": 3,
+   "initial_tutorial_zombie_rise_delay": 2,
+   "max_spawn_x": 600,
+   "min_spawn_x_end": 500,
+   "min_spawn_x_start": 550,
+   "show_tutorial": true
+  }
+ ],
+ "objectives": [
+  {
+   "type": "survive_waves",
+   "description": "[STARCHALLENGE_CAMEL_MINIGAME]"
+  }
+ ],
+ "waves": [
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "camel_onehump_touch",
+     "row": 4,
+     "col": "7"
+    },
+    {
+     "type": "camel_onehump_touch",
+     "row": 2,
+     "col": "7"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "camel_onehump_touch",
+     "row": 5,
+     "col": "7"
+    },
+    {
+     "type": "camel_onehump_touch",
+     "row": 3,
+     "col": "7"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "camel_onehump_touch",
+     "row": 4,
+     "col": "7"
+    },
+    {
+     "type": "camel_twohump_touch",
+     "row": 2,
+     "col": "7"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "camel_onehump_touch",
+     "row": 5,
+     "col": "7"
+    },
+    {
+     "type": "camel_twohump_touch",
+     "row": 3,
+     "col": "7"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "camel_twohump_touch",
+     "row": 4,
+     "col": "7"
+    },
+    {
+     "type": "camel_onehump_touch",
+     "row": 2,
+     "col": "7"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "camel_twohump_touch",
+     "row": 3,
+     "col": "7"
+    },
+    {
+     "type": "camel_twohump_touch",
+     "row": 5,
+     "col": "7"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "camel_twohump_touch",
+     "row": 2,
+     "col": "7"
+    },
+    {
+     "type": "camel_twohump_touch",
+     "row": 4,
+     "col": "7"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "camel_twohump_touch",
+     "row": 3,
+     "col": "7"
+    },
+    {
+     "type": "camel_twohump_touch",
+     "row": 5,
+     "col": "7"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "camel_twohump_touch",
+     "row": 4,
+     "col": "7"
+    },
+    {
+     "type": "camel_threehump_touch",
+     "row": 2,
+     "col": "7"
+    }
+   ]
+  }
+ ],
+ "wave_pacing": {
+  "flag_interval": 9,
+  "suppress_flag": true,
+  "next_wave_health_min": 0.5,
+  "next_wave_health_max": 0.65
+ },
+ "scripts": [
+  "CamelMinigameIntro"
+ ]
+}

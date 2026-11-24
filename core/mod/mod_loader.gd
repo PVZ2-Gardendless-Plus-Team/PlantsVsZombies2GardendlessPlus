@@ -31,6 +31,7 @@ extends Node
 ##       components/*.gd     new behaviours, or overrides of built-in ones
 ##       objectives/*.gd     new win/lose rules, or overrides
 ##       lawn_components/*.gd  world-level behaviours and abilities
+##       minigames/*.gd      level modes (bowling, vasebreaker...), or overrides
 ##       init.gd             optional hook, run after all data has loaded
 ##
 ## Registered as an autoload singleton named `Mods`, loaded before `Data`.
@@ -58,6 +59,7 @@ func _ready() -> void:
 		_register_components(m)
 		_register_objectives(m)
 		_register_lawn_components(m)
+		_register_scripts(m, "minigames", Components.register_minigame)
 	mods_registered.emit(_priority)
 	if not _errors.is_empty():
 		for e in _errors:

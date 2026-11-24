@@ -1,0 +1,719 @@
+{
+ "id": "future10_1",
+ "name": "Future Minigame 1",
+ "name_key": "[FUTURE_CHALLENGE_MINIGAME_NAME]",
+ "description": "[PLAYERS_TRIP_TO_FUTURE]",
+ "number": 1,
+ "stage": "FutureNightStage",
+ "railcarts": {
+  "carts": [
+   {
+    "col": 0,
+    "row": 2
+   }
+  ],
+  "rails": [
+   {
+    "col": 0,
+    "row_start": 0,
+    "row_end": 4
+   }
+  ]
+ },
+ "minigames": [
+  {
+   "type": "fight_alone",
+   "position": {
+    "m_x": 0,
+    "m_y": 2
+   },
+   "plant_upgrade_list": [
+    {
+     "type": "peashooter",
+     "full_point": 3000,
+     "upgrade_details": {
+      "damage_scale": 10
+     }
+    },
+    {
+     "type": "repeater",
+     "full_point": 4000,
+     "upgrade_details": {
+      "damage_scale": 10
+     }
+    },
+    {
+     "type": "bloomerang",
+     "full_point": 6000,
+     "upgrade_details": {
+      "damage_scale": 10,
+      "shoot_interval_scale": 0.5
+     }
+    },
+    {
+     "type": "threepeater",
+     "upgrade_details": {
+      "damage_scale": 10,
+      "shoot_interval_scale": 0.33
+     }
+    }
+   ]
+  }
+ ],
+ "waves": [
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "future",
+     "row": 3
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "future",
+     "row": 4
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "future",
+     "row": 2
+    },
+    {
+     "type": "future",
+     "row": 3
+    }
+   ],
+   "plantfood": 1,
+   "dynamic_plantfood": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "future",
+       "row": 5
+      },
+      {
+       "type": "future",
+       "row": 4
+      }
+     ],
+     "plantfood": 1
+    },
+    {
+     "kind": "MissileLocateWaveActionProps",
+     "data": {
+      "ColumnEnd": 0,
+      "ColumnStart": 0,
+      "MissileCount": 1,
+      "MissileFallCountdown": 4,
+      "WaveStartMessage": "[WARNING_MISSILE]"
+     }
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "future"
+      }
+     ]
+    },
+    {
+     "kind": "SpiderRainZombieSpawnerProps",
+     "data": {
+      "ColumnEnd": 8,
+      "ColumnStart": 5,
+      "GroupSize": 2,
+      "SpiderCount": 5,
+      "SpiderZombieName": "future_imp",
+      "TimeBeforeFullSpawn": 2,
+      "TimeBetweenGroups": 0.5,
+      "WaveStartMessage": "[WARNING_SPIDERRAIN]",
+      "ZombieFallTime": 1.5
+     }
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "future_armor1"
+      }
+     ]
+    },
+    {
+     "kind": "SpawnZombiesFromGroundSpawnerProps",
+     "data": {
+      "ColumnEnd": 8,
+      "ColumnStart": 5,
+      "WaveStartMessage": "[WARNING_JETPACKRAIN]",
+      "Zombies": [
+       {
+        "Type": "RTID(future_jetpack@ZombieTypes)"
+       },
+       {
+        "Type": "RTID(future_jetpack@ZombieTypes)"
+       },
+       {
+        "Type": "RTID(future_jetpack@ZombieTypes)"
+       },
+       {
+        "Type": "RTID(future_jetpack@ZombieTypes)"
+       },
+       {
+        "Type": "RTID(future_jetpack@ZombieTypes)"
+       },
+       {
+        "Type": "RTID(future_jetpack@ZombieTypes)"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "future"
+    },
+    {
+     "type": "future"
+    },
+    {
+     "type": "future"
+    }
+   ],
+   "plantfood": 1
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "future_armor1"
+      },
+      {
+       "type": "future"
+      },
+      {
+       "type": "future"
+      }
+     ]
+    },
+    {
+     "kind": "MissileLocateWaveActionProps",
+     "data": {
+      "ColumnEnd": 0,
+      "ColumnStart": 0,
+      "MissileCount": 1,
+      "MissileFallCountdown": 4,
+      "WaveStartMessage": "[WARNING_MISSILE]"
+     }
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "future"
+      },
+      {
+       "type": "future"
+      },
+      {
+       "type": "future_armor1"
+      },
+      {
+       "type": "future"
+      }
+     ]
+    },
+    {
+     "kind": "SpiderRainZombieSpawnerProps",
+     "data": {
+      "ColumnEnd": 8,
+      "ColumnStart": 5,
+      "GroupSize": 2,
+      "SpiderCount": 5,
+      "SpiderZombieName": "future_imp",
+      "TimeBeforeFullSpawn": 2,
+      "TimeBetweenGroups": 0.5,
+      "WaveStartMessage": "[WARNING_SPIDERRAIN]",
+      "ZombieFallTime": 1.5
+     }
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "future"
+      },
+      {
+       "type": "future"
+      },
+      {
+       "type": "future_armor2"
+      },
+      {
+       "type": "future_armor2"
+      },
+      {
+       "type": "future_armor2"
+      },
+      {
+       "type": "future_armor2"
+      },
+      {
+       "type": "future_armor2"
+      },
+      {
+       "type": "future"
+      }
+     ],
+     "plantfood": 1,
+     "dynamic_plantfood": [
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "SpawnZombiesFromGroundSpawnerProps",
+     "data": {
+      "ColumnEnd": 8,
+      "ColumnStart": 5,
+      "WaveStartMessage": "[WARNING_JETPACKRAIN]",
+      "Zombies": [
+       {
+        "Type": "RTID(future_jetpack@ZombieTypes)"
+       },
+       {
+        "Type": "RTID(future_jetpack@ZombieTypes)"
+       },
+       {
+        "Type": "RTID(future_jetpack@ZombieTypes)"
+       },
+       {
+        "Type": "RTID(future_jetpack@ZombieTypes)"
+       },
+       {
+        "Type": "RTID(future_jetpack@ZombieTypes)"
+       },
+       {
+        "Type": "RTID(future_jetpack@ZombieTypes)"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "future"
+    },
+    {
+     "type": "future"
+    },
+    {
+     "type": "future_armor2"
+    },
+    {
+     "type": "future_armor2"
+    },
+    {
+     "type": "future_armor2"
+    },
+    {
+     "type": "future_armor2"
+    },
+    {
+     "type": "future_armor2"
+    },
+    {
+     "type": "future"
+    }
+   ],
+   "plantfood": 1,
+   "dynamic_plantfood": [
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "future"
+      },
+      {
+       "type": "future"
+      },
+      {
+       "type": "future_armor2"
+      },
+      {
+       "type": "future_armor2"
+      },
+      {
+       "type": "future_armor2"
+      },
+      {
+       "type": "future_armor2"
+      },
+      {
+       "type": "future_armor2"
+      },
+      {
+       "type": "future"
+      }
+     ]
+    },
+    {
+     "kind": "MissileLocateWaveActionProps",
+     "data": {
+      "ColumnEnd": 0,
+      "ColumnStart": 0,
+      "MissileCount": 1,
+      "MissileFallCountdown": 4,
+      "WaveStartMessage": "[WARNING_MISSILE]"
+     }
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "future"
+      },
+      {
+       "type": "future"
+      },
+      {
+       "type": "future_armor2"
+      },
+      {
+       "type": "future_armor2"
+      },
+      {
+       "type": "future_armor2"
+      },
+      {
+       "type": "future_armor2"
+      },
+      {
+       "type": "future_armor2"
+      },
+      {
+       "type": "future"
+      }
+     ]
+    },
+    {
+     "kind": "SpiderRainZombieSpawnerProps",
+     "data": {
+      "ColumnEnd": 8,
+      "ColumnStart": 5,
+      "GroupSize": 2,
+      "SpiderCount": 5,
+      "SpiderZombieName": "future_imp",
+      "TimeBeforeFullSpawn": 2,
+      "TimeBetweenGroups": 0.5,
+      "WaveStartMessage": "[WARNING_SPIDERRAIN]",
+      "ZombieFallTime": 1.5
+     }
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "future"
+      },
+      {
+       "type": "future"
+      },
+      {
+       "type": "future_armor2"
+      },
+      {
+       "type": "future_armor2"
+      },
+      {
+       "type": "future_armor2"
+      },
+      {
+       "type": "future_armor2"
+      },
+      {
+       "type": "future_armor2"
+      },
+      {
+       "type": "future"
+      }
+     ]
+    },
+    {
+     "kind": "SpawnZombiesFromGroundSpawnerProps",
+     "data": {
+      "ColumnEnd": 8,
+      "ColumnStart": 5,
+      "WaveStartMessage": "[WARNING_JETPACKRAIN]",
+      "Zombies": [
+       {
+        "Type": "RTID(future_jetpack@ZombieTypes)"
+       },
+       {
+        "Type": "RTID(future_jetpack@ZombieTypes)"
+       },
+       {
+        "Type": "RTID(future_jetpack@ZombieTypes)"
+       },
+       {
+        "Type": "RTID(future_jetpack@ZombieTypes)"
+       },
+       {
+        "Type": "RTID(future_jetpack@ZombieTypes)"
+       },
+       {
+        "Type": "RTID(future_jetpack@ZombieTypes)"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "future"
+    },
+    {
+     "type": "future"
+    },
+    {
+     "type": "future_armor2"
+    },
+    {
+     "type": "future_armor2"
+    },
+    {
+     "type": "future_armor2"
+    },
+    {
+     "type": "future_armor2"
+    },
+    {
+     "type": "future_armor2"
+    },
+    {
+     "type": "future"
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "future"
+      },
+      {
+       "type": "future"
+      },
+      {
+       "type": "future_armor2"
+      },
+      {
+       "type": "future_armor2"
+      },
+      {
+       "type": "future_armor2"
+      },
+      {
+       "type": "future_armor2"
+      },
+      {
+       "type": "future_armor2"
+      },
+      {
+       "type": "future"
+      }
+     ]
+    },
+    {
+     "kind": "MissileLocateWaveActionProps",
+     "data": {
+      "ColumnEnd": 0,
+      "ColumnStart": 0,
+      "MissileCount": 1,
+      "MissileFallCountdown": 4,
+      "WaveStartMessage": "[WARNING_MISSILE]"
+     }
+    }
+   ]
+  }
+ ],
+ "wave_pacing": {
+  "flag_interval": 4,
+  "points": 100,
+  "point_increment": 0
+ },
+ "dynamic_zombies": [
+  {
+   "start_wave": 1,
+   "points": 500,
+   "increment": 50,
+   "pool": [
+    "mech_cone",
+    "future_protector",
+    "future_jetpack",
+    "future",
+    "future_armor1"
+   ]
+  },
+  {
+   "start_wave": 1,
+   "points": 500,
+   "increment": 50,
+   "pool": [
+    "mech_cone",
+    "future_protector",
+    "future_jetpack",
+    "future",
+    "future_armor1"
+   ]
+  },
+  {
+   "start_wave": 1,
+   "points": 500,
+   "increment": 50,
+   "pool": [
+    "mech_cone",
+    "future_protector",
+    "future_jetpack",
+    "future",
+    "future_armor1"
+   ]
+  },
+  {
+   "start_wave": 1,
+   "points": 500,
+   "increment": 50,
+   "pool": [
+    "mech_cone",
+    "future_protector",
+    "future_jetpack",
+    "future",
+    "future_armor1"
+   ]
+  },
+  {
+   "start_wave": 1,
+   "points": 500,
+   "increment": 75,
+   "pool": [
+    "mech_cone",
+    "future_protector",
+    "future_jetpack",
+    "future",
+    "future_armor1",
+    "future_armor2"
+   ]
+  },
+  {
+   "start_wave": 1,
+   "points": 500,
+   "increment": 100,
+   "pool": [
+    "mech_cone",
+    "future_protector",
+    "future_jetpack",
+    "future",
+    "future_armor1",
+    "future_armor2"
+   ]
+  },
+  {
+   "start_wave": 1,
+   "points": 500,
+   "increment": 150,
+   "pool": [
+    "mech_cone",
+    "future_protector",
+    "future_jetpack",
+    "future",
+    "future_armor1",
+    "future_armor2"
+   ]
+  }
+ ],
+ "mowers": true,
+ "scripts": [
+  "StandardIntro"
+ ]
+}

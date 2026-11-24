@@ -31,6 +31,8 @@ mods/my_pack/
   audio/events.json   add or replace sounds
   i18n/<locale>.json  add a language, or fix strings in one (docs/TRANSLATING.md)
   components/*.gd     new behaviours, or overrides of built-in ones
+  minigames/*.gd      new level modes, or overrides of built-in ones
+  minigames.json      modes and levels to add to the Minigames screen
   init.gd             optional startup hook
 ```
 
@@ -950,6 +952,56 @@ A pack adds its own as `objectives/<type>.gd`, overriding `is_met()`,
 `on_plant_died`, `on_sun_collected`, `on_zombie_reached_house`,
 `on_wave_started`, `on_all_waves_spawned`). An objective can key off a tag the
 pack itself invented - core never needs to know about it.
+
+## Minigames
+
+Some levels are played by different rules: Wall-nut Bowling, Last Stand,
+Vasebreaker, Beghouled, the Endless Zones. Each is a minigame mode, listed on
+the level and configured from data like an objective:
+
+```json
+"minigames": [
+ {"type": "bowling", "bowling_foul_line": 2}
+]
+```
+
+| Type | Config | Rule |
+|---|---|---|
+| `bowling` | `bowling_foul_line` | balls are rolled from behind the line; no shovel, plant food or falling sun |
+| `last_stand` | `starting_sun`, `starting_plantfood` | no zombies until the player presses Start Onslaught; no falling sun |
+| `vasebreaker` | `min_column_index`, `max_column_index`, `vases`, `num_colored_plant_vases`, `num_colored_zombie_vases` | click vases to break them; their plants go on the belt; won once every vase is broken |
+| `beghouled` | `matches_to_win`, `initial_plants`, `upgrade_map`, `preset_plant_list`, `stages` | swap neighbouring plants to match three; the bank sells upgrades |
+| `endless` | `max_flag_wave`, `level_designers` | waves built from wave points, level after level, forever; the best streak is kept |
+| `cannon` | `min_score`, `base_zombie_kill_score`, `combo_brackets`, `row_has_cannon` | tap coconut cannons; kills score, many in one shot score more; the target must be reached |
+| `camel` | `card_types_used`, `card_matching_time`, `card_no_match_time`, `combo_counter` | tap touch camels to turn their planks; two alike fell both |
+| `cowboy` | | each wave stands waiting until the player plants, and the next waits for it to be cleared |
+| `fight_alone` | `position`, `plant_upgrade_list` | one plant only; the damage it deals grows it into the next on the list |
+| `sun_bomb` | `zombie_damage`, `zombie_bomb_explosion_radius`, `plant_damage`, `plant_bomb_explosion_radius` | the sky drops sun bombs instead of sun |
+| `rhythm` | `target_column`, `zombies`, `music_name`, `time_offset` | zombies glide in to the beat; tap the phat beets to smash them |
+| `izombie` | `starting_sun`, `place_column`, `zombies`, `plants` or `plant_pool` + `plant_columns`, `sun_plants` | the project's own I, Zombie: buy zombies, set them down right of the red line, and eat every row's brain |
+
+The keys are PVZGE's module fields in snake_case, which is what
+`tools/import_levels.py` writes. Projectile seed packets
+(`tool_projectile_*` plants, the `projectile_spawner` component) roll their
+ball and vanish when placed.
+
+A pack adds or replaces a mode as `minigames/<type>.gd`, extending
+`Minigame`. The hooks it can override say how the level changes:
+`holds_waves()`, `drops_sky_sun()`, `drop_from_sky()`, `allows_shovel()`, `allows_plant_food()`,
+`skips_seed_chooser()`, `uses_belt()`, `seeds()`, `use_seed(id)`,
+`placement_refusal()`, `handle_click(row, col)`, `handle_zombie_at_house(zombie)`, `is_met()`, `is_failed()`,
+`describe()`, `start_word()`, `intro_text()`, and `save_state()` /
+`load_state()`. The level is won once every objective and every mode is met.
+
+The Minigames screen lists `data/native/minigames.json` (written by
+`tools/select_minigames.py`) and then each pack's own `minigames.json`:
+
+```json
+{"modes": [
+ {"id": "bowling", "name": "Wall-nut Bowling", "description": "...",
+  "levels": [{"id": "my_bowling_level", "name": "My Lane"}]}
+]}
+```
 
 ## Conveyor levels
 

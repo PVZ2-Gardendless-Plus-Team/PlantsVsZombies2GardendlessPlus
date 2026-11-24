@@ -1,0 +1,509 @@
+{
+ "id": "mirrornut5",
+ "name": "[EPIC_PLANT_LEVEL_NAME]",
+ "description": "[PLAYERS_ATTEMPT_TO_GET_PLANT]",
+ "author": "莱池_余垛",
+ "number": 5,
+ "stage": "EightiesTutorialStage",
+ "introduces_plant": "mirrornut",
+ "reward": {
+  "type": "unlock_plant",
+  "param": "mirrornut"
+ },
+ "railcarts": {
+  "carts": [
+   {
+    "col": 1,
+    "row": 1
+   },
+   {
+    "col": 1,
+    "row": 4
+   },
+   {
+    "col": 2,
+    "row": 3
+   }
+  ],
+  "rails": [
+   {
+    "col": 1,
+    "row_start": 0,
+    "row_end": 1
+   },
+   {
+    "col": 1,
+    "row_start": 3,
+    "row_end": 4
+   },
+   {
+    "col": 2,
+    "row_start": 1,
+    "row_end": 3
+   }
+  ],
+  "type": "railcart_tutorial"
+ },
+ "minigames": [
+  {
+   "type": "sun_bomb",
+   "plant_bomb_explosion_radius": 40,
+   "plant_damage": 750,
+   "zombie_bomb_explosion_radius": 40,
+   "zombie_damage": 100
+  }
+ ],
+ "waves": [
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "lawn",
+     "row": 2
+    },
+    {
+     "type": "lawn",
+     "row": 4
+    }
+   ],
+   "notify": [
+    "jam_pop"
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "disco_mech_t",
+     "row": 3
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "eighties_breakdancer",
+     "row": 3
+    },
+    {
+     "type": "lawn_imp",
+     "row": 1
+    }
+   ],
+   "notify": [
+    "jam_rap"
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "disco_mech_t",
+     "row": 4
+    },
+    {
+     "type": "eighties_breakdancer",
+     "row": 4
+    }
+   ],
+   "plantfood": 1,
+   "dynamic_plantfood": [
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "mech_cone",
+     "row": 2
+    },
+    {
+     "type": "mech_cone",
+     "row": 5
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "mech_cone",
+     "row": 4
+    },
+    {
+     "type": "eighties_breakdancer",
+     "row": 2
+    },
+    {
+     "type": "eighties_breakdancer",
+     "row": 5
+    }
+   ],
+   "plantfood": 1,
+   "dynamic_plantfood": [
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "disco_mech_t",
+     "row": 2
+    },
+    {
+     "type": "disco_mech_t",
+     "row": 5
+    },
+    {
+     "type": "lawn_armor1",
+     "row": 1
+    },
+    {
+     "type": "lawn_armor2",
+     "row": 3
+    },
+    {
+     "type": "lawn_armor1",
+     "row": 4
+    }
+   ],
+   "notify": [
+    "jam_punk"
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "lawn",
+     "row": 1
+    },
+    {
+     "type": "lawn",
+     "row": 4
+    },
+    {
+     "type": "beach_surfer",
+     "row": 1
+    },
+    {
+     "type": "beach_surfer",
+     "row": 4
+    }
+   ],
+   "plantfood": 1,
+   "dynamic_plantfood": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "disco_mech_t",
+     "row": 1
+    },
+    {
+     "type": "disco_mech_t",
+     "row": 4
+    },
+    {
+     "type": "eighties_breakdancer",
+     "row": 1
+    },
+    {
+     "type": "eighties_breakdancer",
+     "row": 4
+    },
+    {
+     "type": "eighties_breakdancer",
+     "row": 4
+    }
+   ],
+   "notify": [
+    "jam_rap"
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "lawn_armor2",
+     "row": 3
+    },
+    {
+     "type": "lawn_armor2",
+     "row": 5
+    },
+    {
+     "type": "eighties_breakdancer",
+     "row": 3
+    },
+    {
+     "type": "eighties_breakdancer",
+     "row": 5
+    },
+    {
+     "type": "beach_surfer",
+     "row": 3
+    },
+    {
+     "type": "beach_surfer",
+     "row": 5
+    }
+   ],
+   "plantfood": 1,
+   "dynamic_plantfood": [
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0
+   ],
+   "notify": [
+    "jam_rap"
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "lawn_armor1",
+     "row": 1
+    },
+    {
+     "type": "lawn_armor1",
+     "row": 2
+    },
+    {
+     "type": "lawn_armor2",
+     "row": 3
+    },
+    {
+     "type": "lawn_armor1",
+     "row": 4
+    },
+    {
+     "type": "lawn_armor2",
+     "row": 5
+    }
+   ],
+   "plantfood": 1,
+   "dynamic_plantfood": [
+    1,
+    1,
+    1,
+    0,
+    1,
+    0,
+    0
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "beach_surfer",
+     "row": 1
+    },
+    {
+     "type": "beach_surfer",
+     "row": 2
+    },
+    {
+     "type": "lawn_armor1",
+     "row": 3
+    },
+    {
+     "type": "beach_surfer",
+     "row": 4
+    },
+    {
+     "type": "lawn_armor1",
+     "row": 5
+    }
+   ],
+   "notify": [
+    "jam_punk"
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "disco_mech_t",
+     "row": 3
+    },
+    {
+     "type": "disco_mech_t",
+     "row": 5
+    },
+    {
+     "type": "eighties_breakdancer",
+     "row": 3
+    },
+    {
+     "type": "eighties_breakdancer",
+     "row": 5
+    }
+   ],
+   "plantfood": 1,
+   "dynamic_plantfood": [
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    0
+   ],
+   "notify": [
+    "jam_rap"
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "beach_surfer",
+     "row": 3
+    },
+    {
+     "type": "beach_surfer",
+     "row": 5
+    },
+    {
+     "type": "eighties_breakdancer",
+     "row": 3
+    },
+    {
+     "type": "eighties_breakdancer",
+     "row": 5
+    },
+    {
+     "type": "disco_mech_t",
+     "row": 1
+    },
+    {
+     "type": "disco_mech_t",
+     "row": 4
+    }
+   ]
+  }
+ ],
+ "wave_pacing": {
+  "flag_interval": 7,
+  "points": 0,
+  "point_increment": 0,
+  "spawn_col_start": 1,
+  "spawn_col_end": 1
+ },
+ "dynamic_zombies": [
+  {
+   "start_wave": 5,
+   "points": 100,
+   "increment": 30,
+   "pool": [
+    "lawn_imp",
+    "lawn_armor1",
+    "mech_cone",
+    "beach_surfer"
+   ]
+  },
+  {
+   "start_wave": 4,
+   "points": 200,
+   "increment": 40,
+   "pool": [
+    "lawn_imp",
+    "lawn_armor1",
+    "lawn_armor2",
+    "mech_cone",
+    "beach_surfer"
+   ]
+  },
+  {
+   "start_wave": 3,
+   "points": 400,
+   "increment": 60,
+   "pool": [
+    "lawn_imp",
+    "lawn_armor2",
+    "mech_cone",
+    "beach_surfer"
+   ]
+  }
+ ],
+ "seedbank": {
+  "mode": "chooser",
+  "selection": "preset",
+  "preset": [
+   "mirrornut",
+   "holonut",
+   "wallnut",
+   "iceburg",
+   "empea"
+  ]
+ },
+ "mowers": true,
+ "scripts": [
+  "StandardIntro"
+ ],
+ "extra": [
+  {
+   "objclass": "SunDropperProperties",
+   "aliases": [
+    "SunDropper"
+   ],
+   "objdata": {
+    "InitialSunDropDelay": 0,
+    "SunCountdownBase": 3,
+    "SunCountdownIncreasePerSun": 0.1,
+    "SunCountdownMax": 6,
+    "SunCountdownRange": 0
+   }
+  },
+  {
+   "objclass": "ZombieType",
+   "aliases": [
+    "disco_mech_t"
+   ],
+   "objdata": {
+    "Properties": "RTID(disco_mech_p@CurrentLevel)",
+    "ZombieBasedOn": "disco_mech"
+   }
+  },
+  {
+   "objclass": "ZombieProperties",
+   "aliases": [
+    "disco_mech_p"
+   ],
+   "objdata": {
+    "JetpackType": "future_imp"
+   }
+  }
+ ]
+}

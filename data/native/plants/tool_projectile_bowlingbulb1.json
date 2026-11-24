@@ -11,8 +11,9 @@
  },
  "components": [
   {
-   "type": "shooter",
-   "projectile": "bowling0"
+   "type": "projectile_spawner",
+   "projectile": "bowling0",
+   "speed_x": 5
   }
  ],
  "zen_garden": {

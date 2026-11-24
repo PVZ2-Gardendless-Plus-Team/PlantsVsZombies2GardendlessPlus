@@ -1,0 +1,533 @@
+{
+ "id": "lod_226",
+ "name": "Level Of The Day Test 1",
+ "name_key": "[LOD_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_LOD]",
+ "author": "Sandy",
+ "stage": "FutureNightStage",
+ "level_of_the_day": true,
+ "promo_plant": "megagatling",
+ "waves": [],
+ "level_of_the_day_config": {
+  "flags": 0,
+  "waves_per_flag": 0,
+  "points": 0,
+  "point_increment": 0,
+  "plantfood": 0,
+  "pool": [
+   "future",
+   "future_armor1",
+   "future_armor2",
+   "future_armor4"
+  ]
+ },
+ "objectives": [
+  {
+   "type": "survive_waves"
+  }
+ ],
+ "minigames": [
+  {
+   "type": "fight_alone",
+   "position": {
+    "m_x": 0,
+    "m_y": 2
+   },
+   "plant_upgrade_list": [
+    {
+     "type": "peashooter",
+     "full_point": 4000,
+     "upgrade_details": {
+      "damage_scale": 6,
+      "shoot_interval_scale": 0.15
+     }
+    },
+    {
+     "type": "repeater",
+     "full_point": 7500,
+     "upgrade_details": {
+      "damage_scale": 6,
+      "shoot_interval_scale": 0.25
+     }
+    },
+    {
+     "type": "seashooter",
+     "full_point": 10000,
+     "upgrade_details": {
+      "damage_scale": 6,
+      "shoot_interval_scale": 0.25
+     }
+    },
+    {
+     "type": "gatling",
+     "full_point": 15000,
+     "upgrade_details": {
+      "damage_scale": 5,
+      "shoot_interval_scale": 0.35,
+      "gunned": true
+     }
+    },
+    {
+     "type": "megagatling",
+     "upgrade_details": {
+      "damage_scale": 5,
+      "shoot_interval_scale": 0.35
+     }
+    }
+   ]
+  }
+ ],
+ "railcarts": {
+  "carts": [
+   {
+    "col": 0,
+    "row": 2
+   }
+  ],
+  "rails": [
+   {
+    "col": 0,
+    "row_start": 0,
+    "row_end": 4
+   }
+  ],
+  "type": "railcart_future"
+ },
+ "mowers": true,
+ "scripts": [
+  "LevelOfTheDayIntro",
+  "ZombossIntro"
+ ],
+ "extra": [
+  {
+   "objclass": "ZombossBattleModuleProperties",
+   "aliases": [
+    "ZombossBattle"
+   ],
+   "objdata": {
+    "ReservedColumnCount": 2,
+    "ZombossMechType": "zombossmech_futurenew",
+    "ZombossDeathRow": 3,
+    "ZombossDeathColumn": 5,
+    "ZombossSpawnGridPosition": {
+     "mX": 6,
+     "mY": 3
+    }
+   }
+  },
+  {
+   "objclass": "PlantModifierProperties",
+   "aliases": [
+    "PlantMods"
+   ],
+   "objdata": {
+    "SuppressParticle": true,
+    "List": [
+     {
+      "Type": "peashooter",
+      "NewObjdata": {
+       "PlantfoodPeaCount": 200
+      }
+     },
+     {
+      "Type": "repeater",
+      "NewObjdata": {
+       "PlantfoodPeaCount": 200
+      }
+     },
+     {
+      "Type": "seashooter",
+      "NewObjdata": {
+       "PlantfoodPeaCount": 200
+      }
+     },
+     {
+      "Type": "gatling",
+      "NewObjdata": {
+       "PlantfoodPeaCount": 200
+      }
+     },
+     {
+      "Type": "megagatling",
+      "NewObjdata": {
+       "PlantfoodPeaCount": 200
+      }
+     }
+    ]
+   }
+  },
+  {
+   "objclass": "ZombieType",
+   "aliases": [
+    "zombossmech_futurenew"
+   ],
+   "objdata": {
+    "Properties": "RTID(zombossmech_futurenew@CurrentLevel)",
+    "ZombieBasedOn": "zombossmech_future"
+   }
+  },
+  {
+   "objclass": "ZombieProperties",
+   "aliases": [
+    "zombossmech_futurenew"
+   ],
+   "objdata": {
+    "MissileType": "zomboss_missile_future",
+    "CannotBeEnlightenedBySolarSage": true,
+    "ImmuneToSweetPotato": true,
+    "ImmuneToShrinkingViolet": true,
+    "ZombieSort": "Zomboss",
+    "CannotBeGrabbedByPtero": true,
+    "CannotBeDetectedByPowerToss": true,
+    "CannotBeDraggedByTangleKelp": true,
+    "CannotBeTossedByCitron": true,
+    "CannotBeDetectedBySapfling": true,
+    "CannotBeSwallowedByChomper": true,
+    "ChiliStunDurationMult": 0,
+    "CannotCarryPlantfoodsInWaves": true,
+    "FoeEatDamageReflectPct": 0.5,
+    "LivesInDeepWater": true,
+    "WalkSPS": 0.185,
+    "EatDPS": 100,
+    "Toughness": 190,
+    "ImmuneToGarlic": true,
+    "WavePointCost": 100,
+    "Weight": 0,
+    "HitRect": "RTID(ZombossMechHitRect@RectangleProps)",
+    "AttackRect": "RTID(ZombossMechAttackRect@RectangleProps)",
+    "ZombossMechLevel": 0,
+    "ZombossStages": [
+     {
+      "AnimRateModifier": 1,
+      "ChilledDurationFromFrozen": 10,
+      "DamageIndexFull": 0,
+      "DamageIndexHalf": 0,
+      "HitPoints": 25000,
+      "MaxIdleTime": 1,
+      "MinIdleTime": 0.5,
+      "StunDamageScale": 1.25,
+      "StunStaggerBackMovement": 1,
+      "StunStaggerBackTime": 0.4,
+      "StunTime": 3,
+      "Actions": [
+       {
+        "actionName": "walk",
+        "weight": 3,
+        "repeatMax": 3,
+        "repeatMin": 2,
+        "summonProps": {
+         "pointMin": 1000,
+         "pointMax": 2000,
+         "zombieList": []
+        }
+       },
+       {
+        "actionName": "summon",
+        "weight": 12,
+        "repeatMax": 2,
+        "repeatMin": 2,
+        "summonProps": {
+         "pointMin": 3500,
+         "pointMax": 3500,
+         "zombieList": [
+          "future_armor1",
+          "future_armor2",
+          "football_mech",
+          "mech_cone",
+          "future_protector"
+         ]
+        }
+       },
+       {
+        "actionName": "shoot",
+        "weight": 6,
+        "repeatMax": 1,
+        "repeatMin": 2,
+        "summonProps": {
+         "pointMin": 1000,
+         "pointMax": 2000,
+         "zombieList": []
+        }
+       }
+      ]
+     },
+     {
+      "AnimRateModifier": 1.25,
+      "ChilledDurationFromFrozen": 10,
+      "DamageIndexFull": 3,
+      "DamageIndexHalf": 3,
+      "HitPoints": 35000,
+      "MaxIdleTime": 1,
+      "MinIdleTime": 1,
+      "StunDamageScale": 1.25,
+      "StunStaggerBackMovement": 1,
+      "StunStaggerBackTime": 0.4,
+      "StunTime": 2.5,
+      "ShieldLifeSpan": 15,
+      "RushDuration": 5,
+      "RushDPS": 400,
+      "RushSPS": 2,
+      "AbsorbDuration": 5,
+      "RoarStunDuration": 7.5,
+      "Actions": [
+       {
+        "actionName": "summon",
+        "weight": 14,
+        "repeatMax": 2,
+        "repeatMin": 2,
+        "summonProps": {
+         "pointMin": 6000,
+         "pointMax": 6000,
+         "zombieList": [
+          "future_armor1",
+          "future_armor2",
+          "football_mech",
+          "mech_cone",
+          "future_protector",
+          "future_gargantuar"
+         ]
+        }
+       },
+       {
+        "actionName": "walk",
+        "weight": 3,
+        "repeatMax": 1,
+        "repeatMin": 1,
+        "summonProps": {
+         "pointMin": 1000,
+         "pointMax": 2000,
+         "zombieList": []
+        }
+       },
+       {
+        "actionName": "rush",
+        "weight": 4,
+        "repeatMax": 1,
+        "repeatMin": 1,
+        "summonProps": {
+         "pointMin": 1000,
+         "pointMax": 2000,
+         "zombieList": []
+        }
+       },
+       {
+        "actionName": "shoot",
+        "weight": 4,
+        "repeatMax": 1,
+        "repeatMin": 2,
+        "summonProps": {
+         "pointMin": 1000,
+         "pointMax": 2000,
+         "zombieList": []
+        }
+       }
+      ]
+     },
+     {
+      "AnimRateModifier": 1.5,
+      "ChilledDurationFromFrozen": 10,
+      "DamageIndexFull": 6,
+      "DamageIndexHalf": 6,
+      "HitPoints": 45000,
+      "MaxIdleTime": 0.5,
+      "MinIdleTime": 0.5,
+      "StunDamageScale": 1.25,
+      "StunStaggerBackMovement": 1,
+      "StunStaggerBackTime": 0.4,
+      "StunTime": 2,
+      "Actions": [
+       {
+        "actionName": "walk",
+        "weight": 3,
+        "repeatMax": 2,
+        "repeatMin": 3,
+        "summonProps": {
+         "pointMin": 1000,
+         "pointMax": 2000,
+         "zombieList": []
+        }
+       },
+       {
+        "actionName": "summon",
+        "weight": 12,
+        "repeatMax": 2,
+        "repeatMin": 2,
+        "summonProps": {
+         "pointMin": 8000,
+         "pointMax": 8000,
+         "zombieList": [
+          "future_armor1",
+          "future_armor2",
+          "future_armor4",
+          "football_mech",
+          "mech_cone",
+          "future_protector",
+          "future_gargantuar"
+         ]
+        }
+       },
+       {
+        "actionName": "shoot",
+        "weight": 6,
+        "repeatMax": 1,
+        "repeatMin": 1,
+        "summonProps": {
+         "pointMin": 1000,
+         "pointMax": 2000,
+         "zombieList": []
+        }
+       },
+       {
+        "actionName": "rush",
+        "weight": 12,
+        "repeatMax": 1,
+        "repeatMin": 1,
+        "summonProps": {
+         "pointMin": 1000,
+         "pointMax": 2000,
+         "zombieList": []
+        }
+       }
+      ]
+     },
+     {
+      "AnimRateModifier": 2,
+      "ChilledDurationFromFrozen": 10,
+      "DamageIndexFull": 6,
+      "DamageIndexHalf": 6,
+      "HitPoints": 55000,
+      "MaxIdleTime": 0.5,
+      "MinIdleTime": 0.5,
+      "StunDamageScale": 1.25,
+      "StunStaggerBackMovement": 1,
+      "StunStaggerBackTime": 0.4,
+      "StunTime": 2,
+      "Actions": [
+       {
+        "actionName": "walk",
+        "weight": 3,
+        "repeatMax": 2,
+        "repeatMin": 3,
+        "summonProps": {
+         "pointMin": 1000,
+         "pointMax": 2000,
+         "zombieList": []
+        }
+       },
+       {
+        "actionName": "summon",
+        "weight": 12,
+        "repeatMax": 2,
+        "repeatMin": 2,
+        "summonProps": {
+         "pointMin": 10000,
+         "pointMax": 10000,
+         "zombieList": [
+          "future_armor1",
+          "future_armor2",
+          "future_armor4",
+          "football_mech",
+          "future_jetpack_veteran",
+          "future_protector",
+          "future_gargantuar"
+         ]
+        }
+       },
+       {
+        "actionName": "shoot",
+        "weight": 6,
+        "repeatMax": 1,
+        "repeatMin": 1,
+        "summonProps": {
+         "pointMin": 1000,
+         "pointMax": 2000,
+         "zombieList": []
+        }
+       },
+       {
+        "actionName": "rush",
+        "weight": 12,
+        "repeatMax": 1,
+        "repeatMin": 1,
+        "summonProps": {
+         "pointMin": 1000,
+         "pointMax": 2000,
+         "zombieList": []
+        }
+       }
+      ]
+     },
+     {
+      "AnimRateModifier": 3,
+      "ChilledDurationFromFrozen": 10,
+      "DamageIndexFull": 6,
+      "DamageIndexHalf": 6,
+      "HitPoints": 65000,
+      "MaxIdleTime": 0.5,
+      "MinIdleTime": 0.5,
+      "StunDamageScale": 1.25,
+      "StunStaggerBackMovement": 1,
+      "StunStaggerBackTime": 0.4,
+      "StunTime": 2,
+      "Actions": [
+       {
+        "actionName": "walk",
+        "weight": 3,
+        "repeatMax": 2,
+        "repeatMin": 3,
+        "summonProps": {
+         "pointMin": 1000,
+         "pointMax": 2000,
+         "zombieList": []
+        }
+       },
+       {
+        "actionName": "summon",
+        "weight": 12,
+        "repeatMax": 2,
+        "repeatMin": 2,
+        "summonProps": {
+         "pointMin": 20000,
+         "pointMax": 20000,
+         "zombieList": [
+          "future_armor1",
+          "future_armor2",
+          "future_armor4",
+          "football_mech",
+          "disco_mech",
+          "mech_cone",
+          "future_jetpack_veteran",
+          "future_protector",
+          "future_gargantuar"
+         ]
+        }
+       },
+       {
+        "actionName": "shoot",
+        "weight": 6,
+        "repeatMax": 1,
+        "repeatMin": 1,
+        "summonProps": {
+         "pointMin": 1000,
+         "pointMax": 2000,
+         "zombieList": []
+        }
+       },
+       {
+        "actionName": "rush",
+        "weight": 12,
+        "repeatMax": 1,
+        "repeatMin": 1,
+        "summonProps": {
+         "pointMin": 1000,
+         "pointMax": 2000,
+         "zombieList": []
+        }
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ]
+}

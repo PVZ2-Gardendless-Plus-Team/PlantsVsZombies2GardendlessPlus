@@ -1,0 +1,83 @@
+{
+ "id": "egypt_dangerroom2",
+ "name": "Egypt Danger Room",
+ "name_key": "[DANGER_ROOM_EGYPT_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_DANGER_ROOM]",
+ "number": 666,
+ "stage": "EgyptStage",
+ "minigames": [
+  {
+   "type": "endless",
+   "world_specific_properties": "EgyptDangerRoomProps",
+   "level_designers": [
+    {
+     "starting_points": 100,
+     "base_point_increment_per_wave": 40,
+     "base_point_increment_per_level": 5,
+     "min_dynamic_zombie_type": 4,
+     "must_contain_zombie": [
+      "mummy"
+     ],
+     "zombie_pool": [
+      "camel_onehump",
+      "explorer",
+      "explorer_veteran",
+      "mummy_armor1",
+      "mummy_armor2",
+      "mummy_armor4",
+      "pharaoh",
+      "ra",
+      "tomb_raiser",
+      "egypt_gargantuar"
+     ],
+     "type": "jittered_wave_generator"
+    },
+    {
+     "type": "shared",
+     "name": "EgyptGravestoneGenerator"
+    },
+    {
+     "type": "shared",
+     "name": "EgyptSandstormGenerator"
+    }
+   ],
+   "initial_plants": [
+    "sunflower",
+    "peashooter",
+    "wallnut"
+   ],
+   "exclude_plants": [
+    "lilypad",
+    "floawerPot",
+    "tanglekelp",
+    "empea",
+    "hotpotato",
+    "perfumeshroom"
+   ],
+   "minigame": false
+  }
+ ],
+ "gravestones": {
+  "count": 0,
+  "col_start": -1,
+  "col_end": -1
+ },
+ "seedbank": {
+  "mode": "chooser",
+  "selection": "chooser",
+  "always_chooser": true
+ },
+ "sun": {
+  "interval": 10.0
+ },
+ "mowers": true,
+ "extra": [
+  {
+   "objclass": "DangerRoomLevelIntroProperties",
+   "aliases": [
+    "DangerRoomIntro"
+   ],
+   "objdata": {}
+  }
+ ]
+}

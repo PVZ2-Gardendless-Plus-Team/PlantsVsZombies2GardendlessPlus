@@ -1,0 +1,1015 @@
+{
+ "id": "beach8",
+ "name": "Beach 8",
+ "name_key": "[BEACH_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_BEACH]",
+ "number": 8,
+ "stage": "BeachStage",
+ "intro_narrative": "BEACH_INTRO_BOWLING",
+ "reward": {
+  "type": "pinata",
+  "param": "spine_beach"
+ },
+ "seedbank": {
+  "mode": "conveyor",
+  "plants": [
+   {
+    "type": "tool_projectile_bowlingbulb1",
+    "weight": 5,
+    "max": 2
+   },
+   {
+    "type": "tool_projectile_bowlingbulb2",
+    "weight": 25,
+    "max": 3
+   },
+   {
+    "type": "tool_projectile_bowlingbulb3",
+    "weight": 75,
+    "max": 6
+   },
+   {
+    "type": "tool_projectile_bowlingbulb_explode",
+    "weight": 40,
+    "max": 1
+   },
+   {
+    "type": "tool_projectile_bowlingbulb_mega",
+    "weight": 0,
+    "max": 1
+   }
+  ],
+  "drop_delay": [
+   {
+    "delay": 2,
+    "max_packets": 0
+   },
+   {
+    "delay": 3,
+    "max_packets": 2
+   },
+   {
+    "delay": 4,
+    "max_packets": 4
+   },
+   {
+    "delay": 5,
+    "max_packets": 8
+   }
+  ],
+  "speed": [
+   {
+    "speed": 100,
+    "max_packets": 0
+   }
+  ]
+ },
+ "waves": [
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "beach",
+     "row": 4
+    },
+    {
+     "type": "beach",
+     "row": 4
+    },
+    {
+     "type": "beach",
+     "row": 5
+    },
+    {
+     "type": "beach",
+     "row": 5
+    },
+    {
+     "type": "beach",
+     "row": 3
+    },
+    {
+     "type": "beach",
+     "row": 3
+    }
+   ],
+   "pattern": "ZombieSpawnerPatternStaggered"
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "beach",
+       "row": 2
+      },
+      {
+       "type": "beach",
+       "row": 4
+      },
+      {
+       "type": "beach",
+       "row": 3
+      },
+      {
+       "type": "beach",
+       "row": 4
+      },
+      {
+       "type": "beach",
+       "row": 2
+      },
+      {
+       "type": "beach_armor1",
+       "row": 3
+      },
+      {
+       "type": "beach_snorkel"
+      },
+      {
+       "type": "beach_snorkel"
+      },
+      {
+       "type": "beach_snorkel"
+      }
+     ],
+     "pattern": "ZombieSpawnerPatternStaggered"
+    },
+    {
+     "kind": "tide",
+     "water_from": 5
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "beach",
+       "row": 5
+      },
+      {
+       "type": "beach_armor1",
+       "row": 4
+      },
+      {
+       "type": "beach_armor1",
+       "row": 5
+      },
+      {
+       "type": "beach",
+       "row": 4
+      },
+      {
+       "type": "beach",
+       "row": 5
+      },
+      {
+       "type": "beach_armor1",
+       "row": 4
+      },
+      {
+       "type": "beach_fem",
+       "row": 1
+      },
+      {
+       "type": "beach_fem_armor1",
+       "row": 1
+      },
+      {
+       "type": "beach_fem",
+       "row": 1
+      },
+      {
+       "type": "beach_fem_armor1",
+       "row": 2
+      },
+      {
+       "type": "beach_fem",
+       "row": 2
+      },
+      {
+       "type": "beach_fem_armor1",
+       "row": 2
+      }
+     ],
+     "pattern": "ZombieSpawnerPatternStaggered"
+    },
+    {
+     "kind": "tide",
+     "water_from": 4
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "beach_fem"
+      },
+      {
+       "type": "beach_fem"
+      },
+      {
+       "type": "beach_fem"
+      },
+      {
+       "type": "beach_fem"
+      },
+      {
+       "type": "beach_armor2"
+      }
+     ],
+     "pattern": "ZombieSpawnerPatternStaggered"
+    },
+    {
+     "kind": "low_tide",
+     "type": "beach_imp",
+     "count": 6,
+     "group_size": 6,
+     "group_interval": 0.5,
+     "delay": 0.5,
+     "col_start": 4,
+     "col_end": 6
+    },
+    {
+     "kind": "tide",
+     "water_from": 6
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "beach_fem_armor1",
+     "row": 2
+    },
+    {
+     "type": "beach_fem_armor1",
+     "row": 4
+    },
+    {
+     "type": "beach_fem",
+     "row": 2
+    },
+    {
+     "type": "beach_fem",
+     "row": 4
+    },
+    {
+     "type": "beach_fem",
+     "row": 2
+    },
+    {
+     "type": "beach_fem",
+     "row": 4
+    },
+    {
+     "type": "beach_fem_armor2",
+     "row": 3
+    },
+    {
+     "type": "beach",
+     "row": 3
+    },
+    {
+     "type": "beach_armor1",
+     "row": 3
+    },
+    {
+     "type": "beach",
+     "row": 3
+    },
+    {
+     "type": "beach",
+     "row": 3
+    },
+    {
+     "type": "beach_fem_armor1",
+     "row": 2
+    },
+    {
+     "type": "beach_fem_armor1",
+     "row": 4
+    },
+    {
+     "type": "beach_fem_armor1",
+     "row": 3
+    }
+   ],
+   "pattern": "ZombieSpawnerPatternStaggered"
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "beach",
+       "row": 5
+      },
+      {
+       "type": "beach",
+       "row": 4
+      },
+      {
+       "type": "beach",
+       "row": 3
+      },
+      {
+       "type": "beach",
+       "row": 2
+      },
+      {
+       "type": "beach",
+       "row": 1
+      },
+      {
+       "type": "beach_armor1",
+       "row": 5
+      },
+      {
+       "type": "beach_armor1",
+       "row": 1
+      },
+      {
+       "type": "beach_armor1",
+       "row": 3
+      },
+      {
+       "type": "beach_snorkel",
+       "row": 2
+      },
+      {
+       "type": "beach_snorkel",
+       "row": 4
+      },
+      {
+       "type": "beach_snorkel",
+       "row": 5
+      },
+      {
+       "type": "beach_snorkel",
+       "row": 3
+      },
+      {
+       "type": "beach_snorkel",
+       "row": 1
+      },
+      {
+       "type": "beach",
+       "row": 2
+      },
+      {
+       "type": "beach",
+       "row": 4
+      }
+     ],
+     "pattern": "ZombieSpawnerPatternStaggered"
+    },
+    {
+     "kind": "tide",
+     "water_from": 5
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "beach_fem_armor1",
+       "row": 3
+      },
+      {
+       "type": "beach_fem_armor1",
+       "row": 3
+      },
+      {
+       "type": "beach_fem_armor1",
+       "row": 2
+      },
+      {
+       "type": "beach_fem_armor1",
+       "row": 2
+      },
+      {
+       "type": "beach_fem_armor2"
+      },
+      {
+       "type": "beach_fem_armor1",
+       "row": 5
+      },
+      {
+       "type": "beach_fem_armor1",
+       "row": 5
+      },
+      {
+       "type": "beach_fem_armor1",
+       "row": 1
+      },
+      {
+       "type": "beach_fem_armor1",
+       "row": 1
+      },
+      {
+       "type": "beach_fem_armor2"
+      },
+      {
+       "type": "beach_fem_armor1",
+       "row": 4
+      },
+      {
+       "type": "beach_fem_armor1",
+       "row": 4
+      },
+      {
+       "type": "beach_fem_armor2"
+      },
+      {
+       "type": "beach_fem_armor2"
+      }
+     ],
+     "pattern": "ZombieSpawnerPatternStaggered"
+    },
+    {
+     "kind": "tide",
+     "water_from": 4
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "beach",
+       "row": 5
+      },
+      {
+       "type": "beach",
+       "row": 5
+      },
+      {
+       "type": "beach_armor1",
+       "row": 5
+      },
+      {
+       "type": "beach",
+       "row": 4
+      },
+      {
+       "type": "beach_armor1",
+       "row": 4
+      },
+      {
+       "type": "beach",
+       "row": 4
+      },
+      {
+       "type": "beach",
+       "row": 3
+      },
+      {
+       "type": "beach",
+       "row": 3
+      },
+      {
+       "type": "beach_armor1",
+       "row": 3
+      },
+      {
+       "type": "beach",
+       "row": 1
+      },
+      {
+       "type": "beach",
+       "row": 1
+      },
+      {
+       "type": "beach_armor1",
+       "row": 1
+      },
+      {
+       "type": "beach",
+       "row": 2
+      },
+      {
+       "type": "beach_armor1",
+       "row": 2
+      },
+      {
+       "type": "beach",
+       "row": 2
+      }
+     ],
+     "pattern": "ZombieSpawnerPatternStaggered"
+    },
+    {
+     "kind": "low_tide",
+     "type": "beach_imp",
+     "count": 10,
+     "group_size": 10,
+     "group_interval": 0.5,
+     "delay": 0.5,
+     "col_start": 4,
+     "col_end": 6
+    },
+    {
+     "kind": "tide",
+     "water_from": 6
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "beach"
+    },
+    {
+     "type": "beach"
+    },
+    {
+     "type": "beach_fem_armor1"
+    },
+    {
+     "type": "beach_fem_armor1"
+    },
+    {
+     "type": "beach_armor2"
+    },
+    {
+     "type": "beach_armor2"
+    }
+   ],
+   "pattern": "ZombieSpawnerPatternStaggered"
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "beach_snorkel",
+       "row": 5
+      },
+      {
+       "type": "beach_snorkel",
+       "row": 4
+      },
+      {
+       "type": "beach_snorkel",
+       "row": 4
+      },
+      {
+       "type": "beach_snorkel",
+       "row": 4
+      },
+      {
+       "type": "beach_snorkel",
+       "row": 2
+      },
+      {
+       "type": "beach_snorkel",
+       "row": 2
+      },
+      {
+       "type": "beach_snorkel",
+       "row": 2
+      },
+      {
+       "type": "beach_snorkel",
+       "row": 1
+      },
+      {
+       "type": "beach_fem_armor1",
+       "row": 1
+      },
+      {
+       "type": "beach_armor1",
+       "row": 5
+      },
+      {
+       "type": "beach_armor1",
+       "row": 3
+      },
+      {
+       "type": "beach",
+       "row": 1
+      },
+      {
+       "type": "beach",
+       "row": 5
+      },
+      {
+       "type": "beach_snorkel",
+       "row": 1
+      },
+      {
+       "type": "beach_snorkel",
+       "row": 5
+      },
+      {
+       "type": "beach_snorkel",
+       "row": 3
+      }
+     ],
+     "pattern": "ZombieSpawnerPatternStaggered"
+    },
+    {
+     "kind": "tide",
+     "water_from": 5
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "beach",
+       "row": 4
+      },
+      {
+       "type": "beach_fem",
+       "row": 4
+      },
+      {
+       "type": "beach",
+       "row": 2
+      },
+      {
+       "type": "beach_fem",
+       "row": 2
+      },
+      {
+       "type": "beach",
+       "row": 3
+      },
+      {
+       "type": "beach_fem_armor1",
+       "row": 3
+      },
+      {
+       "type": "beach_armor2",
+       "row": 2
+      },
+      {
+       "type": "beach_armor2",
+       "row": 4
+      },
+      {
+       "type": "beach_fem",
+       "row": 1
+      },
+      {
+       "type": "beach_armor1",
+       "row": 1
+      },
+      {
+       "type": "beach_fem",
+       "row": 5
+      },
+      {
+       "type": "beach_armor1",
+       "row": 5
+      }
+     ],
+     "pattern": "ZombieSpawnerPatternStaggered"
+    },
+    {
+     "kind": "tide",
+     "water_from": 4
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "beach_fem_armor1",
+       "row": 3
+      },
+      {
+       "type": "beach_fem_armor1",
+       "row": 2
+      },
+      {
+       "type": "beach",
+       "row": 2
+      },
+      {
+       "type": "beach_fem_armor1",
+       "row": 4
+      },
+      {
+       "type": "beach",
+       "row": 4
+      },
+      {
+       "type": "beach_fem_armor2",
+       "row": 1
+      },
+      {
+       "type": "beach_fem",
+       "row": 3
+      },
+      {
+       "type": "beach_fem_armor2",
+       "row": 5
+      },
+      {
+       "type": "beach",
+       "row": 1
+      },
+      {
+       "type": "beach",
+       "row": 5
+      },
+      {
+       "type": "beach"
+      },
+      {
+       "type": "beach_armor1"
+      },
+      {
+       "type": "beach_fem_armor1",
+       "row": 3
+      },
+      {
+       "type": "beach"
+      }
+     ],
+     "pattern": "ZombieSpawnerPatternStaggered"
+    },
+    {
+     "kind": "low_tide",
+     "type": "beach_imp",
+     "count": 8,
+     "group_size": 8,
+     "group_interval": 0.5,
+     "delay": 0.5,
+     "col_start": 5,
+     "col_end": 6
+    },
+    {
+     "kind": "tide",
+     "water_from": 6
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "beach_armor1",
+     "row": 2
+    },
+    {
+     "type": "beach_armor1",
+     "row": 4
+    },
+    {
+     "type": "beach",
+     "row": 1
+    },
+    {
+     "type": "beach",
+     "row": 5
+    },
+    {
+     "type": "beach_armor1",
+     "row": 1
+    },
+    {
+     "type": "beach_armor1",
+     "row": 2
+    },
+    {
+     "type": "beach_armor1",
+     "row": 4
+    },
+    {
+     "type": "beach_armor1",
+     "row": 5
+    },
+    {
+     "type": "beach_armor2",
+     "row": 1
+    },
+    {
+     "type": "beach_armor2",
+     "row": 5
+    },
+    {
+     "type": "beach_gargantuar",
+     "row": 3
+    },
+    {
+     "type": "beach_snorkel"
+    },
+    {
+     "type": "beach_snorkel"
+    },
+    {
+     "type": "beach_snorkel"
+    },
+    {
+     "type": "beach_snorkel"
+    },
+    {
+     "type": "beach_snorkel"
+    }
+   ],
+   "pattern": "ZombieSpawnerPatternStaggered"
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "beach_fem_armor1",
+     "row": 3
+    },
+    {
+     "type": "beach_fem",
+     "row": 3
+    },
+    {
+     "type": "beach",
+     "row": 2
+    },
+    {
+     "type": "beach_armor2",
+     "row": 2
+    },
+    {
+     "type": "beach_armor1",
+     "row": 2
+    },
+    {
+     "type": "beach",
+     "row": 4
+    },
+    {
+     "type": "beach_armor2",
+     "row": 4
+    },
+    {
+     "type": "beach_armor1",
+     "row": 4
+    },
+    {
+     "type": "beach_fem_armor1",
+     "row": 1
+    },
+    {
+     "type": "beach_fem",
+     "row": 1
+    },
+    {
+     "type": "beach_fem_armor1",
+     "row": 5
+    },
+    {
+     "type": "beach_fem",
+     "row": 5
+    },
+    {
+     "type": "beach_armor2"
+    },
+    {
+     "type": "beach"
+    },
+    {
+     "type": "beach_armor1"
+    },
+    {
+     "type": "beach"
+    },
+    {
+     "type": "beach_fem"
+    },
+    {
+     "type": "beach_fem"
+    },
+    {
+     "type": "beach_fem_armor1"
+    },
+    {
+     "type": "beach_fem_armor1"
+    }
+   ]
+  }
+ ],
+ "wave_pacing": {
+  "flag_interval": 7,
+  "points": 200,
+  "point_increment": 100,
+  "next_wave_health_min": 0.55,
+  "next_wave_health_max": 0.75
+ },
+ "dynamic_zombies": [
+  {
+   "start_wave": 3,
+   "points": -100,
+   "increment": -40,
+   "pool": [
+    "beach",
+    "beach_armor2",
+    "beach_fem",
+    "beach_fem_armor1",
+    "beach_snorkel"
+   ]
+  },
+  {
+   "start_wave": 4,
+   "points": -100,
+   "increment": -25,
+   "pool": [
+    "beach",
+    "beach_armor2",
+    "beach_fem",
+    "beach_fem_armor1",
+    "beach_snorkel"
+   ]
+  },
+  {
+   "start_wave": 5,
+   "points": -100,
+   "increment": -10,
+   "pool": [
+    "beach",
+    "beach_armor2",
+    "beach_fem",
+    "beach_fem_armor1",
+    "beach_snorkel"
+   ]
+  },
+  {
+   "start_wave": 5,
+   "points": 100,
+   "increment": 20,
+   "pool": [
+    "beach",
+    "beach_armor2",
+    "beach_fem",
+    "beach_fem_armor1",
+    "beach_snorkel"
+   ]
+  },
+  {
+   "start_wave": 4,
+   "points": 200,
+   "increment": 40,
+   "pool": [
+    "beach_armor2",
+    "beach_fem_armor1",
+    "beach_snorkel"
+   ]
+  },
+  {
+   "start_wave": 3,
+   "points": 400,
+   "increment": 60,
+   "pool": [
+    "beach_armor2",
+    "beach_snorkel"
+   ]
+  }
+ ],
+ "initial": {},
+ "tide": {
+  "water_from": 6
+ },
+ "minigames": [
+  {
+   "type": "bowling",
+   "bowling_foul_line": 2
+  }
+ ],
+ "mowers": true,
+ "scripts": [
+  "StandardIntro"
+ ]
+}

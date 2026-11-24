@@ -1,0 +1,3529 @@
+{
+ "id": "dark29",
+ "name": "Dark 24",
+ "name_key": "[DARKAGES_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_DARKAGES]",
+ "author": "莱池_余垛",
+ "number": 29,
+ "stage": "DarkStage",
+ "reward": {
+  "type": "pinata",
+  "param": "spine_dark"
+ },
+ "objectives": [
+  {
+   "type": "survive_waves",
+   "description": "[STARCHALLENGE_PROTECT_THE_PLANT]"
+  }
+ ],
+ "seedbank": {
+  "mode": "conveyor",
+  "drop_delay": [
+   {
+    "delay": 0.2,
+    "max_packets": 0
+   }
+  ],
+  "speed": [
+   {
+    "speed": 200,
+    "max_packets": 0
+   }
+  ]
+ },
+ "waves": [
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "time",
+       "row": 3,
+       "col": "9"
+      }
+     ],
+     "must_clear": true
+    },
+    {
+     "kind": "schedule",
+     "delay": {
+      "min": 6,
+      "max": 6
+     },
+     "interval": {
+      "min": 1,
+      "max": 1
+     },
+     "repeat": {
+      "min": 1,
+      "max": 1
+     },
+     "events": [
+      {
+       "kind": "conveyor",
+       "add": [
+        {
+         "type": null,
+         "weight": 1,
+         "max": null
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "kind": "SpawnZombiesFromGridItemSpawnerProps",
+     "data": {
+      "AdditionalPlantfood": "0",
+      "WaveStartMessage": "",
+      "ZombieSpawnWaitTime": "1",
+      "GridTypes": [
+       "RTID(gravestone_spawn@CurrentLevel)"
+      ],
+      "Zombies": [
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       }
+      ]
+     }
+    },
+    {
+     "kind": "gravestones",
+     "pool": [
+      {
+       "type": "gravestone_dark",
+       "count": 32
+      },
+      {
+       "type": "gravestone_spawn",
+       "count": 3
+      }
+     ],
+     "positions": [
+      {
+       "col": 3,
+       "row": 0
+      },
+      {
+       "col": 3,
+       "row": 1
+      },
+      {
+       "col": 3,
+       "row": 2
+      },
+      {
+       "col": 3,
+       "row": 3
+      },
+      {
+       "col": 3,
+       "row": 4
+      },
+      {
+       "col": 4,
+       "row": 0
+      },
+      {
+       "col": 4,
+       "row": 1
+      },
+      {
+       "col": 4,
+       "row": 2
+      },
+      {
+       "col": 4,
+       "row": 3
+      },
+      {
+       "col": 4,
+       "row": 4
+      },
+      {
+       "col": 5,
+       "row": 0
+      },
+      {
+       "col": 5,
+       "row": 1
+      },
+      {
+       "col": 5,
+       "row": 2
+      },
+      {
+       "col": 5,
+       "row": 3
+      },
+      {
+       "col": 5,
+       "row": 4
+      },
+      {
+       "col": 6,
+       "row": 0
+      },
+      {
+       "col": 6,
+       "row": 1
+      },
+      {
+       "col": 6,
+       "row": 2
+      },
+      {
+       "col": 6,
+       "row": 3
+      },
+      {
+       "col": 6,
+       "row": 4
+      },
+      {
+       "col": 2,
+       "row": 0
+      },
+      {
+       "col": 2,
+       "row": 1
+      },
+      {
+       "col": 2,
+       "row": 2
+      },
+      {
+       "col": 2,
+       "row": 3
+      },
+      {
+       "col": 2,
+       "row": 4
+      },
+      {
+       "col": 1,
+       "row": 0
+      },
+      {
+       "col": 1,
+       "row": 1
+      },
+      {
+       "col": 1,
+       "row": 2
+      },
+      {
+       "col": 1,
+       "row": 3
+      },
+      {
+       "col": 1,
+       "row": 4
+      },
+      {
+       "col": 7,
+       "row": 0
+      },
+      {
+       "col": 7,
+       "row": 1
+      },
+      {
+       "col": 7,
+       "row": 2
+      },
+      {
+       "col": 7,
+       "row": 3
+      },
+      {
+       "col": 7,
+       "row": 4
+      }
+     ]
+    },
+    {
+     "kind": "schedule",
+     "delay": {
+      "min": 6,
+      "max": 6
+     },
+     "interval": {
+      "min": 1,
+      "max": 1
+     },
+     "repeat": {
+      "min": 1,
+      "max": 1
+     },
+     "events": [
+      {
+       "kind": "SpawnZombiesFromGridItemSpawnerProps",
+       "data": {
+        "AdditionalPlantfood": "0",
+        "WaveStartMessage": "",
+        "ZombieSpawnWaitTime": "8",
+        "GridTypes": [
+         "RTID(gravestone_spawn@CurrentLevel)"
+        ],
+        "Zombies": [
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         }
+        ]
+       }
+      },
+      {
+       "kind": "schedule",
+       "delay": {
+        "min": 8.2,
+        "max": 8.2
+       },
+       "interval": {
+        "min": 1,
+        "max": 1
+       },
+       "repeat": {
+        "min": 1,
+        "max": 1
+       },
+       "events": [
+        {
+         "kind": "SpawnPlantsWaveActionProps",
+         "data": {
+          "Plants": [
+           {
+            "TypeName": "Clear1",
+            "SpawnAnim": "grow",
+            "AllowSpawnOnOtherPlants": true,
+            "RandomSpawnMatrix": [
+             "00000000",
+             "00000000",
+             "10000000",
+             "00000000",
+             "00000000"
+            ]
+           }
+          ]
+         }
+        }
+       ]
+      },
+      {
+       "kind": "SpawnPlantsWaveActionProps",
+       "data": {
+        "Plants": [
+         {
+          "TypeName": "Clear",
+          "SpawnAnim": "grow",
+          "AllowSpawnOnOtherPlants": true,
+          "RandomSpawnMatrix": [
+           "00000000",
+           "00000000",
+           "10000000",
+           "00000000",
+           "00000000"
+          ]
+         }
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "time",
+       "row": 3,
+       "col": "9"
+      }
+     ],
+     "must_clear": true
+    },
+    {
+     "kind": "schedule",
+     "delay": {
+      "min": 6,
+      "max": 6
+     },
+     "interval": {
+      "min": 1,
+      "max": 1
+     },
+     "repeat": {
+      "min": 1,
+      "max": 1
+     },
+     "events": [
+      {
+       "kind": "conveyor",
+       "add": [
+        {
+         "type": null,
+         "weight": 1,
+         "max": null
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "kind": "gravestones",
+     "pool": [
+      {
+       "type": "gravestone_dark",
+       "count": 31
+      },
+      {
+       "type": "gravestone_spawn",
+       "count": 4
+      }
+     ],
+     "positions": [
+      {
+       "col": 3,
+       "row": 0
+      },
+      {
+       "col": 3,
+       "row": 1
+      },
+      {
+       "col": 3,
+       "row": 2
+      },
+      {
+       "col": 3,
+       "row": 3
+      },
+      {
+       "col": 3,
+       "row": 4
+      },
+      {
+       "col": 4,
+       "row": 0
+      },
+      {
+       "col": 4,
+       "row": 1
+      },
+      {
+       "col": 4,
+       "row": 2
+      },
+      {
+       "col": 4,
+       "row": 3
+      },
+      {
+       "col": 4,
+       "row": 4
+      },
+      {
+       "col": 5,
+       "row": 0
+      },
+      {
+       "col": 5,
+       "row": 1
+      },
+      {
+       "col": 5,
+       "row": 2
+      },
+      {
+       "col": 5,
+       "row": 3
+      },
+      {
+       "col": 5,
+       "row": 4
+      },
+      {
+       "col": 6,
+       "row": 0
+      },
+      {
+       "col": 6,
+       "row": 1
+      },
+      {
+       "col": 6,
+       "row": 2
+      },
+      {
+       "col": 6,
+       "row": 3
+      },
+      {
+       "col": 6,
+       "row": 4
+      },
+      {
+       "col": 2,
+       "row": 0
+      },
+      {
+       "col": 2,
+       "row": 1
+      },
+      {
+       "col": 2,
+       "row": 2
+      },
+      {
+       "col": 2,
+       "row": 3
+      },
+      {
+       "col": 2,
+       "row": 4
+      },
+      {
+       "col": 1,
+       "row": 0
+      },
+      {
+       "col": 1,
+       "row": 1
+      },
+      {
+       "col": 1,
+       "row": 2
+      },
+      {
+       "col": 1,
+       "row": 3
+      },
+      {
+       "col": 1,
+       "row": 4
+      },
+      {
+       "col": 7,
+       "row": 0
+      },
+      {
+       "col": 7,
+       "row": 1
+      },
+      {
+       "col": 7,
+       "row": 2
+      },
+      {
+       "col": 7,
+       "row": 3
+      },
+      {
+       "col": 7,
+       "row": 4
+      }
+     ]
+    },
+    {
+     "kind": "SpawnZombiesFromGridItemSpawnerProps",
+     "data": {
+      "AdditionalPlantfood": "0",
+      "WaveStartMessage": "",
+      "ZombieSpawnWaitTime": "1",
+      "GridTypes": [
+       "RTID(gravestone_spawn@CurrentLevel)"
+      ],
+      "Zombies": [
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       }
+      ]
+     }
+    },
+    {
+     "kind": "schedule",
+     "delay": {
+      "min": 6,
+      "max": 6
+     },
+     "interval": {
+      "min": 1,
+      "max": 1
+     },
+     "repeat": {
+      "min": 1,
+      "max": 1
+     },
+     "events": [
+      {
+       "kind": "SpawnZombiesFromGridItemSpawnerProps",
+       "data": {
+        "AdditionalPlantfood": "0",
+        "WaveStartMessage": "",
+        "ZombieSpawnWaitTime": "8",
+        "GridTypes": [
+         "RTID(gravestone_spawn@CurrentLevel)"
+        ],
+        "Zombies": [
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         }
+        ]
+       }
+      },
+      {
+       "kind": "schedule",
+       "delay": {
+        "min": 8.2,
+        "max": 8.2
+       },
+       "interval": {
+        "min": 1,
+        "max": 1
+       },
+       "repeat": {
+        "min": 1,
+        "max": 1
+       },
+       "events": [
+        {
+         "kind": "SpawnPlantsWaveActionProps",
+         "data": {
+          "Plants": [
+           {
+            "TypeName": "Clear1",
+            "SpawnAnim": "grow",
+            "AllowSpawnOnOtherPlants": true,
+            "RandomSpawnMatrix": [
+             "00000000",
+             "00000000",
+             "10000000",
+             "00000000",
+             "00000000"
+            ]
+           }
+          ]
+         }
+        }
+       ]
+      },
+      {
+       "kind": "SpawnPlantsWaveActionProps",
+       "data": {
+        "Plants": [
+         {
+          "TypeName": "Clear",
+          "SpawnAnim": "grow",
+          "AllowSpawnOnOtherPlants": true,
+          "RandomSpawnMatrix": [
+           "00000000",
+           "00000000",
+           "10000000",
+           "00000000",
+           "00000000"
+          ]
+         }
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "time",
+       "row": 3,
+       "col": "9"
+      }
+     ],
+     "must_clear": true
+    },
+    {
+     "kind": "schedule",
+     "delay": {
+      "min": 6,
+      "max": 6
+     },
+     "interval": {
+      "min": 1,
+      "max": 1
+     },
+     "repeat": {
+      "min": 1,
+      "max": 1
+     },
+     "events": [
+      {
+       "kind": "conveyor",
+       "add": [
+        {
+         "type": null,
+         "weight": 1,
+         "max": null
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "kind": "gravestones",
+     "pool": [
+      {
+       "type": "gravestone_dark",
+       "count": 31
+      },
+      {
+       "type": "gravestone_spawn",
+       "count": 4
+      }
+     ],
+     "positions": [
+      {
+       "col": 3,
+       "row": 0
+      },
+      {
+       "col": 3,
+       "row": 1
+      },
+      {
+       "col": 3,
+       "row": 2
+      },
+      {
+       "col": 3,
+       "row": 3
+      },
+      {
+       "col": 3,
+       "row": 4
+      },
+      {
+       "col": 4,
+       "row": 0
+      },
+      {
+       "col": 4,
+       "row": 1
+      },
+      {
+       "col": 4,
+       "row": 2
+      },
+      {
+       "col": 4,
+       "row": 3
+      },
+      {
+       "col": 4,
+       "row": 4
+      },
+      {
+       "col": 5,
+       "row": 0
+      },
+      {
+       "col": 5,
+       "row": 1
+      },
+      {
+       "col": 5,
+       "row": 2
+      },
+      {
+       "col": 5,
+       "row": 3
+      },
+      {
+       "col": 5,
+       "row": 4
+      },
+      {
+       "col": 6,
+       "row": 0
+      },
+      {
+       "col": 6,
+       "row": 1
+      },
+      {
+       "col": 6,
+       "row": 2
+      },
+      {
+       "col": 6,
+       "row": 3
+      },
+      {
+       "col": 6,
+       "row": 4
+      },
+      {
+       "col": 2,
+       "row": 0
+      },
+      {
+       "col": 2,
+       "row": 1
+      },
+      {
+       "col": 2,
+       "row": 2
+      },
+      {
+       "col": 2,
+       "row": 3
+      },
+      {
+       "col": 2,
+       "row": 4
+      },
+      {
+       "col": 1,
+       "row": 0
+      },
+      {
+       "col": 1,
+       "row": 1
+      },
+      {
+       "col": 1,
+       "row": 2
+      },
+      {
+       "col": 1,
+       "row": 3
+      },
+      {
+       "col": 1,
+       "row": 4
+      },
+      {
+       "col": 7,
+       "row": 0
+      },
+      {
+       "col": 7,
+       "row": 1
+      },
+      {
+       "col": 7,
+       "row": 2
+      },
+      {
+       "col": 7,
+       "row": 3
+      },
+      {
+       "col": 7,
+       "row": 4
+      }
+     ]
+    },
+    {
+     "kind": "SpawnZombiesFromGridItemSpawnerProps",
+     "data": {
+      "AdditionalPlantfood": "0",
+      "WaveStartMessage": "",
+      "ZombieSpawnWaitTime": "1",
+      "GridTypes": [
+       "RTID(gravestone_spawn@CurrentLevel)"
+      ],
+      "Zombies": [
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       }
+      ]
+     }
+    },
+    {
+     "kind": "schedule",
+     "delay": {
+      "min": 6,
+      "max": 6
+     },
+     "interval": {
+      "min": 1,
+      "max": 1
+     },
+     "repeat": {
+      "min": 1,
+      "max": 1
+     },
+     "events": [
+      {
+       "kind": "SpawnZombiesFromGridItemSpawnerProps",
+       "data": {
+        "AdditionalPlantfood": "0",
+        "WaveStartMessage": "",
+        "ZombieSpawnWaitTime": "8",
+        "GridTypes": [
+         "RTID(gravestone_spawn@CurrentLevel)"
+        ],
+        "Zombies": [
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         }
+        ]
+       }
+      },
+      {
+       "kind": "schedule",
+       "delay": {
+        "min": 8.2,
+        "max": 8.2
+       },
+       "interval": {
+        "min": 1,
+        "max": 1
+       },
+       "repeat": {
+        "min": 1,
+        "max": 1
+       },
+       "events": [
+        {
+         "kind": "SpawnPlantsWaveActionProps",
+         "data": {
+          "Plants": [
+           {
+            "TypeName": "Clear1",
+            "SpawnAnim": "grow",
+            "AllowSpawnOnOtherPlants": true,
+            "RandomSpawnMatrix": [
+             "00000000",
+             "00000000",
+             "10000000",
+             "00000000",
+             "00000000"
+            ]
+           }
+          ]
+         }
+        }
+       ]
+      },
+      {
+       "kind": "SpawnPlantsWaveActionProps",
+       "data": {
+        "Plants": [
+         {
+          "TypeName": "Clear",
+          "SpawnAnim": "grow",
+          "AllowSpawnOnOtherPlants": true,
+          "RandomSpawnMatrix": [
+           "00000000",
+           "00000000",
+           "10000000",
+           "00000000",
+           "00000000"
+          ]
+         }
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "time",
+       "row": 3,
+       "col": "9"
+      }
+     ],
+     "must_clear": true
+    },
+    {
+     "kind": "schedule",
+     "delay": {
+      "min": 6,
+      "max": 6
+     },
+     "interval": {
+      "min": 1,
+      "max": 1
+     },
+     "repeat": {
+      "min": 1,
+      "max": 1
+     },
+     "events": [
+      {
+       "kind": "conveyor",
+       "add": [
+        {
+         "type": null,
+         "weight": 1,
+         "max": null
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "kind": "gravestones",
+     "pool": [
+      {
+       "type": "gravestone_dark",
+       "count": 30
+      },
+      {
+       "type": "gravestone_spawn",
+       "count": 5
+      }
+     ],
+     "positions": [
+      {
+       "col": 3,
+       "row": 0
+      },
+      {
+       "col": 3,
+       "row": 1
+      },
+      {
+       "col": 3,
+       "row": 2
+      },
+      {
+       "col": 3,
+       "row": 3
+      },
+      {
+       "col": 3,
+       "row": 4
+      },
+      {
+       "col": 4,
+       "row": 0
+      },
+      {
+       "col": 4,
+       "row": 1
+      },
+      {
+       "col": 4,
+       "row": 2
+      },
+      {
+       "col": 4,
+       "row": 3
+      },
+      {
+       "col": 4,
+       "row": 4
+      },
+      {
+       "col": 5,
+       "row": 0
+      },
+      {
+       "col": 5,
+       "row": 1
+      },
+      {
+       "col": 5,
+       "row": 2
+      },
+      {
+       "col": 5,
+       "row": 3
+      },
+      {
+       "col": 5,
+       "row": 4
+      },
+      {
+       "col": 6,
+       "row": 0
+      },
+      {
+       "col": 6,
+       "row": 1
+      },
+      {
+       "col": 6,
+       "row": 2
+      },
+      {
+       "col": 6,
+       "row": 3
+      },
+      {
+       "col": 6,
+       "row": 4
+      },
+      {
+       "col": 2,
+       "row": 0
+      },
+      {
+       "col": 2,
+       "row": 1
+      },
+      {
+       "col": 2,
+       "row": 2
+      },
+      {
+       "col": 2,
+       "row": 3
+      },
+      {
+       "col": 2,
+       "row": 4
+      },
+      {
+       "col": 1,
+       "row": 0
+      },
+      {
+       "col": 1,
+       "row": 1
+      },
+      {
+       "col": 1,
+       "row": 2
+      },
+      {
+       "col": 1,
+       "row": 3
+      },
+      {
+       "col": 1,
+       "row": 4
+      },
+      {
+       "col": 7,
+       "row": 0
+      },
+      {
+       "col": 7,
+       "row": 1
+      },
+      {
+       "col": 7,
+       "row": 2
+      },
+      {
+       "col": 7,
+       "row": 3
+      },
+      {
+       "col": 7,
+       "row": 4
+      }
+     ]
+    },
+    {
+     "kind": "SpawnZombiesFromGridItemSpawnerProps",
+     "data": {
+      "AdditionalPlantfood": "0",
+      "WaveStartMessage": "",
+      "ZombieSpawnWaitTime": "1",
+      "GridTypes": [
+       "RTID(gravestone_spawn@CurrentLevel)"
+      ],
+      "Zombies": [
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       }
+      ]
+     }
+    },
+    {
+     "kind": "schedule",
+     "delay": {
+      "min": 6,
+      "max": 6
+     },
+     "interval": {
+      "min": 1,
+      "max": 1
+     },
+     "repeat": {
+      "min": 1,
+      "max": 1
+     },
+     "events": [
+      {
+       "kind": "SpawnZombiesFromGridItemSpawnerProps",
+       "data": {
+        "AdditionalPlantfood": "0",
+        "WaveStartMessage": "",
+        "ZombieSpawnWaitTime": "8",
+        "GridTypes": [
+         "RTID(gravestone_spawn@CurrentLevel)"
+        ],
+        "Zombies": [
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         }
+        ]
+       }
+      },
+      {
+       "kind": "schedule",
+       "delay": {
+        "min": 8.2,
+        "max": 8.2
+       },
+       "interval": {
+        "min": 1,
+        "max": 1
+       },
+       "repeat": {
+        "min": 1,
+        "max": 1
+       },
+       "events": [
+        {
+         "kind": "SpawnPlantsWaveActionProps",
+         "data": {
+          "Plants": [
+           {
+            "TypeName": "Clear1",
+            "SpawnAnim": "grow",
+            "AllowSpawnOnOtherPlants": true,
+            "RandomSpawnMatrix": [
+             "00000000",
+             "00000000",
+             "10000000",
+             "00000000",
+             "00000000"
+            ]
+           }
+          ]
+         }
+        }
+       ]
+      },
+      {
+       "kind": "SpawnPlantsWaveActionProps",
+       "data": {
+        "Plants": [
+         {
+          "TypeName": "Clear",
+          "SpawnAnim": "grow",
+          "AllowSpawnOnOtherPlants": true,
+          "RandomSpawnMatrix": [
+           "00000000",
+           "00000000",
+           "10000000",
+           "00000000",
+           "00000000"
+          ]
+         }
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "time",
+       "row": 3,
+       "col": "9"
+      }
+     ],
+     "must_clear": true
+    },
+    {
+     "kind": "schedule",
+     "delay": {
+      "min": 6,
+      "max": 6
+     },
+     "interval": {
+      "min": 1,
+      "max": 1
+     },
+     "repeat": {
+      "min": 1,
+      "max": 1
+     },
+     "events": [
+      {
+       "kind": "conveyor",
+       "add": [
+        {
+         "type": null,
+         "weight": 1,
+         "max": null
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "kind": "gravestones",
+     "pool": [
+      {
+       "type": "gravestone_dark",
+       "count": 30
+      },
+      {
+       "type": "gravestone_spawn",
+       "count": 5
+      }
+     ],
+     "positions": [
+      {
+       "col": 3,
+       "row": 0
+      },
+      {
+       "col": 3,
+       "row": 1
+      },
+      {
+       "col": 3,
+       "row": 2
+      },
+      {
+       "col": 3,
+       "row": 3
+      },
+      {
+       "col": 3,
+       "row": 4
+      },
+      {
+       "col": 4,
+       "row": 0
+      },
+      {
+       "col": 4,
+       "row": 1
+      },
+      {
+       "col": 4,
+       "row": 2
+      },
+      {
+       "col": 4,
+       "row": 3
+      },
+      {
+       "col": 4,
+       "row": 4
+      },
+      {
+       "col": 5,
+       "row": 0
+      },
+      {
+       "col": 5,
+       "row": 1
+      },
+      {
+       "col": 5,
+       "row": 2
+      },
+      {
+       "col": 5,
+       "row": 3
+      },
+      {
+       "col": 5,
+       "row": 4
+      },
+      {
+       "col": 6,
+       "row": 0
+      },
+      {
+       "col": 6,
+       "row": 1
+      },
+      {
+       "col": 6,
+       "row": 2
+      },
+      {
+       "col": 6,
+       "row": 3
+      },
+      {
+       "col": 6,
+       "row": 4
+      },
+      {
+       "col": 2,
+       "row": 0
+      },
+      {
+       "col": 2,
+       "row": 1
+      },
+      {
+       "col": 2,
+       "row": 2
+      },
+      {
+       "col": 2,
+       "row": 3
+      },
+      {
+       "col": 2,
+       "row": 4
+      },
+      {
+       "col": 1,
+       "row": 0
+      },
+      {
+       "col": 1,
+       "row": 1
+      },
+      {
+       "col": 1,
+       "row": 2
+      },
+      {
+       "col": 1,
+       "row": 3
+      },
+      {
+       "col": 1,
+       "row": 4
+      },
+      {
+       "col": 7,
+       "row": 0
+      },
+      {
+       "col": 7,
+       "row": 1
+      },
+      {
+       "col": 7,
+       "row": 2
+      },
+      {
+       "col": 7,
+       "row": 3
+      },
+      {
+       "col": 7,
+       "row": 4
+      }
+     ]
+    },
+    {
+     "kind": "SpawnZombiesFromGridItemSpawnerProps",
+     "data": {
+      "AdditionalPlantfood": "0",
+      "WaveStartMessage": "",
+      "ZombieSpawnWaitTime": "1",
+      "GridTypes": [
+       "RTID(gravestone_spawn@CurrentLevel)"
+      ],
+      "Zombies": [
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       }
+      ]
+     }
+    },
+    {
+     "kind": "schedule",
+     "delay": {
+      "min": 6,
+      "max": 6
+     },
+     "interval": {
+      "min": 1,
+      "max": 1
+     },
+     "repeat": {
+      "min": 1,
+      "max": 1
+     },
+     "events": [
+      {
+       "kind": "SpawnZombiesFromGridItemSpawnerProps",
+       "data": {
+        "AdditionalPlantfood": "0",
+        "WaveStartMessage": "",
+        "ZombieSpawnWaitTime": "8",
+        "GridTypes": [
+         "RTID(gravestone_spawn@CurrentLevel)"
+        ],
+        "Zombies": [
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         }
+        ]
+       }
+      },
+      {
+       "kind": "schedule",
+       "delay": {
+        "min": 8.2,
+        "max": 8.2
+       },
+       "interval": {
+        "min": 1,
+        "max": 1
+       },
+       "repeat": {
+        "min": 1,
+        "max": 1
+       },
+       "events": [
+        {
+         "kind": "SpawnPlantsWaveActionProps",
+         "data": {
+          "Plants": [
+           {
+            "TypeName": "Clear1",
+            "SpawnAnim": "grow",
+            "AllowSpawnOnOtherPlants": true,
+            "RandomSpawnMatrix": [
+             "00000000",
+             "00000000",
+             "10000000",
+             "00000000",
+             "00000000"
+            ]
+           }
+          ]
+         }
+        }
+       ]
+      },
+      {
+       "kind": "SpawnPlantsWaveActionProps",
+       "data": {
+        "Plants": [
+         {
+          "TypeName": "Clear",
+          "SpawnAnim": "grow",
+          "AllowSpawnOnOtherPlants": true,
+          "RandomSpawnMatrix": [
+           "00000000",
+           "00000000",
+           "10000000",
+           "00000000",
+           "00000000"
+          ]
+         }
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "time",
+       "row": 3,
+       "col": "9"
+      }
+     ],
+     "must_clear": true
+    },
+    {
+     "kind": "schedule",
+     "delay": {
+      "min": 6,
+      "max": 6
+     },
+     "interval": {
+      "min": 1,
+      "max": 1
+     },
+     "repeat": {
+      "min": 1,
+      "max": 1
+     },
+     "events": [
+      {
+       "kind": "conveyor",
+       "add": [
+        {
+         "type": null,
+         "weight": 1,
+         "max": null
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "kind": "gravestones",
+     "pool": [
+      {
+       "type": "gravestone_dark",
+       "count": 28
+      },
+      {
+       "type": "gravestone_spawn",
+       "count": 7
+      }
+     ],
+     "positions": [
+      {
+       "col": 3,
+       "row": 0
+      },
+      {
+       "col": 3,
+       "row": 1
+      },
+      {
+       "col": 3,
+       "row": 2
+      },
+      {
+       "col": 3,
+       "row": 3
+      },
+      {
+       "col": 3,
+       "row": 4
+      },
+      {
+       "col": 4,
+       "row": 0
+      },
+      {
+       "col": 4,
+       "row": 1
+      },
+      {
+       "col": 4,
+       "row": 2
+      },
+      {
+       "col": 4,
+       "row": 3
+      },
+      {
+       "col": 4,
+       "row": 4
+      },
+      {
+       "col": 5,
+       "row": 0
+      },
+      {
+       "col": 5,
+       "row": 1
+      },
+      {
+       "col": 5,
+       "row": 2
+      },
+      {
+       "col": 5,
+       "row": 3
+      },
+      {
+       "col": 5,
+       "row": 4
+      },
+      {
+       "col": 6,
+       "row": 0
+      },
+      {
+       "col": 6,
+       "row": 1
+      },
+      {
+       "col": 6,
+       "row": 2
+      },
+      {
+       "col": 6,
+       "row": 3
+      },
+      {
+       "col": 6,
+       "row": 4
+      },
+      {
+       "col": 2,
+       "row": 0
+      },
+      {
+       "col": 2,
+       "row": 1
+      },
+      {
+       "col": 2,
+       "row": 2
+      },
+      {
+       "col": 2,
+       "row": 3
+      },
+      {
+       "col": 2,
+       "row": 4
+      },
+      {
+       "col": 1,
+       "row": 0
+      },
+      {
+       "col": 1,
+       "row": 1
+      },
+      {
+       "col": 1,
+       "row": 2
+      },
+      {
+       "col": 1,
+       "row": 3
+      },
+      {
+       "col": 1,
+       "row": 4
+      },
+      {
+       "col": 7,
+       "row": 0
+      },
+      {
+       "col": 7,
+       "row": 1
+      },
+      {
+       "col": 7,
+       "row": 2
+      },
+      {
+       "col": 7,
+       "row": 3
+      },
+      {
+       "col": 7,
+       "row": 4
+      }
+     ]
+    },
+    {
+     "kind": "SpawnZombiesFromGridItemSpawnerProps",
+     "data": {
+      "AdditionalPlantfood": "0",
+      "WaveStartMessage": "",
+      "ZombieSpawnWaitTime": "1",
+      "GridTypes": [
+       "RTID(gravestone_spawn@CurrentLevel)"
+      ],
+      "Zombies": [
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       }
+      ]
+     }
+    },
+    {
+     "kind": "schedule",
+     "delay": {
+      "min": 6,
+      "max": 6
+     },
+     "interval": {
+      "min": 1,
+      "max": 1
+     },
+     "repeat": {
+      "min": 1,
+      "max": 1
+     },
+     "events": [
+      {
+       "kind": "SpawnZombiesFromGridItemSpawnerProps",
+       "data": {
+        "AdditionalPlantfood": "0",
+        "WaveStartMessage": "",
+        "ZombieSpawnWaitTime": "8",
+        "GridTypes": [
+         "RTID(gravestone_spawn@CurrentLevel)"
+        ],
+        "Zombies": [
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         }
+        ]
+       }
+      },
+      {
+       "kind": "schedule",
+       "delay": {
+        "min": 8.2,
+        "max": 8.2
+       },
+       "interval": {
+        "min": 1,
+        "max": 1
+       },
+       "repeat": {
+        "min": 1,
+        "max": 1
+       },
+       "events": [
+        {
+         "kind": "SpawnPlantsWaveActionProps",
+         "data": {
+          "Plants": [
+           {
+            "TypeName": "Clear1",
+            "SpawnAnim": "grow",
+            "AllowSpawnOnOtherPlants": true,
+            "RandomSpawnMatrix": [
+             "00000000",
+             "00000000",
+             "10000000",
+             "00000000",
+             "00000000"
+            ]
+           }
+          ]
+         }
+        }
+       ]
+      },
+      {
+       "kind": "SpawnPlantsWaveActionProps",
+       "data": {
+        "Plants": [
+         {
+          "TypeName": "Clear",
+          "SpawnAnim": "grow",
+          "AllowSpawnOnOtherPlants": true,
+          "RandomSpawnMatrix": [
+           "00000000",
+           "00000000",
+           "10000000",
+           "00000000",
+           "00000000"
+          ]
+         }
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "time",
+       "row": 3,
+       "col": "9"
+      }
+     ],
+     "must_clear": true
+    },
+    {
+     "kind": "schedule",
+     "delay": {
+      "min": 6,
+      "max": 6
+     },
+     "interval": {
+      "min": 1,
+      "max": 1
+     },
+     "repeat": {
+      "min": 1,
+      "max": 1
+     },
+     "events": [
+      {
+       "kind": "conveyor",
+       "add": [
+        {
+         "type": null,
+         "weight": 1,
+         "max": null
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "kind": "gravestones",
+     "pool": [
+      {
+       "type": "gravestone_dark",
+       "count": 28
+      },
+      {
+       "type": "gravestone_spawn",
+       "count": 7
+      }
+     ],
+     "positions": [
+      {
+       "col": 3,
+       "row": 0
+      },
+      {
+       "col": 3,
+       "row": 1
+      },
+      {
+       "col": 3,
+       "row": 2
+      },
+      {
+       "col": 3,
+       "row": 3
+      },
+      {
+       "col": 3,
+       "row": 4
+      },
+      {
+       "col": 4,
+       "row": 0
+      },
+      {
+       "col": 4,
+       "row": 1
+      },
+      {
+       "col": 4,
+       "row": 2
+      },
+      {
+       "col": 4,
+       "row": 3
+      },
+      {
+       "col": 4,
+       "row": 4
+      },
+      {
+       "col": 5,
+       "row": 0
+      },
+      {
+       "col": 5,
+       "row": 1
+      },
+      {
+       "col": 5,
+       "row": 2
+      },
+      {
+       "col": 5,
+       "row": 3
+      },
+      {
+       "col": 5,
+       "row": 4
+      },
+      {
+       "col": 6,
+       "row": 0
+      },
+      {
+       "col": 6,
+       "row": 1
+      },
+      {
+       "col": 6,
+       "row": 2
+      },
+      {
+       "col": 6,
+       "row": 3
+      },
+      {
+       "col": 6,
+       "row": 4
+      },
+      {
+       "col": 2,
+       "row": 0
+      },
+      {
+       "col": 2,
+       "row": 1
+      },
+      {
+       "col": 2,
+       "row": 2
+      },
+      {
+       "col": 2,
+       "row": 3
+      },
+      {
+       "col": 2,
+       "row": 4
+      },
+      {
+       "col": 1,
+       "row": 0
+      },
+      {
+       "col": 1,
+       "row": 1
+      },
+      {
+       "col": 1,
+       "row": 2
+      },
+      {
+       "col": 1,
+       "row": 3
+      },
+      {
+       "col": 1,
+       "row": 4
+      },
+      {
+       "col": 7,
+       "row": 0
+      },
+      {
+       "col": 7,
+       "row": 1
+      },
+      {
+       "col": 7,
+       "row": 2
+      },
+      {
+       "col": 7,
+       "row": 3
+      },
+      {
+       "col": 7,
+       "row": 4
+      }
+     ]
+    },
+    {
+     "kind": "SpawnZombiesFromGridItemSpawnerProps",
+     "data": {
+      "AdditionalPlantfood": "0",
+      "WaveStartMessage": "",
+      "ZombieSpawnWaitTime": "1",
+      "GridTypes": [
+       "RTID(gravestone_spawn@CurrentLevel)"
+      ],
+      "Zombies": [
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       }
+      ]
+     }
+    },
+    {
+     "kind": "schedule",
+     "delay": {
+      "min": 6,
+      "max": 6
+     },
+     "interval": {
+      "min": 1,
+      "max": 1
+     },
+     "repeat": {
+      "min": 1,
+      "max": 1
+     },
+     "events": [
+      {
+       "kind": "SpawnZombiesFromGridItemSpawnerProps",
+       "data": {
+        "AdditionalPlantfood": "0",
+        "WaveStartMessage": "",
+        "ZombieSpawnWaitTime": "8",
+        "GridTypes": [
+         "RTID(gravestone_spawn@CurrentLevel)"
+        ],
+        "Zombies": [
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         }
+        ]
+       }
+      },
+      {
+       "kind": "schedule",
+       "delay": {
+        "min": 8.2,
+        "max": 8.2
+       },
+       "interval": {
+        "min": 1,
+        "max": 1
+       },
+       "repeat": {
+        "min": 1,
+        "max": 1
+       },
+       "events": [
+        {
+         "kind": "SpawnPlantsWaveActionProps",
+         "data": {
+          "Plants": [
+           {
+            "TypeName": "Clear1",
+            "SpawnAnim": "grow",
+            "AllowSpawnOnOtherPlants": true,
+            "RandomSpawnMatrix": [
+             "00000000",
+             "00000000",
+             "10000000",
+             "00000000",
+             "00000000"
+            ]
+           }
+          ]
+         }
+        }
+       ]
+      },
+      {
+       "kind": "SpawnPlantsWaveActionProps",
+       "data": {
+        "Plants": [
+         {
+          "TypeName": "Clear",
+          "SpawnAnim": "grow",
+          "AllowSpawnOnOtherPlants": true,
+          "RandomSpawnMatrix": [
+           "00000000",
+           "00000000",
+           "10000000",
+           "00000000",
+           "00000000"
+          ]
+         }
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "time",
+       "row": 3,
+       "col": "9"
+      }
+     ],
+     "must_clear": true
+    },
+    {
+     "kind": "schedule",
+     "delay": {
+      "min": 6,
+      "max": 6
+     },
+     "interval": {
+      "min": 1,
+      "max": 1
+     },
+     "repeat": {
+      "min": 1,
+      "max": 1
+     },
+     "events": [
+      {
+       "kind": "conveyor",
+       "add": [
+        {
+         "type": null,
+         "weight": 1,
+         "max": null
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "kind": "gravestones",
+     "pool": [
+      {
+       "type": "gravestone_dark",
+       "count": 28
+      },
+      {
+       "type": "gravestone_spawn",
+       "count": 7
+      }
+     ],
+     "positions": [
+      {
+       "col": 3,
+       "row": 0
+      },
+      {
+       "col": 3,
+       "row": 1
+      },
+      {
+       "col": 3,
+       "row": 2
+      },
+      {
+       "col": 3,
+       "row": 3
+      },
+      {
+       "col": 3,
+       "row": 4
+      },
+      {
+       "col": 4,
+       "row": 0
+      },
+      {
+       "col": 4,
+       "row": 1
+      },
+      {
+       "col": 4,
+       "row": 2
+      },
+      {
+       "col": 4,
+       "row": 3
+      },
+      {
+       "col": 4,
+       "row": 4
+      },
+      {
+       "col": 5,
+       "row": 0
+      },
+      {
+       "col": 5,
+       "row": 1
+      },
+      {
+       "col": 5,
+       "row": 2
+      },
+      {
+       "col": 5,
+       "row": 3
+      },
+      {
+       "col": 5,
+       "row": 4
+      },
+      {
+       "col": 6,
+       "row": 0
+      },
+      {
+       "col": 6,
+       "row": 1
+      },
+      {
+       "col": 6,
+       "row": 2
+      },
+      {
+       "col": 6,
+       "row": 3
+      },
+      {
+       "col": 6,
+       "row": 4
+      },
+      {
+       "col": 2,
+       "row": 0
+      },
+      {
+       "col": 2,
+       "row": 1
+      },
+      {
+       "col": 2,
+       "row": 2
+      },
+      {
+       "col": 2,
+       "row": 3
+      },
+      {
+       "col": 2,
+       "row": 4
+      },
+      {
+       "col": 1,
+       "row": 0
+      },
+      {
+       "col": 1,
+       "row": 1
+      },
+      {
+       "col": 1,
+       "row": 2
+      },
+      {
+       "col": 1,
+       "row": 3
+      },
+      {
+       "col": 1,
+       "row": 4
+      },
+      {
+       "col": 7,
+       "row": 0
+      },
+      {
+       "col": 7,
+       "row": 1
+      },
+      {
+       "col": 7,
+       "row": 2
+      },
+      {
+       "col": 7,
+       "row": 3
+      },
+      {
+       "col": 7,
+       "row": 4
+      }
+     ]
+    },
+    {
+     "kind": "SpawnZombiesFromGridItemSpawnerProps",
+     "data": {
+      "AdditionalPlantfood": "0",
+      "WaveStartMessage": "",
+      "ZombieSpawnWaitTime": "1",
+      "GridTypes": [
+       "RTID(gravestone_spawn@CurrentLevel)"
+      ],
+      "Zombies": [
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       }
+      ]
+     }
+    },
+    {
+     "kind": "schedule",
+     "delay": {
+      "min": 6,
+      "max": 6
+     },
+     "interval": {
+      "min": 1,
+      "max": 1
+     },
+     "repeat": {
+      "min": 1,
+      "max": 1
+     },
+     "events": [
+      {
+       "kind": "SpawnZombiesFromGridItemSpawnerProps",
+       "data": {
+        "AdditionalPlantfood": "0",
+        "WaveStartMessage": "",
+        "ZombieSpawnWaitTime": "8",
+        "GridTypes": [
+         "RTID(gravestone_spawn@CurrentLevel)"
+        ],
+        "Zombies": [
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         }
+        ]
+       }
+      },
+      {
+       "kind": "schedule",
+       "delay": {
+        "min": 8.2,
+        "max": 8.2
+       },
+       "interval": {
+        "min": 1,
+        "max": 1
+       },
+       "repeat": {
+        "min": 1,
+        "max": 1
+       },
+       "events": [
+        {
+         "kind": "SpawnPlantsWaveActionProps",
+         "data": {
+          "Plants": [
+           {
+            "TypeName": "Clear1",
+            "SpawnAnim": "grow",
+            "AllowSpawnOnOtherPlants": true,
+            "RandomSpawnMatrix": [
+             "00000000",
+             "00000000",
+             "10000000",
+             "00000000",
+             "00000000"
+            ]
+           }
+          ]
+         }
+        }
+       ]
+      },
+      {
+       "kind": "SpawnPlantsWaveActionProps",
+       "data": {
+        "Plants": [
+         {
+          "TypeName": "Clear",
+          "SpawnAnim": "grow",
+          "AllowSpawnOnOtherPlants": true,
+          "RandomSpawnMatrix": [
+           "00000000",
+           "00000000",
+           "10000000",
+           "00000000",
+           "00000000"
+          ]
+         }
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "time",
+       "row": 3,
+       "col": "9"
+      }
+     ],
+     "must_clear": true
+    },
+    {
+     "kind": "schedule",
+     "delay": {
+      "min": 6,
+      "max": 6
+     },
+     "interval": {
+      "min": 1,
+      "max": 1
+     },
+     "repeat": {
+      "min": 1,
+      "max": 1
+     },
+     "events": [
+      {
+       "kind": "conveyor",
+       "add": [
+        {
+         "type": null,
+         "weight": 1,
+         "max": null
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "kind": "gravestones",
+     "pool": [
+      {
+       "type": "gravestone_dark",
+       "count": 25
+      },
+      {
+       "type": "gravestone_spawn",
+       "count": 10
+      }
+     ],
+     "positions": [
+      {
+       "col": 3,
+       "row": 0
+      },
+      {
+       "col": 3,
+       "row": 1
+      },
+      {
+       "col": 3,
+       "row": 2
+      },
+      {
+       "col": 3,
+       "row": 3
+      },
+      {
+       "col": 3,
+       "row": 4
+      },
+      {
+       "col": 4,
+       "row": 0
+      },
+      {
+       "col": 4,
+       "row": 1
+      },
+      {
+       "col": 4,
+       "row": 2
+      },
+      {
+       "col": 4,
+       "row": 3
+      },
+      {
+       "col": 4,
+       "row": 4
+      },
+      {
+       "col": 5,
+       "row": 0
+      },
+      {
+       "col": 5,
+       "row": 1
+      },
+      {
+       "col": 5,
+       "row": 2
+      },
+      {
+       "col": 5,
+       "row": 3
+      },
+      {
+       "col": 5,
+       "row": 4
+      },
+      {
+       "col": 6,
+       "row": 0
+      },
+      {
+       "col": 6,
+       "row": 1
+      },
+      {
+       "col": 6,
+       "row": 2
+      },
+      {
+       "col": 6,
+       "row": 3
+      },
+      {
+       "col": 6,
+       "row": 4
+      },
+      {
+       "col": 2,
+       "row": 0
+      },
+      {
+       "col": 2,
+       "row": 1
+      },
+      {
+       "col": 2,
+       "row": 2
+      },
+      {
+       "col": 2,
+       "row": 3
+      },
+      {
+       "col": 2,
+       "row": 4
+      },
+      {
+       "col": 1,
+       "row": 0
+      },
+      {
+       "col": 1,
+       "row": 1
+      },
+      {
+       "col": 1,
+       "row": 2
+      },
+      {
+       "col": 1,
+       "row": 3
+      },
+      {
+       "col": 1,
+       "row": 4
+      },
+      {
+       "col": 7,
+       "row": 0
+      },
+      {
+       "col": 7,
+       "row": 1
+      },
+      {
+       "col": 7,
+       "row": 2
+      },
+      {
+       "col": 7,
+       "row": 3
+      },
+      {
+       "col": 7,
+       "row": 4
+      }
+     ]
+    },
+    {
+     "kind": "SpawnZombiesFromGridItemSpawnerProps",
+     "data": {
+      "AdditionalPlantfood": "0",
+      "WaveStartMessage": "",
+      "ZombieSpawnWaitTime": "1",
+      "GridTypes": [
+       "RTID(gravestone_spawn@CurrentLevel)"
+      ],
+      "Zombies": [
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       },
+       {
+        "Type": "RTID(note@CurrentLevel)"
+       }
+      ]
+     }
+    },
+    {
+     "kind": "schedule",
+     "delay": {
+      "min": 6,
+      "max": 6
+     },
+     "interval": {
+      "min": 1,
+      "max": 1
+     },
+     "repeat": {
+      "min": 1,
+      "max": 1
+     },
+     "events": [
+      {
+       "kind": "SpawnZombiesFromGridItemSpawnerProps",
+       "data": {
+        "AdditionalPlantfood": "0",
+        "WaveStartMessage": "",
+        "ZombieSpawnWaitTime": "8",
+        "GridTypes": [
+         "RTID(gravestone_spawn@CurrentLevel)"
+        ],
+        "Zombies": [
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         },
+         {
+          "Type": "RTID(thezombie@CurrentLevel)"
+         }
+        ]
+       }
+      },
+      {
+       "kind": "schedule",
+       "delay": {
+        "min": 8.2,
+        "max": 8.2
+       },
+       "interval": {
+        "min": 1,
+        "max": 1
+       },
+       "repeat": {
+        "min": 1,
+        "max": 1
+       },
+       "events": [
+        {
+         "kind": "SpawnPlantsWaveActionProps",
+         "data": {
+          "Plants": [
+           {
+            "TypeName": "Clear1",
+            "SpawnAnim": "grow",
+            "AllowSpawnOnOtherPlants": true,
+            "RandomSpawnMatrix": [
+             "00000000",
+             "00000000",
+             "10000000",
+             "00000000",
+             "00000000"
+            ]
+           }
+          ]
+         }
+        }
+       ]
+      },
+      {
+       "kind": "SpawnPlantsWaveActionProps",
+       "data": {
+        "Plants": [
+         {
+          "TypeName": "Clear",
+          "SpawnAnim": "grow",
+          "AllowSpawnOnOtherPlants": true,
+          "RandomSpawnMatrix": [
+           "00000000",
+           "00000000",
+           "10000000",
+           "00000000",
+           "00000000"
+          ]
+         }
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "wave_pacing": {
+  "flag_interval": 9,
+  "points": 400,
+  "point_increment": 250,
+  "suppress_flag": true
+ },
+ "minigames": [
+  {
+   "type": "bowling",
+   "bowling_foul_line": 26,
+   "suppress_objective_tip": true
+  }
+ ],
+ "scripts": [
+  "AutoCollect"
+ ],
+ "extra": [
+  {
+   "objclass": "LevelIntroProperties",
+   "aliases": [
+    "Intro"
+   ],
+   "objdata": {
+    "PanStartOffset": -40,
+    "PanStreetOffset": 440,
+    "PanEndOffset": 0,
+    "PanRightDuration": 0.5,
+    "PanLeftDuration": 1,
+    "PanMoveRightTime": 2,
+    "PanMoveLeftTime": 2,
+    "AdditionalStartingSun": 0,
+    "ZombiePreviewOff": true
+   }
+  },
+  {
+   "objclass": "ZombieType",
+   "aliases": [
+    "time"
+   ],
+   "objdata": {
+    "Properties": "RTID(timep@CurrentLevel)",
+    "ZombieBasedOn": "dark"
+   }
+  },
+  {
+   "objclass": "ZombieProperties",
+   "aliases": [
+    "timep"
+   ],
+   "objdata": {
+    "WalkSPS": -0.3,
+    "WalkSPSVarience": 0,
+    "EatDPS": 100,
+    "SpawnedScale": 0.05,
+    "Toughness": 42000000,
+    "WavePointCost": 450,
+    "Weight": 3500,
+    "ZombieSort": "Normal",
+    "HitRect": "RTID(CommonHitRect@RectangleProps)",
+    "AttackRect": "RTID(CommonAttackRect@RectangleProps)"
+   }
+  },
+  {
+   "objclass": "ZombieType",
+   "aliases": [
+    "note"
+   ],
+   "objdata": {
+    "Properties": "RTID(notep@CurrentLevel)",
+    "ZombieBasedOn": "dark_imp"
+   }
+  },
+  {
+   "objclass": "ZombieProperties",
+   "aliases": [
+    "notep"
+   ],
+   "objdata": {
+    "KilledByShrinkingViolet": true,
+    "CannotBeGrabbedByPtero": true,
+    "ZombieSort": "Normal",
+    "IgnoredInWaves": true,
+    "WalkSPS": 0,
+    "EatDPS": 100,
+    "Toughness": 1,
+    "WavePointCost": 100,
+    "Weight": 1000,
+    "HitRect": "RTID(ImpHitRect@RectangleProps)",
+    "AttackRect": "RTID(ImpAttackRect@RectangleProps)"
+   }
+  },
+  {
+   "objclass": "ZombieType",
+   "aliases": [
+    "thezombie"
+   ],
+   "objdata": {
+    "Properties": "RTID(thezombiep@CurrentLevel)",
+    "ZombieBasedOn": "dark_imp"
+   }
+  },
+  {
+   "objclass": "ZombieProperties",
+   "aliases": [
+    "thezombiep"
+   ],
+   "objdata": {
+    "KilledByShrinkingViolet": true,
+    "CannotBeGrabbedByPtero": true,
+    "ZombieSort": "Normal",
+    "IgnoredInWaves": true,
+    "WalkSPS": 4,
+    "EatDPS": 100,
+    "Toughness": 10000,
+    "WavePointCost": 100,
+    "Weight": 1000,
+    "HitRect": "RTID(ImpHitRect@RectangleProps)",
+    "AttackRect": "RTID(ImpAttackRect@RectangleProps)",
+    "StartingArmors": [
+     "dark_armor3"
+    ]
+   }
+  },
+  {
+   "objclass": "TombstoneType",
+   "aliases": [
+    "gravestone_spawn"
+   ],
+   "objdata": {
+    "Properties": "RTID(gravestone_dark@TombstoneProps)",
+    "TombstoneBasedOn": "gravestone_dark"
+   }
+  },
+  {
+   "objclass": "ProjectileType",
+   "aliases": [
+    "theclear"
+   ],
+   "objdata": {
+    "ProjectileBasedOn": "puffshroom_spore",
+    "Props": "RTID(theclearp@CurrentLevel)"
+   }
+  },
+  {
+   "objclass": "ProjectileProperties",
+   "aliases": [
+    "theclearp"
+   ],
+   "objdata": {
+    "SupressArmorProtection": true,
+    "DamageType": "fire",
+    "SplashDamage": [
+     {
+      "Damage": 10,
+      "Range": {
+       "w": 50,
+       "h": 50
+      }
+     }
+    ],
+    "Size": {
+     "w": 50,
+     "h": 50
+    }
+   }
+  },
+  {
+   "objclass": "PlantType",
+   "aliases": [
+    "Clear"
+   ],
+   "objdata": {
+    "PlantBasedOn": "tool_projectile_bowling_explodeonut",
+    "Properties": "RTID(ClearProp@CurrentLevel)"
+   }
+  },
+  {
+   "objclass": "PlantProperties",
+   "aliases": [
+    "ClearProp"
+   ],
+   "objdata": {
+    "Cooldown": 30,
+    "CooldownFrom": 1,
+    "SunCost": 200,
+    "BeghouledCost": 1000,
+    "Toughness": 1,
+    "Family": "Nope",
+    "StartingHeight": 0,
+    "SpeedX": 4,
+    "ProjectileType": "theclear",
+    "ImmuneToIceblock": true
+   }
+  },
+  {
+   "objclass": "ProjectileType",
+   "aliases": [
+    "theclear1"
+   ],
+   "objdata": {
+    "ProjectileBasedOn": "puffshroom_spore",
+    "Props": "RTID(theclearp1@CurrentLevel)"
+   }
+  },
+  {
+   "objclass": "ProjectileProperties",
+   "aliases": [
+    "theclearp1"
+   ],
+   "objdata": {
+    "SupressArmorProtection": true,
+    "DamageType": "fire",
+    "SplashDamage": [
+     {
+      "Damage": 800,
+      "Range": {
+       "w": 50,
+       "h": 50
+      }
+     }
+    ],
+    "Size": {
+     "w": 50,
+     "h": 50
+    }
+   }
+  },
+  {
+   "objclass": "PlantType",
+   "aliases": [
+    "Clear1"
+   ],
+   "objdata": {
+    "PlantBasedOn": "tool_projectile_bowling_explodeonut",
+    "Properties": "RTID(ClearProp1@CurrentLevel)"
+   }
+  },
+  {
+   "objclass": "PlantProperties",
+   "aliases": [
+    "ClearProp1"
+   ],
+   "objdata": {
+    "Cooldown": 30,
+    "CooldownFrom": 1,
+    "SunCost": 200,
+    "BeghouledCost": 1000,
+    "Toughness": 1,
+    "Family": "Nope",
+    "StartingHeight": 0,
+    "SpeedX": 4,
+    "ProjectileType": "theclear1",
+    "ImmuneToIceblock": true
+   }
+  },
+  {
+   "objclass": "PlantType",
+   "aliases": [
+    "gravebustert"
+   ],
+   "objdata": {
+    "PlantBasedOn": "gravebuster",
+    "Properties": "RTID(gravebusterp@CurrentLevel)"
+   }
+  },
+  {
+   "objclass": "PlantProperties",
+   "aliases": [
+    "gravebusterp"
+   ],
+   "objdata": {
+    "CannotBeSheepenedByWizard": true,
+    "CannotBePushedByFootballMech": true,
+    "BustTime": 0.1,
+    "Cooldown": 10,
+    "CooldownFrom": 1,
+    "SunCost": 0,
+    "BeghouledCost": 1000,
+    "Toughness": 300,
+    "Family": "Slow",
+    "ImmuneToIceblock": true,
+    "MintBoostedProps": {
+     "ResistanceMult": 1,
+     "SpeedMult": 3,
+     "Plantfood": false
+    }
+   }
+  }
+ ]
+}

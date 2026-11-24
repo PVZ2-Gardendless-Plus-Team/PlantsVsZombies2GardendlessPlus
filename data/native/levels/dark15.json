@@ -1,0 +1,505 @@
+{
+ "id": "dark15",
+ "name": "Dark 15",
+ "name_key": "[DARKAGES_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_DARKAGES]",
+ "number": 15,
+ "stage": "DarkStage",
+ "reward": {
+  "type": "unlock_plant",
+  "param": "magnetshroom"
+ },
+ "objectives": [
+  {
+   "type": "survive_waves",
+   "description": "[STARCHALLENGE_LASTSTAND_MINIGAME]"
+  }
+ ],
+ "gravestones": {
+  "forced": [
+   {
+    "col": 4,
+    "row": 0,
+    "type": "gravestone_dark"
+   },
+   {
+    "col": 5,
+    "row": 0,
+    "type": "gravestone_dark"
+   },
+   {
+    "col": 6,
+    "row": 1,
+    "type": "gravestone_dark"
+   },
+   {
+    "col": 6,
+    "row": 2,
+    "type": "gravestone_dark"
+   },
+   {
+    "col": 6,
+    "row": 3,
+    "type": "gravestone_dark"
+   },
+   {
+    "col": 4,
+    "row": 4,
+    "type": "gravestone_dark"
+   },
+   {
+    "col": 5,
+    "row": 4,
+    "type": "gravestone_dark"
+   }
+  ]
+ },
+ "seedbank": {
+  "mode": "chooser",
+  "selection": "chooser",
+  "blacklist": [
+   "sunflower",
+   "twinsunflower",
+   "sunshroom",
+   "sunbean",
+   "puffshroom",
+   "seashroom",
+   "iceburg",
+   "gravebuster",
+   "toadstool",
+   "goldleaf",
+   "stallia",
+   "primalsunflower",
+   "goldbloom"
+  ]
+ },
+ "minigames": [
+  {
+   "type": "last_stand",
+   "starting_plantfood": 3,
+   "starting_sun": 2200
+  }
+ ],
+ "waves": [
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "dark_juggler",
+     "row": 3
+    },
+    {
+     "type": "dark_juggler",
+     "row": 4
+    },
+    {
+     "type": "dark_juggler",
+     "row": 2
+    },
+    {
+     "type": "dark_juggler",
+     "row": 5
+    },
+    {
+     "type": "dark_juggler",
+     "row": 1
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "dark_armor1"
+    },
+    {
+     "type": "dark_armor1"
+    },
+    {
+     "type": "dark_armor1"
+    },
+    {
+     "type": "dark_armor1"
+    },
+    {
+     "type": "dark_armor1"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "dark_armor3",
+     "row": 2
+    },
+    {
+     "type": "dark_armor3",
+     "row": 4
+    },
+    {
+     "type": "dark_armor3"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "dark_armor3"
+    },
+    {
+     "type": "dark_armor2"
+    },
+    {
+     "type": "dark_armor2"
+    },
+    {
+     "type": "dark_armor2"
+    },
+    {
+     "type": "dark_armor2"
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "dark_armor1",
+       "row": 5
+      },
+      {
+       "type": "dark_armor1",
+       "row": 1
+      },
+      {
+       "type": "dark_armor1",
+       "row": 3
+      },
+      {
+       "type": "dark_armor1",
+       "row": 5
+      },
+      {
+       "type": "dark_armor1",
+       "row": 1
+      },
+      {
+       "type": "dark_armor1",
+       "row": 3
+      },
+      {
+       "type": "dark_armor1",
+       "row": 4
+      },
+      {
+       "type": "dark_armor1",
+       "row": 2
+      }
+     ]
+    },
+    {
+     "kind": "gravestones",
+     "pool": [
+      {
+       "type": "gravestone_dark",
+       "count": 8
+      },
+      {
+       "type": "gravestoneSunOnDestruction",
+       "count": 0
+      },
+      {
+       "type": "gravestonePlantfoodOnDestruction",
+       "count": 2
+      }
+     ],
+     "positions": [
+      {
+       "col": 3,
+       "row": 0
+      },
+      {
+       "col": 3,
+       "row": 1
+      },
+      {
+       "col": 3,
+       "row": 2
+      },
+      {
+       "col": 3,
+       "row": 3
+      },
+      {
+       "col": 3,
+       "row": 4
+      },
+      {
+       "col": 4,
+       "row": 0
+      },
+      {
+       "col": 4,
+       "row": 1
+      },
+      {
+       "col": 4,
+       "row": 2
+      },
+      {
+       "col": 4,
+       "row": 3
+      },
+      {
+       "col": 4,
+       "row": 4
+      },
+      {
+       "col": 5,
+       "row": 0
+      },
+      {
+       "col": 5,
+       "row": 1
+      },
+      {
+       "col": 5,
+       "row": 2
+      },
+      {
+       "col": 5,
+       "row": 3
+      },
+      {
+       "col": 5,
+       "row": 4
+      },
+      {
+       "col": 6,
+       "row": 0
+      },
+      {
+       "col": 6,
+       "row": 1
+      },
+      {
+       "col": 6,
+       "row": 2
+      },
+      {
+       "col": 6,
+       "row": 3
+      },
+      {
+       "col": 6,
+       "row": 4
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "dark_armor2"
+      },
+      {
+       "type": "dark_armor2"
+      }
+     ]
+    },
+    {
+     "kind": "SpawnZombiesFromGridItemSpawnerProps",
+     "data": {
+      "AdditionalPlantfood": "0",
+      "WaveStartMessage": "[WARNING_GRAVESTONE_SPAWN]",
+      "ZombieSpawnWaitTime": "1",
+      "GridTypes": [
+       "RTID(gravestone_dark@GridItemTypes)",
+       "RTID(gravestoneSunOnDestruction@GridItemTypes)",
+       "RTID(gravestonePlantfoodOnDestruction@GridItemTypes)"
+      ],
+      "Zombies": [
+       {
+        "Type": "RTID(dark_wizard@ZombieTypes)"
+       },
+       {
+        "Type": "RTID(dark_wizard@ZombieTypes)"
+       },
+       {
+        "Type": "RTID(dark_wizard@ZombieTypes)"
+       },
+       {
+        "Type": "RTID(dark_wizard@ZombieTypes)"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "dark_juggler",
+     "row": 2
+    },
+    {
+     "type": "dark_juggler",
+     "row": 4
+    },
+    {
+     "type": "dark_juggler",
+     "row": 3
+    },
+    {
+     "type": "dark_armor2",
+     "row": 2
+    },
+    {
+     "type": "dark_armor2",
+     "row": 4
+    },
+    {
+     "type": "dark_armor2"
+    },
+    {
+     "type": "dark_armor2"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "dark_armor1",
+     "row": 5
+    },
+    {
+     "type": "dark_armor1",
+     "row": 1
+    },
+    {
+     "type": "dark_armor1",
+     "row": 5
+    },
+    {
+     "type": "dark_armor1",
+     "row": 1
+    },
+    {
+     "type": "dark_armor1",
+     "row": 5
+    },
+    {
+     "type": "dark_armor1",
+     "row": 1
+    },
+    {
+     "type": "dark_armor3",
+     "row": 5
+    },
+    {
+     "type": "dark_armor3",
+     "row": 1
+    },
+    {
+     "type": "dark_armor2"
+    },
+    {
+     "type": "dark_armor2"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "dark_wizard",
+     "row": 5
+    },
+    {
+     "type": "dark_armor3"
+    },
+    {
+     "type": "dark_wizard",
+     "row": 1
+    },
+    {
+     "type": "dark_armor3"
+    },
+    {
+     "type": "dark_wizard",
+     "row": 3
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "dark_armor3",
+     "row": 3
+    },
+    {
+     "type": "dark_armor3",
+     "row": 1
+    },
+    {
+     "type": "dark_armor3",
+     "row": 5
+    },
+    {
+     "type": "dark_armor3",
+     "row": 2
+    },
+    {
+     "type": "dark_armor3",
+     "row": 4
+    },
+    {
+     "type": "dark_juggler"
+    },
+    {
+     "type": "dark_armor3"
+    },
+    {
+     "type": "dark_wizard"
+    },
+    {
+     "type": "dark_wizard"
+    },
+    {
+     "type": "dark_juggler"
+    },
+    {
+     "type": "dark_wizard"
+    },
+    {
+     "type": "dark_wizard"
+    },
+    {
+     "type": "dark_armor3"
+    },
+    {
+     "type": "dark_juggler"
+    }
+   ]
+  }
+ ],
+ "wave_pacing": {
+  "flag_interval": 10,
+  "points": 1000,
+  "point_increment": 200
+ },
+ "mowers": true
+}

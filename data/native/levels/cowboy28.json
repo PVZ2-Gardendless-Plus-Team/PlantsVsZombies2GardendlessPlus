@@ -1,0 +1,258 @@
+{
+ "id": "cowboy28",
+ "name": "Cowboy 28",
+ "name_key": "[WEST_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_WEST]",
+ "number": 28,
+ "stage": "WestStage",
+ "railcarts": {
+  "carts": [
+   {
+    "col": 0,
+    "row": 1
+   },
+   {
+    "col": 2,
+    "row": 3
+   },
+   {
+    "col": 4,
+    "row": 1
+   },
+   {
+    "col": 6,
+    "row": 0
+   }
+  ],
+  "rails": [
+   {
+    "col": 0,
+    "row_start": 0,
+    "row_end": 4
+   },
+   {
+    "col": 2,
+    "row_start": 0,
+    "row_end": 4
+   },
+   {
+    "col": 4,
+    "row_start": 0,
+    "row_end": 4
+   },
+   {
+    "col": 6,
+    "row_start": 0,
+    "row_end": 4
+   }
+  ],
+  "type": "railcart_cowboy"
+ },
+ "seedbank": {
+  "mode": "chooser",
+  "selection": "preset",
+  "preset": [
+   "electricpeashooter",
+   "magnetshroom"
+  ],
+  "exclude_sun_producers": "true"
+ },
+ "waves": [
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "poncho"
+    },
+    {
+     "type": "chicken_farmer"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "poncho"
+    },
+    {
+     "type": "poncho"
+    },
+    {
+     "type": "cowboy_armor2"
+    }
+   ],
+   "plantfood": 1
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "poncho"
+    },
+    {
+     "type": "chicken_farmer"
+    },
+    {
+     "type": "poncho"
+    },
+    {
+     "type": "cowboy_armor2"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "cowboy_armor2"
+    },
+    {
+     "type": "poncho"
+    },
+    {
+     "type": "chicken_farmer"
+    },
+    {
+     "type": "chicken_farmer"
+    },
+    {
+     "type": "cowboy_armor2"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "poncho"
+    },
+    {
+     "type": "chicken_farmer"
+    },
+    {
+     "type": "poncho"
+    },
+    {
+     "type": "poncho"
+    },
+    {
+     "type": "cowboy_armor2"
+    }
+   ],
+   "plantfood": 1
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "poncho"
+    },
+    {
+     "type": "poncho"
+    },
+    {
+     "type": "chicken_farmer"
+    },
+    {
+     "type": "poncho"
+    },
+    {
+     "type": "poncho"
+    },
+    {
+     "type": "cowboy_armor2"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "poncho"
+    },
+    {
+     "type": "chicken_farmer"
+    },
+    {
+     "type": "chicken_farmer"
+    },
+    {
+     "type": "poncho"
+    },
+    {
+     "type": "poncho"
+    },
+    {
+     "type": "poncho"
+    },
+    {
+     "type": "cowboy_armor2"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "chicken_farmer"
+    },
+    {
+     "type": "cowboy_armor2"
+    },
+    {
+     "type": "chicken_farmer"
+    },
+    {
+     "type": "poncho"
+    },
+    {
+     "type": "cowboy_armor2"
+    },
+    {
+     "type": "west_bull"
+    },
+    {
+     "type": "poncho"
+    },
+    {
+     "type": "chicken_farmer"
+    },
+    {
+     "type": "poncho"
+    }
+   ]
+  }
+ ],
+ "wave_pacing": {
+  "flag_interval": 4,
+  "points": 600,
+  "point_increment": 200
+ },
+ "minigames": [
+  {
+   "type": "last_stand",
+   "starting_plantfood": 0,
+   "starting_sun": 600
+  }
+ ],
+ "objectives": [
+  {
+   "type": "survive_waves",
+   "description": "[STARCHALLENGE_PRESET_PLANTS]"
+  }
+ ],
+ "mowers": true,
+ "extra": [
+  {
+   "objclass": "StarChallengeBeatTheLevelProps",
+   "aliases": [
+    "BeatTheLevel"
+   ],
+   "objdata": {
+    "Description": "[STARCHALLENGE_LASTSTAND_MINIGAME]",
+    "DescriptiveName": "[STARCHALLENGE_LASTSTAND_MINIGAME_NAME]"
+   }
+  }
+ ]
+}

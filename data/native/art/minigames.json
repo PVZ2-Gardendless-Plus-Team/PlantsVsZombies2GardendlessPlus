@@ -1,0 +1,39 @@
+{
+ "//": "Art for the minigame modes. Vasebreaker's vases are PVZGE's VaseAnimate rig, one armature per colour (Brown could hold anything, Green a plant, Purple a zombie), drawn at the character scale on the square's floor like a plant.",
+ "vase:brown": {
+  "bundle": "rigs_VaseAnimate",
+  "armature": "Brown",
+  "scale": 0.512,
+  "offset_x": 0,
+  "offset_y": 9.7,
+  "animations": {
+   "idle": "Idle",
+   "open": "Open",
+   "break": "Break0"
+  }
+ },
+ "vase:green": {
+  "bundle": "rigs_VaseAnimate",
+  "armature": "Green",
+  "scale": 0.512,
+  "offset_x": 0,
+  "offset_y": 9.7,
+  "animations": {
+   "idle": "Idle",
+   "open": "Open",
+   "break": "Break0"
+  }
+ },
+ "vase:purple": {
+  "bundle": "rigs_VaseAnimate",
+  "armature": "Purple",
+  "scale": 0.512,
+  "offset_x": 0,
+  "offset_y": 9.7,
+  "animations": {
+   "idle": "Idle",
+   "open": "Open",
+   "break": "Break0"
+  }
+ }
+}

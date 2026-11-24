@@ -18,6 +18,7 @@ signal type_overridden(type: StringName, old_mod: StringName, new_mod: StringNam
 const BUILTIN_DIR := "res://core/components/builtin"
 const OBJECTIVE_BUILTIN_DIR := "res://core/objectives/builtin"
 const LAWN_BUILTIN_DIR := "res://core/lawn/builtin"
+const MINIGAME_BUILTIN_DIR := "res://core/minigames/builtin"
 
 var _scripts: Dictionary = {}   ## StringName -> GDScript
 var _owners: Dictionary = {}    ## StringName -> StringName (mod that supplied it)
@@ -25,6 +26,8 @@ var _objectives: Dictionary = {}       ## StringName -> GDScript
 var _objective_owners: Dictionary = {}
 var _lawn: Dictionary = {}             ## StringName -> GDScript
 var _lawn_owners: Dictionary = {}
+var _minigames: Dictionary = {}         ## StringName -> GDScript
+var _minigame_owners: Dictionary = {}
 
 
 func _ready() -> void:
@@ -35,6 +38,7 @@ func load_builtins() -> void:
 	_load_dir(BUILTIN_DIR, register)
 	_load_dir(OBJECTIVE_BUILTIN_DIR, register_objective)
 	_load_dir(LAWN_BUILTIN_DIR, register_lawn)
+	_load_dir(MINIGAME_BUILTIN_DIR, register_minigame)
 
 
 ## Loads every .gd in `dir`, registering each under its file name.
@@ -187,6 +191,51 @@ func lawn_component_types() -> Array:
 	return out
 
 
+## Register `script` as the implementation of minigame `type`. Same override
+## semantics as the other categories.
+func register_minigame(type: StringName, script: GDScript,
+		source_mod: StringName = &"base") -> void:
+	if script == null:
+		push_error("ComponentRegistry: null minigame script for '%s'" % type)
+		return
+	if _minigames.has(type):
+		var old: StringName = _minigame_owners.get(type, &"base")
+		if old != source_mod:
+			type_overridden.emit(type, old, source_mod)
+			print("[mod] '%s' overrides minigame '%s' (was from '%s')"
+					% [source_mod, type, old])
+	else:
+		type_registered.emit(type, source_mod)
+	_minigames[type] = script
+	_minigame_owners[type] = source_mod
+
+
+## Instantiate the minigame one level entry describes; null for a mode that
+## has not been built, so the level still plays by the normal rules.
+func create_minigame(spec: Dictionary, runner: Node, board: Node) -> Minigame:
+	var type := StringName(spec.get("type", &""))
+	if not _minigames.has(type):
+		push_warning("ComponentRegistry: unknown minigame '%s'" % type)
+		return null
+	var game: Minigame = _minigames[type].new()
+	game.name = String(type)
+	game.runner = runner
+	game.board = board
+	game.config = spec.duplicate(true)
+	game.config.erase("type")
+	return game
+
+
+func has_minigame(type: StringName) -> bool:
+	return _minigames.has(type)
+
+
+func minigame_types() -> Array:
+	var out := _minigames.keys()
+	out.sort()
+	return out
+
+
 func has_type(type: StringName) -> bool:
 	return _scripts.has(type)
 
@@ -211,6 +260,6 @@ func summary() -> String:
 	var lawn_by_mod := {}
 	for t in _lawn_owners:
 		lawn_by_mod[_lawn_owners[t]] = lawn_by_mod.get(_lawn_owners[t], 0) + 1
-	return "components: %d types %s  objectives: %d %s  lawn: %d %s" % [
+	return "components: %d types %s  objectives: %d %s  lawn: %d %s  minigames: %d" % [
 			_scripts.size(), str(by_mod), _objectives.size(), str(obj_by_mod),
-			_lawn.size(), str(lawn_by_mod)]
+			_lawn.size(), str(lawn_by_mod), _minigames.size()]

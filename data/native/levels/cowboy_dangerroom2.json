@@ -1,0 +1,77 @@
+{
+ "id": "cowboy_dangerroom2",
+ "name": "Cowboy Danger Room",
+ "name_key": "[DANGER_ROOM_COWBOY_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_DANGER_ROOM]",
+ "number": 666,
+ "stage": "WestStage",
+ "minigames": [
+  {
+   "type": "endless",
+   "world_specific_properties": "CowboyDangerRoomProps",
+   "level_designers": [
+    {
+     "starting_points": 100,
+     "base_point_increment_per_wave": 40,
+     "base_point_increment_per_level": 5,
+     "min_dynamic_zombie_type": 4,
+     "must_contain_zombie": [
+      "cowboy"
+     ],
+     "zombie_pool": [
+      "chicken_farmer",
+      "piano",
+      "cowboy_armor1",
+      "cowboy_armor2",
+      "cowboy_armor4",
+      "poncho",
+      "prospector",
+      "west_bull",
+      "west_bull_veteran",
+      "cowboy_gargantuar"
+     ],
+     "type": "jittered_wave_generator"
+    },
+    {
+     "type": "shared",
+     "name": "RailcartDesigner"
+    }
+   ],
+   "initial_plants": [
+    "sunflower",
+    "peashooter",
+    "wallnut"
+   ],
+   "exclude_plants": [
+    "lilypad",
+    "floawerPot",
+    "tanglekelp",
+    "gravebuster",
+    "hotpotato",
+    "perfumeshroom"
+   ],
+   "minigame": false
+  }
+ ],
+ "railcarts": {
+  "type": "railcart_cowboy"
+ },
+ "seedbank": {
+  "mode": "chooser",
+  "selection": "chooser",
+  "always_chooser": true
+ },
+ "sun": {
+  "interval": 10.0
+ },
+ "mowers": true,
+ "extra": [
+  {
+   "objclass": "DangerRoomLevelIntroProperties",
+   "aliases": [
+    "DangerRoomIntro"
+   ],
+   "objdata": {}
+  }
+ ]
+}

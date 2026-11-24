@@ -51,6 +51,10 @@ var _timed_tags: Dictionary = {}     ## tag -> seconds left
 ## `attack_rate` when timing themselves, so a buff speeds up whatever the
 ## entity does without each component knowing who buffed it.
 var attack_rate: float = 1.0
+## Lasting multipliers a level gives one entity, unlike a buff that wears
+## off: Future's fight-alone plant hits harder and fires faster as it grows.
+var damage_scale: float = 1.0
+var fire_rate_scale: float = 1.0
 var resistance: float = 1.0
 var _buff_left: float = 0.0
 ## The opposite of a buff: everything this entity does is divided by it, so a

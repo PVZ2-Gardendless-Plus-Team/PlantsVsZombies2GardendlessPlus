@@ -1,0 +1,588 @@
+{
+ "id": "cowboy18",
+ "name": "Cowboy Last Stand B",
+ "name_key": "[WEST_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_WEST]",
+ "number": 18,
+ "stage": "WestStage",
+ "reward": {
+  "type": "unlock_plant",
+  "param": "tallnut"
+ },
+ "objectives": [
+  {
+   "type": "survive_waves",
+   "description": "[STARCHALLENGE_LASTSTAND_MINIGAME]"
+  }
+ ],
+ "railcarts": {
+  "carts": [
+   {
+    "col": 0,
+    "row": 3
+   },
+   {
+    "col": 1,
+    "row": 0
+   },
+   {
+    "col": 2,
+    "row": 2
+   },
+   {
+    "col": 3,
+    "row": 0
+   }
+  ],
+  "rails": [
+   {
+    "col": 0,
+    "row_start": 3,
+    "row_end": 4
+   },
+   {
+    "col": 1,
+    "row_start": 0,
+    "row_end": 2
+   },
+   {
+    "col": 2,
+    "row_start": 2,
+    "row_end": 4
+   },
+   {
+    "col": 3,
+    "row_start": 0,
+    "row_end": 1
+   }
+  ],
+  "type": "railcart_cowboy"
+ },
+ "seedbank": {
+  "mode": "chooser",
+  "selection": "chooser",
+  "blacklist": [
+   "sunflower",
+   "twinsunflower",
+   "sunshroom",
+   "puffshroom",
+   "seashroom",
+   "sunbean",
+   "iceburg",
+   "toadstool",
+   "goldleaf",
+   "stallia",
+   "primalsunflower",
+   "goldbloom"
+  ],
+  "decks": {
+   "recommended": [
+    {
+     "name": "Sit By and Win",
+     "plants": [
+      "snapdragon",
+      "wallnut",
+      "spikeweed"
+     ]
+    },
+    {
+     "name": "Lightning Chain",
+     "plants": [
+      "lightningreed"
+     ]
+    },
+    {
+     "name": "Meteor Shower",
+     "plants": [
+      "shootingstarfruit"
+     ]
+    },
+    {
+     "name": "Completely Stuck",
+     "plants": [
+      "iceweed"
+     ]
+    },
+    {
+     "name": "Icebound Battleground",
+     "plants": [
+      "coldsnapdragon",
+      "bamboozle"
+     ]
+    }
+   ]
+  }
+ },
+ "minigames": [
+  {
+   "type": "last_stand",
+   "starting_plantfood": 3,
+   "starting_sun": 1500
+  }
+ ],
+ "waves": [
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "chicken_farmer"
+    },
+    {
+     "type": "cowboy_armor1",
+     "row": 1
+    },
+    {
+     "type": "cowboy_armor1",
+     "row": 3
+    },
+    {
+     "type": "cowboy_armor1",
+     "row": 5
+    },
+    {
+     "type": "chicken_farmer"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "chicken_farmer",
+     "row": 1
+    },
+    {
+     "type": "chicken_farmer",
+     "row": 5
+    },
+    {
+     "type": "prospector",
+     "row": 2
+    },
+    {
+     "type": "prospector"
+    },
+    {
+     "type": "cowboy"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "chicken_farmer",
+     "row": 1
+    },
+    {
+     "type": "chicken_farmer",
+     "row": 2
+    },
+    {
+     "type": "cowboy",
+     "row": 3
+    },
+    {
+     "type": "cowboy"
+    },
+    {
+     "type": "chicken_farmer",
+     "row": 4
+    },
+    {
+     "type": "chicken_farmer",
+     "row": 5
+    },
+    {
+     "type": "cowboy"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "chicken_farmer",
+     "row": 4
+    },
+    {
+     "type": "chicken_farmer",
+     "row": 2
+    },
+    {
+     "type": "prospector",
+     "row": 1
+    },
+    {
+     "type": "prospector",
+     "row": 3
+    },
+    {
+     "type": "prospector",
+     "row": 5
+    },
+    {
+     "type": "prospector"
+    },
+    {
+     "type": "prospector"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "cowboy_armor1",
+     "row": 1
+    },
+    {
+     "type": "cowboy",
+     "row": 3
+    },
+    {
+     "type": "cowboy_armor1",
+     "row": 5
+    },
+    {
+     "type": "chicken_farmer"
+    },
+    {
+     "type": "chicken_farmer"
+    },
+    {
+     "type": "chicken_farmer"
+    },
+    {
+     "type": "prospector"
+    },
+    {
+     "type": "prospector"
+    },
+    {
+     "type": "prospector"
+    }
+   ],
+   "plantfood": 1
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "chicken_farmer",
+     "row": 1
+    },
+    {
+     "type": "cowboy",
+     "row": 3
+    },
+    {
+     "type": "chicken_farmer",
+     "row": 2
+    },
+    {
+     "type": "prospector"
+    },
+    {
+     "type": "chicken_farmer",
+     "row": 5
+    },
+    {
+     "type": "chicken_farmer",
+     "row": 4
+    },
+    {
+     "type": "cowboy"
+    },
+    {
+     "type": "cowboy_armor1",
+     "row": 4
+    },
+    {
+     "type": "prospector"
+    },
+    {
+     "type": "cowboy_armor1",
+     "row": 2
+    },
+    {
+     "type": "cowboy"
+    },
+    {
+     "type": "cowboy"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "chicken_farmer"
+    },
+    {
+     "type": "chicken_farmer"
+    },
+    {
+     "type": "chicken_farmer"
+    },
+    {
+     "type": "cowboy"
+    },
+    {
+     "type": "cowboy"
+    },
+    {
+     "type": "cowboy_armor1"
+    },
+    {
+     "type": "cowboy_armor1"
+    },
+    {
+     "type": "prospector",
+     "row": 1
+    },
+    {
+     "type": "prospector",
+     "row": 2
+    },
+    {
+     "type": "prospector",
+     "row": 3
+    },
+    {
+     "type": "prospector",
+     "row": 4
+    },
+    {
+     "type": "prospector",
+     "row": 5
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "chicken_farmer"
+    },
+    {
+     "type": "prospector"
+    },
+    {
+     "type": "chicken_farmer"
+    },
+    {
+     "type": "prospector"
+    },
+    {
+     "type": "cowboy_armor1"
+    },
+    {
+     "type": "cowboy"
+    },
+    {
+     "type": "chicken_farmer"
+    },
+    {
+     "type": "prospector"
+    },
+    {
+     "type": "chicken_farmer"
+    },
+    {
+     "type": "prospector"
+    },
+    {
+     "type": "cowboy"
+    },
+    {
+     "type": "cowboy"
+    },
+    {
+     "type": "chicken_farmer"
+    },
+    {
+     "type": "prospector"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "chicken_farmer",
+     "row": 1
+    },
+    {
+     "type": "chicken_farmer",
+     "row": 2
+    },
+    {
+     "type": "cowboy",
+     "row": 3
+    },
+    {
+     "type": "chicken_farmer",
+     "row": 4
+    },
+    {
+     "type": "chicken_farmer",
+     "row": 5
+    },
+    {
+     "type": "cowboy_armor1",
+     "row": 1
+    },
+    {
+     "type": "chicken_farmer",
+     "row": 2
+    },
+    {
+     "type": "cowboy_armor1",
+     "row": 3
+    },
+    {
+     "type": "chicken_farmer",
+     "row": 4
+    },
+    {
+     "type": "cowboy_armor1",
+     "row": 5
+    },
+    {
+     "type": "prospector"
+    },
+    {
+     "type": "prospector"
+    },
+    {
+     "type": "prospector"
+    },
+    {
+     "type": "prospector"
+    },
+    {
+     "type": "prospector"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "cowboy_armor1"
+    },
+    {
+     "type": "cowboy"
+    },
+    {
+     "type": "cowboy"
+    },
+    {
+     "type": "prospector"
+    },
+    {
+     "type": "prospector"
+    },
+    {
+     "type": "cowboy",
+     "row": 2
+    },
+    {
+     "type": "chicken_farmer",
+     "row": 3
+    },
+    {
+     "type": "cowboy",
+     "row": 4
+    },
+    {
+     "type": "chicken_farmer",
+     "row": 5
+    },
+    {
+     "type": "cowboy_armor1",
+     "row": 1
+    },
+    {
+     "type": "chicken_farmer",
+     "row": 2
+    },
+    {
+     "type": "cowboy",
+     "row": 3
+    },
+    {
+     "type": "chicken_farmer",
+     "row": 4
+    },
+    {
+     "type": "cowboy_armor1",
+     "row": 5
+    },
+    {
+     "type": "prospector",
+     "row": 1
+    },
+    {
+     "type": "prospector",
+     "row": 2
+    },
+    {
+     "type": "prospector",
+     "row": 3
+    },
+    {
+     "type": "prospector",
+     "row": 4
+    },
+    {
+     "type": "prospector",
+     "row": 5
+    }
+   ]
+  }
+ ],
+ "wave_pacing": {
+  "flag_interval": 10,
+  "points": 1200,
+  "point_increment": 250
+ },
+ "mowers": true,
+ "extra": [
+  {
+   "objclass": "SpawnPlantsWaveActionProps",
+   "aliases": [
+    "Wave1SpawnPlantsEvent0"
+   ],
+   "objdata": {
+    "Plants": [
+     {
+      "GridX": 4,
+      "GridY": 1,
+      "TypeName": "repeater",
+      "SpawnAnim": "fall",
+      "AllowSpawnOnOtherPlants": false
+     },
+     {
+      "TypeName": "repeater",
+      "SpawnAnim": "jump",
+      "RandomSpawnMatrix": [
+       "00010000",
+       "00010000",
+       "00010000",
+       "00010000",
+       "00010000"
+      ]
+     },
+     {
+      "GridX": 4,
+      "GridY": 3,
+      "TypeName": "repeater",
+      "SpawnAnim": "grow"
+     }
+    ]
+   }
+  }
+ ]
+}

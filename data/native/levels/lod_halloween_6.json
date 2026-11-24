@@ -1,0 +1,198 @@
+{
+ "id": "lod_halloween_6",
+ "name": "Modern 8",
+ "name_key": "[LOD_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_LOD]",
+ "author": "蔓逐I蝶舞",
+ "stage": "HalloweenStage",
+ "level_of_the_day": true,
+ "minigames": [
+  {
+   "type": "beghouled",
+   "match_counts_to_stage_advance": [
+    {
+     "match_count": 30,
+     "stage_number": 1
+    },
+    {
+     "match_count": 70,
+     "stage_number": 2
+    },
+    {
+     "match_count": 110,
+     "stage_number": 3
+    }
+   ],
+   "stages": [
+    {
+     "spawn_delay": 3,
+     "types": [
+      {
+       "zombie_type": "lawn"
+      },
+      {
+       "zombie_type": "camel_onehump"
+      },
+      {
+       "zombie_type": "lawn_armor1"
+      }
+     ]
+    },
+    {
+     "spawn_delay": 3,
+     "types": [
+      {
+       "zombie_type": "lawn"
+      },
+      {
+       "zombie_type": "lawn_armor1"
+      },
+      {
+       "zombie_type": "lawn_armor2"
+      },
+      {
+       "zombie_type": "camel_twohump"
+      },
+      {
+       "zombie_type": "explorer"
+      },
+      {
+       "zombie_type": "pharaoh"
+      },
+      {
+       "zombie_type": "tomb_raiser"
+      }
+     ]
+    },
+    {
+     "spawn_delay": 3,
+     "types": [
+      {
+       "zombie_type": "lawn_armor1"
+      },
+      {
+       "zombie_type": "lawn_armor2"
+      },
+      {
+       "zombie_type": "camel_threehump"
+      },
+      {
+       "zombie_type": "explorer"
+      },
+      {
+       "zombie_type": "pharaoh"
+      },
+      {
+       "zombie_type": "tomb_raiser"
+      },
+      {
+       "zombie_type": "lawn_gargantuar"
+      }
+     ]
+    },
+    {
+     "spawn_delay": 2,
+     "types": [
+      {
+       "zombie_type": "lawn_armor2"
+      },
+      {
+       "zombie_type": "lawn_armor4"
+      },
+      {
+       "zombie_type": "camel_manyhump"
+      },
+      {
+       "zombie_type": "explorer"
+      },
+      {
+       "zombie_type": "explorer_veteran"
+      },
+      {
+       "zombie_type": "pharaoh"
+      },
+      {
+       "zombie_type": "tomb_raiser"
+      },
+      {
+       "zombie_type": "lawn_gargantuar"
+      }
+     ]
+    }
+   ],
+   "selection_method": "beghouled",
+   "preset_plant_list": [
+    {
+     "plant_type": "anthurium",
+     "level": -1
+    },
+    {
+     "plant_type": "lightningreed",
+     "level": -1
+    },
+    {
+     "plant_type": "lychee",
+     "level": -1
+    },
+    {
+     "plant_type": "endurian",
+     "level": -1
+    },
+    {
+     "plant_type": "fumeshroom",
+     "level": -1
+    },
+    {
+     "plant_type": "wintermelon",
+     "level": -1
+    },
+    {
+     "plant_type": "coldsnapdragon",
+     "level": -1
+    }
+   ],
+   "beghouled_upgrade_list": [
+    "threepeater",
+    "wintermelon"
+   ],
+   "matches_to_win": 150,
+   "initial_plants": [
+    "repeater",
+    "wallnut",
+    "bonkchoy",
+    "bloominghearts",
+    "cabbagepult"
+   ],
+   "upgrade_map": [
+    {
+     "base_plant": "repeater",
+     "upgraded_plant": "gatling"
+    },
+    {
+     "base_plant": "repeater",
+     "upgraded_plant": "megagatling"
+    },
+    {
+     "base_plant": "wallnut",
+     "upgraded_plant": "peanut"
+    },
+    {
+     "base_plant": "bonkchoy",
+     "upgraded_plant": "wasabiwhip"
+    },
+    {
+     "base_plant": "cabbagepult",
+     "upgraded_plant": "pepperpult"
+    }
+   ]
+  }
+ ],
+ "sun": {
+  "interval": 10.0
+ },
+ "scripts": [
+  "BeghouledArcade",
+  "BeghouledIntro",
+  "LevelOfTheDayIntro"
+ ]
+}

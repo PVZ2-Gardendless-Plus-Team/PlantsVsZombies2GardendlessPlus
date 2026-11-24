@@ -130,6 +130,17 @@ func _pick() -> StringName:
 	return eligible[-1]["type"]
 
 
+## Puts one packet straight onto the belt, as a broken vase does with the
+## plant inside it. Refused once the belt is full.
+func add_packet(id: StringName) -> bool:
+	if packets.size() >= capacity or Data.plant(id) == null:
+		return false
+	packets.append(SeedPacket.create(&"plant", id, 0, 0.0, 1.0))
+	packet_arrived.emit(id)
+	changed.emit()
+	return true
+
+
 ## Mid-level changes from a ModifyConveyorWaveActionProps wave action.
 func add_to_pool(entries: Array) -> void:
 	for entry in entries:

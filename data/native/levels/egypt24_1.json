@@ -1,0 +1,761 @@
+{
+ "id": "egypt24_1",
+ "name": "Egypt Challenge LastStand B",
+ "name_key": "[CHALLENGE_LASTSTAND_B_NAME]",
+ "description": "[PLAYERS_TRIP_TO_EGYPT]",
+ "number": 2,
+ "stage": "EgyptStage",
+ "intro_narrative": "EGYPT_CHALLENGE_LASTSTAND_B",
+ "objectives": [
+  {
+   "type": "survive_waves",
+   "description": "[STARCHALLENGE_LASTSTAND_MINIGAME]"
+  },
+  {
+   "type": "save_mowers"
+  }
+ ],
+ "gravestones": {
+  "count": 7,
+  "col_start": 3,
+  "col_end": 8
+ },
+ "seedbank": {
+  "mode": "chooser",
+  "selection": "chooser",
+  "blacklist": [
+   "sunflower",
+   "twinsunflower",
+   "iceburg",
+   "gravebuster",
+   "melonpult",
+   "lightningreed"
+  ],
+  "decks": {
+   "recommended": [
+    {
+     "name": "Defend to Offend",
+     "plants": [
+      "bloomerang"
+     ]
+    },
+    {
+     "name": "Completely Stuck",
+     "plants": [
+      "wallnut",
+      "iceweed"
+     ]
+    },
+    {
+     "name": "Retirement",
+     "plants": [
+      "laser_bean",
+      "bloomerang"
+     ]
+    },
+    {
+     "name": "Meteor Shower",
+     "plants": [
+      "shootingstarfruit"
+     ]
+    }
+   ]
+  }
+ },
+ "minigames": [
+  {
+   "type": "last_stand",
+   "starting_plantfood": 3,
+   "starting_sun": 1750
+  }
+ ],
+ "waves": [
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "tomb_raiser",
+     "row": 5
+    },
+    {
+     "type": "tomb_raiser",
+     "row": 4
+    },
+    {
+     "type": "tomb_raiser",
+     "row": 3
+    },
+    {
+     "type": "tomb_raiser",
+     "row": 2
+    },
+    {
+     "type": "tomb_raiser",
+     "row": 1
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "explorer",
+     "row": 1
+    },
+    {
+     "type": "explorer",
+     "row": 2
+    },
+    {
+     "type": "explorer",
+     "row": 3
+    },
+    {
+     "type": "explorer",
+     "row": 4
+    },
+    {
+     "type": "explorer",
+     "row": 5
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "mummy_armor1",
+       "row": 4
+      },
+      {
+       "type": "mummy_armor1",
+       "row": 3
+      },
+      {
+       "type": "mummy_armor1",
+       "row": 2
+      },
+      {
+       "type": "mummy_armor1",
+       "row": 1
+      }
+     ]
+    },
+    {
+     "kind": "storm",
+     "style": "sandstorm",
+     "zombies": [
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy"
+     ],
+     "col_start": 4,
+     "col_end": 7,
+     "row_start": 0,
+     "row_end": 4,
+     "group_size": 2,
+     "group_interval": 5
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "tomb_raiser",
+     "row": 2
+    },
+    {
+     "type": "tomb_raiser",
+     "row": 1
+    },
+    {
+     "type": "tomb_raiser",
+     "row": 3
+    },
+    {
+     "type": "tomb_raiser",
+     "row": 5
+    },
+    {
+     "type": "tomb_raiser",
+     "row": 4
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "explorer",
+     "row": 1
+    },
+    {
+     "type": "explorer",
+     "row": 2
+    },
+    {
+     "type": "explorer",
+     "row": 3
+    },
+    {
+     "type": "explorer",
+     "row": 4
+    },
+    {
+     "type": "explorer",
+     "row": 5
+    },
+    {
+     "type": "explorer"
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "mummy_armor1",
+       "row": 1
+      },
+      {
+       "type": "mummy_armor1",
+       "row": 2
+      },
+      {
+       "type": "mummy_armor1",
+       "row": 4
+      },
+      {
+       "type": "mummy_armor1",
+       "row": 5
+      }
+     ]
+    },
+    {
+     "kind": "storm",
+     "style": "sandstorm",
+     "zombies": [
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy"
+     ],
+     "col_start": 4,
+     "col_end": 8,
+     "row_start": 0,
+     "row_end": 4,
+     "group_size": 2,
+     "group_interval": 5
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "tomb_raiser",
+     "row": 1
+    },
+    {
+     "type": "tomb_raiser",
+     "row": 2
+    },
+    {
+     "type": "tomb_raiser",
+     "row": 3
+    },
+    {
+     "type": "tomb_raiser",
+     "row": 4
+    },
+    {
+     "type": "tomb_raiser",
+     "row": 5
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "explorer",
+     "row": 1
+    },
+    {
+     "type": "explorer",
+     "row": 2
+    },
+    {
+     "type": "explorer",
+     "row": 3
+    },
+    {
+     "type": "explorer",
+     "row": 4
+    },
+    {
+     "type": "explorer",
+     "row": 5
+    },
+    {
+     "type": "explorer"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "explorer",
+     "row": 1
+    },
+    {
+     "type": "explorer",
+     "row": 2
+    },
+    {
+     "type": "explorer",
+     "row": 3
+    },
+    {
+     "type": "explorer",
+     "row": 4
+    },
+    {
+     "type": "explorer",
+     "row": 5
+    },
+    {
+     "type": "explorer"
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "mummy_armor1",
+       "row": 2
+      },
+      {
+       "type": "mummy_armor1",
+       "row": 3
+      },
+      {
+       "type": "mummy_armor1",
+       "row": 4
+      },
+      {
+       "type": "mummy_armor1",
+       "row": 5
+      },
+      {
+       "type": "tomb_raiser"
+      },
+      {
+       "type": "tomb_raiser"
+      },
+      {
+       "type": "explorer"
+      },
+      {
+       "type": "explorer"
+      },
+      {
+       "type": "explorer"
+      }
+     ]
+    },
+    {
+     "kind": "storm",
+     "style": "sandstorm",
+     "zombies": [
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy",
+      "mummy"
+     ],
+     "col_start": 4,
+     "col_end": 8,
+     "row_start": 0,
+     "row_end": 4,
+     "group_size": 2,
+     "group_interval": 6
+    }
+   ]
+  }
+ ],
+ "wave_pacing": {
+  "flag_interval": 10,
+  "points": 600,
+  "point_increment": 50
+ },
+ "mowers": true,
+ "extra": [
+  {
+   "objclass": "WaveGeneratorProperties",
+   "aliases": [
+    "Waves"
+   ],
+   "objdata": {
+    "FlagWaveInterval": 10,
+    "LevelXMLFilename": "egypt_challenge_laststand_b.xml",
+    "WaveCount": 10,
+    "WaveSpendingPointIncrement": 50,
+    "WaveSpendingPoints": 600,
+    "AddToZombiePool": [
+     {
+      "Type": "RTID(mummy@ZombieTypes)"
+     }
+    ],
+    "Waves": [
+     {
+      "DisableRandomSpawns": true,
+      "Zombies": [
+       {
+        "Row": "5",
+        "Type": "RTID(tomb_raiser@ZombieTypes)"
+       },
+       {
+        "Row": "4",
+        "Type": "RTID(tomb_raiser@ZombieTypes)"
+       },
+       {
+        "Row": "3",
+        "Type": "RTID(tomb_raiser@ZombieTypes)"
+       },
+       {
+        "Row": "2",
+        "Type": "RTID(tomb_raiser@ZombieTypes)"
+       },
+       {
+        "Row": "1",
+        "Type": "RTID(tomb_raiser@ZombieTypes)"
+       }
+      ]
+     },
+     {
+      "DisableRandomSpawns": true,
+      "Zombies": [
+       {
+        "Row": "1",
+        "Type": "RTID(explorer@ZombieTypes)"
+       },
+       {
+        "Row": "2",
+        "Type": "RTID(explorer@ZombieTypes)"
+       },
+       {
+        "Row": "3",
+        "Type": "RTID(explorer@ZombieTypes)"
+       },
+       {
+        "Row": "4",
+        "Type": "RTID(explorer@ZombieTypes)"
+       },
+       {
+        "Row": "5",
+        "Type": "RTID(explorer@ZombieTypes)"
+       }
+      ]
+     },
+     {
+      "DisableRandomSpawns": true,
+      "SpawnColEnd": 7,
+      "SpawnColStart": 4,
+      "Event": {
+       "Count": 14,
+       "Enabled": true,
+       "TimeSpread": 500,
+       "Waves": ""
+      },
+      "Zombies": [
+       {
+        "Row": "4",
+        "Type": "RTID(mummy_armor1@ZombieTypes)"
+       },
+       {
+        "Row": "3",
+        "Type": "RTID(mummy_armor1@ZombieTypes)"
+       },
+       {
+        "Row": "2",
+        "Type": "RTID(mummy_armor1@ZombieTypes)"
+       },
+       {
+        "Row": "1",
+        "Type": "RTID(mummy_armor1@ZombieTypes)"
+       }
+      ]
+     },
+     {
+      "DisableRandomSpawns": true,
+      "AddToZombiePool": [
+       {
+        "Type": "RTID(mummy_armor1@ZombieTypes)"
+       }
+      ],
+      "Zombies": [
+       {
+        "Row": "2",
+        "Type": "RTID(tomb_raiser@ZombieTypes)"
+       },
+       {
+        "Row": "1",
+        "Type": "RTID(tomb_raiser@ZombieTypes)"
+       },
+       {
+        "Row": "3",
+        "Type": "RTID(tomb_raiser@ZombieTypes)"
+       },
+       {
+        "Row": "5",
+        "Type": "RTID(tomb_raiser@ZombieTypes)"
+       },
+       {
+        "Row": "4",
+        "Type": "RTID(tomb_raiser@ZombieTypes)"
+       }
+      ]
+     },
+     {
+      "DisableRandomSpawns": true,
+      "Zombies": [
+       {
+        "Row": "1",
+        "Type": "RTID(explorer@ZombieTypes)"
+       },
+       {
+        "Row": "2",
+        "Type": "RTID(explorer@ZombieTypes)"
+       },
+       {
+        "Row": "3",
+        "Type": "RTID(explorer@ZombieTypes)"
+       },
+       {
+        "Row": "4",
+        "Type": "RTID(explorer@ZombieTypes)"
+       },
+       {
+        "Row": "5",
+        "Type": "RTID(explorer@ZombieTypes)"
+       },
+       {
+        "Row": "?",
+        "Type": "RTID(explorer@ZombieTypes)"
+       }
+      ]
+     },
+     {
+      "DisableRandomSpawns": true,
+      "SpawnColEnd": 8,
+      "SpawnColStart": 4,
+      "Event": {
+       "Count": 14,
+       "Enabled": true,
+       "TimeSpread": 500,
+       "Waves": ""
+      },
+      "Zombies": [
+       {
+        "Row": "1",
+        "Type": "RTID(mummy_armor1@ZombieTypes)"
+       },
+       {
+        "Row": "2",
+        "Type": "RTID(mummy_armor1@ZombieTypes)"
+       },
+       {
+        "Row": "4",
+        "Type": "RTID(mummy_armor1@ZombieTypes)"
+       },
+       {
+        "Row": "5",
+        "Type": "RTID(mummy_armor1@ZombieTypes)"
+       }
+      ]
+     },
+     {
+      "DisableRandomSpawns": true,
+      "Zombies": [
+       {
+        "Row": "1",
+        "Type": "RTID(tomb_raiser@ZombieTypes)"
+       },
+       {
+        "Row": "2",
+        "Type": "RTID(tomb_raiser@ZombieTypes)"
+       },
+       {
+        "Row": "3",
+        "Type": "RTID(tomb_raiser@ZombieTypes)"
+       },
+       {
+        "Row": "4",
+        "Type": "RTID(tomb_raiser@ZombieTypes)"
+       },
+       {
+        "Row": "5",
+        "Type": "RTID(tomb_raiser@ZombieTypes)"
+       }
+      ]
+     },
+     {
+      "DisableRandomSpawns": true,
+      "Zombies": [
+       {
+        "Row": "1",
+        "Type": "RTID(explorer@ZombieTypes)"
+       },
+       {
+        "Row": "2",
+        "Type": "RTID(explorer@ZombieTypes)"
+       },
+       {
+        "Row": "3",
+        "Type": "RTID(explorer@ZombieTypes)"
+       },
+       {
+        "Row": "4",
+        "Type": "RTID(explorer@ZombieTypes)"
+       },
+       {
+        "Row": "5",
+        "Type": "RTID(explorer@ZombieTypes)"
+       },
+       {
+        "Row": "?",
+        "Type": "RTID(explorer@ZombieTypes)"
+       }
+      ]
+     },
+     {
+      "DisableRandomSpawns": true,
+      "Zombies": [
+       {
+        "Row": "1",
+        "Type": "RTID(explorer@ZombieTypes)"
+       },
+       {
+        "Row": "2",
+        "Type": "RTID(explorer@ZombieTypes)"
+       },
+       {
+        "Row": "3",
+        "Type": "RTID(explorer@ZombieTypes)"
+       },
+       {
+        "Row": "4",
+        "Type": "RTID(explorer@ZombieTypes)"
+       },
+       {
+        "Row": "5",
+        "Type": "RTID(explorer@ZombieTypes)"
+       },
+       {
+        "Row": "?",
+        "Type": "RTID(explorer@ZombieTypes)"
+       }
+      ]
+     },
+     {
+      "DisableRandomSpawns": true,
+      "SpawnColEnd": 8,
+      "SpawnColStart": 4,
+      "AddToZombiePool": [
+       {
+        "Type": "RTID(mummy_armor2@ZombieTypes)"
+       }
+      ],
+      "Event": {
+       "Count": 14,
+       "Enabled": true,
+       "TimeSpread": 600,
+       "Waves": ""
+      },
+      "Zombies": [
+       {
+        "Row": "2",
+        "Type": "RTID(mummy_armor1@ZombieTypes)"
+       },
+       {
+        "Row": "3",
+        "Type": "RTID(mummy_armor1@ZombieTypes)"
+       },
+       {
+        "Row": "4",
+        "Type": "RTID(mummy_armor1@ZombieTypes)"
+       },
+       {
+        "Row": "5",
+        "Type": "RTID(mummy_armor1@ZombieTypes)"
+       },
+       {
+        "Row": "?",
+        "Type": "RTID(tomb_raiser@ZombieTypes)"
+       },
+       {
+        "Row": "?",
+        "Type": "RTID(tomb_raiser@ZombieTypes)"
+       },
+       {
+        "Row": "?",
+        "Type": "RTID(explorer@ZombieTypes)"
+       },
+       {
+        "Row": "?",
+        "Type": "RTID(explorer@ZombieTypes)"
+       },
+       {
+        "Row": "?",
+        "Type": "RTID(explorer@ZombieTypes)"
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ]
+}

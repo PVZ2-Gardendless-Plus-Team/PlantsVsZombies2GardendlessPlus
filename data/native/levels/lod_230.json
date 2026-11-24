@@ -1,0 +1,1044 @@
+{
+ "id": "lod_230",
+ "name": "[LOD_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_LOD]",
+ "author": "ZERO",
+ "stage": "SkyStage",
+ "level_of_the_day": true,
+ "objectives": [
+  {
+   "type": "survive_waves",
+   "description": "[STARCHALLENGE_CANNON_MINIGAME]"
+  }
+ ],
+ "minigames": [
+  {
+   "type": "cannon",
+   "base_movement_rate": 100,
+   "base_zombie_kill_score": 100,
+   "buffer_distance": 50,
+   "max_reward_gold": 50,
+   "min_reward_gold": 0,
+   "min_score": 25000,
+   "slowdown_movement_rate": 60,
+   "combo_brackets": [
+    {
+     "audio_cue": "Play_CrazyDave_Short",
+     "score_multiplier": 2,
+     "zombies_killed": 3,
+     "exclamations": [
+      "[DAVE_CANNONMINIGAME_3_KILLED_1]",
+      "[DAVE_CANNONMINIGAME_3_KILLED_2]",
+      "[DAVE_CANNONMINIGAME_3_KILLED_3]"
+     ],
+     "message_color": {
+      "m_alpha": 255,
+      "m_blue": 220,
+      "m_green": 255,
+      "m_red": 220
+     }
+    },
+    {
+     "audio_cue": "Play_CrazyDave_Scream",
+     "score_multiplier": 3,
+     "zombies_killed": 5,
+     "exclamations": [
+      "[DAVE_CANNONMINIGAME_5_KILLED_1]",
+      "[DAVE_CANNONMINIGAME_5_KILLED_2]",
+      "[DAVE_CANNONMINIGAME_5_KILLED_3]"
+     ],
+     "message_color": {
+      "m_alpha": 255,
+      "m_blue": 255,
+      "m_green": 220,
+      "m_red": 220
+     }
+    },
+    {
+     "audio_cue": "Play_CrazyDave_Scream2",
+     "score_multiplier": 4,
+     "zombies_killed": 8,
+     "exclamations": [
+      "[DAVE_CANNONMINIGAME_8_KILLED_1]",
+      "[DAVE_CANNONMINIGAME_8_KILLED_2]",
+      "[DAVE_CANNONMINIGAME_8_KILLED_3]"
+     ],
+     "message_color": {
+      "m_alpha": 255,
+      "m_blue": 220,
+      "m_green": 240,
+      "m_red": 255
+     }
+    },
+    {
+     "audio_cue": "Play_CrazyDave_Crazy",
+     "score_multiplier": 5,
+     "zombies_killed": 12,
+     "exclamations": [
+      "[DAVE_CANNONMINIGAME_12_KILLED_1]",
+      "[DAVE_CANNONMINIGAME_12_KILLED_2]",
+      "[DAVE_CANNONMINIGAME_12_KILLED_3]"
+     ],
+     "message_color": {
+      "m_alpha": 255,
+      "m_blue": 200,
+      "m_green": 200,
+      "m_red": 255
+     }
+    }
+   ],
+   "lanes": [
+    {
+     "spline_points": [
+      {
+       "x": 799,
+       "y": 95
+      },
+      {
+       "x": 552,
+       "y": 119
+      },
+      {
+       "x": 461,
+       "y": 163
+      },
+      {
+       "x": 609,
+       "y": 200
+      },
+      {
+       "x": 453,
+       "y": 234
+      },
+      {
+       "x": 602,
+       "y": 271
+      },
+      {
+       "x": 452,
+       "y": 317
+      },
+      {
+       "x": 596,
+       "y": 353
+      },
+      {
+       "x": 457,
+       "y": 389
+      },
+      {
+       "x": 605,
+       "y": 426
+      },
+      {
+       "x": 460,
+       "y": 463
+      },
+      {
+       "x": 604,
+       "y": 504
+      },
+      {
+       "x": 453,
+       "y": 539
+      },
+      {
+       "x": 799,
+       "y": 589
+      }
+     ]
+    },
+    {
+     "spline_points": [
+      {
+       "x": 797,
+       "y": 593
+      },
+      {
+       "x": 444,
+       "y": 535
+      },
+      {
+       "x": 597,
+       "y": 503
+      },
+      {
+       "x": 461,
+       "y": 462
+      },
+      {
+       "x": 589,
+       "y": 427
+      },
+      {
+       "x": 463,
+       "y": 385
+      },
+      {
+       "x": 598,
+       "y": 347
+      },
+      {
+       "x": 457,
+       "y": 323
+      },
+      {
+       "x": 606,
+       "y": 275
+      },
+      {
+       "x": 471,
+       "y": 225
+      },
+      {
+       "x": 609,
+       "y": 192
+      },
+      {
+       "x": 468,
+       "y": 146
+      },
+      {
+       "x": 799,
+       "y": 86
+      }
+     ]
+    },
+    {
+     "spline_points": [
+      {
+       "x": 799,
+       "y": 338
+      },
+      {
+       "x": 507,
+       "y": 342
+      },
+      {
+       "x": 397,
+       "y": 306
+      },
+      {
+       "x": 397,
+       "y": 207
+      },
+      {
+       "x": 428,
+       "y": 153
+      },
+      {
+       "x": 449,
+       "y": 542
+      },
+      {
+       "x": 487,
+       "y": 157
+      },
+      {
+       "x": 521,
+       "y": 535
+      },
+      {
+       "x": 535,
+       "y": 0
+      }
+     ]
+    },
+    {
+     "spline_points": [
+      {
+       "x": 799,
+       "y": 341
+      },
+      {
+       "x": 482,
+       "y": 342
+      },
+      {
+       "x": 400,
+       "y": 385
+      },
+      {
+       "x": 395,
+       "y": 470
+      },
+      {
+       "x": 417,
+       "y": 531
+      },
+      {
+       "x": 450,
+       "y": 164
+      },
+      {
+       "x": 484,
+       "y": 530
+      },
+      {
+       "x": 518,
+       "y": 162
+      },
+      {
+       "x": 557,
+       "y": 595
+      }
+     ]
+    },
+    {
+     "spline_points": [
+      {
+       "x": 799,
+       "y": 0
+      },
+      {
+       "x": 542,
+       "y": 82
+      },
+      {
+       "x": 392,
+       "y": 340
+      },
+      {
+       "x": 503,
+       "y": 534
+      },
+      {
+       "x": 617,
+       "y": 362
+      },
+      {
+       "x": 525,
+       "y": 150
+      },
+      {
+       "x": 431,
+       "y": 350
+      },
+      {
+       "x": 507,
+       "y": 498
+      },
+      {
+       "x": 571,
+       "y": 359
+      },
+      {
+       "x": 471,
+       "y": 0
+      }
+     ]
+    }
+   ],
+   "resource_group_names": [],
+   "row_has_cannon": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "type": "fight_alone",
+   "position": {
+    "m_x": 1,
+    "m_y": 2
+   },
+   "plant_upgrade_list": [
+    {
+     "type": "coconutcannon",
+     "full_point": 2000,
+     "upgrade_details": {
+      "damage_scale": 10,
+      "shoot_interval_scale": 0.1
+     }
+    },
+    {
+     "type": "banana",
+     "full_point": 4000,
+     "upgrade_details": {
+      "damage_scale": 7,
+      "shoot_interval_scale": 0.1
+     }
+    },
+    {
+     "type": "missiletoe",
+     "upgrade_details": {
+      "damage_scale": 20,
+      "shoot_interval_scale": 0.1
+     }
+    }
+   ]
+  }
+ ],
+ "waves": [
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "sky",
+     "row": 1
+    },
+    {
+     "type": "sky",
+     "row": 1
+    },
+    {
+     "type": "sky",
+     "row": 1
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "sky",
+     "row": 2
+    },
+    {
+     "type": "sky",
+     "row": 2
+    },
+    {
+     "type": "sky",
+     "row": 2
+    },
+    {
+     "type": "sky_electric",
+     "row": 2
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "sky",
+     "row": 1
+    },
+    {
+     "type": "sky_electric",
+     "row": 1
+    },
+    {
+     "type": "sky",
+     "row": 1
+    },
+    {
+     "type": "sky_electric",
+     "row": 1
+    },
+    {
+     "type": "sky",
+     "row": 1
+    },
+    {
+     "type": "sky",
+     "row": 2
+    },
+    {
+     "type": "sky",
+     "row": 2
+    },
+    {
+     "type": "sky",
+     "row": 2
+    },
+    {
+     "type": "sky_battleplane",
+     "row": 2
+    },
+    {
+     "type": "sky",
+     "row": 2
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "sky",
+     "row": 3
+    },
+    {
+     "type": "sky",
+     "row": 3
+    },
+    {
+     "type": "sky_electric",
+     "row": 3
+    },
+    {
+     "type": "sky_electric",
+     "row": 3
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "sky_electric",
+     "row": 4
+    },
+    {
+     "type": "sky",
+     "row": 4
+    },
+    {
+     "type": "sky_electric",
+     "row": 4
+    },
+    {
+     "type": "sky",
+     "row": 4
+    },
+    {
+     "type": "sky",
+     "row": 4
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "sky",
+     "row": 3
+    },
+    {
+     "type": "sky",
+     "row": 3
+    },
+    {
+     "type": "sky",
+     "row": 3
+    },
+    {
+     "type": "sky",
+     "row": 3
+    },
+    {
+     "type": "sky",
+     "row": 3
+    },
+    {
+     "type": "sky",
+     "row": 3
+    },
+    {
+     "type": "sky",
+     "row": 4
+    },
+    {
+     "type": "sky",
+     "row": 4
+    },
+    {
+     "type": "sky",
+     "row": 4
+    },
+    {
+     "type": "sky",
+     "row": 4
+    },
+    {
+     "type": "sky",
+     "row": 4
+    },
+    {
+     "type": "sky",
+     "row": 4
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "sky",
+     "row": 5
+    },
+    {
+     "type": "sky",
+     "row": 5
+    },
+    {
+     "type": "sky",
+     "row": 5
+    },
+    {
+     "type": "sky",
+     "row": 5
+    },
+    {
+     "type": "sky",
+     "row": 5
+    },
+    {
+     "type": "sky",
+     "row": 5
+    },
+    {
+     "type": "sky",
+     "row": 5
+    },
+    {
+     "type": "sky",
+     "row": 5
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "sky",
+     "row": 5
+    },
+    {
+     "type": "sky",
+     "row": 5
+    },
+    {
+     "type": "sky",
+     "row": 5
+    },
+    {
+     "type": "sky",
+     "row": 5
+    },
+    {
+     "type": "sky",
+     "row": 5
+    },
+    {
+     "type": "sky",
+     "row": 5
+    },
+    {
+     "type": "sky",
+     "row": 5
+    },
+    {
+     "type": "sky",
+     "row": 1
+    },
+    {
+     "type": "sky",
+     "row": 1
+    },
+    {
+     "type": "sky",
+     "row": 1
+    },
+    {
+     "type": "sky",
+     "row": 1
+    },
+    {
+     "type": "sky",
+     "row": 1
+    },
+    {
+     "type": "sky",
+     "row": 1
+    },
+    {
+     "type": "sky",
+     "row": 1
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "sky",
+     "row": 5
+    },
+    {
+     "type": "sky",
+     "row": 5
+    },
+    {
+     "type": "sky",
+     "row": 5
+    },
+    {
+     "type": "sky",
+     "row": 5
+    },
+    {
+     "type": "sky",
+     "row": 5
+    },
+    {
+     "type": "sky",
+     "row": 5
+    },
+    {
+     "type": "sky",
+     "row": 5
+    },
+    {
+     "type": "sky",
+     "row": 5
+    },
+    {
+     "type": "sky",
+     "row": 5
+    },
+    {
+     "type": "sky",
+     "row": 3
+    },
+    {
+     "type": "sky",
+     "row": 3
+    },
+    {
+     "type": "sky",
+     "row": 3
+    },
+    {
+     "type": "sky",
+     "row": 3
+    },
+    {
+     "type": "sky",
+     "row": 3
+    },
+    {
+     "type": "sky",
+     "row": 3
+    },
+    {
+     "type": "sky",
+     "row": 3
+    },
+    {
+     "type": "sky",
+     "row": 3
+    },
+    {
+     "type": "sky",
+     "row": 3
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "sky",
+     "row": 4
+    },
+    {
+     "type": "sky",
+     "row": 4
+    },
+    {
+     "type": "sky",
+     "row": 4
+    },
+    {
+     "type": "sky",
+     "row": 4
+    },
+    {
+     "type": "sky",
+     "row": 4
+    },
+    {
+     "type": "sky",
+     "row": 4
+    },
+    {
+     "type": "sky",
+     "row": 4
+    },
+    {
+     "type": "sky",
+     "row": 4
+    },
+    {
+     "type": "sky",
+     "row": 4
+    },
+    {
+     "type": "sky",
+     "row": 2
+    },
+    {
+     "type": "sky",
+     "row": 2
+    },
+    {
+     "type": "sky",
+     "row": 2
+    },
+    {
+     "type": "sky",
+     "row": 2
+    },
+    {
+     "type": "sky",
+     "row": 2
+    },
+    {
+     "type": "sky",
+     "row": 2
+    },
+    {
+     "type": "sky",
+     "row": 2
+    },
+    {
+     "type": "sky",
+     "row": 2
+    },
+    {
+     "type": "sky",
+     "row": 2
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "sky",
+     "row": 4
+    },
+    {
+     "type": "sky",
+     "row": 4
+    },
+    {
+     "type": "sky",
+     "row": 4
+    },
+    {
+     "type": "sky",
+     "row": 4
+    },
+    {
+     "type": "sky",
+     "row": 4
+    },
+    {
+     "type": "sky",
+     "row": 4
+    },
+    {
+     "type": "sky",
+     "row": 4
+    },
+    {
+     "type": "sky",
+     "row": 4
+    },
+    {
+     "type": "sky",
+     "row": 4
+    },
+    {
+     "type": "sky_electric",
+     "row": 4
+    },
+    {
+     "type": "sky",
+     "row": 3
+    },
+    {
+     "type": "sky",
+     "row": 3
+    },
+    {
+     "type": "sky",
+     "row": 3
+    },
+    {
+     "type": "sky_electric",
+     "row": 3
+    },
+    {
+     "type": "sky",
+     "row": 3
+    },
+    {
+     "type": "sky",
+     "row": 3
+    },
+    {
+     "type": "sky_electric",
+     "row": 3
+    },
+    {
+     "type": "sky",
+     "row": 3
+    },
+    {
+     "type": "sky_electric",
+     "row": 3
+    },
+    {
+     "type": "sky",
+     "row": 3
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "sky",
+     "row": 1
+    },
+    {
+     "type": "sky",
+     "row": 2
+    },
+    {
+     "type": "sky",
+     "row": 3
+    },
+    {
+     "type": "sky_electricy",
+     "row": 4
+    },
+    {
+     "type": "sky",
+     "row": 5
+    },
+    {
+     "type": "sky",
+     "row": 5
+    },
+    {
+     "type": "sky",
+     "row": 5
+    },
+    {
+     "type": "sky",
+     "row": 5
+    },
+    {
+     "type": "sky_electric",
+     "row": 5
+    },
+    {
+     "type": "sky",
+     "row": 5
+    },
+    {
+     "type": "sky_electric",
+     "row": 4
+    },
+    {
+     "type": "sky",
+     "row": 4
+    },
+    {
+     "type": "sky",
+     "row": 4
+    },
+    {
+     "type": "sky",
+     "row": 4
+    },
+    {
+     "type": "sky_battleplane",
+     "row": 4
+    },
+    {
+     "type": "sky_electric",
+     "row": 3
+    },
+    {
+     "type": "sky",
+     "row": 3
+    },
+    {
+     "type": "sky",
+     "row": 3
+    },
+    {
+     "type": "sky",
+     "row": 3
+    },
+    {
+     "type": "sky",
+     "row": 3
+    },
+    {
+     "type": "sky",
+     "row": 2
+    },
+    {
+     "type": "sky",
+     "row": 2
+    },
+    {
+     "type": "sky",
+     "row": 2
+    },
+    {
+     "type": "sky",
+     "row": 2
+    },
+    {
+     "type": "sky",
+     "row": 2
+    },
+    {
+     "type": "sky_electric",
+     "row": 1
+    },
+    {
+     "type": "sky",
+     "row": 1
+    },
+    {
+     "type": "sky_gargantuar",
+     "row": 1
+    },
+    {
+     "type": "sky",
+     "row": 1
+    },
+    {
+     "type": "RTID(sky_electricZombieTypes)",
+     "row": 1
+    }
+   ]
+  }
+ ],
+ "wave_pacing": {
+  "flag_interval": 13,
+  "points": 600,
+  "point_increment": 60,
+  "suppress_flag": true
+ },
+ "railcarts": {
+  "carts": [
+   {
+    "col": 1,
+    "row": 2
+   }
+  ],
+  "rails": [
+   {
+    "col": 1,
+    "row_start": 0,
+    "row_end": 4
+   }
+  ]
+ },
+ "scripts": [
+  "LevelOfTheDayIntro"
+ ]
+}

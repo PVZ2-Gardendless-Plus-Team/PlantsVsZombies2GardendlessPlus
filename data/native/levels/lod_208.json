@@ -1,0 +1,496 @@
+{
+ "id": "lod_208",
+ "name": "[LOD_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_LOD]",
+ "author": "屑豌豆",
+ "stage": "ModernStage",
+ "level_of_the_day": true,
+ "seedbank": {
+  "mode": "conveyor",
+  "plants": [
+   {
+    "type": "tool_projectile_bowling_wallnut",
+    "weight": 80,
+    "max": 10
+   },
+   {
+    "type": "tool_projectile_bowling_explodeonut",
+    "weight": 20,
+    "max": 2
+   }
+  ],
+  "drop_delay": [
+   {
+    "delay": 3,
+    "max_packets": 0
+   }
+  ],
+  "speed": [
+   {
+    "speed": 100,
+    "max_packets": 0
+   }
+  ]
+ },
+ "waves": [
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "tutorial_armor1"
+    },
+    {
+     "type": "tutorial"
+    },
+    {
+     "type": "tutorial"
+    },
+    {
+     "type": "tutorial"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "tutorial_armor2"
+    },
+    {
+     "type": "tutorial_armor1"
+    },
+    {
+     "type": "tutorial_armor1"
+    },
+    {
+     "type": "tutorial"
+    },
+    {
+     "type": "tutorial"
+    },
+    {
+     "type": "tutorial"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "tutorial_armor4"
+    },
+    {
+     "type": "tutorial_armor2"
+    },
+    {
+     "type": "tutorial_armor1"
+    },
+    {
+     "type": "tutorial_armor1"
+    },
+    {
+     "type": "tutorial"
+    },
+    {
+     "type": "tutorial"
+    },
+    {
+     "type": "tutorial"
+    },
+    {
+     "type": "tutorial"
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "sky_twin"
+      },
+      {
+       "type": "sky_twin"
+      },
+      {
+       "type": "dark_king_veteran"
+      },
+      {
+       "type": "tutorial"
+      },
+      {
+       "type": "tutorial"
+      },
+      {
+       "type": "tutorial"
+      },
+      {
+       "type": "tutorial_armor1"
+      },
+      {
+       "type": "tutorial_armor1"
+      },
+      {
+       "type": "tutorial_armor1"
+      },
+      {
+       "type": "tutorial_armor2"
+      },
+      {
+       "type": "tutorial_armor4"
+      }
+     ]
+    },
+    {
+     "kind": "QigongStrikeWaveActionProps",
+     "data": {
+      "WaveStartMessage": "[WARNING_QIGONG_STRIKE]",
+      "Zombies": [
+       {
+        "Type": "abbot_imp",
+        "Delay": 1,
+        "Rows": [
+         3
+        ],
+        "Columns": [
+         4
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "tutorial"
+    },
+    {
+     "type": "tutorial"
+    },
+    {
+     "type": "tutorial"
+    },
+    {
+     "type": "tutorial"
+    },
+    {
+     "type": "dark_king_veteran"
+    },
+    {
+     "type": "mech_cone"
+    },
+    {
+     "type": "mech_cone"
+    },
+    {
+     "type": "tutorial_armor2"
+    },
+    {
+     "type": "sky_twin"
+    },
+    {
+     "type": "tutorial_gargantuar"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "sky_twin"
+    },
+    {
+     "type": "sky_twin"
+    },
+    {
+     "type": "tutorial"
+    },
+    {
+     "type": "tutorial"
+    },
+    {
+     "type": "tutorial"
+    },
+    {
+     "type": "tutorial"
+    },
+    {
+     "type": "tutorial"
+    },
+    {
+     "type": "tutorial"
+    },
+    {
+     "type": "tutorial"
+    },
+    {
+     "type": "tutorial"
+    },
+    {
+     "type": "tutorial"
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "dark_king_veteran"
+      },
+      {
+       "type": "dark_king_veteran"
+      },
+      {
+       "type": "dark_king_veteran"
+      },
+      {
+       "type": "tutorial_armor4"
+      },
+      {
+       "type": "tutorial_armor4"
+      },
+      {
+       "type": "tutorial_armor4"
+      },
+      {
+       "type": "tutorial_armor4"
+      },
+      {
+       "type": "tutorial_armor4"
+      },
+      {
+       "type": "tutorial_gargantuar"
+      }
+     ]
+    },
+    {
+     "kind": "QigongStrikeWaveActionProps",
+     "data": {
+      "WaveStartMessage": "[WARNING_QIGONG_STRIKE]",
+      "Zombies": [
+       {
+        "Type": "abbot_imp",
+        "Delay": 1,
+        "Rows": [
+         1
+        ],
+        "Columns": [
+         5
+        ]
+       },
+       {
+        "Type": "abbot_imp",
+        "Delay": 2,
+        "Rows": [
+         5
+        ],
+        "Columns": [
+         5
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "mech_cone"
+    },
+    {
+     "type": "mech_cone"
+    },
+    {
+     "type": "mech_cone"
+    },
+    {
+     "type": "mech_cone"
+    },
+    {
+     "type": "tutorial"
+    },
+    {
+     "type": "tutorial"
+    },
+    {
+     "type": "tutorial"
+    },
+    {
+     "type": "tutorial"
+    },
+    {
+     "type": "tutorial_armor2"
+    },
+    {
+     "type": "tutorial_armor2"
+    },
+    {
+     "type": "tutorial_armor4"
+    },
+    {
+     "type": "tutorial_armor4"
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "sky_twin"
+      },
+      {
+       "type": "sky_twin"
+      },
+      {
+       "type": "sky_twin"
+      },
+      {
+       "type": "dark_king_veteran"
+      },
+      {
+       "type": "dark_king_veteran"
+      },
+      {
+       "type": "tutorial"
+      },
+      {
+       "type": "tutorial"
+      },
+      {
+       "type": "tutorial_armor1"
+      },
+      {
+       "type": "tutorial_armor1"
+      },
+      {
+       "type": "tutorial_armor2"
+      },
+      {
+       "type": "tutorial_armor2"
+      },
+      {
+       "type": "tutorial_armor4"
+      },
+      {
+       "type": "tutorial_armor4"
+      }
+     ]
+    },
+    {
+     "kind": "ref",
+     "ref": "RTID(Wave9QigongStrikeEvent0@CurrentLevel)"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "tutorial_gargantuar"
+    },
+    {
+     "type": "tutorial_gargantuar"
+    },
+    {
+     "type": "tutorial_armor4"
+    },
+    {
+     "type": "tutorial_armor4"
+    },
+    {
+     "type": "tutorial_armor4"
+    },
+    {
+     "type": "tutorial_armor4"
+    },
+    {
+     "type": "mech_cone"
+    },
+    {
+     "type": "mech_cone"
+    },
+    {
+     "type": "mech_cone"
+    },
+    {
+     "type": "mech_cone"
+    },
+    {
+     "type": "sky_twin"
+    },
+    {
+     "type": "sky_twin"
+    },
+    {
+     "type": "sky_twin"
+    },
+    {
+     "type": "sky_twin"
+    }
+   ]
+  }
+ ],
+ "wave_pacing": {
+  "flag_interval": 10
+ },
+ "minigames": [
+  {
+   "type": "bowling",
+   "bowling_foul_line": 2
+  }
+ ],
+ "sun": {
+  "interval": 10.0
+ },
+ "mowers": true,
+ "scripts": [
+  "LevelOfTheDayIntro"
+ ],
+ "extra": [
+  {
+   "objclass": "QigongStrikeWaveActionProps",
+   "aliases": [
+    "Wave7QigongStrikeEvent0"
+   ],
+   "objdata": {
+    "WaveStartMessage": "[WARNING_QIGONG_STRIKE]",
+    "Zombies": [
+     {
+      "Type": "abbot_imp",
+      "Delay": 1,
+      "Rows": [
+       2
+      ],
+      "Columns": [
+       3
+      ]
+     },
+     {
+      "Type": "abbot_imp",
+      "Delay": 1,
+      "Rows": [
+       4
+      ],
+      "Columns": [
+       3
+      ]
+     }
+    ]
+   }
+  },
+  {}
+ ]
+}

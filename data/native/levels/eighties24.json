@@ -1,0 +1,454 @@
+{
+ "id": "eighties24",
+ "name": "Eighties 24",
+ "name_key": "[EIGHTIES_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_EIGHTIES]",
+ "number": 24,
+ "stage": "EightiesStage",
+ "reward": {
+  "type": "pinata",
+  "param": "spine_eighties"
+ },
+ "seedbank": {
+  "mode": "chooser",
+  "selection": "chooser",
+  "blacklist": [
+   "sunflower",
+   "twinsunflower",
+   "iceburg",
+   "gravebuster",
+   "sunshroom",
+   "puffshroom",
+   "seashroom",
+   "sunbean",
+   "melonpult",
+   "toadstool",
+   "goldleaf",
+   "stallia",
+   "primalsunflower",
+   "goldbloom"
+  ]
+ },
+ "waves": [
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "eighties_punk",
+     "row": 4
+    },
+    {
+     "type": "eighties_punk",
+     "row": 3
+    },
+    {
+     "type": "eighties_punk",
+     "row": 2
+    }
+   ],
+   "notify": [
+    "jam_punk"
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "eighties_armor1",
+     "row": 4
+    },
+    {
+     "type": "eighties_armor1",
+     "row": 3
+    },
+    {
+     "type": "eighties_armor1",
+     "row": 2
+    },
+    {
+     "type": "eighties_punk",
+     "row": 5
+    },
+    {
+     "type": "eighties_punk",
+     "row": 1
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "eighties",
+     "row": 5
+    },
+    {
+     "type": "eighties_arcade",
+     "row": 4
+    },
+    {
+     "type": "eighties",
+     "row": 3
+    },
+    {
+     "type": "eighties_arcade",
+     "row": 2
+    },
+    {
+     "type": "eighties",
+     "row": 1
+    }
+   ],
+   "plantfood": 1,
+   "notify": [
+    "jam_rap"
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "eighties_breakdancer",
+     "row": 2
+    },
+    {
+     "type": "eighties_breakdancer",
+     "row": 2
+    },
+    {
+     "type": "eighties_breakdancer",
+     "row": 4
+    },
+    {
+     "type": "eighties_breakdancer",
+     "row": 4
+    },
+    {
+     "type": "eighties_arcade",
+     "row": 3
+    },
+    {
+     "type": "eighties_arcade",
+     "row": 5
+    },
+    {
+     "type": "eighties_arcade",
+     "row": 1
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "eighties_imp",
+     "row": 5
+    },
+    {
+     "type": "eighties_imp",
+     "row": 4
+    },
+    {
+     "type": "eighties_imp",
+     "row": 3
+    },
+    {
+     "type": "eighties_imp",
+     "row": 2
+    },
+    {
+     "type": "eighties_imp",
+     "row": 1
+    }
+   ],
+   "notify": [
+    "jam_8bit"
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "eighties_glitter",
+     "row": 5
+    },
+    {
+     "type": "eighties_armor1",
+     "row": 5
+    },
+    {
+     "type": "eighties_glitter",
+     "row": 3
+    },
+    {
+     "type": "eighties_armor1",
+     "row": 3
+    },
+    {
+     "type": "eighties_glitter",
+     "row": 1
+    },
+    {
+     "type": "eighties_armor1",
+     "row": 1
+    }
+   ],
+   "plantfood": 1
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "eighties_mc",
+     "row": 5
+    },
+    {
+     "type": "eighties_mc",
+     "row": 3
+    },
+    {
+     "type": "eighties_mc",
+     "row": 1
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 2
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 4
+    }
+   ],
+   "notify": [
+    "jam_pop"
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "eighties_breakdancer",
+     "row": 5
+    },
+    {
+     "type": "eighties_breakdancer",
+     "row": 3
+    },
+    {
+     "type": "eighties_breakdancer",
+     "row": 1
+    },
+    {
+     "type": "eighties_gargantuar",
+     "row": 2
+    },
+    {
+     "type": "eighties_breakdancer",
+     "row": 2
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 2
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 1
+    }
+   ],
+   "notify": [
+    "jam_rap"
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "eighties_mc",
+     "row": 5
+    },
+    {
+     "type": "eighties_mc",
+     "row": 4
+    },
+    {
+     "type": "eighties_mc",
+     "row": 3
+    },
+    {
+     "type": "eighties_arcade",
+     "row": 5
+    },
+    {
+     "type": "eighties_arcade",
+     "row": 4
+    },
+    {
+     "type": "eighties_arcade",
+     "row": 3
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "eighties_punk",
+     "row": 5
+    },
+    {
+     "type": "eighties_punk",
+     "row": 4
+    },
+    {
+     "type": "eighties_punk",
+     "row": 3
+    },
+    {
+     "type": "eighties_punk",
+     "row": 2
+    },
+    {
+     "type": "eighties_punk",
+     "row": 1
+    }
+   ],
+   "plantfood": 1,
+   "notify": [
+    "jam_8bit"
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "eighties_arcade",
+     "row": 2
+    },
+    {
+     "type": "eighties_arcade",
+     "row": 1
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 5
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 4
+    },
+    {
+     "type": "eighties_armor2",
+     "row": 3
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "eighties_gargantuar",
+     "row": 5
+    },
+    {
+     "type": "eighties_gargantuar",
+     "row": 1
+    },
+    {
+     "type": "eighties_imp",
+     "row": 4
+    },
+    {
+     "type": "eighties_imp",
+     "row": 3
+    },
+    {
+     "type": "eighties_imp",
+     "row": 2
+    }
+   ],
+   "notify": [
+    "jam_metal"
+   ]
+  }
+ ],
+ "wave_pacing": {
+  "flag_interval": 4,
+  "points": 300,
+  "point_increment": 150
+ },
+ "dynamic_zombies": [
+  {
+   "start_wave": 3,
+   "points": -100,
+   "increment": -40,
+   "pool": [
+    "eighties",
+    "eighties_armor1",
+    "eighties_armor2"
+   ]
+  },
+  {
+   "start_wave": 4,
+   "points": -100,
+   "increment": -25,
+   "pool": [
+    "eighties",
+    "eighties_armor1",
+    "eighties_armor2"
+   ]
+  },
+  {
+   "start_wave": 5,
+   "points": -100,
+   "increment": -10,
+   "pool": [
+    "eighties",
+    "eighties_armor1",
+    "eighties_armor2"
+   ]
+  },
+  {
+   "start_wave": 5,
+   "points": 100,
+   "increment": 20,
+   "pool": [
+    "eighties",
+    "eighties_armor1",
+    "eighties_armor2"
+   ]
+  },
+  {
+   "start_wave": 4,
+   "points": 200,
+   "increment": 40,
+   "pool": [
+    "eighties",
+    "eighties_armor1",
+    "eighties_armor2"
+   ]
+  },
+  {
+   "start_wave": 3,
+   "points": 400,
+   "increment": 60,
+   "pool": [
+    "eighties",
+    "eighties_armor2"
+   ]
+  }
+ ],
+ "minigames": [
+  {
+   "type": "last_stand",
+   "starting_plantfood": 2,
+   "starting_sun": 2000
+  }
+ ],
+ "objectives": [
+  {
+   "type": "survive_waves",
+   "description": "[STARCHALLENGE_LASTSTAND_MINIGAME]"
+  }
+ ],
+ "mowers": true
+}

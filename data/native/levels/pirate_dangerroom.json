@@ -1,0 +1,101 @@
+{
+ "id": "pirate_dangerroom",
+ "name": "Pirate Danger Room",
+ "name_key": "[DANGER_ROOM_PIRATE_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_DANGER_ROOM]",
+ "number": 666,
+ "stage": "PirateStage",
+ "minigames": [
+  {
+   "type": "endless",
+   "world_specific_properties": "PirateDangerRoomProps",
+   "level_designers": [
+    {
+     "starting_points": 100,
+     "base_point_increment_per_wave": 30,
+     "base_point_increment_per_level": 5,
+     "min_dynamic_zombie_type": 4,
+     "must_contain_zombie": [
+      "pirate"
+     ],
+     "zombie_pool": [
+      "barrelroller",
+      "cannon",
+      "pirate_armor1",
+      "pirate_armor2",
+      "pirate_captain",
+      "seagull",
+      "swashbuckler",
+      "pirate_gargantuar"
+     ],
+     "type": "jittered_wave_generator"
+    },
+    {
+     "plank_layouts": [
+      "11110",
+      "11011",
+      "01111",
+      "11100",
+      "01110",
+      "00111",
+      "11000",
+      "01100",
+      "00110",
+      "00011",
+      "10101"
+     ],
+     "type": "plank_designer"
+    },
+    {
+     "type": "shared",
+     "name": "RaidingPartyGenerator"
+    }
+   ],
+   "initial_plants": [
+    "sunflower",
+    "peashooter",
+    "wallnut"
+   ],
+   "exclude_plants": [
+    "lilypad",
+    "floawerPot",
+    "gravebuster",
+    "tanglekelp",
+    "empea",
+    "hotpotato",
+    "perfumeshroom"
+   ],
+   "minigame": false
+  }
+ ],
+ "seedbank": {
+  "mode": "chooser",
+  "selection": "chooser",
+  "always_chooser": true
+ },
+ "sun": {
+  "interval": 10.0
+ },
+ "mowers": true,
+ "extra": [
+  {
+   "objclass": "DangerRoomLevelIntroProperties",
+   "aliases": [
+    "DangerRoomIntro"
+   ],
+   "objdata": {}
+  },
+  {
+   "objclass": "PiratePlankProperties",
+   "aliases": [
+    "PiratePlanks"
+   ],
+   "objdata": {
+    "PlankRows": [
+     0,
+     1
+    ]
+   }
+  }
+ ]
+}

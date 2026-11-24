@@ -1,0 +1,65 @@
+{
+ "id": "lod_272",
+ "name": "[LOD_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_LOD]",
+ "author": "蔓逐I蝶舞",
+ "stage": "LostCityNightStage",
+ "vasebreaker": true,
+ "level_of_the_day": true,
+ "minigames": [
+  {
+   "type": "vasebreaker",
+   "min_column_index": 5,
+   "max_column_index": 8,
+   "num_colored_plant_vases": 2,
+   "num_colored_zombie_vases": 0,
+   "vases": [
+    {
+     "plant_type_name": "redstinger",
+     "count": 1
+    },
+    {
+     "plant_type_name": "akee",
+     "count": 1
+    },
+    {
+     "plant_type_name": "redstinger",
+     "count": 3
+    },
+    {
+     "plant_type_name": "akee",
+     "count": 3
+    },
+    {
+     "plant_type_name": "lavaguava",
+     "count": 4
+    },
+    {
+     "zombie_type_name": "lostcity",
+     "count": 3
+    },
+    {
+     "zombie_type_name": "lostcity_armor1",
+     "count": 2
+    },
+    {
+     "zombie_type_name": "lostcity_bug",
+     "count": 1
+    },
+    {
+     "zombie_type_name": "lostcity_excavator",
+     "count": 1
+    },
+    {
+     "zombie_type_name": "lostcity_jane",
+     "count": 1
+    }
+   ]
+  }
+ ],
+ "waves": [],
+ "scripts": [
+  "VaseBreakerArcade",
+  "VaseBreakerIntro"
+ ]
+}

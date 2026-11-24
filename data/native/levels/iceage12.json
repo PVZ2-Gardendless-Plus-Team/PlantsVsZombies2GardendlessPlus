@@ -1,0 +1,469 @@
+{
+ "id": "iceage12",
+ "name": "Iceage 12",
+ "name_key": "[ICEAGE_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_ICEAGE]",
+ "number": 12,
+ "stage": "IceageStage",
+ "reward": {
+  "type": "pinata",
+  "param": "spine_iceage"
+ },
+ "objectives": [
+  {
+   "type": "survive_waves",
+   "description": "[STARCHALLENGE_LASTSTAND_MINIGAME]"
+  }
+ ],
+ "seedbank": {
+  "mode": "chooser",
+  "selection": "chooser",
+  "blacklist": [
+   "sunflower",
+   "twinsunflower",
+   "sunshroom",
+   "sunbean",
+   "puffshroom",
+   "seashroom",
+   "iceburg",
+   "gravebuster",
+   "toadstool",
+   "goldleaf",
+   "stallia",
+   "primalsunflower",
+   "goldbloom"
+  ]
+ },
+ "minigames": [
+  {
+   "type": "last_stand",
+   "starting_plantfood": 1,
+   "starting_sun": 1900
+  }
+ ],
+ "waves": [
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "iceage"
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "iceage_armor1",
+     "row": 1
+    },
+    {
+     "type": "iceage_armor1",
+     "row": 5
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "iceage_dodo",
+       "row": 2
+      },
+      {
+       "type": "iceage_dodo",
+       "row": 4
+      }
+     ]
+    },
+    {
+     "kind": "frost_wind",
+     "blasts": 1,
+     "winds": [
+      {
+       "row": 1,
+       "direction": "right"
+      },
+      {
+       "row": 3,
+       "direction": "right"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "iceage_imp",
+       "row": 1
+      },
+      {
+       "type": "iceage_imp",
+       "row": 2
+      },
+      {
+       "type": "iceage_imp"
+      },
+      {
+       "type": "iceage_imp",
+       "row": 5
+      },
+      {
+       "type": "iceage_hunter",
+       "row": 4
+      },
+      {
+       "type": "iceage_imp",
+       "row": 3
+      }
+     ],
+     "plantfood": 1,
+     "dynamic_plantfood": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "frost_wind",
+     "blasts": 1,
+     "winds": [
+      {
+       "row": 2,
+       "direction": "right"
+      },
+      {
+       "row": 1,
+       "direction": "right"
+      },
+      {
+       "row": 3,
+       "direction": "right"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "iceage_armor1"
+      },
+      {
+       "type": "iceage_imp"
+      },
+      {
+       "type": "iceage"
+      },
+      {
+       "type": "iceage_imp"
+      },
+      {
+       "type": "iceage_armor1"
+      },
+      {
+       "type": "iceage_imp"
+      },
+      {
+       "type": "iceage_armor1"
+      },
+      {
+       "type": "iceage_armor2"
+      }
+     ]
+    },
+    {
+     "kind": "frost_wind",
+     "blasts": 1,
+     "winds": [
+      {
+       "row": 0,
+       "direction": "right"
+      },
+      {
+       "row": 4,
+       "direction": "right"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "iceage_dodo",
+     "row": 1
+    },
+    {
+     "type": "iceage_dodo",
+     "row": 5
+    },
+    {
+     "type": "iceage_dodo",
+     "row": 3
+    }
+   ],
+   "plantfood": 1,
+   "dynamic_plantfood": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "iceage_hunter",
+       "row": 2
+      },
+      {
+       "type": "iceage_hunter",
+       "row": 4
+      },
+      {
+       "type": "iceage_armor2",
+       "row": 1
+      },
+      {
+       "type": "iceage_armor2",
+       "row": 5
+      }
+     ]
+    },
+    {
+     "kind": "frost_wind",
+     "blasts": 1,
+     "winds": [
+      {
+       "row": 0,
+       "direction": "right"
+      },
+      {
+       "row": 2,
+       "direction": "right"
+      },
+      {
+       "row": 4,
+       "direction": "right"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "iceage_armor2"
+    },
+    {
+     "type": "iceage_dodo",
+     "row": 1
+    },
+    {
+     "type": "iceage_armor2"
+    },
+    {
+     "type": "iceage_dodo",
+     "row": 5
+    },
+    {
+     "type": "iceage_armor2"
+    }
+   ],
+   "plantfood": 1,
+   "dynamic_plantfood": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0
+   ]
+  },
+  {
+   "kind": "multi",
+   "actions": [
+    {
+     "kind": "spawn",
+     "zombies": [
+      {
+       "type": "iceage_imp",
+       "row": 2
+      },
+      {
+       "type": "iceage_imp",
+       "row": 3
+      },
+      {
+       "type": "iceage_imp",
+       "row": 4
+      },
+      {
+       "type": "iceage_imp",
+       "row": 1
+      },
+      {
+       "type": "iceage_imp",
+       "row": 5
+      },
+      {
+       "type": "iceage_dodo",
+       "row": 2
+      },
+      {
+       "type": "iceage_dodo",
+       "row": 4
+      },
+      {
+       "type": "iceage_dodo",
+       "row": 1
+      }
+     ]
+    },
+    {
+     "kind": "frost_wind",
+     "blasts": 1,
+     "winds": [
+      {
+       "row": 0,
+       "direction": "right"
+      },
+      {
+       "row": 1,
+       "direction": "right"
+      },
+      {
+       "row": 2,
+       "direction": "right"
+      },
+      {
+       "row": 3,
+       "direction": "right"
+      },
+      {
+       "row": 4,
+       "direction": "right"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "spawn",
+   "zombies": [
+    {
+     "type": "iceage_armor2",
+     "row": 1
+    },
+    {
+     "type": "iceage_hunter",
+     "row": 3
+    },
+    {
+     "type": "iceage_armor2",
+     "row": 4
+    },
+    {
+     "type": "iceage_armor2",
+     "row": 5
+    },
+    {
+     "type": "iceage_dodo"
+    },
+    {
+     "type": "iceage_armor2",
+     "row": 1
+    },
+    {
+     "type": "iceage_armor2",
+     "row": 5
+    },
+    {
+     "type": "iceage_armor1",
+     "row": 2
+    },
+    {
+     "type": "iceage_hunter",
+     "row": 4
+    },
+    {
+     "type": "iceage_armor2",
+     "row": 3
+    },
+    {
+     "type": "iceage_dodo"
+    },
+    {
+     "type": "iceage_hunter"
+    }
+   ]
+  }
+ ],
+ "wave_pacing": {
+  "flag_interval": 10,
+  "points": 1000,
+  "point_increment": 200
+ },
+ "initial": {
+  "grid_items": [
+   {
+    "col": 5,
+    "row": 0,
+    "type": "slider_down"
+   },
+   {
+    "col": 3,
+    "row": 1,
+    "type": "slider_up"
+   },
+   {
+    "col": 7,
+    "row": 1,
+    "type": "slider_up"
+   },
+   {
+    "col": 3,
+    "row": 3,
+    "type": "slider_down"
+   },
+   {
+    "col": 7,
+    "row": 3,
+    "type": "slider_down"
+   },
+   {
+    "col": 5,
+    "row": 4,
+    "type": "slider_up"
+   }
+  ]
+ },
+ "mowers": true
+}

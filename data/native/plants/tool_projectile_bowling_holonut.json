@@ -11,8 +11,9 @@
  },
  "components": [
   {
-   "type": "shooter",
-   "projectile": "bowling_infinut"
+   "type": "projectile_spawner",
+   "projectile": "bowling_infinut",
+   "speed_x": 4
   }
  ],
  "zen_garden": {
@@ -21,7 +22,6 @@
  },
  "extra": {
   "ImmuneToIceblock": true,
-  "SpeedX": 4,
   "StartingHeight": 0
  }
 }

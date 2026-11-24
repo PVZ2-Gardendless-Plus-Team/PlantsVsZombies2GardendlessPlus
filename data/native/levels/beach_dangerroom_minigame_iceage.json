@@ -1,0 +1,698 @@
+{
+ "id": "beach_dangerroom_minigame_iceage",
+ "name": "Ice Age Danger Room",
+ "name_key": "[DANGER_ROOM_ICEAGE_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_DANGER_ROOM_MINIGAME]",
+ "number": 666,
+ "stage": "IceageStage",
+ "minigames": [
+  {
+   "type": "endless",
+   "world_specific_properties": "BeachDangerRoomMiniGameProps",
+   "max_flag_wave": 3,
+   "level_designers": [
+    {
+     "starting_points": 400,
+     "base_point_increment_per_wave": 40,
+     "base_point_increment_per_level": 5,
+     "suppress_plantfood": true,
+     "min_dynamic_zombie_type": 4,
+     "must_contain_zombie": [
+      "iceage"
+     ],
+     "zombie_pool": [
+      "iceage_armor1",
+      "iceage_armor2",
+      "iceage_armor3",
+      "iceage_armor4",
+      "iceage_hunter",
+      "iceage_dodo",
+      "iceage_troglobite",
+      "iceage_gargantuar"
+     ],
+     "type": "jittered_wave_generator"
+    },
+    {
+     "slider_tile_layouts": [
+      {
+       "layout": [
+        {
+         "grid_x": 6,
+         "grid_y": 0,
+         "type_name": "slider_down"
+        },
+        {
+         "grid_x": 6,
+         "grid_y": 4,
+         "type_name": "slider_up"
+        }
+       ]
+      },
+      {
+       "layout": [
+        {
+         "grid_x": 5,
+         "grid_y": 1,
+         "type_name": "slider_down"
+        },
+        {
+         "grid_x": 5,
+         "grid_y": 3,
+         "type_name": "slider_up"
+        }
+       ]
+      },
+      {
+       "layout": [
+        {
+         "grid_x": 1,
+         "grid_y": 1,
+         "type_name": "slider_up"
+        },
+        {
+         "grid_x": 3,
+         "grid_y": 2,
+         "type_name": "slider_up"
+        },
+        {
+         "grid_x": 5,
+         "grid_y": 3,
+         "type_name": "slider_up"
+        },
+        {
+         "grid_x": 7,
+         "grid_y": 4,
+         "type_name": "slider_up"
+        }
+       ]
+      },
+      {
+       "layout": [
+        {
+         "grid_x": 4,
+         "grid_y": 0,
+         "type_name": "slider_down"
+        },
+        {
+         "grid_x": 4,
+         "grid_y": 4,
+         "type_name": "slider_up"
+        }
+       ]
+      },
+      {
+       "layout": [
+        {
+         "grid_x": 5,
+         "grid_y": 0,
+         "type_name": "slider_down"
+        },
+        {
+         "grid_x": 7,
+         "grid_y": 1,
+         "type_name": "slider_up"
+        },
+        {
+         "grid_x": 7,
+         "grid_y": 3,
+         "type_name": "slider_down"
+        },
+        {
+         "grid_x": 5,
+         "grid_y": 4,
+         "type_name": "slider_up"
+        }
+       ]
+      },
+      {
+       "layout": [
+        {
+         "grid_x": 7,
+         "grid_y": 0,
+         "type_name": "slider_down"
+        },
+        {
+         "grid_x": 5,
+         "grid_y": 1,
+         "type_name": "slider_down"
+        },
+        {
+         "grid_x": 3,
+         "grid_y": 2,
+         "type_name": "slider_down"
+        },
+        {
+         "grid_x": 1,
+         "grid_y": 3,
+         "type_name": "slider_down"
+        }
+       ]
+      },
+      {
+       "layout": [
+        {
+         "grid_x": 6,
+         "grid_y": 0,
+         "type_name": "slider_down"
+        },
+        {
+         "grid_x": 3,
+         "grid_y": 1,
+         "type_name": "slider_down"
+        },
+        {
+         "grid_x": 3,
+         "grid_y": 3,
+         "type_name": "slider_up"
+        },
+        {
+         "grid_x": 6,
+         "grid_y": 4,
+         "type_name": "slider_up"
+        }
+       ]
+      },
+      {
+       "layout": [
+        {
+         "grid_x": 5,
+         "grid_y": 0,
+         "type_name": "slider_down"
+        },
+        {
+         "grid_x": 5,
+         "grid_y": 4,
+         "type_name": "slider_up"
+        }
+       ]
+      },
+      {
+       "layout": [
+        {
+         "grid_x": 6,
+         "grid_y": 1,
+         "type_name": "slider_down"
+        },
+        {
+         "grid_x": 6,
+         "grid_y": 3,
+         "type_name": "slider_up"
+        }
+       ]
+      },
+      {
+       "layout": [
+        {
+         "grid_x": 6,
+         "grid_y": 0,
+         "type_name": "slider_down"
+        },
+        {
+         "grid_x": 5,
+         "grid_y": 1,
+         "type_name": "slider_down"
+        },
+        {
+         "grid_x": 4,
+         "grid_y": 2,
+         "type_name": "slider_down"
+        }
+       ]
+      }
+     ],
+     "type": "slider_tile_designer"
+    },
+    {
+     "level_range": {
+      "min": 1,
+      "max": 30
+     },
+     "lane_count_min": {
+      "min": 1,
+      "max": 2
+     },
+     "lane_count_max": {
+      "min": 3,
+      "max": 5
+     },
+     "wave_percent": {
+      "min": 15,
+      "max": 50
+     },
+     "double_blast_percent": {
+      "min": 0,
+      "max": 0
+     },
+     "type": "freezing_wind_designer"
+    },
+    {
+     "level_range": {
+      "min": 1,
+      "max": 60
+     },
+     "plant_column_min": {
+      "min": 0,
+      "max": 0
+     },
+     "plant_column_max": {
+      "min": 2,
+      "max": 7
+     },
+     "zombie_column_min": {
+      "min": 6,
+      "max": 1
+     },
+     "zombie_column_max": {
+      "min": 8,
+      "max": 8
+     },
+     "blocks_min": {
+      "min": 0,
+      "max": 5
+     },
+     "blocks_max": {
+      "min": 3,
+      "max": 15
+     },
+     "pct_good_blocks": {
+      "min": 0,
+      "max": 0
+     },
+     "plant_type_names": [
+      "sunflower",
+      "bonkchoy",
+      "wallnut",
+      "repeater",
+      "chardguard",
+      "xshot",
+      "stunion",
+      "cherry_bomb"
+     ],
+     "zombie_type_names": [
+      "iceage_armor1",
+      "iceage_armor2",
+      "iceage_armor3",
+      "iceage_hunter",
+      "iceage_imp",
+      "iceage_dodo"
+     ],
+     "type": "ice_block_designer"
+    },
+    {
+     "base_sandstorm_count": 0,
+     "base_sandstorm_count_per_level": 0.5,
+     "min_sandstorm_count_per_level": 0.2,
+     "max_sandstorms_per_flag_wave": 2,
+     "base_sandstorm_zombies_count": 1,
+     "base_sandstorm_zombies_count_per_level": 0.5,
+     "min_sandstorm_zombies_count_per_level": 0.25,
+     "max_sandstorm_zombies": 10,
+     "min_starting_sandstorm_spawn_col": 3,
+     "max_starting_sandstorm_spawn_col": 9,
+     "max_starting_sandstorm_spawn_col_offset_per_level": -0.3,
+     "min_ending_sandstorm_spawn_col": 5,
+     "max_ending_sandstorm_spawn_col": 9,
+     "max_ending_sandstorm_spawn_col_offset_per_level": -0.1,
+     "base_sandstorm_start_wave": 5,
+     "type": "snowstorm_designer"
+    },
+    {
+     "initial_plant_list": [
+      {
+       "plant_type": "tool_projectile_bowlingbulb1",
+       "max_count": {
+        "slope_coefficient": -0.5,
+        "y_intercept": 7,
+        "lower_limit": {
+         "value": "0"
+        },
+        "upper_limit": {
+         "value": "3"
+        }
+       },
+       "max_weight_factor": {
+        "y_intercept": 0
+       },
+       "weight": {
+        "slope_coefficient": -2,
+        "y_intercept": 70,
+        "lower_limit": {
+         "value": "20"
+        },
+        "upper_limit": {
+         "value": "30"
+        }
+       }
+      },
+      {
+       "plant_type": "tool_projectile_bowlingbulb2",
+       "max_count": {
+        "slope_coefficient": -0.5,
+        "y_intercept": 7,
+        "lower_limit": {
+         "value": "0"
+        },
+        "upper_limit": {
+         "value": "3"
+        }
+       },
+       "max_weight_factor": {
+        "y_intercept": 0
+       },
+       "weight": {
+        "slope_coefficient": -2,
+        "y_intercept": 80,
+        "lower_limit": {
+         "value": "20"
+        },
+        "upper_limit": {
+         "value": "40"
+        }
+       }
+      },
+      {
+       "plant_type": "tool_projectile_bowlingbulb3",
+       "max_count": {
+        "slope_coefficient": 1,
+        "y_intercept": 7,
+        "lower_limit": {
+         "value": "2"
+        },
+        "upper_limit": {
+         "value": "3"
+        }
+       },
+       "max_weight_factor": {
+        "y_intercept": 0
+       },
+       "weight": {
+        "slope_coefficient": 2,
+        "y_intercept": 10,
+        "lower_limit": {
+         "value": "30"
+        },
+        "upper_limit": {
+         "value": "50"
+        }
+       }
+      },
+      {
+       "max_count_cooldown_seconds": 6,
+       "plant_type": "tool_projectile_bowlingbulb_explode",
+       "max_count": {
+        "slope_coefficient": -1,
+        "y_intercept": 12,
+        "lower_limit": {
+         "value": "1"
+        },
+        "upper_limit": {
+         "value": "2"
+        }
+       },
+       "max_weight_factor": {
+        "y_intercept": 0
+       },
+       "weight": {
+        "slope_coefficient": 2,
+        "y_intercept": 10,
+        "lower_limit": {
+         "value": "30"
+        },
+        "upper_limit": {
+         "value": "50"
+        }
+       }
+      },
+      {
+       "max_count_cooldown_seconds": 6,
+       "plant_type": "tool_projectile_bowling_wallnut",
+       "max_count": {
+        "slope_coefficient": 0.1,
+        "y_intercept": 0,
+        "lower_limit": {
+         "value": "0"
+        },
+        "upper_limit": {
+         "value": "10"
+        }
+       },
+       "max_weight_factor": {
+        "y_intercept": 0
+       },
+       "weight": {
+        "slope_coefficient": 1,
+        "y_intercept": 10,
+        "lower_limit": {
+         "value": "30"
+        },
+        "upper_limit": {
+         "value": "50"
+        }
+       }
+      },
+      {
+       "max_count_cooldown_seconds": 6,
+       "plant_type": "tool_projectile_bowling_explodeonut",
+       "max_count": {
+        "slope_coefficient": 0.1,
+        "y_intercept": -1,
+        "lower_limit": {
+         "value": "0"
+        },
+        "upper_limit": {
+         "value": "4"
+        }
+       },
+       "max_weight_factor": {
+        "y_intercept": 0
+       },
+       "weight": {
+        "slope_coefficient": 1,
+        "y_intercept": 10,
+        "lower_limit": {
+         "value": "10"
+        },
+        "upper_limit": {
+         "value": "20"
+        }
+       }
+      },
+      {
+       "max_count_cooldown_seconds": 6,
+       "plant_type": "tool_projectile_bowling_holonut",
+       "max_count": {
+        "slope_coefficient": 0.1,
+        "y_intercept": -1,
+        "lower_limit": {
+         "value": "0"
+        },
+        "upper_limit": {
+         "value": "4"
+        }
+       },
+       "max_weight_factor": {
+        "y_intercept": 0
+       },
+       "weight": {
+        "slope_coefficient": 1,
+        "y_intercept": 10,
+        "lower_limit": {
+         "value": "10"
+        },
+        "upper_limit": {
+         "value": "20"
+        }
+       }
+      },
+      {
+       "max_count_cooldown_seconds": 6,
+       "plant_type": "tool_projectile_bowling_primalwallnut",
+       "max_count": {
+        "slope_coefficient": 0.5,
+        "y_intercept": -10,
+        "lower_limit": {
+         "value": "0"
+        },
+        "upper_limit": {
+         "value": "4"
+        }
+       },
+       "max_weight_factor": {
+        "y_intercept": 0
+       },
+       "weight": {
+        "slope_coefficient": 1,
+        "y_intercept": -10,
+        "lower_limit": {
+         "value": "10"
+        },
+        "upper_limit": {
+         "value": "20"
+        }
+       }
+      },
+      {
+       "plant_type": "tool_projectile_bowlingbulb_iceburg",
+       "max_count": {
+        "slope_coefficient": -0.5,
+        "y_intercept": 7,
+        "lower_limit": {
+         "value": "1"
+        },
+        "upper_limit": {
+         "value": "2"
+        }
+       },
+       "max_weight_factor": {
+        "y_intercept": 0
+       },
+       "weight": {
+        "slope_coefficient": 5,
+        "y_intercept": -50,
+        "lower_limit": {
+         "value": "0"
+        },
+        "upper_limit": {
+         "value": "30"
+        }
+       }
+      },
+      {
+       "plant_type": "tool_projectile_bowling_tallnut",
+       "max_count": {
+        "slope_coefficient": 0.5,
+        "y_intercept": -5,
+        "lower_limit": {
+         "value": "0"
+        },
+        "upper_limit": {
+         "value": "1"
+        }
+       },
+       "max_weight_factor": {
+        "y_intercept": 0
+       },
+       "weight": {
+        "slope_coefficient": 5,
+        "y_intercept": -50,
+        "lower_limit": {
+         "value": "0"
+        },
+        "upper_limit": {
+         "value": "20"
+        }
+       }
+      }
+     ],
+     "type": "conveyor_designer_properties"
+    }
+   ],
+   "minigame": true
+  },
+  {
+   "type": "bowling",
+   "bowling_foul_line": 2
+  }
+ ],
+ "seedbank": {
+  "mode": "conveyor",
+  "plants": [
+   {
+    "type": "tool_projectile_bowlingbulb1",
+    "weight": 30,
+    "max": 3
+   }
+  ],
+  "drop_delay": [
+   {
+    "delay": 2,
+    "max_packets": 0
+   },
+   {
+    "delay": 3,
+    "max_packets": 2
+   },
+   {
+    "delay": 4,
+    "max_packets": 4
+   },
+   {
+    "delay": 5,
+    "max_packets": 8
+   }
+  ],
+  "speed": [
+   {
+    "speed": 100,
+    "max_packets": 0
+   }
+  ]
+ },
+ "mowers": true,
+ "scripts": [
+  "StandardIntro"
+ ],
+ "initial": {
+  "grid_items": [
+   {
+    "col": 2,
+    "row": 0,
+    "type": "goopuddle"
+   },
+   {
+    "col": 2,
+    "row": 1,
+    "type": "goopuddle"
+   },
+   {
+    "col": 2,
+    "row": 2,
+    "type": "goopuddle"
+   },
+   {
+    "col": 2,
+    "row": 3,
+    "type": "goopuddle"
+   },
+   {
+    "col": 2,
+    "row": 4,
+    "type": "goopuddle"
+   },
+   {
+    "col": 3,
+    "row": 0,
+    "type": "goopuddle"
+   },
+   {
+    "col": 3,
+    "row": 1,
+    "type": "goopuddle"
+   },
+   {
+    "col": 3,
+    "row": 2,
+    "type": "goopuddle"
+   },
+   {
+    "col": 3,
+    "row": 3,
+    "type": "goopuddle"
+   },
+   {
+    "col": 3,
+    "row": 4,
+    "type": "goopuddle"
+   }
+  ]
+ },
+ "extra": [
+  {
+   "objclass": "DangerRoomLevelIntroProperties",
+   "aliases": [
+    "DangerRoomIntro"
+   ],
+   "objdata": {}
+  }
+ ]
+}

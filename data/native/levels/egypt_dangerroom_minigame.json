@@ -1,0 +1,70 @@
+{
+ "id": "egypt_dangerroom_minigame",
+ "name": "Egypt MiniGame Danger Room",
+ "name_key": "[DANGER_ROOM_EGYPT_MINIGAME_LEVEL_NAME]",
+ "description": "[PLAYERS_TRIP_TO_DANGER_ROOM_MINIGAME]",
+ "number": 666,
+ "stage": "EgyptStage",
+ "minigames": [
+  {
+   "type": "endless",
+   "world_specific_properties": "EgyptDangerRoomMiniGameProps",
+   "level_designers": [
+    {
+     "starting_points": 400,
+     "base_point_increment_per_wave": 30,
+     "base_point_increment_per_level": 10,
+     "max_point_per_wave": 2000,
+     "min_dynamic_zombie_type": 2,
+     "must_contain_zombie": [
+      "camel_twohump_touch"
+     ],
+     "zombie_pool": [
+      "camel_onehump_touch",
+      "camel_twohump_touch",
+      "camel_threehump_touch",
+      "camel_manyhump_touch"
+     ],
+     "type": "jittered_wave_generator"
+    }
+   ],
+   "minigame": true
+  },
+  {
+   "type": "camel",
+   "additional_x_buffer_between_chains": 50,
+   "camel_segment_rise_stagger": 0.33,
+   "card_match_time": 0,
+   "card_matching_time": 0.5,
+   "card_no_match_time": 1.5,
+   "card_types_used": 100,
+   "initial_tutorial_zombie_rise_delay": 2,
+   "max_spawn_x": 600,
+   "min_spawn_x_end": 300,
+   "min_spawn_x_start": 500,
+   "combo_counter": true
+  }
+ ],
+ "initial": {
+  "plants": [
+   {
+    "col": 0,
+    "row": 0,
+    "type": "glaciershroom"
+   },
+   {
+    "col": 0,
+    "row": 2,
+    "type": "glaciershroom"
+   },
+   {
+    "col": 0,
+    "row": 4,
+    "type": "glaciershroom"
+   }
+  ]
+ },
+ "scripts": [
+  "CamelMinigameIntro"
+ ]
+}
