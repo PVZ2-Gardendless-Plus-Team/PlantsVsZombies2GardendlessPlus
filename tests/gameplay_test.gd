@@ -2104,10 +2104,29 @@ func _test_lawn_support_plants() -> void:
 	check("a grave refuses ordinary plants",
 			not board.can_place_entity(&"plant", &"peashooter", 3, 6))
 	check("but takes a grave buster", board.can_place_entity(&"plant", &"gravebuster", 3, 6))
+	var stone := board.object_at(3, 6)
 	var buster := board.place_plant(&"gravebuster", 3, 6)
-	await _wait_game_seconds(5.0)
+	check("plant food does nothing for it", not buster.apply_plant_food())
+	# PVZGE: it digs in for 0.7s, then the stone sinks while it chews for
+	# BustTime and breaks at 115 of the chewing's 130 frames.
+	await _wait_game_seconds(1.5)
+	check("the stone sinks out of sight while it chews",
+			is_instance_valid(stone) and stone.sunk and not stone.visible)
+	check("and nothing can aim at it then", not board.plant_targets_in_row(3).has(stone))
+	await _wait_game_seconds(5.5)
 	check("the grave is gone", board.object_at(3, 6) == null)
 	check("and so is the buster", not is_instance_valid(buster) or buster.is_dead)
+
+	# Eaten before it finishes, it lets the stone back up.
+	board.place_object(&"gravestone", 1, 6)
+	var stone2 := board.object_at(1, 6)
+	var eaten := board.place_plant(&"gravebuster", 1, 6)
+	await _wait_game_seconds(1.5)
+	check("a second stone sinks too", stone2.sunk)
+	eaten.take_damage(10000.0)
+	check("killing the buster mid-chew brings the stone back",
+			is_instance_valid(stone2) and not stone2.sunk and stone2.visible)
+	check("still standing", board.object_at(1, 6) == stone2)
 	board.queue_free()
 
 	# Hot potato melts a frozen plant free.
