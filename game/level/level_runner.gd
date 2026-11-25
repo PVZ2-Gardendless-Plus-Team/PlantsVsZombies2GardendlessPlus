@@ -76,6 +76,9 @@ var _wave_spawned_health: float = 0.0
 var _finished_spawning: bool = false
 var _sun_timer: float = 0.0
 var _groan_cooldown: float = 0.0
+## Groans draw from their own generator, so they never shift the game's
+## random numbers (spawns, drops) that levels and tests rely on.
+var _groan_rng := RandomNumberGenerator.new()
 ## Last value pushed to the music `stage` parameter, so it is only set on change.
 var _music_stage: int = -1
 
@@ -584,9 +587,9 @@ func _groan(delta: float) -> void:
 				pool.append(z)
 	if pool.is_empty():
 		return
-	var z: Zombie = pool.pick_random()
+	var z: Zombie = pool[_groan_rng.randi_range(0, pool.size() - 1)]
 	Audio.play_variant(&"zombie.groan", groan_voice(z), z.position)
-	_groan_cooldown = 2.5 + 5.0 / pool.size() + randf() * 3.0
+	_groan_cooldown = 2.5 + 5.0 / pool.size() + _groan_rng.randf() * 3.0
 
 
 ## Whose groans a zombie uses: an imp has its own, everyone else sounds like
